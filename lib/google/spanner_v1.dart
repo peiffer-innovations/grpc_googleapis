@@ -1,9 +1,15 @@
+export '../src/generated/google/spanner/v1/change_stream.pb.dart';
+export '../src/generated/google/spanner/v1/change_stream.pbenum.dart';
+export '../src/generated/google/spanner/v1/change_stream.pbjson.dart';
 export '../src/generated/google/spanner/v1/commit_response.pb.dart';
 export '../src/generated/google/spanner/v1/commit_response.pbenum.dart';
 export '../src/generated/google/spanner/v1/commit_response.pbjson.dart';
 export '../src/generated/google/spanner/v1/keys.pb.dart';
 export '../src/generated/google/spanner/v1/keys.pbenum.dart';
 export '../src/generated/google/spanner/v1/keys.pbjson.dart';
+export '../src/generated/google/spanner/v1/location.pb.dart';
+export '../src/generated/google/spanner/v1/location.pbenum.dart';
+export '../src/generated/google/spanner/v1/location.pbjson.dart';
 export '../src/generated/google/spanner/v1/mutation.pb.dart';
 export '../src/generated/google/spanner/v1/mutation.pbenum.dart';
 export '../src/generated/google/spanner/v1/mutation.pbjson.dart';

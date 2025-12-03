@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/marketingplatform/admin/v1alpha/resources.proto
-//
-// @dart = 2.12
+// Generated from google/marketingplatform/admin/v1alpha/resources.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -28,6 +30,40 @@ final $typed_data.Uint8List linkVerificationStateDescriptor = $convert.base64Dec
     'ChVMaW5rVmVyaWZpY2F0aW9uU3RhdGUSJwojTElOS19WRVJJRklDQVRJT05fU1RBVEVfVU5TUE'
     'VDSUZJRUQQABIkCiBMSU5LX1ZFUklGSUNBVElPTl9TVEFURV9WRVJJRklFRBABEigKJExJTktf'
     'VkVSSUZJQ0FUSU9OX1NUQVRFX05PVF9WRVJJRklFRBAC');
+
+@$core.Deprecated('Use analyticsServiceLevelDescriptor instead')
+const AnalyticsServiceLevel$json = {
+  '1': 'AnalyticsServiceLevel',
+  '2': [
+    {'1': 'ANALYTICS_SERVICE_LEVEL_UNSPECIFIED', '2': 0},
+    {'1': 'ANALYTICS_SERVICE_LEVEL_STANDARD', '2': 1},
+    {'1': 'ANALYTICS_SERVICE_LEVEL_360', '2': 2},
+  ],
+};
+
+/// Descriptor for `AnalyticsServiceLevel`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List analyticsServiceLevelDescriptor = $convert.base64Decode(
+    'ChVBbmFseXRpY3NTZXJ2aWNlTGV2ZWwSJwojQU5BTFlUSUNTX1NFUlZJQ0VfTEVWRUxfVU5TUE'
+    'VDSUZJRUQQABIkCiBBTkFMWVRJQ1NfU0VSVklDRV9MRVZFTF9TVEFOREFSRBABEh8KG0FOQUxZ'
+    'VElDU19TRVJWSUNFX0xFVkVMXzM2MBAC');
+
+@$core.Deprecated('Use analyticsPropertyTypeDescriptor instead')
+const AnalyticsPropertyType$json = {
+  '1': 'AnalyticsPropertyType',
+  '2': [
+    {'1': 'ANALYTICS_PROPERTY_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'ANALYTICS_PROPERTY_TYPE_ORDINARY', '2': 1},
+    {'1': 'ANALYTICS_PROPERTY_TYPE_SUBPROPERTY', '2': 2},
+    {'1': 'ANALYTICS_PROPERTY_TYPE_ROLLUP', '2': 3},
+  ],
+};
+
+/// Descriptor for `AnalyticsPropertyType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List analyticsPropertyTypeDescriptor = $convert.base64Decode(
+    'ChVBbmFseXRpY3NQcm9wZXJ0eVR5cGUSJwojQU5BTFlUSUNTX1BST1BFUlRZX1RZUEVfVU5TUE'
+    'VDSUZJRUQQABIkCiBBTkFMWVRJQ1NfUFJPUEVSVFlfVFlQRV9PUkRJTkFSWRABEicKI0FOQUxZ'
+    'VElDU19QUk9QRVJUWV9UWVBFX1NVQlBST1BFUlRZEAISIgoeQU5BTFlUSUNTX1BST1BFUlRZX1'
+    'RZUEVfUk9MTFVQEAM=');
 
 @$core.Deprecated('Use organizationDescriptor instead')
 const Organization$json = {

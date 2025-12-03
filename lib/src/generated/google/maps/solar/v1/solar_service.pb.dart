@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/solar/v1/solar_service.proto
-//
-// @dart = 2.12
+// Generated from google/maps/solar/v1/solar_service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -18,6 +19,8 @@ import '../../../type/latlng.pb.dart' as $2;
 import '../../../type/money.pb.dart' as $4;
 import 'solar_service.pbenum.dart';
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 export 'solar_service.pbenum.dart';
 
 /// Request message for `Solar.FindClosestBuildingInsights`.
@@ -26,26 +29,26 @@ class FindClosestBuildingInsightsRequest extends $pb.GeneratedMessage {
     $2.LatLng? location,
     ImageryQuality? requiredQuality,
     $core.bool? exactQualityRequired,
+    $core.Iterable<Experiment>? experiments,
   }) {
-    final $result = create();
-    if (location != null) {
-      $result.location = location;
-    }
-    if (requiredQuality != null) {
-      $result.requiredQuality = requiredQuality;
-    }
-    if (exactQualityRequired != null) {
-      $result.exactQualityRequired = exactQualityRequired;
-    }
-    return $result;
+    final result = create();
+    if (location != null) result.location = location;
+    if (requiredQuality != null) result.requiredQuality = requiredQuality;
+    if (exactQualityRequired != null)
+      result.exactQualityRequired = exactQualityRequired;
+    if (experiments != null) result.experiments.addAll(experiments);
+    return result;
   }
-  FindClosestBuildingInsightsRequest._() : super();
-  factory FindClosestBuildingInsightsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FindClosestBuildingInsightsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FindClosestBuildingInsightsRequest._();
+
+  factory FindClosestBuildingInsightsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FindClosestBuildingInsightsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindClosestBuildingInsightsRequest',
@@ -54,36 +57,33 @@ class FindClosestBuildingInsightsRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$2.LatLng>(1, _omitFieldNames ? '' : 'location',
         subBuilder: $2.LatLng.create)
-    ..e<ImageryQuality>(
-        3, _omitFieldNames ? '' : 'requiredQuality', $pb.PbFieldType.OE,
-        defaultOrMaker: ImageryQuality.IMAGERY_QUALITY_UNSPECIFIED,
-        valueOf: ImageryQuality.valueOf,
+    ..aE<ImageryQuality>(3, _omitFieldNames ? '' : 'requiredQuality',
         enumValues: ImageryQuality.values)
     ..aOB(4, _omitFieldNames ? '' : 'exactQualityRequired')
+    ..pc<Experiment>(
+        5, _omitFieldNames ? '' : 'experiments', $pb.PbFieldType.KE,
+        valueOf: Experiment.valueOf,
+        enumValues: Experiment.values,
+        defaultEnumValue: Experiment.EXPERIMENT_UNSPECIFIED)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FindClosestBuildingInsightsRequest clone() =>
-      FindClosestBuildingInsightsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FindClosestBuildingInsightsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FindClosestBuildingInsightsRequest copyWith(
           void Function(FindClosestBuildingInsightsRequest) updates) =>
       super.copyWith((message) =>
               updates(message as FindClosestBuildingInsightsRequest))
           as FindClosestBuildingInsightsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FindClosestBuildingInsightsRequest create() =>
       FindClosestBuildingInsightsRequest._();
+  @$core.override
   FindClosestBuildingInsightsRequest createEmptyInstance() => create();
-  static $pb.PbList<FindClosestBuildingInsightsRequest> createRepeated() =>
-      $pb.PbList<FindClosestBuildingInsightsRequest>();
   @$core.pragma('dart2js:noInline')
   static FindClosestBuildingInsightsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FindClosestBuildingInsightsRequest>(
@@ -95,14 +95,11 @@ class FindClosestBuildingInsightsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.LatLng get location => $_getN(0);
   @$pb.TagNumber(1)
-  set location($2.LatLng v) {
-    setField(1, v);
-  }
-
+  set location($2.LatLng value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasLocation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLocation() => clearField(1);
+  void clearLocation() => $_clearField(1);
   @$pb.TagNumber(1)
   $2.LatLng ensureLocation() => $_ensure(0);
 
@@ -112,14 +109,11 @@ class FindClosestBuildingInsightsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   ImageryQuality get requiredQuality => $_getN(1);
   @$pb.TagNumber(3)
-  set requiredQuality(ImageryQuality v) {
-    setField(3, v);
-  }
-
+  set requiredQuality(ImageryQuality value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasRequiredQuality() => $_has(1);
   @$pb.TagNumber(3)
-  void clearRequiredQuality() => clearField(3);
+  void clearRequiredQuality() => $_clearField(3);
 
   /// Optional. Whether to require exact quality of the imagery.
   /// If set to false, the `required_quality` field is interpreted as the minimum
@@ -130,14 +124,15 @@ class FindClosestBuildingInsightsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get exactQualityRequired => $_getBF(2);
   @$pb.TagNumber(4)
-  set exactQualityRequired($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set exactQualityRequired($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(4)
   $core.bool hasExactQualityRequired() => $_has(2);
   @$pb.TagNumber(4)
-  void clearExactQualityRequired() => clearField(4);
+  void clearExactQualityRequired() => $_clearField(4);
+
+  /// Optional. Specifies the pre-GA features to enable.
+  @$pb.TagNumber(5)
+  $pb.PbList<Experiment> get experiments => $_getList(3);
 }
 
 /// A bounding box in lat/lng coordinates.
@@ -146,22 +141,20 @@ class LatLngBox extends $pb.GeneratedMessage {
     $2.LatLng? sw,
     $2.LatLng? ne,
   }) {
-    final $result = create();
-    if (sw != null) {
-      $result.sw = sw;
-    }
-    if (ne != null) {
-      $result.ne = ne;
-    }
-    return $result;
+    final result = create();
+    if (sw != null) result.sw = sw;
+    if (ne != null) result.ne = ne;
+    return result;
   }
-  LatLngBox._() : super();
-  factory LatLngBox.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory LatLngBox.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  LatLngBox._();
+
+  factory LatLngBox.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LatLngBox.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'LatLngBox',
@@ -174,22 +167,19 @@ class LatLngBox extends $pb.GeneratedMessage {
         subBuilder: $2.LatLng.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  LatLngBox clone() => LatLngBox()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LatLngBox clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   LatLngBox copyWith(void Function(LatLngBox) updates) =>
       super.copyWith((message) => updates(message as LatLngBox)) as LatLngBox;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static LatLngBox create() => LatLngBox._();
+  @$core.override
   LatLngBox createEmptyInstance() => create();
-  static $pb.PbList<LatLngBox> createRepeated() => $pb.PbList<LatLngBox>();
   @$core.pragma('dart2js:noInline')
   static LatLngBox getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LatLngBox>(create);
@@ -199,14 +189,11 @@ class LatLngBox extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.LatLng get sw => $_getN(0);
   @$pb.TagNumber(1)
-  set sw($2.LatLng v) {
-    setField(1, v);
-  }
-
+  set sw($2.LatLng value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSw() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSw() => clearField(1);
+  void clearSw() => $_clearField(1);
   @$pb.TagNumber(1)
   $2.LatLng ensureSw() => $_ensure(0);
 
@@ -214,14 +201,11 @@ class LatLngBox extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $2.LatLng get ne => $_getN(1);
   @$pb.TagNumber(2)
-  set ne($2.LatLng v) {
-    setField(2, v);
-  }
-
+  set ne($2.LatLng value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasNe() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNe() => clearField(2);
+  void clearNe() => $_clearField(2);
   @$pb.TagNumber(2)
   $2.LatLng ensureNe() => $_ensure(1);
 }
@@ -243,49 +227,31 @@ class BuildingInsights extends $pb.GeneratedMessage {
     ImageryQuality? imageryQuality,
     $3.Date? imageryProcessedDate,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (center != null) {
-      $result.center = center;
-    }
-    if (imageryDate != null) {
-      $result.imageryDate = imageryDate;
-    }
-    if (postalCode != null) {
-      $result.postalCode = postalCode;
-    }
-    if (administrativeArea != null) {
-      $result.administrativeArea = administrativeArea;
-    }
-    if (statisticalArea != null) {
-      $result.statisticalArea = statisticalArea;
-    }
-    if (regionCode != null) {
-      $result.regionCode = regionCode;
-    }
-    if (solarPotential != null) {
-      $result.solarPotential = solarPotential;
-    }
-    if (boundingBox != null) {
-      $result.boundingBox = boundingBox;
-    }
-    if (imageryQuality != null) {
-      $result.imageryQuality = imageryQuality;
-    }
-    if (imageryProcessedDate != null) {
-      $result.imageryProcessedDate = imageryProcessedDate;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (center != null) result.center = center;
+    if (imageryDate != null) result.imageryDate = imageryDate;
+    if (postalCode != null) result.postalCode = postalCode;
+    if (administrativeArea != null)
+      result.administrativeArea = administrativeArea;
+    if (statisticalArea != null) result.statisticalArea = statisticalArea;
+    if (regionCode != null) result.regionCode = regionCode;
+    if (solarPotential != null) result.solarPotential = solarPotential;
+    if (boundingBox != null) result.boundingBox = boundingBox;
+    if (imageryQuality != null) result.imageryQuality = imageryQuality;
+    if (imageryProcessedDate != null)
+      result.imageryProcessedDate = imageryProcessedDate;
+    return result;
   }
-  BuildingInsights._() : super();
-  factory BuildingInsights.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BuildingInsights.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BuildingInsights._();
+
+  factory BuildingInsights.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BuildingInsights.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BuildingInsights',
@@ -305,63 +271,50 @@ class BuildingInsights extends $pb.GeneratedMessage {
         subBuilder: SolarPotential.create)
     ..aOM<LatLngBox>(9, _omitFieldNames ? '' : 'boundingBox',
         subBuilder: LatLngBox.create)
-    ..e<ImageryQuality>(
-        10, _omitFieldNames ? '' : 'imageryQuality', $pb.PbFieldType.OE,
-        defaultOrMaker: ImageryQuality.IMAGERY_QUALITY_UNSPECIFIED,
-        valueOf: ImageryQuality.valueOf,
+    ..aE<ImageryQuality>(10, _omitFieldNames ? '' : 'imageryQuality',
         enumValues: ImageryQuality.values)
     ..aOM<$3.Date>(11, _omitFieldNames ? '' : 'imageryProcessedDate',
         subBuilder: $3.Date.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BuildingInsights clone() => BuildingInsights()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BuildingInsights clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BuildingInsights copyWith(void Function(BuildingInsights) updates) =>
       super.copyWith((message) => updates(message as BuildingInsights))
           as BuildingInsights;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BuildingInsights create() => BuildingInsights._();
+  @$core.override
   BuildingInsights createEmptyInstance() => create();
-  static $pb.PbList<BuildingInsights> createRepeated() =>
-      $pb.PbList<BuildingInsights>();
   @$core.pragma('dart2js:noInline')
   static BuildingInsights getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BuildingInsights>(create);
   static BuildingInsights? _defaultInstance;
 
-  /// The resource name for the building, of the format `building/<place ID>`.
+  /// The resource name for the building, of the format `buildings/{place_id}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// A point near the center of the building.
   @$pb.TagNumber(2)
   $2.LatLng get center => $_getN(1);
   @$pb.TagNumber(2)
-  set center($2.LatLng v) {
-    setField(2, v);
-  }
-
+  set center($2.LatLng value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCenter() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCenter() => clearField(2);
+  void clearCenter() => $_clearField(2);
   @$pb.TagNumber(2)
   $2.LatLng ensureCenter() => $_ensure(1);
 
@@ -369,14 +322,11 @@ class BuildingInsights extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $3.Date get imageryDate => $_getN(2);
   @$pb.TagNumber(3)
-  set imageryDate($3.Date v) {
-    setField(3, v);
-  }
-
+  set imageryDate($3.Date value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasImageryDate() => $_has(2);
   @$pb.TagNumber(3)
-  void clearImageryDate() => clearField(3);
+  void clearImageryDate() => $_clearField(3);
   @$pb.TagNumber(3)
   $3.Date ensureImageryDate() => $_ensure(2);
 
@@ -384,67 +334,52 @@ class BuildingInsights extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get postalCode => $_getSZ(3);
   @$pb.TagNumber(4)
-  set postalCode($core.String v) {
-    $_setString(3, v);
-  }
-
+  set postalCode($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasPostalCode() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPostalCode() => clearField(4);
+  void clearPostalCode() => $_clearField(4);
 
   /// Administrative area 1 (e.g., in the US, the state) that contains this
   /// building. For example, in the US, the abbreviation might be "MA" or "CA."
   @$pb.TagNumber(5)
   $core.String get administrativeArea => $_getSZ(4);
   @$pb.TagNumber(5)
-  set administrativeArea($core.String v) {
-    $_setString(4, v);
-  }
-
+  set administrativeArea($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasAdministrativeArea() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAdministrativeArea() => clearField(5);
+  void clearAdministrativeArea() => $_clearField(5);
 
   /// Statistical area (e.g., US census tract) this building is in.
   @$pb.TagNumber(6)
   $core.String get statisticalArea => $_getSZ(5);
   @$pb.TagNumber(6)
-  set statisticalArea($core.String v) {
-    $_setString(5, v);
-  }
-
+  set statisticalArea($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasStatisticalArea() => $_has(5);
   @$pb.TagNumber(6)
-  void clearStatisticalArea() => clearField(6);
+  void clearStatisticalArea() => $_clearField(6);
 
   /// Region code for the country (or region) this building is in.
   @$pb.TagNumber(7)
   $core.String get regionCode => $_getSZ(6);
   @$pb.TagNumber(7)
-  set regionCode($core.String v) {
-    $_setString(6, v);
-  }
-
+  set regionCode($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
   $core.bool hasRegionCode() => $_has(6);
   @$pb.TagNumber(7)
-  void clearRegionCode() => clearField(7);
+  void clearRegionCode() => $_clearField(7);
 
   /// Solar potential of the building.
   @$pb.TagNumber(8)
   SolarPotential get solarPotential => $_getN(7);
   @$pb.TagNumber(8)
-  set solarPotential(SolarPotential v) {
-    setField(8, v);
-  }
-
+  set solarPotential(SolarPotential value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasSolarPotential() => $_has(7);
   @$pb.TagNumber(8)
-  void clearSolarPotential() => clearField(8);
+  void clearSolarPotential() => $_clearField(8);
   @$pb.TagNumber(8)
   SolarPotential ensureSolarPotential() => $_ensure(7);
 
@@ -452,14 +387,11 @@ class BuildingInsights extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   LatLngBox get boundingBox => $_getN(8);
   @$pb.TagNumber(9)
-  set boundingBox(LatLngBox v) {
-    setField(9, v);
-  }
-
+  set boundingBox(LatLngBox value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasBoundingBox() => $_has(8);
   @$pb.TagNumber(9)
-  void clearBoundingBox() => clearField(9);
+  void clearBoundingBox() => $_clearField(9);
   @$pb.TagNumber(9)
   LatLngBox ensureBoundingBox() => $_ensure(8);
 
@@ -467,27 +399,21 @@ class BuildingInsights extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   ImageryQuality get imageryQuality => $_getN(9);
   @$pb.TagNumber(10)
-  set imageryQuality(ImageryQuality v) {
-    setField(10, v);
-  }
-
+  set imageryQuality(ImageryQuality value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasImageryQuality() => $_has(9);
   @$pb.TagNumber(10)
-  void clearImageryQuality() => clearField(10);
+  void clearImageryQuality() => $_clearField(10);
 
   /// When processing was completed on this imagery.
   @$pb.TagNumber(11)
   $3.Date get imageryProcessedDate => $_getN(10);
   @$pb.TagNumber(11)
-  set imageryProcessedDate($3.Date v) {
-    setField(11, v);
-  }
-
+  set imageryProcessedDate($3.Date value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasImageryProcessedDate() => $_has(10);
   @$pb.TagNumber(11)
-  void clearImageryProcessedDate() => clearField(11);
+  void clearImageryProcessedDate() => $_clearField(11);
   @$pb.TagNumber(11)
   $3.Date ensureImageryProcessedDate() => $_ensure(10);
 }
@@ -519,116 +445,90 @@ class SolarPotential extends $pb.GeneratedMessage {
     SizeAndSunshineStats? buildingStats,
     $core.Iterable<SolarPanel>? solarPanels,
   }) {
-    final $result = create();
-    if (maxArrayPanelsCount != null) {
-      $result.maxArrayPanelsCount = maxArrayPanelsCount;
-    }
-    if (maxArrayAreaMeters2 != null) {
-      $result.maxArrayAreaMeters2 = maxArrayAreaMeters2;
-    }
-    if (maxSunshineHoursPerYear != null) {
-      $result.maxSunshineHoursPerYear = maxSunshineHoursPerYear;
-    }
-    if (carbonOffsetFactorKgPerMwh != null) {
-      $result.carbonOffsetFactorKgPerMwh = carbonOffsetFactorKgPerMwh;
-    }
-    if (wholeRoofStats != null) {
-      $result.wholeRoofStats = wholeRoofStats;
-    }
-    if (roofSegmentStats != null) {
-      $result.roofSegmentStats.addAll(roofSegmentStats);
-    }
-    if (solarPanelConfigs != null) {
-      $result.solarPanelConfigs.addAll(solarPanelConfigs);
-    }
-    if (financialAnalyses != null) {
-      $result.financialAnalyses.addAll(financialAnalyses);
-    }
-    if (panelCapacityWatts != null) {
-      $result.panelCapacityWatts = panelCapacityWatts;
-    }
-    if (panelHeightMeters != null) {
-      $result.panelHeightMeters = panelHeightMeters;
-    }
-    if (panelWidthMeters != null) {
-      $result.panelWidthMeters = panelWidthMeters;
-    }
-    if (panelLifetimeYears != null) {
-      $result.panelLifetimeYears = panelLifetimeYears;
-    }
-    if (buildingStats != null) {
-      $result.buildingStats = buildingStats;
-    }
-    if (solarPanels != null) {
-      $result.solarPanels.addAll(solarPanels);
-    }
-    return $result;
+    final result = create();
+    if (maxArrayPanelsCount != null)
+      result.maxArrayPanelsCount = maxArrayPanelsCount;
+    if (maxArrayAreaMeters2 != null)
+      result.maxArrayAreaMeters2 = maxArrayAreaMeters2;
+    if (maxSunshineHoursPerYear != null)
+      result.maxSunshineHoursPerYear = maxSunshineHoursPerYear;
+    if (carbonOffsetFactorKgPerMwh != null)
+      result.carbonOffsetFactorKgPerMwh = carbonOffsetFactorKgPerMwh;
+    if (wholeRoofStats != null) result.wholeRoofStats = wholeRoofStats;
+    if (roofSegmentStats != null)
+      result.roofSegmentStats.addAll(roofSegmentStats);
+    if (solarPanelConfigs != null)
+      result.solarPanelConfigs.addAll(solarPanelConfigs);
+    if (financialAnalyses != null)
+      result.financialAnalyses.addAll(financialAnalyses);
+    if (panelCapacityWatts != null)
+      result.panelCapacityWatts = panelCapacityWatts;
+    if (panelHeightMeters != null) result.panelHeightMeters = panelHeightMeters;
+    if (panelWidthMeters != null) result.panelWidthMeters = panelWidthMeters;
+    if (panelLifetimeYears != null)
+      result.panelLifetimeYears = panelLifetimeYears;
+    if (buildingStats != null) result.buildingStats = buildingStats;
+    if (solarPanels != null) result.solarPanels.addAll(solarPanels);
+    return result;
   }
-  SolarPotential._() : super();
-  factory SolarPotential.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SolarPotential.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SolarPotential._();
+
+  factory SolarPotential.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SolarPotential.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SolarPotential',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.maps.solar.v1'),
       createEmptyInstance: create)
-    ..a<$core.int>(
-        1, _omitFieldNames ? '' : 'maxArrayPanelsCount', $pb.PbFieldType.O3)
-    ..a<$core.double>(
-        2, _omitFieldNames ? '' : 'maxArrayAreaMeters2', $pb.PbFieldType.OF)
-    ..a<$core.double>(
-        3, _omitFieldNames ? '' : 'maxSunshineHoursPerYear', $pb.PbFieldType.OF)
-    ..a<$core.double>(4, _omitFieldNames ? '' : 'carbonOffsetFactorKgPerMwh',
-        $pb.PbFieldType.OF)
+    ..aI(1, _omitFieldNames ? '' : 'maxArrayPanelsCount')
+    ..aD(2, _omitFieldNames ? '' : 'maxArrayAreaMeters2',
+        fieldType: $pb.PbFieldType.OF)
+    ..aD(3, _omitFieldNames ? '' : 'maxSunshineHoursPerYear',
+        fieldType: $pb.PbFieldType.OF)
+    ..aD(4, _omitFieldNames ? '' : 'carbonOffsetFactorKgPerMwh',
+        fieldType: $pb.PbFieldType.OF)
     ..aOM<SizeAndSunshineStats>(5, _omitFieldNames ? '' : 'wholeRoofStats',
         subBuilder: SizeAndSunshineStats.create)
-    ..pc<RoofSegmentSizeAndSunshineStats>(
-        6, _omitFieldNames ? '' : 'roofSegmentStats', $pb.PbFieldType.PM,
+    ..pPM<RoofSegmentSizeAndSunshineStats>(
+        6, _omitFieldNames ? '' : 'roofSegmentStats',
         subBuilder: RoofSegmentSizeAndSunshineStats.create)
-    ..pc<SolarPanelConfig>(
-        7, _omitFieldNames ? '' : 'solarPanelConfigs', $pb.PbFieldType.PM,
+    ..pPM<SolarPanelConfig>(7, _omitFieldNames ? '' : 'solarPanelConfigs',
         subBuilder: SolarPanelConfig.create)
-    ..pc<FinancialAnalysis>(
-        8, _omitFieldNames ? '' : 'financialAnalyses', $pb.PbFieldType.PM,
+    ..pPM<FinancialAnalysis>(8, _omitFieldNames ? '' : 'financialAnalyses',
         subBuilder: FinancialAnalysis.create)
-    ..a<$core.double>(
-        9, _omitFieldNames ? '' : 'panelCapacityWatts', $pb.PbFieldType.OF)
-    ..a<$core.double>(
-        10, _omitFieldNames ? '' : 'panelHeightMeters', $pb.PbFieldType.OF)
-    ..a<$core.double>(
-        11, _omitFieldNames ? '' : 'panelWidthMeters', $pb.PbFieldType.OF)
-    ..a<$core.int>(
-        12, _omitFieldNames ? '' : 'panelLifetimeYears', $pb.PbFieldType.O3)
+    ..aD(9, _omitFieldNames ? '' : 'panelCapacityWatts',
+        fieldType: $pb.PbFieldType.OF)
+    ..aD(10, _omitFieldNames ? '' : 'panelHeightMeters',
+        fieldType: $pb.PbFieldType.OF)
+    ..aD(11, _omitFieldNames ? '' : 'panelWidthMeters',
+        fieldType: $pb.PbFieldType.OF)
+    ..aI(12, _omitFieldNames ? '' : 'panelLifetimeYears')
     ..aOM<SizeAndSunshineStats>(13, _omitFieldNames ? '' : 'buildingStats',
         subBuilder: SizeAndSunshineStats.create)
-    ..pc<SolarPanel>(
-        14, _omitFieldNames ? '' : 'solarPanels', $pb.PbFieldType.PM,
+    ..pPM<SolarPanel>(14, _omitFieldNames ? '' : 'solarPanels',
         subBuilder: SolarPanel.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SolarPotential clone() => SolarPotential()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SolarPotential clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SolarPotential copyWith(void Function(SolarPotential) updates) =>
       super.copyWith((message) => updates(message as SolarPotential))
           as SolarPotential;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SolarPotential create() => SolarPotential._();
+  @$core.override
   SolarPotential createEmptyInstance() => create();
-  static $pb.PbList<SolarPotential> createRepeated() =>
-      $pb.PbList<SolarPotential>();
   @$core.pragma('dart2js:noInline')
   static SolarPotential getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SolarPotential>(create);
@@ -639,27 +539,21 @@ class SolarPotential extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get maxArrayPanelsCount => $_getIZ(0);
   @$pb.TagNumber(1)
-  set maxArrayPanelsCount($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set maxArrayPanelsCount($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMaxArrayPanelsCount() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMaxArrayPanelsCount() => clearField(1);
+  void clearMaxArrayPanelsCount() => $_clearField(1);
 
   /// Size, in square meters, of the maximum array.
   @$pb.TagNumber(2)
   $core.double get maxArrayAreaMeters2 => $_getN(1);
   @$pb.TagNumber(2)
-  set maxArrayAreaMeters2($core.double v) {
-    $_setFloat(1, v);
-  }
-
+  set maxArrayAreaMeters2($core.double value) => $_setFloat(1, value);
   @$pb.TagNumber(2)
   $core.bool hasMaxArrayAreaMeters2() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMaxArrayAreaMeters2() => clearField(2);
+  void clearMaxArrayAreaMeters2() => $_clearField(2);
 
   /// Maximum number of sunshine hours received per year, by any point
   /// on the roof. Sunshine hours are a measure of the total amount of
@@ -668,14 +562,11 @@ class SolarPotential extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.double get maxSunshineHoursPerYear => $_getN(2);
   @$pb.TagNumber(3)
-  set maxSunshineHoursPerYear($core.double v) {
-    $_setFloat(2, v);
-  }
-
+  set maxSunshineHoursPerYear($core.double value) => $_setFloat(2, value);
   @$pb.TagNumber(3)
   $core.bool hasMaxSunshineHoursPerYear() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMaxSunshineHoursPerYear() => clearField(3);
+  void clearMaxSunshineHoursPerYear() => $_clearField(3);
 
   /// Equivalent amount of CO2 produced per MWh of grid electricity. This
   /// is a measure of the carbon intensity of grid electricity displaced
@@ -683,14 +574,11 @@ class SolarPotential extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.double get carbonOffsetFactorKgPerMwh => $_getN(3);
   @$pb.TagNumber(4)
-  set carbonOffsetFactorKgPerMwh($core.double v) {
-    $_setFloat(3, v);
-  }
-
+  set carbonOffsetFactorKgPerMwh($core.double value) => $_setFloat(3, value);
   @$pb.TagNumber(4)
   $core.bool hasCarbonOffsetFactorKgPerMwh() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCarbonOffsetFactorKgPerMwh() => clearField(4);
+  void clearCarbonOffsetFactorKgPerMwh() => $_clearField(4);
 
   /// Total size and sunlight quantiles for the part of the roof that
   /// was assigned to some roof segment. Despite the name, this may not
@@ -699,20 +587,17 @@ class SolarPotential extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   SizeAndSunshineStats get wholeRoofStats => $_getN(4);
   @$pb.TagNumber(5)
-  set wholeRoofStats(SizeAndSunshineStats v) {
-    setField(5, v);
-  }
-
+  set wholeRoofStats(SizeAndSunshineStats value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasWholeRoofStats() => $_has(4);
   @$pb.TagNumber(5)
-  void clearWholeRoofStats() => clearField(5);
+  void clearWholeRoofStats() => $_clearField(5);
   @$pb.TagNumber(5)
   SizeAndSunshineStats ensureWholeRoofStats() => $_ensure(4);
 
   /// Size and sunlight quantiles for each roof segment.
   @$pb.TagNumber(6)
-  $core.List<RoofSegmentSizeAndSunshineStats> get roofSegmentStats =>
+  $pb.PbList<RoofSegmentSizeAndSunshineStats> get roofSegmentStats =>
       $_getList(5);
 
   /// Each [SolarPanelConfig]
@@ -724,7 +609,7 @@ class SolarPotential extends $pb.GeneratedMessage {
   /// based on the first N panels in the `solar_panels` list. This field is only
   /// populated if at least 4 panels can fit on a roof.
   @$pb.TagNumber(7)
-  $core.List<SolarPanelConfig> get solarPanelConfigs => $_getList(6);
+  $pb.PbList<SolarPanelConfig> get solarPanelConfigs => $_getList(6);
 
   /// A [FinancialAnalysis]
   /// [google.maps.solar.v1.FinancialAnalysis] gives the savings
@@ -734,62 +619,50 @@ class SolarPotential extends $pb.GeneratedMessage {
   /// areas for which the Solar API does not have enough information to
   /// perform financial computations.
   @$pb.TagNumber(8)
-  $core.List<FinancialAnalysis> get financialAnalyses => $_getList(7);
+  $pb.PbList<FinancialAnalysis> get financialAnalyses => $_getList(7);
 
   /// Capacity, in watts, of the panel used in the calculations.
   @$pb.TagNumber(9)
   $core.double get panelCapacityWatts => $_getN(8);
   @$pb.TagNumber(9)
-  set panelCapacityWatts($core.double v) {
-    $_setFloat(8, v);
-  }
-
+  set panelCapacityWatts($core.double value) => $_setFloat(8, value);
   @$pb.TagNumber(9)
   $core.bool hasPanelCapacityWatts() => $_has(8);
   @$pb.TagNumber(9)
-  void clearPanelCapacityWatts() => clearField(9);
+  void clearPanelCapacityWatts() => $_clearField(9);
 
   /// Height, in meters in portrait orientation, of the panel used in
   /// the calculations.
   @$pb.TagNumber(10)
   $core.double get panelHeightMeters => $_getN(9);
   @$pb.TagNumber(10)
-  set panelHeightMeters($core.double v) {
-    $_setFloat(9, v);
-  }
-
+  set panelHeightMeters($core.double value) => $_setFloat(9, value);
   @$pb.TagNumber(10)
   $core.bool hasPanelHeightMeters() => $_has(9);
   @$pb.TagNumber(10)
-  void clearPanelHeightMeters() => clearField(10);
+  void clearPanelHeightMeters() => $_clearField(10);
 
   /// Width, in meters in portrait orientation, of the panel used in
   /// the calculations.
   @$pb.TagNumber(11)
   $core.double get panelWidthMeters => $_getN(10);
   @$pb.TagNumber(11)
-  set panelWidthMeters($core.double v) {
-    $_setFloat(10, v);
-  }
-
+  set panelWidthMeters($core.double value) => $_setFloat(10, value);
   @$pb.TagNumber(11)
   $core.bool hasPanelWidthMeters() => $_has(10);
   @$pb.TagNumber(11)
-  void clearPanelWidthMeters() => clearField(11);
+  void clearPanelWidthMeters() => $_clearField(11);
 
   /// The expected lifetime, in years, of the solar panels. This is
   /// used in the financial calculations.
   @$pb.TagNumber(12)
   $core.int get panelLifetimeYears => $_getIZ(11);
   @$pb.TagNumber(12)
-  set panelLifetimeYears($core.int v) {
-    $_setSignedInt32(11, v);
-  }
-
+  set panelLifetimeYears($core.int value) => $_setSignedInt32(11, value);
   @$pb.TagNumber(12)
   $core.bool hasPanelLifetimeYears() => $_has(11);
   @$pb.TagNumber(12)
-  void clearPanelLifetimeYears() => clearField(12);
+  void clearPanelLifetimeYears() => $_clearField(12);
 
   /// Size and sunlight quantiles for the entire building, including
   /// parts of the roof that were not assigned to some roof segment.
@@ -804,14 +677,11 @@ class SolarPotential extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   SizeAndSunshineStats get buildingStats => $_getN(12);
   @$pb.TagNumber(13)
-  set buildingStats(SizeAndSunshineStats v) {
-    setField(13, v);
-  }
-
+  set buildingStats(SizeAndSunshineStats value) => $_setField(13, value);
   @$pb.TagNumber(13)
   $core.bool hasBuildingStats() => $_has(12);
   @$pb.TagNumber(13)
-  void clearBuildingStats() => clearField(13);
+  void clearBuildingStats() => $_clearField(13);
   @$pb.TagNumber(13)
   SizeAndSunshineStats ensureBuildingStats() => $_ensure(12);
 
@@ -820,7 +690,7 @@ class SolarPotential extends $pb.GeneratedMessage {
   /// the panel layout algorithm placed this. This is usually, though
   /// not always, in decreasing order of annual energy production.
   @$pb.TagNumber(14)
-  $core.List<SolarPanel> get solarPanels => $_getList(13);
+  $pb.PbList<SolarPanel> get solarPanels => $_getList(13);
 }
 
 /// Information about the size and sunniness quantiles of a roof segment.
@@ -833,76 +703,62 @@ class RoofSegmentSizeAndSunshineStats extends $pb.GeneratedMessage {
     LatLngBox? boundingBox,
     $core.double? planeHeightAtCenterMeters,
   }) {
-    final $result = create();
-    if (pitchDegrees != null) {
-      $result.pitchDegrees = pitchDegrees;
-    }
-    if (azimuthDegrees != null) {
-      $result.azimuthDegrees = azimuthDegrees;
-    }
-    if (stats != null) {
-      $result.stats = stats;
-    }
-    if (center != null) {
-      $result.center = center;
-    }
-    if (boundingBox != null) {
-      $result.boundingBox = boundingBox;
-    }
-    if (planeHeightAtCenterMeters != null) {
-      $result.planeHeightAtCenterMeters = planeHeightAtCenterMeters;
-    }
-    return $result;
+    final result = create();
+    if (pitchDegrees != null) result.pitchDegrees = pitchDegrees;
+    if (azimuthDegrees != null) result.azimuthDegrees = azimuthDegrees;
+    if (stats != null) result.stats = stats;
+    if (center != null) result.center = center;
+    if (boundingBox != null) result.boundingBox = boundingBox;
+    if (planeHeightAtCenterMeters != null)
+      result.planeHeightAtCenterMeters = planeHeightAtCenterMeters;
+    return result;
   }
-  RoofSegmentSizeAndSunshineStats._() : super();
-  factory RoofSegmentSizeAndSunshineStats.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RoofSegmentSizeAndSunshineStats.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RoofSegmentSizeAndSunshineStats._();
+
+  factory RoofSegmentSizeAndSunshineStats.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RoofSegmentSizeAndSunshineStats.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RoofSegmentSizeAndSunshineStats',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.maps.solar.v1'),
       createEmptyInstance: create)
-    ..a<$core.double>(
-        1, _omitFieldNames ? '' : 'pitchDegrees', $pb.PbFieldType.OF)
-    ..a<$core.double>(
-        2, _omitFieldNames ? '' : 'azimuthDegrees', $pb.PbFieldType.OF)
+    ..aD(1, _omitFieldNames ? '' : 'pitchDegrees',
+        fieldType: $pb.PbFieldType.OF)
+    ..aD(2, _omitFieldNames ? '' : 'azimuthDegrees',
+        fieldType: $pb.PbFieldType.OF)
     ..aOM<SizeAndSunshineStats>(3, _omitFieldNames ? '' : 'stats',
         subBuilder: SizeAndSunshineStats.create)
     ..aOM<$2.LatLng>(4, _omitFieldNames ? '' : 'center',
         subBuilder: $2.LatLng.create)
     ..aOM<LatLngBox>(5, _omitFieldNames ? '' : 'boundingBox',
         subBuilder: LatLngBox.create)
-    ..a<$core.double>(6, _omitFieldNames ? '' : 'planeHeightAtCenterMeters',
-        $pb.PbFieldType.OF)
+    ..aD(6, _omitFieldNames ? '' : 'planeHeightAtCenterMeters',
+        fieldType: $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RoofSegmentSizeAndSunshineStats clone() =>
-      RoofSegmentSizeAndSunshineStats()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RoofSegmentSizeAndSunshineStats clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RoofSegmentSizeAndSunshineStats copyWith(
           void Function(RoofSegmentSizeAndSunshineStats) updates) =>
       super.copyWith(
               (message) => updates(message as RoofSegmentSizeAndSunshineStats))
           as RoofSegmentSizeAndSunshineStats;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RoofSegmentSizeAndSunshineStats create() =>
       RoofSegmentSizeAndSunshineStats._();
+  @$core.override
   RoofSegmentSizeAndSunshineStats createEmptyInstance() => create();
-  static $pb.PbList<RoofSegmentSizeAndSunshineStats> createRepeated() =>
-      $pb.PbList<RoofSegmentSizeAndSunshineStats>();
   @$core.pragma('dart2js:noInline')
   static RoofSegmentSizeAndSunshineStats getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RoofSegmentSizeAndSunshineStats>(
@@ -914,14 +770,11 @@ class RoofSegmentSizeAndSunshineStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.double get pitchDegrees => $_getN(0);
   @$pb.TagNumber(1)
-  set pitchDegrees($core.double v) {
-    $_setFloat(0, v);
-  }
-
+  set pitchDegrees($core.double value) => $_setFloat(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPitchDegrees() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPitchDegrees() => clearField(1);
+  void clearPitchDegrees() => $_clearField(1);
 
   /// Compass direction the roof segment is pointing in. 0 = North, 90 =
   /// East, 180 = South. For a "flat" roof segment (`pitch_degrees` very
@@ -930,27 +783,21 @@ class RoofSegmentSizeAndSunshineStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.double get azimuthDegrees => $_getN(1);
   @$pb.TagNumber(2)
-  set azimuthDegrees($core.double v) {
-    $_setFloat(1, v);
-  }
-
+  set azimuthDegrees($core.double value) => $_setFloat(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAzimuthDegrees() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAzimuthDegrees() => clearField(2);
+  void clearAzimuthDegrees() => $_clearField(2);
 
   /// Total size and sunlight quantiles for the roof segment.
   @$pb.TagNumber(3)
   SizeAndSunshineStats get stats => $_getN(2);
   @$pb.TagNumber(3)
-  set stats(SizeAndSunshineStats v) {
-    setField(3, v);
-  }
-
+  set stats(SizeAndSunshineStats value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasStats() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStats() => clearField(3);
+  void clearStats() => $_clearField(3);
   @$pb.TagNumber(3)
   SizeAndSunshineStats ensureStats() => $_ensure(2);
 
@@ -958,14 +805,11 @@ class RoofSegmentSizeAndSunshineStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $2.LatLng get center => $_getN(3);
   @$pb.TagNumber(4)
-  set center($2.LatLng v) {
-    setField(4, v);
-  }
-
+  set center($2.LatLng value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasCenter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCenter() => clearField(4);
+  void clearCenter() => $_clearField(4);
   @$pb.TagNumber(4)
   $2.LatLng ensureCenter() => $_ensure(3);
 
@@ -973,14 +817,11 @@ class RoofSegmentSizeAndSunshineStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   LatLngBox get boundingBox => $_getN(4);
   @$pb.TagNumber(5)
-  set boundingBox(LatLngBox v) {
-    setField(5, v);
-  }
-
+  set boundingBox(LatLngBox value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasBoundingBox() => $_has(4);
   @$pb.TagNumber(5)
-  void clearBoundingBox() => clearField(5);
+  void clearBoundingBox() => $_clearField(5);
   @$pb.TagNumber(5)
   LatLngBox ensureBoundingBox() => $_ensure(4);
 
@@ -991,14 +832,11 @@ class RoofSegmentSizeAndSunshineStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.double get planeHeightAtCenterMeters => $_getN(5);
   @$pb.TagNumber(6)
-  set planeHeightAtCenterMeters($core.double v) {
-    $_setFloat(5, v);
-  }
-
+  set planeHeightAtCenterMeters($core.double value) => $_setFloat(5, value);
   @$pb.TagNumber(6)
   $core.bool hasPlaneHeightAtCenterMeters() => $_has(5);
   @$pb.TagNumber(6)
-  void clearPlaneHeightAtCenterMeters() => clearField(6);
+  void clearPlaneHeightAtCenterMeters() => $_clearField(6);
 }
 
 /// Size and sunniness quantiles of a roof, or part of a roof.
@@ -1008,58 +846,49 @@ class SizeAndSunshineStats extends $pb.GeneratedMessage {
     $core.Iterable<$core.double>? sunshineQuantiles,
     $core.double? groundAreaMeters2,
   }) {
-    final $result = create();
-    if (areaMeters2 != null) {
-      $result.areaMeters2 = areaMeters2;
-    }
-    if (sunshineQuantiles != null) {
-      $result.sunshineQuantiles.addAll(sunshineQuantiles);
-    }
-    if (groundAreaMeters2 != null) {
-      $result.groundAreaMeters2 = groundAreaMeters2;
-    }
-    return $result;
+    final result = create();
+    if (areaMeters2 != null) result.areaMeters2 = areaMeters2;
+    if (sunshineQuantiles != null)
+      result.sunshineQuantiles.addAll(sunshineQuantiles);
+    if (groundAreaMeters2 != null) result.groundAreaMeters2 = groundAreaMeters2;
+    return result;
   }
-  SizeAndSunshineStats._() : super();
-  factory SizeAndSunshineStats.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SizeAndSunshineStats.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SizeAndSunshineStats._();
+
+  factory SizeAndSunshineStats.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SizeAndSunshineStats.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SizeAndSunshineStats',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.maps.solar.v1'),
       createEmptyInstance: create)
-    ..a<$core.double>(
-        1, _omitFieldNames ? '' : 'areaMeters2', $pb.PbFieldType.OF)
+    ..aD(1, _omitFieldNames ? '' : 'areaMeters2', fieldType: $pb.PbFieldType.OF)
     ..p<$core.double>(
         2, _omitFieldNames ? '' : 'sunshineQuantiles', $pb.PbFieldType.KF)
-    ..a<$core.double>(
-        3, _omitFieldNames ? '' : 'groundAreaMeters2', $pb.PbFieldType.OF)
+    ..aD(3, _omitFieldNames ? '' : 'groundAreaMeters2',
+        fieldType: $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SizeAndSunshineStats clone() =>
-      SizeAndSunshineStats()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SizeAndSunshineStats clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SizeAndSunshineStats copyWith(void Function(SizeAndSunshineStats) updates) =>
       super.copyWith((message) => updates(message as SizeAndSunshineStats))
           as SizeAndSunshineStats;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SizeAndSunshineStats create() => SizeAndSunshineStats._();
+  @$core.override
   SizeAndSunshineStats createEmptyInstance() => create();
-  static $pb.PbList<SizeAndSunshineStats> createRepeated() =>
-      $pb.PbList<SizeAndSunshineStats>();
   @$core.pragma('dart2js:noInline')
   static SizeAndSunshineStats getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SizeAndSunshineStats>(create);
@@ -1070,14 +899,11 @@ class SizeAndSunshineStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.double get areaMeters2 => $_getN(0);
   @$pb.TagNumber(1)
-  set areaMeters2($core.double v) {
-    $_setFloat(0, v);
-  }
-
+  set areaMeters2($core.double value) => $_setFloat(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAreaMeters2() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAreaMeters2() => clearField(1);
+  void clearAreaMeters2() => $_clearField(1);
 
   /// Quantiles of the pointwise sunniness across the area. If there
   /// are N values here, this represents the (N-1)-iles. For example,
@@ -1086,20 +912,17 @@ class SizeAndSunshineStats extends $pb.GeneratedMessage {
   /// [max_sunshine_hours_per_year]
   /// [google.maps.solar.v1.SolarPotential.max_sunshine_hours_per_year].
   @$pb.TagNumber(2)
-  $core.List<$core.double> get sunshineQuantiles => $_getList(1);
+  $pb.PbList<$core.double> get sunshineQuantiles => $_getList(1);
 
   /// The ground footprint area covered by the roof or roof segment, in m^2.
   @$pb.TagNumber(3)
   $core.double get groundAreaMeters2 => $_getN(2);
   @$pb.TagNumber(3)
-  set groundAreaMeters2($core.double v) {
-    $_setFloat(2, v);
-  }
-
+  set groundAreaMeters2($core.double value) => $_setFloat(2, value);
   @$pb.TagNumber(3)
   $core.bool hasGroundAreaMeters2() => $_has(2);
   @$pb.TagNumber(3)
-  void clearGroundAreaMeters2() => clearField(3);
+  void clearGroundAreaMeters2() => $_clearField(3);
 }
 
 /// SolarPanel describes the position, orientation, and production of a
@@ -1119,28 +942,22 @@ class SolarPanel extends $pb.GeneratedMessage {
     $core.double? yearlyEnergyDcKwh,
     $core.int? segmentIndex,
   }) {
-    final $result = create();
-    if (center != null) {
-      $result.center = center;
-    }
-    if (orientation != null) {
-      $result.orientation = orientation;
-    }
-    if (yearlyEnergyDcKwh != null) {
-      $result.yearlyEnergyDcKwh = yearlyEnergyDcKwh;
-    }
-    if (segmentIndex != null) {
-      $result.segmentIndex = segmentIndex;
-    }
-    return $result;
+    final result = create();
+    if (center != null) result.center = center;
+    if (orientation != null) result.orientation = orientation;
+    if (yearlyEnergyDcKwh != null) result.yearlyEnergyDcKwh = yearlyEnergyDcKwh;
+    if (segmentIndex != null) result.segmentIndex = segmentIndex;
+    return result;
   }
-  SolarPanel._() : super();
-  factory SolarPanel.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SolarPanel.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SolarPanel._();
+
+  factory SolarPanel.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SolarPanel.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SolarPanel',
@@ -1149,33 +966,26 @@ class SolarPanel extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$2.LatLng>(1, _omitFieldNames ? '' : 'center',
         subBuilder: $2.LatLng.create)
-    ..e<SolarPanelOrientation>(
-        2, _omitFieldNames ? '' : 'orientation', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            SolarPanelOrientation.SOLAR_PANEL_ORIENTATION_UNSPECIFIED,
-        valueOf: SolarPanelOrientation.valueOf,
+    ..aE<SolarPanelOrientation>(2, _omitFieldNames ? '' : 'orientation',
         enumValues: SolarPanelOrientation.values)
-    ..a<$core.double>(
-        3, _omitFieldNames ? '' : 'yearlyEnergyDcKwh', $pb.PbFieldType.OF)
-    ..a<$core.int>(4, _omitFieldNames ? '' : 'segmentIndex', $pb.PbFieldType.O3)
+    ..aD(3, _omitFieldNames ? '' : 'yearlyEnergyDcKwh',
+        fieldType: $pb.PbFieldType.OF)
+    ..aI(4, _omitFieldNames ? '' : 'segmentIndex')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SolarPanel clone() => SolarPanel()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SolarPanel clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SolarPanel copyWith(void Function(SolarPanel) updates) =>
       super.copyWith((message) => updates(message as SolarPanel)) as SolarPanel;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SolarPanel create() => SolarPanel._();
+  @$core.override
   SolarPanel createEmptyInstance() => create();
-  static $pb.PbList<SolarPanel> createRepeated() => $pb.PbList<SolarPanel>();
   @$core.pragma('dart2js:noInline')
   static SolarPanel getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SolarPanel>(create);
@@ -1185,14 +995,11 @@ class SolarPanel extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.LatLng get center => $_getN(0);
   @$pb.TagNumber(1)
-  set center($2.LatLng v) {
-    setField(1, v);
-  }
-
+  set center($2.LatLng value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasCenter() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCenter() => clearField(1);
+  void clearCenter() => $_clearField(1);
   @$pb.TagNumber(1)
   $2.LatLng ensureCenter() => $_ensure(0);
 
@@ -1200,28 +1007,22 @@ class SolarPanel extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SolarPanelOrientation get orientation => $_getN(1);
   @$pb.TagNumber(2)
-  set orientation(SolarPanelOrientation v) {
-    setField(2, v);
-  }
-
+  set orientation(SolarPanelOrientation value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOrientation() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrientation() => clearField(2);
+  void clearOrientation() => $_clearField(2);
 
   /// How much sunlight energy this layout captures over the course of a
   /// year, in DC kWh.
   @$pb.TagNumber(3)
   $core.double get yearlyEnergyDcKwh => $_getN(2);
   @$pb.TagNumber(3)
-  set yearlyEnergyDcKwh($core.double v) {
-    $_setFloat(2, v);
-  }
-
+  set yearlyEnergyDcKwh($core.double value) => $_setFloat(2, value);
   @$pb.TagNumber(3)
   $core.bool hasYearlyEnergyDcKwh() => $_has(2);
   @$pb.TagNumber(3)
-  void clearYearlyEnergyDcKwh() => clearField(3);
+  void clearYearlyEnergyDcKwh() => $_clearField(3);
 
   /// Index in [roof_segment_stats]
   /// [google.maps.solar.v1.SolarPotential.roof_segment_stats]
@@ -1230,14 +1031,11 @@ class SolarPanel extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.int get segmentIndex => $_getIZ(3);
   @$pb.TagNumber(4)
-  set segmentIndex($core.int v) {
-    $_setSignedInt32(3, v);
-  }
-
+  set segmentIndex($core.int value) => $_setSignedInt32(3, value);
   @$pb.TagNumber(4)
   $core.bool hasSegmentIndex() => $_has(3);
   @$pb.TagNumber(4)
-  void clearSegmentIndex() => clearField(4);
+  void clearSegmentIndex() => $_clearField(4);
 }
 
 /// SolarPanelConfig describes a particular placement of solar panels
@@ -1248,57 +1046,49 @@ class SolarPanelConfig extends $pb.GeneratedMessage {
     $core.double? yearlyEnergyDcKwh,
     $core.Iterable<RoofSegmentSummary>? roofSegmentSummaries,
   }) {
-    final $result = create();
-    if (panelsCount != null) {
-      $result.panelsCount = panelsCount;
-    }
-    if (yearlyEnergyDcKwh != null) {
-      $result.yearlyEnergyDcKwh = yearlyEnergyDcKwh;
-    }
-    if (roofSegmentSummaries != null) {
-      $result.roofSegmentSummaries.addAll(roofSegmentSummaries);
-    }
-    return $result;
+    final result = create();
+    if (panelsCount != null) result.panelsCount = panelsCount;
+    if (yearlyEnergyDcKwh != null) result.yearlyEnergyDcKwh = yearlyEnergyDcKwh;
+    if (roofSegmentSummaries != null)
+      result.roofSegmentSummaries.addAll(roofSegmentSummaries);
+    return result;
   }
-  SolarPanelConfig._() : super();
-  factory SolarPanelConfig.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SolarPanelConfig.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SolarPanelConfig._();
+
+  factory SolarPanelConfig.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SolarPanelConfig.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SolarPanelConfig',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.maps.solar.v1'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'panelsCount', $pb.PbFieldType.O3)
-    ..a<$core.double>(
-        2, _omitFieldNames ? '' : 'yearlyEnergyDcKwh', $pb.PbFieldType.OF)
-    ..pc<RoofSegmentSummary>(
-        4, _omitFieldNames ? '' : 'roofSegmentSummaries', $pb.PbFieldType.PM,
+    ..aI(1, _omitFieldNames ? '' : 'panelsCount')
+    ..aD(2, _omitFieldNames ? '' : 'yearlyEnergyDcKwh',
+        fieldType: $pb.PbFieldType.OF)
+    ..pPM<RoofSegmentSummary>(4, _omitFieldNames ? '' : 'roofSegmentSummaries',
         subBuilder: RoofSegmentSummary.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SolarPanelConfig clone() => SolarPanelConfig()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SolarPanelConfig clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SolarPanelConfig copyWith(void Function(SolarPanelConfig) updates) =>
       super.copyWith((message) => updates(message as SolarPanelConfig))
           as SolarPanelConfig;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SolarPanelConfig create() => SolarPanelConfig._();
+  @$core.override
   SolarPanelConfig createEmptyInstance() => create();
-  static $pb.PbList<SolarPanelConfig> createRepeated() =>
-      $pb.PbList<SolarPanelConfig>();
   @$core.pragma('dart2js:noInline')
   static SolarPanelConfig getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SolarPanelConfig>(create);
@@ -1310,35 +1100,29 @@ class SolarPanelConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get panelsCount => $_getIZ(0);
   @$pb.TagNumber(1)
-  set panelsCount($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set panelsCount($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPanelsCount() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPanelsCount() => clearField(1);
+  void clearPanelsCount() => $_clearField(1);
 
   /// How much sunlight energy this layout captures over the course of a
   /// year, in DC kWh, assuming the panels described above.
   @$pb.TagNumber(2)
   $core.double get yearlyEnergyDcKwh => $_getN(1);
   @$pb.TagNumber(2)
-  set yearlyEnergyDcKwh($core.double v) {
-    $_setFloat(1, v);
-  }
-
+  set yearlyEnergyDcKwh($core.double value) => $_setFloat(1, value);
   @$pb.TagNumber(2)
   $core.bool hasYearlyEnergyDcKwh() => $_has(1);
   @$pb.TagNumber(2)
-  void clearYearlyEnergyDcKwh() => clearField(2);
+  void clearYearlyEnergyDcKwh() => $_clearField(2);
 
   /// Information about the production of each roof segment that is carrying
   /// at least one panel in this layout. `roof_segment_summaries[i]` describes
   /// the i-th roof segment, including its size, expected production and
   /// orientation.
   @$pb.TagNumber(4)
-  $core.List<RoofSegmentSummary> get roofSegmentSummaries => $_getList(2);
+  $pb.PbList<RoofSegmentSummary> get roofSegmentSummaries => $_getList(2);
 }
 
 /// Information about a roof segment on the building, with some number of
@@ -1351,65 +1135,53 @@ class RoofSegmentSummary extends $pb.GeneratedMessage {
     $core.double? yearlyEnergyDcKwh,
     $core.int? segmentIndex,
   }) {
-    final $result = create();
-    if (pitchDegrees != null) {
-      $result.pitchDegrees = pitchDegrees;
-    }
-    if (azimuthDegrees != null) {
-      $result.azimuthDegrees = azimuthDegrees;
-    }
-    if (panelsCount != null) {
-      $result.panelsCount = panelsCount;
-    }
-    if (yearlyEnergyDcKwh != null) {
-      $result.yearlyEnergyDcKwh = yearlyEnergyDcKwh;
-    }
-    if (segmentIndex != null) {
-      $result.segmentIndex = segmentIndex;
-    }
-    return $result;
+    final result = create();
+    if (pitchDegrees != null) result.pitchDegrees = pitchDegrees;
+    if (azimuthDegrees != null) result.azimuthDegrees = azimuthDegrees;
+    if (panelsCount != null) result.panelsCount = panelsCount;
+    if (yearlyEnergyDcKwh != null) result.yearlyEnergyDcKwh = yearlyEnergyDcKwh;
+    if (segmentIndex != null) result.segmentIndex = segmentIndex;
+    return result;
   }
-  RoofSegmentSummary._() : super();
-  factory RoofSegmentSummary.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RoofSegmentSummary.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RoofSegmentSummary._();
+
+  factory RoofSegmentSummary.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RoofSegmentSummary.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RoofSegmentSummary',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.maps.solar.v1'),
       createEmptyInstance: create)
-    ..a<$core.double>(
-        2, _omitFieldNames ? '' : 'pitchDegrees', $pb.PbFieldType.OF)
-    ..a<$core.double>(
-        3, _omitFieldNames ? '' : 'azimuthDegrees', $pb.PbFieldType.OF)
-    ..a<$core.int>(7, _omitFieldNames ? '' : 'panelsCount', $pb.PbFieldType.O3)
-    ..a<$core.double>(
-        8, _omitFieldNames ? '' : 'yearlyEnergyDcKwh', $pb.PbFieldType.OF)
-    ..a<$core.int>(9, _omitFieldNames ? '' : 'segmentIndex', $pb.PbFieldType.O3)
+    ..aD(2, _omitFieldNames ? '' : 'pitchDegrees',
+        fieldType: $pb.PbFieldType.OF)
+    ..aD(3, _omitFieldNames ? '' : 'azimuthDegrees',
+        fieldType: $pb.PbFieldType.OF)
+    ..aI(7, _omitFieldNames ? '' : 'panelsCount')
+    ..aD(8, _omitFieldNames ? '' : 'yearlyEnergyDcKwh',
+        fieldType: $pb.PbFieldType.OF)
+    ..aI(9, _omitFieldNames ? '' : 'segmentIndex')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RoofSegmentSummary clone() => RoofSegmentSummary()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RoofSegmentSummary clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RoofSegmentSummary copyWith(void Function(RoofSegmentSummary) updates) =>
       super.copyWith((message) => updates(message as RoofSegmentSummary))
           as RoofSegmentSummary;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RoofSegmentSummary create() => RoofSegmentSummary._();
+  @$core.override
   RoofSegmentSummary createEmptyInstance() => create();
-  static $pb.PbList<RoofSegmentSummary> createRepeated() =>
-      $pb.PbList<RoofSegmentSummary>();
   @$core.pragma('dart2js:noInline')
   static RoofSegmentSummary getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RoofSegmentSummary>(create);
@@ -1420,14 +1192,11 @@ class RoofSegmentSummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.double get pitchDegrees => $_getN(0);
   @$pb.TagNumber(2)
-  set pitchDegrees($core.double v) {
-    $_setFloat(0, v);
-  }
-
+  set pitchDegrees($core.double value) => $_setFloat(0, value);
   @$pb.TagNumber(2)
   $core.bool hasPitchDegrees() => $_has(0);
   @$pb.TagNumber(2)
-  void clearPitchDegrees() => clearField(2);
+  void clearPitchDegrees() => $_clearField(2);
 
   /// Compass direction the roof segment is pointing in. 0 = North, 90 =
   /// East, 180 = South. For a "flat" roof segment (`pitch_degrees` very
@@ -1436,41 +1205,32 @@ class RoofSegmentSummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.double get azimuthDegrees => $_getN(1);
   @$pb.TagNumber(3)
-  set azimuthDegrees($core.double v) {
-    $_setFloat(1, v);
-  }
-
+  set azimuthDegrees($core.double value) => $_setFloat(1, value);
   @$pb.TagNumber(3)
   $core.bool hasAzimuthDegrees() => $_has(1);
   @$pb.TagNumber(3)
-  void clearAzimuthDegrees() => clearField(3);
+  void clearAzimuthDegrees() => $_clearField(3);
 
   /// The total number of panels on this segment.
   @$pb.TagNumber(7)
   $core.int get panelsCount => $_getIZ(2);
   @$pb.TagNumber(7)
-  set panelsCount($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set panelsCount($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(7)
   $core.bool hasPanelsCount() => $_has(2);
   @$pb.TagNumber(7)
-  void clearPanelsCount() => clearField(7);
+  void clearPanelsCount() => $_clearField(7);
 
   /// How much sunlight energy this part of the layout captures over the
   /// course of a year, in DC kWh, assuming the panels described above.
   @$pb.TagNumber(8)
   $core.double get yearlyEnergyDcKwh => $_getN(3);
   @$pb.TagNumber(8)
-  set yearlyEnergyDcKwh($core.double v) {
-    $_setFloat(3, v);
-  }
-
+  set yearlyEnergyDcKwh($core.double value) => $_setFloat(3, value);
   @$pb.TagNumber(8)
   $core.bool hasYearlyEnergyDcKwh() => $_has(3);
   @$pb.TagNumber(8)
-  void clearYearlyEnergyDcKwh() => clearField(8);
+  void clearYearlyEnergyDcKwh() => $_clearField(8);
 
   /// Index in [roof_segment_stats]
   /// [google.maps.solar.v1.SolarPotential.roof_segment_stats]
@@ -1478,14 +1238,11 @@ class RoofSegmentSummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.int get segmentIndex => $_getIZ(4);
   @$pb.TagNumber(9)
-  set segmentIndex($core.int v) {
-    $_setSignedInt32(4, v);
-  }
-
+  set segmentIndex($core.int value) => $_setSignedInt32(4, value);
   @$pb.TagNumber(9)
   $core.bool hasSegmentIndex() => $_has(4);
   @$pb.TagNumber(9)
-  void clearSegmentIndex() => clearField(9);
+  void clearSegmentIndex() => $_clearField(9);
 }
 
 /// Analysis of the cost and benefits of the optimum solar layout for a
@@ -1501,40 +1258,29 @@ class FinancialAnalysis extends $pb.GeneratedMessage {
     CashPurchaseSavings? cashPurchaseSavings,
     FinancedPurchaseSavings? financedPurchaseSavings,
   }) {
-    final $result = create();
-    if (monthlyBill != null) {
-      $result.monthlyBill = monthlyBill;
-    }
-    if (defaultBill != null) {
-      $result.defaultBill = defaultBill;
-    }
-    if (averageKwhPerMonth != null) {
-      $result.averageKwhPerMonth = averageKwhPerMonth;
-    }
-    if (panelConfigIndex != null) {
-      $result.panelConfigIndex = panelConfigIndex;
-    }
-    if (financialDetails != null) {
-      $result.financialDetails = financialDetails;
-    }
-    if (leasingSavings != null) {
-      $result.leasingSavings = leasingSavings;
-    }
-    if (cashPurchaseSavings != null) {
-      $result.cashPurchaseSavings = cashPurchaseSavings;
-    }
-    if (financedPurchaseSavings != null) {
-      $result.financedPurchaseSavings = financedPurchaseSavings;
-    }
-    return $result;
+    final result = create();
+    if (monthlyBill != null) result.monthlyBill = monthlyBill;
+    if (defaultBill != null) result.defaultBill = defaultBill;
+    if (averageKwhPerMonth != null)
+      result.averageKwhPerMonth = averageKwhPerMonth;
+    if (panelConfigIndex != null) result.panelConfigIndex = panelConfigIndex;
+    if (financialDetails != null) result.financialDetails = financialDetails;
+    if (leasingSavings != null) result.leasingSavings = leasingSavings;
+    if (cashPurchaseSavings != null)
+      result.cashPurchaseSavings = cashPurchaseSavings;
+    if (financedPurchaseSavings != null)
+      result.financedPurchaseSavings = financedPurchaseSavings;
+    return result;
   }
-  FinancialAnalysis._() : super();
-  factory FinancialAnalysis.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FinancialAnalysis.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FinancialAnalysis._();
+
+  factory FinancialAnalysis.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FinancialAnalysis.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FinancialAnalysis',
@@ -1544,10 +1290,9 @@ class FinancialAnalysis extends $pb.GeneratedMessage {
     ..aOM<$4.Money>(3, _omitFieldNames ? '' : 'monthlyBill',
         subBuilder: $4.Money.create)
     ..aOB(4, _omitFieldNames ? '' : 'defaultBill')
-    ..a<$core.double>(
-        5, _omitFieldNames ? '' : 'averageKwhPerMonth', $pb.PbFieldType.OF)
-    ..a<$core.int>(
-        6, _omitFieldNames ? '' : 'panelConfigIndex', $pb.PbFieldType.O3)
+    ..aD(5, _omitFieldNames ? '' : 'averageKwhPerMonth',
+        fieldType: $pb.PbFieldType.OF)
+    ..aI(6, _omitFieldNames ? '' : 'panelConfigIndex')
     ..aOM<FinancialDetails>(7, _omitFieldNames ? '' : 'financialDetails',
         subBuilder: FinancialDetails.create)
     ..aOM<LeasingSavings>(8, _omitFieldNames ? '' : 'leasingSavings',
@@ -1559,24 +1304,20 @@ class FinancialAnalysis extends $pb.GeneratedMessage {
         subBuilder: FinancedPurchaseSavings.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FinancialAnalysis clone() => FinancialAnalysis()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FinancialAnalysis clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FinancialAnalysis copyWith(void Function(FinancialAnalysis) updates) =>
       super.copyWith((message) => updates(message as FinancialAnalysis))
           as FinancialAnalysis;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FinancialAnalysis create() => FinancialAnalysis._();
+  @$core.override
   FinancialAnalysis createEmptyInstance() => create();
-  static $pb.PbList<FinancialAnalysis> createRepeated() =>
-      $pb.PbList<FinancialAnalysis>();
   @$core.pragma('dart2js:noInline')
   static FinancialAnalysis getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FinancialAnalysis>(create);
@@ -1586,14 +1327,11 @@ class FinancialAnalysis extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $4.Money get monthlyBill => $_getN(0);
   @$pb.TagNumber(3)
-  set monthlyBill($4.Money v) {
-    setField(3, v);
-  }
-
+  set monthlyBill($4.Money value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasMonthlyBill() => $_has(0);
   @$pb.TagNumber(3)
-  void clearMonthlyBill() => clearField(3);
+  void clearMonthlyBill() => $_clearField(3);
   @$pb.TagNumber(3)
   $4.Money ensureMonthlyBill() => $_ensure(0);
 
@@ -1603,28 +1341,22 @@ class FinancialAnalysis extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get defaultBill => $_getBF(1);
   @$pb.TagNumber(4)
-  set defaultBill($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set defaultBill($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(4)
   $core.bool hasDefaultBill() => $_has(1);
   @$pb.TagNumber(4)
-  void clearDefaultBill() => clearField(4);
+  void clearDefaultBill() => $_clearField(4);
 
   /// How much electricity the house uses in an average month, based on the
   /// bill size and the local electricity rates.
   @$pb.TagNumber(5)
   $core.double get averageKwhPerMonth => $_getN(2);
   @$pb.TagNumber(5)
-  set averageKwhPerMonth($core.double v) {
-    $_setFloat(2, v);
-  }
-
+  set averageKwhPerMonth($core.double value) => $_setFloat(2, value);
   @$pb.TagNumber(5)
   $core.bool hasAverageKwhPerMonth() => $_has(2);
   @$pb.TagNumber(5)
-  void clearAverageKwhPerMonth() => clearField(5);
+  void clearAverageKwhPerMonth() => $_clearField(5);
 
   /// Index in [solar_panel_configs]
   /// [google.maps.solar.v1.SolarPotential.solar_panel_configs]
@@ -1634,28 +1366,22 @@ class FinancialAnalysis extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.int get panelConfigIndex => $_getIZ(3);
   @$pb.TagNumber(6)
-  set panelConfigIndex($core.int v) {
-    $_setSignedInt32(3, v);
-  }
-
+  set panelConfigIndex($core.int value) => $_setSignedInt32(3, value);
   @$pb.TagNumber(6)
   $core.bool hasPanelConfigIndex() => $_has(3);
   @$pb.TagNumber(6)
-  void clearPanelConfigIndex() => clearField(6);
+  void clearPanelConfigIndex() => $_clearField(6);
 
   /// Financial information that applies regardless of the financing method
   /// used.
   @$pb.TagNumber(7)
   FinancialDetails get financialDetails => $_getN(4);
   @$pb.TagNumber(7)
-  set financialDetails(FinancialDetails v) {
-    setField(7, v);
-  }
-
+  set financialDetails(FinancialDetails value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasFinancialDetails() => $_has(4);
   @$pb.TagNumber(7)
-  void clearFinancialDetails() => clearField(7);
+  void clearFinancialDetails() => $_clearField(7);
   @$pb.TagNumber(7)
   FinancialDetails ensureFinancialDetails() => $_ensure(4);
 
@@ -1663,14 +1389,11 @@ class FinancialAnalysis extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   LeasingSavings get leasingSavings => $_getN(5);
   @$pb.TagNumber(8)
-  set leasingSavings(LeasingSavings v) {
-    setField(8, v);
-  }
-
+  set leasingSavings(LeasingSavings value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasLeasingSavings() => $_has(5);
   @$pb.TagNumber(8)
-  void clearLeasingSavings() => clearField(8);
+  void clearLeasingSavings() => $_clearField(8);
   @$pb.TagNumber(8)
   LeasingSavings ensureLeasingSavings() => $_ensure(5);
 
@@ -1678,14 +1401,11 @@ class FinancialAnalysis extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   CashPurchaseSavings get cashPurchaseSavings => $_getN(6);
   @$pb.TagNumber(9)
-  set cashPurchaseSavings(CashPurchaseSavings v) {
-    setField(9, v);
-  }
-
+  set cashPurchaseSavings(CashPurchaseSavings value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasCashPurchaseSavings() => $_has(6);
   @$pb.TagNumber(9)
-  void clearCashPurchaseSavings() => clearField(9);
+  void clearCashPurchaseSavings() => $_clearField(9);
   @$pb.TagNumber(9)
   CashPurchaseSavings ensureCashPurchaseSavings() => $_ensure(6);
 
@@ -1693,14 +1413,12 @@ class FinancialAnalysis extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   FinancedPurchaseSavings get financedPurchaseSavings => $_getN(7);
   @$pb.TagNumber(10)
-  set financedPurchaseSavings(FinancedPurchaseSavings v) {
-    setField(10, v);
-  }
-
+  set financedPurchaseSavings(FinancedPurchaseSavings value) =>
+      $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasFinancedPurchaseSavings() => $_has(7);
   @$pb.TagNumber(10)
-  void clearFinancedPurchaseSavings() => clearField(10);
+  void clearFinancedPurchaseSavings() => $_clearField(10);
   @$pb.TagNumber(10)
   FinancedPurchaseSavings ensureFinancedPurchaseSavings() => $_ensure(7);
 }
@@ -1730,54 +1448,41 @@ class FinancialDetails extends $pb.GeneratedMessage {
     $core.double? solarPercentage,
     $core.double? percentageExportedToGrid,
   }) {
-    final $result = create();
-    if (initialAcKwhPerYear != null) {
-      $result.initialAcKwhPerYear = initialAcKwhPerYear;
-    }
-    if (remainingLifetimeUtilityBill != null) {
-      $result.remainingLifetimeUtilityBill = remainingLifetimeUtilityBill;
-    }
-    if (federalIncentive != null) {
-      $result.federalIncentive = federalIncentive;
-    }
-    if (stateIncentive != null) {
-      $result.stateIncentive = stateIncentive;
-    }
-    if (utilityIncentive != null) {
-      $result.utilityIncentive = utilityIncentive;
-    }
-    if (lifetimeSrecTotal != null) {
-      $result.lifetimeSrecTotal = lifetimeSrecTotal;
-    }
-    if (costOfElectricityWithoutSolar != null) {
-      $result.costOfElectricityWithoutSolar = costOfElectricityWithoutSolar;
-    }
-    if (netMeteringAllowed != null) {
-      $result.netMeteringAllowed = netMeteringAllowed;
-    }
-    if (solarPercentage != null) {
-      $result.solarPercentage = solarPercentage;
-    }
-    if (percentageExportedToGrid != null) {
-      $result.percentageExportedToGrid = percentageExportedToGrid;
-    }
-    return $result;
+    final result = create();
+    if (initialAcKwhPerYear != null)
+      result.initialAcKwhPerYear = initialAcKwhPerYear;
+    if (remainingLifetimeUtilityBill != null)
+      result.remainingLifetimeUtilityBill = remainingLifetimeUtilityBill;
+    if (federalIncentive != null) result.federalIncentive = federalIncentive;
+    if (stateIncentive != null) result.stateIncentive = stateIncentive;
+    if (utilityIncentive != null) result.utilityIncentive = utilityIncentive;
+    if (lifetimeSrecTotal != null) result.lifetimeSrecTotal = lifetimeSrecTotal;
+    if (costOfElectricityWithoutSolar != null)
+      result.costOfElectricityWithoutSolar = costOfElectricityWithoutSolar;
+    if (netMeteringAllowed != null)
+      result.netMeteringAllowed = netMeteringAllowed;
+    if (solarPercentage != null) result.solarPercentage = solarPercentage;
+    if (percentageExportedToGrid != null)
+      result.percentageExportedToGrid = percentageExportedToGrid;
+    return result;
   }
-  FinancialDetails._() : super();
-  factory FinancialDetails.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FinancialDetails.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FinancialDetails._();
+
+  factory FinancialDetails.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FinancialDetails.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FinancialDetails',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.maps.solar.v1'),
       createEmptyInstance: create)
-    ..a<$core.double>(
-        1, _omitFieldNames ? '' : 'initialAcKwhPerYear', $pb.PbFieldType.OF)
+    ..aD(1, _omitFieldNames ? '' : 'initialAcKwhPerYear',
+        fieldType: $pb.PbFieldType.OF)
     ..aOM<$4.Money>(2, _omitFieldNames ? '' : 'remainingLifetimeUtilityBill',
         subBuilder: $4.Money.create)
     ..aOM<$4.Money>(3, _omitFieldNames ? '' : 'federalIncentive',
@@ -1791,30 +1496,26 @@ class FinancialDetails extends $pb.GeneratedMessage {
     ..aOM<$4.Money>(7, _omitFieldNames ? '' : 'costOfElectricityWithoutSolar',
         subBuilder: $4.Money.create)
     ..aOB(8, _omitFieldNames ? '' : 'netMeteringAllowed')
-    ..a<$core.double>(
-        9, _omitFieldNames ? '' : 'solarPercentage', $pb.PbFieldType.OF)
-    ..a<$core.double>(10, _omitFieldNames ? '' : 'percentageExportedToGrid',
-        $pb.PbFieldType.OF)
+    ..aD(9, _omitFieldNames ? '' : 'solarPercentage',
+        fieldType: $pb.PbFieldType.OF)
+    ..aD(10, _omitFieldNames ? '' : 'percentageExportedToGrid',
+        fieldType: $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FinancialDetails clone() => FinancialDetails()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FinancialDetails clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FinancialDetails copyWith(void Function(FinancialDetails) updates) =>
       super.copyWith((message) => updates(message as FinancialDetails))
           as FinancialDetails;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FinancialDetails create() => FinancialDetails._();
+  @$core.override
   FinancialDetails createEmptyInstance() => create();
-  static $pb.PbList<FinancialDetails> createRepeated() =>
-      $pb.PbList<FinancialDetails>();
   @$core.pragma('dart2js:noInline')
   static FinancialDetails getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FinancialDetails>(create);
@@ -1825,28 +1526,22 @@ class FinancialDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.double get initialAcKwhPerYear => $_getN(0);
   @$pb.TagNumber(1)
-  set initialAcKwhPerYear($core.double v) {
-    $_setFloat(0, v);
-  }
-
+  set initialAcKwhPerYear($core.double value) => $_setFloat(0, value);
   @$pb.TagNumber(1)
   $core.bool hasInitialAcKwhPerYear() => $_has(0);
   @$pb.TagNumber(1)
-  void clearInitialAcKwhPerYear() => clearField(1);
+  void clearInitialAcKwhPerYear() => $_clearField(1);
 
   /// Utility bill for electricity not produced by solar, for the
   /// lifetime of the panels.
   @$pb.TagNumber(2)
   $4.Money get remainingLifetimeUtilityBill => $_getN(1);
   @$pb.TagNumber(2)
-  set remainingLifetimeUtilityBill($4.Money v) {
-    setField(2, v);
-  }
-
+  set remainingLifetimeUtilityBill($4.Money value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasRemainingLifetimeUtilityBill() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRemainingLifetimeUtilityBill() => clearField(2);
+  void clearRemainingLifetimeUtilityBill() => $_clearField(2);
   @$pb.TagNumber(2)
   $4.Money ensureRemainingLifetimeUtilityBill() => $_ensure(1);
 
@@ -1855,14 +1550,11 @@ class FinancialDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $4.Money get federalIncentive => $_getN(2);
   @$pb.TagNumber(3)
-  set federalIncentive($4.Money v) {
-    setField(3, v);
-  }
-
+  set federalIncentive($4.Money value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasFederalIncentive() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFederalIncentive() => clearField(3);
+  void clearFederalIncentive() => $_clearField(3);
   @$pb.TagNumber(3)
   $4.Money ensureFederalIncentive() => $_ensure(2);
 
@@ -1871,14 +1563,11 @@ class FinancialDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $4.Money get stateIncentive => $_getN(3);
   @$pb.TagNumber(4)
-  set stateIncentive($4.Money v) {
-    setField(4, v);
-  }
-
+  set stateIncentive($4.Money value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasStateIncentive() => $_has(3);
   @$pb.TagNumber(4)
-  void clearStateIncentive() => clearField(4);
+  void clearStateIncentive() => $_clearField(4);
   @$pb.TagNumber(4)
   $4.Money ensureStateIncentive() => $_ensure(3);
 
@@ -1887,14 +1576,11 @@ class FinancialDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $4.Money get utilityIncentive => $_getN(4);
   @$pb.TagNumber(5)
-  set utilityIncentive($4.Money v) {
-    setField(5, v);
-  }
-
+  set utilityIncentive($4.Money value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasUtilityIncentive() => $_has(4);
   @$pb.TagNumber(5)
-  void clearUtilityIncentive() => clearField(5);
+  void clearUtilityIncentive() => $_clearField(5);
   @$pb.TagNumber(5)
   $4.Money ensureUtilityIncentive() => $_ensure(4);
 
@@ -1904,14 +1590,11 @@ class FinancialDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $4.Money get lifetimeSrecTotal => $_getN(5);
   @$pb.TagNumber(6)
-  set lifetimeSrecTotal($4.Money v) {
-    setField(6, v);
-  }
-
+  set lifetimeSrecTotal($4.Money value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasLifetimeSrecTotal() => $_has(5);
   @$pb.TagNumber(6)
-  void clearLifetimeSrecTotal() => clearField(6);
+  void clearLifetimeSrecTotal() => $_clearField(6);
   @$pb.TagNumber(6)
   $4.Money ensureLifetimeSrecTotal() => $_ensure(5);
 
@@ -1920,14 +1603,11 @@ class FinancialDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $4.Money get costOfElectricityWithoutSolar => $_getN(6);
   @$pb.TagNumber(7)
-  set costOfElectricityWithoutSolar($4.Money v) {
-    setField(7, v);
-  }
-
+  set costOfElectricityWithoutSolar($4.Money value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasCostOfElectricityWithoutSolar() => $_has(6);
   @$pb.TagNumber(7)
-  void clearCostOfElectricityWithoutSolar() => clearField(7);
+  void clearCostOfElectricityWithoutSolar() => $_clearField(7);
   @$pb.TagNumber(7)
   $4.Money ensureCostOfElectricityWithoutSolar() => $_ensure(6);
 
@@ -1935,28 +1615,22 @@ class FinancialDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.bool get netMeteringAllowed => $_getBF(7);
   @$pb.TagNumber(8)
-  set netMeteringAllowed($core.bool v) {
-    $_setBool(7, v);
-  }
-
+  set netMeteringAllowed($core.bool value) => $_setBool(7, value);
   @$pb.TagNumber(8)
   $core.bool hasNetMeteringAllowed() => $_has(7);
   @$pb.TagNumber(8)
-  void clearNetMeteringAllowed() => clearField(8);
+  void clearNetMeteringAllowed() => $_clearField(8);
 
   /// Percentage (0-100) of the user's power supplied by solar.
   /// Valid for the first year but approximately correct for future years.
   @$pb.TagNumber(9)
   $core.double get solarPercentage => $_getN(8);
   @$pb.TagNumber(9)
-  set solarPercentage($core.double v) {
-    $_setFloat(8, v);
-  }
-
+  set solarPercentage($core.double value) => $_setFloat(8, value);
   @$pb.TagNumber(9)
   $core.bool hasSolarPercentage() => $_has(8);
   @$pb.TagNumber(9)
-  void clearSolarPercentage() => clearField(9);
+  void clearSolarPercentage() => $_clearField(9);
 
   /// The percentage (0-100) of solar electricity production we assumed was
   /// exported to the grid, based on the first quarter of production. This
@@ -1964,14 +1638,11 @@ class FinancialDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $core.double get percentageExportedToGrid => $_getN(9);
   @$pb.TagNumber(10)
-  set percentageExportedToGrid($core.double v) {
-    $_setFloat(9, v);
-  }
-
+  set percentageExportedToGrid($core.double value) => $_setFloat(9, value);
   @$pb.TagNumber(10)
   $core.bool hasPercentageExportedToGrid() => $_has(9);
   @$pb.TagNumber(10)
-  void clearPercentageExportedToGrid() => clearField(10);
+  void clearPercentageExportedToGrid() => $_clearField(10);
 }
 
 /// Financial information that's shared between different financing methods.
@@ -1984,34 +1655,26 @@ class SavingsOverTime extends $pb.GeneratedMessage {
     $4.Money? savingsLifetime,
     $4.Money? presentValueOfSavingsLifetime,
   }) {
-    final $result = create();
-    if (savingsYear1 != null) {
-      $result.savingsYear1 = savingsYear1;
-    }
-    if (savingsYear20 != null) {
-      $result.savingsYear20 = savingsYear20;
-    }
-    if (presentValueOfSavingsYear20 != null) {
-      $result.presentValueOfSavingsYear20 = presentValueOfSavingsYear20;
-    }
-    if (financiallyViable != null) {
-      $result.financiallyViable = financiallyViable;
-    }
-    if (savingsLifetime != null) {
-      $result.savingsLifetime = savingsLifetime;
-    }
-    if (presentValueOfSavingsLifetime != null) {
-      $result.presentValueOfSavingsLifetime = presentValueOfSavingsLifetime;
-    }
-    return $result;
+    final result = create();
+    if (savingsYear1 != null) result.savingsYear1 = savingsYear1;
+    if (savingsYear20 != null) result.savingsYear20 = savingsYear20;
+    if (presentValueOfSavingsYear20 != null)
+      result.presentValueOfSavingsYear20 = presentValueOfSavingsYear20;
+    if (financiallyViable != null) result.financiallyViable = financiallyViable;
+    if (savingsLifetime != null) result.savingsLifetime = savingsLifetime;
+    if (presentValueOfSavingsLifetime != null)
+      result.presentValueOfSavingsLifetime = presentValueOfSavingsLifetime;
+    return result;
   }
-  SavingsOverTime._() : super();
-  factory SavingsOverTime.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SavingsOverTime.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SavingsOverTime._();
+
+  factory SavingsOverTime.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SavingsOverTime.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SavingsOverTime',
@@ -2031,24 +1694,20 @@ class SavingsOverTime extends $pb.GeneratedMessage {
         subBuilder: $4.Money.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SavingsOverTime clone() => SavingsOverTime()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SavingsOverTime clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SavingsOverTime copyWith(void Function(SavingsOverTime) updates) =>
       super.copyWith((message) => updates(message as SavingsOverTime))
           as SavingsOverTime;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SavingsOverTime create() => SavingsOverTime._();
+  @$core.override
   SavingsOverTime createEmptyInstance() => create();
-  static $pb.PbList<SavingsOverTime> createRepeated() =>
-      $pb.PbList<SavingsOverTime>();
   @$core.pragma('dart2js:noInline')
   static SavingsOverTime getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SavingsOverTime>(create);
@@ -2058,14 +1717,11 @@ class SavingsOverTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.Money get savingsYear1 => $_getN(0);
   @$pb.TagNumber(1)
-  set savingsYear1($4.Money v) {
-    setField(1, v);
-  }
-
+  set savingsYear1($4.Money value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSavingsYear1() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSavingsYear1() => clearField(1);
+  void clearSavingsYear1() => $_clearField(1);
   @$pb.TagNumber(1)
   $4.Money ensureSavingsYear1() => $_ensure(0);
 
@@ -2073,14 +1729,11 @@ class SavingsOverTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $4.Money get savingsYear20 => $_getN(1);
   @$pb.TagNumber(2)
-  set savingsYear20($4.Money v) {
-    setField(2, v);
-  }
-
+  set savingsYear20($4.Money value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSavingsYear20() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSavingsYear20() => clearField(2);
+  void clearSavingsYear20() => $_clearField(2);
   @$pb.TagNumber(2)
   $4.Money ensureSavingsYear20() => $_ensure(1);
 
@@ -2089,14 +1742,11 @@ class SavingsOverTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $4.Money get presentValueOfSavingsYear20 => $_getN(2);
   @$pb.TagNumber(3)
-  set presentValueOfSavingsYear20($4.Money v) {
-    setField(3, v);
-  }
-
+  set presentValueOfSavingsYear20($4.Money value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasPresentValueOfSavingsYear20() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPresentValueOfSavingsYear20() => clearField(3);
+  void clearPresentValueOfSavingsYear20() => $_clearField(3);
   @$pb.TagNumber(3)
   $4.Money ensurePresentValueOfSavingsYear20() => $_ensure(2);
 
@@ -2105,27 +1755,21 @@ class SavingsOverTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get financiallyViable => $_getBF(3);
   @$pb.TagNumber(4)
-  set financiallyViable($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set financiallyViable($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasFinanciallyViable() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFinanciallyViable() => clearField(4);
+  void clearFinanciallyViable() => $_clearField(4);
 
   /// Savings in the entire panel lifetime.
   @$pb.TagNumber(5)
   $4.Money get savingsLifetime => $_getN(4);
   @$pb.TagNumber(5)
-  set savingsLifetime($4.Money v) {
-    setField(5, v);
-  }
-
+  set savingsLifetime($4.Money value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasSavingsLifetime() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSavingsLifetime() => clearField(5);
+  void clearSavingsLifetime() => $_clearField(5);
   @$pb.TagNumber(5)
   $4.Money ensureSavingsLifetime() => $_ensure(4);
 
@@ -2134,14 +1778,11 @@ class SavingsOverTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $4.Money get presentValueOfSavingsLifetime => $_getN(5);
   @$pb.TagNumber(6)
-  set presentValueOfSavingsLifetime($4.Money v) {
-    setField(6, v);
-  }
-
+  set presentValueOfSavingsLifetime($4.Money value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasPresentValueOfSavingsLifetime() => $_has(5);
   @$pb.TagNumber(6)
-  void clearPresentValueOfSavingsLifetime() => clearField(6);
+  void clearPresentValueOfSavingsLifetime() => $_clearField(6);
   @$pb.TagNumber(6)
   $4.Money ensurePresentValueOfSavingsLifetime() => $_ensure(5);
 }
@@ -2155,28 +1796,22 @@ class LeasingSavings extends $pb.GeneratedMessage {
     $4.Money? annualLeasingCost,
     SavingsOverTime? savings,
   }) {
-    final $result = create();
-    if (leasesAllowed != null) {
-      $result.leasesAllowed = leasesAllowed;
-    }
-    if (leasesSupported != null) {
-      $result.leasesSupported = leasesSupported;
-    }
-    if (annualLeasingCost != null) {
-      $result.annualLeasingCost = annualLeasingCost;
-    }
-    if (savings != null) {
-      $result.savings = savings;
-    }
-    return $result;
+    final result = create();
+    if (leasesAllowed != null) result.leasesAllowed = leasesAllowed;
+    if (leasesSupported != null) result.leasesSupported = leasesSupported;
+    if (annualLeasingCost != null) result.annualLeasingCost = annualLeasingCost;
+    if (savings != null) result.savings = savings;
+    return result;
   }
-  LeasingSavings._() : super();
-  factory LeasingSavings.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory LeasingSavings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  LeasingSavings._();
+
+  factory LeasingSavings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LeasingSavings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'LeasingSavings',
@@ -2191,24 +1826,20 @@ class LeasingSavings extends $pb.GeneratedMessage {
         subBuilder: SavingsOverTime.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  LeasingSavings clone() => LeasingSavings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LeasingSavings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   LeasingSavings copyWith(void Function(LeasingSavings) updates) =>
       super.copyWith((message) => updates(message as LeasingSavings))
           as LeasingSavings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static LeasingSavings create() => LeasingSavings._();
+  @$core.override
   LeasingSavings createEmptyInstance() => create();
-  static $pb.PbList<LeasingSavings> createRepeated() =>
-      $pb.PbList<LeasingSavings>();
   @$core.pragma('dart2js:noInline')
   static LeasingSavings getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LeasingSavings>(create);
@@ -2220,14 +1851,11 @@ class LeasingSavings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get leasesAllowed => $_getBF(0);
   @$pb.TagNumber(1)
-  set leasesAllowed($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set leasesAllowed($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasLeasesAllowed() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLeasesAllowed() => clearField(1);
+  void clearLeasesAllowed() => $_clearField(1);
 
   /// Whether leases are supported in this juristiction by the financial
   /// calculation engine. If this field is false, then the values in this
@@ -2237,27 +1865,21 @@ class LeasingSavings extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool get leasesSupported => $_getBF(1);
   @$pb.TagNumber(2)
-  set leasesSupported($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set leasesSupported($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasLeasesSupported() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLeasesSupported() => clearField(2);
+  void clearLeasesSupported() => $_clearField(2);
 
   /// Estimated annual leasing cost.
   @$pb.TagNumber(3)
   $4.Money get annualLeasingCost => $_getN(2);
   @$pb.TagNumber(3)
-  set annualLeasingCost($4.Money v) {
-    setField(3, v);
-  }
-
+  set annualLeasingCost($4.Money value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasAnnualLeasingCost() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAnnualLeasingCost() => clearField(3);
+  void clearAnnualLeasingCost() => $_clearField(3);
   @$pb.TagNumber(3)
   $4.Money ensureAnnualLeasingCost() => $_ensure(2);
 
@@ -2265,14 +1887,11 @@ class LeasingSavings extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   SavingsOverTime get savings => $_getN(3);
   @$pb.TagNumber(4)
-  set savings(SavingsOverTime v) {
-    setField(4, v);
-  }
-
+  set savings(SavingsOverTime value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasSavings() => $_has(3);
   @$pb.TagNumber(4)
-  void clearSavings() => clearField(4);
+  void clearSavings() => $_clearField(4);
   @$pb.TagNumber(4)
   SavingsOverTime ensureSavings() => $_ensure(3);
 }
@@ -2287,31 +1906,23 @@ class CashPurchaseSavings extends $pb.GeneratedMessage {
     $core.double? paybackYears,
     SavingsOverTime? savings,
   }) {
-    final $result = create();
-    if (outOfPocketCost != null) {
-      $result.outOfPocketCost = outOfPocketCost;
-    }
-    if (upfrontCost != null) {
-      $result.upfrontCost = upfrontCost;
-    }
-    if (rebateValue != null) {
-      $result.rebateValue = rebateValue;
-    }
-    if (paybackYears != null) {
-      $result.paybackYears = paybackYears;
-    }
-    if (savings != null) {
-      $result.savings = savings;
-    }
-    return $result;
+    final result = create();
+    if (outOfPocketCost != null) result.outOfPocketCost = outOfPocketCost;
+    if (upfrontCost != null) result.upfrontCost = upfrontCost;
+    if (rebateValue != null) result.rebateValue = rebateValue;
+    if (paybackYears != null) result.paybackYears = paybackYears;
+    if (savings != null) result.savings = savings;
+    return result;
   }
-  CashPurchaseSavings._() : super();
-  factory CashPurchaseSavings.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CashPurchaseSavings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CashPurchaseSavings._();
+
+  factory CashPurchaseSavings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CashPurchaseSavings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CashPurchaseSavings',
@@ -2324,30 +1935,26 @@ class CashPurchaseSavings extends $pb.GeneratedMessage {
         subBuilder: $4.Money.create)
     ..aOM<$4.Money>(3, _omitFieldNames ? '' : 'rebateValue',
         subBuilder: $4.Money.create)
-    ..a<$core.double>(
-        4, _omitFieldNames ? '' : 'paybackYears', $pb.PbFieldType.OF)
+    ..aD(4, _omitFieldNames ? '' : 'paybackYears',
+        fieldType: $pb.PbFieldType.OF)
     ..aOM<SavingsOverTime>(5, _omitFieldNames ? '' : 'savings',
         subBuilder: SavingsOverTime.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CashPurchaseSavings clone() => CashPurchaseSavings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CashPurchaseSavings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CashPurchaseSavings copyWith(void Function(CashPurchaseSavings) updates) =>
       super.copyWith((message) => updates(message as CashPurchaseSavings))
           as CashPurchaseSavings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CashPurchaseSavings create() => CashPurchaseSavings._();
+  @$core.override
   CashPurchaseSavings createEmptyInstance() => create();
-  static $pb.PbList<CashPurchaseSavings> createRepeated() =>
-      $pb.PbList<CashPurchaseSavings>();
   @$core.pragma('dart2js:noInline')
   static CashPurchaseSavings getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CashPurchaseSavings>(create);
@@ -2358,14 +1965,11 @@ class CashPurchaseSavings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.Money get outOfPocketCost => $_getN(0);
   @$pb.TagNumber(1)
-  set outOfPocketCost($4.Money v) {
-    setField(1, v);
-  }
-
+  set outOfPocketCost($4.Money value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOutOfPocketCost() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOutOfPocketCost() => clearField(1);
+  void clearOutOfPocketCost() => $_clearField(1);
   @$pb.TagNumber(1)
   $4.Money ensureOutOfPocketCost() => $_ensure(0);
 
@@ -2375,14 +1979,11 @@ class CashPurchaseSavings extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $4.Money get upfrontCost => $_getN(1);
   @$pb.TagNumber(2)
-  set upfrontCost($4.Money v) {
-    setField(2, v);
-  }
-
+  set upfrontCost($4.Money value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpfrontCost() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpfrontCost() => clearField(2);
+  void clearUpfrontCost() => $_clearField(2);
   @$pb.TagNumber(2)
   $4.Money ensureUpfrontCost() => $_ensure(1);
 
@@ -2390,14 +1991,11 @@ class CashPurchaseSavings extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $4.Money get rebateValue => $_getN(2);
   @$pb.TagNumber(3)
-  set rebateValue($4.Money v) {
-    setField(3, v);
-  }
-
+  set rebateValue($4.Money value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasRebateValue() => $_has(2);
   @$pb.TagNumber(3)
-  void clearRebateValue() => clearField(3);
+  void clearRebateValue() => $_clearField(3);
   @$pb.TagNumber(3)
   $4.Money ensureRebateValue() => $_ensure(2);
 
@@ -2406,27 +2004,21 @@ class CashPurchaseSavings extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.double get paybackYears => $_getN(3);
   @$pb.TagNumber(4)
-  set paybackYears($core.double v) {
-    $_setFloat(3, v);
-  }
-
+  set paybackYears($core.double value) => $_setFloat(3, value);
   @$pb.TagNumber(4)
   $core.bool hasPaybackYears() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPaybackYears() => clearField(4);
+  void clearPaybackYears() => $_clearField(4);
 
   /// How much is saved (or not) over the lifetime period.
   @$pb.TagNumber(5)
   SavingsOverTime get savings => $_getN(4);
   @$pb.TagNumber(5)
-  set savings(SavingsOverTime v) {
-    setField(5, v);
-  }
-
+  set savings(SavingsOverTime value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasSavings() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSavings() => clearField(5);
+  void clearSavings() => $_clearField(5);
   @$pb.TagNumber(5)
   SavingsOverTime ensureSavings() => $_ensure(4);
 }
@@ -2440,28 +2032,22 @@ class FinancedPurchaseSavings extends $pb.GeneratedMessage {
     $core.double? loanInterestRate,
     SavingsOverTime? savings,
   }) {
-    final $result = create();
-    if (annualLoanPayment != null) {
-      $result.annualLoanPayment = annualLoanPayment;
-    }
-    if (rebateValue != null) {
-      $result.rebateValue = rebateValue;
-    }
-    if (loanInterestRate != null) {
-      $result.loanInterestRate = loanInterestRate;
-    }
-    if (savings != null) {
-      $result.savings = savings;
-    }
-    return $result;
+    final result = create();
+    if (annualLoanPayment != null) result.annualLoanPayment = annualLoanPayment;
+    if (rebateValue != null) result.rebateValue = rebateValue;
+    if (loanInterestRate != null) result.loanInterestRate = loanInterestRate;
+    if (savings != null) result.savings = savings;
+    return result;
   }
-  FinancedPurchaseSavings._() : super();
-  factory FinancedPurchaseSavings.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FinancedPurchaseSavings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FinancedPurchaseSavings._();
+
+  factory FinancedPurchaseSavings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FinancedPurchaseSavings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FinancedPurchaseSavings',
@@ -2472,32 +2058,27 @@ class FinancedPurchaseSavings extends $pb.GeneratedMessage {
         subBuilder: $4.Money.create)
     ..aOM<$4.Money>(2, _omitFieldNames ? '' : 'rebateValue',
         subBuilder: $4.Money.create)
-    ..a<$core.double>(
-        3, _omitFieldNames ? '' : 'loanInterestRate', $pb.PbFieldType.OF)
+    ..aD(3, _omitFieldNames ? '' : 'loanInterestRate',
+        fieldType: $pb.PbFieldType.OF)
     ..aOM<SavingsOverTime>(4, _omitFieldNames ? '' : 'savings',
         subBuilder: SavingsOverTime.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FinancedPurchaseSavings clone() =>
-      FinancedPurchaseSavings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FinancedPurchaseSavings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FinancedPurchaseSavings copyWith(
           void Function(FinancedPurchaseSavings) updates) =>
       super.copyWith((message) => updates(message as FinancedPurchaseSavings))
           as FinancedPurchaseSavings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FinancedPurchaseSavings create() => FinancedPurchaseSavings._();
+  @$core.override
   FinancedPurchaseSavings createEmptyInstance() => create();
-  static $pb.PbList<FinancedPurchaseSavings> createRepeated() =>
-      $pb.PbList<FinancedPurchaseSavings>();
   @$core.pragma('dart2js:noInline')
   static FinancedPurchaseSavings getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FinancedPurchaseSavings>(create);
@@ -2507,14 +2088,11 @@ class FinancedPurchaseSavings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.Money get annualLoanPayment => $_getN(0);
   @$pb.TagNumber(1)
-  set annualLoanPayment($4.Money v) {
-    setField(1, v);
-  }
-
+  set annualLoanPayment($4.Money value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAnnualLoanPayment() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAnnualLoanPayment() => clearField(1);
+  void clearAnnualLoanPayment() => $_clearField(1);
   @$pb.TagNumber(1)
   $4.Money ensureAnnualLoanPayment() => $_ensure(0);
 
@@ -2523,14 +2101,11 @@ class FinancedPurchaseSavings extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $4.Money get rebateValue => $_getN(1);
   @$pb.TagNumber(2)
-  set rebateValue($4.Money v) {
-    setField(2, v);
-  }
-
+  set rebateValue($4.Money value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasRebateValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRebateValue() => clearField(2);
+  void clearRebateValue() => $_clearField(2);
   @$pb.TagNumber(2)
   $4.Money ensureRebateValue() => $_ensure(1);
 
@@ -2538,27 +2113,21 @@ class FinancedPurchaseSavings extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.double get loanInterestRate => $_getN(2);
   @$pb.TagNumber(3)
-  set loanInterestRate($core.double v) {
-    $_setFloat(2, v);
-  }
-
+  set loanInterestRate($core.double value) => $_setFloat(2, value);
   @$pb.TagNumber(3)
   $core.bool hasLoanInterestRate() => $_has(2);
   @$pb.TagNumber(3)
-  void clearLoanInterestRate() => clearField(3);
+  void clearLoanInterestRate() => $_clearField(3);
 
   /// How much is saved (or not) over the lifetime period.
   @$pb.TagNumber(4)
   SavingsOverTime get savings => $_getN(3);
   @$pb.TagNumber(4)
-  set savings(SavingsOverTime v) {
-    setField(4, v);
-  }
-
+  set savings(SavingsOverTime value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasSavings() => $_has(3);
   @$pb.TagNumber(4)
-  void clearSavings() => clearField(4);
+  void clearSavings() => $_clearField(4);
   @$pb.TagNumber(4)
   SavingsOverTime ensureSavings() => $_ensure(3);
 }
@@ -2572,35 +2141,28 @@ class GetDataLayersRequest extends $pb.GeneratedMessage {
     ImageryQuality? requiredQuality,
     $core.double? pixelSizeMeters,
     $core.bool? exactQualityRequired,
+    $core.Iterable<Experiment>? experiments,
   }) {
-    final $result = create();
-    if (location != null) {
-      $result.location = location;
-    }
-    if (radiusMeters != null) {
-      $result.radiusMeters = radiusMeters;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    if (requiredQuality != null) {
-      $result.requiredQuality = requiredQuality;
-    }
-    if (pixelSizeMeters != null) {
-      $result.pixelSizeMeters = pixelSizeMeters;
-    }
-    if (exactQualityRequired != null) {
-      $result.exactQualityRequired = exactQualityRequired;
-    }
-    return $result;
+    final result = create();
+    if (location != null) result.location = location;
+    if (radiusMeters != null) result.radiusMeters = radiusMeters;
+    if (view != null) result.view = view;
+    if (requiredQuality != null) result.requiredQuality = requiredQuality;
+    if (pixelSizeMeters != null) result.pixelSizeMeters = pixelSizeMeters;
+    if (exactQualityRequired != null)
+      result.exactQualityRequired = exactQualityRequired;
+    if (experiments != null) result.experiments.addAll(experiments);
+    return result;
   }
-  GetDataLayersRequest._() : super();
-  factory GetDataLayersRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetDataLayersRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetDataLayersRequest._();
+
+  factory GetDataLayersRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetDataLayersRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetDataLayersRequest',
@@ -2609,41 +2171,36 @@ class GetDataLayersRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$2.LatLng>(1, _omitFieldNames ? '' : 'location',
         subBuilder: $2.LatLng.create)
-    ..a<$core.double>(
-        2, _omitFieldNames ? '' : 'radiusMeters', $pb.PbFieldType.OF)
-    ..e<DataLayerView>(3, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: DataLayerView.DATA_LAYER_VIEW_UNSPECIFIED,
-        valueOf: DataLayerView.valueOf,
+    ..aD(2, _omitFieldNames ? '' : 'radiusMeters',
+        fieldType: $pb.PbFieldType.OF)
+    ..aE<DataLayerView>(3, _omitFieldNames ? '' : 'view',
         enumValues: DataLayerView.values)
-    ..e<ImageryQuality>(
-        5, _omitFieldNames ? '' : 'requiredQuality', $pb.PbFieldType.OE,
-        defaultOrMaker: ImageryQuality.IMAGERY_QUALITY_UNSPECIFIED,
-        valueOf: ImageryQuality.valueOf,
+    ..aE<ImageryQuality>(5, _omitFieldNames ? '' : 'requiredQuality',
         enumValues: ImageryQuality.values)
-    ..a<$core.double>(
-        6, _omitFieldNames ? '' : 'pixelSizeMeters', $pb.PbFieldType.OF)
+    ..aD(6, _omitFieldNames ? '' : 'pixelSizeMeters',
+        fieldType: $pb.PbFieldType.OF)
     ..aOB(7, _omitFieldNames ? '' : 'exactQualityRequired')
+    ..pc<Experiment>(
+        8, _omitFieldNames ? '' : 'experiments', $pb.PbFieldType.KE,
+        valueOf: Experiment.valueOf,
+        enumValues: Experiment.values,
+        defaultEnumValue: Experiment.EXPERIMENT_UNSPECIFIED)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetDataLayersRequest clone() =>
-      GetDataLayersRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetDataLayersRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetDataLayersRequest copyWith(void Function(GetDataLayersRequest) updates) =>
       super.copyWith((message) => updates(message as GetDataLayersRequest))
           as GetDataLayersRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetDataLayersRequest create() => GetDataLayersRequest._();
+  @$core.override
   GetDataLayersRequest createEmptyInstance() => create();
-  static $pb.PbList<GetDataLayersRequest> createRepeated() =>
-      $pb.PbList<GetDataLayersRequest>();
   @$core.pragma('dart2js:noInline')
   static GetDataLayersRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetDataLayersRequest>(create);
@@ -2654,50 +2211,41 @@ class GetDataLayersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.LatLng get location => $_getN(0);
   @$pb.TagNumber(1)
-  set location($2.LatLng v) {
-    setField(1, v);
-  }
-
+  set location($2.LatLng value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasLocation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLocation() => clearField(1);
+  void clearLocation() => $_clearField(1);
   @$pb.TagNumber(1)
   $2.LatLng ensureLocation() => $_ensure(0);
 
-  ///  Required. The radius, in meters, defining the region surrounding that
-  ///  centre point for which data should be returned. The limitations
-  ///  on this value are:
+  /// Required. The radius, in meters, defining the region surrounding that
+  /// centre point for which data should be returned. The limitations
+  /// on this value are:
   ///
-  ///  * Any value up to 100m can always be specified.
-  ///  * Values over 100m can be specified, as long as
-  ///    `radius_meters` <= `pixel_size_meters * 1000`.
-  ///  * However, for values over 175m, the `DataLayerView` in the
-  ///    request must not include monthly flux or hourly shade.
+  /// * Any value up to 100m can always be specified.
+  /// * Values over 100m can be specified, as long as
+  ///   `radius_meters` <= `pixel_size_meters * 1000`.
+  /// * However, for values over 175m, the `DataLayerView` in the
+  ///   request must not include monthly flux or hourly shade.
   @$pb.TagNumber(2)
   $core.double get radiusMeters => $_getN(1);
   @$pb.TagNumber(2)
-  set radiusMeters($core.double v) {
-    $_setFloat(1, v);
-  }
-
+  set radiusMeters($core.double value) => $_setFloat(1, value);
   @$pb.TagNumber(2)
   $core.bool hasRadiusMeters() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRadiusMeters() => clearField(2);
+  void clearRadiusMeters() => $_clearField(2);
 
   /// Optional. The desired subset of the data to return.
   @$pb.TagNumber(3)
   DataLayerView get view => $_getN(2);
   @$pb.TagNumber(3)
-  set view(DataLayerView v) {
-    setField(3, v);
-  }
-
+  set view(DataLayerView value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasView() => $_has(2);
   @$pb.TagNumber(3)
-  void clearView() => clearField(3);
+  void clearView() => $_clearField(3);
 
   /// Optional. The minimum quality level allowed in the results. No result with
   /// lower quality than this will be returned. Not specifying this is
@@ -2705,14 +2253,11 @@ class GetDataLayersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   ImageryQuality get requiredQuality => $_getN(3);
   @$pb.TagNumber(5)
-  set requiredQuality(ImageryQuality v) {
-    setField(5, v);
-  }
-
+  set requiredQuality(ImageryQuality value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasRequiredQuality() => $_has(3);
   @$pb.TagNumber(5)
-  void clearRequiredQuality() => clearField(5);
+  void clearRequiredQuality() => $_clearField(5);
 
   /// Optional. The minimum scale, in meters per pixel, of the data to return.
   /// Values of 0.1 (the default, if this field is not set explicitly),
@@ -2724,14 +2269,11 @@ class GetDataLayersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.double get pixelSizeMeters => $_getN(4);
   @$pb.TagNumber(6)
-  set pixelSizeMeters($core.double v) {
-    $_setFloat(4, v);
-  }
-
+  set pixelSizeMeters($core.double value) => $_setFloat(4, value);
   @$pb.TagNumber(6)
   $core.bool hasPixelSizeMeters() => $_has(4);
   @$pb.TagNumber(6)
-  void clearPixelSizeMeters() => clearField(6);
+  void clearPixelSizeMeters() => $_clearField(6);
 
   /// Optional. Whether to require exact quality of the imagery.
   /// If set to false, the `required_quality` field is interpreted as the minimum
@@ -2742,14 +2284,15 @@ class GetDataLayersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.bool get exactQualityRequired => $_getBF(5);
   @$pb.TagNumber(7)
-  set exactQualityRequired($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set exactQualityRequired($core.bool value) => $_setBool(5, value);
   @$pb.TagNumber(7)
   $core.bool hasExactQualityRequired() => $_has(5);
   @$pb.TagNumber(7)
-  void clearExactQualityRequired() => clearField(7);
+  void clearExactQualityRequired() => $_clearField(7);
+
+  /// Optional. Specifies the pre-GA experiments to enable.
+  @$pb.TagNumber(8)
+  $pb.PbList<Experiment> get experiments => $_getList(6);
 }
 
 /// Information about the solar potential of a region. The actual data
@@ -2775,43 +2318,28 @@ class DataLayers extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? hourlyShadeUrls,
     ImageryQuality? imageryQuality,
   }) {
-    final $result = create();
-    if (imageryDate != null) {
-      $result.imageryDate = imageryDate;
-    }
-    if (imageryProcessedDate != null) {
-      $result.imageryProcessedDate = imageryProcessedDate;
-    }
-    if (dsmUrl != null) {
-      $result.dsmUrl = dsmUrl;
-    }
-    if (rgbUrl != null) {
-      $result.rgbUrl = rgbUrl;
-    }
-    if (maskUrl != null) {
-      $result.maskUrl = maskUrl;
-    }
-    if (annualFluxUrl != null) {
-      $result.annualFluxUrl = annualFluxUrl;
-    }
-    if (monthlyFluxUrl != null) {
-      $result.monthlyFluxUrl = monthlyFluxUrl;
-    }
-    if (hourlyShadeUrls != null) {
-      $result.hourlyShadeUrls.addAll(hourlyShadeUrls);
-    }
-    if (imageryQuality != null) {
-      $result.imageryQuality = imageryQuality;
-    }
-    return $result;
+    final result = create();
+    if (imageryDate != null) result.imageryDate = imageryDate;
+    if (imageryProcessedDate != null)
+      result.imageryProcessedDate = imageryProcessedDate;
+    if (dsmUrl != null) result.dsmUrl = dsmUrl;
+    if (rgbUrl != null) result.rgbUrl = rgbUrl;
+    if (maskUrl != null) result.maskUrl = maskUrl;
+    if (annualFluxUrl != null) result.annualFluxUrl = annualFluxUrl;
+    if (monthlyFluxUrl != null) result.monthlyFluxUrl = monthlyFluxUrl;
+    if (hourlyShadeUrls != null) result.hourlyShadeUrls.addAll(hourlyShadeUrls);
+    if (imageryQuality != null) result.imageryQuality = imageryQuality;
+    return result;
   }
-  DataLayers._() : super();
-  factory DataLayers.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DataLayers.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DataLayers._();
+
+  factory DataLayers.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DataLayers.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DataLayers',
@@ -2828,29 +2356,23 @@ class DataLayers extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'annualFluxUrl')
     ..aOS(7, _omitFieldNames ? '' : 'monthlyFluxUrl')
     ..pPS(8, _omitFieldNames ? '' : 'hourlyShadeUrls')
-    ..e<ImageryQuality>(
-        9, _omitFieldNames ? '' : 'imageryQuality', $pb.PbFieldType.OE,
-        defaultOrMaker: ImageryQuality.IMAGERY_QUALITY_UNSPECIFIED,
-        valueOf: ImageryQuality.valueOf,
+    ..aE<ImageryQuality>(9, _omitFieldNames ? '' : 'imageryQuality',
         enumValues: ImageryQuality.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DataLayers clone() => DataLayers()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DataLayers clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DataLayers copyWith(void Function(DataLayers) updates) =>
       super.copyWith((message) => updates(message as DataLayers)) as DataLayers;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DataLayers create() => DataLayers._();
+  @$core.override
   DataLayers createEmptyInstance() => create();
-  static $pb.PbList<DataLayers> createRepeated() => $pb.PbList<DataLayers>();
   @$core.pragma('dart2js:noInline')
   static DataLayers getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DataLayers>(create);
@@ -2862,14 +2384,11 @@ class DataLayers extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $3.Date get imageryDate => $_getN(0);
   @$pb.TagNumber(1)
-  set imageryDate($3.Date v) {
-    setField(1, v);
-  }
-
+  set imageryDate($3.Date value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasImageryDate() => $_has(0);
   @$pb.TagNumber(1)
-  void clearImageryDate() => clearField(1);
+  void clearImageryDate() => $_clearField(1);
   @$pb.TagNumber(1)
   $3.Date ensureImageryDate() => $_ensure(0);
 
@@ -2877,14 +2396,11 @@ class DataLayers extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $3.Date get imageryProcessedDate => $_getN(1);
   @$pb.TagNumber(2)
-  set imageryProcessedDate($3.Date v) {
-    setField(2, v);
-  }
-
+  set imageryProcessedDate($3.Date value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasImageryProcessedDate() => $_has(1);
   @$pb.TagNumber(2)
-  void clearImageryProcessedDate() => clearField(2);
+  void clearImageryProcessedDate() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.Date ensureImageryProcessedDate() => $_ensure(1);
 
@@ -2894,41 +2410,32 @@ class DataLayers extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get dsmUrl => $_getSZ(2);
   @$pb.TagNumber(3)
-  set dsmUrl($core.String v) {
-    $_setString(2, v);
-  }
-
+  set dsmUrl($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDsmUrl() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDsmUrl() => clearField(3);
+  void clearDsmUrl() => $_clearField(3);
 
   /// The URL for an image of RGB data (aerial photo) of the region.
   @$pb.TagNumber(4)
   $core.String get rgbUrl => $_getSZ(3);
   @$pb.TagNumber(4)
-  set rgbUrl($core.String v) {
-    $_setString(3, v);
-  }
-
+  set rgbUrl($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasRgbUrl() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRgbUrl() => clearField(4);
+  void clearRgbUrl() => $_clearField(4);
 
   /// The URL for the building mask image: one bit per pixel saying whether that
   /// pixel is considered to be part of a rooftop or not.
   @$pb.TagNumber(5)
   $core.String get maskUrl => $_getSZ(4);
   @$pb.TagNumber(5)
-  set maskUrl($core.String v) {
-    $_setString(4, v);
-  }
-
+  set maskUrl($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasMaskUrl() => $_has(4);
   @$pb.TagNumber(5)
-  void clearMaskUrl() => clearField(5);
+  void clearMaskUrl() => $_clearField(5);
 
   /// The URL for the annual flux map (annual sunlight on roofs) of the region.
   /// Values are kWh/kW/year. This is *unmasked flux*: flux is computed for every
@@ -2939,14 +2446,11 @@ class DataLayers extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get annualFluxUrl => $_getSZ(5);
   @$pb.TagNumber(6)
-  set annualFluxUrl($core.String v) {
-    $_setString(5, v);
-  }
-
+  set annualFluxUrl($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasAnnualFluxUrl() => $_has(5);
   @$pb.TagNumber(6)
-  void clearAnnualFluxUrl() => clearField(6);
+  void clearAnnualFluxUrl() => $_clearField(6);
 
   /// The URL for the monthly flux map (sunlight on roofs, broken down by month)
   /// of the region. Values are kWh/kW/year. The GeoTIFF pointed to by this URL
@@ -2954,61 +2458,55 @@ class DataLayers extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.String get monthlyFluxUrl => $_getSZ(6);
   @$pb.TagNumber(7)
-  set monthlyFluxUrl($core.String v) {
-    $_setString(6, v);
-  }
-
+  set monthlyFluxUrl($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
   $core.bool hasMonthlyFluxUrl() => $_has(6);
   @$pb.TagNumber(7)
-  void clearMonthlyFluxUrl() => clearField(7);
+  void clearMonthlyFluxUrl() => $_clearField(7);
 
-  ///  Twelve URLs for hourly shade, corresponding to January...December, in
-  ///  order. Each GeoTIFF will contain 24 bands, corresponding to the 24 hours of
-  ///  the day. Each pixel is a 32 bit integer, corresponding to the (up to) 31
-  ///  days of that month; a 1 bit means that the corresponding location is able
-  ///  to see the sun at that day, of that hour, of that month. Invalid locations
-  ///  are stored as -9999 (since this is negative, it has bit 31 set, and no
-  ///  valid value could have bit 31 set as that would correspond to the 32nd day
-  ///  of the month).
+  /// Twelve URLs for hourly shade, corresponding to January...December, in
+  /// order. Each GeoTIFF will contain 24 bands, corresponding to the 24 hours of
+  /// the day. Each pixel is a 32 bit integer, corresponding to the (up to) 31
+  /// days of that month; a 1 bit means that the corresponding location is able
+  /// to see the sun at that day, of that hour, of that month. Invalid locations
+  /// are stored as -9999 (since this is negative, it has bit 31 set, and no
+  /// valid value could have bit 31 set as that would correspond to the 32nd day
+  /// of the month).
   ///
-  ///  An example may be useful. If you want to know whether a point (at
-  ///  pixel location (x, y)) saw sun at 4pm on the 22nd of June you
-  ///  would:
+  /// An example may be useful. If you want to know whether a point (at
+  /// pixel location (x, y)) saw sun at 4pm on the 22nd of June you
+  /// would:
   ///
-  ///  1. fetch the sixth URL in this list (corresponding to June).
-  ///  1. look up the 17th channel (corresponding to 4pm).
-  ///  1. read the 32-bit value at (x, y).
-  ///  1. read bit 21 of the value (corresponding to the 22nd of the month).
-  ///  1. if that bit is a 1, then that spot saw the sun at 4pm 22 June.
+  /// 1. fetch the sixth URL in this list (corresponding to June).
+  /// 1. look up the 17th channel (corresponding to 4pm).
+  /// 1. read the 32-bit value at (x, y).
+  /// 1. read bit 21 of the value (corresponding to the 22nd of the month).
+  /// 1. if that bit is a 1, then that spot saw the sun at 4pm 22 June.
   ///
-  ///  More formally:
-  ///  Given `month` (1-12), `day` (1...month max; February has 28 days)
-  ///  and `hour` (0-23), the shade/sun for that month/day/hour at a
-  ///  position `(x, y)` is the bit
-  ///  ```
-  ///  (hourly_shade[month - 1])(x, y)[hour] & (1 << (day - 1))
-  ///  ```
-  ///  where `(x, y)` is spatial indexing, `[month - 1]` refers to
-  ///  fetching the `month - 1`st URL (indexing from zero), `[hour]` is
-  ///  indexing into the channels, and a final non-zero result means
-  ///  "sunny". There are no leap days, and DST doesn't exist (all days
-  ///  are 24 hours long; noon is always "standard time" noon).
+  /// More formally:
+  /// Given `month` (1-12), `day` (1...month max; February has 28 days)
+  /// and `hour` (0-23), the shade/sun for that month/day/hour at a
+  /// position `(x, y)` is the bit
+  /// ```
+  /// (hourly_shade[month - 1])(x, y)[hour] & (1 << (day - 1))
+  /// ```
+  /// where `(x, y)` is spatial indexing, `[month - 1]` refers to
+  /// fetching the `month - 1`st URL (indexing from zero), `[hour]` is
+  /// indexing into the channels, and a final non-zero result means
+  /// "sunny". There are no leap days, and DST doesn't exist (all days
+  /// are 24 hours long; noon is always "standard time" noon).
   @$pb.TagNumber(8)
-  $core.List<$core.String> get hourlyShadeUrls => $_getList(7);
+  $pb.PbList<$core.String> get hourlyShadeUrls => $_getList(7);
 
   /// The quality of the result's imagery.
   @$pb.TagNumber(9)
   ImageryQuality get imageryQuality => $_getN(8);
   @$pb.TagNumber(9)
-  set imageryQuality(ImageryQuality v) {
-    setField(9, v);
-  }
-
+  set imageryQuality(ImageryQuality value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasImageryQuality() => $_has(8);
   @$pb.TagNumber(9)
-  void clearImageryQuality() => clearField(9);
+  void clearImageryQuality() => $_clearField(9);
 }
 
 /// Request message for `Solar.GetGeoTiff`.
@@ -3016,19 +2514,19 @@ class GetGeoTiffRequest extends $pb.GeneratedMessage {
   factory GetGeoTiffRequest({
     $core.String? id,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    return result;
   }
-  GetGeoTiffRequest._() : super();
-  factory GetGeoTiffRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetGeoTiffRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetGeoTiffRequest._();
+
+  factory GetGeoTiffRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetGeoTiffRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetGeoTiffRequest',
@@ -3038,24 +2536,20 @@ class GetGeoTiffRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetGeoTiffRequest clone() => GetGeoTiffRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetGeoTiffRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetGeoTiffRequest copyWith(void Function(GetGeoTiffRequest) updates) =>
       super.copyWith((message) => updates(message as GetGeoTiffRequest))
           as GetGeoTiffRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetGeoTiffRequest create() => GetGeoTiffRequest._();
+  @$core.override
   GetGeoTiffRequest createEmptyInstance() => create();
-  static $pb.PbList<GetGeoTiffRequest> createRepeated() =>
-      $pb.PbList<GetGeoTiffRequest>();
   @$core.pragma('dart2js:noInline')
   static GetGeoTiffRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetGeoTiffRequest>(create);
@@ -3065,16 +2559,14 @@ class GetGeoTiffRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

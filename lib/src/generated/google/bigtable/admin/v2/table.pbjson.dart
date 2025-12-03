@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/bigtable/admin/v2/table.proto
-//
-// @dart = 2.12
+// Generated from google/bigtable/admin/v2/table.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -846,3 +848,54 @@ final $typed_data.Uint8List backupInfoDescriptor = $convert.base64Decode(
     'ZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgdlbmRUaW1lEi'
     'YKDHNvdXJjZV90YWJsZRgEIAEoCUID4EEDUgtzb3VyY2VUYWJsZRIoCg1zb3VyY2VfYmFja3Vw'
     'GAogASgJQgPgQQNSDHNvdXJjZUJhY2t1cA==');
+
+@$core.Deprecated('Use protoSchemaDescriptor instead')
+const ProtoSchema$json = {
+  '1': 'ProtoSchema',
+  '2': [
+    {
+      '1': 'proto_descriptors',
+      '3': 2,
+      '4': 1,
+      '5': 12,
+      '8': {},
+      '10': 'protoDescriptors'
+    },
+  ],
+};
+
+/// Descriptor for `ProtoSchema`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List protoSchemaDescriptor = $convert.base64Decode(
+    'CgtQcm90b1NjaGVtYRIwChFwcm90b19kZXNjcmlwdG9ycxgCIAEoDEID4EECUhBwcm90b0Rlc2'
+    'NyaXB0b3Jz');
+
+@$core.Deprecated('Use schemaBundleDescriptor instead')
+const SchemaBundle$json = {
+  '1': 'SchemaBundle',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {
+      '1': 'proto_schema',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.admin.v2.ProtoSchema',
+      '9': 0,
+      '10': 'protoSchema'
+    },
+    {'1': 'etag', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'etag'},
+  ],
+  '7': {},
+  '8': [
+    {'1': 'type'},
+  ],
+};
+
+/// Descriptor for `SchemaBundle`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List schemaBundleDescriptor = $convert.base64Decode(
+    'CgxTY2hlbWFCdW5kbGUSFwoEbmFtZRgBIAEoCUID4EEIUgRuYW1lEkoKDHByb3RvX3NjaGVtYR'
+    'gCIAEoCzIlLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5Qcm90b1NjaGVtYUgAUgtwcm90b1Nj'
+    'aGVtYRIXCgRldGFnGAMgASgJQgPgQQFSBGV0YWc6ogHqQZ4BCiliaWd0YWJsZWFkbWluLmdvb2'
+    'dsZWFwaXMuY29tL1NjaGVtYUJ1bmRsZRJUcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97'
+    'aW5zdGFuY2V9L3RhYmxlcy97dGFibGV9L3NjaGVtYUJ1bmRsZXMve3NjaGVtYV9idW5kbGV9Kg'
+    '1zY2hlbWFCdW5kbGVzMgxzY2hlbWFCdW5kbGVCBgoEdHlwZQ==');

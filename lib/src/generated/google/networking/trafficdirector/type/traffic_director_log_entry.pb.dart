@@ -1,19 +1,22 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/networking/trafficdirector/type/traffic_director_log_entry.proto
-//
-// @dart = 2.12
+// Generated from google/networking/trafficdirector/type/traffic_director_log_entry.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'traffic_director_log_entry.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'traffic_director_log_entry.pbenum.dart';
 
@@ -28,34 +31,25 @@ class TrafficDirectorLogEntry extends $pb.GeneratedMessage {
     $core.String? clientVersion,
     TrafficDirectorLogEntry_TransportApiVersion? transportApiVersion,
   }) {
-    final $result = create();
-    if (nodeId != null) {
-      $result.nodeId = nodeId;
-    }
-    if (nodeIp != null) {
-      $result.nodeIp = nodeIp;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    if (clientType != null) {
-      $result.clientType = clientType;
-    }
-    if (clientVersion != null) {
-      $result.clientVersion = clientVersion;
-    }
-    if (transportApiVersion != null) {
-      $result.transportApiVersion = transportApiVersion;
-    }
-    return $result;
+    final result = create();
+    if (nodeId != null) result.nodeId = nodeId;
+    if (nodeIp != null) result.nodeIp = nodeIp;
+    if (description != null) result.description = description;
+    if (clientType != null) result.clientType = clientType;
+    if (clientVersion != null) result.clientVersion = clientVersion;
+    if (transportApiVersion != null)
+      result.transportApiVersion = transportApiVersion;
+    return result;
   }
-  TrafficDirectorLogEntry._() : super();
-  factory TrafficDirectorLogEntry.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TrafficDirectorLogEntry.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TrafficDirectorLogEntry._();
+
+  factory TrafficDirectorLogEntry.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TrafficDirectorLogEntry.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TrafficDirectorLogEntry',
@@ -65,41 +59,30 @@ class TrafficDirectorLogEntry extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'nodeId')
     ..aOS(2, _omitFieldNames ? '' : 'nodeIp')
     ..aOS(4, _omitFieldNames ? '' : 'description')
-    ..e<TrafficDirectorLogEntry_ClientType>(
-        5, _omitFieldNames ? '' : 'clientType', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            TrafficDirectorLogEntry_ClientType.CLIENT_TYPE_UNSPECIFIED,
-        valueOf: TrafficDirectorLogEntry_ClientType.valueOf,
+    ..aE<TrafficDirectorLogEntry_ClientType>(
+        5, _omitFieldNames ? '' : 'clientType',
         enumValues: TrafficDirectorLogEntry_ClientType.values)
     ..aOS(6, _omitFieldNames ? '' : 'clientVersion')
-    ..e<TrafficDirectorLogEntry_TransportApiVersion>(
-        7, _omitFieldNames ? '' : 'transportApiVersion', $pb.PbFieldType.OE,
-        defaultOrMaker: TrafficDirectorLogEntry_TransportApiVersion
-            .TRANSPORT_API_VERSION_UNSPECIFIED,
-        valueOf: TrafficDirectorLogEntry_TransportApiVersion.valueOf,
+    ..aE<TrafficDirectorLogEntry_TransportApiVersion>(
+        7, _omitFieldNames ? '' : 'transportApiVersion',
         enumValues: TrafficDirectorLogEntry_TransportApiVersion.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TrafficDirectorLogEntry clone() =>
-      TrafficDirectorLogEntry()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TrafficDirectorLogEntry clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TrafficDirectorLogEntry copyWith(
           void Function(TrafficDirectorLogEntry) updates) =>
       super.copyWith((message) => updates(message as TrafficDirectorLogEntry))
           as TrafficDirectorLogEntry;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TrafficDirectorLogEntry create() => TrafficDirectorLogEntry._();
+  @$core.override
   TrafficDirectorLogEntry createEmptyInstance() => create();
-  static $pb.PbList<TrafficDirectorLogEntry> createRepeated() =>
-      $pb.PbList<TrafficDirectorLogEntry>();
   @$core.pragma('dart2js:noInline')
   static TrafficDirectorLogEntry getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TrafficDirectorLogEntry>(create);
@@ -109,14 +92,11 @@ class TrafficDirectorLogEntry extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get nodeId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set nodeId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set nodeId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasNodeId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearNodeId() => clearField(1);
+  void clearNodeId() => $_clearField(1);
 
   /// The string representation of IPv4 or IPv6 address of xDS-client
   /// connecting to the Traffic Director.
@@ -127,69 +107,57 @@ class TrafficDirectorLogEntry extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nodeIp => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nodeIp($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nodeIp($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNodeIp() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNodeIp() => clearField(2);
+  void clearNodeIp() => $_clearField(2);
 
   /// A free text describing details of the event.
   @$pb.TagNumber(4)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(4)
-  set description($core.String v) {
-    $_setString(2, v);
-  }
-
+  set description($core.String value) => $_setString(2, value);
   @$pb.TagNumber(4)
   $core.bool hasDescription() => $_has(2);
   @$pb.TagNumber(4)
-  void clearDescription() => clearField(4);
+  void clearDescription() => $_clearField(4);
 
   /// Type of xDS-client connecting to Traffic Director
   @$pb.TagNumber(5)
   TrafficDirectorLogEntry_ClientType get clientType => $_getN(3);
   @$pb.TagNumber(5)
-  set clientType(TrafficDirectorLogEntry_ClientType v) {
-    setField(5, v);
-  }
-
+  set clientType(TrafficDirectorLogEntry_ClientType value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasClientType() => $_has(3);
   @$pb.TagNumber(5)
-  void clearClientType() => clearField(5);
+  void clearClientType() => $_clearField(5);
 
   /// The version of xDS-client connecting to Traffic Director.
   @$pb.TagNumber(6)
   $core.String get clientVersion => $_getSZ(4);
   @$pb.TagNumber(6)
-  set clientVersion($core.String v) {
-    $_setString(4, v);
-  }
-
+  set clientVersion($core.String value) => $_setString(4, value);
   @$pb.TagNumber(6)
   $core.bool hasClientVersion() => $_has(4);
   @$pb.TagNumber(6)
-  void clearClientVersion() => clearField(6);
+  void clearClientVersion() => $_clearField(6);
 
   /// The xDS API version used by xDS clients connecting to Traffic Director.
   @$pb.TagNumber(7)
   TrafficDirectorLogEntry_TransportApiVersion get transportApiVersion =>
       $_getN(5);
   @$pb.TagNumber(7)
-  set transportApiVersion(TrafficDirectorLogEntry_TransportApiVersion v) {
-    setField(7, v);
-  }
-
+  set transportApiVersion(TrafficDirectorLogEntry_TransportApiVersion value) =>
+      $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasTransportApiVersion() => $_has(5);
   @$pb.TagNumber(7)
-  void clearTransportApiVersion() => clearField(7);
+  void clearTransportApiVersion() => $_clearField(7);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

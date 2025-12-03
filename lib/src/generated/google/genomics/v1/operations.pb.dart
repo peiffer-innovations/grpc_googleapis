@@ -1,20 +1,24 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/genomics/v1/operations.proto
-//
-// @dart = 2.12
+// Generated from google/genomics/v1/operations.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/any.pb.dart'
+    as $1;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $0;
 
-import '../../protobuf/any.pb.dart' as $1;
-import '../../protobuf/timestamp.pb.dart' as $0;
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Metadata describing an [Operation][google.longrunning.Operation].
 class OperationMetadata extends $pb.GeneratedMessage {
@@ -27,45 +31,29 @@ class OperationMetadata extends $pb.GeneratedMessage {
     $core.Iterable<OperationEvent>? events,
     $core.String? clientId,
     $1.Any? runtimeMetadata,
-    $core.Map<$core.String, $core.String>? labels,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? labels,
   }) {
-    final $result = create();
-    if (projectId != null) {
-      $result.projectId = projectId;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    if (request != null) {
-      $result.request = request;
-    }
-    if (events != null) {
-      $result.events.addAll(events);
-    }
-    if (clientId != null) {
-      $result.clientId = clientId;
-    }
-    if (runtimeMetadata != null) {
-      $result.runtimeMetadata = runtimeMetadata;
-    }
-    if (labels != null) {
-      $result.labels.addAll(labels);
-    }
-    return $result;
+    final result = create();
+    if (projectId != null) result.projectId = projectId;
+    if (createTime != null) result.createTime = createTime;
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    if (request != null) result.request = request;
+    if (events != null) result.events.addAll(events);
+    if (clientId != null) result.clientId = clientId;
+    if (runtimeMetadata != null) result.runtimeMetadata = runtimeMetadata;
+    if (labels != null) result.labels.addEntries(labels);
+    return result;
   }
-  OperationMetadata._() : super();
-  factory OperationMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory OperationMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  OperationMetadata._();
+
+  factory OperationMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OperationMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'OperationMetadata',
@@ -81,7 +69,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..aOM<$1.Any>(5, _omitFieldNames ? '' : 'request',
         subBuilder: $1.Any.create)
-    ..pc<OperationEvent>(6, _omitFieldNames ? '' : 'events', $pb.PbFieldType.PM,
+    ..pPM<OperationEvent>(6, _omitFieldNames ? '' : 'events',
         subBuilder: OperationEvent.create)
     ..aOS(7, _omitFieldNames ? '' : 'clientId')
     ..aOM<$1.Any>(8, _omitFieldNames ? '' : 'runtimeMetadata',
@@ -93,24 +81,20 @@ class OperationMetadata extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OperationMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
       super.copyWith((message) => updates(message as OperationMetadata))
           as OperationMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static OperationMetadata create() => OperationMetadata._();
+  @$core.override
   OperationMetadata createEmptyInstance() => create();
-  static $pb.PbList<OperationMetadata> createRepeated() =>
-      $pb.PbList<OperationMetadata>();
   @$core.pragma('dart2js:noInline')
   static OperationMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OperationMetadata>(create);
@@ -120,27 +104,21 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set projectId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set projectId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasProjectId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearProjectId() => clearField(1);
+  void clearProjectId() => $_clearField(1);
 
   /// The time at which the job was submitted to the Genomics service.
   @$pb.TagNumber(2)
   $0.Timestamp get createTime => $_getN(1);
   @$pb.TagNumber(2)
-  set createTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set createTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCreateTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCreateTime() => clearField(2);
+  void clearCreateTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureCreateTime() => $_ensure(1);
 
@@ -148,14 +126,11 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Timestamp get startTime => $_getN(2);
   @$pb.TagNumber(3)
-  set startTime($0.Timestamp v) {
-    setField(3, v);
-  }
-
+  set startTime($0.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasStartTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStartTime() => clearField(3);
+  void clearStartTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Timestamp ensureStartTime() => $_ensure(2);
 
@@ -163,14 +138,11 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Timestamp get endTime => $_getN(3);
   @$pb.TagNumber(4)
-  set endTime($0.Timestamp v) {
-    setField(4, v);
-  }
-
+  set endTime($0.Timestamp value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasEndTime() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEndTime() => clearField(4);
+  void clearEndTime() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.Timestamp ensureEndTime() => $_ensure(3);
 
@@ -180,14 +152,11 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $1.Any get request => $_getN(4);
   @$pb.TagNumber(5)
-  set request($1.Any v) {
-    setField(5, v);
-  }
-
+  set request($1.Any value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasRequest() => $_has(4);
   @$pb.TagNumber(5)
-  void clearRequest() => clearField(5);
+  void clearRequest() => $_clearField(5);
   @$pb.TagNumber(5)
   $1.Any ensureRequest() => $_ensure(4);
 
@@ -195,41 +164,35 @@ class OperationMetadata extends $pb.GeneratedMessage {
   /// This also contains any warnings that were generated during import
   /// or export.
   @$pb.TagNumber(6)
-  $core.List<OperationEvent> get events => $_getList(5);
+  $pb.PbList<OperationEvent> get events => $_getList(5);
 
   /// This field is deprecated. Use `labels` instead. Optionally provided by the
   /// caller when submitting the request that creates the operation.
   @$pb.TagNumber(7)
   $core.String get clientId => $_getSZ(6);
   @$pb.TagNumber(7)
-  set clientId($core.String v) {
-    $_setString(6, v);
-  }
-
+  set clientId($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
   $core.bool hasClientId() => $_has(6);
   @$pb.TagNumber(7)
-  void clearClientId() => clearField(7);
+  void clearClientId() => $_clearField(7);
 
   /// Runtime metadata on this Operation.
   @$pb.TagNumber(8)
   $1.Any get runtimeMetadata => $_getN(7);
   @$pb.TagNumber(8)
-  set runtimeMetadata($1.Any v) {
-    setField(8, v);
-  }
-
+  set runtimeMetadata($1.Any value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasRuntimeMetadata() => $_has(7);
   @$pb.TagNumber(8)
-  void clearRuntimeMetadata() => clearField(8);
+  void clearRuntimeMetadata() => $_clearField(8);
   @$pb.TagNumber(8)
   $1.Any ensureRuntimeMetadata() => $_ensure(7);
 
   /// Optionally provided by the caller when submitting the request that creates
   /// the operation.
   @$pb.TagNumber(9)
-  $core.Map<$core.String, $core.String> get labels => $_getMap(8);
+  $pb.PbMap<$core.String, $core.String> get labels => $_getMap(8);
 }
 
 /// An event that occurred during an [Operation][google.longrunning.Operation].
@@ -239,25 +202,21 @@ class OperationEvent extends $pb.GeneratedMessage {
     $0.Timestamp? endTime,
     $core.String? description,
   }) {
-    final $result = create();
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    return $result;
+    final result = create();
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    if (description != null) result.description = description;
+    return result;
   }
-  OperationEvent._() : super();
-  factory OperationEvent.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory OperationEvent.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  OperationEvent._();
+
+  factory OperationEvent.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OperationEvent.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'OperationEvent',
@@ -271,24 +230,20 @@ class OperationEvent extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'description')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  OperationEvent clone() => OperationEvent()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OperationEvent clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OperationEvent copyWith(void Function(OperationEvent) updates) =>
       super.copyWith((message) => updates(message as OperationEvent))
           as OperationEvent;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static OperationEvent create() => OperationEvent._();
+  @$core.override
   OperationEvent createEmptyInstance() => create();
-  static $pb.PbList<OperationEvent> createRepeated() =>
-      $pb.PbList<OperationEvent>();
   @$core.pragma('dart2js:noInline')
   static OperationEvent getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OperationEvent>(create);
@@ -298,14 +253,11 @@ class OperationEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
-  set startTime($0.Timestamp v) {
-    setField(1, v);
-  }
-
+  set startTime($0.Timestamp value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStartTime() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStartTime() => clearField(1);
+  void clearStartTime() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
@@ -314,14 +266,11 @@ class OperationEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
-  set endTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set endTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasEndTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEndTime() => clearField(2);
+  void clearEndTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
@@ -329,16 +278,14 @@ class OperationEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(3)
-  set description($core.String v) {
-    $_setString(2, v);
-  }
-
+  set description($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDescription() => clearField(3);
+  void clearDescription() => $_clearField(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

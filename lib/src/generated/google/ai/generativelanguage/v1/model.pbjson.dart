@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/ai/generativelanguage/v1/model.proto
-//
-// @dart = 2.12
+// Generated from google/ai/generativelanguage/v1/model.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -64,6 +66,7 @@ const Model$json = {
     },
     {'1': 'top_p', '3': 10, '4': 1, '5': 2, '9': 2, '10': 'topP', '17': true},
     {'1': 'top_k', '3': 11, '4': 1, '5': 5, '9': 3, '10': 'topK', '17': true},
+    {'1': 'thinking', '3': 15, '4': 1, '5': 8, '10': 'thinking'},
   ],
   '7': {},
   '8': [
@@ -84,6 +87,7 @@ final $typed_data.Uint8List modelDescriptor = $convert.base64Decode(
     'dlbmVyYXRpb25fbWV0aG9kcxgIIAMoCVIac3VwcG9ydGVkR2VuZXJhdGlvbk1ldGhvZHMSJQoL'
     'dGVtcGVyYXR1cmUYCSABKAJIAFILdGVtcGVyYXR1cmWIAQESLAoPbWF4X3RlbXBlcmF0dXJlGA'
     '0gASgCSAFSDm1heFRlbXBlcmF0dXJliAEBEhgKBXRvcF9wGAogASgCSAJSBHRvcFCIAQESGAoF'
-    'dG9wX2sYCyABKAVIA1IEdG9wS4gBATo86kE5CidnZW5lcmF0aXZlbGFuZ3VhZ2UuZ29vZ2xlYX'
-    'Bpcy5jb20vTW9kZWwSDm1vZGVscy97bW9kZWx9Qg4KDF90ZW1wZXJhdHVyZUISChBfbWF4X3Rl'
-    'bXBlcmF0dXJlQggKBl90b3BfcEIICgZfdG9wX2s=');
+    'dG9wX2sYCyABKAVIA1IEdG9wS4gBARIaCgh0aGlua2luZxgPIAEoCFIIdGhpbmtpbmc6POpBOQ'
+    'onZ2VuZXJhdGl2ZWxhbmd1YWdlLmdvb2dsZWFwaXMuY29tL01vZGVsEg5tb2RlbHMve21vZGVs'
+    'fUIOCgxfdGVtcGVyYXR1cmVCEgoQX21heF90ZW1wZXJhdHVyZUIICgZfdG9wX3BCCAoGX3RvcF'
+    '9r');

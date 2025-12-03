@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/monitoring/dashboard/v1/metrics.proto
-//
-// @dart = 2.12
+// Generated from google/monitoring/dashboard/v1/metrics.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,6 +16,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'common.pb.dart' as $0;
 import 'metrics.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'metrics.pbenum.dart';
 
@@ -37,34 +40,27 @@ class TimeSeriesQuery extends $pb.GeneratedMessage {
     $core.String? prometheusQuery,
     $core.bool? outputFullDuration,
   }) {
-    final $result = create();
-    if (timeSeriesFilter != null) {
-      $result.timeSeriesFilter = timeSeriesFilter;
-    }
-    if (timeSeriesFilterRatio != null) {
-      $result.timeSeriesFilterRatio = timeSeriesFilterRatio;
-    }
-    if (timeSeriesQueryLanguage != null) {
-      $result.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
-    }
-    if (unitOverride != null) {
-      $result.unitOverride = unitOverride;
-    }
-    if (prometheusQuery != null) {
-      $result.prometheusQuery = prometheusQuery;
-    }
-    if (outputFullDuration != null) {
-      $result.outputFullDuration = outputFullDuration;
-    }
-    return $result;
+    final result = create();
+    if (timeSeriesFilter != null) result.timeSeriesFilter = timeSeriesFilter;
+    if (timeSeriesFilterRatio != null)
+      result.timeSeriesFilterRatio = timeSeriesFilterRatio;
+    if (timeSeriesQueryLanguage != null)
+      result.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
+    if (unitOverride != null) result.unitOverride = unitOverride;
+    if (prometheusQuery != null) result.prometheusQuery = prometheusQuery;
+    if (outputFullDuration != null)
+      result.outputFullDuration = outputFullDuration;
+    return result;
   }
-  TimeSeriesQuery._() : super();
-  factory TimeSeriesQuery.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TimeSeriesQuery.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TimeSeriesQuery._();
+
+  factory TimeSeriesQuery.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TimeSeriesQuery.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, TimeSeriesQuery_Source>
       _TimeSeriesQuery_SourceByTag = {
@@ -91,45 +87,46 @@ class TimeSeriesQuery extends $pb.GeneratedMessage {
     ..aOB(7, _omitFieldNames ? '' : 'outputFullDuration')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TimeSeriesQuery clone() => TimeSeriesQuery()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TimeSeriesQuery clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TimeSeriesQuery copyWith(void Function(TimeSeriesQuery) updates) =>
       super.copyWith((message) => updates(message as TimeSeriesQuery))
           as TimeSeriesQuery;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TimeSeriesQuery create() => TimeSeriesQuery._();
+  @$core.override
   TimeSeriesQuery createEmptyInstance() => create();
-  static $pb.PbList<TimeSeriesQuery> createRepeated() =>
-      $pb.PbList<TimeSeriesQuery>();
   @$core.pragma('dart2js:noInline')
   static TimeSeriesQuery getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TimeSeriesQuery>(create);
   static TimeSeriesQuery? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(6)
   TimeSeriesQuery_Source whichSource() =>
       _TimeSeriesQuery_SourceByTag[$_whichOneof(0)]!;
-  void clearSource() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(6)
+  void clearSource() => $_clearField($_whichOneof(0));
 
   /// Filter parameters to fetch time series.
   @$pb.TagNumber(1)
   TimeSeriesFilter get timeSeriesFilter => $_getN(0);
   @$pb.TagNumber(1)
-  set timeSeriesFilter(TimeSeriesFilter v) {
-    setField(1, v);
-  }
-
+  set timeSeriesFilter(TimeSeriesFilter value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasTimeSeriesFilter() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTimeSeriesFilter() => clearField(1);
+  void clearTimeSeriesFilter() => $_clearField(1);
   @$pb.TagNumber(1)
   TimeSeriesFilter ensureTimeSeriesFilter() => $_ensure(0);
 
@@ -137,14 +134,12 @@ class TimeSeriesQuery extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   TimeSeriesFilterRatio get timeSeriesFilterRatio => $_getN(1);
   @$pb.TagNumber(2)
-  set timeSeriesFilterRatio(TimeSeriesFilterRatio v) {
-    setField(2, v);
-  }
-
+  set timeSeriesFilterRatio(TimeSeriesFilterRatio value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasTimeSeriesFilterRatio() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTimeSeriesFilterRatio() => clearField(2);
+  void clearTimeSeriesFilterRatio() => $_clearField(2);
   @$pb.TagNumber(2)
   TimeSeriesFilterRatio ensureTimeSeriesFilterRatio() => $_ensure(1);
 
@@ -152,14 +147,11 @@ class TimeSeriesQuery extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get timeSeriesQueryLanguage => $_getSZ(2);
   @$pb.TagNumber(3)
-  set timeSeriesQueryLanguage($core.String v) {
-    $_setString(2, v);
-  }
-
+  set timeSeriesQueryLanguage($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasTimeSeriesQueryLanguage() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTimeSeriesQueryLanguage() => clearField(3);
+  void clearTimeSeriesQueryLanguage() => $_clearField(3);
 
   /// The unit of data contained in fetched time series. If non-empty, this
   /// unit will override any unit that accompanies fetched data. The format is
@@ -169,46 +161,37 @@ class TimeSeriesQuery extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get unitOverride => $_getSZ(3);
   @$pb.TagNumber(5)
-  set unitOverride($core.String v) {
-    $_setString(3, v);
-  }
-
+  set unitOverride($core.String value) => $_setString(3, value);
   @$pb.TagNumber(5)
   $core.bool hasUnitOverride() => $_has(3);
   @$pb.TagNumber(5)
-  void clearUnitOverride() => clearField(5);
+  void clearUnitOverride() => $_clearField(5);
 
   /// A query used to fetch time series with PromQL.
   @$pb.TagNumber(6)
   $core.String get prometheusQuery => $_getSZ(4);
   @$pb.TagNumber(6)
-  set prometheusQuery($core.String v) {
-    $_setString(4, v);
-  }
-
+  set prometheusQuery($core.String value) => $_setString(4, value);
   @$pb.TagNumber(6)
   $core.bool hasPrometheusQuery() => $_has(4);
   @$pb.TagNumber(6)
-  void clearPrometheusQuery() => clearField(6);
+  void clearPrometheusQuery() => $_clearField(6);
 
-  ///  Optional. If set, Cloud Monitoring will treat the full query duration as
-  ///  the alignment period so that there will be only 1 output value.
+  /// Optional. If set, Cloud Monitoring will treat the full query duration as
+  /// the alignment period so that there will be only 1 output value.
   ///
-  ///  *Note: This could override the configured alignment period except for
-  ///  the cases where a series of data points are expected, like
-  ///    - XyChart
-  ///    - Scorecard's spark chart
+  /// *Note: This could override the configured alignment period except for
+  /// the cases where a series of data points are expected, like
+  ///   - XyChart
+  ///   - Scorecard's spark chart
   @$pb.TagNumber(7)
   $core.bool get outputFullDuration => $_getBF(5);
   @$pb.TagNumber(7)
-  set outputFullDuration($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set outputFullDuration($core.bool value) => $_setBool(5, value);
   @$pb.TagNumber(7)
   $core.bool hasOutputFullDuration() => $_has(5);
   @$pb.TagNumber(7)
-  void clearOutputFullDuration() => clearField(7);
+  void clearOutputFullDuration() => $_clearField(7);
 }
 
 enum TimeSeriesFilter_OutputFilter {
@@ -230,32 +213,26 @@ class TimeSeriesFilter extends $pb.GeneratedMessage {
     @$core.Deprecated('This field is deprecated.')
     $0.StatisticalTimeSeriesFilter? statisticalTimeSeriesFilter,
   }) {
-    final $result = create();
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    if (aggregation != null) {
-      $result.aggregation = aggregation;
-    }
-    if (secondaryAggregation != null) {
-      $result.secondaryAggregation = secondaryAggregation;
-    }
-    if (pickTimeSeriesFilter != null) {
-      $result.pickTimeSeriesFilter = pickTimeSeriesFilter;
-    }
-    if (statisticalTimeSeriesFilter != null) {
-      // ignore: deprecated_member_use_from_same_package
-      $result.statisticalTimeSeriesFilter = statisticalTimeSeriesFilter;
-    }
-    return $result;
+    final result = create();
+    if (filter != null) result.filter = filter;
+    if (aggregation != null) result.aggregation = aggregation;
+    if (secondaryAggregation != null)
+      result.secondaryAggregation = secondaryAggregation;
+    if (pickTimeSeriesFilter != null)
+      result.pickTimeSeriesFilter = pickTimeSeriesFilter;
+    if (statisticalTimeSeriesFilter != null)
+      result.statisticalTimeSeriesFilter = statisticalTimeSeriesFilter;
+    return result;
   }
-  TimeSeriesFilter._() : super();
-  factory TimeSeriesFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TimeSeriesFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TimeSeriesFilter._();
+
+  factory TimeSeriesFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TimeSeriesFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, TimeSeriesFilter_OutputFilter>
       _TimeSeriesFilter_OutputFilterByTag = {
@@ -282,32 +259,32 @@ class TimeSeriesFilter extends $pb.GeneratedMessage {
         subBuilder: $0.StatisticalTimeSeriesFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TimeSeriesFilter clone() => TimeSeriesFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TimeSeriesFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TimeSeriesFilter copyWith(void Function(TimeSeriesFilter) updates) =>
       super.copyWith((message) => updates(message as TimeSeriesFilter))
           as TimeSeriesFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TimeSeriesFilter create() => TimeSeriesFilter._();
+  @$core.override
   TimeSeriesFilter createEmptyInstance() => create();
-  static $pb.PbList<TimeSeriesFilter> createRepeated() =>
-      $pb.PbList<TimeSeriesFilter>();
   @$core.pragma('dart2js:noInline')
   static TimeSeriesFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TimeSeriesFilter>(create);
   static TimeSeriesFilter? _defaultInstance;
 
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
   TimeSeriesFilter_OutputFilter whichOutputFilter() =>
       _TimeSeriesFilter_OutputFilterByTag[$_whichOneof(0)]!;
-  void clearOutputFilter() => clearField($_whichOneof(0));
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearOutputFilter() => $_clearField($_whichOneof(0));
 
   /// Required. The [monitoring
   /// filter](https://cloud.google.com/monitoring/api/v3/filters) that identifies
@@ -315,14 +292,11 @@ class TimeSeriesFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get filter => $_getSZ(0);
   @$pb.TagNumber(1)
-  set filter($core.String v) {
-    $_setString(0, v);
-  }
-
+  set filter($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFilter() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFilter() => clearField(1);
+  void clearFilter() => $_clearField(1);
 
   /// By default, the raw time series data is returned.
   /// Use this field to combine multiple time series for different views of the
@@ -330,14 +304,11 @@ class TimeSeriesFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Aggregation get aggregation => $_getN(1);
   @$pb.TagNumber(2)
-  set aggregation($0.Aggregation v) {
-    setField(2, v);
-  }
-
+  set aggregation($0.Aggregation value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasAggregation() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAggregation() => clearField(2);
+  void clearAggregation() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Aggregation ensureAggregation() => $_ensure(1);
 
@@ -345,14 +316,11 @@ class TimeSeriesFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Aggregation get secondaryAggregation => $_getN(2);
   @$pb.TagNumber(3)
-  set secondaryAggregation($0.Aggregation v) {
-    setField(3, v);
-  }
-
+  set secondaryAggregation($0.Aggregation value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasSecondaryAggregation() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSecondaryAggregation() => clearField(3);
+  void clearSecondaryAggregation() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Aggregation ensureSecondaryAggregation() => $_ensure(2);
 
@@ -360,14 +328,12 @@ class TimeSeriesFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.PickTimeSeriesFilter get pickTimeSeriesFilter => $_getN(3);
   @$pb.TagNumber(4)
-  set pickTimeSeriesFilter($0.PickTimeSeriesFilter v) {
-    setField(4, v);
-  }
-
+  set pickTimeSeriesFilter($0.PickTimeSeriesFilter value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasPickTimeSeriesFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPickTimeSeriesFilter() => clearField(4);
+  void clearPickTimeSeriesFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.PickTimeSeriesFilter ensurePickTimeSeriesFilter() => $_ensure(3);
 
@@ -378,16 +344,14 @@ class TimeSeriesFilter extends $pb.GeneratedMessage {
   $0.StatisticalTimeSeriesFilter get statisticalTimeSeriesFilter => $_getN(4);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  set statisticalTimeSeriesFilter($0.StatisticalTimeSeriesFilter v) {
-    setField(5, v);
-  }
-
+  set statisticalTimeSeriesFilter($0.StatisticalTimeSeriesFilter value) =>
+      $_setField(5, value);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $core.bool hasStatisticalTimeSeriesFilter() => $_has(4);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  void clearStatisticalTimeSeriesFilter() => clearField(5);
+  void clearStatisticalTimeSeriesFilter() => $_clearField(5);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $0.StatisticalTimeSeriesFilter ensureStatisticalTimeSeriesFilter() =>
@@ -401,22 +365,20 @@ class TimeSeriesFilterRatio_RatioPart extends $pb.GeneratedMessage {
     $core.String? filter,
     $0.Aggregation? aggregation,
   }) {
-    final $result = create();
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    if (aggregation != null) {
-      $result.aggregation = aggregation;
-    }
-    return $result;
+    final result = create();
+    if (filter != null) result.filter = filter;
+    if (aggregation != null) result.aggregation = aggregation;
+    return result;
   }
-  TimeSeriesFilterRatio_RatioPart._() : super();
-  factory TimeSeriesFilterRatio_RatioPart.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TimeSeriesFilterRatio_RatioPart.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TimeSeriesFilterRatio_RatioPart._();
+
+  factory TimeSeriesFilterRatio_RatioPart.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TimeSeriesFilterRatio_RatioPart.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TimeSeriesFilterRatio.RatioPart',
@@ -428,28 +390,23 @@ class TimeSeriesFilterRatio_RatioPart extends $pb.GeneratedMessage {
         subBuilder: $0.Aggregation.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TimeSeriesFilterRatio_RatioPart clone() =>
-      TimeSeriesFilterRatio_RatioPart()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TimeSeriesFilterRatio_RatioPart clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TimeSeriesFilterRatio_RatioPart copyWith(
           void Function(TimeSeriesFilterRatio_RatioPart) updates) =>
       super.copyWith(
               (message) => updates(message as TimeSeriesFilterRatio_RatioPart))
           as TimeSeriesFilterRatio_RatioPart;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TimeSeriesFilterRatio_RatioPart create() =>
       TimeSeriesFilterRatio_RatioPart._();
+  @$core.override
   TimeSeriesFilterRatio_RatioPart createEmptyInstance() => create();
-  static $pb.PbList<TimeSeriesFilterRatio_RatioPart> createRepeated() =>
-      $pb.PbList<TimeSeriesFilterRatio_RatioPart>();
   @$core.pragma('dart2js:noInline')
   static TimeSeriesFilterRatio_RatioPart getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TimeSeriesFilterRatio_RatioPart>(
@@ -462,14 +419,11 @@ class TimeSeriesFilterRatio_RatioPart extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get filter => $_getSZ(0);
   @$pb.TagNumber(1)
-  set filter($core.String v) {
-    $_setString(0, v);
-  }
-
+  set filter($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFilter() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFilter() => clearField(1);
+  void clearFilter() => $_clearField(1);
 
   /// By default, the raw time series data is returned.
   /// Use this field to combine multiple time series for different views of the
@@ -477,14 +431,11 @@ class TimeSeriesFilterRatio_RatioPart extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Aggregation get aggregation => $_getN(1);
   @$pb.TagNumber(2)
-  set aggregation($0.Aggregation v) {
-    setField(2, v);
-  }
-
+  set aggregation($0.Aggregation value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasAggregation() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAggregation() => clearField(2);
+  void clearAggregation() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Aggregation ensureAggregation() => $_ensure(1);
 }
@@ -507,32 +458,26 @@ class TimeSeriesFilterRatio extends $pb.GeneratedMessage {
     @$core.Deprecated('This field is deprecated.')
     $0.StatisticalTimeSeriesFilter? statisticalTimeSeriesFilter,
   }) {
-    final $result = create();
-    if (numerator != null) {
-      $result.numerator = numerator;
-    }
-    if (denominator != null) {
-      $result.denominator = denominator;
-    }
-    if (secondaryAggregation != null) {
-      $result.secondaryAggregation = secondaryAggregation;
-    }
-    if (pickTimeSeriesFilter != null) {
-      $result.pickTimeSeriesFilter = pickTimeSeriesFilter;
-    }
-    if (statisticalTimeSeriesFilter != null) {
-      // ignore: deprecated_member_use_from_same_package
-      $result.statisticalTimeSeriesFilter = statisticalTimeSeriesFilter;
-    }
-    return $result;
+    final result = create();
+    if (numerator != null) result.numerator = numerator;
+    if (denominator != null) result.denominator = denominator;
+    if (secondaryAggregation != null)
+      result.secondaryAggregation = secondaryAggregation;
+    if (pickTimeSeriesFilter != null)
+      result.pickTimeSeriesFilter = pickTimeSeriesFilter;
+    if (statisticalTimeSeriesFilter != null)
+      result.statisticalTimeSeriesFilter = statisticalTimeSeriesFilter;
+    return result;
   }
-  TimeSeriesFilterRatio._() : super();
-  factory TimeSeriesFilterRatio.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TimeSeriesFilterRatio.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TimeSeriesFilterRatio._();
+
+  factory TimeSeriesFilterRatio.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TimeSeriesFilterRatio.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, TimeSeriesFilterRatio_OutputFilter>
       _TimeSeriesFilterRatio_OutputFilterByTag = {
@@ -562,47 +507,43 @@ class TimeSeriesFilterRatio extends $pb.GeneratedMessage {
         subBuilder: $0.StatisticalTimeSeriesFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TimeSeriesFilterRatio clone() =>
-      TimeSeriesFilterRatio()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TimeSeriesFilterRatio clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TimeSeriesFilterRatio copyWith(
           void Function(TimeSeriesFilterRatio) updates) =>
       super.copyWith((message) => updates(message as TimeSeriesFilterRatio))
           as TimeSeriesFilterRatio;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TimeSeriesFilterRatio create() => TimeSeriesFilterRatio._();
+  @$core.override
   TimeSeriesFilterRatio createEmptyInstance() => create();
-  static $pb.PbList<TimeSeriesFilterRatio> createRepeated() =>
-      $pb.PbList<TimeSeriesFilterRatio>();
   @$core.pragma('dart2js:noInline')
   static TimeSeriesFilterRatio getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TimeSeriesFilterRatio>(create);
   static TimeSeriesFilterRatio? _defaultInstance;
 
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
   TimeSeriesFilterRatio_OutputFilter whichOutputFilter() =>
       _TimeSeriesFilterRatio_OutputFilterByTag[$_whichOneof(0)]!;
-  void clearOutputFilter() => clearField($_whichOneof(0));
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearOutputFilter() => $_clearField($_whichOneof(0));
 
   /// The numerator of the ratio.
   @$pb.TagNumber(1)
   TimeSeriesFilterRatio_RatioPart get numerator => $_getN(0);
   @$pb.TagNumber(1)
-  set numerator(TimeSeriesFilterRatio_RatioPart v) {
-    setField(1, v);
-  }
-
+  set numerator(TimeSeriesFilterRatio_RatioPart value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasNumerator() => $_has(0);
   @$pb.TagNumber(1)
-  void clearNumerator() => clearField(1);
+  void clearNumerator() => $_clearField(1);
   @$pb.TagNumber(1)
   TimeSeriesFilterRatio_RatioPart ensureNumerator() => $_ensure(0);
 
@@ -610,14 +551,12 @@ class TimeSeriesFilterRatio extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   TimeSeriesFilterRatio_RatioPart get denominator => $_getN(1);
   @$pb.TagNumber(2)
-  set denominator(TimeSeriesFilterRatio_RatioPart v) {
-    setField(2, v);
-  }
-
+  set denominator(TimeSeriesFilterRatio_RatioPart value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasDenominator() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDenominator() => clearField(2);
+  void clearDenominator() => $_clearField(2);
   @$pb.TagNumber(2)
   TimeSeriesFilterRatio_RatioPart ensureDenominator() => $_ensure(1);
 
@@ -625,14 +564,11 @@ class TimeSeriesFilterRatio extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Aggregation get secondaryAggregation => $_getN(2);
   @$pb.TagNumber(3)
-  set secondaryAggregation($0.Aggregation v) {
-    setField(3, v);
-  }
-
+  set secondaryAggregation($0.Aggregation value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasSecondaryAggregation() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSecondaryAggregation() => clearField(3);
+  void clearSecondaryAggregation() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Aggregation ensureSecondaryAggregation() => $_ensure(2);
 
@@ -640,14 +576,12 @@ class TimeSeriesFilterRatio extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.PickTimeSeriesFilter get pickTimeSeriesFilter => $_getN(3);
   @$pb.TagNumber(4)
-  set pickTimeSeriesFilter($0.PickTimeSeriesFilter v) {
-    setField(4, v);
-  }
-
+  set pickTimeSeriesFilter($0.PickTimeSeriesFilter value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasPickTimeSeriesFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPickTimeSeriesFilter() => clearField(4);
+  void clearPickTimeSeriesFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.PickTimeSeriesFilter ensurePickTimeSeriesFilter() => $_ensure(3);
 
@@ -658,16 +592,14 @@ class TimeSeriesFilterRatio extends $pb.GeneratedMessage {
   $0.StatisticalTimeSeriesFilter get statisticalTimeSeriesFilter => $_getN(4);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  set statisticalTimeSeriesFilter($0.StatisticalTimeSeriesFilter v) {
-    setField(5, v);
-  }
-
+  set statisticalTimeSeriesFilter($0.StatisticalTimeSeriesFilter value) =>
+      $_setField(5, value);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $core.bool hasStatisticalTimeSeriesFilter() => $_has(4);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  void clearStatisticalTimeSeriesFilter() => clearField(5);
+  void clearStatisticalTimeSeriesFilter() => $_clearField(5);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $0.StatisticalTimeSeriesFilter ensureStatisticalTimeSeriesFilter() =>
@@ -683,31 +615,23 @@ class Threshold extends $pb.GeneratedMessage {
     Threshold_Direction? direction,
     Threshold_TargetAxis? targetAxis,
   }) {
-    final $result = create();
-    if (label != null) {
-      $result.label = label;
-    }
-    if (value != null) {
-      $result.value = value;
-    }
-    if (color != null) {
-      $result.color = color;
-    }
-    if (direction != null) {
-      $result.direction = direction;
-    }
-    if (targetAxis != null) {
-      $result.targetAxis = targetAxis;
-    }
-    return $result;
+    final result = create();
+    if (label != null) result.label = label;
+    if (value != null) result.value = value;
+    if (color != null) result.color = color;
+    if (direction != null) result.direction = direction;
+    if (targetAxis != null) result.targetAxis = targetAxis;
+    return result;
   }
-  Threshold._() : super();
-  factory Threshold.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Threshold.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Threshold._();
+
+  factory Threshold.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Threshold.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Threshold',
@@ -715,39 +639,28 @@ class Threshold extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'label')
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
-    ..e<Threshold_Color>(3, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OE,
-        defaultOrMaker: Threshold_Color.COLOR_UNSPECIFIED,
-        valueOf: Threshold_Color.valueOf,
+    ..aD(2, _omitFieldNames ? '' : 'value')
+    ..aE<Threshold_Color>(3, _omitFieldNames ? '' : 'color',
         enumValues: Threshold_Color.values)
-    ..e<Threshold_Direction>(
-        4, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OE,
-        defaultOrMaker: Threshold_Direction.DIRECTION_UNSPECIFIED,
-        valueOf: Threshold_Direction.valueOf,
+    ..aE<Threshold_Direction>(4, _omitFieldNames ? '' : 'direction',
         enumValues: Threshold_Direction.values)
-    ..e<Threshold_TargetAxis>(
-        5, _omitFieldNames ? '' : 'targetAxis', $pb.PbFieldType.OE,
-        defaultOrMaker: Threshold_TargetAxis.TARGET_AXIS_UNSPECIFIED,
-        valueOf: Threshold_TargetAxis.valueOf,
+    ..aE<Threshold_TargetAxis>(5, _omitFieldNames ? '' : 'targetAxis',
         enumValues: Threshold_TargetAxis.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Threshold clone() => Threshold()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Threshold clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Threshold copyWith(void Function(Threshold) updates) =>
       super.copyWith((message) => updates(message as Threshold)) as Threshold;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Threshold create() => Threshold._();
+  @$core.override
   Threshold createEmptyInstance() => create();
-  static $pb.PbList<Threshold> createRepeated() => $pb.PbList<Threshold>();
   @$core.pragma('dart2js:noInline')
   static Threshold getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Threshold>(create);
@@ -757,71 +670,57 @@ class Threshold extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get label => $_getSZ(0);
   @$pb.TagNumber(1)
-  set label($core.String v) {
-    $_setString(0, v);
-  }
-
+  set label($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasLabel() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLabel() => clearField(1);
+  void clearLabel() => $_clearField(1);
 
   /// The value of the threshold. The value should be defined in the native scale
   /// of the metric.
   @$pb.TagNumber(2)
   $core.double get value => $_getN(1);
   @$pb.TagNumber(2)
-  set value($core.double v) {
-    $_setDouble(1, v);
-  }
-
+  set value($core.double value) => $_setDouble(1, value);
   @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValue() => clearField(2);
+  void clearValue() => $_clearField(2);
 
   /// The state color for this threshold. Color is not allowed in a XyChart.
   @$pb.TagNumber(3)
   Threshold_Color get color => $_getN(2);
   @$pb.TagNumber(3)
-  set color(Threshold_Color v) {
-    setField(3, v);
-  }
-
+  set color(Threshold_Color value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasColor() => $_has(2);
   @$pb.TagNumber(3)
-  void clearColor() => clearField(3);
+  void clearColor() => $_clearField(3);
 
   /// The direction for the current threshold. Direction is not allowed in a
   /// XyChart.
   @$pb.TagNumber(4)
   Threshold_Direction get direction => $_getN(3);
   @$pb.TagNumber(4)
-  set direction(Threshold_Direction v) {
-    setField(4, v);
-  }
-
+  set direction(Threshold_Direction value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasDirection() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDirection() => clearField(4);
+  void clearDirection() => $_clearField(4);
 
   /// The target axis to use for plotting the threshold. Target axis is not
   /// allowed in a Scorecard.
   @$pb.TagNumber(5)
   Threshold_TargetAxis get targetAxis => $_getN(4);
   @$pb.TagNumber(5)
-  set targetAxis(Threshold_TargetAxis v) {
-    setField(5, v);
-  }
-
+  set targetAxis(Threshold_TargetAxis value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasTargetAxis() => $_has(4);
   @$pb.TagNumber(5)
-  void clearTargetAxis() => clearField(5);
+  void clearTargetAxis() => $_clearField(5);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

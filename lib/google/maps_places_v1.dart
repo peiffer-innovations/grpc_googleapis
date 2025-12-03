@@ -1,3 +1,6 @@
+export '../src/generated/google/maps/places/v1/address_descriptor.pb.dart';
+export '../src/generated/google/maps/places/v1/address_descriptor.pbenum.dart';
+export '../src/generated/google/maps/places/v1/address_descriptor.pbjson.dart';
 export '../src/generated/google/maps/places/v1/attribution.pb.dart';
 export '../src/generated/google/maps/places/v1/attribution.pbenum.dart';
 export '../src/generated/google/maps/places/v1/attribution.pbjson.dart';

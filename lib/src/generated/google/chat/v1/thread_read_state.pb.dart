@@ -1,19 +1,22 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/chat/v1/thread_read_state.proto
-//
-// @dart = 2.12
+// Generated from google/chat/v1/thread_read_state.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $0;
 
-import '../../protobuf/timestamp.pb.dart' as $0;
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// A user's read state within a thread, used to identify read and unread
 /// messages.
@@ -22,22 +25,20 @@ class ThreadReadState extends $pb.GeneratedMessage {
     $core.String? name,
     $0.Timestamp? lastReadTime,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (lastReadTime != null) {
-      $result.lastReadTime = lastReadTime;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (lastReadTime != null) result.lastReadTime = lastReadTime;
+    return result;
   }
-  ThreadReadState._() : super();
-  factory ThreadReadState.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ThreadReadState.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ThreadReadState._();
+
+  factory ThreadReadState.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ThreadReadState.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ThreadReadState',
@@ -48,57 +49,47 @@ class ThreadReadState extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ThreadReadState clone() => ThreadReadState()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ThreadReadState clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ThreadReadState copyWith(void Function(ThreadReadState) updates) =>
       super.copyWith((message) => updates(message as ThreadReadState))
           as ThreadReadState;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ThreadReadState create() => ThreadReadState._();
+  @$core.override
   ThreadReadState createEmptyInstance() => create();
-  static $pb.PbList<ThreadReadState> createRepeated() =>
-      $pb.PbList<ThreadReadState>();
   @$core.pragma('dart2js:noInline')
   static ThreadReadState getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ThreadReadState>(create);
   static ThreadReadState? _defaultInstance;
 
-  ///  Resource name of the thread read state.
+  /// Resource name of the thread read state.
   ///
-  ///  Format: `users/{user}/spaces/{space}/threads/{thread}/threadReadState`
+  /// Format: `users/{user}/spaces/{space}/threads/{thread}/threadReadState`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The time when the user's thread read state was updated. Usually this
   /// corresponds with the timestamp of the last read message in a thread.
   @$pb.TagNumber(2)
   $0.Timestamp get lastReadTime => $_getN(1);
   @$pb.TagNumber(2)
-  set lastReadTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set lastReadTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasLastReadTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLastReadTime() => clearField(2);
+  void clearLastReadTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureLastReadTime() => $_ensure(1);
 }
@@ -108,19 +99,19 @@ class GetThreadReadStateRequest extends $pb.GeneratedMessage {
   factory GetThreadReadStateRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetThreadReadStateRequest._() : super();
-  factory GetThreadReadStateRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetThreadReadStateRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetThreadReadStateRequest._();
+
+  factory GetThreadReadStateRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetThreadReadStateRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetThreadReadStateRequest',
@@ -129,60 +120,53 @@ class GetThreadReadStateRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetThreadReadStateRequest clone() =>
-      GetThreadReadStateRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetThreadReadStateRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetThreadReadStateRequest copyWith(
           void Function(GetThreadReadStateRequest) updates) =>
       super.copyWith((message) => updates(message as GetThreadReadStateRequest))
           as GetThreadReadStateRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetThreadReadStateRequest create() => GetThreadReadStateRequest._();
+  @$core.override
   GetThreadReadStateRequest createEmptyInstance() => create();
-  static $pb.PbList<GetThreadReadStateRequest> createRepeated() =>
-      $pb.PbList<GetThreadReadStateRequest>();
   @$core.pragma('dart2js:noInline')
   static GetThreadReadStateRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetThreadReadStateRequest>(create);
   static GetThreadReadStateRequest? _defaultInstance;
 
-  ///  Required. Resource name of the thread read state to retrieve.
+  /// Required. Resource name of the thread read state to retrieve.
   ///
-  ///  Only supports getting read state for the calling user.
+  /// Only supports getting read state for the calling user.
   ///
-  ///  To refer to the calling user, set one of the following:
+  /// To refer to the calling user, set one of the following:
   ///
-  ///  - The `me` alias. For example,
-  ///  `users/me/spaces/{space}/threads/{thread}/threadReadState`.
+  /// - The `me` alias. For example,
+  /// `users/me/spaces/{space}/threads/{thread}/threadReadState`.
   ///
-  ///  - Their Workspace email address. For example,
-  ///  `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`.
+  /// - Their Workspace email address. For example,
+  /// `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`.
   ///
-  ///  - Their user id. For example,
-  ///  `users/123456789/spaces/{space}/threads/{thread}/threadReadState`.
+  /// - Their user id. For example,
+  /// `users/123456789/spaces/{space}/threads/{thread}/threadReadState`.
   ///
-  ///  Format: users/{user}/spaces/{space}/threads/{thread}/threadReadState
+  /// Format: users/{user}/spaces/{space}/threads/{thread}/threadReadState
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

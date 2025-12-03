@@ -1,36 +1,39 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/interactionmodel/entity_set.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/interactionmodel/entity_set.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// An entity a built-in intent parameter value can come from.
 class EntitySet_Entity extends $pb.GeneratedMessage {
   factory EntitySet_Entity({
     $core.String? id,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    return result;
   }
-  EntitySet_Entity._() : super();
-  factory EntitySet_Entity.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EntitySet_Entity.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EntitySet_Entity._();
+
+  factory EntitySet_Entity.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EntitySet_Entity.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EntitySet.Entity',
@@ -40,24 +43,20 @@ class EntitySet_Entity extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EntitySet_Entity clone() => EntitySet_Entity()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EntitySet_Entity clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EntitySet_Entity copyWith(void Function(EntitySet_Entity) updates) =>
       super.copyWith((message) => updates(message as EntitySet_Entity))
           as EntitySet_Entity;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EntitySet_Entity create() => EntitySet_Entity._();
+  @$core.override
   EntitySet_Entity createEmptyInstance() => create();
-  static $pb.PbList<EntitySet_Entity> createRepeated() =>
-      $pb.PbList<EntitySet_Entity>();
   @$core.pragma('dart2js:noInline')
   static EntitySet_Entity getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EntitySet_Entity>(create);
@@ -70,14 +69,11 @@ class EntitySet_Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
 /// Entity sets describe the pre-defined set of entities that the values of
@@ -87,46 +83,42 @@ class EntitySet extends $pb.GeneratedMessage {
   factory EntitySet({
     $core.Iterable<EntitySet_Entity>? entities,
   }) {
-    final $result = create();
-    if (entities != null) {
-      $result.entities.addAll(entities);
-    }
-    return $result;
+    final result = create();
+    if (entities != null) result.entities.addAll(entities);
+    return result;
   }
-  EntitySet._() : super();
-  factory EntitySet.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EntitySet.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EntitySet._();
+
+  factory EntitySet.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EntitySet.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EntitySet',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.actions.sdk.v2.interactionmodel'),
       createEmptyInstance: create)
-    ..pc<EntitySet_Entity>(
-        1, _omitFieldNames ? '' : 'entities', $pb.PbFieldType.PM,
+    ..pPM<EntitySet_Entity>(1, _omitFieldNames ? '' : 'entities',
         subBuilder: EntitySet_Entity.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EntitySet clone() => EntitySet()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EntitySet clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EntitySet copyWith(void Function(EntitySet) updates) =>
       super.copyWith((message) => updates(message as EntitySet)) as EntitySet;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EntitySet create() => EntitySet._();
+  @$core.override
   EntitySet createEmptyInstance() => create();
-  static $pb.PbList<EntitySet> createRepeated() => $pb.PbList<EntitySet>();
   @$core.pragma('dart2js:noInline')
   static EntitySet getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EntitySet>(create);
@@ -134,9 +126,10 @@ class EntitySet extends $pb.GeneratedMessage {
 
   /// Required. The list of entities this entity set supports.
   @$pb.TagNumber(1)
-  $core.List<EntitySet_Entity> get entities => $_getList(0);
+  $pb.PbList<EntitySet_Entity> get entities => $_getList(0);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

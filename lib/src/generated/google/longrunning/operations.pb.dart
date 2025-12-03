@@ -1,21 +1,26 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/longrunning/operations.proto
-//
-// @dart = 2.12
+// Generated from google/longrunning/operations.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/any.pb.dart'
+    as $2;
+import 'package:grpc_googleapis/src/generated/google/protobuf/duration.pb.dart'
+    as $4;
 
-import '../protobuf/any.pb.dart' as $2;
-import '../protobuf/duration.pb.dart' as $4;
 import '../rpc/status.pb.dart' as $3;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum Operation_Result { error, response, notSet }
 
@@ -29,31 +34,23 @@ class Operation extends $pb.GeneratedMessage {
     $3.Status? error,
     $2.Any? response,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (metadata != null) {
-      $result.metadata = metadata;
-    }
-    if (done != null) {
-      $result.done = done;
-    }
-    if (error != null) {
-      $result.error = error;
-    }
-    if (response != null) {
-      $result.response = response;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (metadata != null) result.metadata = metadata;
+    if (done != null) result.done = done;
+    if (error != null) result.error = error;
+    if (response != null) result.response = response;
+    return result;
   }
-  Operation._() : super();
-  factory Operation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Operation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Operation._();
+
+  factory Operation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Operation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Operation_Result> _Operation_ResultByTag = {
     4: Operation_Result.error,
@@ -76,29 +73,30 @@ class Operation extends $pb.GeneratedMessage {
         subBuilder: $2.Any.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Operation clone() => Operation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Operation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Operation copyWith(void Function(Operation) updates) =>
       super.copyWith((message) => updates(message as Operation)) as Operation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Operation create() => Operation._();
+  @$core.override
   Operation createEmptyInstance() => create();
-  static $pb.PbList<Operation> createRepeated() => $pb.PbList<Operation>();
   @$core.pragma('dart2js:noInline')
   static Operation getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Operation>(create);
   static Operation? _defaultInstance;
 
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
   Operation_Result whichResult() => _Operation_ResultByTag[$_whichOneof(0)]!;
-  void clearResult() => clearField($_whichOneof(0));
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearResult() => $_clearField($_whichOneof(0));
 
   /// The server-assigned name, which is only unique within the same service that
   /// originally returns it. If you use the default HTTP mapping, the
@@ -106,14 +104,11 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Service-specific metadata associated with the operation.  It typically
   /// contains progress information and common metadata such as create time.
@@ -122,14 +117,11 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $2.Any get metadata => $_getN(1);
   @$pb.TagNumber(2)
-  set metadata($2.Any v) {
-    setField(2, v);
-  }
-
+  set metadata($2.Any value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasMetadata() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMetadata() => clearField(2);
+  void clearMetadata() => $_clearField(2);
   @$pb.TagNumber(2)
   $2.Any ensureMetadata() => $_ensure(1);
 
@@ -139,27 +131,21 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get done => $_getBF(2);
   @$pb.TagNumber(3)
-  set done($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set done($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDone() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDone() => clearField(3);
+  void clearDone() => $_clearField(3);
 
   /// The error result of the operation in case of failure or cancellation.
   @$pb.TagNumber(4)
   $3.Status get error => $_getN(3);
   @$pb.TagNumber(4)
-  set error($3.Status v) {
-    setField(4, v);
-  }
-
+  set error($3.Status value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasError() => $_has(3);
   @$pb.TagNumber(4)
-  void clearError() => clearField(4);
+  void clearError() => $_clearField(4);
   @$pb.TagNumber(4)
   $3.Status ensureError() => $_ensure(3);
 
@@ -174,14 +160,11 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Any get response => $_getN(4);
   @$pb.TagNumber(5)
-  set response($2.Any v) {
-    setField(5, v);
-  }
-
+  set response($2.Any value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasResponse() => $_has(4);
   @$pb.TagNumber(5)
-  void clearResponse() => clearField(5);
+  void clearResponse() => $_clearField(5);
   @$pb.TagNumber(5)
   $2.Any ensureResponse() => $_ensure(4);
 }
@@ -192,19 +175,19 @@ class GetOperationRequest extends $pb.GeneratedMessage {
   factory GetOperationRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetOperationRequest._() : super();
-  factory GetOperationRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetOperationRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetOperationRequest._();
+
+  factory GetOperationRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetOperationRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetOperationRequest',
@@ -214,24 +197,20 @@ class GetOperationRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetOperationRequest clone() => GetOperationRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetOperationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetOperationRequest copyWith(void Function(GetOperationRequest) updates) =>
       super.copyWith((message) => updates(message as GetOperationRequest))
           as GetOperationRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetOperationRequest create() => GetOperationRequest._();
+  @$core.override
   GetOperationRequest createEmptyInstance() => create();
-  static $pb.PbList<GetOperationRequest> createRepeated() =>
-      $pb.PbList<GetOperationRequest>();
   @$core.pragma('dart2js:noInline')
   static GetOperationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetOperationRequest>(create);
@@ -241,14 +220,11 @@ class GetOperationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// The request message for
@@ -259,29 +235,26 @@ class ListOperationsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
     $core.String? name,
+    $core.bool? returnPartialSuccess,
   }) {
-    final $result = create();
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (filter != null) result.filter = filter;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (name != null) result.name = name;
+    if (returnPartialSuccess != null)
+      result.returnPartialSuccess = returnPartialSuccess;
+    return result;
   }
-  ListOperationsRequest._() : super();
-  factory ListOperationsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListOperationsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListOperationsRequest._();
+
+  factory ListOperationsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListOperationsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListOperationsRequest',
@@ -289,31 +262,27 @@ class ListOperationsRequest extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'google.longrunning'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'filter')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..aOS(4, _omitFieldNames ? '' : 'name')
+    ..aOB(5, _omitFieldNames ? '' : 'returnPartialSuccess')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListOperationsRequest clone() =>
-      ListOperationsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListOperationsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListOperationsRequest copyWith(
           void Function(ListOperationsRequest) updates) =>
       super.copyWith((message) => updates(message as ListOperationsRequest))
           as ListOperationsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListOperationsRequest create() => ListOperationsRequest._();
+  @$core.override
   ListOperationsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListOperationsRequest> createRepeated() =>
-      $pb.PbList<ListOperationsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListOperationsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListOperationsRequest>(create);
@@ -323,53 +292,60 @@ class ListOperationsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get filter => $_getSZ(0);
   @$pb.TagNumber(1)
-  set filter($core.String v) {
-    $_setString(0, v);
-  }
-
+  set filter($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFilter() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFilter() => clearField(1);
+  void clearFilter() => $_clearField(1);
 
   /// The standard list page size.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// The standard list page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 
   /// The name of the operation's parent resource.
   @$pb.TagNumber(4)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(4)
-  set name($core.String v) {
-    $_setString(3, v);
-  }
-
+  set name($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearName() => clearField(4);
+  void clearName() => $_clearField(4);
+
+  /// When set to `true`, operations that are reachable are returned as normal,
+  /// and those that are unreachable are returned in the
+  /// [ListOperationsResponse.unreachable] field.
+  ///
+  /// This can only be `true` when reading across collections e.g. when `parent`
+  /// is set to `"projects/example/locations/-"`.
+  ///
+  /// This field is not by default supported and will result in an
+  /// `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+  /// service or product specific documentation.
+  @$pb.TagNumber(5)
+  $core.bool get returnPartialSuccess => $_getBF(4);
+  @$pb.TagNumber(5)
+  set returnPartialSuccess($core.bool value) => $_setBool(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasReturnPartialSuccess() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearReturnPartialSuccess() => $_clearField(5);
 }
 
 /// The response message for
@@ -378,54 +354,50 @@ class ListOperationsResponse extends $pb.GeneratedMessage {
   factory ListOperationsResponse({
     $core.Iterable<Operation>? operations,
     $core.String? nextPageToken,
+    $core.Iterable<$core.String>? unreachable,
   }) {
-    final $result = create();
-    if (operations != null) {
-      $result.operations.addAll(operations);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (operations != null) result.operations.addAll(operations);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    if (unreachable != null) result.unreachable.addAll(unreachable);
+    return result;
   }
-  ListOperationsResponse._() : super();
-  factory ListOperationsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListOperationsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListOperationsResponse._();
+
+  factory ListOperationsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListOperationsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListOperationsResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.longrunning'),
       createEmptyInstance: create)
-    ..pc<Operation>(1, _omitFieldNames ? '' : 'operations', $pb.PbFieldType.PM,
+    ..pPM<Operation>(1, _omitFieldNames ? '' : 'operations',
         subBuilder: Operation.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..pPS(3, _omitFieldNames ? '' : 'unreachable')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListOperationsResponse clone() =>
-      ListOperationsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListOperationsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListOperationsResponse copyWith(
           void Function(ListOperationsResponse) updates) =>
       super.copyWith((message) => updates(message as ListOperationsResponse))
           as ListOperationsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListOperationsResponse create() => ListOperationsResponse._();
+  @$core.override
   ListOperationsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListOperationsResponse> createRepeated() =>
-      $pb.PbList<ListOperationsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListOperationsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListOperationsResponse>(create);
@@ -433,20 +405,24 @@ class ListOperationsResponse extends $pb.GeneratedMessage {
 
   /// A list of operations that matches the specified filter in the request.
   @$pb.TagNumber(1)
-  $core.List<Operation> get operations => $_getList(0);
+  $pb.PbList<Operation> get operations => $_getList(0);
 
   /// The standard List next-page token.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
+
+  /// Unordered list. Unreachable resources. Populated when the request sets
+  /// `ListOperationsRequest.return_partial_success` and reads across
+  /// collections e.g. when attempting to list all resources across all supported
+  /// locations.
+  @$pb.TagNumber(3)
+  $pb.PbList<$core.String> get unreachable => $_getList(2);
 }
 
 /// The request message for
@@ -455,19 +431,19 @@ class CancelOperationRequest extends $pb.GeneratedMessage {
   factory CancelOperationRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  CancelOperationRequest._() : super();
-  factory CancelOperationRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CancelOperationRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CancelOperationRequest._();
+
+  factory CancelOperationRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CancelOperationRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CancelOperationRequest',
@@ -477,26 +453,21 @@ class CancelOperationRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CancelOperationRequest clone() =>
-      CancelOperationRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CancelOperationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CancelOperationRequest copyWith(
           void Function(CancelOperationRequest) updates) =>
       super.copyWith((message) => updates(message as CancelOperationRequest))
           as CancelOperationRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CancelOperationRequest create() => CancelOperationRequest._();
+  @$core.override
   CancelOperationRequest createEmptyInstance() => create();
-  static $pb.PbList<CancelOperationRequest> createRepeated() =>
-      $pb.PbList<CancelOperationRequest>();
   @$core.pragma('dart2js:noInline')
   static CancelOperationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CancelOperationRequest>(create);
@@ -506,14 +477,11 @@ class CancelOperationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// The request message for
@@ -522,19 +490,19 @@ class DeleteOperationRequest extends $pb.GeneratedMessage {
   factory DeleteOperationRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteOperationRequest._() : super();
-  factory DeleteOperationRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteOperationRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteOperationRequest._();
+
+  factory DeleteOperationRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteOperationRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteOperationRequest',
@@ -544,26 +512,21 @@ class DeleteOperationRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteOperationRequest clone() =>
-      DeleteOperationRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteOperationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteOperationRequest copyWith(
           void Function(DeleteOperationRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteOperationRequest))
           as DeleteOperationRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteOperationRequest create() => DeleteOperationRequest._();
+  @$core.override
   DeleteOperationRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteOperationRequest> createRepeated() =>
-      $pb.PbList<DeleteOperationRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteOperationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteOperationRequest>(create);
@@ -573,14 +536,11 @@ class DeleteOperationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// The request message for
@@ -590,22 +550,20 @@ class WaitOperationRequest extends $pb.GeneratedMessage {
     $core.String? name,
     $4.Duration? timeout,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (timeout != null) {
-      $result.timeout = timeout;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (timeout != null) result.timeout = timeout;
+    return result;
   }
-  WaitOperationRequest._() : super();
-  factory WaitOperationRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WaitOperationRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WaitOperationRequest._();
+
+  factory WaitOperationRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WaitOperationRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WaitOperationRequest',
@@ -617,25 +575,20 @@ class WaitOperationRequest extends $pb.GeneratedMessage {
         subBuilder: $4.Duration.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WaitOperationRequest clone() =>
-      WaitOperationRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WaitOperationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WaitOperationRequest copyWith(void Function(WaitOperationRequest) updates) =>
       super.copyWith((message) => updates(message as WaitOperationRequest))
           as WaitOperationRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WaitOperationRequest create() => WaitOperationRequest._();
+  @$core.override
   WaitOperationRequest createEmptyInstance() => create();
-  static $pb.PbList<WaitOperationRequest> createRepeated() =>
-      $pb.PbList<WaitOperationRequest>();
   @$core.pragma('dart2js:noInline')
   static WaitOperationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WaitOperationRequest>(create);
@@ -645,14 +598,11 @@ class WaitOperationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The maximum duration to wait before timing out. If left blank, the wait
   /// will be at most the time permitted by the underlying HTTP/RPC protocol.
@@ -660,49 +610,44 @@ class WaitOperationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $4.Duration get timeout => $_getN(1);
   @$pb.TagNumber(2)
-  set timeout($4.Duration v) {
-    setField(2, v);
-  }
-
+  set timeout($4.Duration value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasTimeout() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTimeout() => clearField(2);
+  void clearTimeout() => $_clearField(2);
   @$pb.TagNumber(2)
   $4.Duration ensureTimeout() => $_ensure(1);
 }
 
-///  A message representing the message types used by a long-running operation.
+/// A message representing the message types used by a long-running operation.
 ///
-///  Example:
+/// Example:
 ///
-///      rpc Export(ExportRequest) returns (google.longrunning.Operation) {
-///        option (google.longrunning.operation_info) = {
-///          response_type: "ExportResponse"
-///          metadata_type: "ExportMetadata"
-///        };
-///      }
+///     rpc Export(ExportRequest) returns (google.longrunning.Operation) {
+///       option (google.longrunning.operation_info) = {
+///         response_type: "ExportResponse"
+///         metadata_type: "ExportMetadata"
+///       };
+///     }
 class OperationInfo extends $pb.GeneratedMessage {
   factory OperationInfo({
     $core.String? responseType,
     $core.String? metadataType,
   }) {
-    final $result = create();
-    if (responseType != null) {
-      $result.responseType = responseType;
-    }
-    if (metadataType != null) {
-      $result.metadataType = metadataType;
-    }
-    return $result;
+    final result = create();
+    if (responseType != null) result.responseType = responseType;
+    if (metadataType != null) result.metadataType = metadataType;
+    return result;
   }
-  OperationInfo._() : super();
-  factory OperationInfo.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory OperationInfo.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  OperationInfo._();
+
+  factory OperationInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OperationInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'OperationInfo',
@@ -713,67 +658,57 @@ class OperationInfo extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'metadataType')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  OperationInfo clone() => OperationInfo()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OperationInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OperationInfo copyWith(void Function(OperationInfo) updates) =>
       super.copyWith((message) => updates(message as OperationInfo))
           as OperationInfo;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static OperationInfo create() => OperationInfo._();
+  @$core.override
   OperationInfo createEmptyInstance() => create();
-  static $pb.PbList<OperationInfo> createRepeated() =>
-      $pb.PbList<OperationInfo>();
   @$core.pragma('dart2js:noInline')
   static OperationInfo getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OperationInfo>(create);
   static OperationInfo? _defaultInstance;
 
-  ///  Required. The message name of the primary return type for this
-  ///  long-running operation.
-  ///  This type will be used to deserialize the LRO's response.
+  /// Required. The message name of the primary return type for this
+  /// long-running operation.
+  /// This type will be used to deserialize the LRO's response.
   ///
-  ///  If the response is in a different package from the rpc, a fully-qualified
-  ///  message name must be used (e.g. `google.protobuf.Struct`).
+  /// If the response is in a different package from the rpc, a fully-qualified
+  /// message name must be used (e.g. `google.protobuf.Struct`).
   ///
-  ///  Note: Altering this value constitutes a breaking change.
+  /// Note: Altering this value constitutes a breaking change.
   @$pb.TagNumber(1)
   $core.String get responseType => $_getSZ(0);
   @$pb.TagNumber(1)
-  set responseType($core.String v) {
-    $_setString(0, v);
-  }
-
+  set responseType($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasResponseType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearResponseType() => clearField(1);
+  void clearResponseType() => $_clearField(1);
 
-  ///  Required. The message name of the metadata type for this long-running
-  ///  operation.
+  /// Required. The message name of the metadata type for this long-running
+  /// operation.
   ///
-  ///  If the response is in a different package from the rpc, a fully-qualified
-  ///  message name must be used (e.g. `google.protobuf.Struct`).
+  /// If the response is in a different package from the rpc, a fully-qualified
+  /// message name must be used (e.g. `google.protobuf.Struct`).
   ///
-  ///  Note: Altering this value constitutes a breaking change.
+  /// Note: Altering this value constitutes a breaking change.
   @$pb.TagNumber(2)
   $core.String get metadataType => $_getSZ(1);
   @$pb.TagNumber(2)
-  set metadataType($core.String v) {
-    $_setString(1, v);
-  }
-
+  set metadataType($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasMetadataType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMetadataType() => clearField(2);
+  void clearMetadataType() => $_clearField(2);
 }
 
 class Operations {
@@ -789,6 +724,7 @@ class Operations {
   }
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

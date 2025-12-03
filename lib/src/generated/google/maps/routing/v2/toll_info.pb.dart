@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/routing/v2/toll_info.proto
-//
-// @dart = 2.12
+// Generated from google/maps/routing/v2/toll_info.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,52 +16,50 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../type/money.pb.dart' as $0;
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 /// Encapsulates toll information on a [`Route`][google.maps.routing.v2.Route] or
 /// on a [`RouteLeg`][google.maps.routing.v2.RouteLeg].
 class TollInfo extends $pb.GeneratedMessage {
   factory TollInfo({
     $core.Iterable<$0.Money>? estimatedPrice,
   }) {
-    final $result = create();
-    if (estimatedPrice != null) {
-      $result.estimatedPrice.addAll(estimatedPrice);
-    }
-    return $result;
+    final result = create();
+    if (estimatedPrice != null) result.estimatedPrice.addAll(estimatedPrice);
+    return result;
   }
-  TollInfo._() : super();
-  factory TollInfo.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TollInfo.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TollInfo._();
+
+  factory TollInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TollInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TollInfo',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.maps.routing.v2'),
       createEmptyInstance: create)
-    ..pc<$0.Money>(
-        1, _omitFieldNames ? '' : 'estimatedPrice', $pb.PbFieldType.PM,
+    ..pPM<$0.Money>(1, _omitFieldNames ? '' : 'estimatedPrice',
         subBuilder: $0.Money.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TollInfo clone() => TollInfo()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TollInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TollInfo copyWith(void Function(TollInfo) updates) =>
       super.copyWith((message) => updates(message as TollInfo)) as TollInfo;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TollInfo create() => TollInfo._();
+  @$core.override
   TollInfo createEmptyInstance() => create();
-  static $pb.PbList<TollInfo> createRepeated() => $pb.PbList<TollInfo>();
   @$core.pragma('dart2js:noInline')
   static TollInfo getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TollInfo>(create);
@@ -74,9 +73,10 @@ class TollInfo extends $pb.GeneratedMessage {
   /// tolls in one currency. For international trips, this list may contain
   /// multiple items to reflect tolls in different currencies.
   @$pb.TagNumber(1)
-  $core.List<$0.Money> get estimatedPrice => $_getList(0);
+  $pb.PbList<$0.Money> get estimatedPrice => $_getList(0);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

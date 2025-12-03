@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/bigtable/v2/bigtable.proto
-//
-// @dart = 2.12
+// Generated from google/bigtable/v2/bigtable.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -25,6 +27,14 @@ const ReadRowsRequest$json = {
       '5': 9,
       '8': {},
       '10': 'authorizedViewName'
+    },
+    {
+      '1': 'materialized_view_name',
+      '3': 11,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'materializedViewName'
     },
     {'1': 'app_profile_id', '3': 5, '4': 1, '5': 9, '10': 'appProfileId'},
     {
@@ -72,14 +82,16 @@ final $typed_data.Uint8List readRowsRequestDescriptor = $convert.base64Decode(
     'Cg9SZWFkUm93c1JlcXVlc3QSSQoKdGFibGVfbmFtZRgBIAEoCUIq4EEB+kEkCiJiaWd0YWJsZW'
     'FkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlUgl0YWJsZU5hbWUSZQoUYXV0aG9yaXplZF92aWV3'
     'X25hbWUYCSABKAlCM+BBAfpBLQorYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9BdXRob3'
-    'JpemVkVmlld1ISYXV0aG9yaXplZFZpZXdOYW1lEiQKDmFwcF9wcm9maWxlX2lkGAUgASgJUgxh'
-    'cHBQcm9maWxlSWQSLgoEcm93cxgCIAEoCzIaLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dTZXRSBH'
-    'Jvd3MSNQoGZmlsdGVyGAMgASgLMh0uZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0ZpbHRlclIGZmls'
-    'dGVyEh0KCnJvd3NfbGltaXQYBCABKANSCXJvd3NMaW1pdBJiChJyZXF1ZXN0X3N0YXRzX3ZpZX'
-    'cYBiABKA4yNC5nb29nbGUuYmlndGFibGUudjIuUmVhZFJvd3NSZXF1ZXN0LlJlcXVlc3RTdGF0'
-    'c1ZpZXdSEHJlcXVlc3RTdGF0c1ZpZXcSGgoIcmV2ZXJzZWQYByABKAhSCHJldmVyc2VkImYKEF'
-    'JlcXVlc3RTdGF0c1ZpZXcSIgoeUkVRVUVTVF9TVEFUU19WSUVXX1VOU1BFQ0lGSUVEEAASFgoS'
-    'UkVRVUVTVF9TVEFUU19OT05FEAESFgoSUkVRVUVTVF9TVEFUU19GVUxMEAI=');
+    'JpemVkVmlld1ISYXV0aG9yaXplZFZpZXdOYW1lEmsKFm1hdGVyaWFsaXplZF92aWV3X25hbWUY'
+    'CyABKAlCNeBBAfpBLwotYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9NYXRlcmlhbGl6ZW'
+    'RWaWV3UhRtYXRlcmlhbGl6ZWRWaWV3TmFtZRIkCg5hcHBfcHJvZmlsZV9pZBgFIAEoCVIMYXBw'
+    'UHJvZmlsZUlkEi4KBHJvd3MYAiABKAsyGi5nb29nbGUuYmlndGFibGUudjIuUm93U2V0UgRyb3'
+    'dzEjUKBmZpbHRlchgDIAEoCzIdLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0ZXJSBmZpbHRl'
+    'chIdCgpyb3dzX2xpbWl0GAQgASgDUglyb3dzTGltaXQSYgoScmVxdWVzdF9zdGF0c192aWV3GA'
+    'YgASgOMjQuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRSb3dzUmVxdWVzdC5SZXF1ZXN0U3RhdHNW'
+    'aWV3UhByZXF1ZXN0U3RhdHNWaWV3EhoKCHJldmVyc2VkGAcgASgIUghyZXZlcnNlZCJmChBSZX'
+    'F1ZXN0U3RhdHNWaWV3EiIKHlJFUVVFU1RfU1RBVFNfVklFV19VTlNQRUNJRklFRBAAEhYKElJF'
+    'UVVFU1RfU1RBVFNfTk9ORRABEhYKElJFUVVFU1RfU1RBVFNfRlVMTBAC');
 
 @$core.Deprecated('Use readRowsResponseDescriptor instead')
 const ReadRowsResponse$json = {
@@ -172,6 +184,14 @@ const SampleRowKeysRequest$json = {
       '8': {},
       '10': 'authorizedViewName'
     },
+    {
+      '1': 'materialized_view_name',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'materializedViewName'
+    },
     {'1': 'app_profile_id', '3': 2, '4': 1, '5': 9, '10': 'appProfileId'},
   ],
 };
@@ -181,8 +201,10 @@ final $typed_data.Uint8List sampleRowKeysRequestDescriptor = $convert.base64Deco
     'ChRTYW1wbGVSb3dLZXlzUmVxdWVzdBJJCgp0YWJsZV9uYW1lGAEgASgJQirgQQH6QSQKImJpZ3'
     'RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGVSCXRhYmxlTmFtZRJlChRhdXRob3JpemVk'
     'X3ZpZXdfbmFtZRgEIAEoCUIz4EEB+kEtCitiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0'
-    'F1dGhvcml6ZWRWaWV3UhJhdXRob3JpemVkVmlld05hbWUSJAoOYXBwX3Byb2ZpbGVfaWQYAiAB'
-    'KAlSDGFwcFByb2ZpbGVJZA==');
+    'F1dGhvcml6ZWRWaWV3UhJhdXRob3JpemVkVmlld05hbWUSawoWbWF0ZXJpYWxpemVkX3ZpZXdf'
+    'bmFtZRgFIAEoCUI14EEB+kEvCi1iaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL01hdGVyaW'
+    'FsaXplZFZpZXdSFG1hdGVyaWFsaXplZFZpZXdOYW1lEiQKDmFwcF9wcm9maWxlX2lkGAIgASgJ'
+    'UgxhcHBQcm9maWxlSWQ=');
 
 @$core.Deprecated('Use sampleRowKeysResponseDescriptor instead')
 const SampleRowKeysResponse$json = {
@@ -222,6 +244,14 @@ const MutateRowRequest$json = {
       '8': {},
       '10': 'mutations'
     },
+    {
+      '1': 'idempotency',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.v2.Idempotency',
+      '10': 'idempotency'
+    },
   ],
 };
 
@@ -232,7 +262,9 @@ final $typed_data.Uint8List mutateRowRequestDescriptor = $convert.base64Decode(
     'd19uYW1lGAYgASgJQjPgQQH6QS0KK2JpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXV0aG'
     '9yaXplZFZpZXdSEmF1dGhvcml6ZWRWaWV3TmFtZRIkCg5hcHBfcHJvZmlsZV9pZBgEIAEoCVIM'
     'YXBwUHJvZmlsZUlkEhwKB3Jvd19rZXkYAiABKAxCA+BBAlIGcm93S2V5Ej8KCW11dGF0aW9ucx'
-    'gDIAMoCzIcLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbkID4EECUgltdXRhdGlvbnM=');
+    'gDIAMoCzIcLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbkID4EECUgltdXRhdGlvbnMSQQoL'
+    'aWRlbXBvdGVuY3kYCCABKAsyHy5nb29nbGUuYmlndGFibGUudjIuSWRlbXBvdGVuY3lSC2lkZW'
+    '1wb3RlbmN5');
 
 @$core.Deprecated('Use mutateRowResponseDescriptor instead')
 const MutateRowResponse$json = {
@@ -284,6 +316,14 @@ const MutateRowsRequest_Entry$json = {
       '8': {},
       '10': 'mutations'
     },
+    {
+      '1': 'idempotency',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.v2.Idempotency',
+      '10': 'idempotency'
+    },
   ],
 };
 
@@ -294,9 +334,10 @@ final $typed_data.Uint8List mutateRowsRequestDescriptor = $convert.base64Decode(
     'ZXdfbmFtZRgFIAEoCUIz4EEB+kEtCitiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0F1dG'
     'hvcml6ZWRWaWV3UhJhdXRob3JpemVkVmlld05hbWUSJAoOYXBwX3Byb2ZpbGVfaWQYAyABKAlS'
     'DGFwcFByb2ZpbGVJZBJKCgdlbnRyaWVzGAIgAygLMisuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dG'
-    'F0ZVJvd3NSZXF1ZXN0LkVudHJ5QgPgQQJSB2VudHJpZXMaYQoFRW50cnkSFwoHcm93X2tleRgB'
-    'IAEoDFIGcm93S2V5Ej8KCW11dGF0aW9ucxgCIAMoCzIcLmdvb2dsZS5iaWd0YWJsZS52Mi5NdX'
-    'RhdGlvbkID4EECUgltdXRhdGlvbnM=');
+    'F0ZVJvd3NSZXF1ZXN0LkVudHJ5QgPgQQJSB2VudHJpZXMapAEKBUVudHJ5EhcKB3Jvd19rZXkY'
+    'ASABKAxSBnJvd0tleRI/CgltdXRhdGlvbnMYAiADKAsyHC5nb29nbGUuYmlndGFibGUudjIuTX'
+    'V0YXRpb25CA+BBAlIJbXV0YXRpb25zEkEKC2lkZW1wb3RlbmN5GAMgASgLMh8uZ29vZ2xlLmJp'
+    'Z3RhYmxlLnYyLklkZW1wb3RlbmN5UgtpZGVtcG90ZW5jeQ==');
 
 @$core.Deprecated('Use mutateRowsResponseDescriptor instead')
 const MutateRowsResponse$json = {
@@ -890,15 +931,24 @@ const ExecuteQueryRequest$json = {
       '8': {},
       '10': 'appProfileId'
     },
-    {'1': 'query', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'query'},
+    {
+      '1': 'query',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {'3': true},
+      '10': 'query',
+    },
+    {'1': 'prepared_query', '3': 9, '4': 1, '5': 12, '10': 'preparedQuery'},
     {
       '1': 'proto_format',
       '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.bigtable.v2.ProtoFormat',
+      '8': {'3': true},
       '9': 0,
-      '10': 'protoFormat'
+      '10': 'protoFormat',
     },
     {
       '1': 'resume_token',
@@ -945,13 +995,14 @@ const ExecuteQueryRequest_ParamsEntry$json = {
 final $typed_data.Uint8List executeQueryRequestDescriptor = $convert.base64Decode(
     'ChNFeGVjdXRlUXVlcnlSZXF1ZXN0ElIKDWluc3RhbmNlX25hbWUYASABKAlCLeBBAvpBJwolYm'
     'lndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZVIMaW5zdGFuY2VOYW1lEikKDmFw'
-    'cF9wcm9maWxlX2lkGAIgASgJQgPgQQFSDGFwcFByb2ZpbGVJZBIZCgVxdWVyeRgDIAEoCUID4E'
-    'ECUgVxdWVyeRJECgxwcm90b19mb3JtYXQYBCABKAsyHy5nb29nbGUuYmlndGFibGUudjIuUHJv'
-    'dG9Gb3JtYXRIAFILcHJvdG9Gb3JtYXQSJgoMcmVzdW1lX3Rva2VuGAggASgMQgPgQQFSC3Jlc3'
-    'VtZVRva2VuElAKBnBhcmFtcxgHIAMoCzIzLmdvb2dsZS5iaWd0YWJsZS52Mi5FeGVjdXRlUXVl'
-    'cnlSZXF1ZXN0LlBhcmFtc0VudHJ5QgPgQQJSBnBhcmFtcxpUCgtQYXJhbXNFbnRyeRIQCgNrZX'
-    'kYASABKAlSA2tleRIvCgV2YWx1ZRgCIAEoCzIZLmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1ZVIF'
-    'dmFsdWU6AjgBQg0KC2RhdGFfZm9ybWF0');
+    'cF9wcm9maWxlX2lkGAIgASgJQgPgQQFSDGFwcFByb2ZpbGVJZBIbCgVxdWVyeRgDIAEoCUIFGA'
+    'HgQQJSBXF1ZXJ5EiUKDnByZXBhcmVkX3F1ZXJ5GAkgASgMUg1wcmVwYXJlZFF1ZXJ5EkgKDHBy'
+    'b3RvX2Zvcm1hdBgEIAEoCzIfLmdvb2dsZS5iaWd0YWJsZS52Mi5Qcm90b0Zvcm1hdEICGAFIAF'
+    'ILcHJvdG9Gb3JtYXQSJgoMcmVzdW1lX3Rva2VuGAggASgMQgPgQQFSC3Jlc3VtZVRva2VuElAK'
+    'BnBhcmFtcxgHIAMoCzIzLmdvb2dsZS5iaWd0YWJsZS52Mi5FeGVjdXRlUXVlcnlSZXF1ZXN0Ll'
+    'BhcmFtc0VudHJ5QgPgQQJSBnBhcmFtcxpUCgtQYXJhbXNFbnRyeRIQCgNrZXkYASABKAlSA2tl'
+    'eRIvCgV2YWx1ZRgCIAEoCzIZLmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1ZVIFdmFsdWU6AjgBQg'
+    '0KC2RhdGFfZm9ybWF0');
 
 @$core.Deprecated('Use executeQueryResponseDescriptor instead')
 const ExecuteQueryResponse$json = {
@@ -987,3 +1038,108 @@ final $typed_data.Uint8List executeQueryResponseDescriptor = $convert.base64Deco
     'JsZS52Mi5SZXN1bHRTZXRNZXRhZGF0YUgAUghtZXRhZGF0YRJACgdyZXN1bHRzGAIgASgLMiQu'
     'Z29vZ2xlLmJpZ3RhYmxlLnYyLlBhcnRpYWxSZXN1bHRTZXRIAFIHcmVzdWx0c0IKCghyZXNwb2'
     '5zZQ==');
+
+@$core.Deprecated('Use prepareQueryRequestDescriptor instead')
+const PrepareQueryRequest$json = {
+  '1': 'PrepareQueryRequest',
+  '2': [
+    {
+      '1': 'instance_name',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'instanceName'
+    },
+    {
+      '1': 'app_profile_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'appProfileId'
+    },
+    {'1': 'query', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'query'},
+    {
+      '1': 'proto_format',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.v2.ProtoFormat',
+      '9': 0,
+      '10': 'protoFormat'
+    },
+    {
+      '1': 'param_types',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.google.bigtable.v2.PrepareQueryRequest.ParamTypesEntry',
+      '8': {},
+      '10': 'paramTypes'
+    },
+  ],
+  '3': [PrepareQueryRequest_ParamTypesEntry$json],
+  '8': [
+    {'1': 'data_format'},
+  ],
+};
+
+@$core.Deprecated('Use prepareQueryRequestDescriptor instead')
+const PrepareQueryRequest_ParamTypesEntry$json = {
+  '1': 'ParamTypesEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.v2.Type',
+      '10': 'value'
+    },
+  ],
+  '7': {'7': true},
+};
+
+/// Descriptor for `PrepareQueryRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List prepareQueryRequestDescriptor = $convert.base64Decode(
+    'ChNQcmVwYXJlUXVlcnlSZXF1ZXN0ElIKDWluc3RhbmNlX25hbWUYASABKAlCLeBBAvpBJwolYm'
+    'lndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZVIMaW5zdGFuY2VOYW1lEikKDmFw'
+    'cF9wcm9maWxlX2lkGAIgASgJQgPgQQFSDGFwcFByb2ZpbGVJZBIZCgVxdWVyeRgDIAEoCUID4E'
+    'ECUgVxdWVyeRJECgxwcm90b19mb3JtYXQYBCABKAsyHy5nb29nbGUuYmlndGFibGUudjIuUHJv'
+    'dG9Gb3JtYXRIAFILcHJvdG9Gb3JtYXQSXQoLcGFyYW1fdHlwZXMYBiADKAsyNy5nb29nbGUuYm'
+    'lndGFibGUudjIuUHJlcGFyZVF1ZXJ5UmVxdWVzdC5QYXJhbVR5cGVzRW50cnlCA+BBAlIKcGFy'
+    'YW1UeXBlcxpXCg9QYXJhbVR5cGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSLgoFdmFsdWUYAi'
+    'ABKAsyGC5nb29nbGUuYmlndGFibGUudjIuVHlwZVIFdmFsdWU6AjgBQg0KC2RhdGFfZm9ybWF0');
+
+@$core.Deprecated('Use prepareQueryResponseDescriptor instead')
+const PrepareQueryResponse$json = {
+  '1': 'PrepareQueryResponse',
+  '2': [
+    {
+      '1': 'metadata',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.v2.ResultSetMetadata',
+      '10': 'metadata'
+    },
+    {'1': 'prepared_query', '3': 2, '4': 1, '5': 12, '10': 'preparedQuery'},
+    {
+      '1': 'valid_until',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'validUntil'
+    },
+  ],
+};
+
+/// Descriptor for `PrepareQueryResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List prepareQueryResponseDescriptor = $convert.base64Decode(
+    'ChRQcmVwYXJlUXVlcnlSZXNwb25zZRJBCghtZXRhZGF0YRgBIAEoCzIlLmdvb2dsZS5iaWd0YW'
+    'JsZS52Mi5SZXN1bHRTZXRNZXRhZGF0YVIIbWV0YWRhdGESJQoOcHJlcGFyZWRfcXVlcnkYAiAB'
+    'KAxSDXByZXBhcmVkUXVlcnkSOwoLdmFsaWRfdW50aWwYAyABKAsyGi5nb29nbGUucHJvdG9idW'
+    'YuVGltZXN0YW1wUgp2YWxpZFVudGls');

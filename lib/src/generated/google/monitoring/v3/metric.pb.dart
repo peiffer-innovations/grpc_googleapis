@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/monitoring/v3/metric.proto
-//
-// @dart = 2.12
+// Generated from google/monitoring/v3/metric.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -16,9 +17,10 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../api/label.pb.dart' as $3;
 import '../../api/metric.pb.dart' as $1;
-import '../../api/metric.pbenum.dart' as $1;
 import '../../api/monitored_resource.pb.dart' as $2;
 import 'common.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// A single data point in a time series.
 class Point extends $pb.GeneratedMessage {
@@ -26,22 +28,20 @@ class Point extends $pb.GeneratedMessage {
     $0.TimeInterval? interval,
     $0.TypedValue? value,
   }) {
-    final $result = create();
-    if (interval != null) {
-      $result.interval = interval;
-    }
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (interval != null) result.interval = interval;
+    if (value != null) result.value = value;
+    return result;
   }
-  Point._() : super();
-  factory Point.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Point.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Point._();
+
+  factory Point.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Point.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Point',
@@ -54,22 +54,19 @@ class Point extends $pb.GeneratedMessage {
         subBuilder: $0.TypedValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Point clone() => Point()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Point clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Point copyWith(void Function(Point) updates) =>
       super.copyWith((message) => updates(message as Point)) as Point;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Point create() => Point._();
+  @$core.override
   Point createEmptyInstance() => create();
-  static $pb.PbList<Point> createRepeated() => $pb.PbList<Point>();
   @$core.pragma('dart2js:noInline')
   static Point getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Point>(create);
@@ -87,14 +84,11 @@ class Point extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.TimeInterval get interval => $_getN(0);
   @$pb.TagNumber(1)
-  set interval($0.TimeInterval v) {
-    setField(1, v);
-  }
-
+  set interval($0.TimeInterval value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasInterval() => $_has(0);
   @$pb.TagNumber(1)
-  void clearInterval() => clearField(1);
+  void clearInterval() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.TimeInterval ensureInterval() => $_ensure(0);
 
@@ -102,14 +96,11 @@ class Point extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.TypedValue get value => $_getN(1);
   @$pb.TagNumber(2)
-  set value($0.TypedValue v) {
-    setField(2, v);
-  }
-
+  set value($0.TypedValue value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValue() => clearField(2);
+  void clearValue() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.TypedValue ensureValue() => $_ensure(1);
 }
@@ -129,40 +120,26 @@ class TimeSeries extends $pb.GeneratedMessage {
     $core.String? unit,
     $core.String? description,
   }) {
-    final $result = create();
-    if (metric != null) {
-      $result.metric = metric;
-    }
-    if (resource != null) {
-      $result.resource = resource;
-    }
-    if (metricKind != null) {
-      $result.metricKind = metricKind;
-    }
-    if (valueType != null) {
-      $result.valueType = valueType;
-    }
-    if (points != null) {
-      $result.points.addAll(points);
-    }
-    if (metadata != null) {
-      $result.metadata = metadata;
-    }
-    if (unit != null) {
-      $result.unit = unit;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    return $result;
+    final result = create();
+    if (metric != null) result.metric = metric;
+    if (resource != null) result.resource = resource;
+    if (metricKind != null) result.metricKind = metricKind;
+    if (valueType != null) result.valueType = valueType;
+    if (points != null) result.points.addAll(points);
+    if (metadata != null) result.metadata = metadata;
+    if (unit != null) result.unit = unit;
+    if (description != null) result.description = description;
+    return result;
   }
-  TimeSeries._() : super();
-  factory TimeSeries.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TimeSeries.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TimeSeries._();
+
+  factory TimeSeries.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TimeSeries.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TimeSeries',
@@ -173,40 +150,30 @@ class TimeSeries extends $pb.GeneratedMessage {
         subBuilder: $1.Metric.create)
     ..aOM<$2.MonitoredResource>(2, _omitFieldNames ? '' : 'resource',
         subBuilder: $2.MonitoredResource.create)
-    ..e<$1.MetricDescriptor_MetricKind>(
-        3, _omitFieldNames ? '' : 'metricKind', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.MetricDescriptor_MetricKind.METRIC_KIND_UNSPECIFIED,
-        valueOf: $1.MetricDescriptor_MetricKind.valueOf,
+    ..aE<$1.MetricDescriptor_MetricKind>(3, _omitFieldNames ? '' : 'metricKind',
         enumValues: $1.MetricDescriptor_MetricKind.values)
-    ..e<$1.MetricDescriptor_ValueType>(
-        4, _omitFieldNames ? '' : 'valueType', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.MetricDescriptor_ValueType.VALUE_TYPE_UNSPECIFIED,
-        valueOf: $1.MetricDescriptor_ValueType.valueOf,
+    ..aE<$1.MetricDescriptor_ValueType>(4, _omitFieldNames ? '' : 'valueType',
         enumValues: $1.MetricDescriptor_ValueType.values)
-    ..pc<Point>(5, _omitFieldNames ? '' : 'points', $pb.PbFieldType.PM,
-        subBuilder: Point.create)
+    ..pPM<Point>(5, _omitFieldNames ? '' : 'points', subBuilder: Point.create)
     ..aOM<$2.MonitoredResourceMetadata>(7, _omitFieldNames ? '' : 'metadata',
         subBuilder: $2.MonitoredResourceMetadata.create)
     ..aOS(8, _omitFieldNames ? '' : 'unit')
     ..aOS(9, _omitFieldNames ? '' : 'description')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TimeSeries clone() => TimeSeries()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TimeSeries clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TimeSeries copyWith(void Function(TimeSeries) updates) =>
       super.copyWith((message) => updates(message as TimeSeries)) as TimeSeries;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TimeSeries create() => TimeSeries._();
+  @$core.override
   TimeSeries createEmptyInstance() => create();
-  static $pb.PbList<TimeSeries> createRepeated() => $pb.PbList<TimeSeries>();
   @$core.pragma('dart2js:noInline')
   static TimeSeries getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TimeSeries>(create);
@@ -217,14 +184,11 @@ class TimeSeries extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.Metric get metric => $_getN(0);
   @$pb.TagNumber(1)
-  set metric($1.Metric v) {
-    setField(1, v);
-  }
-
+  set metric($1.Metric value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasMetric() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMetric() => clearField(1);
+  void clearMetric() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.Metric ensureMetric() => $_ensure(0);
 
@@ -235,66 +199,57 @@ class TimeSeries extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $2.MonitoredResource get resource => $_getN(1);
   @$pb.TagNumber(2)
-  set resource($2.MonitoredResource v) {
-    setField(2, v);
-  }
-
+  set resource($2.MonitoredResource value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasResource() => $_has(1);
   @$pb.TagNumber(2)
-  void clearResource() => clearField(2);
+  void clearResource() => $_clearField(2);
   @$pb.TagNumber(2)
   $2.MonitoredResource ensureResource() => $_ensure(1);
 
-  ///  The metric kind of the time series. When listing time series, this metric
-  ///  kind might be different from the metric kind of the associated metric if
-  ///  this time series is an alignment or reduction of other time series.
+  /// The metric kind of the time series. When listing time series, this metric
+  /// kind might be different from the metric kind of the associated metric if
+  /// this time series is an alignment or reduction of other time series.
   ///
-  ///  When creating a time series, this field is optional. If present, it must be
-  ///  the same as the metric kind of the associated metric. If the associated
-  ///  metric's descriptor must be auto-created, then this field specifies the
-  ///  metric kind of the new descriptor and must be either `GAUGE` (the default)
-  ///  or `CUMULATIVE`.
+  /// When creating a time series, this field is optional. If present, it must be
+  /// the same as the metric kind of the associated metric. If the associated
+  /// metric's descriptor must be auto-created, then this field specifies the
+  /// metric kind of the new descriptor and must be either `GAUGE` (the default)
+  /// or `CUMULATIVE`.
   @$pb.TagNumber(3)
   $1.MetricDescriptor_MetricKind get metricKind => $_getN(2);
   @$pb.TagNumber(3)
-  set metricKind($1.MetricDescriptor_MetricKind v) {
-    setField(3, v);
-  }
-
+  set metricKind($1.MetricDescriptor_MetricKind value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasMetricKind() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMetricKind() => clearField(3);
+  void clearMetricKind() => $_clearField(3);
 
-  ///  The value type of the time series. When listing time series, this value
-  ///  type might be different from the value type of the associated metric if
-  ///  this time series is an alignment or reduction of other time series.
+  /// The value type of the time series. When listing time series, this value
+  /// type might be different from the value type of the associated metric if
+  /// this time series is an alignment or reduction of other time series.
   ///
-  ///  When creating a time series, this field is optional. If present, it must be
-  ///  the same as the type of the data in the `points` field.
+  /// When creating a time series, this field is optional. If present, it must be
+  /// the same as the type of the data in the `points` field.
   @$pb.TagNumber(4)
   $1.MetricDescriptor_ValueType get valueType => $_getN(3);
   @$pb.TagNumber(4)
-  set valueType($1.MetricDescriptor_ValueType v) {
-    setField(4, v);
-  }
-
+  set valueType($1.MetricDescriptor_ValueType value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasValueType() => $_has(3);
   @$pb.TagNumber(4)
-  void clearValueType() => clearField(4);
+  void clearValueType() => $_clearField(4);
 
-  ///  The data points of this time series. When listing time series, points are
-  ///  returned in reverse time order.
+  /// The data points of this time series. When listing time series, points are
+  /// returned in reverse time order.
   ///
-  ///  When creating a time series, this field must contain exactly one point and
-  ///  the point's type must be the same as the value type of the associated
-  ///  metric. If the associated metric's descriptor must be auto-created, then
-  ///  the value type of the descriptor is determined by the point's type, which
-  ///  must be `BOOL`, `INT64`, `DOUBLE`, or `DISTRIBUTION`.
+  /// When creating a time series, this field must contain exactly one point and
+  /// the point's type must be the same as the value type of the associated
+  /// metric. If the associated metric's descriptor must be auto-created, then
+  /// the value type of the descriptor is determined by the point's type, which
+  /// must be `BOOL`, `INT64`, `DOUBLE`, or `DISTRIBUTION`.
   @$pb.TagNumber(5)
-  $core.List<Point> get points => $_getList(4);
+  $pb.PbList<Point> get points => $_getList(4);
 
   /// Output only. The associated monitored resource metadata. When reading a
   /// time series, this field will include metadata labels that are explicitly
@@ -302,14 +257,11 @@ class TimeSeries extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $2.MonitoredResourceMetadata get metadata => $_getN(5);
   @$pb.TagNumber(7)
-  set metadata($2.MonitoredResourceMetadata v) {
-    setField(7, v);
-  }
-
+  set metadata($2.MonitoredResourceMetadata value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasMetadata() => $_has(5);
   @$pb.TagNumber(7)
-  void clearMetadata() => clearField(7);
+  void clearMetadata() => $_clearField(7);
   @$pb.TagNumber(7)
   $2.MonitoredResourceMetadata ensureMetadata() => $_ensure(5);
 
@@ -320,14 +272,11 @@ class TimeSeries extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.String get unit => $_getSZ(6);
   @$pb.TagNumber(8)
-  set unit($core.String v) {
-    $_setString(6, v);
-  }
-
+  set unit($core.String value) => $_setString(6, value);
   @$pb.TagNumber(8)
   $core.bool hasUnit() => $_has(6);
   @$pb.TagNumber(8)
-  void clearUnit() => clearField(8);
+  void clearUnit() => $_clearField(8);
 
   /// Input only. A detailed description of the time series that will be
   /// associated with the
@@ -336,14 +285,11 @@ class TimeSeries extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.String get description => $_getSZ(7);
   @$pb.TagNumber(9)
-  set description($core.String v) {
-    $_setString(7, v);
-  }
-
+  set description($core.String value) => $_setString(7, value);
   @$pb.TagNumber(9)
   $core.bool hasDescription() => $_has(7);
   @$pb.TagNumber(9)
-  void clearDescription() => clearField(9);
+  void clearDescription() => $_clearField(9);
 }
 
 /// A descriptor for the value columns in a data point.
@@ -354,29 +300,23 @@ class TimeSeriesDescriptor_ValueDescriptor extends $pb.GeneratedMessage {
     $1.MetricDescriptor_MetricKind? metricKind,
     $core.String? unit,
   }) {
-    final $result = create();
-    if (key != null) {
-      $result.key = key;
-    }
-    if (valueType != null) {
-      $result.valueType = valueType;
-    }
-    if (metricKind != null) {
-      $result.metricKind = metricKind;
-    }
-    if (unit != null) {
-      $result.unit = unit;
-    }
-    return $result;
+    final result = create();
+    if (key != null) result.key = key;
+    if (valueType != null) result.valueType = valueType;
+    if (metricKind != null) result.metricKind = metricKind;
+    if (unit != null) result.unit = unit;
+    return result;
   }
-  TimeSeriesDescriptor_ValueDescriptor._() : super();
+
+  TimeSeriesDescriptor_ValueDescriptor._();
+
   factory TimeSeriesDescriptor_ValueDescriptor.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TimeSeriesDescriptor_ValueDescriptor.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TimeSeriesDescriptor_ValueDescriptor.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TimeSeriesDescriptor.ValueDescriptor',
@@ -384,41 +324,30 @@ class TimeSeriesDescriptor_ValueDescriptor extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'key')
-    ..e<$1.MetricDescriptor_ValueType>(
-        2, _omitFieldNames ? '' : 'valueType', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.MetricDescriptor_ValueType.VALUE_TYPE_UNSPECIFIED,
-        valueOf: $1.MetricDescriptor_ValueType.valueOf,
+    ..aE<$1.MetricDescriptor_ValueType>(2, _omitFieldNames ? '' : 'valueType',
         enumValues: $1.MetricDescriptor_ValueType.values)
-    ..e<$1.MetricDescriptor_MetricKind>(
-        3, _omitFieldNames ? '' : 'metricKind', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.MetricDescriptor_MetricKind.METRIC_KIND_UNSPECIFIED,
-        valueOf: $1.MetricDescriptor_MetricKind.valueOf,
+    ..aE<$1.MetricDescriptor_MetricKind>(3, _omitFieldNames ? '' : 'metricKind',
         enumValues: $1.MetricDescriptor_MetricKind.values)
     ..aOS(4, _omitFieldNames ? '' : 'unit')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TimeSeriesDescriptor_ValueDescriptor clone() =>
-      TimeSeriesDescriptor_ValueDescriptor()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TimeSeriesDescriptor_ValueDescriptor clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TimeSeriesDescriptor_ValueDescriptor copyWith(
           void Function(TimeSeriesDescriptor_ValueDescriptor) updates) =>
       super.copyWith((message) =>
               updates(message as TimeSeriesDescriptor_ValueDescriptor))
           as TimeSeriesDescriptor_ValueDescriptor;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TimeSeriesDescriptor_ValueDescriptor create() =>
       TimeSeriesDescriptor_ValueDescriptor._();
+  @$core.override
   TimeSeriesDescriptor_ValueDescriptor createEmptyInstance() => create();
-  static $pb.PbList<TimeSeriesDescriptor_ValueDescriptor> createRepeated() =>
-      $pb.PbList<TimeSeriesDescriptor_ValueDescriptor>();
   @$core.pragma('dart2js:noInline')
   static TimeSeriesDescriptor_ValueDescriptor getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -429,40 +358,31 @@ class TimeSeriesDescriptor_ValueDescriptor extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get key => $_getSZ(0);
   @$pb.TagNumber(1)
-  set key($core.String v) {
-    $_setString(0, v);
-  }
-
+  set key($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasKey() => $_has(0);
   @$pb.TagNumber(1)
-  void clearKey() => clearField(1);
+  void clearKey() => $_clearField(1);
 
   /// The value type.
   @$pb.TagNumber(2)
   $1.MetricDescriptor_ValueType get valueType => $_getN(1);
   @$pb.TagNumber(2)
-  set valueType($1.MetricDescriptor_ValueType v) {
-    setField(2, v);
-  }
-
+  set valueType($1.MetricDescriptor_ValueType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasValueType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValueType() => clearField(2);
+  void clearValueType() => $_clearField(2);
 
   /// The value stream kind.
   @$pb.TagNumber(3)
   $1.MetricDescriptor_MetricKind get metricKind => $_getN(2);
   @$pb.TagNumber(3)
-  set metricKind($1.MetricDescriptor_MetricKind v) {
-    setField(3, v);
-  }
-
+  set metricKind($1.MetricDescriptor_MetricKind value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasMetricKind() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMetricKind() => clearField(3);
+  void clearMetricKind() => $_clearField(3);
 
   /// The unit in which `time_series` point values are reported. `unit`
   /// follows the UCUM format for units as seen in
@@ -471,14 +391,11 @@ class TimeSeriesDescriptor_ValueDescriptor extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get unit => $_getSZ(3);
   @$pb.TagNumber(4)
-  set unit($core.String v) {
-    $_setString(3, v);
-  }
-
+  set unit($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasUnit() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUnit() => clearField(4);
+  void clearUnit() => $_clearField(4);
 }
 
 /// A descriptor for the labels and points in a time series.
@@ -487,55 +404,49 @@ class TimeSeriesDescriptor extends $pb.GeneratedMessage {
     $core.Iterable<$3.LabelDescriptor>? labelDescriptors,
     $core.Iterable<TimeSeriesDescriptor_ValueDescriptor>? pointDescriptors,
   }) {
-    final $result = create();
-    if (labelDescriptors != null) {
-      $result.labelDescriptors.addAll(labelDescriptors);
-    }
-    if (pointDescriptors != null) {
-      $result.pointDescriptors.addAll(pointDescriptors);
-    }
-    return $result;
+    final result = create();
+    if (labelDescriptors != null)
+      result.labelDescriptors.addAll(labelDescriptors);
+    if (pointDescriptors != null)
+      result.pointDescriptors.addAll(pointDescriptors);
+    return result;
   }
-  TimeSeriesDescriptor._() : super();
-  factory TimeSeriesDescriptor.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TimeSeriesDescriptor.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TimeSeriesDescriptor._();
+
+  factory TimeSeriesDescriptor.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TimeSeriesDescriptor.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TimeSeriesDescriptor',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
-    ..pc<$3.LabelDescriptor>(
-        1, _omitFieldNames ? '' : 'labelDescriptors', $pb.PbFieldType.PM,
+    ..pPM<$3.LabelDescriptor>(1, _omitFieldNames ? '' : 'labelDescriptors',
         subBuilder: $3.LabelDescriptor.create)
-    ..pc<TimeSeriesDescriptor_ValueDescriptor>(
-        5, _omitFieldNames ? '' : 'pointDescriptors', $pb.PbFieldType.PM,
+    ..pPM<TimeSeriesDescriptor_ValueDescriptor>(
+        5, _omitFieldNames ? '' : 'pointDescriptors',
         subBuilder: TimeSeriesDescriptor_ValueDescriptor.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TimeSeriesDescriptor clone() =>
-      TimeSeriesDescriptor()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TimeSeriesDescriptor clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TimeSeriesDescriptor copyWith(void Function(TimeSeriesDescriptor) updates) =>
       super.copyWith((message) => updates(message as TimeSeriesDescriptor))
           as TimeSeriesDescriptor;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TimeSeriesDescriptor create() => TimeSeriesDescriptor._();
+  @$core.override
   TimeSeriesDescriptor createEmptyInstance() => create();
-  static $pb.PbList<TimeSeriesDescriptor> createRepeated() =>
-      $pb.PbList<TimeSeriesDescriptor>();
   @$core.pragma('dart2js:noInline')
   static TimeSeriesDescriptor getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TimeSeriesDescriptor>(create);
@@ -543,11 +454,11 @@ class TimeSeriesDescriptor extends $pb.GeneratedMessage {
 
   /// Descriptors for the labels.
   @$pb.TagNumber(1)
-  $core.List<$3.LabelDescriptor> get labelDescriptors => $_getList(0);
+  $pb.PbList<$3.LabelDescriptor> get labelDescriptors => $_getList(0);
 
   /// Descriptors for the point data value columns.
   @$pb.TagNumber(5)
-  $core.List<TimeSeriesDescriptor_ValueDescriptor> get pointDescriptors =>
+  $pb.PbList<TimeSeriesDescriptor_ValueDescriptor> get pointDescriptors =>
       $_getList(1);
 }
 
@@ -559,54 +470,47 @@ class TimeSeriesData_PointData extends $pb.GeneratedMessage {
     $core.Iterable<$0.TypedValue>? values,
     $0.TimeInterval? timeInterval,
   }) {
-    final $result = create();
-    if (values != null) {
-      $result.values.addAll(values);
-    }
-    if (timeInterval != null) {
-      $result.timeInterval = timeInterval;
-    }
-    return $result;
+    final result = create();
+    if (values != null) result.values.addAll(values);
+    if (timeInterval != null) result.timeInterval = timeInterval;
+    return result;
   }
-  TimeSeriesData_PointData._() : super();
-  factory TimeSeriesData_PointData.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TimeSeriesData_PointData.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TimeSeriesData_PointData._();
+
+  factory TimeSeriesData_PointData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TimeSeriesData_PointData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TimeSeriesData.PointData',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
-    ..pc<$0.TypedValue>(1, _omitFieldNames ? '' : 'values', $pb.PbFieldType.PM,
+    ..pPM<$0.TypedValue>(1, _omitFieldNames ? '' : 'values',
         subBuilder: $0.TypedValue.create)
     ..aOM<$0.TimeInterval>(2, _omitFieldNames ? '' : 'timeInterval',
         subBuilder: $0.TimeInterval.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TimeSeriesData_PointData clone() =>
-      TimeSeriesData_PointData()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TimeSeriesData_PointData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TimeSeriesData_PointData copyWith(
           void Function(TimeSeriesData_PointData) updates) =>
       super.copyWith((message) => updates(message as TimeSeriesData_PointData))
           as TimeSeriesData_PointData;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TimeSeriesData_PointData create() => TimeSeriesData_PointData._();
+  @$core.override
   TimeSeriesData_PointData createEmptyInstance() => create();
-  static $pb.PbList<TimeSeriesData_PointData> createRepeated() =>
-      $pb.PbList<TimeSeriesData_PointData>();
   @$core.pragma('dart2js:noInline')
   static TimeSeriesData_PointData getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TimeSeriesData_PointData>(create);
@@ -614,20 +518,17 @@ class TimeSeriesData_PointData extends $pb.GeneratedMessage {
 
   /// The values that make up the point.
   @$pb.TagNumber(1)
-  $core.List<$0.TypedValue> get values => $_getList(0);
+  $pb.PbList<$0.TypedValue> get values => $_getList(0);
 
   /// The time interval associated with the point.
   @$pb.TagNumber(2)
   $0.TimeInterval get timeInterval => $_getN(1);
   @$pb.TagNumber(2)
-  set timeInterval($0.TimeInterval v) {
-    setField(2, v);
-  }
-
+  set timeInterval($0.TimeInterval value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasTimeInterval() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTimeInterval() => clearField(2);
+  void clearTimeInterval() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.TimeInterval ensureTimeInterval() => $_ensure(1);
 }
@@ -639,54 +540,46 @@ class TimeSeriesData extends $pb.GeneratedMessage {
     $core.Iterable<LabelValue>? labelValues,
     $core.Iterable<TimeSeriesData_PointData>? pointData,
   }) {
-    final $result = create();
-    if (labelValues != null) {
-      $result.labelValues.addAll(labelValues);
-    }
-    if (pointData != null) {
-      $result.pointData.addAll(pointData);
-    }
-    return $result;
+    final result = create();
+    if (labelValues != null) result.labelValues.addAll(labelValues);
+    if (pointData != null) result.pointData.addAll(pointData);
+    return result;
   }
-  TimeSeriesData._() : super();
-  factory TimeSeriesData.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TimeSeriesData.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TimeSeriesData._();
+
+  factory TimeSeriesData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TimeSeriesData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TimeSeriesData',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
-    ..pc<LabelValue>(
-        1, _omitFieldNames ? '' : 'labelValues', $pb.PbFieldType.PM,
+    ..pPM<LabelValue>(1, _omitFieldNames ? '' : 'labelValues',
         subBuilder: LabelValue.create)
-    ..pc<TimeSeriesData_PointData>(
-        2, _omitFieldNames ? '' : 'pointData', $pb.PbFieldType.PM,
+    ..pPM<TimeSeriesData_PointData>(2, _omitFieldNames ? '' : 'pointData',
         subBuilder: TimeSeriesData_PointData.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TimeSeriesData clone() => TimeSeriesData()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TimeSeriesData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TimeSeriesData copyWith(void Function(TimeSeriesData) updates) =>
       super.copyWith((message) => updates(message as TimeSeriesData))
           as TimeSeriesData;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TimeSeriesData create() => TimeSeriesData._();
+  @$core.override
   TimeSeriesData createEmptyInstance() => create();
-  static $pb.PbList<TimeSeriesData> createRepeated() =>
-      $pb.PbList<TimeSeriesData>();
   @$core.pragma('dart2js:noInline')
   static TimeSeriesData getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TimeSeriesData>(create);
@@ -697,11 +590,11 @@ class TimeSeriesData extends $pb.GeneratedMessage {
   /// associated with this object. Each value must have a value of the type
   /// given in the corresponding entry of `label_descriptors`.
   @$pb.TagNumber(1)
-  $core.List<LabelValue> get labelValues => $_getList(0);
+  $pb.PbList<LabelValue> get labelValues => $_getList(0);
 
   /// The points in the time series.
   @$pb.TagNumber(2)
-  $core.List<TimeSeriesData_PointData> get pointData => $_getList(1);
+  $pb.PbList<TimeSeriesData_PointData> get pointData => $_getList(1);
 }
 
 enum LabelValue_Value { boolValue, int64Value, stringValue, notSet }
@@ -713,25 +606,21 @@ class LabelValue extends $pb.GeneratedMessage {
     $fixnum.Int64? int64Value,
     $core.String? stringValue,
   }) {
-    final $result = create();
-    if (boolValue != null) {
-      $result.boolValue = boolValue;
-    }
-    if (int64Value != null) {
-      $result.int64Value = int64Value;
-    }
-    if (stringValue != null) {
-      $result.stringValue = stringValue;
-    }
-    return $result;
+    final result = create();
+    if (boolValue != null) result.boolValue = boolValue;
+    if (int64Value != null) result.int64Value = int64Value;
+    if (stringValue != null) result.stringValue = stringValue;
+    return result;
   }
-  LabelValue._() : super();
-  factory LabelValue.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory LabelValue.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  LabelValue._();
+
+  factory LabelValue.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LabelValue.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, LabelValue_Value> _LabelValue_ValueByTag = {
     1: LabelValue_Value.boolValue,
@@ -750,68 +639,62 @@ class LabelValue extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'stringValue')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  LabelValue clone() => LabelValue()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LabelValue clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   LabelValue copyWith(void Function(LabelValue) updates) =>
       super.copyWith((message) => updates(message as LabelValue)) as LabelValue;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static LabelValue create() => LabelValue._();
+  @$core.override
   LabelValue createEmptyInstance() => create();
-  static $pb.PbList<LabelValue> createRepeated() => $pb.PbList<LabelValue>();
   @$core.pragma('dart2js:noInline')
   static LabelValue getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LabelValue>(create);
   static LabelValue? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   LabelValue_Value whichValue() => _LabelValue_ValueByTag[$_whichOneof(0)]!;
-  void clearValue() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearValue() => $_clearField($_whichOneof(0));
 
   /// A bool label value.
   @$pb.TagNumber(1)
   $core.bool get boolValue => $_getBF(0);
   @$pb.TagNumber(1)
-  set boolValue($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set boolValue($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasBoolValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBoolValue() => clearField(1);
+  void clearBoolValue() => $_clearField(1);
 
   /// An int64 label value.
   @$pb.TagNumber(2)
   $fixnum.Int64 get int64Value => $_getI64(1);
   @$pb.TagNumber(2)
-  set int64Value($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set int64Value($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasInt64Value() => $_has(1);
   @$pb.TagNumber(2)
-  void clearInt64Value() => clearField(2);
+  void clearInt64Value() => $_clearField(2);
 
   /// A string label value.
   @$pb.TagNumber(3)
   $core.String get stringValue => $_getSZ(2);
   @$pb.TagNumber(3)
-  set stringValue($core.String v) {
-    $_setString(2, v);
-  }
-
+  set stringValue($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasStringValue() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStringValue() => clearField(3);
+  void clearStringValue() => $_clearField(3);
 }
 
 /// An error associated with a query in the time series query language format.
@@ -820,22 +703,20 @@ class QueryError extends $pb.GeneratedMessage {
     TextLocator? locator,
     $core.String? message,
   }) {
-    final $result = create();
-    if (locator != null) {
-      $result.locator = locator;
-    }
-    if (message != null) {
-      $result.message = message;
-    }
-    return $result;
+    final result = create();
+    if (locator != null) result.locator = locator;
+    if (message != null) result.message = message;
+    return result;
   }
-  QueryError._() : super();
-  factory QueryError.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory QueryError.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  QueryError._();
+
+  factory QueryError.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QueryError.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'QueryError',
@@ -847,22 +728,19 @@ class QueryError extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'message')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  QueryError clone() => QueryError()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryError clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   QueryError copyWith(void Function(QueryError) updates) =>
       super.copyWith((message) => updates(message as QueryError)) as QueryError;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static QueryError create() => QueryError._();
+  @$core.override
   QueryError createEmptyInstance() => create();
-  static $pb.PbList<QueryError> createRepeated() => $pb.PbList<QueryError>();
   @$core.pragma('dart2js:noInline')
   static QueryError getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<QueryError>(create);
@@ -873,14 +751,11 @@ class QueryError extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   TextLocator get locator => $_getN(0);
   @$pb.TagNumber(1)
-  set locator(TextLocator v) {
-    setField(1, v);
-  }
-
+  set locator(TextLocator value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasLocator() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLocator() => clearField(1);
+  void clearLocator() => $_clearField(1);
   @$pb.TagNumber(1)
   TextLocator ensureLocator() => $_ensure(0);
 
@@ -888,14 +763,11 @@ class QueryError extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get message => $_getSZ(1);
   @$pb.TagNumber(2)
-  set message($core.String v) {
-    $_setString(1, v);
-  }
-
+  set message($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasMessage() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMessage() => clearField(2);
+  void clearMessage() => $_clearField(2);
 }
 
 /// The position of a byte within the text.
@@ -904,51 +776,44 @@ class TextLocator_Position extends $pb.GeneratedMessage {
     $core.int? line,
     $core.int? column,
   }) {
-    final $result = create();
-    if (line != null) {
-      $result.line = line;
-    }
-    if (column != null) {
-      $result.column = column;
-    }
-    return $result;
+    final result = create();
+    if (line != null) result.line = line;
+    if (column != null) result.column = column;
+    return result;
   }
-  TextLocator_Position._() : super();
-  factory TextLocator_Position.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TextLocator_Position.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TextLocator_Position._();
+
+  factory TextLocator_Position.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TextLocator_Position.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TextLocator.Position',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'line', $pb.PbFieldType.O3)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'column', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'line')
+    ..aI(2, _omitFieldNames ? '' : 'column')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TextLocator_Position clone() =>
-      TextLocator_Position()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TextLocator_Position clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TextLocator_Position copyWith(void Function(TextLocator_Position) updates) =>
       super.copyWith((message) => updates(message as TextLocator_Position))
           as TextLocator_Position;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TextLocator_Position create() => TextLocator_Position._();
+  @$core.override
   TextLocator_Position createEmptyInstance() => create();
-  static $pb.PbList<TextLocator_Position> createRepeated() =>
-      $pb.PbList<TextLocator_Position>();
   @$core.pragma('dart2js:noInline')
   static TextLocator_Position getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TextLocator_Position>(create);
@@ -958,50 +823,44 @@ class TextLocator_Position extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get line => $_getIZ(0);
   @$pb.TagNumber(1)
-  set line($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set line($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasLine() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLine() => clearField(1);
+  void clearLine() => $_clearField(1);
 
   /// The column within the line, starting with 1, where the byte is
   /// positioned. This is a byte index even though the text is UTF-8.
   @$pb.TagNumber(2)
   $core.int get column => $_getIZ(1);
   @$pb.TagNumber(2)
-  set column($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set column($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasColumn() => $_has(1);
   @$pb.TagNumber(2)
-  void clearColumn() => clearField(2);
+  void clearColumn() => $_clearField(2);
 }
 
-///  A locator for text. Indicates a particular part of the text of a request or
-///  of an object referenced in the request.
+/// A locator for text. Indicates a particular part of the text of a request or
+/// of an object referenced in the request.
 ///
-///  For example, suppose the request field `text` contains:
+/// For example, suppose the request field `text` contains:
 ///
-///    text: "The quick brown fox jumps over the lazy dog."
+///   text: "The quick brown fox jumps over the lazy dog."
 ///
-///  Then the locator:
+/// Then the locator:
 ///
-///    source: "text"
-///    start_position {
-///      line: 1
-///      column: 17
-///    }
-///    end_position {
-///      line: 1
-///      column: 19
-///    }
+///   source: "text"
+///   start_position {
+///     line: 1
+///     column: 17
+///   }
+///   end_position {
+///     line: 1
+///     column: 19
+///   }
 ///
-///  refers to the part of the text: "fox".
+/// refers to the part of the text: "fox".
 class TextLocator extends $pb.GeneratedMessage {
   factory TextLocator({
     $core.String? source,
@@ -1010,31 +869,23 @@ class TextLocator extends $pb.GeneratedMessage {
     TextLocator? nestedLocator,
     $core.String? nestingReason,
   }) {
-    final $result = create();
-    if (source != null) {
-      $result.source = source;
-    }
-    if (startPosition != null) {
-      $result.startPosition = startPosition;
-    }
-    if (endPosition != null) {
-      $result.endPosition = endPosition;
-    }
-    if (nestedLocator != null) {
-      $result.nestedLocator = nestedLocator;
-    }
-    if (nestingReason != null) {
-      $result.nestingReason = nestingReason;
-    }
-    return $result;
+    final result = create();
+    if (source != null) result.source = source;
+    if (startPosition != null) result.startPosition = startPosition;
+    if (endPosition != null) result.endPosition = endPosition;
+    if (nestedLocator != null) result.nestedLocator = nestedLocator;
+    if (nestingReason != null) result.nestingReason = nestingReason;
+    return result;
   }
-  TextLocator._() : super();
-  factory TextLocator.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TextLocator.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TextLocator._();
+
+  factory TextLocator.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TextLocator.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TextLocator',
@@ -1051,23 +902,20 @@ class TextLocator extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'nestingReason')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TextLocator clone() => TextLocator()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TextLocator clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TextLocator copyWith(void Function(TextLocator) updates) =>
       super.copyWith((message) => updates(message as TextLocator))
           as TextLocator;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TextLocator create() => TextLocator._();
+  @$core.override
   TextLocator createEmptyInstance() => create();
-  static $pb.PbList<TextLocator> createRepeated() => $pb.PbList<TextLocator>();
   @$core.pragma('dart2js:noInline')
   static TextLocator getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TextLocator>(create);
@@ -1083,27 +931,21 @@ class TextLocator extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get source => $_getSZ(0);
   @$pb.TagNumber(1)
-  set source($core.String v) {
-    $_setString(0, v);
-  }
-
+  set source($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSource() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSource() => clearField(1);
+  void clearSource() => $_clearField(1);
 
   /// The position of the first byte within the text.
   @$pb.TagNumber(2)
   TextLocator_Position get startPosition => $_getN(1);
   @$pb.TagNumber(2)
-  set startPosition(TextLocator_Position v) {
-    setField(2, v);
-  }
-
+  set startPosition(TextLocator_Position value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasStartPosition() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStartPosition() => clearField(2);
+  void clearStartPosition() => $_clearField(2);
   @$pb.TagNumber(2)
   TextLocator_Position ensureStartPosition() => $_ensure(1);
 
@@ -1111,14 +953,11 @@ class TextLocator extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   TextLocator_Position get endPosition => $_getN(2);
   @$pb.TagNumber(3)
-  set endPosition(TextLocator_Position v) {
-    setField(3, v);
-  }
-
+  set endPosition(TextLocator_Position value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasEndPosition() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEndPosition() => clearField(3);
+  void clearEndPosition() => $_clearField(3);
   @$pb.TagNumber(3)
   TextLocator_Position ensureEndPosition() => $_ensure(2);
 
@@ -1129,14 +968,11 @@ class TextLocator extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   TextLocator get nestedLocator => $_getN(3);
   @$pb.TagNumber(4)
-  set nestedLocator(TextLocator v) {
-    setField(4, v);
-  }
-
+  set nestedLocator(TextLocator value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasNestedLocator() => $_has(3);
   @$pb.TagNumber(4)
-  void clearNestedLocator() => clearField(4);
+  void clearNestedLocator() => $_clearField(4);
   @$pb.TagNumber(4)
   TextLocator ensureNestedLocator() => $_ensure(3);
 
@@ -1149,16 +985,14 @@ class TextLocator extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get nestingReason => $_getSZ(4);
   @$pb.TagNumber(5)
-  set nestingReason($core.String v) {
-    $_setString(4, v);
-  }
-
+  set nestingReason($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasNestingReason() => $_has(4);
   @$pb.TagNumber(5)
-  void clearNestingReason() => clearField(5);
+  void clearNestingReason() => $_clearField(5);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

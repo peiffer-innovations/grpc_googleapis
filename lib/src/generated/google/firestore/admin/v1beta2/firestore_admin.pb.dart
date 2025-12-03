@@ -1,44 +1,46 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/firestore/admin/v1beta2/firestore_admin.proto
-//
-// @dart = 2.12
+// Generated from google/firestore/admin/v1beta2/firestore_admin.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/field_mask.pb.dart'
+    as $5;
 
-import '../../../protobuf/field_mask.pb.dart' as $5;
 import 'field.pb.dart' as $4;
-import 'index.pb.dart' as $3;
+import 'index.pb.dart' as $2;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// The request for [FirestoreAdmin.CreateIndex][google.firestore.admin.v1beta2.FirestoreAdmin.CreateIndex].
 class CreateIndexRequest extends $pb.GeneratedMessage {
   factory CreateIndexRequest({
     $core.String? parent,
-    $3.Index? index,
+    $2.Index? index,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (index != null) {
-      $result.index = index;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (index != null) result.index = index;
+    return result;
   }
-  CreateIndexRequest._() : super();
-  factory CreateIndexRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateIndexRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateIndexRequest._();
+
+  factory CreateIndexRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateIndexRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateIndexRequest',
@@ -46,28 +48,24 @@ class CreateIndexRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.firestore.admin.v1beta2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..aOM<$3.Index>(2, _omitFieldNames ? '' : 'index',
-        subBuilder: $3.Index.create)
+    ..aOM<$2.Index>(2, _omitFieldNames ? '' : 'index',
+        subBuilder: $2.Index.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateIndexRequest clone() => CreateIndexRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateIndexRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateIndexRequest copyWith(void Function(CreateIndexRequest) updates) =>
       super.copyWith((message) => updates(message as CreateIndexRequest))
           as CreateIndexRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateIndexRequest create() => CreateIndexRequest._();
+  @$core.override
   CreateIndexRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateIndexRequest> createRepeated() =>
-      $pb.PbList<CreateIndexRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateIndexRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateIndexRequest>(create);
@@ -78,29 +76,23 @@ class CreateIndexRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// The composite index to create.
   @$pb.TagNumber(2)
-  $3.Index get index => $_getN(1);
+  $2.Index get index => $_getN(1);
   @$pb.TagNumber(2)
-  set index($3.Index v) {
-    setField(2, v);
-  }
-
+  set index($2.Index value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasIndex() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIndex() => clearField(2);
+  void clearIndex() => $_clearField(2);
   @$pb.TagNumber(2)
-  $3.Index ensureIndex() => $_ensure(1);
+  $2.Index ensureIndex() => $_ensure(1);
 }
 
 /// The request for [FirestoreAdmin.ListIndexes][google.firestore.admin.v1beta2.FirestoreAdmin.ListIndexes].
@@ -111,28 +103,22 @@ class ListIndexesRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (filter != null) result.filter = filter;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListIndexesRequest._() : super();
-  factory ListIndexesRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListIndexesRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListIndexesRequest._();
+
+  factory ListIndexesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListIndexesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListIndexesRequest',
@@ -141,28 +127,24 @@ class ListIndexesRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOS(2, _omitFieldNames ? '' : 'filter')
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(3, _omitFieldNames ? '' : 'pageSize')
     ..aOS(4, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListIndexesRequest clone() => ListIndexesRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListIndexesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListIndexesRequest copyWith(void Function(ListIndexesRequest) updates) =>
       super.copyWith((message) => updates(message as ListIndexesRequest))
           as ListIndexesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListIndexesRequest create() => ListIndexesRequest._();
+  @$core.override
   ListIndexesRequest createEmptyInstance() => create();
-  static $pb.PbList<ListIndexesRequest> createRepeated() =>
-      $pb.PbList<ListIndexesRequest>();
   @$core.pragma('dart2js:noInline')
   static ListIndexesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListIndexesRequest>(create);
@@ -173,40 +155,31 @@ class ListIndexesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// The filter to apply to list results.
   @$pb.TagNumber(2)
   $core.String get filter => $_getSZ(1);
   @$pb.TagNumber(2)
-  set filter($core.String v) {
-    $_setString(1, v);
-  }
-
+  set filter($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFilter() => clearField(2);
+  void clearFilter() => $_clearField(2);
 
   /// The number of results to return.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
-  set pageSize($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageSize() => clearField(3);
+  void clearPageSize() => $_clearField(3);
 
   /// A page token, returned from a previous call to
   /// [FirestoreAdmin.ListIndexes][google.firestore.admin.v1beta2.FirestoreAdmin.ListIndexes], that may be used to get the next
@@ -214,67 +187,58 @@ class ListIndexesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
-  set pageToken($core.String v) {
-    $_setString(3, v);
-  }
-
+  set pageToken($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPageToken() => clearField(4);
+  void clearPageToken() => $_clearField(4);
 }
 
 /// The response for [FirestoreAdmin.ListIndexes][google.firestore.admin.v1beta2.FirestoreAdmin.ListIndexes].
 class ListIndexesResponse extends $pb.GeneratedMessage {
   factory ListIndexesResponse({
-    $core.Iterable<$3.Index>? indexes,
+    $core.Iterable<$2.Index>? indexes,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (indexes != null) {
-      $result.indexes.addAll(indexes);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (indexes != null) result.indexes.addAll(indexes);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListIndexesResponse._() : super();
-  factory ListIndexesResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListIndexesResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListIndexesResponse._();
+
+  factory ListIndexesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListIndexesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListIndexesResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.firestore.admin.v1beta2'),
       createEmptyInstance: create)
-    ..pc<$3.Index>(1, _omitFieldNames ? '' : 'indexes', $pb.PbFieldType.PM,
-        subBuilder: $3.Index.create)
+    ..pPM<$2.Index>(1, _omitFieldNames ? '' : 'indexes',
+        subBuilder: $2.Index.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListIndexesResponse clone() => ListIndexesResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListIndexesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListIndexesResponse copyWith(void Function(ListIndexesResponse) updates) =>
       super.copyWith((message) => updates(message as ListIndexesResponse))
           as ListIndexesResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListIndexesResponse create() => ListIndexesResponse._();
+  @$core.override
   ListIndexesResponse createEmptyInstance() => create();
-  static $pb.PbList<ListIndexesResponse> createRepeated() =>
-      $pb.PbList<ListIndexesResponse>();
   @$core.pragma('dart2js:noInline')
   static ListIndexesResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListIndexesResponse>(create);
@@ -282,21 +246,18 @@ class ListIndexesResponse extends $pb.GeneratedMessage {
 
   /// The requested indexes.
   @$pb.TagNumber(1)
-  $core.List<$3.Index> get indexes => $_getList(0);
+  $pb.PbList<$2.Index> get indexes => $_getList(0);
 
   /// A page token that may be used to request another page of results. If blank,
   /// this is the last page.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// The request for [FirestoreAdmin.GetIndex][google.firestore.admin.v1beta2.FirestoreAdmin.GetIndex].
@@ -304,19 +265,19 @@ class GetIndexRequest extends $pb.GeneratedMessage {
   factory GetIndexRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetIndexRequest._() : super();
-  factory GetIndexRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetIndexRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetIndexRequest._();
+
+  factory GetIndexRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetIndexRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetIndexRequest',
@@ -326,24 +287,20 @@ class GetIndexRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetIndexRequest clone() => GetIndexRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetIndexRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetIndexRequest copyWith(void Function(GetIndexRequest) updates) =>
       super.copyWith((message) => updates(message as GetIndexRequest))
           as GetIndexRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetIndexRequest create() => GetIndexRequest._();
+  @$core.override
   GetIndexRequest createEmptyInstance() => create();
-  static $pb.PbList<GetIndexRequest> createRepeated() =>
-      $pb.PbList<GetIndexRequest>();
   @$core.pragma('dart2js:noInline')
   static GetIndexRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetIndexRequest>(create);
@@ -354,14 +311,11 @@ class GetIndexRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// The request for [FirestoreAdmin.DeleteIndex][google.firestore.admin.v1beta2.FirestoreAdmin.DeleteIndex].
@@ -369,19 +323,19 @@ class DeleteIndexRequest extends $pb.GeneratedMessage {
   factory DeleteIndexRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteIndexRequest._() : super();
-  factory DeleteIndexRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteIndexRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteIndexRequest._();
+
+  factory DeleteIndexRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteIndexRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteIndexRequest',
@@ -391,24 +345,20 @@ class DeleteIndexRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteIndexRequest clone() => DeleteIndexRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteIndexRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteIndexRequest copyWith(void Function(DeleteIndexRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteIndexRequest))
           as DeleteIndexRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteIndexRequest create() => DeleteIndexRequest._();
+  @$core.override
   DeleteIndexRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteIndexRequest> createRepeated() =>
-      $pb.PbList<DeleteIndexRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteIndexRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteIndexRequest>(create);
@@ -419,14 +369,11 @@ class DeleteIndexRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// The request for [FirestoreAdmin.UpdateField][google.firestore.admin.v1beta2.FirestoreAdmin.UpdateField].
@@ -435,22 +382,20 @@ class UpdateFieldRequest extends $pb.GeneratedMessage {
     $4.Field? field_1,
     $5.FieldMask? updateMask,
   }) {
-    final $result = create();
-    if (field_1 != null) {
-      $result.field_1 = field_1;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    return $result;
+    final result = create();
+    if (field_1 != null) result.field_1 = field_1;
+    if (updateMask != null) result.updateMask = updateMask;
+    return result;
   }
-  UpdateFieldRequest._() : super();
-  factory UpdateFieldRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateFieldRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateFieldRequest._();
+
+  factory UpdateFieldRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateFieldRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateFieldRequest',
@@ -463,24 +408,20 @@ class UpdateFieldRequest extends $pb.GeneratedMessage {
         subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateFieldRequest clone() => UpdateFieldRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateFieldRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateFieldRequest copyWith(void Function(UpdateFieldRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateFieldRequest))
           as UpdateFieldRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateFieldRequest create() => UpdateFieldRequest._();
+  @$core.override
   UpdateFieldRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateFieldRequest> createRepeated() =>
-      $pb.PbList<UpdateFieldRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateFieldRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateFieldRequest>(create);
@@ -490,14 +431,11 @@ class UpdateFieldRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.Field get field_1 => $_getN(0);
   @$pb.TagNumber(1)
-  set field_1($4.Field v) {
-    setField(1, v);
-  }
-
+  set field_1($4.Field value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasField_1() => $_has(0);
   @$pb.TagNumber(1)
-  void clearField_1() => clearField(1);
+  void clearField_1() => $_clearField(1);
   @$pb.TagNumber(1)
   $4.Field ensureField_1() => $_ensure(0);
 
@@ -506,14 +444,11 @@ class UpdateFieldRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $5.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($5.FieldMask v) {
-    setField(2, v);
-  }
-
+  set updateMask($5.FieldMask value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
@@ -523,19 +458,19 @@ class GetFieldRequest extends $pb.GeneratedMessage {
   factory GetFieldRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetFieldRequest._() : super();
-  factory GetFieldRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetFieldRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetFieldRequest._();
+
+  factory GetFieldRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetFieldRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetFieldRequest',
@@ -545,24 +480,20 @@ class GetFieldRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetFieldRequest clone() => GetFieldRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetFieldRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetFieldRequest copyWith(void Function(GetFieldRequest) updates) =>
       super.copyWith((message) => updates(message as GetFieldRequest))
           as GetFieldRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetFieldRequest create() => GetFieldRequest._();
+  @$core.override
   GetFieldRequest createEmptyInstance() => create();
-  static $pb.PbList<GetFieldRequest> createRepeated() =>
-      $pb.PbList<GetFieldRequest>();
   @$core.pragma('dart2js:noInline')
   static GetFieldRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetFieldRequest>(create);
@@ -573,14 +504,11 @@ class GetFieldRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// The request for [FirestoreAdmin.ListFields][google.firestore.admin.v1beta2.FirestoreAdmin.ListFields].
@@ -591,28 +519,22 @@ class ListFieldsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (filter != null) result.filter = filter;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListFieldsRequest._() : super();
-  factory ListFieldsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListFieldsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListFieldsRequest._();
+
+  factory ListFieldsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListFieldsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListFieldsRequest',
@@ -621,28 +543,24 @@ class ListFieldsRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOS(2, _omitFieldNames ? '' : 'filter')
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(3, _omitFieldNames ? '' : 'pageSize')
     ..aOS(4, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListFieldsRequest clone() => ListFieldsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListFieldsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListFieldsRequest copyWith(void Function(ListFieldsRequest) updates) =>
       super.copyWith((message) => updates(message as ListFieldsRequest))
           as ListFieldsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListFieldsRequest create() => ListFieldsRequest._();
+  @$core.override
   ListFieldsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListFieldsRequest> createRepeated() =>
-      $pb.PbList<ListFieldsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListFieldsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListFieldsRequest>(create);
@@ -653,14 +571,11 @@ class ListFieldsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// The filter to apply to list results. Currently,
   /// [FirestoreAdmin.ListFields][google.firestore.admin.v1beta2.FirestoreAdmin.ListFields] only supports listing fields
@@ -670,27 +585,21 @@ class ListFieldsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get filter => $_getSZ(1);
   @$pb.TagNumber(2)
-  set filter($core.String v) {
-    $_setString(1, v);
-  }
-
+  set filter($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFilter() => clearField(2);
+  void clearFilter() => $_clearField(2);
 
   /// The number of results to return.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
-  set pageSize($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageSize() => clearField(3);
+  void clearPageSize() => $_clearField(3);
 
   /// A page token, returned from a previous call to
   /// [FirestoreAdmin.ListFields][google.firestore.admin.v1beta2.FirestoreAdmin.ListFields], that may be used to get the next
@@ -698,14 +607,11 @@ class ListFieldsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
-  set pageToken($core.String v) {
-    $_setString(3, v);
-  }
-
+  set pageToken($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPageToken() => clearField(4);
+  void clearPageToken() => $_clearField(4);
 }
 
 /// The response for [FirestoreAdmin.ListFields][google.firestore.admin.v1beta2.FirestoreAdmin.ListFields].
@@ -714,51 +620,45 @@ class ListFieldsResponse extends $pb.GeneratedMessage {
     $core.Iterable<$4.Field>? fields,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (fields != null) {
-      $result.fields.addAll(fields);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (fields != null) result.fields.addAll(fields);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListFieldsResponse._() : super();
-  factory ListFieldsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListFieldsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListFieldsResponse._();
+
+  factory ListFieldsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListFieldsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListFieldsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.firestore.admin.v1beta2'),
       createEmptyInstance: create)
-    ..pc<$4.Field>(1, _omitFieldNames ? '' : 'fields', $pb.PbFieldType.PM,
+    ..pPM<$4.Field>(1, _omitFieldNames ? '' : 'fields',
         subBuilder: $4.Field.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListFieldsResponse clone() => ListFieldsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListFieldsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListFieldsResponse copyWith(void Function(ListFieldsResponse) updates) =>
       super.copyWith((message) => updates(message as ListFieldsResponse))
           as ListFieldsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListFieldsResponse create() => ListFieldsResponse._();
+  @$core.override
   ListFieldsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListFieldsResponse> createRepeated() =>
-      $pb.PbList<ListFieldsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListFieldsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListFieldsResponse>(create);
@@ -766,21 +666,18 @@ class ListFieldsResponse extends $pb.GeneratedMessage {
 
   /// The requested fields.
   @$pb.TagNumber(1)
-  $core.List<$4.Field> get fields => $_getList(0);
+  $pb.PbList<$4.Field> get fields => $_getList(0);
 
   /// A page token that may be used to request another page of results. If blank,
   /// this is the last page.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// The request for [FirestoreAdmin.ExportDocuments][google.firestore.admin.v1beta2.FirestoreAdmin.ExportDocuments].
@@ -790,25 +687,21 @@ class ExportDocumentsRequest extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? collectionIds,
     $core.String? outputUriPrefix,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (collectionIds != null) {
-      $result.collectionIds.addAll(collectionIds);
-    }
-    if (outputUriPrefix != null) {
-      $result.outputUriPrefix = outputUriPrefix;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (collectionIds != null) result.collectionIds.addAll(collectionIds);
+    if (outputUriPrefix != null) result.outputUriPrefix = outputUriPrefix;
+    return result;
   }
-  ExportDocumentsRequest._() : super();
-  factory ExportDocumentsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExportDocumentsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ExportDocumentsRequest._();
+
+  factory ExportDocumentsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ExportDocumentsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ExportDocumentsRequest',
@@ -820,26 +713,21 @@ class ExportDocumentsRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'outputUriPrefix')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ExportDocumentsRequest clone() =>
-      ExportDocumentsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ExportDocumentsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ExportDocumentsRequest copyWith(
           void Function(ExportDocumentsRequest) updates) =>
       super.copyWith((message) => updates(message as ExportDocumentsRequest))
           as ExportDocumentsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ExportDocumentsRequest create() => ExportDocumentsRequest._();
+  @$core.override
   ExportDocumentsRequest createEmptyInstance() => create();
-  static $pb.PbList<ExportDocumentsRequest> createRepeated() =>
-      $pb.PbList<ExportDocumentsRequest>();
   @$core.pragma('dart2js:noInline')
   static ExportDocumentsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ExportDocumentsRequest>(create);
@@ -850,18 +738,15 @@ class ExportDocumentsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Which collection ids to export. Unspecified means all collections.
   @$pb.TagNumber(2)
-  $core.List<$core.String> get collectionIds => $_getList(1);
+  $pb.PbList<$core.String> get collectionIds => $_getList(1);
 
   /// The output URI. Currently only supports Google Cloud Storage URIs of the
   /// form: `gs://BUCKET_NAME[/NAMESPACE_PATH]`, where `BUCKET_NAME` is the name
@@ -874,14 +759,11 @@ class ExportDocumentsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get outputUriPrefix => $_getSZ(2);
   @$pb.TagNumber(3)
-  set outputUriPrefix($core.String v) {
-    $_setString(2, v);
-  }
-
+  set outputUriPrefix($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasOutputUriPrefix() => $_has(2);
   @$pb.TagNumber(3)
-  void clearOutputUriPrefix() => clearField(3);
+  void clearOutputUriPrefix() => $_clearField(3);
 }
 
 /// The request for [FirestoreAdmin.ImportDocuments][google.firestore.admin.v1beta2.FirestoreAdmin.ImportDocuments].
@@ -891,25 +773,21 @@ class ImportDocumentsRequest extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? collectionIds,
     $core.String? inputUriPrefix,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (collectionIds != null) {
-      $result.collectionIds.addAll(collectionIds);
-    }
-    if (inputUriPrefix != null) {
-      $result.inputUriPrefix = inputUriPrefix;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (collectionIds != null) result.collectionIds.addAll(collectionIds);
+    if (inputUriPrefix != null) result.inputUriPrefix = inputUriPrefix;
+    return result;
   }
-  ImportDocumentsRequest._() : super();
-  factory ImportDocumentsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ImportDocumentsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ImportDocumentsRequest._();
+
+  factory ImportDocumentsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ImportDocumentsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ImportDocumentsRequest',
@@ -921,26 +799,21 @@ class ImportDocumentsRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'inputUriPrefix')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ImportDocumentsRequest clone() =>
-      ImportDocumentsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ImportDocumentsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ImportDocumentsRequest copyWith(
           void Function(ImportDocumentsRequest) updates) =>
       super.copyWith((message) => updates(message as ImportDocumentsRequest))
           as ImportDocumentsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ImportDocumentsRequest create() => ImportDocumentsRequest._();
+  @$core.override
   ImportDocumentsRequest createEmptyInstance() => create();
-  static $pb.PbList<ImportDocumentsRequest> createRepeated() =>
-      $pb.PbList<ImportDocumentsRequest>();
   @$core.pragma('dart2js:noInline')
   static ImportDocumentsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ImportDocumentsRequest>(create);
@@ -951,19 +824,16 @@ class ImportDocumentsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Which collection ids to import. Unspecified means all collections included
   /// in the import.
   @$pb.TagNumber(2)
-  $core.List<$core.String> get collectionIds => $_getList(1);
+  $pb.PbList<$core.String> get collectionIds => $_getList(1);
 
   /// Location of the exported files.
   /// This must match the output_uri_prefix of an ExportDocumentsResponse from
@@ -973,16 +843,14 @@ class ImportDocumentsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get inputUriPrefix => $_getSZ(2);
   @$pb.TagNumber(3)
-  set inputUriPrefix($core.String v) {
-    $_setString(2, v);
-  }
-
+  set inputUriPrefix($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasInputUriPrefix() => $_has(2);
   @$pb.TagNumber(3)
-  void clearInputUriPrefix() => clearField(3);
+  void clearInputUriPrefix() => $_clearField(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

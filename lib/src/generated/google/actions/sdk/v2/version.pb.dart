@@ -1,20 +1,24 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/version.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/version.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $0;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
 import 'version.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'version.pbenum.dart';
 
@@ -24,55 +28,45 @@ class Version_VersionState extends $pb.GeneratedMessage {
     Version_VersionState_State? state,
     $core.String? message,
   }) {
-    final $result = create();
-    if (state != null) {
-      $result.state = state;
-    }
-    if (message != null) {
-      $result.message = message;
-    }
-    return $result;
+    final result = create();
+    if (state != null) result.state = state;
+    if (message != null) result.message = message;
+    return result;
   }
-  Version_VersionState._() : super();
-  factory Version_VersionState.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Version_VersionState.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Version_VersionState._();
+
+  factory Version_VersionState.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Version_VersionState.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Version.VersionState',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.actions.sdk.v2'),
       createEmptyInstance: create)
-    ..e<Version_VersionState_State>(
-        1, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
-        defaultOrMaker: Version_VersionState_State.STATE_UNSPECIFIED,
-        valueOf: Version_VersionState_State.valueOf,
+    ..aE<Version_VersionState_State>(1, _omitFieldNames ? '' : 'state',
         enumValues: Version_VersionState_State.values)
     ..aOS(2, _omitFieldNames ? '' : 'message')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Version_VersionState clone() =>
-      Version_VersionState()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Version_VersionState clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Version_VersionState copyWith(void Function(Version_VersionState) updates) =>
       super.copyWith((message) => updates(message as Version_VersionState))
           as Version_VersionState;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Version_VersionState create() => Version_VersionState._();
+  @$core.override
   Version_VersionState createEmptyInstance() => create();
-  static $pb.PbList<Version_VersionState> createRepeated() =>
-      $pb.PbList<Version_VersionState>();
   @$core.pragma('dart2js:noInline')
   static Version_VersionState getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Version_VersionState>(create);
@@ -82,27 +76,21 @@ class Version_VersionState extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Version_VersionState_State get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(Version_VersionState_State v) {
-    setField(1, v);
-  }
-
+  set state(Version_VersionState_State value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => clearField(1);
+  void clearState() => $_clearField(1);
 
   /// User-friendly message for the current state of the version.
   @$pb.TagNumber(2)
   $core.String get message => $_getSZ(1);
   @$pb.TagNumber(2)
-  set message($core.String v) {
-    $_setString(1, v);
-  }
-
+  set message($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasMessage() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMessage() => clearField(2);
+  void clearMessage() => $_clearField(2);
 }
 
 /// Definition of version resource.
@@ -113,28 +101,22 @@ class Version extends $pb.GeneratedMessage {
     $core.String? creator,
     $0.Timestamp? updateTime,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (versionState != null) {
-      $result.versionState = versionState;
-    }
-    if (creator != null) {
-      $result.creator = creator;
-    }
-    if (updateTime != null) {
-      $result.updateTime = updateTime;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (versionState != null) result.versionState = versionState;
+    if (creator != null) result.creator = creator;
+    if (updateTime != null) result.updateTime = updateTime;
+    return result;
   }
-  Version._() : super();
-  factory Version.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Version.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Version._();
+
+  factory Version.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Version.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Version',
@@ -149,22 +131,19 @@ class Version extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Version clone() => Version()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Version clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Version copyWith(void Function(Version) updates) =>
       super.copyWith((message) => updates(message as Version)) as Version;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Version create() => Version._();
+  @$core.override
   Version createEmptyInstance() => create();
-  static $pb.PbList<Version> createRepeated() => $pb.PbList<Version>();
   @$core.pragma('dart2js:noInline')
   static Version getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Version>(create);
@@ -175,27 +154,21 @@ class Version extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The current state of the version.
   @$pb.TagNumber(2)
   Version_VersionState get versionState => $_getN(1);
   @$pb.TagNumber(2)
-  set versionState(Version_VersionState v) {
-    setField(2, v);
-  }
-
+  set versionState(Version_VersionState value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasVersionState() => $_has(1);
   @$pb.TagNumber(2)
-  void clearVersionState() => clearField(2);
+  void clearVersionState() => $_clearField(2);
   @$pb.TagNumber(2)
   Version_VersionState ensureVersionState() => $_ensure(1);
 
@@ -203,31 +176,26 @@ class Version extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get creator => $_getSZ(2);
   @$pb.TagNumber(3)
-  set creator($core.String v) {
-    $_setString(2, v);
-  }
-
+  set creator($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasCreator() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCreator() => clearField(3);
+  void clearCreator() => $_clearField(3);
 
   /// Timestamp of the last change to this version.
   @$pb.TagNumber(4)
   $0.Timestamp get updateTime => $_getN(3);
   @$pb.TagNumber(4)
-  set updateTime($0.Timestamp v) {
-    setField(4, v);
-  }
-
+  set updateTime($0.Timestamp value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasUpdateTime() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUpdateTime() => clearField(4);
+  void clearUpdateTime() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.Timestamp ensureUpdateTime() => $_ensure(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

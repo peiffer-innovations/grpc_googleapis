@@ -1,24 +1,28 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/actions_sdk.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/actions_sdk.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/wrappers.pb.dart'
+    as $4;
 
-import '../../../protobuf/wrappers.pb.dart' as $4;
 import 'account_linking_secret.pb.dart' as $5;
 import 'files.pb.dart' as $2;
 import 'release_channel.pb.dart' as $6;
 import 'validation_results.pb.dart' as $3;
 import 'version.pb.dart' as $1;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Streaming RPC request for WriteDraft.
 class WriteDraftRequest extends $pb.GeneratedMessage {
@@ -26,22 +30,20 @@ class WriteDraftRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $2.Files? files,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (files != null) {
-      $result.files = files;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (files != null) result.files = files;
+    return result;
   }
-  WriteDraftRequest._() : super();
-  factory WriteDraftRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WriteDraftRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WriteDraftRequest._();
+
+  factory WriteDraftRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WriteDraftRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WriteDraftRequest',
@@ -53,24 +55,20 @@ class WriteDraftRequest extends $pb.GeneratedMessage {
         subBuilder: $2.Files.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WriteDraftRequest clone() => WriteDraftRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WriteDraftRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WriteDraftRequest copyWith(void Function(WriteDraftRequest) updates) =>
       super.copyWith((message) => updates(message as WriteDraftRequest))
           as WriteDraftRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WriteDraftRequest create() => WriteDraftRequest._();
+  @$core.override
   WriteDraftRequest createEmptyInstance() => create();
-  static $pb.PbList<WriteDraftRequest> createRepeated() =>
-      $pb.PbList<WriteDraftRequest>();
   @$core.pragma('dart2js:noInline')
   static WriteDraftRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WriteDraftRequest>(create);
@@ -81,14 +79,11 @@ class WriteDraftRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. List of files sent to the server at a time. This is a list of config files
   /// or data files.
@@ -100,14 +95,11 @@ class WriteDraftRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $2.Files get files => $_getN(1);
   @$pb.TagNumber(4)
-  set files($2.Files v) {
-    setField(4, v);
-  }
-
+  set files($2.Files value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasFiles() => $_has(1);
   @$pb.TagNumber(4)
-  void clearFiles() => clearField(4);
+  void clearFiles() => $_clearField(4);
   @$pb.TagNumber(4)
   $2.Files ensureFiles() => $_ensure(1);
 }
@@ -118,22 +110,20 @@ class Draft extends $pb.GeneratedMessage {
     $core.String? name,
     $3.ValidationResults? validationResults,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (validationResults != null) {
-      $result.validationResults = validationResults;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (validationResults != null) result.validationResults = validationResults;
+    return result;
   }
-  Draft._() : super();
-  factory Draft.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Draft.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Draft._();
+
+  factory Draft.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Draft.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Draft',
@@ -145,22 +135,19 @@ class Draft extends $pb.GeneratedMessage {
         subBuilder: $3.ValidationResults.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Draft clone() => Draft()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Draft clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Draft copyWith(void Function(Draft) updates) =>
       super.copyWith((message) => updates(message as Draft)) as Draft;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Draft create() => Draft._();
+  @$core.override
   Draft createEmptyInstance() => create();
-  static $pb.PbList<Draft> createRepeated() => $pb.PbList<Draft>();
   @$core.pragma('dart2js:noInline')
   static Draft getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Draft>(create);
@@ -171,14 +158,11 @@ class Draft extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Validation results associated with the project draft content. Note that
   /// WriteDraft updates the draft despite the warnings as warnings are not draft
@@ -186,14 +170,11 @@ class Draft extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $3.ValidationResults get validationResults => $_getN(1);
   @$pb.TagNumber(2)
-  set validationResults($3.ValidationResults v) {
-    setField(2, v);
-  }
-
+  set validationResults($3.ValidationResults value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasValidationResults() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValidationResults() => clearField(2);
+  void clearValidationResults() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.ValidationResults ensureValidationResults() => $_ensure(1);
 }
@@ -201,14 +182,16 @@ class Draft extends $pb.GeneratedMessage {
 /// Indicates the preview content will be coming from the Draft.
 class WritePreviewRequest_ContentFromDraft extends $pb.GeneratedMessage {
   factory WritePreviewRequest_ContentFromDraft() => create();
-  WritePreviewRequest_ContentFromDraft._() : super();
+
+  WritePreviewRequest_ContentFromDraft._();
+
   factory WritePreviewRequest_ContentFromDraft.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WritePreviewRequest_ContentFromDraft.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WritePreviewRequest_ContentFromDraft.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WritePreviewRequest.ContentFromDraft',
@@ -217,28 +200,23 @@ class WritePreviewRequest_ContentFromDraft extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WritePreviewRequest_ContentFromDraft clone() =>
-      WritePreviewRequest_ContentFromDraft()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WritePreviewRequest_ContentFromDraft clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WritePreviewRequest_ContentFromDraft copyWith(
           void Function(WritePreviewRequest_ContentFromDraft) updates) =>
       super.copyWith((message) =>
               updates(message as WritePreviewRequest_ContentFromDraft))
           as WritePreviewRequest_ContentFromDraft;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest_ContentFromDraft create() =>
       WritePreviewRequest_ContentFromDraft._();
+  @$core.override
   WritePreviewRequest_ContentFromDraft createEmptyInstance() => create();
-  static $pb.PbList<WritePreviewRequest_ContentFromDraft> createRepeated() =>
-      $pb.PbList<WritePreviewRequest_ContentFromDraft>();
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest_ContentFromDraft getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -252,21 +230,21 @@ class WritePreviewRequest_ContentFromSubmittedVersion
   factory WritePreviewRequest_ContentFromSubmittedVersion({
     $core.String? version,
   }) {
-    final $result = create();
-    if (version != null) {
-      $result.version = version;
-    }
-    return $result;
+    final result = create();
+    if (version != null) result.version = version;
+    return result;
   }
-  WritePreviewRequest_ContentFromSubmittedVersion._() : super();
+
+  WritePreviewRequest_ContentFromSubmittedVersion._();
+
   factory WritePreviewRequest_ContentFromSubmittedVersion.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory WritePreviewRequest_ContentFromSubmittedVersion.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -278,14 +256,9 @@ class WritePreviewRequest_ContentFromSubmittedVersion
     ..aOS(1, _omitFieldNames ? '' : 'version')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WritePreviewRequest_ContentFromSubmittedVersion clone() =>
-      WritePreviewRequest_ContentFromSubmittedVersion()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WritePreviewRequest_ContentFromSubmittedVersion clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WritePreviewRequest_ContentFromSubmittedVersion copyWith(
           void Function(WritePreviewRequest_ContentFromSubmittedVersion)
               updates) =>
@@ -293,16 +266,15 @@ class WritePreviewRequest_ContentFromSubmittedVersion
               message as WritePreviewRequest_ContentFromSubmittedVersion))
           as WritePreviewRequest_ContentFromSubmittedVersion;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest_ContentFromSubmittedVersion create() =>
       WritePreviewRequest_ContentFromSubmittedVersion._();
+  @$core.override
   WritePreviewRequest_ContentFromSubmittedVersion createEmptyInstance() =>
       create();
-  static $pb.PbList<WritePreviewRequest_ContentFromSubmittedVersion>
-      createRepeated() =>
-          $pb.PbList<WritePreviewRequest_ContentFromSubmittedVersion>();
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest_ContentFromSubmittedVersion getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -314,14 +286,11 @@ class WritePreviewRequest_ContentFromSubmittedVersion
   @$pb.TagNumber(1)
   $core.String get version => $_getSZ(0);
   @$pb.TagNumber(1)
-  set version($core.String v) {
-    $_setString(0, v);
-  }
-
+  set version($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasVersion() => $_has(0);
   @$pb.TagNumber(1)
-  void clearVersion() => clearField(1);
+  void clearVersion() => $_clearField(1);
 }
 
 /// Settings for updating the preview.
@@ -329,20 +298,20 @@ class WritePreviewRequest_PreviewSettings extends $pb.GeneratedMessage {
   factory WritePreviewRequest_PreviewSettings({
     $4.BoolValue? sandbox,
   }) {
-    final $result = create();
-    if (sandbox != null) {
-      $result.sandbox = sandbox;
-    }
-    return $result;
+    final result = create();
+    if (sandbox != null) result.sandbox = sandbox;
+    return result;
   }
-  WritePreviewRequest_PreviewSettings._() : super();
+
+  WritePreviewRequest_PreviewSettings._();
+
   factory WritePreviewRequest_PreviewSettings.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WritePreviewRequest_PreviewSettings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WritePreviewRequest_PreviewSettings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WritePreviewRequest.PreviewSettings',
@@ -353,28 +322,23 @@ class WritePreviewRequest_PreviewSettings extends $pb.GeneratedMessage {
         subBuilder: $4.BoolValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WritePreviewRequest_PreviewSettings clone() =>
-      WritePreviewRequest_PreviewSettings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WritePreviewRequest_PreviewSettings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WritePreviewRequest_PreviewSettings copyWith(
           void Function(WritePreviewRequest_PreviewSettings) updates) =>
       super.copyWith((message) =>
               updates(message as WritePreviewRequest_PreviewSettings))
           as WritePreviewRequest_PreviewSettings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest_PreviewSettings create() =>
       WritePreviewRequest_PreviewSettings._();
+  @$core.override
   WritePreviewRequest_PreviewSettings createEmptyInstance() => create();
-  static $pb.PbList<WritePreviewRequest_PreviewSettings> createRepeated() =>
-      $pb.PbList<WritePreviewRequest_PreviewSettings>();
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest_PreviewSettings getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -387,14 +351,11 @@ class WritePreviewRequest_PreviewSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.BoolValue get sandbox => $_getN(0);
   @$pb.TagNumber(1)
-  set sandbox($4.BoolValue v) {
-    setField(1, v);
-  }
-
+  set sandbox($4.BoolValue value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSandbox() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSandbox() => clearField(1);
+  void clearSandbox() => $_clearField(1);
   @$pb.TagNumber(1)
   $4.BoolValue ensureSandbox() => $_ensure(0);
 }
@@ -410,31 +371,23 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
     WritePreviewRequest_ContentFromDraft? draft,
     WritePreviewRequest_ContentFromSubmittedVersion? submittedVersion,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (previewSettings != null) {
-      $result.previewSettings = previewSettings;
-    }
-    if (files != null) {
-      $result.files = files;
-    }
-    if (draft != null) {
-      $result.draft = draft;
-    }
-    if (submittedVersion != null) {
-      $result.submittedVersion = submittedVersion;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (previewSettings != null) result.previewSettings = previewSettings;
+    if (files != null) result.files = files;
+    if (draft != null) result.draft = draft;
+    if (submittedVersion != null) result.submittedVersion = submittedVersion;
+    return result;
   }
-  WritePreviewRequest._() : super();
-  factory WritePreviewRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WritePreviewRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WritePreviewRequest._();
+
+  factory WritePreviewRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WritePreviewRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, WritePreviewRequest_Source>
       _WritePreviewRequest_SourceByTag = {
@@ -463,59 +416,56 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
         subBuilder: WritePreviewRequest_ContentFromSubmittedVersion.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WritePreviewRequest clone() => WritePreviewRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WritePreviewRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WritePreviewRequest copyWith(void Function(WritePreviewRequest) updates) =>
       super.copyWith((message) => updates(message as WritePreviewRequest))
           as WritePreviewRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest create() => WritePreviewRequest._();
+  @$core.override
   WritePreviewRequest createEmptyInstance() => create();
-  static $pb.PbList<WritePreviewRequest> createRepeated() =>
-      $pb.PbList<WritePreviewRequest>();
   @$core.pragma('dart2js:noInline')
   static WritePreviewRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WritePreviewRequest>(create);
   static WritePreviewRequest? _defaultInstance;
 
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
   WritePreviewRequest_Source whichSource() =>
       _WritePreviewRequest_SourceByTag[$_whichOneof(0)]!;
-  void clearSource() => clearField($_whichOneof(0));
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  void clearSource() => $_clearField($_whichOneof(0));
 
   /// Required. The parent resource name in the format `projects/{project}`. The
   /// `{project}` is the cloud project ID associated with the project.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The settings for updating the user's preview.
   @$pb.TagNumber(4)
   WritePreviewRequest_PreviewSettings get previewSettings => $_getN(1);
   @$pb.TagNumber(4)
-  set previewSettings(WritePreviewRequest_PreviewSettings v) {
-    setField(4, v);
-  }
-
+  set previewSettings(WritePreviewRequest_PreviewSettings value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasPreviewSettings() => $_has(1);
   @$pb.TagNumber(4)
-  void clearPreviewSettings() => clearField(4);
+  void clearPreviewSettings() => $_clearField(4);
   @$pb.TagNumber(4)
   WritePreviewRequest_PreviewSettings ensurePreviewSettings() => $_ensure(1);
 
@@ -529,14 +479,11 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Files get files => $_getN(2);
   @$pb.TagNumber(5)
-  set files($2.Files v) {
-    setField(5, v);
-  }
-
+  set files($2.Files value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasFiles() => $_has(2);
   @$pb.TagNumber(5)
-  void clearFiles() => clearField(5);
+  void clearFiles() => $_clearField(5);
   @$pb.TagNumber(5)
   $2.Files ensureFiles() => $_ensure(2);
 
@@ -544,14 +491,11 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   WritePreviewRequest_ContentFromDraft get draft => $_getN(3);
   @$pb.TagNumber(6)
-  set draft(WritePreviewRequest_ContentFromDraft v) {
-    setField(6, v);
-  }
-
+  set draft(WritePreviewRequest_ContentFromDraft value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasDraft() => $_has(3);
   @$pb.TagNumber(6)
-  void clearDraft() => clearField(6);
+  void clearDraft() => $_clearField(6);
   @$pb.TagNumber(6)
   WritePreviewRequest_ContentFromDraft ensureDraft() => $_ensure(3);
 
@@ -560,14 +504,12 @@ class WritePreviewRequest extends $pb.GeneratedMessage {
   WritePreviewRequest_ContentFromSubmittedVersion get submittedVersion =>
       $_getN(4);
   @$pb.TagNumber(7)
-  set submittedVersion(WritePreviewRequest_ContentFromSubmittedVersion v) {
-    setField(7, v);
-  }
-
+  set submittedVersion(WritePreviewRequest_ContentFromSubmittedVersion value) =>
+      $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasSubmittedVersion() => $_has(4);
   @$pb.TagNumber(7)
-  void clearSubmittedVersion() => clearField(7);
+  void clearSubmittedVersion() => $_clearField(7);
   @$pb.TagNumber(7)
   WritePreviewRequest_ContentFromSubmittedVersion ensureSubmittedVersion() =>
       $_ensure(4);
@@ -580,25 +522,21 @@ class Preview extends $pb.GeneratedMessage {
     $3.ValidationResults? validationResults,
     $core.String? simulatorUrl,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (validationResults != null) {
-      $result.validationResults = validationResults;
-    }
-    if (simulatorUrl != null) {
-      $result.simulatorUrl = simulatorUrl;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (validationResults != null) result.validationResults = validationResults;
+    if (simulatorUrl != null) result.simulatorUrl = simulatorUrl;
+    return result;
   }
-  Preview._() : super();
-  factory Preview.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Preview.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Preview._();
+
+  factory Preview.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Preview.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Preview',
@@ -611,22 +549,19 @@ class Preview extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'simulatorUrl')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Preview clone() => Preview()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Preview clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Preview copyWith(void Function(Preview) updates) =>
       super.copyWith((message) => updates(message as Preview)) as Preview;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Preview create() => Preview._();
+  @$core.override
   Preview createEmptyInstance() => create();
-  static $pb.PbList<Preview> createRepeated() => $pb.PbList<Preview>();
   @$core.pragma('dart2js:noInline')
   static Preview getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Preview>(create);
@@ -637,27 +572,21 @@ class Preview extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Validation results associated with the user project preview content.
   @$pb.TagNumber(2)
   $3.ValidationResults get validationResults => $_getN(1);
   @$pb.TagNumber(2)
-  set validationResults($3.ValidationResults v) {
-    setField(2, v);
-  }
-
+  set validationResults($3.ValidationResults value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasValidationResults() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValidationResults() => clearField(2);
+  void clearValidationResults() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.ValidationResults ensureValidationResults() => $_ensure(1);
 
@@ -665,14 +594,11 @@ class Preview extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get simulatorUrl => $_getSZ(2);
   @$pb.TagNumber(3)
-  set simulatorUrl($core.String v) {
-    $_setString(2, v);
-  }
-
+  set simulatorUrl($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSimulatorUrl() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSimulatorUrl() => clearField(3);
+  void clearSimulatorUrl() => $_clearField(3);
 }
 
 /// Streaming RPC request for CreateVersion.
@@ -682,25 +608,21 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
     $core.String? releaseChannel,
     $2.Files? files,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (releaseChannel != null) {
-      $result.releaseChannel = releaseChannel;
-    }
-    if (files != null) {
-      $result.files = files;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (releaseChannel != null) result.releaseChannel = releaseChannel;
+    if (files != null) result.files = files;
+    return result;
   }
-  CreateVersionRequest._() : super();
-  factory CreateVersionRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateVersionRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateVersionRequest._();
+
+  factory CreateVersionRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateVersionRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateVersionRequest',
@@ -713,25 +635,20 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
         subBuilder: $2.Files.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateVersionRequest clone() =>
-      CreateVersionRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateVersionRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateVersionRequest copyWith(void Function(CreateVersionRequest) updates) =>
       super.copyWith((message) => updates(message as CreateVersionRequest))
           as CreateVersionRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateVersionRequest create() => CreateVersionRequest._();
+  @$core.override
   CreateVersionRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateVersionRequest> createRepeated() =>
-      $pb.PbList<CreateVersionRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateVersionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateVersionRequest>(create);
@@ -742,14 +659,11 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Optional. The release channel to deploy the version, if specified. The supported
   /// built in release channels are actions.channels.Production,
@@ -758,14 +672,11 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get releaseChannel => $_getSZ(1);
   @$pb.TagNumber(4)
-  set releaseChannel($core.String v) {
-    $_setString(1, v);
-  }
-
+  set releaseChannel($core.String value) => $_setString(1, value);
   @$pb.TagNumber(4)
   $core.bool hasReleaseChannel() => $_has(1);
   @$pb.TagNumber(4)
-  void clearReleaseChannel() => clearField(4);
+  void clearReleaseChannel() => $_clearField(4);
 
   /// Required. List of files sent to the server at a time. This is a list of config files
   /// or data files.
@@ -777,14 +688,11 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Files get files => $_getN(2);
   @$pb.TagNumber(5)
-  set files($2.Files v) {
-    setField(5, v);
-  }
-
+  set files($2.Files value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasFiles() => $_has(2);
   @$pb.TagNumber(5)
-  void clearFiles() => clearField(5);
+  void clearFiles() => $_clearField(5);
   @$pb.TagNumber(5)
   $2.Files ensureFiles() => $_ensure(2);
 }
@@ -795,23 +703,22 @@ class ReadDraftRequest extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? clientSecretEncryptionKeyVersion,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (clientSecretEncryptionKeyVersion != null) {
-      $result.clientSecretEncryptionKeyVersion =
+    final result = create();
+    if (name != null) result.name = name;
+    if (clientSecretEncryptionKeyVersion != null)
+      result.clientSecretEncryptionKeyVersion =
           clientSecretEncryptionKeyVersion;
-    }
-    return $result;
+    return result;
   }
-  ReadDraftRequest._() : super();
-  factory ReadDraftRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ReadDraftRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ReadDraftRequest._();
+
+  factory ReadDraftRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReadDraftRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ReadDraftRequest',
@@ -822,24 +729,20 @@ class ReadDraftRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'clientSecretEncryptionKeyVersion')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ReadDraftRequest clone() => ReadDraftRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReadDraftRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ReadDraftRequest copyWith(void Function(ReadDraftRequest) updates) =>
       super.copyWith((message) => updates(message as ReadDraftRequest))
           as ReadDraftRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ReadDraftRequest create() => ReadDraftRequest._();
+  @$core.override
   ReadDraftRequest createEmptyInstance() => create();
-  static $pb.PbList<ReadDraftRequest> createRepeated() =>
-      $pb.PbList<ReadDraftRequest>();
   @$core.pragma('dart2js:noInline')
   static ReadDraftRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReadDraftRequest>(create);
@@ -850,14 +753,11 @@ class ReadDraftRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Optional. The version of the crypto key used to encrypt the account linking OAuth
   /// client secret. If not specified, the primary key version is used for
@@ -866,14 +766,12 @@ class ReadDraftRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get clientSecretEncryptionKeyVersion => $_getSZ(1);
   @$pb.TagNumber(2)
-  set clientSecretEncryptionKeyVersion($core.String v) {
-    $_setString(1, v);
-  }
-
+  set clientSecretEncryptionKeyVersion($core.String value) =>
+      $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasClientSecretEncryptionKeyVersion() => $_has(1);
   @$pb.TagNumber(2)
-  void clearClientSecretEncryptionKeyVersion() => clearField(2);
+  void clearClientSecretEncryptionKeyVersion() => $_clearField(2);
 }
 
 /// Streaming RPC response for ReadDraft.
@@ -881,19 +779,19 @@ class ReadDraftResponse extends $pb.GeneratedMessage {
   factory ReadDraftResponse({
     $2.Files? files,
   }) {
-    final $result = create();
-    if (files != null) {
-      $result.files = files;
-    }
-    return $result;
+    final result = create();
+    if (files != null) result.files = files;
+    return result;
   }
-  ReadDraftResponse._() : super();
-  factory ReadDraftResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ReadDraftResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ReadDraftResponse._();
+
+  factory ReadDraftResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReadDraftResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ReadDraftResponse',
@@ -904,24 +802,20 @@ class ReadDraftResponse extends $pb.GeneratedMessage {
         subBuilder: $2.Files.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ReadDraftResponse clone() => ReadDraftResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReadDraftResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ReadDraftResponse copyWith(void Function(ReadDraftResponse) updates) =>
       super.copyWith((message) => updates(message as ReadDraftResponse))
           as ReadDraftResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ReadDraftResponse create() => ReadDraftResponse._();
+  @$core.override
   ReadDraftResponse createEmptyInstance() => create();
-  static $pb.PbList<ReadDraftResponse> createRepeated() =>
-      $pb.PbList<ReadDraftResponse>();
   @$core.pragma('dart2js:noInline')
   static ReadDraftResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReadDraftResponse>(create);
@@ -931,14 +825,11 @@ class ReadDraftResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $2.Files get files => $_getN(0);
   @$pb.TagNumber(3)
-  set files($2.Files v) {
-    setField(3, v);
-  }
-
+  set files($2.Files value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasFiles() => $_has(0);
   @$pb.TagNumber(3)
-  void clearFiles() => clearField(3);
+  void clearFiles() => $_clearField(3);
   @$pb.TagNumber(3)
   $2.Files ensureFiles() => $_ensure(0);
 }
@@ -949,23 +840,22 @@ class ReadVersionRequest extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? clientSecretEncryptionKeyVersion,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (clientSecretEncryptionKeyVersion != null) {
-      $result.clientSecretEncryptionKeyVersion =
+    final result = create();
+    if (name != null) result.name = name;
+    if (clientSecretEncryptionKeyVersion != null)
+      result.clientSecretEncryptionKeyVersion =
           clientSecretEncryptionKeyVersion;
-    }
-    return $result;
+    return result;
   }
-  ReadVersionRequest._() : super();
-  factory ReadVersionRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ReadVersionRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ReadVersionRequest._();
+
+  factory ReadVersionRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReadVersionRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ReadVersionRequest',
@@ -976,24 +866,20 @@ class ReadVersionRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'clientSecretEncryptionKeyVersion')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ReadVersionRequest clone() => ReadVersionRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReadVersionRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ReadVersionRequest copyWith(void Function(ReadVersionRequest) updates) =>
       super.copyWith((message) => updates(message as ReadVersionRequest))
           as ReadVersionRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ReadVersionRequest create() => ReadVersionRequest._();
+  @$core.override
   ReadVersionRequest createEmptyInstance() => create();
-  static $pb.PbList<ReadVersionRequest> createRepeated() =>
-      $pb.PbList<ReadVersionRequest>();
   @$core.pragma('dart2js:noInline')
   static ReadVersionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReadVersionRequest>(create);
@@ -1006,14 +892,11 @@ class ReadVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Optional. The version of the crypto key used to encrypt the account linking OAuth
   /// client secret. If not specified, the primary key version is used for
@@ -1022,14 +905,12 @@ class ReadVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get clientSecretEncryptionKeyVersion => $_getSZ(1);
   @$pb.TagNumber(2)
-  set clientSecretEncryptionKeyVersion($core.String v) {
-    $_setString(1, v);
-  }
-
+  set clientSecretEncryptionKeyVersion($core.String value) =>
+      $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasClientSecretEncryptionKeyVersion() => $_has(1);
   @$pb.TagNumber(2)
-  void clearClientSecretEncryptionKeyVersion() => clearField(2);
+  void clearClientSecretEncryptionKeyVersion() => $_clearField(2);
 }
 
 /// Streaming RPC response for ReadVersion.
@@ -1037,19 +918,19 @@ class ReadVersionResponse extends $pb.GeneratedMessage {
   factory ReadVersionResponse({
     $2.Files? files,
   }) {
-    final $result = create();
-    if (files != null) {
-      $result.files = files;
-    }
-    return $result;
+    final result = create();
+    if (files != null) result.files = files;
+    return result;
   }
-  ReadVersionResponse._() : super();
-  factory ReadVersionResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ReadVersionResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ReadVersionResponse._();
+
+  factory ReadVersionResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReadVersionResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ReadVersionResponse',
@@ -1060,24 +941,20 @@ class ReadVersionResponse extends $pb.GeneratedMessage {
         subBuilder: $2.Files.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ReadVersionResponse clone() => ReadVersionResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReadVersionResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ReadVersionResponse copyWith(void Function(ReadVersionResponse) updates) =>
       super.copyWith((message) => updates(message as ReadVersionResponse))
           as ReadVersionResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ReadVersionResponse create() => ReadVersionResponse._();
+  @$core.override
   ReadVersionResponse createEmptyInstance() => create();
-  static $pb.PbList<ReadVersionResponse> createRepeated() =>
-      $pb.PbList<ReadVersionResponse>();
   @$core.pragma('dart2js:noInline')
   static ReadVersionResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReadVersionResponse>(create);
@@ -1087,14 +964,11 @@ class ReadVersionResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.Files get files => $_getN(0);
   @$pb.TagNumber(1)
-  set files($2.Files v) {
-    setField(1, v);
-  }
-
+  set files($2.Files value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasFiles() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFiles() => clearField(1);
+  void clearFiles() => $_clearField(1);
   @$pb.TagNumber(1)
   $2.Files ensureFiles() => $_ensure(0);
 }
@@ -1104,19 +978,19 @@ class EncryptSecretRequest extends $pb.GeneratedMessage {
   factory EncryptSecretRequest({
     $core.String? clientSecret,
   }) {
-    final $result = create();
-    if (clientSecret != null) {
-      $result.clientSecret = clientSecret;
-    }
-    return $result;
+    final result = create();
+    if (clientSecret != null) result.clientSecret = clientSecret;
+    return result;
   }
-  EncryptSecretRequest._() : super();
-  factory EncryptSecretRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EncryptSecretRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EncryptSecretRequest._();
+
+  factory EncryptSecretRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EncryptSecretRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EncryptSecretRequest',
@@ -1126,25 +1000,20 @@ class EncryptSecretRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'clientSecret')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EncryptSecretRequest clone() =>
-      EncryptSecretRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EncryptSecretRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EncryptSecretRequest copyWith(void Function(EncryptSecretRequest) updates) =>
       super.copyWith((message) => updates(message as EncryptSecretRequest))
           as EncryptSecretRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EncryptSecretRequest create() => EncryptSecretRequest._();
+  @$core.override
   EncryptSecretRequest createEmptyInstance() => create();
-  static $pb.PbList<EncryptSecretRequest> createRepeated() =>
-      $pb.PbList<EncryptSecretRequest>();
   @$core.pragma('dart2js:noInline')
   static EncryptSecretRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EncryptSecretRequest>(create);
@@ -1154,14 +1023,11 @@ class EncryptSecretRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get clientSecret => $_getSZ(0);
   @$pb.TagNumber(1)
-  set clientSecret($core.String v) {
-    $_setString(0, v);
-  }
-
+  set clientSecret($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasClientSecret() => $_has(0);
   @$pb.TagNumber(1)
-  void clearClientSecret() => clearField(1);
+  void clearClientSecret() => $_clearField(1);
 }
 
 /// RPC response for EncryptSecret.
@@ -1169,19 +1035,20 @@ class EncryptSecretResponse extends $pb.GeneratedMessage {
   factory EncryptSecretResponse({
     $5.AccountLinkingSecret? accountLinkingSecret,
   }) {
-    final $result = create();
-    if (accountLinkingSecret != null) {
-      $result.accountLinkingSecret = accountLinkingSecret;
-    }
-    return $result;
+    final result = create();
+    if (accountLinkingSecret != null)
+      result.accountLinkingSecret = accountLinkingSecret;
+    return result;
   }
-  EncryptSecretResponse._() : super();
-  factory EncryptSecretResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EncryptSecretResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EncryptSecretResponse._();
+
+  factory EncryptSecretResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EncryptSecretResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EncryptSecretResponse',
@@ -1193,26 +1060,21 @@ class EncryptSecretResponse extends $pb.GeneratedMessage {
         subBuilder: $5.AccountLinkingSecret.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EncryptSecretResponse clone() =>
-      EncryptSecretResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EncryptSecretResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EncryptSecretResponse copyWith(
           void Function(EncryptSecretResponse) updates) =>
       super.copyWith((message) => updates(message as EncryptSecretResponse))
           as EncryptSecretResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EncryptSecretResponse create() => EncryptSecretResponse._();
+  @$core.override
   EncryptSecretResponse createEmptyInstance() => create();
-  static $pb.PbList<EncryptSecretResponse> createRepeated() =>
-      $pb.PbList<EncryptSecretResponse>();
   @$core.pragma('dart2js:noInline')
   static EncryptSecretResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EncryptSecretResponse>(create);
@@ -1223,14 +1085,12 @@ class EncryptSecretResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $5.AccountLinkingSecret get accountLinkingSecret => $_getN(0);
   @$pb.TagNumber(1)
-  set accountLinkingSecret($5.AccountLinkingSecret v) {
-    setField(1, v);
-  }
-
+  set accountLinkingSecret($5.AccountLinkingSecret value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAccountLinkingSecret() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAccountLinkingSecret() => clearField(1);
+  void clearAccountLinkingSecret() => $_clearField(1);
   @$pb.TagNumber(1)
   $5.AccountLinkingSecret ensureAccountLinkingSecret() => $_ensure(0);
 }
@@ -1240,19 +1100,20 @@ class DecryptSecretRequest extends $pb.GeneratedMessage {
   factory DecryptSecretRequest({
     $core.List<$core.int>? encryptedClientSecret,
   }) {
-    final $result = create();
-    if (encryptedClientSecret != null) {
-      $result.encryptedClientSecret = encryptedClientSecret;
-    }
-    return $result;
+    final result = create();
+    if (encryptedClientSecret != null)
+      result.encryptedClientSecret = encryptedClientSecret;
+    return result;
   }
-  DecryptSecretRequest._() : super();
-  factory DecryptSecretRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DecryptSecretRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DecryptSecretRequest._();
+
+  factory DecryptSecretRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DecryptSecretRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DecryptSecretRequest',
@@ -1263,25 +1124,20 @@ class DecryptSecretRequest extends $pb.GeneratedMessage {
         1, _omitFieldNames ? '' : 'encryptedClientSecret', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DecryptSecretRequest clone() =>
-      DecryptSecretRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DecryptSecretRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DecryptSecretRequest copyWith(void Function(DecryptSecretRequest) updates) =>
       super.copyWith((message) => updates(message as DecryptSecretRequest))
           as DecryptSecretRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DecryptSecretRequest create() => DecryptSecretRequest._();
+  @$core.override
   DecryptSecretRequest createEmptyInstance() => create();
-  static $pb.PbList<DecryptSecretRequest> createRepeated() =>
-      $pb.PbList<DecryptSecretRequest>();
   @$core.pragma('dart2js:noInline')
   static DecryptSecretRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DecryptSecretRequest>(create);
@@ -1291,14 +1147,12 @@ class DecryptSecretRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.List<$core.int> get encryptedClientSecret => $_getN(0);
   @$pb.TagNumber(1)
-  set encryptedClientSecret($core.List<$core.int> v) {
-    $_setBytes(0, v);
-  }
-
+  set encryptedClientSecret($core.List<$core.int> value) =>
+      $_setBytes(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEncryptedClientSecret() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEncryptedClientSecret() => clearField(1);
+  void clearEncryptedClientSecret() => $_clearField(1);
 }
 
 /// RPC response for DecryptSecret.
@@ -1306,19 +1160,19 @@ class DecryptSecretResponse extends $pb.GeneratedMessage {
   factory DecryptSecretResponse({
     $core.String? clientSecret,
   }) {
-    final $result = create();
-    if (clientSecret != null) {
-      $result.clientSecret = clientSecret;
-    }
-    return $result;
+    final result = create();
+    if (clientSecret != null) result.clientSecret = clientSecret;
+    return result;
   }
-  DecryptSecretResponse._() : super();
-  factory DecryptSecretResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DecryptSecretResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DecryptSecretResponse._();
+
+  factory DecryptSecretResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DecryptSecretResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DecryptSecretResponse',
@@ -1328,26 +1182,21 @@ class DecryptSecretResponse extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'clientSecret')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DecryptSecretResponse clone() =>
-      DecryptSecretResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DecryptSecretResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DecryptSecretResponse copyWith(
           void Function(DecryptSecretResponse) updates) =>
       super.copyWith((message) => updates(message as DecryptSecretResponse))
           as DecryptSecretResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DecryptSecretResponse create() => DecryptSecretResponse._();
+  @$core.override
   DecryptSecretResponse createEmptyInstance() => create();
-  static $pb.PbList<DecryptSecretResponse> createRepeated() =>
-      $pb.PbList<DecryptSecretResponse>();
   @$core.pragma('dart2js:noInline')
   static DecryptSecretResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DecryptSecretResponse>(create);
@@ -1357,14 +1206,11 @@ class DecryptSecretResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get clientSecret => $_getSZ(0);
   @$pb.TagNumber(1)
-  set clientSecret($core.String v) {
-    $_setString(0, v);
-  }
-
+  set clientSecret($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasClientSecret() => $_has(0);
   @$pb.TagNumber(1)
-  void clearClientSecret() => clearField(1);
+  void clearClientSecret() => $_clearField(1);
 }
 
 /// RPC request for ListSampleProjects.
@@ -1373,52 +1219,45 @@ class ListSampleProjectsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListSampleProjectsRequest._() : super();
-  factory ListSampleProjectsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListSampleProjectsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListSampleProjectsRequest._();
+
+  factory ListSampleProjectsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListSampleProjectsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListSampleProjectsRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.actions.sdk.v2'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'pageSize')
     ..aOS(2, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListSampleProjectsRequest clone() =>
-      ListSampleProjectsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSampleProjectsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListSampleProjectsRequest copyWith(
           void Function(ListSampleProjectsRequest) updates) =>
       super.copyWith((message) => updates(message as ListSampleProjectsRequest))
           as ListSampleProjectsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListSampleProjectsRequest create() => ListSampleProjectsRequest._();
+  @$core.override
   ListSampleProjectsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListSampleProjectsRequest> createRepeated() =>
-      $pb.PbList<ListSampleProjectsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListSampleProjectsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListSampleProjectsRequest>(create);
@@ -1431,28 +1270,22 @@ class ListSampleProjectsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get pageSize => $_getIZ(0);
   @$pb.TagNumber(1)
-  set pageSize($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPageSize() => clearField(1);
+  void clearPageSize() => $_clearField(1);
 
   /// Optional. A page token, received from a previous 'ListSampleProjects' call.
   /// Provide this to retrieve the subsequent page.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set pageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set pageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageToken() => clearField(2);
+  void clearPageToken() => $_clearField(2);
 }
 
 /// RPC response for ListSampleProjects.
@@ -1461,55 +1294,47 @@ class ListSampleProjectsResponse extends $pb.GeneratedMessage {
     $core.Iterable<SampleProject>? sampleProjects,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (sampleProjects != null) {
-      $result.sampleProjects.addAll(sampleProjects);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (sampleProjects != null) result.sampleProjects.addAll(sampleProjects);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListSampleProjectsResponse._() : super();
-  factory ListSampleProjectsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListSampleProjectsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListSampleProjectsResponse._();
+
+  factory ListSampleProjectsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListSampleProjectsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListSampleProjectsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.actions.sdk.v2'),
       createEmptyInstance: create)
-    ..pc<SampleProject>(
-        1, _omitFieldNames ? '' : 'sampleProjects', $pb.PbFieldType.PM,
+    ..pPM<SampleProject>(1, _omitFieldNames ? '' : 'sampleProjects',
         subBuilder: SampleProject.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListSampleProjectsResponse clone() =>
-      ListSampleProjectsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSampleProjectsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListSampleProjectsResponse copyWith(
           void Function(ListSampleProjectsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListSampleProjectsResponse))
           as ListSampleProjectsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListSampleProjectsResponse create() => ListSampleProjectsResponse._();
+  @$core.override
   ListSampleProjectsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListSampleProjectsResponse> createRepeated() =>
-      $pb.PbList<ListSampleProjectsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListSampleProjectsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListSampleProjectsResponse>(create);
@@ -1517,21 +1342,18 @@ class ListSampleProjectsResponse extends $pb.GeneratedMessage {
 
   /// The list of sample projects supported.
   @$pb.TagNumber(1)
-  $core.List<SampleProject> get sampleProjects => $_getList(0);
+  $pb.PbList<SampleProject> get sampleProjects => $_getList(0);
 
   /// A token, which can be sent as `page_token` to retrieve the next page.
   /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Definition of sample project resource.
@@ -1541,25 +1363,21 @@ class SampleProject extends $pb.GeneratedMessage {
     $core.String? hostedUrl,
     $core.String? description,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (hostedUrl != null) {
-      $result.hostedUrl = hostedUrl;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (hostedUrl != null) result.hostedUrl = hostedUrl;
+    if (description != null) result.description = description;
+    return result;
   }
-  SampleProject._() : super();
-  factory SampleProject.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SampleProject.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SampleProject._();
+
+  factory SampleProject.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SampleProject.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SampleProject',
@@ -1571,24 +1389,20 @@ class SampleProject extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'description')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SampleProject clone() => SampleProject()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SampleProject clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SampleProject copyWith(void Function(SampleProject) updates) =>
       super.copyWith((message) => updates(message as SampleProject))
           as SampleProject;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SampleProject create() => SampleProject._();
+  @$core.override
   SampleProject createEmptyInstance() => create();
-  static $pb.PbList<SampleProject> createRepeated() =>
-      $pb.PbList<SampleProject>();
   @$core.pragma('dart2js:noInline')
   static SampleProject getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SampleProject>(create);
@@ -1599,40 +1413,31 @@ class SampleProject extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The URL to the zip file where the sample is hosted.
   @$pb.TagNumber(2)
   $core.String get hostedUrl => $_getSZ(1);
   @$pb.TagNumber(2)
-  set hostedUrl($core.String v) {
-    $_setString(1, v);
-  }
-
+  set hostedUrl($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasHostedUrl() => $_has(1);
   @$pb.TagNumber(2)
-  void clearHostedUrl() => clearField(2);
+  void clearHostedUrl() => $_clearField(2);
 
   /// The description of the sample project.
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(3)
-  set description($core.String v) {
-    $_setString(2, v);
-  }
-
+  set description($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDescription() => clearField(3);
+  void clearDescription() => $_clearField(3);
 }
 
 /// RPC request for listing release channels
@@ -1642,25 +1447,21 @@ class ListReleaseChannelsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListReleaseChannelsRequest._() : super();
-  factory ListReleaseChannelsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListReleaseChannelsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListReleaseChannelsRequest._();
+
+  factory ListReleaseChannelsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListReleaseChannelsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListReleaseChannelsRequest',
@@ -1668,31 +1469,26 @@ class ListReleaseChannelsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.actions.sdk.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListReleaseChannelsRequest clone() =>
-      ListReleaseChannelsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListReleaseChannelsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListReleaseChannelsRequest copyWith(
           void Function(ListReleaseChannelsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListReleaseChannelsRequest))
           as ListReleaseChannelsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListReleaseChannelsRequest create() => ListReleaseChannelsRequest._();
+  @$core.override
   ListReleaseChannelsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListReleaseChannelsRequest> createRepeated() =>
-      $pb.PbList<ListReleaseChannelsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListReleaseChannelsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListReleaseChannelsRequest>(create);
@@ -1703,14 +1499,11 @@ class ListReleaseChannelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// The maximum number of release channels to return. The service may return
   /// fewer than this value. If unspecified, at most 50 release channels will be
@@ -1718,14 +1511,11 @@ class ListReleaseChannelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// A page token, received from a previous `ListReleaseChannels` call.
   /// Provide this to retrieve the subsequent page.
@@ -1734,14 +1524,11 @@ class ListReleaseChannelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 }
 
 /// RPC response for listing release channels
@@ -1750,56 +1537,48 @@ class ListReleaseChannelsResponse extends $pb.GeneratedMessage {
     $core.Iterable<$6.ReleaseChannel>? releaseChannels,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (releaseChannels != null) {
-      $result.releaseChannels.addAll(releaseChannels);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (releaseChannels != null) result.releaseChannels.addAll(releaseChannels);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListReleaseChannelsResponse._() : super();
-  factory ListReleaseChannelsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListReleaseChannelsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListReleaseChannelsResponse._();
+
+  factory ListReleaseChannelsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListReleaseChannelsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListReleaseChannelsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.actions.sdk.v2'),
       createEmptyInstance: create)
-    ..pc<$6.ReleaseChannel>(
-        1, _omitFieldNames ? '' : 'releaseChannels', $pb.PbFieldType.PM,
+    ..pPM<$6.ReleaseChannel>(1, _omitFieldNames ? '' : 'releaseChannels',
         subBuilder: $6.ReleaseChannel.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListReleaseChannelsResponse clone() =>
-      ListReleaseChannelsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListReleaseChannelsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListReleaseChannelsResponse copyWith(
           void Function(ListReleaseChannelsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListReleaseChannelsResponse))
           as ListReleaseChannelsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListReleaseChannelsResponse create() =>
       ListReleaseChannelsResponse._();
+  @$core.override
   ListReleaseChannelsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListReleaseChannelsResponse> createRepeated() =>
-      $pb.PbList<ListReleaseChannelsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListReleaseChannelsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListReleaseChannelsResponse>(create);
@@ -1807,21 +1586,18 @@ class ListReleaseChannelsResponse extends $pb.GeneratedMessage {
 
   /// List of the release channels for the given project id.
   @$pb.TagNumber(1)
-  $core.List<$6.ReleaseChannel> get releaseChannels => $_getList(0);
+  $pb.PbList<$6.ReleaseChannel> get releaseChannels => $_getList(0);
 
   /// A token, which can be sent as `page_token` to retrieve the next page.
   /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// RPC request for listing versions
@@ -1831,25 +1607,21 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListVersionsRequest._() : super();
-  factory ListVersionsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListVersionsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListVersionsRequest._();
+
+  factory ListVersionsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListVersionsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListVersionsRequest',
@@ -1857,28 +1629,24 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.actions.sdk.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListVersionsRequest clone() => ListVersionsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListVersionsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListVersionsRequest copyWith(void Function(ListVersionsRequest) updates) =>
       super.copyWith((message) => updates(message as ListVersionsRequest))
           as ListVersionsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListVersionsRequest create() => ListVersionsRequest._();
+  @$core.override
   ListVersionsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListVersionsRequest> createRepeated() =>
-      $pb.PbList<ListVersionsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListVersionsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListVersionsRequest>(create);
@@ -1889,14 +1657,11 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// The maximum number of versions to return. The service may return
   /// fewer than this value. If unspecified, at most 50 versions will be
@@ -1904,14 +1669,11 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// A page token, received from a previous `ListVersions` call.
   /// Provide this to retrieve the subsequent page.
@@ -1920,14 +1682,11 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 }
 
 /// RPC response for listing versions
@@ -1936,52 +1695,45 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
     $core.Iterable<$1.Version>? versions,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (versions != null) {
-      $result.versions.addAll(versions);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (versions != null) result.versions.addAll(versions);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListVersionsResponse._() : super();
-  factory ListVersionsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListVersionsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListVersionsResponse._();
+
+  factory ListVersionsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListVersionsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListVersionsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.actions.sdk.v2'),
       createEmptyInstance: create)
-    ..pc<$1.Version>(1, _omitFieldNames ? '' : 'versions', $pb.PbFieldType.PM,
+    ..pPM<$1.Version>(1, _omitFieldNames ? '' : 'versions',
         subBuilder: $1.Version.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListVersionsResponse clone() =>
-      ListVersionsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListVersionsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListVersionsResponse copyWith(void Function(ListVersionsResponse) updates) =>
       super.copyWith((message) => updates(message as ListVersionsResponse))
           as ListVersionsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListVersionsResponse create() => ListVersionsResponse._();
+  @$core.override
   ListVersionsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListVersionsResponse> createRepeated() =>
-      $pb.PbList<ListVersionsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListVersionsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListVersionsResponse>(create);
@@ -1989,23 +1741,21 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
 
   /// List of the versions for the given project id.
   @$pb.TagNumber(1)
-  $core.List<$1.Version> get versions => $_getList(0);
+  $pb.PbList<$1.Version> get versions => $_getList(0);
 
   /// A token, which can be sent as `page_token` to retrieve the next page.
   /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

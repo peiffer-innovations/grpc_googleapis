@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/protobuf/type.proto
-//
-// @dart = 2.12
+// Generated from google/protobuf/type.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -19,12 +21,14 @@ const Syntax$json = {
   '2': [
     {'1': 'SYNTAX_PROTO2', '2': 0},
     {'1': 'SYNTAX_PROTO3', '2': 1},
+    {'1': 'SYNTAX_EDITIONS', '2': 2},
   ],
 };
 
 /// Descriptor for `Syntax`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List syntaxDescriptor = $convert.base64Decode(
-    'CgZTeW50YXgSEQoNU1lOVEFYX1BST1RPMhAAEhEKDVNZTlRBWF9QUk9UTzMQAQ==');
+    'CgZTeW50YXgSEQoNU1lOVEFYX1BST1RPMhAAEhEKDVNZTlRBWF9QUk9UTzMQARITCg9TWU5UQV'
+    'hfRURJVElPTlMQAg==');
 
 @$core.Deprecated('Use typeDescriptor instead')
 const Type$json = {
@@ -64,6 +68,7 @@ const Type$json = {
       '6': '.google.protobuf.Syntax',
       '10': 'syntax'
     },
+    {'1': 'edition', '3': 7, '4': 1, '5': 9, '10': 'edition'},
   ],
 };
 
@@ -73,7 +78,8 @@ final $typed_data.Uint8List typeDescriptor = $convert.base64Decode(
     'RvYnVmLkZpZWxkUgZmaWVsZHMSFgoGb25lb2ZzGAMgAygJUgZvbmVvZnMSMQoHb3B0aW9ucxgE'
     'IAMoCzIXLmdvb2dsZS5wcm90b2J1Zi5PcHRpb25SB29wdGlvbnMSRQoOc291cmNlX2NvbnRleH'
     'QYBSABKAsyHi5nb29nbGUucHJvdG9idWYuU291cmNlQ29udGV4dFINc291cmNlQ29udGV4dBIv'
-    'CgZzeW50YXgYBiABKA4yFy5nb29nbGUucHJvdG9idWYuU3ludGF4UgZzeW50YXg=');
+    'CgZzeW50YXgYBiABKA4yFy5nb29nbGUucHJvdG9idWYuU3ludGF4UgZzeW50YXgSGAoHZWRpdG'
+    'lvbhgHIAEoCVIHZWRpdGlvbg==');
 
 @$core.Deprecated('Use fieldDescriptor instead')
 const Field$json = {
@@ -206,6 +212,7 @@ const Enum$json = {
       '6': '.google.protobuf.Syntax',
       '10': 'syntax'
     },
+    {'1': 'edition', '3': 6, '4': 1, '5': 9, '10': 'edition'},
   ],
 };
 
@@ -215,7 +222,8 @@ final $typed_data.Uint8List enumDescriptor = $convert.base64Decode(
     'Byb3RvYnVmLkVudW1WYWx1ZVIJZW51bXZhbHVlEjEKB29wdGlvbnMYAyADKAsyFy5nb29nbGUu'
     'cHJvdG9idWYuT3B0aW9uUgdvcHRpb25zEkUKDnNvdXJjZV9jb250ZXh0GAQgASgLMh4uZ29vZ2'
     'xlLnByb3RvYnVmLlNvdXJjZUNvbnRleHRSDXNvdXJjZUNvbnRleHQSLwoGc3ludGF4GAUgASgO'
-    'MhcuZ29vZ2xlLnByb3RvYnVmLlN5bnRheFIGc3ludGF4');
+    'MhcuZ29vZ2xlLnByb3RvYnVmLlN5bnRheFIGc3ludGF4EhgKB2VkaXRpb24YBiABKAlSB2VkaX'
+    'Rpb24=');
 
 @$core.Deprecated('Use enumValueDescriptor instead')
 const EnumValue$json = {

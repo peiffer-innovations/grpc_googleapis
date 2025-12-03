@@ -1,19 +1,22 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/appengine/v1/network_settings.proto
-//
-// @dart = 2.12
+// Generated from google/appengine/v1/network_settings.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'network_settings.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'network_settings.pbenum.dart';
 
@@ -23,51 +26,45 @@ class NetworkSettings extends $pb.GeneratedMessage {
   factory NetworkSettings({
     NetworkSettings_IngressTrafficAllowed? ingressTrafficAllowed,
   }) {
-    final $result = create();
-    if (ingressTrafficAllowed != null) {
-      $result.ingressTrafficAllowed = ingressTrafficAllowed;
-    }
-    return $result;
+    final result = create();
+    if (ingressTrafficAllowed != null)
+      result.ingressTrafficAllowed = ingressTrafficAllowed;
+    return result;
   }
-  NetworkSettings._() : super();
-  factory NetworkSettings.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory NetworkSettings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  NetworkSettings._();
+
+  factory NetworkSettings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory NetworkSettings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'NetworkSettings',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
       createEmptyInstance: create)
-    ..e<NetworkSettings_IngressTrafficAllowed>(
-        1, _omitFieldNames ? '' : 'ingressTrafficAllowed', $pb.PbFieldType.OE,
-        defaultOrMaker: NetworkSettings_IngressTrafficAllowed
-            .INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED,
-        valueOf: NetworkSettings_IngressTrafficAllowed.valueOf,
+    ..aE<NetworkSettings_IngressTrafficAllowed>(
+        1, _omitFieldNames ? '' : 'ingressTrafficAllowed',
         enumValues: NetworkSettings_IngressTrafficAllowed.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  NetworkSettings clone() => NetworkSettings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  NetworkSettings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   NetworkSettings copyWith(void Function(NetworkSettings) updates) =>
       super.copyWith((message) => updates(message as NetworkSettings))
           as NetworkSettings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static NetworkSettings create() => NetworkSettings._();
+  @$core.override
   NetworkSettings createEmptyInstance() => create();
-  static $pb.PbList<NetworkSettings> createRepeated() =>
-      $pb.PbList<NetworkSettings>();
   @$core.pragma('dart2js:noInline')
   static NetworkSettings getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<NetworkSettings>(create);
@@ -77,16 +74,15 @@ class NetworkSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   NetworkSettings_IngressTrafficAllowed get ingressTrafficAllowed => $_getN(0);
   @$pb.TagNumber(1)
-  set ingressTrafficAllowed(NetworkSettings_IngressTrafficAllowed v) {
-    setField(1, v);
-  }
-
+  set ingressTrafficAllowed(NetworkSettings_IngressTrafficAllowed value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasIngressTrafficAllowed() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIngressTrafficAllowed() => clearField(1);
+  void clearIngressTrafficAllowed() => $_clearField(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

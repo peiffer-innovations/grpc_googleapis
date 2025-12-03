@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/fleetengine/v1/trips.proto
-//
-// @dart = 2.12
+// Generated from google/maps/fleetengine/v1/trips.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -343,6 +345,14 @@ const Trip$json = {
       '6': '.maps.fleetengine.v1.TripView',
       '10': 'view'
     },
+    {
+      '1': 'attributes',
+      '3': 35,
+      '4': 3,
+      '5': 11,
+      '6': '.maps.fleetengine.v1.TripAttribute',
+      '10': 'attributes'
+    },
   ],
   '7': {},
 };
@@ -398,8 +408,9 @@ final $typed_data.Uint8List tripDescriptor = $convert.base64Decode(
     'b2NhdGlvbhgLIAEoCzIkLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZUxvY2F0aW9uQgPgQQ'
     'NSDGxhc3RMb2NhdGlvbhI7ChdsYXN0X2xvY2F0aW9uX3NuYXBwYWJsZRgaIAEoCEID4EEDUhVs'
     'YXN0TG9jYXRpb25TbmFwcGFibGUSMQoEdmlldxgfIAEoDjIdLm1hcHMuZmxlZXRlbmdpbmUudj'
-    'EuVHJpcFZpZXdSBHZpZXc6R+pBRAofZmxlZXRlbmdpbmUuZ29vZ2xlYXBpcy5jb20vVHJpcBIh'
-    'cHJvdmlkZXJzL3twcm92aWRlcn0vdHJpcHMve3RyaXB9');
+    'EuVHJpcFZpZXdSBHZpZXcSQgoKYXR0cmlidXRlcxgjIAMoCzIiLm1hcHMuZmxlZXRlbmdpbmUu'
+    'djEuVHJpcEF0dHJpYnV0ZVIKYXR0cmlidXRlczpH6kFECh9mbGVldGVuZ2luZS5nb29nbGVhcG'
+    'lzLmNvbS9UcmlwEiFwcm92aWRlcnMve3Byb3ZpZGVyfS90cmlwcy97dHJpcH0=');
 
 @$core.Deprecated('Use stopLocationDescriptor instead')
 const StopLocation$json = {

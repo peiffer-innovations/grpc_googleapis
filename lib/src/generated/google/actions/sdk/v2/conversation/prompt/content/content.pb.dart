@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/conversation/prompt/content/content.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/conversation/prompt/content/content.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -20,6 +21,8 @@ import 'image.pb.dart' as $1;
 import 'list.pb.dart' as $6;
 import 'media.pb.dart' as $3;
 import 'table.pb.dart' as $2;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum Content_Content {
   card,
@@ -43,38 +46,25 @@ class Content extends $pb.GeneratedMessage {
     $5.Collection? collection,
     $6.List_? list,
   }) {
-    final $result = create();
-    if (card != null) {
-      $result.card = card;
-    }
-    if (image != null) {
-      $result.image = image;
-    }
-    if (table != null) {
-      $result.table = table;
-    }
-    if (media != null) {
-      $result.media = media;
-    }
-    if (canvas != null) {
-      // ignore: deprecated_member_use_from_same_package
-      $result.canvas = canvas;
-    }
-    if (collection != null) {
-      $result.collection = collection;
-    }
-    if (list != null) {
-      $result.list = list;
-    }
-    return $result;
+    final result = create();
+    if (card != null) result.card = card;
+    if (image != null) result.image = image;
+    if (table != null) result.table = table;
+    if (media != null) result.media = media;
+    if (canvas != null) result.canvas = canvas;
+    if (collection != null) result.collection = collection;
+    if (list != null) result.list = list;
+    return result;
   }
-  Content._() : super();
-  factory Content.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Content.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Content._();
+
+  factory Content.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Content.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Content_Content> _Content_ContentByTag = {
     1: Content_Content.card,
@@ -107,42 +97,50 @@ class Content extends $pb.GeneratedMessage {
         subBuilder: $6.List_.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Content clone() => Content()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Content clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Content copyWith(void Function(Content) updates) =>
       super.copyWith((message) => updates(message as Content)) as Content;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Content create() => Content._();
+  @$core.override
   Content createEmptyInstance() => create();
-  static $pb.PbList<Content> createRepeated() => $pb.PbList<Content>();
   @$core.pragma('dart2js:noInline')
   static Content getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Content>(create);
   static Content? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
   Content_Content whichContent() => _Content_ContentByTag[$_whichOneof(0)]!;
-  void clearContent() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  void clearContent() => $_clearField($_whichOneof(0));
 
   /// A basic card.
   @$pb.TagNumber(1)
   $0.Card get card => $_getN(0);
   @$pb.TagNumber(1)
-  set card($0.Card v) {
-    setField(1, v);
-  }
-
+  set card($0.Card value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasCard() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCard() => clearField(1);
+  void clearCard() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Card ensureCard() => $_ensure(0);
 
@@ -150,14 +148,11 @@ class Content extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.Image get image => $_getN(1);
   @$pb.TagNumber(2)
-  set image($1.Image v) {
-    setField(2, v);
-  }
-
+  set image($1.Image value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasImage() => $_has(1);
   @$pb.TagNumber(2)
-  void clearImage() => clearField(2);
+  void clearImage() => $_clearField(2);
   @$pb.TagNumber(2)
   $1.Image ensureImage() => $_ensure(1);
 
@@ -165,14 +160,11 @@ class Content extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $2.Table get table => $_getN(2);
   @$pb.TagNumber(3)
-  set table($2.Table v) {
-    setField(3, v);
-  }
-
+  set table($2.Table value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasTable() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTable() => clearField(3);
+  void clearTable() => $_clearField(3);
   @$pb.TagNumber(3)
   $2.Table ensureTable() => $_ensure(2);
 
@@ -180,14 +172,11 @@ class Content extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $3.Media get media => $_getN(3);
   @$pb.TagNumber(4)
-  set media($3.Media v) {
-    setField(4, v);
-  }
-
+  set media($3.Media value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasMedia() => $_has(3);
   @$pb.TagNumber(4)
-  void clearMedia() => clearField(4);
+  void clearMedia() => $_clearField(4);
   @$pb.TagNumber(4)
   $3.Media ensureMedia() => $_ensure(3);
 
@@ -197,16 +186,13 @@ class Content extends $pb.GeneratedMessage {
   $4.Canvas get canvas => $_getN(4);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  set canvas($4.Canvas v) {
-    setField(5, v);
-  }
-
+  set canvas($4.Canvas value) => $_setField(5, value);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $core.bool hasCanvas() => $_has(4);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  void clearCanvas() => clearField(5);
+  void clearCanvas() => $_clearField(5);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $4.Canvas ensureCanvas() => $_ensure(4);
@@ -215,14 +201,11 @@ class Content extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $5.Collection get collection => $_getN(5);
   @$pb.TagNumber(6)
-  set collection($5.Collection v) {
-    setField(6, v);
-  }
-
+  set collection($5.Collection value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasCollection() => $_has(5);
   @$pb.TagNumber(6)
-  void clearCollection() => clearField(6);
+  void clearCollection() => $_clearField(6);
   @$pb.TagNumber(6)
   $5.Collection ensureCollection() => $_ensure(5);
 
@@ -230,18 +213,16 @@ class Content extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $6.List_ get list => $_getN(6);
   @$pb.TagNumber(7)
-  set list($6.List_ v) {
-    setField(7, v);
-  }
-
+  set list($6.List_ value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasList() => $_has(6);
   @$pb.TagNumber(7)
-  void clearList() => clearField(7);
+  void clearList() => $_clearField(7);
   @$pb.TagNumber(7)
   $6.List_ ensureList() => $_ensure(6);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

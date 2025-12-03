@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/dataflow/v1beta3/environment.proto
-//
-// @dart = 2.12
+// Generated from google/dataflow/v1beta3/environment.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -124,6 +126,22 @@ final $typed_data.Uint8List shuffleModeDescriptor = $convert.base64Decode(
     'CgtTaHVmZmxlTW9kZRIcChhTSFVGRkxFX01PREVfVU5TUEVDSUZJRUQQABIMCghWTV9CQVNFRB'
     'ABEhEKDVNFUlZJQ0VfQkFTRUQQAg==');
 
+@$core.Deprecated('Use streamingModeDescriptor instead')
+const StreamingMode$json = {
+  '1': 'StreamingMode',
+  '2': [
+    {'1': 'STREAMING_MODE_UNSPECIFIED', '2': 0},
+    {'1': 'STREAMING_MODE_EXACTLY_ONCE', '2': 1},
+    {'1': 'STREAMING_MODE_AT_LEAST_ONCE', '2': 2},
+  ],
+};
+
+/// Descriptor for `StreamingMode`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List streamingModeDescriptor = $convert.base64Decode(
+    'Cg1TdHJlYW1pbmdNb2RlEh4KGlNUUkVBTUlOR19NT0RFX1VOU1BFQ0lGSUVEEAASHwobU1RSRU'
+    'FNSU5HX01PREVfRVhBQ1RMWV9PTkNFEAESIAocU1RSRUFNSU5HX01PREVfQVRfTEVBU1RfT05D'
+    'RRAC');
+
 @$core.Deprecated('Use environmentDescriptor instead')
 const Environment$json = {
   '1': 'Environment',
@@ -143,12 +161,20 @@ const Environment$json = {
       '10': 'clusterManagerApiService'
     },
     {'1': 'experiments', '3': 3, '4': 3, '5': 9, '10': 'experiments'},
-    {'1': 'service_options', '3': 16, '4': 3, '5': 9, '10': 'serviceOptions'},
+    {
+      '1': 'service_options',
+      '3': 16,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'serviceOptions'
+    },
     {
       '1': 'service_kms_key_name',
       '3': 12,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'serviceKmsKeyName'
     },
     {
@@ -175,7 +201,7 @@ const Environment$json = {
       '6': '.google.protobuf.Struct',
       '10': 'version'
     },
-    {'1': 'dataset', '3': 7, '4': 1, '5': 9, '10': 'dataset'},
+    {'1': 'dataset', '3': 7, '4': 1, '5': 9, '8': {}, '10': 'dataset'},
     {
       '1': 'sdk_pipeline_options',
       '3': 8,
@@ -197,6 +223,7 @@ const Environment$json = {
       '3': 10,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'serviceAccountEmail'
     },
     {
@@ -205,10 +232,18 @@ const Environment$json = {
       '4': 1,
       '5': 14,
       '6': '.google.dataflow.v1beta3.FlexResourceSchedulingGoal',
+      '8': {},
       '10': 'flexResourceSchedulingGoal'
     },
-    {'1': 'worker_region', '3': 13, '4': 1, '5': 9, '10': 'workerRegion'},
-    {'1': 'worker_zone', '3': 14, '4': 1, '5': 9, '10': 'workerZone'},
+    {
+      '1': 'worker_region',
+      '3': 13,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'workerRegion'
+    },
+    {'1': 'worker_zone', '3': 14, '4': 1, '5': 9, '8': {}, '10': 'workerZone'},
     {
       '1': 'shuffle_mode',
       '3': 15,
@@ -224,7 +259,25 @@ const Environment$json = {
       '4': 1,
       '5': 11,
       '6': '.google.dataflow.v1beta3.DebugOptions',
+      '8': {},
       '10': 'debugOptions'
+    },
+    {
+      '1': 'use_streaming_engine_resource_based_billing',
+      '3': 18,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'useStreamingEngineResourceBasedBilling'
+    },
+    {
+      '1': 'streaming_mode',
+      '3': 19,
+      '4': 1,
+      '5': 14,
+      '6': '.google.dataflow.v1beta3.StreamingMode',
+      '8': {},
+      '10': 'streamingMode'
     },
   ],
 };
@@ -233,22 +286,26 @@ const Environment$json = {
 final $typed_data.Uint8List environmentDescriptor = $convert.base64Decode(
     'CgtFbnZpcm9ubWVudBIuChN0ZW1wX3N0b3JhZ2VfcHJlZml4GAEgASgJUhF0ZW1wU3RvcmFnZV'
     'ByZWZpeBI9ChtjbHVzdGVyX21hbmFnZXJfYXBpX3NlcnZpY2UYAiABKAlSGGNsdXN0ZXJNYW5h'
-    'Z2VyQXBpU2VydmljZRIgCgtleHBlcmltZW50cxgDIAMoCVILZXhwZXJpbWVudHMSJwoPc2Vydm'
-    'ljZV9vcHRpb25zGBAgAygJUg5zZXJ2aWNlT3B0aW9ucxIvChRzZXJ2aWNlX2ttc19rZXlfbmFt'
-    'ZRgMIAEoCVIRc2VydmljZUttc0tleU5hbWUSRgoMd29ya2VyX3Bvb2xzGAQgAygLMiMuZ29vZ2'
-    'xlLmRhdGFmbG93LnYxYmV0YTMuV29ya2VyUG9vbFILd29ya2VyUG9vbHMSNgoKdXNlcl9hZ2Vu'
-    'dBgFIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RSCXVzZXJBZ2VudBIxCgd2ZXJzaW9uGA'
-    'YgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdFIHdmVyc2lvbhIYCgdkYXRhc2V0GAcgASgJ'
-    'UgdkYXRhc2V0EkkKFHNka19waXBlbGluZV9vcHRpb25zGAggASgLMhcuZ29vZ2xlLnByb3RvYn'
-    'VmLlN0cnVjdFISc2RrUGlwZWxpbmVPcHRpb25zEkcKFGludGVybmFsX2V4cGVyaW1lbnRzGAkg'
-    'ASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueVITaW50ZXJuYWxFeHBlcmltZW50cxIyChVzZXJ2aW'
-    'NlX2FjY291bnRfZW1haWwYCiABKAlSE3NlcnZpY2VBY2NvdW50RW1haWwSdgodZmxleF9yZXNv'
-    'dXJjZV9zY2hlZHVsaW5nX2dvYWwYCyABKA4yMy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5GbG'
-    'V4UmVzb3VyY2VTY2hlZHVsaW5nR29hbFIaZmxleFJlc291cmNlU2NoZWR1bGluZ0dvYWwSIwoN'
-    'd29ya2VyX3JlZ2lvbhgNIAEoCVIMd29ya2VyUmVnaW9uEh8KC3dvcmtlcl96b25lGA4gASgJUg'
-    'p3b3JrZXJab25lEkwKDHNodWZmbGVfbW9kZRgPIAEoDjIkLmdvb2dsZS5kYXRhZmxvdy52MWJl'
-    'dGEzLlNodWZmbGVNb2RlQgPgQQNSC3NodWZmbGVNb2RlEkoKDWRlYnVnX29wdGlvbnMYESABKA'
-    'syJS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5EZWJ1Z09wdGlvbnNSDGRlYnVnT3B0aW9ucw==');
+    'Z2VyQXBpU2VydmljZRIgCgtleHBlcmltZW50cxgDIAMoCVILZXhwZXJpbWVudHMSLAoPc2Vydm'
+    'ljZV9vcHRpb25zGBAgAygJQgPgQQFSDnNlcnZpY2VPcHRpb25zEjQKFHNlcnZpY2Vfa21zX2tl'
+    'eV9uYW1lGAwgASgJQgPgQQFSEXNlcnZpY2VLbXNLZXlOYW1lEkYKDHdvcmtlcl9wb29scxgEIA'
+    'MoCzIjLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLldvcmtlclBvb2xSC3dvcmtlclBvb2xzEjYK'
+    'CnVzZXJfYWdlbnQYBSABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0Ugl1c2VyQWdlbnQSMQ'
+    'oHdmVyc2lvbhgGIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RSB3ZlcnNpb24SHQoHZGF0'
+    'YXNldBgHIAEoCUID4EEBUgdkYXRhc2V0EkkKFHNka19waXBlbGluZV9vcHRpb25zGAggASgLMh'
+    'cuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdFISc2RrUGlwZWxpbmVPcHRpb25zEkcKFGludGVybmFs'
+    'X2V4cGVyaW1lbnRzGAkgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueVITaW50ZXJuYWxFeHBlcm'
+    'ltZW50cxI3ChVzZXJ2aWNlX2FjY291bnRfZW1haWwYCiABKAlCA+BBAVITc2VydmljZUFjY291'
+    'bnRFbWFpbBJ7Ch1mbGV4X3Jlc291cmNlX3NjaGVkdWxpbmdfZ29hbBgLIAEoDjIzLmdvb2dsZS'
+    '5kYXRhZmxvdy52MWJldGEzLkZsZXhSZXNvdXJjZVNjaGVkdWxpbmdHb2FsQgPgQQFSGmZsZXhS'
+    'ZXNvdXJjZVNjaGVkdWxpbmdHb2FsEigKDXdvcmtlcl9yZWdpb24YDSABKAlCA+BBAVIMd29ya2'
+    'VyUmVnaW9uEiQKC3dvcmtlcl96b25lGA4gASgJQgPgQQFSCndvcmtlclpvbmUSTAoMc2h1ZmZs'
+    'ZV9tb2RlGA8gASgOMiQuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuU2h1ZmZsZU1vZGVCA+BBA1'
+    'ILc2h1ZmZsZU1vZGUSTwoNZGVidWdfb3B0aW9ucxgRIAEoCzIlLmdvb2dsZS5kYXRhZmxvdy52'
+    'MWJldGEzLkRlYnVnT3B0aW9uc0ID4EEBUgxkZWJ1Z09wdGlvbnMSYAordXNlX3N0cmVhbWluZ1'
+    '9lbmdpbmVfcmVzb3VyY2VfYmFzZWRfYmlsbGluZxgSIAEoCEID4EEDUiZ1c2VTdHJlYW1pbmdF'
+    'bmdpbmVSZXNvdXJjZUJhc2VkQmlsbGluZxJSCg5zdHJlYW1pbmdfbW9kZRgTIAEoDjImLmdvb2'
+    'dsZS5kYXRhZmxvdy52MWJldGEzLlN0cmVhbWluZ01vZGVCA+BBAVINc3RyZWFtaW5nTW9kZQ==');
 
 @$core.Deprecated('Use packageDescriptor instead')
 const Package$json = {
@@ -620,6 +677,41 @@ final $typed_data.Uint8List workerPoolDescriptor = $convert.base64Decode(
     'RhaW5lckltYWdlcxo7Cg1NZXRhZGF0YUVudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVl'
     'GAIgASgJUgV2YWx1ZToCOAE=');
 
+@$core.Deprecated('Use dataSamplingConfigDescriptor instead')
+const DataSamplingConfig$json = {
+  '1': 'DataSamplingConfig',
+  '2': [
+    {
+      '1': 'behaviors',
+      '3': 1,
+      '4': 3,
+      '5': 14,
+      '6': '.google.dataflow.v1beta3.DataSamplingConfig.DataSamplingBehavior',
+      '10': 'behaviors'
+    },
+  ],
+  '4': [DataSamplingConfig_DataSamplingBehavior$json],
+};
+
+@$core.Deprecated('Use dataSamplingConfigDescriptor instead')
+const DataSamplingConfig_DataSamplingBehavior$json = {
+  '1': 'DataSamplingBehavior',
+  '2': [
+    {'1': 'DATA_SAMPLING_BEHAVIOR_UNSPECIFIED', '2': 0},
+    {'1': 'DISABLED', '2': 1},
+    {'1': 'ALWAYS_ON', '2': 2},
+    {'1': 'EXCEPTIONS', '2': 3},
+  ],
+};
+
+/// Descriptor for `DataSamplingConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List dataSamplingConfigDescriptor = $convert.base64Decode(
+    'ChJEYXRhU2FtcGxpbmdDb25maWcSXgoJYmVoYXZpb3JzGAEgAygOMkAuZ29vZ2xlLmRhdGFmbG'
+    '93LnYxYmV0YTMuRGF0YVNhbXBsaW5nQ29uZmlnLkRhdGFTYW1wbGluZ0JlaGF2aW9yUgliZWhh'
+    'dmlvcnMiawoURGF0YVNhbXBsaW5nQmVoYXZpb3ISJgoiREFUQV9TQU1QTElOR19CRUhBVklPUl'
+    '9VTlNQRUNJRklFRBAAEgwKCERJU0FCTEVEEAESDQoJQUxXQVlTX09OEAISDgoKRVhDRVBUSU9O'
+    'UxAD');
+
 @$core.Deprecated('Use debugOptionsDescriptor instead')
 const DebugOptions$json = {
   '1': 'DebugOptions',
@@ -629,12 +721,22 @@ const DebugOptions$json = {
       '3': 1,
       '4': 1,
       '5': 8,
+      '8': {},
       '10': 'enableHotKeyLogging'
+    },
+    {
+      '1': 'data_sampling',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.dataflow.v1beta3.DataSamplingConfig',
+      '10': 'dataSampling'
     },
   ],
 };
 
 /// Descriptor for `DebugOptions`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List debugOptionsDescriptor = $convert.base64Decode(
-    'CgxEZWJ1Z09wdGlvbnMSMwoWZW5hYmxlX2hvdF9rZXlfbG9nZ2luZxgBIAEoCFITZW5hYmxlSG'
-    '90S2V5TG9nZ2luZw==');
+    'CgxEZWJ1Z09wdGlvbnMSOAoWZW5hYmxlX2hvdF9rZXlfbG9nZ2luZxgBIAEoCEID4EEBUhNlbm'
+    'FibGVIb3RLZXlMb2dnaW5nElAKDWRhdGFfc2FtcGxpbmcYAiABKAsyKy5nb29nbGUuZGF0YWZs'
+    'b3cudjFiZXRhMy5EYXRhU2FtcGxpbmdDb25maWdSDGRhdGFTYW1wbGluZw==');

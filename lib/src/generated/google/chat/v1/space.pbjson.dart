@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/chat/v1/space.proto
-//
-// @dart = 2.12
+// Generated from google/chat/v1/space.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -133,6 +135,16 @@ const Space$json = {
       '8': {},
       '10': 'accessSettings'
     },
+    {
+      '1': 'customer',
+      '3': 24,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '9': 1,
+      '10': 'customer',
+      '17': true
+    },
     {'1': 'space_uri', '3': 25, '4': 1, '5': 9, '8': {}, '10': 'spaceUri'},
     {
       '1': 'predefined_permission_settings',
@@ -180,6 +192,7 @@ const Space$json = {
   '7': {},
   '8': [
     {'1': 'space_permission_settings'},
+    {'1': '_customer'},
   ],
 };
 
@@ -361,6 +374,16 @@ const Space_PermissionSetting$json = {
       '10': 'managersAllowed'
     },
     {
+      '1': 'assistant_managers_allowed',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '9': 0,
+      '10': 'assistantManagersAllowed',
+      '17': true
+    },
+    {
       '1': 'members_allowed',
       '3': 2,
       '4': 1,
@@ -368,6 +391,9 @@ const Space_PermissionSetting$json = {
       '8': {},
       '10': 'membersAllowed'
     },
+  ],
+  '8': [
+    {'1': '_assistant_managers_allowed'},
   ],
 };
 
@@ -433,49 +459,52 @@ final $typed_data.Uint8List spaceDescriptor = $convert.base64Decode(
     'oQbWVtYmVyc2hpcF9jb3VudBgUIAEoCzIlLmdvb2dsZS5jaGF0LnYxLlNwYWNlLk1lbWJlcnNo'
     'aXBDb3VudEID4EEDUg9tZW1iZXJzaGlwQ291bnQSUgoPYWNjZXNzX3NldHRpbmdzGBcgASgLMi'
     'QuZ29vZ2xlLmNoYXQudjEuU3BhY2UuQWNjZXNzU2V0dGluZ3NCA+BBAVIOYWNjZXNzU2V0dGlu'
-    'Z3MSIAoJc3BhY2VfdXJpGBkgASgJQgPgQQNSCHNwYWNlVXJpEoIBCh5wcmVkZWZpbmVkX3Blcm'
-    '1pc3Npb25fc2V0dGluZ3MYGiABKA4yMi5nb29nbGUuY2hhdC52MS5TcGFjZS5QcmVkZWZpbmVk'
-    'UGVybWlzc2lvblNldHRpbmdzQgbgQQTgQQFIAFIccHJlZGVmaW5lZFBlcm1pc3Npb25TZXR0aW'
-    '5ncxJgChNwZXJtaXNzaW9uX3NldHRpbmdzGBsgASgLMiguZ29vZ2xlLmNoYXQudjEuU3BhY2Uu'
-    'UGVybWlzc2lvblNldHRpbmdzQgPgQQFIAFIScGVybWlzc2lvblNldHRpbmdzElYKF2ltcG9ydF'
-    '9tb2RlX2V4cGlyZV90aW1lGBwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED'
-    'UhRpbXBvcnRNb2RlRXhwaXJlVGltZRpaCgxTcGFjZURldGFpbHMSJQoLZGVzY3JpcHRpb24YAS'
-    'ABKAlCA+BBAVILZGVzY3JpcHRpb24SIwoKZ3VpZGVsaW5lcxgCIAEoCUID4EEBUgpndWlkZWxp'
-    'bmVzGo0BCg9NZW1iZXJzaGlwQ291bnQSRwoeam9pbmVkX2RpcmVjdF9odW1hbl91c2VyX2NvdW'
-    '50GAQgASgFQgPgQQNSGmpvaW5lZERpcmVjdEh1bWFuVXNlckNvdW50EjEKEmpvaW5lZF9ncm91'
-    'cF9jb3VudBgFIAEoBUID4EEDUhBqb2luZWRHcm91cENvdW50GtcBCg5BY2Nlc3NTZXR0aW5ncx'
-    'JYCgxhY2Nlc3Nfc3RhdGUYASABKA4yMC5nb29nbGUuY2hhdC52MS5TcGFjZS5BY2Nlc3NTZXR0'
-    'aW5ncy5BY2Nlc3NTdGF0ZUID4EEDUgthY2Nlc3NTdGF0ZRIfCghhdWRpZW5jZRgDIAEoCUID4E'
-    'EBUghhdWRpZW5jZSJKCgtBY2Nlc3NTdGF0ZRIcChhBQ0NFU1NfU1RBVEVfVU5TUEVDSUZJRUQQ'
-    'ABILCgdQUklWQVRFEAESEAoMRElTQ09WRVJBQkxFEAIarQcKElBlcm1pc3Npb25TZXR0aW5ncx'
-    'JsChltYW5hZ2VfbWVtYmVyc19hbmRfZ3JvdXBzGAEgASgLMicuZ29vZ2xlLmNoYXQudjEuU3Bh'
-    'Y2UuUGVybWlzc2lvblNldHRpbmdCA+BBAUgAUhZtYW5hZ2VNZW1iZXJzQW5kR3JvdXBziAEBEm'
-    'MKFG1vZGlmeV9zcGFjZV9kZXRhaWxzGAIgASgLMicuZ29vZ2xlLmNoYXQudjEuU3BhY2UuUGVy'
-    'bWlzc2lvblNldHRpbmdCA+BBAUgBUhJtb2RpZnlTcGFjZURldGFpbHOIAQESWAoOdG9nZ2xlX2'
-    'hpc3RvcnkYAyABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0ID'
-    '4EEBSAJSDXRvZ2dsZUhpc3RvcnmIAQESXgoSdXNlX2F0X21lbnRpb25fYWxsGAQgASgLMicuZ2'
-    '9vZ2xlLmNoYXQudjEuU3BhY2UuUGVybWlzc2lvblNldHRpbmdCA+BBAUgDUg91c2VBdE1lbnRp'
-    'b25BbGyIAQESUgoLbWFuYWdlX2FwcHMYBSABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZX'
-    'JtaXNzaW9uU2V0dGluZ0ID4EEBSARSCm1hbmFnZUFwcHOIAQESWgoPbWFuYWdlX3dlYmhvb2tz'
-    'GAYgASgLMicuZ29vZ2xlLmNoYXQudjEuU3BhY2UuUGVybWlzc2lvblNldHRpbmdCA+BBAUgFUg'
-    '5tYW5hZ2VXZWJob29rc4gBARJWCg1wb3N0X21lc3NhZ2VzGAcgASgLMicuZ29vZ2xlLmNoYXQu'
-    'djEuU3BhY2UuUGVybWlzc2lvblNldHRpbmdCA+BBA0gGUgxwb3N0TWVzc2FnZXOIAQESWAoOcm'
-    'VwbHlfbWVzc2FnZXMYCCABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0'
-    'dGluZ0ID4EEBSAdSDXJlcGx5TWVzc2FnZXOIAQFCHAoaX21hbmFnZV9tZW1iZXJzX2FuZF9ncm'
-    '91cHNCFwoVX21vZGlmeV9zcGFjZV9kZXRhaWxzQhEKD190b2dnbGVfaGlzdG9yeUIVChNfdXNl'
-    'X2F0X21lbnRpb25fYWxsQg4KDF9tYW5hZ2VfYXBwc0ISChBfbWFuYWdlX3dlYmhvb2tzQhAKDl'
-    '9wb3N0X21lc3NhZ2VzQhEKD19yZXBseV9tZXNzYWdlcxpxChFQZXJtaXNzaW9uU2V0dGluZxIu'
-    'ChBtYW5hZ2Vyc19hbGxvd2VkGAEgASgIQgPgQQFSD21hbmFnZXJzQWxsb3dlZBIsCg9tZW1iZX'
-    'JzX2FsbG93ZWQYAiABKAhCA+BBAVIObWVtYmVyc0FsbG93ZWQiLgoEVHlwZRIUChBUWVBFX1VO'
-    'U1BFQ0lGSUVEEAASCAoEUk9PTRABEgYKAkRNEAIiVgoJU3BhY2VUeXBlEhoKFlNQQUNFX1RZUE'
-    'VfVU5TUEVDSUZJRUQQABIJCgVTUEFDRRABEg4KCkdST1VQX0NIQVQQAhISCg5ESVJFQ1RfTUVT'
-    'U0FHRRADIoIBChNTcGFjZVRocmVhZGluZ1N0YXRlEiUKIVNQQUNFX1RIUkVBRElOR19TVEFURV'
-    '9VTlNQRUNJRklFRBAAEhUKEVRIUkVBREVEX01FU1NBR0VTEAISFAoQR1JPVVBFRF9NRVNTQUdF'
-    'UxADEhcKE1VOVEhSRUFERURfTUVTU0FHRVMQBCJ/ChxQcmVkZWZpbmVkUGVybWlzc2lvblNldH'
-    'RpbmdzEi4KKlBSRURFRklORURfUEVSTUlTU0lPTl9TRVRUSU5HU19VTlNQRUNJRklFRBAAEhcK'
-    'E0NPTExBQk9SQVRJT05fU1BBQ0UQARIWChJBTk5PVU5DRU1FTlRfU1BBQ0UQAjou6kErChljaG'
-    'F0Lmdvb2dsZWFwaXMuY29tL1NwYWNlEg5zcGFjZXMve3NwYWNlfUIbChlzcGFjZV9wZXJtaXNz'
-    'aW9uX3NldHRpbmdz');
+    'Z3MSJwoIY3VzdG9tZXIYGCABKAlCBuBBBeBBAUgBUghjdXN0b21lcogBARIgCglzcGFjZV91cm'
+    'kYGSABKAlCA+BBA1IIc3BhY2VVcmkSggEKHnByZWRlZmluZWRfcGVybWlzc2lvbl9zZXR0aW5n'
+    'cxgaIAEoDjIyLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlByZWRlZmluZWRQZXJtaXNzaW9uU2V0dG'
+    'luZ3NCBuBBBOBBAUgAUhxwcmVkZWZpbmVkUGVybWlzc2lvblNldHRpbmdzEmAKE3Blcm1pc3Np'
+    'b25fc2V0dGluZ3MYGyABKAsyKC5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0dG'
+    'luZ3NCA+BBAUgAUhJwZXJtaXNzaW9uU2V0dGluZ3MSVgoXaW1wb3J0X21vZGVfZXhwaXJlX3Rp'
+    'bWUYHCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSFGltcG9ydE1vZGVFeH'
+    'BpcmVUaW1lGloKDFNwYWNlRGV0YWlscxIlCgtkZXNjcmlwdGlvbhgBIAEoCUID4EEBUgtkZXNj'
+    'cmlwdGlvbhIjCgpndWlkZWxpbmVzGAIgASgJQgPgQQFSCmd1aWRlbGluZXMajQEKD01lbWJlcn'
+    'NoaXBDb3VudBJHCh5qb2luZWRfZGlyZWN0X2h1bWFuX3VzZXJfY291bnQYBCABKAVCA+BBA1Ia'
+    'am9pbmVkRGlyZWN0SHVtYW5Vc2VyQ291bnQSMQoSam9pbmVkX2dyb3VwX2NvdW50GAUgASgFQg'
+    'PgQQNSEGpvaW5lZEdyb3VwQ291bnQa1wEKDkFjY2Vzc1NldHRpbmdzElgKDGFjY2Vzc19zdGF0'
+    'ZRgBIAEoDjIwLmdvb2dsZS5jaGF0LnYxLlNwYWNlLkFjY2Vzc1NldHRpbmdzLkFjY2Vzc1N0YX'
+    'RlQgPgQQNSC2FjY2Vzc1N0YXRlEh8KCGF1ZGllbmNlGAMgASgJQgPgQQFSCGF1ZGllbmNlIkoK'
+    'C0FjY2Vzc1N0YXRlEhwKGEFDQ0VTU19TVEFURV9VTlNQRUNJRklFRBAAEgsKB1BSSVZBVEUQAR'
+    'IQCgxESVNDT1ZFUkFCTEUQAhqtBwoSUGVybWlzc2lvblNldHRpbmdzEmwKGW1hbmFnZV9tZW1i'
+    'ZXJzX2FuZF9ncm91cHMYASABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2'
+    'V0dGluZ0ID4EEBSABSFm1hbmFnZU1lbWJlcnNBbmRHcm91cHOIAQESYwoUbW9kaWZ5X3NwYWNl'
+    'X2RldGFpbHMYAiABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0'
+    'ID4EEBSAFSEm1vZGlmeVNwYWNlRGV0YWlsc4gBARJYCg50b2dnbGVfaGlzdG9yeRgDIAEoCzIn'
+    'Lmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nQgPgQQFIAlINdG9nZ2xlSG'
+    'lzdG9yeYgBARJeChJ1c2VfYXRfbWVudGlvbl9hbGwYBCABKAsyJy5nb29nbGUuY2hhdC52MS5T'
+    'cGFjZS5QZXJtaXNzaW9uU2V0dGluZ0ID4EEBSANSD3VzZUF0TWVudGlvbkFsbIgBARJSCgttYW'
+    '5hZ2VfYXBwcxgFIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5n'
+    'QgPgQQFIBFIKbWFuYWdlQXBwc4gBARJaCg9tYW5hZ2Vfd2ViaG9va3MYBiABKAsyJy5nb29nbG'
+    'UuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0ID4EEBSAVSDm1hbmFnZVdlYmhvb2tz'
+    'iAEBElYKDXBvc3RfbWVzc2FnZXMYByABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaX'
+    'NzaW9uU2V0dGluZ0ID4EEDSAZSDHBvc3RNZXNzYWdlc4gBARJYCg5yZXBseV9tZXNzYWdlcxgI'
+    'IAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nQgPgQQFIB1INcm'
+    'VwbHlNZXNzYWdlc4gBAUIcChpfbWFuYWdlX21lbWJlcnNfYW5kX2dyb3Vwc0IXChVfbW9kaWZ5'
+    'X3NwYWNlX2RldGFpbHNCEQoPX3RvZ2dsZV9oaXN0b3J5QhUKE191c2VfYXRfbWVudGlvbl9hbG'
+    'xCDgoMX21hbmFnZV9hcHBzQhIKEF9tYW5hZ2Vfd2ViaG9va3NCEAoOX3Bvc3RfbWVzc2FnZXNC'
+    'EQoPX3JlcGx5X21lc3NhZ2VzGtgBChFQZXJtaXNzaW9uU2V0dGluZxIuChBtYW5hZ2Vyc19hbG'
+    'xvd2VkGAEgASgIQgPgQQFSD21hbmFnZXJzQWxsb3dlZBJGChphc3Npc3RhbnRfbWFuYWdlcnNf'
+    'YWxsb3dlZBgDIAEoCEID4EEBSABSGGFzc2lzdGFudE1hbmFnZXJzQWxsb3dlZIgBARIsCg9tZW'
+    '1iZXJzX2FsbG93ZWQYAiABKAhCA+BBAVIObWVtYmVyc0FsbG93ZWRCHQobX2Fzc2lzdGFudF9t'
+    'YW5hZ2Vyc19hbGxvd2VkIi4KBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEggKBFJPT00QAR'
+    'IGCgJETRACIlYKCVNwYWNlVHlwZRIaChZTUEFDRV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFU1BB'
+    'Q0UQARIOCgpHUk9VUF9DSEFUEAISEgoORElSRUNUX01FU1NBR0UQAyKCAQoTU3BhY2VUaHJlYW'
+    'RpbmdTdGF0ZRIlCiFTUEFDRV9USFJFQURJTkdfU1RBVEVfVU5TUEVDSUZJRUQQABIVChFUSFJF'
+    'QURFRF9NRVNTQUdFUxACEhQKEEdST1VQRURfTUVTU0FHRVMQAxIXChNVTlRIUkVBREVEX01FU1'
+    'NBR0VTEAQifwocUHJlZGVmaW5lZFBlcm1pc3Npb25TZXR0aW5ncxIuCipQUkVERUZJTkVEX1BF'
+    'Uk1JU1NJT05fU0VUVElOR1NfVU5TUEVDSUZJRUQQABIXChNDT0xMQUJPUkFUSU9OX1NQQUNFEA'
+    'ESFgoSQU5OT1VOQ0VNRU5UX1NQQUNFEAI6LupBKwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFj'
+    'ZRIOc3BhY2VzL3tzcGFjZX1CGwoZc3BhY2VfcGVybWlzc2lvbl9zZXR0aW5nc0ILCglfY3VzdG'
+    '9tZXI=');
 
 @$core.Deprecated('Use createSpaceRequestDescriptor instead')
 const CreateSpaceRequest$json = {

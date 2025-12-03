@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/firestore/admin/v1/field.proto
-//
-// @dart = 2.12
+// Generated from google/firestore/admin/v1/field.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,6 +16,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'field.pbenum.dart';
 import 'index.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'field.pbenum.dart';
 
@@ -26,59 +29,50 @@ class Field_IndexConfig extends $pb.GeneratedMessage {
     $core.String? ancestorField,
     $core.bool? reverting,
   }) {
-    final $result = create();
-    if (indexes != null) {
-      $result.indexes.addAll(indexes);
-    }
-    if (usesAncestorConfig != null) {
-      $result.usesAncestorConfig = usesAncestorConfig;
-    }
-    if (ancestorField != null) {
-      $result.ancestorField = ancestorField;
-    }
-    if (reverting != null) {
-      $result.reverting = reverting;
-    }
-    return $result;
+    final result = create();
+    if (indexes != null) result.indexes.addAll(indexes);
+    if (usesAncestorConfig != null)
+      result.usesAncestorConfig = usesAncestorConfig;
+    if (ancestorField != null) result.ancestorField = ancestorField;
+    if (reverting != null) result.reverting = reverting;
+    return result;
   }
-  Field_IndexConfig._() : super();
-  factory Field_IndexConfig.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_IndexConfig.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_IndexConfig._();
+
+  factory Field_IndexConfig.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_IndexConfig.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.IndexConfig',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.firestore.admin.v1'),
       createEmptyInstance: create)
-    ..pc<$0.Index>(1, _omitFieldNames ? '' : 'indexes', $pb.PbFieldType.PM,
+    ..pPM<$0.Index>(1, _omitFieldNames ? '' : 'indexes',
         subBuilder: $0.Index.create)
     ..aOB(2, _omitFieldNames ? '' : 'usesAncestorConfig')
     ..aOS(3, _omitFieldNames ? '' : 'ancestorField')
     ..aOB(4, _omitFieldNames ? '' : 'reverting')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_IndexConfig clone() => Field_IndexConfig()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_IndexConfig clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_IndexConfig copyWith(void Function(Field_IndexConfig) updates) =>
       super.copyWith((message) => updates(message as Field_IndexConfig))
           as Field_IndexConfig;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_IndexConfig create() => Field_IndexConfig._();
+  @$core.override
   Field_IndexConfig createEmptyInstance() => create();
-  static $pb.PbList<Field_IndexConfig> createRepeated() =>
-      $pb.PbList<Field_IndexConfig>();
   @$core.pragma('dart2js:noInline')
   static Field_IndexConfig getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_IndexConfig>(create);
@@ -86,7 +80,7 @@ class Field_IndexConfig extends $pb.GeneratedMessage {
 
   /// The indexes supported for this field.
   @$pb.TagNumber(1)
-  $core.List<$0.Index> get indexes => $_getList(0);
+  $pb.PbList<$0.Index> get indexes => $_getList(0);
 
   /// Output only. When true, the `Field`'s index configuration is set from the
   /// configuration specified by the `ancestor_field`.
@@ -94,14 +88,11 @@ class Field_IndexConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool get usesAncestorConfig => $_getBF(1);
   @$pb.TagNumber(2)
-  set usesAncestorConfig($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set usesAncestorConfig($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUsesAncestorConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUsesAncestorConfig() => clearField(2);
+  void clearUsesAncestorConfig() => $_clearField(2);
 
   /// Output only. Specifies the resource name of the `Field` from which this
   /// field's index configuration is set (when `uses_ancestor_config` is true),
@@ -110,14 +101,11 @@ class Field_IndexConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get ancestorField => $_getSZ(2);
   @$pb.TagNumber(3)
-  set ancestorField($core.String v) {
-    $_setString(2, v);
-  }
-
+  set ancestorField($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasAncestorField() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAncestorField() => clearField(3);
+  void clearAncestorField() => $_clearField(3);
 
   /// Output only
   /// When true, the `Field`'s index configuration is in the process of being
@@ -127,72 +115,62 @@ class Field_IndexConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get reverting => $_getBF(3);
   @$pb.TagNumber(4)
-  set reverting($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set reverting($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasReverting() => $_has(3);
   @$pb.TagNumber(4)
-  void clearReverting() => clearField(4);
+  void clearReverting() => $_clearField(4);
 }
 
-///  The TTL (time-to-live) configuration for documents that have this `Field`
-///  set.
+/// The TTL (time-to-live) configuration for documents that have this `Field`
+/// set.
 ///
-///  Storing a timestamp value into a TTL-enabled field will be treated as
-///  the document's absolute expiration time. Timestamp values in the past
-///  indicate that the document is eligible for immediate expiration. Using any
-///  other data type or leaving the field absent will disable expiration for the
-///  individual document.
+/// Storing a timestamp value into a TTL-enabled field will be treated as
+/// the document's absolute expiration time. Timestamp values in the past
+/// indicate that the document is eligible for immediate expiration. Using any
+/// other data type or leaving the field absent will disable expiration for the
+/// individual document.
 class Field_TtlConfig extends $pb.GeneratedMessage {
   factory Field_TtlConfig({
     Field_TtlConfig_State? state,
   }) {
-    final $result = create();
-    if (state != null) {
-      $result.state = state;
-    }
-    return $result;
+    final result = create();
+    if (state != null) result.state = state;
+    return result;
   }
-  Field_TtlConfig._() : super();
-  factory Field_TtlConfig.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_TtlConfig.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_TtlConfig._();
+
+  factory Field_TtlConfig.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_TtlConfig.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.TtlConfig',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.firestore.admin.v1'),
       createEmptyInstance: create)
-    ..e<Field_TtlConfig_State>(
-        1, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
-        defaultOrMaker: Field_TtlConfig_State.STATE_UNSPECIFIED,
-        valueOf: Field_TtlConfig_State.valueOf,
+    ..aE<Field_TtlConfig_State>(1, _omitFieldNames ? '' : 'state',
         enumValues: Field_TtlConfig_State.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_TtlConfig clone() => Field_TtlConfig()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_TtlConfig clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_TtlConfig copyWith(void Function(Field_TtlConfig) updates) =>
       super.copyWith((message) => updates(message as Field_TtlConfig))
           as Field_TtlConfig;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_TtlConfig create() => Field_TtlConfig._();
+  @$core.override
   Field_TtlConfig createEmptyInstance() => create();
-  static $pb.PbList<Field_TtlConfig> createRepeated() =>
-      $pb.PbList<Field_TtlConfig>();
   @$core.pragma('dart2js:noInline')
   static Field_TtlConfig getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_TtlConfig>(create);
@@ -202,45 +180,38 @@ class Field_TtlConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Field_TtlConfig_State get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(Field_TtlConfig_State v) {
-    setField(1, v);
-  }
-
+  set state(Field_TtlConfig_State value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => clearField(1);
+  void clearState() => $_clearField(1);
 }
 
-///  Represents a single field in the database.
+/// Represents a single field in the database.
 ///
-///  Fields are grouped by their "Collection Group", which represent all
-///  collections in the database with the same ID.
+/// Fields are grouped by their "Collection Group", which represent all
+/// collections in the database with the same ID.
 class Field extends $pb.GeneratedMessage {
   factory Field({
     $core.String? name,
     Field_IndexConfig? indexConfig,
     Field_TtlConfig? ttlConfig,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (indexConfig != null) {
-      $result.indexConfig = indexConfig;
-    }
-    if (ttlConfig != null) {
-      $result.ttlConfig = ttlConfig;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (indexConfig != null) result.indexConfig = indexConfig;
+    if (ttlConfig != null) result.ttlConfig = ttlConfig;
+    return result;
   }
-  Field._() : super();
-  factory Field.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field._();
+
+  factory Field.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field',
@@ -254,62 +225,56 @@ class Field extends $pb.GeneratedMessage {
         subBuilder: Field_TtlConfig.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field clone() => Field()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field copyWith(void Function(Field) updates) =>
       super.copyWith((message) => updates(message as Field)) as Field;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field create() => Field._();
+  @$core.override
   Field createEmptyInstance() => create();
-  static $pb.PbList<Field> createRepeated() => $pb.PbList<Field>();
   @$core.pragma('dart2js:noInline')
   static Field getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Field>(create);
   static Field? _defaultInstance;
 
-  ///  Required. A field name of the form:
-  ///  `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_path}`
+  /// Required. A field name of the form:
+  /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_path}`
   ///
-  ///  A field path can be a simple field name, e.g. `address` or a path to fields
-  ///  within `map_value` , e.g. `address.city`,
-  ///  or a special field path. The only valid special field is `*`, which
-  ///  represents any field.
+  /// A field path can be a simple field name, e.g. `address` or a path to fields
+  /// within `map_value` , e.g. `address.city`,
+  /// or a special field path. The only valid special field is `*`, which
+  /// represents any field.
   ///
-  ///  Field paths can be quoted using `` ` `` (backtick). The only character that
-  ///  must be escaped within a quoted field path is the backtick character
-  ///  itself, escaped using a backslash. Special characters in field paths that
-  ///  must be quoted include: `*`, `.`,
-  ///  `` ` `` (backtick), `[`, `]`, as well as any ascii symbolic characters.
+  /// Field paths can be quoted using `` ` `` (backtick). The only character that
+  /// must be escaped within a quoted field path is the backtick character
+  /// itself, escaped using a backslash. Special characters in field paths that
+  /// must be quoted include: `*`, `.`,
+  /// `` ` `` (backtick), `[`, `]`, as well as any ascii symbolic characters.
   ///
-  ///  Examples:
-  ///  `` `address.city` `` represents a field named `address.city`, not the map
-  ///  key `city` in the field `address`. `` `*` `` represents a field named `*`,
-  ///  not any field.
+  /// Examples:
+  /// `` `address.city` `` represents a field named `address.city`, not the map
+  /// key `city` in the field `address`. `` `*` `` represents a field named `*`,
+  /// not any field.
   ///
-  ///  A special `Field` contains the default indexing settings for all fields.
-  ///  This field's resource name is:
-  ///  `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields/*`
-  ///  Indexes defined on this `Field` will be applied to all fields which do not
-  ///  have their own `Field` index configuration.
+  /// A special `Field` contains the default indexing settings for all fields.
+  /// This field's resource name is:
+  /// `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields/*`
+  /// Indexes defined on this `Field` will be applied to all fields which do not
+  /// have their own `Field` index configuration.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The index configuration for this field. If unset, field indexing will
   /// revert to the configuration defined by the `ancestor_field`. To
@@ -318,14 +283,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Field_IndexConfig get indexConfig => $_getN(1);
   @$pb.TagNumber(2)
-  set indexConfig(Field_IndexConfig v) {
-    setField(2, v);
-  }
-
+  set indexConfig(Field_IndexConfig value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasIndexConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIndexConfig() => clearField(2);
+  void clearIndexConfig() => $_clearField(2);
   @$pb.TagNumber(2)
   Field_IndexConfig ensureIndexConfig() => $_ensure(1);
 
@@ -335,18 +297,16 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Field_TtlConfig get ttlConfig => $_getN(2);
   @$pb.TagNumber(3)
-  set ttlConfig(Field_TtlConfig v) {
-    setField(3, v);
-  }
-
+  set ttlConfig(Field_TtlConfig value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasTtlConfig() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTtlConfig() => clearField(3);
+  void clearTtlConfig() => $_clearField(3);
   @$pb.TagNumber(3)
   Field_TtlConfig ensureTtlConfig() => $_ensure(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

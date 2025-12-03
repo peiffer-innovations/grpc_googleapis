@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/interactionmodel/scene.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/interactionmodel/scene.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -17,6 +18,8 @@ import 'conditional_event.pb.dart' as $2;
 import 'event_handler.pb.dart' as $0;
 import 'intent_event.pb.dart' as $1;
 import 'slot.pb.dart' as $3;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Scene is the basic unit of control flow when designing a conversation. They
 /// can be chained together with other scenes, generate prompts for the end user,
@@ -30,31 +33,24 @@ class Scene extends $pb.GeneratedMessage {
     $core.Iterable<$3.Slot>? slots,
     $0.EventHandler? onSlotUpdated,
   }) {
-    final $result = create();
-    if (onEnter != null) {
-      $result.onEnter = onEnter;
-    }
-    if (intentEvents != null) {
-      $result.intentEvents.addAll(intentEvents);
-    }
-    if (conditionalEvents != null) {
-      $result.conditionalEvents.addAll(conditionalEvents);
-    }
-    if (slots != null) {
-      $result.slots.addAll(slots);
-    }
-    if (onSlotUpdated != null) {
-      $result.onSlotUpdated = onSlotUpdated;
-    }
-    return $result;
+    final result = create();
+    if (onEnter != null) result.onEnter = onEnter;
+    if (intentEvents != null) result.intentEvents.addAll(intentEvents);
+    if (conditionalEvents != null)
+      result.conditionalEvents.addAll(conditionalEvents);
+    if (slots != null) result.slots.addAll(slots);
+    if (onSlotUpdated != null) result.onSlotUpdated = onSlotUpdated;
+    return result;
   }
-  Scene._() : super();
-  factory Scene.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Scene.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Scene._();
+
+  factory Scene.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Scene.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Scene',
@@ -63,34 +59,29 @@ class Scene extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$0.EventHandler>(1, _omitFieldNames ? '' : 'onEnter',
         subBuilder: $0.EventHandler.create)
-    ..pc<$1.IntentEvent>(
-        2, _omitFieldNames ? '' : 'intentEvents', $pb.PbFieldType.PM,
+    ..pPM<$1.IntentEvent>(2, _omitFieldNames ? '' : 'intentEvents',
         subBuilder: $1.IntentEvent.create)
-    ..pc<$2.ConditionalEvent>(
-        3, _omitFieldNames ? '' : 'conditionalEvents', $pb.PbFieldType.PM,
+    ..pPM<$2.ConditionalEvent>(3, _omitFieldNames ? '' : 'conditionalEvents',
         subBuilder: $2.ConditionalEvent.create)
-    ..pc<$3.Slot>(4, _omitFieldNames ? '' : 'slots', $pb.PbFieldType.PM,
+    ..pPM<$3.Slot>(4, _omitFieldNames ? '' : 'slots',
         subBuilder: $3.Slot.create)
     ..aOM<$0.EventHandler>(5, _omitFieldNames ? '' : 'onSlotUpdated',
         subBuilder: $0.EventHandler.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Scene clone() => Scene()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Scene clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Scene copyWith(void Function(Scene) updates) =>
       super.copyWith((message) => updates(message as Scene)) as Scene;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Scene create() => Scene._();
+  @$core.override
   Scene createEmptyInstance() => create();
-  static $pb.PbList<Scene> createRepeated() => $pb.PbList<Scene>();
   @$core.pragma('dart2js:noInline')
   static Scene getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Scene>(create);
@@ -100,14 +91,11 @@ class Scene extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.EventHandler get onEnter => $_getN(0);
   @$pb.TagNumber(1)
-  set onEnter($0.EventHandler v) {
-    setField(1, v);
-  }
-
+  set onEnter($0.EventHandler value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOnEnter() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOnEnter() => clearField(1);
+  void clearOnEnter() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.EventHandler ensureOnEnter() => $_ensure(0);
 
@@ -118,20 +106,20 @@ class Scene extends $pb.GeneratedMessage {
   /// have the same intents or their triggering phrases. Intent names must be
   /// unique within a scene.
   @$pb.TagNumber(2)
-  $core.List<$1.IntentEvent> get intentEvents => $_getList(1);
+  $pb.PbList<$1.IntentEvent> get intentEvents => $_getList(1);
 
   /// The list of events to trigger based on conditional statements. These are
   /// evaluated after the form has been filled or immediately after on_load if
   /// this scene does not have a form (evaluation is only done once). Only the
   /// first matching event will be triggered.
   @$pb.TagNumber(3)
-  $core.List<$2.ConditionalEvent> get conditionalEvents => $_getList(2);
+  $pb.PbList<$2.ConditionalEvent> get conditionalEvents => $_getList(2);
 
   /// Ordered list of slots. Each slot defines the type of data
   /// that it will resolve and configuration to customize the experience of this
   /// resolution (e.g. prompts).
   @$pb.TagNumber(4)
-  $core.List<$3.Slot> get slots => $_getList(3);
+  $pb.PbList<$3.Slot> get slots => $_getList(3);
 
   /// Handler called when there is a change in state of a slot not
   /// caused by updates within another Handler. This allows slots to be
@@ -139,18 +127,16 @@ class Scene extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $0.EventHandler get onSlotUpdated => $_getN(4);
   @$pb.TagNumber(5)
-  set onSlotUpdated($0.EventHandler v) {
-    setField(5, v);
-  }
-
+  set onSlotUpdated($0.EventHandler value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasOnSlotUpdated() => $_has(4);
   @$pb.TagNumber(5)
-  void clearOnSlotUpdated() => clearField(5);
+  void clearOnSlotUpdated() => $_clearField(5);
   @$pb.TagNumber(5)
   $0.EventHandler ensureOnSlotUpdated() => $_ensure(4);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

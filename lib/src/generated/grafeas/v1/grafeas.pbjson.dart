@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: grafeas/v1/grafeas.proto
-//
-// @dart = 2.12
+// Generated from grafeas/v1/grafeas.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -145,6 +147,15 @@ const Occurrence$json = {
       '10': 'sbomReference'
     },
     {
+      '1': 'secret',
+      '3': 20,
+      '4': 1,
+      '5': 11,
+      '6': '.grafeas.v1.SecretOccurrence',
+      '9': 0,
+      '10': 'secret'
+    },
+    {
       '1': 'envelope',
       '3': 18,
       '4': 1,
@@ -179,9 +190,10 @@ final $typed_data.Uint8List occurrenceDescriptor = $convert.base64Decode(
     '5Db21wbGlhbmNlT2NjdXJyZW5jZUgAUgpjb21wbGlhbmNlElIKEGRzc2VfYXR0ZXN0YXRpb24Y'
     'ESABKAsyJS5ncmFmZWFzLnYxLkRTU0VBdHRlc3RhdGlvbk9jY3VycmVuY2VIAFIPZHNzZUF0dG'
     'VzdGF0aW9uEkwKDnNib21fcmVmZXJlbmNlGBMgASgLMiMuZ3JhZmVhcy52MS5TQk9NUmVmZXJl'
-    'bmNlT2NjdXJyZW5jZUgAUg1zYm9tUmVmZXJlbmNlEjAKCGVudmVsb3BlGBIgASgLMhQuZ3JhZm'
-    'Vhcy52MS5FbnZlbG9wZVIIZW52ZWxvcGU6R+pBRAoVZ3JhZmVhcy5pby9PY2N1cnJlbmNlEitw'
-    'cm9qZWN0cy97cHJvamVjdH0vb2NjdXJyZW5jZXMve29jY3VycmVuY2V9QgkKB2RldGFpbHM=');
+    'bmNlT2NjdXJyZW5jZUgAUg1zYm9tUmVmZXJlbmNlEjYKBnNlY3JldBgUIAEoCzIcLmdyYWZlYX'
+    'MudjEuU2VjcmV0T2NjdXJyZW5jZUgAUgZzZWNyZXQSMAoIZW52ZWxvcGUYEiABKAsyFC5ncmFm'
+    'ZWFzLnYxLkVudmVsb3BlUghlbnZlbG9wZTpH6kFEChVncmFmZWFzLmlvL09jY3VycmVuY2USK3'
+    'Byb2plY3RzL3twcm9qZWN0fS9vY2N1cnJlbmNlcy97b2NjdXJyZW5jZX1CCQoHZGV0YWlscw==');
 
 @$core.Deprecated('Use noteDescriptor instead')
 const Note$json = {
@@ -351,6 +363,15 @@ const Note$json = {
       '9': 0,
       '10': 'sbomReference'
     },
+    {
+      '1': 'secret',
+      '3': 22,
+      '4': 1,
+      '5': 11,
+      '6': '.grafeas.v1.SecretNote',
+      '9': 0,
+      '10': 'secret'
+    },
   ],
   '7': {},
   '8': [
@@ -382,8 +403,9 @@ final $typed_data.Uint8List noteDescriptor = $convert.base64Decode(
     '5lcmFiaWxpdHlfYXNzZXNzbWVudBgUIAEoCzInLmdyYWZlYXMudjEuVnVsbmVyYWJpbGl0eUFz'
     'c2Vzc21lbnROb3RlSABSF3Z1bG5lcmFiaWxpdHlBc3Nlc3NtZW50EkYKDnNib21fcmVmZXJlbm'
     'NlGBUgASgLMh0uZ3JhZmVhcy52MS5TQk9NUmVmZXJlbmNlTm90ZUgAUg1zYm9tUmVmZXJlbmNl'
-    'OjXqQTIKD2dyYWZlYXMuaW8vTm90ZRIfcHJvamVjdHMve3Byb2plY3R9L25vdGVzL3tub3RlfU'
-    'IGCgR0eXBl');
+    'EjAKBnNlY3JldBgWIAEoCzIWLmdyYWZlYXMudjEuU2VjcmV0Tm90ZUgAUgZzZWNyZXQ6NepBMg'
+    'oPZ3JhZmVhcy5pby9Ob3RlEh9wcm9qZWN0cy97cHJvamVjdH0vbm90ZXMve25vdGV9QgYKBHR5'
+    'cGU=');
 
 @$core.Deprecated('Use getOccurrenceRequestDescriptor instead')
 const GetOccurrenceRequest$json = {
@@ -406,6 +428,13 @@ const ListOccurrencesRequest$json = {
     {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
     {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+    {
+      '1': 'return_partial_success',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '10': 'returnPartialSuccess'
+    },
   ],
 };
 
@@ -413,7 +442,8 @@ const ListOccurrencesRequest$json = {
 final $typed_data.Uint8List listOccurrencesRequestDescriptor = $convert.base64Decode(
     'ChZMaXN0T2NjdXJyZW5jZXNSZXF1ZXN0EjIKBnBhcmVudBgBIAEoCUIa4EEC+kEUChJncmFmZW'
     'FzLmlvL1Byb2plY3RSBnBhcmVudBIWCgZmaWx0ZXIYAiABKAlSBmZpbHRlchIbCglwYWdlX3Np'
-    'emUYAyABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YBCABKAlSCXBhZ2VUb2tlbg==');
+    'emUYAyABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YBCABKAlSCXBhZ2VUb2tlbhI0ChZyZX'
+    'R1cm5fcGFydGlhbF9zdWNjZXNzGAUgASgIUhRyZXR1cm5QYXJ0aWFsU3VjY2Vzcw==');
 
 @$core.Deprecated('Use listOccurrencesResponseDescriptor instead')
 const ListOccurrencesResponse$json = {
@@ -428,6 +458,7 @@ const ListOccurrencesResponse$json = {
       '10': 'occurrences'
     },
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {'1': 'unreachable', '3': 3, '4': 3, '5': 9, '8': {}, '10': 'unreachable'},
   ],
 };
 
@@ -435,7 +466,7 @@ const ListOccurrencesResponse$json = {
 final $typed_data.Uint8List listOccurrencesResponseDescriptor = $convert.base64Decode(
     'ChdMaXN0T2NjdXJyZW5jZXNSZXNwb25zZRI4CgtvY2N1cnJlbmNlcxgBIAMoCzIWLmdyYWZlYX'
     'MudjEuT2NjdXJyZW5jZVILb2NjdXJyZW5jZXMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1u'
-    'ZXh0UGFnZVRva2Vu');
+    'ZXh0UGFnZVRva2VuEiUKC3VucmVhY2hhYmxlGAMgAygJQgPgQQZSC3VucmVhY2hhYmxl');
 
 @$core.Deprecated('Use deleteOccurrenceRequestDescriptor instead')
 const DeleteOccurrenceRequest$json = {
@@ -541,6 +572,13 @@ const ListNotesRequest$json = {
     {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
     {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+    {
+      '1': 'return_partial_success',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '10': 'returnPartialSuccess'
+    },
   ],
 };
 
@@ -548,7 +586,8 @@ const ListNotesRequest$json = {
 final $typed_data.Uint8List listNotesRequestDescriptor = $convert.base64Decode(
     'ChBMaXN0Tm90ZXNSZXF1ZXN0EjIKBnBhcmVudBgBIAEoCUIa4EEC+kEUChJncmFmZWFzLmlvL1'
     'Byb2plY3RSBnBhcmVudBIWCgZmaWx0ZXIYAiABKAlSBmZpbHRlchIbCglwYWdlX3NpemUYAyAB'
-    'KAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YBCABKAlSCXBhZ2VUb2tlbg==');
+    'KAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4YBCABKAlSCXBhZ2VUb2tlbhI0ChZyZXR1cm5fcG'
+    'FydGlhbF9zdWNjZXNzGAUgASgIUhRyZXR1cm5QYXJ0aWFsU3VjY2Vzcw==');
 
 @$core.Deprecated('Use listNotesResponseDescriptor instead')
 const ListNotesResponse$json = {
@@ -563,13 +602,15 @@ const ListNotesResponse$json = {
       '10': 'notes'
     },
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {'1': 'unreachable', '3': 3, '4': 3, '5': 9, '8': {}, '10': 'unreachable'},
   ],
 };
 
 /// Descriptor for `ListNotesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listNotesResponseDescriptor = $convert.base64Decode(
     'ChFMaXN0Tm90ZXNSZXNwb25zZRImCgVub3RlcxgBIAMoCzIQLmdyYWZlYXMudjEuTm90ZVIFbm'
-    '90ZXMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');
+    '90ZXMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2VuEiUKC3VucmVhY2hh'
+    'YmxlGAMgAygJQgPgQQZSC3VucmVhY2hhYmxl');
 
 @$core.Deprecated('Use deleteNoteRequestDescriptor instead')
 const DeleteNoteRequest$json = {

@@ -1,22 +1,27 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/firestore/admin/v1/operation.proto
-//
-// @dart = 2.12
+// Generated from google/firestore/admin/v1/operation.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $0;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
 import 'index.pb.dart' as $1;
 import 'operation.pbenum.dart';
+import 'snapshot.pb.dart' as $2;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'operation.pbenum.dart';
 
@@ -32,34 +37,24 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
     Progress? progressDocuments,
     Progress? progressBytes,
   }) {
-    final $result = create();
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    if (index != null) {
-      $result.index = index;
-    }
-    if (state != null) {
-      $result.state = state;
-    }
-    if (progressDocuments != null) {
-      $result.progressDocuments = progressDocuments;
-    }
-    if (progressBytes != null) {
-      $result.progressBytes = progressBytes;
-    }
-    return $result;
+    final result = create();
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    if (index != null) result.index = index;
+    if (state != null) result.state = state;
+    if (progressDocuments != null) result.progressDocuments = progressDocuments;
+    if (progressBytes != null) result.progressBytes = progressBytes;
+    return result;
   }
-  IndexOperationMetadata._() : super();
-  factory IndexOperationMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory IndexOperationMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  IndexOperationMetadata._();
+
+  factory IndexOperationMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory IndexOperationMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'IndexOperationMetadata',
@@ -71,9 +66,7 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
     ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
         subBuilder: $0.Timestamp.create)
     ..aOS(3, _omitFieldNames ? '' : 'index')
-    ..e<OperationState>(4, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
-        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
-        valueOf: OperationState.valueOf,
+    ..aE<OperationState>(4, _omitFieldNames ? '' : 'state',
         enumValues: OperationState.values)
     ..aOM<Progress>(5, _omitFieldNames ? '' : 'progressDocuments',
         subBuilder: Progress.create)
@@ -81,26 +74,21 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
         subBuilder: Progress.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  IndexOperationMetadata clone() =>
-      IndexOperationMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  IndexOperationMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   IndexOperationMetadata copyWith(
           void Function(IndexOperationMetadata) updates) =>
       super.copyWith((message) => updates(message as IndexOperationMetadata))
           as IndexOperationMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static IndexOperationMetadata create() => IndexOperationMetadata._();
+  @$core.override
   IndexOperationMetadata createEmptyInstance() => create();
-  static $pb.PbList<IndexOperationMetadata> createRepeated() =>
-      $pb.PbList<IndexOperationMetadata>();
   @$core.pragma('dart2js:noInline')
   static IndexOperationMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<IndexOperationMetadata>(create);
@@ -110,14 +98,11 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
-  set startTime($0.Timestamp v) {
-    setField(1, v);
-  }
-
+  set startTime($0.Timestamp value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStartTime() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStartTime() => clearField(1);
+  void clearStartTime() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
@@ -126,14 +111,11 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
-  set endTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set endTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasEndTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEndTime() => clearField(2);
+  void clearEndTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
@@ -142,40 +124,31 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get index => $_getSZ(2);
   @$pb.TagNumber(3)
-  set index($core.String v) {
-    $_setString(2, v);
-  }
-
+  set index($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasIndex() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIndex() => clearField(3);
+  void clearIndex() => $_clearField(3);
 
   /// The state of the operation.
   @$pb.TagNumber(4)
   OperationState get state => $_getN(3);
   @$pb.TagNumber(4)
-  set state(OperationState v) {
-    setField(4, v);
-  }
-
+  set state(OperationState value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasState() => $_has(3);
   @$pb.TagNumber(4)
-  void clearState() => clearField(4);
+  void clearState() => $_clearField(4);
 
   /// The progress, in documents, of this operation.
   @$pb.TagNumber(5)
   Progress get progressDocuments => $_getN(4);
   @$pb.TagNumber(5)
-  set progressDocuments(Progress v) {
-    setField(5, v);
-  }
-
+  set progressDocuments(Progress value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasProgressDocuments() => $_has(4);
   @$pb.TagNumber(5)
-  void clearProgressDocuments() => clearField(5);
+  void clearProgressDocuments() => $_clearField(5);
   @$pb.TagNumber(5)
   Progress ensureProgressDocuments() => $_ensure(4);
 
@@ -183,14 +156,11 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   Progress get progressBytes => $_getN(5);
   @$pb.TagNumber(6)
-  set progressBytes(Progress v) {
-    setField(6, v);
-  }
-
+  set progressBytes(Progress value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasProgressBytes() => $_has(5);
   @$pb.TagNumber(6)
-  void clearProgressBytes() => clearField(6);
+  void clearProgressBytes() => $_clearField(6);
   @$pb.TagNumber(6)
   Progress ensureProgressBytes() => $_ensure(5);
 }
@@ -201,61 +171,51 @@ class FieldOperationMetadata_IndexConfigDelta extends $pb.GeneratedMessage {
     FieldOperationMetadata_IndexConfigDelta_ChangeType? changeType,
     $1.Index? index,
   }) {
-    final $result = create();
-    if (changeType != null) {
-      $result.changeType = changeType;
-    }
-    if (index != null) {
-      $result.index = index;
-    }
-    return $result;
+    final result = create();
+    if (changeType != null) result.changeType = changeType;
+    if (index != null) result.index = index;
+    return result;
   }
-  FieldOperationMetadata_IndexConfigDelta._() : super();
+
+  FieldOperationMetadata_IndexConfigDelta._();
+
   factory FieldOperationMetadata_IndexConfigDelta.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FieldOperationMetadata_IndexConfigDelta.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FieldOperationMetadata_IndexConfigDelta.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FieldOperationMetadata.IndexConfigDelta',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.firestore.admin.v1'),
       createEmptyInstance: create)
-    ..e<FieldOperationMetadata_IndexConfigDelta_ChangeType>(
-        1, _omitFieldNames ? '' : 'changeType', $pb.PbFieldType.OE,
-        defaultOrMaker: FieldOperationMetadata_IndexConfigDelta_ChangeType
-            .CHANGE_TYPE_UNSPECIFIED,
-        valueOf: FieldOperationMetadata_IndexConfigDelta_ChangeType.valueOf,
+    ..aE<FieldOperationMetadata_IndexConfigDelta_ChangeType>(
+        1, _omitFieldNames ? '' : 'changeType',
         enumValues: FieldOperationMetadata_IndexConfigDelta_ChangeType.values)
     ..aOM<$1.Index>(2, _omitFieldNames ? '' : 'index',
         subBuilder: $1.Index.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FieldOperationMetadata_IndexConfigDelta clone() =>
-      FieldOperationMetadata_IndexConfigDelta()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FieldOperationMetadata_IndexConfigDelta clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FieldOperationMetadata_IndexConfigDelta copyWith(
           void Function(FieldOperationMetadata_IndexConfigDelta) updates) =>
       super.copyWith((message) =>
               updates(message as FieldOperationMetadata_IndexConfigDelta))
           as FieldOperationMetadata_IndexConfigDelta;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FieldOperationMetadata_IndexConfigDelta create() =>
       FieldOperationMetadata_IndexConfigDelta._();
+  @$core.override
   FieldOperationMetadata_IndexConfigDelta createEmptyInstance() => create();
-  static $pb.PbList<FieldOperationMetadata_IndexConfigDelta> createRepeated() =>
-      $pb.PbList<FieldOperationMetadata_IndexConfigDelta>();
   @$core.pragma('dart2js:noInline')
   static FieldOperationMetadata_IndexConfigDelta getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -267,27 +227,22 @@ class FieldOperationMetadata_IndexConfigDelta extends $pb.GeneratedMessage {
   FieldOperationMetadata_IndexConfigDelta_ChangeType get changeType =>
       $_getN(0);
   @$pb.TagNumber(1)
-  set changeType(FieldOperationMetadata_IndexConfigDelta_ChangeType v) {
-    setField(1, v);
-  }
-
+  set changeType(FieldOperationMetadata_IndexConfigDelta_ChangeType value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasChangeType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearChangeType() => clearField(1);
+  void clearChangeType() => $_clearField(1);
 
   /// The index being changed.
   @$pb.TagNumber(2)
   $1.Index get index => $_getN(1);
   @$pb.TagNumber(2)
-  set index($1.Index v) {
-    setField(2, v);
-  }
-
+  set index($1.Index value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasIndex() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIndex() => clearField(2);
+  void clearIndex() => $_clearField(2);
   @$pb.TagNumber(2)
   $1.Index ensureIndex() => $_ensure(1);
 }
@@ -297,56 +252,48 @@ class FieldOperationMetadata_TtlConfigDelta extends $pb.GeneratedMessage {
   factory FieldOperationMetadata_TtlConfigDelta({
     FieldOperationMetadata_TtlConfigDelta_ChangeType? changeType,
   }) {
-    final $result = create();
-    if (changeType != null) {
-      $result.changeType = changeType;
-    }
-    return $result;
+    final result = create();
+    if (changeType != null) result.changeType = changeType;
+    return result;
   }
-  FieldOperationMetadata_TtlConfigDelta._() : super();
+
+  FieldOperationMetadata_TtlConfigDelta._();
+
   factory FieldOperationMetadata_TtlConfigDelta.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FieldOperationMetadata_TtlConfigDelta.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FieldOperationMetadata_TtlConfigDelta.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FieldOperationMetadata.TtlConfigDelta',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.firestore.admin.v1'),
       createEmptyInstance: create)
-    ..e<FieldOperationMetadata_TtlConfigDelta_ChangeType>(
-        1, _omitFieldNames ? '' : 'changeType', $pb.PbFieldType.OE,
-        defaultOrMaker: FieldOperationMetadata_TtlConfigDelta_ChangeType
-            .CHANGE_TYPE_UNSPECIFIED,
-        valueOf: FieldOperationMetadata_TtlConfigDelta_ChangeType.valueOf,
+    ..aE<FieldOperationMetadata_TtlConfigDelta_ChangeType>(
+        1, _omitFieldNames ? '' : 'changeType',
         enumValues: FieldOperationMetadata_TtlConfigDelta_ChangeType.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FieldOperationMetadata_TtlConfigDelta clone() =>
-      FieldOperationMetadata_TtlConfigDelta()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FieldOperationMetadata_TtlConfigDelta clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FieldOperationMetadata_TtlConfigDelta copyWith(
           void Function(FieldOperationMetadata_TtlConfigDelta) updates) =>
       super.copyWith((message) =>
               updates(message as FieldOperationMetadata_TtlConfigDelta))
           as FieldOperationMetadata_TtlConfigDelta;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FieldOperationMetadata_TtlConfigDelta create() =>
       FieldOperationMetadata_TtlConfigDelta._();
+  @$core.override
   FieldOperationMetadata_TtlConfigDelta createEmptyInstance() => create();
-  static $pb.PbList<FieldOperationMetadata_TtlConfigDelta> createRepeated() =>
-      $pb.PbList<FieldOperationMetadata_TtlConfigDelta>();
   @$core.pragma('dart2js:noInline')
   static FieldOperationMetadata_TtlConfigDelta getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -357,14 +304,12 @@ class FieldOperationMetadata_TtlConfigDelta extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   FieldOperationMetadata_TtlConfigDelta_ChangeType get changeType => $_getN(0);
   @$pb.TagNumber(1)
-  set changeType(FieldOperationMetadata_TtlConfigDelta_ChangeType v) {
-    setField(1, v);
-  }
-
+  set changeType(FieldOperationMetadata_TtlConfigDelta_ChangeType value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasChangeType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearChangeType() => clearField(1);
+  void clearChangeType() => $_clearField(1);
 }
 
 /// Metadata for [google.longrunning.Operation][google.longrunning.Operation]
@@ -381,40 +326,27 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
     Progress? progressBytes,
     FieldOperationMetadata_TtlConfigDelta? ttlConfigDelta,
   }) {
-    final $result = create();
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    if (field_3 != null) {
-      $result.field_3 = field_3;
-    }
-    if (indexConfigDeltas != null) {
-      $result.indexConfigDeltas.addAll(indexConfigDeltas);
-    }
-    if (state != null) {
-      $result.state = state;
-    }
-    if (progressDocuments != null) {
-      $result.progressDocuments = progressDocuments;
-    }
-    if (progressBytes != null) {
-      $result.progressBytes = progressBytes;
-    }
-    if (ttlConfigDelta != null) {
-      $result.ttlConfigDelta = ttlConfigDelta;
-    }
-    return $result;
+    final result = create();
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    if (field_3 != null) result.field_3 = field_3;
+    if (indexConfigDeltas != null)
+      result.indexConfigDeltas.addAll(indexConfigDeltas);
+    if (state != null) result.state = state;
+    if (progressDocuments != null) result.progressDocuments = progressDocuments;
+    if (progressBytes != null) result.progressBytes = progressBytes;
+    if (ttlConfigDelta != null) result.ttlConfigDelta = ttlConfigDelta;
+    return result;
   }
-  FieldOperationMetadata._() : super();
-  factory FieldOperationMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FieldOperationMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FieldOperationMetadata._();
+
+  factory FieldOperationMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FieldOperationMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FieldOperationMetadata',
@@ -426,12 +358,10 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
     ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
         subBuilder: $0.Timestamp.create)
     ..aOS(3, _omitFieldNames ? '' : 'field')
-    ..pc<FieldOperationMetadata_IndexConfigDelta>(
-        4, _omitFieldNames ? '' : 'indexConfigDeltas', $pb.PbFieldType.PM,
+    ..pPM<FieldOperationMetadata_IndexConfigDelta>(
+        4, _omitFieldNames ? '' : 'indexConfigDeltas',
         subBuilder: FieldOperationMetadata_IndexConfigDelta.create)
-    ..e<OperationState>(5, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
-        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
-        valueOf: OperationState.valueOf,
+    ..aE<OperationState>(5, _omitFieldNames ? '' : 'state',
         enumValues: OperationState.values)
     ..aOM<Progress>(6, _omitFieldNames ? '' : 'progressDocuments',
         subBuilder: Progress.create)
@@ -442,26 +372,21 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
         subBuilder: FieldOperationMetadata_TtlConfigDelta.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FieldOperationMetadata clone() =>
-      FieldOperationMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FieldOperationMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FieldOperationMetadata copyWith(
           void Function(FieldOperationMetadata) updates) =>
       super.copyWith((message) => updates(message as FieldOperationMetadata))
           as FieldOperationMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FieldOperationMetadata create() => FieldOperationMetadata._();
+  @$core.override
   FieldOperationMetadata createEmptyInstance() => create();
-  static $pb.PbList<FieldOperationMetadata> createRepeated() =>
-      $pb.PbList<FieldOperationMetadata>();
   @$core.pragma('dart2js:noInline')
   static FieldOperationMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FieldOperationMetadata>(create);
@@ -471,14 +396,11 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
-  set startTime($0.Timestamp v) {
-    setField(1, v);
-  }
-
+  set startTime($0.Timestamp value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStartTime() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStartTime() => clearField(1);
+  void clearStartTime() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
@@ -487,14 +409,11 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
-  set endTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set endTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasEndTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEndTime() => clearField(2);
+  void clearEndTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
@@ -503,47 +422,38 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get field_3 => $_getSZ(2);
   @$pb.TagNumber(3)
-  set field_3($core.String v) {
-    $_setString(2, v);
-  }
-
+  set field_3($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasField_3() => $_has(2);
   @$pb.TagNumber(3)
-  void clearField_3() => clearField(3);
+  void clearField_3() => $_clearField(3);
 
   /// A list of
   /// [IndexConfigDelta][google.firestore.admin.v1.FieldOperationMetadata.IndexConfigDelta],
   /// which describe the intent of this operation.
   @$pb.TagNumber(4)
-  $core.List<FieldOperationMetadata_IndexConfigDelta> get indexConfigDeltas =>
+  $pb.PbList<FieldOperationMetadata_IndexConfigDelta> get indexConfigDeltas =>
       $_getList(3);
 
   /// The state of the operation.
   @$pb.TagNumber(5)
   OperationState get state => $_getN(4);
   @$pb.TagNumber(5)
-  set state(OperationState v) {
-    setField(5, v);
-  }
-
+  set state(OperationState value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasState() => $_has(4);
   @$pb.TagNumber(5)
-  void clearState() => clearField(5);
+  void clearState() => $_clearField(5);
 
   /// The progress, in documents, of this operation.
   @$pb.TagNumber(6)
   Progress get progressDocuments => $_getN(5);
   @$pb.TagNumber(6)
-  set progressDocuments(Progress v) {
-    setField(6, v);
-  }
-
+  set progressDocuments(Progress value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasProgressDocuments() => $_has(5);
   @$pb.TagNumber(6)
-  void clearProgressDocuments() => clearField(6);
+  void clearProgressDocuments() => $_clearField(6);
   @$pb.TagNumber(6)
   Progress ensureProgressDocuments() => $_ensure(5);
 
@@ -551,14 +461,11 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   Progress get progressBytes => $_getN(6);
   @$pb.TagNumber(7)
-  set progressBytes(Progress v) {
-    setField(7, v);
-  }
-
+  set progressBytes(Progress value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasProgressBytes() => $_has(6);
   @$pb.TagNumber(7)
-  void clearProgressBytes() => clearField(7);
+  void clearProgressBytes() => $_clearField(7);
   @$pb.TagNumber(7)
   Progress ensureProgressBytes() => $_ensure(6);
 
@@ -566,14 +473,12 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   FieldOperationMetadata_TtlConfigDelta get ttlConfigDelta => $_getN(7);
   @$pb.TagNumber(8)
-  set ttlConfigDelta(FieldOperationMetadata_TtlConfigDelta v) {
-    setField(8, v);
-  }
-
+  set ttlConfigDelta(FieldOperationMetadata_TtlConfigDelta value) =>
+      $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasTtlConfigDelta() => $_has(7);
   @$pb.TagNumber(8)
-  void clearTtlConfigDelta() => clearField(8);
+  void clearTtlConfigDelta() => $_clearField(8);
   @$pb.TagNumber(8)
   FieldOperationMetadata_TtlConfigDelta ensureTtlConfigDelta() => $_ensure(7);
 }
@@ -593,43 +498,27 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? namespaceIds,
     $0.Timestamp? snapshotTime,
   }) {
-    final $result = create();
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    if (operationState != null) {
-      $result.operationState = operationState;
-    }
-    if (progressDocuments != null) {
-      $result.progressDocuments = progressDocuments;
-    }
-    if (progressBytes != null) {
-      $result.progressBytes = progressBytes;
-    }
-    if (collectionIds != null) {
-      $result.collectionIds.addAll(collectionIds);
-    }
-    if (outputUriPrefix != null) {
-      $result.outputUriPrefix = outputUriPrefix;
-    }
-    if (namespaceIds != null) {
-      $result.namespaceIds.addAll(namespaceIds);
-    }
-    if (snapshotTime != null) {
-      $result.snapshotTime = snapshotTime;
-    }
-    return $result;
+    final result = create();
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    if (operationState != null) result.operationState = operationState;
+    if (progressDocuments != null) result.progressDocuments = progressDocuments;
+    if (progressBytes != null) result.progressBytes = progressBytes;
+    if (collectionIds != null) result.collectionIds.addAll(collectionIds);
+    if (outputUriPrefix != null) result.outputUriPrefix = outputUriPrefix;
+    if (namespaceIds != null) result.namespaceIds.addAll(namespaceIds);
+    if (snapshotTime != null) result.snapshotTime = snapshotTime;
+    return result;
   }
-  ExportDocumentsMetadata._() : super();
-  factory ExportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExportDocumentsMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ExportDocumentsMetadata._();
+
+  factory ExportDocumentsMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ExportDocumentsMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ExportDocumentsMetadata',
@@ -640,10 +529,7 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
         subBuilder: $0.Timestamp.create)
-    ..e<OperationState>(
-        3, _omitFieldNames ? '' : 'operationState', $pb.PbFieldType.OE,
-        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
-        valueOf: OperationState.valueOf,
+    ..aE<OperationState>(3, _omitFieldNames ? '' : 'operationState',
         enumValues: OperationState.values)
     ..aOM<Progress>(4, _omitFieldNames ? '' : 'progressDocuments',
         subBuilder: Progress.create)
@@ -656,26 +542,21 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ExportDocumentsMetadata clone() =>
-      ExportDocumentsMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ExportDocumentsMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ExportDocumentsMetadata copyWith(
           void Function(ExportDocumentsMetadata) updates) =>
       super.copyWith((message) => updates(message as ExportDocumentsMetadata))
           as ExportDocumentsMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ExportDocumentsMetadata create() => ExportDocumentsMetadata._();
+  @$core.override
   ExportDocumentsMetadata createEmptyInstance() => create();
-  static $pb.PbList<ExportDocumentsMetadata> createRepeated() =>
-      $pb.PbList<ExportDocumentsMetadata>();
   @$core.pragma('dart2js:noInline')
   static ExportDocumentsMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ExportDocumentsMetadata>(create);
@@ -685,14 +566,11 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
-  set startTime($0.Timestamp v) {
-    setField(1, v);
-  }
-
+  set startTime($0.Timestamp value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStartTime() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStartTime() => clearField(1);
+  void clearStartTime() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
@@ -701,14 +579,11 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
-  set endTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set endTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasEndTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEndTime() => clearField(2);
+  void clearEndTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
@@ -716,27 +591,21 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   OperationState get operationState => $_getN(2);
   @$pb.TagNumber(3)
-  set operationState(OperationState v) {
-    setField(3, v);
-  }
-
+  set operationState(OperationState value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasOperationState() => $_has(2);
   @$pb.TagNumber(3)
-  void clearOperationState() => clearField(3);
+  void clearOperationState() => $_clearField(3);
 
   /// The progress, in documents, of this operation.
   @$pb.TagNumber(4)
   Progress get progressDocuments => $_getN(3);
   @$pb.TagNumber(4)
-  set progressDocuments(Progress v) {
-    setField(4, v);
-  }
-
+  set progressDocuments(Progress value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasProgressDocuments() => $_has(3);
   @$pb.TagNumber(4)
-  void clearProgressDocuments() => clearField(4);
+  void clearProgressDocuments() => $_clearField(4);
   @$pb.TagNumber(4)
   Progress ensureProgressDocuments() => $_ensure(3);
 
@@ -744,37 +613,31 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Progress get progressBytes => $_getN(4);
   @$pb.TagNumber(5)
-  set progressBytes(Progress v) {
-    setField(5, v);
-  }
-
+  set progressBytes(Progress value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasProgressBytes() => $_has(4);
   @$pb.TagNumber(5)
-  void clearProgressBytes() => clearField(5);
+  void clearProgressBytes() => $_clearField(5);
   @$pb.TagNumber(5)
   Progress ensureProgressBytes() => $_ensure(4);
 
   /// Which collection IDs are being exported.
   @$pb.TagNumber(6)
-  $core.List<$core.String> get collectionIds => $_getList(5);
+  $pb.PbList<$core.String> get collectionIds => $_getList(5);
 
   /// Where the documents are being exported to.
   @$pb.TagNumber(7)
   $core.String get outputUriPrefix => $_getSZ(6);
   @$pb.TagNumber(7)
-  set outputUriPrefix($core.String v) {
-    $_setString(6, v);
-  }
-
+  set outputUriPrefix($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
   $core.bool hasOutputUriPrefix() => $_has(6);
   @$pb.TagNumber(7)
-  void clearOutputUriPrefix() => clearField(7);
+  void clearOutputUriPrefix() => $_clearField(7);
 
   /// Which namespace IDs are being exported.
   @$pb.TagNumber(8)
-  $core.List<$core.String> get namespaceIds => $_getList(7);
+  $pb.PbList<$core.String> get namespaceIds => $_getList(7);
 
   /// The timestamp that corresponds to the version of the database that is being
   /// exported. If unspecified, there are no guarantees about the consistency of
@@ -782,14 +645,11 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $0.Timestamp get snapshotTime => $_getN(8);
   @$pb.TagNumber(9)
-  set snapshotTime($0.Timestamp v) {
-    setField(9, v);
-  }
-
+  set snapshotTime($0.Timestamp value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasSnapshotTime() => $_has(8);
   @$pb.TagNumber(9)
-  void clearSnapshotTime() => clearField(9);
+  void clearSnapshotTime() => $_clearField(9);
   @$pb.TagNumber(9)
   $0.Timestamp ensureSnapshotTime() => $_ensure(8);
 }
@@ -808,40 +668,26 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
     $core.String? inputUriPrefix,
     $core.Iterable<$core.String>? namespaceIds,
   }) {
-    final $result = create();
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    if (operationState != null) {
-      $result.operationState = operationState;
-    }
-    if (progressDocuments != null) {
-      $result.progressDocuments = progressDocuments;
-    }
-    if (progressBytes != null) {
-      $result.progressBytes = progressBytes;
-    }
-    if (collectionIds != null) {
-      $result.collectionIds.addAll(collectionIds);
-    }
-    if (inputUriPrefix != null) {
-      $result.inputUriPrefix = inputUriPrefix;
-    }
-    if (namespaceIds != null) {
-      $result.namespaceIds.addAll(namespaceIds);
-    }
-    return $result;
+    final result = create();
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    if (operationState != null) result.operationState = operationState;
+    if (progressDocuments != null) result.progressDocuments = progressDocuments;
+    if (progressBytes != null) result.progressBytes = progressBytes;
+    if (collectionIds != null) result.collectionIds.addAll(collectionIds);
+    if (inputUriPrefix != null) result.inputUriPrefix = inputUriPrefix;
+    if (namespaceIds != null) result.namespaceIds.addAll(namespaceIds);
+    return result;
   }
-  ImportDocumentsMetadata._() : super();
-  factory ImportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ImportDocumentsMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ImportDocumentsMetadata._();
+
+  factory ImportDocumentsMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ImportDocumentsMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ImportDocumentsMetadata',
@@ -852,10 +698,7 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
         subBuilder: $0.Timestamp.create)
-    ..e<OperationState>(
-        3, _omitFieldNames ? '' : 'operationState', $pb.PbFieldType.OE,
-        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
-        valueOf: OperationState.valueOf,
+    ..aE<OperationState>(3, _omitFieldNames ? '' : 'operationState',
         enumValues: OperationState.values)
     ..aOM<Progress>(4, _omitFieldNames ? '' : 'progressDocuments',
         subBuilder: Progress.create)
@@ -866,26 +709,21 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
     ..pPS(8, _omitFieldNames ? '' : 'namespaceIds')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ImportDocumentsMetadata clone() =>
-      ImportDocumentsMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ImportDocumentsMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ImportDocumentsMetadata copyWith(
           void Function(ImportDocumentsMetadata) updates) =>
       super.copyWith((message) => updates(message as ImportDocumentsMetadata))
           as ImportDocumentsMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ImportDocumentsMetadata create() => ImportDocumentsMetadata._();
+  @$core.override
   ImportDocumentsMetadata createEmptyInstance() => create();
-  static $pb.PbList<ImportDocumentsMetadata> createRepeated() =>
-      $pb.PbList<ImportDocumentsMetadata>();
   @$core.pragma('dart2js:noInline')
   static ImportDocumentsMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ImportDocumentsMetadata>(create);
@@ -895,14 +733,11 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
-  set startTime($0.Timestamp v) {
-    setField(1, v);
-  }
-
+  set startTime($0.Timestamp value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStartTime() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStartTime() => clearField(1);
+  void clearStartTime() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
@@ -911,14 +746,11 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
-  set endTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set endTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasEndTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEndTime() => clearField(2);
+  void clearEndTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
@@ -926,27 +758,21 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   OperationState get operationState => $_getN(2);
   @$pb.TagNumber(3)
-  set operationState(OperationState v) {
-    setField(3, v);
-  }
-
+  set operationState(OperationState value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasOperationState() => $_has(2);
   @$pb.TagNumber(3)
-  void clearOperationState() => clearField(3);
+  void clearOperationState() => $_clearField(3);
 
   /// The progress, in documents, of this operation.
   @$pb.TagNumber(4)
   Progress get progressDocuments => $_getN(3);
   @$pb.TagNumber(4)
-  set progressDocuments(Progress v) {
-    setField(4, v);
-  }
-
+  set progressDocuments(Progress value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasProgressDocuments() => $_has(3);
   @$pb.TagNumber(4)
-  void clearProgressDocuments() => clearField(4);
+  void clearProgressDocuments() => $_clearField(4);
   @$pb.TagNumber(4)
   Progress ensureProgressDocuments() => $_ensure(3);
 
@@ -954,37 +780,31 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Progress get progressBytes => $_getN(4);
   @$pb.TagNumber(5)
-  set progressBytes(Progress v) {
-    setField(5, v);
-  }
-
+  set progressBytes(Progress value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasProgressBytes() => $_has(4);
   @$pb.TagNumber(5)
-  void clearProgressBytes() => clearField(5);
+  void clearProgressBytes() => $_clearField(5);
   @$pb.TagNumber(5)
   Progress ensureProgressBytes() => $_ensure(4);
 
   /// Which collection IDs are being imported.
   @$pb.TagNumber(6)
-  $core.List<$core.String> get collectionIds => $_getList(5);
+  $pb.PbList<$core.String> get collectionIds => $_getList(5);
 
   /// The location of the documents being imported.
   @$pb.TagNumber(7)
   $core.String get inputUriPrefix => $_getSZ(6);
   @$pb.TagNumber(7)
-  set inputUriPrefix($core.String v) {
-    $_setString(6, v);
-  }
-
+  set inputUriPrefix($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
   $core.bool hasInputUriPrefix() => $_has(6);
   @$pb.TagNumber(7)
-  void clearInputUriPrefix() => clearField(7);
+  void clearInputUriPrefix() => $_clearField(7);
 
   /// Which namespace IDs are being imported.
   @$pb.TagNumber(8)
-  $core.List<$core.String> get namespaceIds => $_getList(7);
+  $pb.PbList<$core.String> get namespaceIds => $_getList(7);
 }
 
 /// Metadata for [google.longrunning.Operation][google.longrunning.Operation]
@@ -1001,40 +821,26 @@ class BulkDeleteDocumentsMetadata extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? namespaceIds,
     $0.Timestamp? snapshotTime,
   }) {
-    final $result = create();
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    if (operationState != null) {
-      $result.operationState = operationState;
-    }
-    if (progressDocuments != null) {
-      $result.progressDocuments = progressDocuments;
-    }
-    if (progressBytes != null) {
-      $result.progressBytes = progressBytes;
-    }
-    if (collectionIds != null) {
-      $result.collectionIds.addAll(collectionIds);
-    }
-    if (namespaceIds != null) {
-      $result.namespaceIds.addAll(namespaceIds);
-    }
-    if (snapshotTime != null) {
-      $result.snapshotTime = snapshotTime;
-    }
-    return $result;
+    final result = create();
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    if (operationState != null) result.operationState = operationState;
+    if (progressDocuments != null) result.progressDocuments = progressDocuments;
+    if (progressBytes != null) result.progressBytes = progressBytes;
+    if (collectionIds != null) result.collectionIds.addAll(collectionIds);
+    if (namespaceIds != null) result.namespaceIds.addAll(namespaceIds);
+    if (snapshotTime != null) result.snapshotTime = snapshotTime;
+    return result;
   }
-  BulkDeleteDocumentsMetadata._() : super();
-  factory BulkDeleteDocumentsMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BulkDeleteDocumentsMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BulkDeleteDocumentsMetadata._();
+
+  factory BulkDeleteDocumentsMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BulkDeleteDocumentsMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BulkDeleteDocumentsMetadata',
@@ -1045,10 +851,7 @@ class BulkDeleteDocumentsMetadata extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
         subBuilder: $0.Timestamp.create)
-    ..e<OperationState>(
-        3, _omitFieldNames ? '' : 'operationState', $pb.PbFieldType.OE,
-        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
-        valueOf: OperationState.valueOf,
+    ..aE<OperationState>(3, _omitFieldNames ? '' : 'operationState',
         enumValues: OperationState.values)
     ..aOM<Progress>(4, _omitFieldNames ? '' : 'progressDocuments',
         subBuilder: Progress.create)
@@ -1060,28 +863,23 @@ class BulkDeleteDocumentsMetadata extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BulkDeleteDocumentsMetadata clone() =>
-      BulkDeleteDocumentsMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BulkDeleteDocumentsMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BulkDeleteDocumentsMetadata copyWith(
           void Function(BulkDeleteDocumentsMetadata) updates) =>
       super.copyWith(
               (message) => updates(message as BulkDeleteDocumentsMetadata))
           as BulkDeleteDocumentsMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BulkDeleteDocumentsMetadata create() =>
       BulkDeleteDocumentsMetadata._();
+  @$core.override
   BulkDeleteDocumentsMetadata createEmptyInstance() => create();
-  static $pb.PbList<BulkDeleteDocumentsMetadata> createRepeated() =>
-      $pb.PbList<BulkDeleteDocumentsMetadata>();
   @$core.pragma('dart2js:noInline')
   static BulkDeleteDocumentsMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BulkDeleteDocumentsMetadata>(create);
@@ -1091,14 +889,11 @@ class BulkDeleteDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
-  set startTime($0.Timestamp v) {
-    setField(1, v);
-  }
-
+  set startTime($0.Timestamp value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStartTime() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStartTime() => clearField(1);
+  void clearStartTime() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
@@ -1107,14 +902,11 @@ class BulkDeleteDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
-  set endTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set endTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasEndTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEndTime() => clearField(2);
+  void clearEndTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
@@ -1122,27 +914,21 @@ class BulkDeleteDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   OperationState get operationState => $_getN(2);
   @$pb.TagNumber(3)
-  set operationState(OperationState v) {
-    setField(3, v);
-  }
-
+  set operationState(OperationState value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasOperationState() => $_has(2);
   @$pb.TagNumber(3)
-  void clearOperationState() => clearField(3);
+  void clearOperationState() => $_clearField(3);
 
   /// The progress, in documents, of this operation.
   @$pb.TagNumber(4)
   Progress get progressDocuments => $_getN(3);
   @$pb.TagNumber(4)
-  set progressDocuments(Progress v) {
-    setField(4, v);
-  }
-
+  set progressDocuments(Progress value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasProgressDocuments() => $_has(3);
   @$pb.TagNumber(4)
-  void clearProgressDocuments() => clearField(4);
+  void clearProgressDocuments() => $_clearField(4);
   @$pb.TagNumber(4)
   Progress ensureProgressDocuments() => $_ensure(3);
 
@@ -1150,24 +936,21 @@ class BulkDeleteDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Progress get progressBytes => $_getN(4);
   @$pb.TagNumber(5)
-  set progressBytes(Progress v) {
-    setField(5, v);
-  }
-
+  set progressBytes(Progress value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasProgressBytes() => $_has(4);
   @$pb.TagNumber(5)
-  void clearProgressBytes() => clearField(5);
+  void clearProgressBytes() => $_clearField(5);
   @$pb.TagNumber(5)
   Progress ensureProgressBytes() => $_ensure(4);
 
   /// The IDs of the collection groups that are being deleted.
   @$pb.TagNumber(6)
-  $core.List<$core.String> get collectionIds => $_getList(5);
+  $pb.PbList<$core.String> get collectionIds => $_getList(5);
 
   /// Which namespace IDs are being deleted.
   @$pb.TagNumber(7)
-  $core.List<$core.String> get namespaceIds => $_getList(6);
+  $pb.PbList<$core.String> get namespaceIds => $_getList(6);
 
   /// The timestamp that corresponds to the version of the database that is being
   /// read to get the list of documents to delete. This time can also be used as
@@ -1176,14 +959,11 @@ class BulkDeleteDocumentsMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $0.Timestamp get snapshotTime => $_getN(7);
   @$pb.TagNumber(8)
-  set snapshotTime($0.Timestamp v) {
-    setField(8, v);
-  }
-
+  set snapshotTime($0.Timestamp value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasSnapshotTime() => $_has(7);
   @$pb.TagNumber(8)
-  void clearSnapshotTime() => clearField(8);
+  void clearSnapshotTime() => $_clearField(8);
   @$pb.TagNumber(8)
   $0.Timestamp ensureSnapshotTime() => $_ensure(7);
 }
@@ -1194,19 +974,19 @@ class ExportDocumentsResponse extends $pb.GeneratedMessage {
   factory ExportDocumentsResponse({
     $core.String? outputUriPrefix,
   }) {
-    final $result = create();
-    if (outputUriPrefix != null) {
-      $result.outputUriPrefix = outputUriPrefix;
-    }
-    return $result;
+    final result = create();
+    if (outputUriPrefix != null) result.outputUriPrefix = outputUriPrefix;
+    return result;
   }
-  ExportDocumentsResponse._() : super();
-  factory ExportDocumentsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExportDocumentsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ExportDocumentsResponse._();
+
+  factory ExportDocumentsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ExportDocumentsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ExportDocumentsResponse',
@@ -1216,26 +996,21 @@ class ExportDocumentsResponse extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'outputUriPrefix')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ExportDocumentsResponse clone() =>
-      ExportDocumentsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ExportDocumentsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ExportDocumentsResponse copyWith(
           void Function(ExportDocumentsResponse) updates) =>
       super.copyWith((message) => updates(message as ExportDocumentsResponse))
           as ExportDocumentsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ExportDocumentsResponse create() => ExportDocumentsResponse._();
+  @$core.override
   ExportDocumentsResponse createEmptyInstance() => create();
-  static $pb.PbList<ExportDocumentsResponse> createRepeated() =>
-      $pb.PbList<ExportDocumentsResponse>();
   @$core.pragma('dart2js:noInline')
   static ExportDocumentsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ExportDocumentsResponse>(create);
@@ -1247,14 +1022,11 @@ class ExportDocumentsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get outputUriPrefix => $_getSZ(0);
   @$pb.TagNumber(1)
-  set outputUriPrefix($core.String v) {
-    $_setString(0, v);
-  }
-
+  set outputUriPrefix($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasOutputUriPrefix() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOutputUriPrefix() => clearField(1);
+  void clearOutputUriPrefix() => $_clearField(1);
 }
 
 /// Metadata for the [long-running operation][google.longrunning.Operation] from
@@ -1268,34 +1040,25 @@ class RestoreDatabaseMetadata extends $pb.GeneratedMessage {
     $core.String? backup,
     Progress? progressPercentage,
   }) {
-    final $result = create();
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    if (operationState != null) {
-      $result.operationState = operationState;
-    }
-    if (database != null) {
-      $result.database = database;
-    }
-    if (backup != null) {
-      $result.backup = backup;
-    }
-    if (progressPercentage != null) {
-      $result.progressPercentage = progressPercentage;
-    }
-    return $result;
+    final result = create();
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    if (operationState != null) result.operationState = operationState;
+    if (database != null) result.database = database;
+    if (backup != null) result.backup = backup;
+    if (progressPercentage != null)
+      result.progressPercentage = progressPercentage;
+    return result;
   }
-  RestoreDatabaseMetadata._() : super();
-  factory RestoreDatabaseMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RestoreDatabaseMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RestoreDatabaseMetadata._();
+
+  factory RestoreDatabaseMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RestoreDatabaseMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RestoreDatabaseMetadata',
@@ -1306,10 +1069,7 @@ class RestoreDatabaseMetadata extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
         subBuilder: $0.Timestamp.create)
-    ..e<OperationState>(
-        3, _omitFieldNames ? '' : 'operationState', $pb.PbFieldType.OE,
-        defaultOrMaker: OperationState.OPERATION_STATE_UNSPECIFIED,
-        valueOf: OperationState.valueOf,
+    ..aE<OperationState>(3, _omitFieldNames ? '' : 'operationState',
         enumValues: OperationState.values)
     ..aOS(4, _omitFieldNames ? '' : 'database')
     ..aOS(5, _omitFieldNames ? '' : 'backup')
@@ -1317,26 +1077,21 @@ class RestoreDatabaseMetadata extends $pb.GeneratedMessage {
         subBuilder: Progress.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RestoreDatabaseMetadata clone() =>
-      RestoreDatabaseMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RestoreDatabaseMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RestoreDatabaseMetadata copyWith(
           void Function(RestoreDatabaseMetadata) updates) =>
       super.copyWith((message) => updates(message as RestoreDatabaseMetadata))
           as RestoreDatabaseMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RestoreDatabaseMetadata create() => RestoreDatabaseMetadata._();
+  @$core.override
   RestoreDatabaseMetadata createEmptyInstance() => create();
-  static $pb.PbList<RestoreDatabaseMetadata> createRepeated() =>
-      $pb.PbList<RestoreDatabaseMetadata>();
   @$core.pragma('dart2js:noInline')
   static RestoreDatabaseMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RestoreDatabaseMetadata>(create);
@@ -1346,14 +1101,11 @@ class RestoreDatabaseMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Timestamp get startTime => $_getN(0);
   @$pb.TagNumber(1)
-  set startTime($0.Timestamp v) {
-    setField(1, v);
-  }
-
+  set startTime($0.Timestamp value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStartTime() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStartTime() => clearField(1);
+  void clearStartTime() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Timestamp ensureStartTime() => $_ensure(0);
 
@@ -1361,14 +1113,11 @@ class RestoreDatabaseMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Timestamp get endTime => $_getN(1);
   @$pb.TagNumber(2)
-  set endTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set endTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasEndTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEndTime() => clearField(2);
+  void clearEndTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureEndTime() => $_ensure(1);
 
@@ -1376,55 +1125,181 @@ class RestoreDatabaseMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   OperationState get operationState => $_getN(2);
   @$pb.TagNumber(3)
-  set operationState(OperationState v) {
-    setField(3, v);
-  }
-
+  set operationState(OperationState value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasOperationState() => $_has(2);
   @$pb.TagNumber(3)
-  void clearOperationState() => clearField(3);
+  void clearOperationState() => $_clearField(3);
 
   /// The name of the database being restored to.
   @$pb.TagNumber(4)
   $core.String get database => $_getSZ(3);
   @$pb.TagNumber(4)
-  set database($core.String v) {
-    $_setString(3, v);
-  }
-
+  set database($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDatabase() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDatabase() => clearField(4);
+  void clearDatabase() => $_clearField(4);
 
   /// The name of the backup restoring from.
   @$pb.TagNumber(5)
   $core.String get backup => $_getSZ(4);
   @$pb.TagNumber(5)
-  set backup($core.String v) {
-    $_setString(4, v);
-  }
-
+  set backup($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasBackup() => $_has(4);
   @$pb.TagNumber(5)
-  void clearBackup() => clearField(5);
+  void clearBackup() => $_clearField(5);
 
   /// How far along the restore is as an estimated percentage of remaining time.
   @$pb.TagNumber(8)
   Progress get progressPercentage => $_getN(5);
   @$pb.TagNumber(8)
-  set progressPercentage(Progress v) {
-    setField(8, v);
-  }
-
+  set progressPercentage(Progress value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasProgressPercentage() => $_has(5);
   @$pb.TagNumber(8)
-  void clearProgressPercentage() => clearField(8);
+  void clearProgressPercentage() => $_clearField(8);
   @$pb.TagNumber(8)
   Progress ensureProgressPercentage() => $_ensure(5);
+}
+
+/// Metadata for the [long-running operation][google.longrunning.Operation] from
+/// the [CloneDatabase][google.firestore.admin.v1.CloneDatabase] request.
+class CloneDatabaseMetadata extends $pb.GeneratedMessage {
+  factory CloneDatabaseMetadata({
+    $0.Timestamp? startTime,
+    $0.Timestamp? endTime,
+    OperationState? operationState,
+    $core.String? database,
+    Progress? progressPercentage,
+    $2.PitrSnapshot? pitrSnapshot,
+  }) {
+    final result = create();
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    if (operationState != null) result.operationState = operationState;
+    if (database != null) result.database = database;
+    if (progressPercentage != null)
+      result.progressPercentage = progressPercentage;
+    if (pitrSnapshot != null) result.pitrSnapshot = pitrSnapshot;
+    return result;
+  }
+
+  CloneDatabaseMetadata._();
+
+  factory CloneDatabaseMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CloneDatabaseMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CloneDatabaseMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..aE<OperationState>(3, _omitFieldNames ? '' : 'operationState',
+        enumValues: OperationState.values)
+    ..aOS(4, _omitFieldNames ? '' : 'database')
+    ..aOM<Progress>(6, _omitFieldNames ? '' : 'progressPercentage',
+        subBuilder: Progress.create)
+    ..aOM<$2.PitrSnapshot>(7, _omitFieldNames ? '' : 'pitrSnapshot',
+        subBuilder: $2.PitrSnapshot.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CloneDatabaseMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CloneDatabaseMetadata copyWith(
+          void Function(CloneDatabaseMetadata) updates) =>
+      super.copyWith((message) => updates(message as CloneDatabaseMetadata))
+          as CloneDatabaseMetadata;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CloneDatabaseMetadata create() => CloneDatabaseMetadata._();
+  @$core.override
+  CloneDatabaseMetadata createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static CloneDatabaseMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CloneDatabaseMetadata>(create);
+  static CloneDatabaseMetadata? _defaultInstance;
+
+  /// The time the clone was started.
+  @$pb.TagNumber(1)
+  $0.Timestamp get startTime => $_getN(0);
+  @$pb.TagNumber(1)
+  set startTime($0.Timestamp value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStartTime() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStartTime() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $0.Timestamp ensureStartTime() => $_ensure(0);
+
+  /// The time the clone finished, unset for ongoing clones.
+  @$pb.TagNumber(2)
+  $0.Timestamp get endTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set endTime($0.Timestamp value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasEndTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEndTime() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $0.Timestamp ensureEndTime() => $_ensure(1);
+
+  /// The operation state of the clone.
+  @$pb.TagNumber(3)
+  OperationState get operationState => $_getN(2);
+  @$pb.TagNumber(3)
+  set operationState(OperationState value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasOperationState() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearOperationState() => $_clearField(3);
+
+  /// The name of the database being cloned to.
+  @$pb.TagNumber(4)
+  $core.String get database => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set database($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasDatabase() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDatabase() => $_clearField(4);
+
+  /// How far along the clone is as an estimated percentage of remaining time.
+  @$pb.TagNumber(6)
+  Progress get progressPercentage => $_getN(4);
+  @$pb.TagNumber(6)
+  set progressPercentage(Progress value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasProgressPercentage() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearProgressPercentage() => $_clearField(6);
+  @$pb.TagNumber(6)
+  Progress ensureProgressPercentage() => $_ensure(4);
+
+  /// The snapshot from which this database was cloned.
+  @$pb.TagNumber(7)
+  $2.PitrSnapshot get pitrSnapshot => $_getN(5);
+  @$pb.TagNumber(7)
+  set pitrSnapshot($2.PitrSnapshot value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasPitrSnapshot() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearPitrSnapshot() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $2.PitrSnapshot ensurePitrSnapshot() => $_ensure(5);
 }
 
 /// Describes the progress of the operation.
@@ -1435,22 +1310,20 @@ class Progress extends $pb.GeneratedMessage {
     $fixnum.Int64? estimatedWork,
     $fixnum.Int64? completedWork,
   }) {
-    final $result = create();
-    if (estimatedWork != null) {
-      $result.estimatedWork = estimatedWork;
-    }
-    if (completedWork != null) {
-      $result.completedWork = completedWork;
-    }
-    return $result;
+    final result = create();
+    if (estimatedWork != null) result.estimatedWork = estimatedWork;
+    if (completedWork != null) result.completedWork = completedWork;
+    return result;
   }
-  Progress._() : super();
-  factory Progress.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Progress.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Progress._();
+
+  factory Progress.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Progress.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Progress',
@@ -1461,22 +1334,19 @@ class Progress extends $pb.GeneratedMessage {
     ..aInt64(2, _omitFieldNames ? '' : 'completedWork')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Progress clone() => Progress()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Progress clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Progress copyWith(void Function(Progress) updates) =>
       super.copyWith((message) => updates(message as Progress)) as Progress;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Progress create() => Progress._();
+  @$core.override
   Progress createEmptyInstance() => create();
-  static $pb.PbList<Progress> createRepeated() => $pb.PbList<Progress>();
   @$core.pragma('dart2js:noInline')
   static Progress getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Progress>(create);
@@ -1486,29 +1356,24 @@ class Progress extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $fixnum.Int64 get estimatedWork => $_getI64(0);
   @$pb.TagNumber(1)
-  set estimatedWork($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set estimatedWork($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEstimatedWork() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEstimatedWork() => clearField(1);
+  void clearEstimatedWork() => $_clearField(1);
 
   /// The amount of work completed.
   @$pb.TagNumber(2)
   $fixnum.Int64 get completedWork => $_getI64(1);
   @$pb.TagNumber(2)
-  set completedWork($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set completedWork($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCompletedWork() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCompletedWork() => clearField(2);
+  void clearCompletedWork() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

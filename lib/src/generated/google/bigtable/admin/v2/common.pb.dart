@@ -1,19 +1,22 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/bigtable/admin/v2/common.proto
-//
-// @dart = 2.12
+// Generated from google/bigtable/admin/v2/common.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $0;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'common.pbenum.dart';
 
@@ -25,57 +28,48 @@ class OperationProgress extends $pb.GeneratedMessage {
     $0.Timestamp? startTime,
     $0.Timestamp? endTime,
   }) {
-    final $result = create();
-    if (progressPercent != null) {
-      $result.progressPercent = progressPercent;
-    }
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    return $result;
+    final result = create();
+    if (progressPercent != null) result.progressPercent = progressPercent;
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    return result;
   }
-  OperationProgress._() : super();
-  factory OperationProgress.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory OperationProgress.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  OperationProgress._();
+
+  factory OperationProgress.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OperationProgress.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'OperationProgress',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
-    ..a<$core.int>(
-        1, _omitFieldNames ? '' : 'progressPercent', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'progressPercent')
     ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'startTime',
         subBuilder: $0.Timestamp.create)
     ..aOM<$0.Timestamp>(3, _omitFieldNames ? '' : 'endTime',
         subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  OperationProgress clone() => OperationProgress()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OperationProgress clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OperationProgress copyWith(void Function(OperationProgress) updates) =>
       super.copyWith((message) => updates(message as OperationProgress))
           as OperationProgress;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static OperationProgress create() => OperationProgress._();
+  @$core.override
   OperationProgress createEmptyInstance() => create();
-  static $pb.PbList<OperationProgress> createRepeated() =>
-      $pb.PbList<OperationProgress>();
   @$core.pragma('dart2js:noInline')
   static OperationProgress getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OperationProgress>(create);
@@ -86,27 +80,21 @@ class OperationProgress extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get progressPercent => $_getIZ(0);
   @$pb.TagNumber(1)
-  set progressPercent($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set progressPercent($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasProgressPercent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearProgressPercent() => clearField(1);
+  void clearProgressPercent() => $_clearField(1);
 
   /// Time the request was received.
   @$pb.TagNumber(2)
   $0.Timestamp get startTime => $_getN(1);
   @$pb.TagNumber(2)
-  set startTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set startTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasStartTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStartTime() => clearField(2);
+  void clearStartTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureStartTime() => $_ensure(1);
 
@@ -115,18 +103,16 @@ class OperationProgress extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Timestamp get endTime => $_getN(2);
   @$pb.TagNumber(3)
-  set endTime($0.Timestamp v) {
-    setField(3, v);
-  }
-
+  set endTime($0.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasEndTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEndTime() => clearField(3);
+  void clearEndTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Timestamp ensureEndTime() => $_ensure(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

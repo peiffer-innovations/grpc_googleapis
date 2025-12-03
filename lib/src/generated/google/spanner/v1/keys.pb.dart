@@ -1,112 +1,115 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/spanner/v1/keys.proto
-//
-// @dart = 2.12
+// Generated from google/spanner/v1/keys.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/struct.pb.dart'
+    as $0;
 
-import '../../protobuf/struct.pb.dart' as $0;
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum KeyRange_StartKeyType { startClosed, startOpen, notSet }
 
 enum KeyRange_EndKeyType { endClosed, endOpen, notSet }
 
-///  KeyRange represents a range of rows in a table or index.
+/// KeyRange represents a range of rows in a table or index.
 ///
-///  A range has a start key and an end key. These keys can be open or
-///  closed, indicating if the range includes rows with that key.
+/// A range has a start key and an end key. These keys can be open or
+/// closed, indicating if the range includes rows with that key.
 ///
-///  Keys are represented by lists, where the ith value in the list
-///  corresponds to the ith component of the table or index primary key.
-///  Individual values are encoded as described
-///  [here][google.spanner.v1.TypeCode].
+/// Keys are represented by lists, where the ith value in the list
+/// corresponds to the ith component of the table or index primary key.
+/// Individual values are encoded as described
+/// [here][google.spanner.v1.TypeCode].
 ///
-///  For example, consider the following table definition:
+/// For example, consider the following table definition:
 ///
-///      CREATE TABLE UserEvents (
-///        UserName STRING(MAX),
-///        EventDate STRING(10)
-///      ) PRIMARY KEY(UserName, EventDate);
+///     CREATE TABLE UserEvents (
+///       UserName STRING(MAX),
+///       EventDate STRING(10)
+///     ) PRIMARY KEY(UserName, EventDate);
 ///
-///  The following keys name rows in this table:
+/// The following keys name rows in this table:
 ///
-///      ["Bob", "2014-09-23"]
-///      ["Alfred", "2015-06-12"]
+///     ["Bob", "2014-09-23"]
+///     ["Alfred", "2015-06-12"]
 ///
-///  Since the `UserEvents` table's `PRIMARY KEY` clause names two
-///  columns, each `UserEvents` key has two elements; the first is the
-///  `UserName`, and the second is the `EventDate`.
+/// Since the `UserEvents` table's `PRIMARY KEY` clause names two
+/// columns, each `UserEvents` key has two elements; the first is the
+/// `UserName`, and the second is the `EventDate`.
 ///
-///  Key ranges with multiple components are interpreted
-///  lexicographically by component using the table or index key's declared
-///  sort order. For example, the following range returns all events for
-///  user `"Bob"` that occurred in the year 2015:
+/// Key ranges with multiple components are interpreted
+/// lexicographically by component using the table or index key's declared
+/// sort order. For example, the following range returns all events for
+/// user `"Bob"` that occurred in the year 2015:
 ///
-///      "start_closed": ["Bob", "2015-01-01"]
-///      "end_closed": ["Bob", "2015-12-31"]
+///     "start_closed": ["Bob", "2015-01-01"]
+///     "end_closed": ["Bob", "2015-12-31"]
 ///
-///  Start and end keys can omit trailing key components. This affects the
-///  inclusion and exclusion of rows that exactly match the provided key
-///  components: if the key is closed, then rows that exactly match the
-///  provided components are included; if the key is open, then rows
-///  that exactly match are not included.
+/// Start and end keys can omit trailing key components. This affects the
+/// inclusion and exclusion of rows that exactly match the provided key
+/// components: if the key is closed, then rows that exactly match the
+/// provided components are included; if the key is open, then rows
+/// that exactly match are not included.
 ///
-///  For example, the following range includes all events for `"Bob"` that
-///  occurred during and after the year 2000:
+/// For example, the following range includes all events for `"Bob"` that
+/// occurred during and after the year 2000:
 ///
-///      "start_closed": ["Bob", "2000-01-01"]
-///      "end_closed": ["Bob"]
+///     "start_closed": ["Bob", "2000-01-01"]
+///     "end_closed": ["Bob"]
 ///
-///  The next example retrieves all events for `"Bob"`:
+/// The next example retrieves all events for `"Bob"`:
 ///
-///      "start_closed": ["Bob"]
-///      "end_closed": ["Bob"]
+///     "start_closed": ["Bob"]
+///     "end_closed": ["Bob"]
 ///
-///  To retrieve events before the year 2000:
+/// To retrieve events before the year 2000:
 ///
-///      "start_closed": ["Bob"]
-///      "end_open": ["Bob", "2000-01-01"]
+///     "start_closed": ["Bob"]
+///     "end_open": ["Bob", "2000-01-01"]
 ///
-///  The following range includes all rows in the table:
+/// The following range includes all rows in the table:
 ///
-///      "start_closed": []
-///      "end_closed": []
+///     "start_closed": []
+///     "end_closed": []
 ///
-///  This range returns all users whose `UserName` begins with any
-///  character from A to C:
+/// This range returns all users whose `UserName` begins with any
+/// character from A to C:
 ///
-///      "start_closed": ["A"]
-///      "end_open": ["D"]
+///     "start_closed": ["A"]
+///     "end_open": ["D"]
 ///
-///  This range returns all users whose `UserName` begins with B:
+/// This range returns all users whose `UserName` begins with B:
 ///
-///      "start_closed": ["B"]
-///      "end_open": ["C"]
+///     "start_closed": ["B"]
+///     "end_open": ["C"]
 ///
-///  Key ranges honor column sort order. For example, suppose a table is
-///  defined as follows:
+/// Key ranges honor column sort order. For example, suppose a table is
+/// defined as follows:
 ///
-///      CREATE TABLE DescendingSortedTable {
-///        Key INT64,
-///        ...
-///      ) PRIMARY KEY(Key DESC);
+///     CREATE TABLE DescendingSortedTable {
+///       Key INT64,
+///       ...
+///     ) PRIMARY KEY(Key DESC);
 ///
-///  The following range retrieves all rows with key values between 1
-///  and 100 inclusive:
+/// The following range retrieves all rows with key values between 1
+/// and 100 inclusive:
 ///
-///      "start_closed": ["100"]
-///      "end_closed": ["1"]
+///     "start_closed": ["100"]
+///     "end_closed": ["1"]
 ///
-///  Note that 100 is passed as the start, and 1 is passed as the end,
-///  because `Key` is a descending column in the schema.
+/// Note that 100 is passed as the start, and 1 is passed as the end,
+/// because `Key` is a descending column in the schema.
 class KeyRange extends $pb.GeneratedMessage {
   factory KeyRange({
     $0.ListValue? startClosed,
@@ -114,28 +117,22 @@ class KeyRange extends $pb.GeneratedMessage {
     $0.ListValue? endClosed,
     $0.ListValue? endOpen,
   }) {
-    final $result = create();
-    if (startClosed != null) {
-      $result.startClosed = startClosed;
-    }
-    if (startOpen != null) {
-      $result.startOpen = startOpen;
-    }
-    if (endClosed != null) {
-      $result.endClosed = endClosed;
-    }
-    if (endOpen != null) {
-      $result.endOpen = endOpen;
-    }
-    return $result;
+    final result = create();
+    if (startClosed != null) result.startClosed = startClosed;
+    if (startOpen != null) result.startOpen = startOpen;
+    if (endClosed != null) result.endClosed = endClosed;
+    if (endOpen != null) result.endOpen = endOpen;
+    return result;
   }
-  KeyRange._() : super();
-  factory KeyRange.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory KeyRange.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  KeyRange._();
+
+  factory KeyRange.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory KeyRange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, KeyRange_StartKeyType>
       _KeyRange_StartKeyTypeByTag = {
@@ -166,48 +163,50 @@ class KeyRange extends $pb.GeneratedMessage {
         subBuilder: $0.ListValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  KeyRange clone() => KeyRange()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  KeyRange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   KeyRange copyWith(void Function(KeyRange) updates) =>
       super.copyWith((message) => updates(message as KeyRange)) as KeyRange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static KeyRange create() => KeyRange._();
+  @$core.override
   KeyRange createEmptyInstance() => create();
-  static $pb.PbList<KeyRange> createRepeated() => $pb.PbList<KeyRange>();
   @$core.pragma('dart2js:noInline')
   static KeyRange getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<KeyRange>(create);
   static KeyRange? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   KeyRange_StartKeyType whichStartKeyType() =>
       _KeyRange_StartKeyTypeByTag[$_whichOneof(0)]!;
-  void clearStartKeyType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearStartKeyType() => $_clearField($_whichOneof(0));
 
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
   KeyRange_EndKeyType whichEndKeyType() =>
       _KeyRange_EndKeyTypeByTag[$_whichOneof(1)]!;
-  void clearEndKeyType() => clearField($_whichOneof(1));
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  void clearEndKeyType() => $_clearField($_whichOneof(1));
 
   /// If the start is closed, then the range includes all rows whose
   /// first `len(start_closed)` key columns exactly match `start_closed`.
   @$pb.TagNumber(1)
   $0.ListValue get startClosed => $_getN(0);
   @$pb.TagNumber(1)
-  set startClosed($0.ListValue v) {
-    setField(1, v);
-  }
-
+  set startClosed($0.ListValue value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStartClosed() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStartClosed() => clearField(1);
+  void clearStartClosed() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.ListValue ensureStartClosed() => $_ensure(0);
 
@@ -216,14 +215,11 @@ class KeyRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.ListValue get startOpen => $_getN(1);
   @$pb.TagNumber(2)
-  set startOpen($0.ListValue v) {
-    setField(2, v);
-  }
-
+  set startOpen($0.ListValue value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasStartOpen() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStartOpen() => clearField(2);
+  void clearStartOpen() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.ListValue ensureStartOpen() => $_ensure(1);
 
@@ -232,14 +228,11 @@ class KeyRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.ListValue get endClosed => $_getN(2);
   @$pb.TagNumber(3)
-  set endClosed($0.ListValue v) {
-    setField(3, v);
-  }
-
+  set endClosed($0.ListValue value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasEndClosed() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEndClosed() => clearField(3);
+  void clearEndClosed() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.ListValue ensureEndClosed() => $_ensure(2);
 
@@ -248,79 +241,69 @@ class KeyRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.ListValue get endOpen => $_getN(3);
   @$pb.TagNumber(4)
-  set endOpen($0.ListValue v) {
-    setField(4, v);
-  }
-
+  set endOpen($0.ListValue value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasEndOpen() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEndOpen() => clearField(4);
+  void clearEndOpen() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.ListValue ensureEndOpen() => $_ensure(3);
 }
 
-///  `KeySet` defines a collection of Cloud Spanner keys and/or key ranges. All
-///  the keys are expected to be in the same table or index. The keys need
-///  not be sorted in any particular way.
+/// `KeySet` defines a collection of Cloud Spanner keys and/or key ranges. All
+/// the keys are expected to be in the same table or index. The keys need
+/// not be sorted in any particular way.
 ///
-///  If the same key is specified multiple times in the set (for example
-///  if two ranges, two keys, or a key and a range overlap), Cloud Spanner
-///  behaves as if the key were only specified once.
+/// If the same key is specified multiple times in the set (for example
+/// if two ranges, two keys, or a key and a range overlap), Cloud Spanner
+/// behaves as if the key were only specified once.
 class KeySet extends $pb.GeneratedMessage {
   factory KeySet({
     $core.Iterable<$0.ListValue>? keys,
     $core.Iterable<KeyRange>? ranges,
     $core.bool? all,
   }) {
-    final $result = create();
-    if (keys != null) {
-      $result.keys.addAll(keys);
-    }
-    if (ranges != null) {
-      $result.ranges.addAll(ranges);
-    }
-    if (all != null) {
-      $result.all = all;
-    }
-    return $result;
+    final result = create();
+    if (keys != null) result.keys.addAll(keys);
+    if (ranges != null) result.ranges.addAll(ranges);
+    if (all != null) result.all = all;
+    return result;
   }
-  KeySet._() : super();
-  factory KeySet.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory KeySet.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  KeySet._();
+
+  factory KeySet.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory KeySet.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'KeySet',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..pc<$0.ListValue>(1, _omitFieldNames ? '' : 'keys', $pb.PbFieldType.PM,
+    ..pPM<$0.ListValue>(1, _omitFieldNames ? '' : 'keys',
         subBuilder: $0.ListValue.create)
-    ..pc<KeyRange>(2, _omitFieldNames ? '' : 'ranges', $pb.PbFieldType.PM,
+    ..pPM<KeyRange>(2, _omitFieldNames ? '' : 'ranges',
         subBuilder: KeyRange.create)
     ..aOB(3, _omitFieldNames ? '' : 'all')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  KeySet clone() => KeySet()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  KeySet clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   KeySet copyWith(void Function(KeySet) updates) =>
       super.copyWith((message) => updates(message as KeySet)) as KeySet;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static KeySet create() => KeySet._();
+  @$core.override
   KeySet createEmptyInstance() => create();
-  static $pb.PbList<KeySet> createRepeated() => $pb.PbList<KeySet>();
   @$core.pragma('dart2js:noInline')
   static KeySet getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<KeySet>(create);
@@ -331,12 +314,12 @@ class KeySet extends $pb.GeneratedMessage {
   /// with which this `KeySet` is used.  Individual key values are
   /// encoded as described [here][google.spanner.v1.TypeCode].
   @$pb.TagNumber(1)
-  $core.List<$0.ListValue> get keys => $_getList(0);
+  $pb.PbList<$0.ListValue> get keys => $_getList(0);
 
-  /// A list of key ranges. See [KeyRange][google.spanner.v1.KeyRange] for more information about
-  /// key range specifications.
+  /// A list of key ranges. See [KeyRange][google.spanner.v1.KeyRange] for more
+  /// information about key range specifications.
   @$pb.TagNumber(2)
-  $core.List<KeyRange> get ranges => $_getList(1);
+  $pb.PbList<KeyRange> get ranges => $_getList(1);
 
   /// For convenience `all` can be set to `true` to indicate that this
   /// `KeySet` matches all keys in the table or index. Note that any keys
@@ -344,16 +327,14 @@ class KeySet extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get all => $_getBF(2);
   @$pb.TagNumber(3)
-  set all($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set all($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasAll() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAll() => clearField(3);
+  void clearAll() => $_clearField(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

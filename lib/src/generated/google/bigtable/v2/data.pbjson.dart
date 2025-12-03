@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/bigtable/v2/data.proto
-//
-// @dart = 2.12
+// Generated from google/bigtable/v2/data.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -1050,7 +1052,17 @@ const PartialResultSet$json = {
       '9': 0,
       '10': 'protoRowsBatch'
     },
+    {
+      '1': 'batch_checksum',
+      '3': 6,
+      '4': 1,
+      '5': 13,
+      '9': 1,
+      '10': 'batchChecksum',
+      '17': true
+    },
     {'1': 'resume_token', '3': 5, '4': 1, '5': 12, '10': 'resumeToken'},
+    {'1': 'reset', '3': 7, '4': 1, '5': 8, '10': 'reset'},
     {
       '1': 'estimated_batch_size',
       '3': 4,
@@ -1061,12 +1073,36 @@ const PartialResultSet$json = {
   ],
   '8': [
     {'1': 'partial_rows'},
+    {'1': '_batch_checksum'},
   ],
 };
 
 /// Descriptor for `PartialResultSet`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List partialResultSetDescriptor = $convert.base64Decode(
     'ChBQYXJ0aWFsUmVzdWx0U2V0Ek4KEHByb3RvX3Jvd3NfYmF0Y2gYAyABKAsyIi5nb29nbGUuYm'
-    'lndGFibGUudjIuUHJvdG9Sb3dzQmF0Y2hIAFIOcHJvdG9Sb3dzQmF0Y2gSIQoMcmVzdW1lX3Rv'
-    'a2VuGAUgASgMUgtyZXN1bWVUb2tlbhIwChRlc3RpbWF0ZWRfYmF0Y2hfc2l6ZRgEIAEoBVISZX'
-    'N0aW1hdGVkQmF0Y2hTaXplQg4KDHBhcnRpYWxfcm93cw==');
+    'lndGFibGUudjIuUHJvdG9Sb3dzQmF0Y2hIAFIOcHJvdG9Sb3dzQmF0Y2gSKgoOYmF0Y2hfY2hl'
+    'Y2tzdW0YBiABKA1IAVINYmF0Y2hDaGVja3N1bYgBARIhCgxyZXN1bWVfdG9rZW4YBSABKAxSC3'
+    'Jlc3VtZVRva2VuEhQKBXJlc2V0GAcgASgIUgVyZXNldBIwChRlc3RpbWF0ZWRfYmF0Y2hfc2l6'
+    'ZRgEIAEoBVISZXN0aW1hdGVkQmF0Y2hTaXplQg4KDHBhcnRpYWxfcm93c0IRCg9fYmF0Y2hfY2'
+    'hlY2tzdW0=');
+
+@$core.Deprecated('Use idempotencyDescriptor instead')
+const Idempotency$json = {
+  '1': 'Idempotency',
+  '2': [
+    {'1': 'token', '3': 1, '4': 1, '5': 12, '10': 'token'},
+    {
+      '1': 'start_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+  ],
+};
+
+/// Descriptor for `Idempotency`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List idempotencyDescriptor = $convert.base64Decode(
+    'CgtJZGVtcG90ZW5jeRIUCgV0b2tlbhgBIAEoDFIFdG9rZW4SOQoKc3RhcnRfdGltZRgCIAEoCz'
+    'IaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXN0YXJ0VGltZQ==');

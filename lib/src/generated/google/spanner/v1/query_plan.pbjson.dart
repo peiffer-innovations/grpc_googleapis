@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/spanner/v1/query_plan.proto
-//
-// @dart = 2.12
+// Generated from google/spanner/v1/query_plan.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -129,6 +131,46 @@ final $typed_data.Uint8List planNodeDescriptor = $convert.base64Decode(
     'I4ASI4CgRLaW5kEhQKEEtJTkRfVU5TUEVDSUZJRUQQABIOCgpSRUxBVElPTkFMEAESCgoGU0NB'
     'TEFSEAI=');
 
+@$core.Deprecated('Use queryAdvisorResultDescriptor instead')
+const QueryAdvisorResult$json = {
+  '1': 'QueryAdvisorResult',
+  '2': [
+    {
+      '1': 'index_advice',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.spanner.v1.QueryAdvisorResult.IndexAdvice',
+      '8': {},
+      '10': 'indexAdvice'
+    },
+  ],
+  '3': [QueryAdvisorResult_IndexAdvice$json],
+};
+
+@$core.Deprecated('Use queryAdvisorResultDescriptor instead')
+const QueryAdvisorResult_IndexAdvice$json = {
+  '1': 'IndexAdvice',
+  '2': [
+    {'1': 'ddl', '3': 1, '4': 3, '5': 9, '8': {}, '10': 'ddl'},
+    {
+      '1': 'improvement_factor',
+      '3': 2,
+      '4': 1,
+      '5': 1,
+      '8': {},
+      '10': 'improvementFactor'
+    },
+  ],
+};
+
+/// Descriptor for `QueryAdvisorResult`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List queryAdvisorResultDescriptor = $convert.base64Decode(
+    'ChJRdWVyeUFkdmlzb3JSZXN1bHQSWQoMaW5kZXhfYWR2aWNlGAEgAygLMjEuZ29vZ2xlLnNwYW'
+    '5uZXIudjEuUXVlcnlBZHZpc29yUmVzdWx0LkluZGV4QWR2aWNlQgPgQQFSC2luZGV4QWR2aWNl'
+    'GlgKC0luZGV4QWR2aWNlEhUKA2RkbBgBIAMoCUID4EEBUgNkZGwSMgoSaW1wcm92ZW1lbnRfZm'
+    'FjdG9yGAIgASgBQgPgQQFSEWltcHJvdmVtZW50RmFjdG9y');
+
 @$core.Deprecated('Use queryPlanDescriptor instead')
 const QueryPlan$json = {
   '1': 'QueryPlan',
@@ -141,10 +183,20 @@ const QueryPlan$json = {
       '6': '.google.spanner.v1.PlanNode',
       '10': 'planNodes'
     },
+    {
+      '1': 'query_advice',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.v1.QueryAdvisorResult',
+      '8': {},
+      '10': 'queryAdvice'
+    },
   ],
 };
 
 /// Descriptor for `QueryPlan`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryPlanDescriptor = $convert.base64Decode(
     'CglRdWVyeVBsYW4SOgoKcGxhbl9ub2RlcxgBIAMoCzIbLmdvb2dsZS5zcGFubmVyLnYxLlBsYW'
-    '5Ob2RlUglwbGFuTm9kZXM=');
+    '5Ob2RlUglwbGFuTm9kZXMSTQoMcXVlcnlfYWR2aWNlGAIgASgLMiUuZ29vZ2xlLnNwYW5uZXIu'
+    'djEuUXVlcnlBZHZpc29yUmVzdWx0QgPgQQFSC3F1ZXJ5QWR2aWNl');

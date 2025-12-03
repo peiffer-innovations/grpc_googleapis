@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/pubsub/v1/pubsub.proto
-//
-// @dart = 2.12
+// Generated from google/pubsub/v1/pubsub.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -518,24 +520,24 @@ final $typed_data.Uint8List ingestionDataSourceSettingsDescriptor = $convert.bas
     'AAEgoKBkFDVElWRRABEiAKHEVWRU5UX0hVQlNfUEVSTUlTU0lPTl9ERU5JRUQQAhIdChlQVUJM'
     'SVNIX1BFUk1JU1NJT05fREVOSUVEEAMSFwoTTkFNRVNQQUNFX05PVF9GT1VORBAEEhcKE0VWRU'
     '5UX0hVQl9OT1RfRk9VTkQQBRIaChZTVUJTQ1JJUFRJT05fTk9UX0ZPVU5EEAYSHAoYUkVTT1VS'
-    'Q0VfR1JPVVBfTk9UX0ZPVU5EEAcajwMKBkF3c01zaxJVCgVzdGF0ZRgBIAEoDjI6Lmdvb2dsZS'
+    'Q0VfR1JPVVBfTk9UX0ZPVU5EEAcarwMKBkF3c01zaxJVCgVzdGF0ZRgBIAEoDjI6Lmdvb2dsZS'
     '5wdWJzdWIudjEuSW5nZXN0aW9uRGF0YVNvdXJjZVNldHRpbmdzLkF3c01zay5TdGF0ZUID4EED'
-    'UgVzdGF0ZRIkCgtjbHVzdGVyX2FybhgCIAEoCUID4EECUgpjbHVzdGVyQXJuEhkKBXRvcGljGA'
-    'MgASgJQgPgQQJSBXRvcGljEiUKDGF3c19yb2xlX2FybhgEIAEoCUID4EECUgphd3NSb2xlQXJu'
-    'EjMKE2djcF9zZXJ2aWNlX2FjY291bnQYBSABKAlCA+BBAlIRZ2NwU2VydmljZUFjY291bnQikA'
-    'EKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESGQoVTVNLX1BFUk1J'
-    'U1NJT05fREVOSUVEEAISHQoZUFVCTElTSF9QRVJNSVNTSU9OX0RFTklFRBADEhUKEUNMVVNURV'
-    'JfTk9UX0ZPVU5EEAQSEwoPVE9QSUNfTk9UX0ZPVU5EEAUagwQKDkNvbmZsdWVudENsb3VkEl0K'
-    'BXN0YXRlGAEgASgOMkIuZ29vZ2xlLnB1YnN1Yi52MS5Jbmdlc3Rpb25EYXRhU291cmNlU2V0dG'
-    'luZ3MuQ29uZmx1ZW50Q2xvdWQuU3RhdGVCA+BBA1IFc3RhdGUSLgoQYm9vdHN0cmFwX3NlcnZl'
-    'chgCIAEoCUID4EECUg9ib290c3RyYXBTZXJ2ZXISIgoKY2x1c3Rlcl9pZBgDIAEoCUID4EECUg'
-    'ljbHVzdGVySWQSGQoFdG9waWMYBCABKAlCA+BBAlIFdG9waWMSLQoQaWRlbnRpdHlfcG9vbF9p'
-    'ZBgFIAEoCUID4EECUg5pZGVudGl0eVBvb2xJZBIzChNnY3Bfc2VydmljZV9hY2NvdW50GAYgAS'
-    'gJQgPgQQJSEWdjcFNlcnZpY2VBY2NvdW50Ir4BCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklF'
-    'RBAAEgoKBkFDVElWRRABEiUKIUNPTkZMVUVOVF9DTE9VRF9QRVJNSVNTSU9OX0RFTklFRBACEh'
-    '0KGVBVQkxJU0hfUEVSTUlTU0lPTl9ERU5JRUQQAxIgChxVTlJFQUNIQUJMRV9CT09UU1RSQVBf'
-    'U0VSVkVSEAQSFQoRQ0xVU1RFUl9OT1RfRk9VTkQQBRITCg9UT1BJQ19OT1RfRk9VTkQQBkIICg'
-    'Zzb3VyY2U=');
+    'UgVzdGF0ZRIkCgtjbHVzdGVyX2FybhgCIAEoCUID4EECUgpjbHVzdGVyQXJuEjkKBXRvcGljGA'
+    'MgASgJQiPgQQL6QR0KG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpY1IFdG9waWMSJQoMYXdz'
+    'X3JvbGVfYXJuGAQgASgJQgPgQQJSCmF3c1JvbGVBcm4SMwoTZ2NwX3NlcnZpY2VfYWNjb3VudB'
+    'gFIAEoCUID4EECUhFnY3BTZXJ2aWNlQWNjb3VudCKQAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVD'
+    'SUZJRUQQABIKCgZBQ1RJVkUQARIZChVNU0tfUEVSTUlTU0lPTl9ERU5JRUQQAhIdChlQVUJMSV'
+    'NIX1BFUk1JU1NJT05fREVOSUVEEAMSFQoRQ0xVU1RFUl9OT1RfRk9VTkQQBBITCg9UT1BJQ19O'
+    'T1RfRk9VTkQQBRqDBAoOQ29uZmx1ZW50Q2xvdWQSXQoFc3RhdGUYASABKA4yQi5nb29nbGUucH'
+    'Vic3ViLnYxLkluZ2VzdGlvbkRhdGFTb3VyY2VTZXR0aW5ncy5Db25mbHVlbnRDbG91ZC5TdGF0'
+    'ZUID4EEDUgVzdGF0ZRIuChBib290c3RyYXBfc2VydmVyGAIgASgJQgPgQQJSD2Jvb3RzdHJhcF'
+    'NlcnZlchIiCgpjbHVzdGVyX2lkGAMgASgJQgPgQQJSCWNsdXN0ZXJJZBIZCgV0b3BpYxgEIAEo'
+    'CUID4EECUgV0b3BpYxItChBpZGVudGl0eV9wb29sX2lkGAUgASgJQgPgQQJSDmlkZW50aXR5UG'
+    '9vbElkEjMKE2djcF9zZXJ2aWNlX2FjY291bnQYBiABKAlCA+BBAlIRZ2NwU2VydmljZUFjY291'
+    'bnQivgEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESJQohQ09ORk'
+    'xVRU5UX0NMT1VEX1BFUk1JU1NJT05fREVOSUVEEAISHQoZUFVCTElTSF9QRVJNSVNTSU9OX0RF'
+    'TklFRBADEiAKHFVOUkVBQ0hBQkxFX0JPT1RTVFJBUF9TRVJWRVIQBBIVChFDTFVTVEVSX05PVF'
+    '9GT1VORBAFEhMKD1RPUElDX05PVF9GT1VORBAGQggKBnNvdXJjZQ==');
 
 @$core.Deprecated('Use platformLogsSettingsDescriptor instead')
 const PlatformLogsSettings$json = {
@@ -629,14 +631,27 @@ const IngestionFailureEvent$json = {
       '9': 0,
       '10': 'confluentCloudFailure'
     },
+    {
+      '1': 'aws_kinesis_failure',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.IngestionFailureEvent.AwsKinesisFailureReason',
+      '8': {},
+      '9': 0,
+      '10': 'awsKinesisFailure'
+    },
   ],
   '3': [
     IngestionFailureEvent_ApiViolationReason$json,
     IngestionFailureEvent_AvroFailureReason$json,
+    IngestionFailureEvent_SchemaViolationReason$json,
+    IngestionFailureEvent_MessageTransformationFailureReason$json,
     IngestionFailureEvent_CloudStorageFailure$json,
     IngestionFailureEvent_AwsMskFailureReason$json,
     IngestionFailureEvent_AzureEventHubsFailureReason$json,
-    IngestionFailureEvent_ConfluentCloudFailureReason$json
+    IngestionFailureEvent_ConfluentCloudFailureReason$json,
+    IngestionFailureEvent_AwsKinesisFailureReason$json
   ],
   '8': [
     {'1': 'failure'},
@@ -651,6 +666,16 @@ const IngestionFailureEvent_ApiViolationReason$json = {
 @$core.Deprecated('Use ingestionFailureEventDescriptor instead')
 const IngestionFailureEvent_AvroFailureReason$json = {
   '1': 'AvroFailureReason',
+};
+
+@$core.Deprecated('Use ingestionFailureEventDescriptor instead')
+const IngestionFailureEvent_SchemaViolationReason$json = {
+  '1': 'SchemaViolationReason',
+};
+
+@$core.Deprecated('Use ingestionFailureEventDescriptor instead')
+const IngestionFailureEvent_MessageTransformationFailureReason$json = {
+  '1': 'MessageTransformationFailureReason',
 };
 
 @$core.Deprecated('Use ingestionFailureEventDescriptor instead')
@@ -687,6 +712,27 @@ const IngestionFailureEvent_CloudStorageFailure$json = {
       '9': 0,
       '10': 'apiViolationReason'
     },
+    {
+      '1': 'schema_violation_reason',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.IngestionFailureEvent.SchemaViolationReason',
+      '8': {},
+      '9': 0,
+      '10': 'schemaViolationReason'
+    },
+    {
+      '1': 'message_transformation_failure_reason',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.pubsub.v1.IngestionFailureEvent.MessageTransformationFailureReason',
+      '8': {},
+      '9': 0,
+      '10': 'messageTransformationFailureReason'
+    },
   ],
   '8': [
     {'1': 'reason'},
@@ -710,6 +756,27 @@ const IngestionFailureEvent_AwsMskFailureReason$json = {
       '8': {},
       '9': 0,
       '10': 'apiViolationReason'
+    },
+    {
+      '1': 'schema_violation_reason',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.IngestionFailureEvent.SchemaViolationReason',
+      '8': {},
+      '9': 0,
+      '10': 'schemaViolationReason'
+    },
+    {
+      '1': 'message_transformation_failure_reason',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.pubsub.v1.IngestionFailureEvent.MessageTransformationFailureReason',
+      '8': {},
+      '9': 0,
+      '10': 'messageTransformationFailureReason'
     },
   ],
   '8': [
@@ -735,6 +802,27 @@ const IngestionFailureEvent_AzureEventHubsFailureReason$json = {
       '9': 0,
       '10': 'apiViolationReason'
     },
+    {
+      '1': 'schema_violation_reason',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.IngestionFailureEvent.SchemaViolationReason',
+      '8': {},
+      '9': 0,
+      '10': 'schemaViolationReason'
+    },
+    {
+      '1': 'message_transformation_failure_reason',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.pubsub.v1.IngestionFailureEvent.MessageTransformationFailureReason',
+      '8': {},
+      '9': 0,
+      '10': 'messageTransformationFailureReason'
+    },
   ],
   '8': [
     {'1': 'reason'},
@@ -759,6 +847,85 @@ const IngestionFailureEvent_ConfluentCloudFailureReason$json = {
       '9': 0,
       '10': 'apiViolationReason'
     },
+    {
+      '1': 'schema_violation_reason',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.IngestionFailureEvent.SchemaViolationReason',
+      '8': {},
+      '9': 0,
+      '10': 'schemaViolationReason'
+    },
+    {
+      '1': 'message_transformation_failure_reason',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.pubsub.v1.IngestionFailureEvent.MessageTransformationFailureReason',
+      '8': {},
+      '9': 0,
+      '10': 'messageTransformationFailureReason'
+    },
+  ],
+  '8': [
+    {'1': 'reason'},
+  ],
+};
+
+@$core.Deprecated('Use ingestionFailureEventDescriptor instead')
+const IngestionFailureEvent_AwsKinesisFailureReason$json = {
+  '1': 'AwsKinesisFailureReason',
+  '2': [
+    {'1': 'stream_arn', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'streamArn'},
+    {
+      '1': 'partition_key',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'partitionKey'
+    },
+    {
+      '1': 'sequence_number',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'sequenceNumber'
+    },
+    {
+      '1': 'schema_violation_reason',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.IngestionFailureEvent.SchemaViolationReason',
+      '8': {},
+      '9': 0,
+      '10': 'schemaViolationReason'
+    },
+    {
+      '1': 'message_transformation_failure_reason',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.pubsub.v1.IngestionFailureEvent.MessageTransformationFailureReason',
+      '8': {},
+      '9': 0,
+      '10': 'messageTransformationFailureReason'
+    },
+    {
+      '1': 'api_violation_reason',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.IngestionFailureEvent.ApiViolationReason',
+      '8': {},
+      '9': 0,
+      '10': 'apiViolationReason'
+    },
   ],
   '8': [
     {'1': 'reason'},
@@ -767,41 +934,76 @@ const IngestionFailureEvent_ConfluentCloudFailureReason$json = {
 
 /// Descriptor for `IngestionFailureEvent`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List ingestionFailureEventDescriptor = $convert.base64Decode(
-    'ChVJbmdlc3Rpb25GYWlsdXJlRXZlbnQSGQoFdG9waWMYASABKAlCA+BBAlIFdG9waWMSKAoNZX'
-    'Jyb3JfbWVzc2FnZRgCIAEoCUID4EECUgxlcnJvck1lc3NhZ2USdgoVY2xvdWRfc3RvcmFnZV9m'
-    'YWlsdXJlGAMgASgLMjsuZ29vZ2xlLnB1YnN1Yi52MS5Jbmdlc3Rpb25GYWlsdXJlRXZlbnQuQ2'
-    'xvdWRTdG9yYWdlRmFpbHVyZUID4EEBSABSE2Nsb3VkU3RvcmFnZUZhaWx1cmUSagoPYXdzX21z'
-    'a19mYWlsdXJlGAQgASgLMjsuZ29vZ2xlLnB1YnN1Yi52MS5Jbmdlc3Rpb25GYWlsdXJlRXZlbn'
-    'QuQXdzTXNrRmFpbHVyZVJlYXNvbkID4EEBSABSDWF3c01za0ZhaWx1cmUSgwEKGGF6dXJlX2V2'
-    'ZW50X2h1YnNfZmFpbHVyZRgFIAEoCzJDLmdvb2dsZS5wdWJzdWIudjEuSW5nZXN0aW9uRmFpbH'
-    'VyZUV2ZW50LkF6dXJlRXZlbnRIdWJzRmFpbHVyZVJlYXNvbkID4EEBSABSFWF6dXJlRXZlbnRI'
-    'dWJzRmFpbHVyZRKCAQoXY29uZmx1ZW50X2Nsb3VkX2ZhaWx1cmUYBiABKAsyQy5nb29nbGUucH'
-    'Vic3ViLnYxLkluZ2VzdGlvbkZhaWx1cmVFdmVudC5Db25mbHVlbnRDbG91ZEZhaWx1cmVSZWFz'
-    'b25CA+BBAUgAUhVjb25mbHVlbnRDbG91ZEZhaWx1cmUaFAoSQXBpVmlvbGF0aW9uUmVhc29uGh'
-    'MKEUF2cm9GYWlsdXJlUmVhc29uGvsCChNDbG91ZFN0b3JhZ2VGYWlsdXJlEhsKBmJ1Y2tldBgB'
-    'IAEoCUID4EEBUgZidWNrZXQSJAoLb2JqZWN0X25hbWUYAiABKAlCA+BBAVIKb2JqZWN0TmFtZR'
-    'IwChFvYmplY3RfZ2VuZXJhdGlvbhgDIAEoA0ID4EEBUhBvYmplY3RHZW5lcmF0aW9uEnAKE2F2'
-    'cm9fZmFpbHVyZV9yZWFzb24YBSABKAsyOS5nb29nbGUucHVic3ViLnYxLkluZ2VzdGlvbkZhaW'
-    'x1cmVFdmVudC5BdnJvRmFpbHVyZVJlYXNvbkID4EEBSABSEWF2cm9GYWlsdXJlUmVhc29uEnMK'
-    'FGFwaV92aW9sYXRpb25fcmVhc29uGAYgASgLMjouZ29vZ2xlLnB1YnN1Yi52MS5Jbmdlc3Rpb2'
-    '5GYWlsdXJlRXZlbnQuQXBpVmlvbGF0aW9uUmVhc29uQgPgQQFIAFISYXBpVmlvbGF0aW9uUmVh'
-    'c29uQggKBnJlYXNvbhqlAgoTQXdzTXNrRmFpbHVyZVJlYXNvbhIkCgtjbHVzdGVyX2FybhgBIA'
-    'EoCUID4EEBUgpjbHVzdGVyQXJuEiQKC2thZmthX3RvcGljGAIgASgJQgPgQQFSCmthZmthVG9w'
-    'aWMSJgoMcGFydGl0aW9uX2lkGAMgASgDQgPgQQFSC3BhcnRpdGlvbklkEhsKBm9mZnNldBgEIA'
-    'EoA0ID4EEBUgZvZmZzZXQScwoUYXBpX3Zpb2xhdGlvbl9yZWFzb24YBSABKAsyOi5nb29nbGUu'
-    'cHVic3ViLnYxLkluZ2VzdGlvbkZhaWx1cmVFdmVudC5BcGlWaW9sYXRpb25SZWFzb25CA+BBAU'
-    'gAUhJhcGlWaW9sYXRpb25SZWFzb25CCAoGcmVhc29uGqYCChtBenVyZUV2ZW50SHVic0ZhaWx1'
-    'cmVSZWFzb24SIQoJbmFtZXNwYWNlGAEgASgJQgPgQQFSCW5hbWVzcGFjZRIgCglldmVudF9odW'
-    'IYAiABKAlCA+BBAVIIZXZlbnRIdWISJgoMcGFydGl0aW9uX2lkGAMgASgDQgPgQQFSC3BhcnRp'
-    'dGlvbklkEhsKBm9mZnNldBgEIAEoA0ID4EEBUgZvZmZzZXQScwoUYXBpX3Zpb2xhdGlvbl9yZW'
-    'Fzb24YBSABKAsyOi5nb29nbGUucHVic3ViLnYxLkluZ2VzdGlvbkZhaWx1cmVFdmVudC5BcGlW'
-    'aW9sYXRpb25SZWFzb25CA+BBAUgAUhJhcGlWaW9sYXRpb25SZWFzb25CCAoGcmVhc29uGqsCCh'
-    'tDb25mbHVlbnRDbG91ZEZhaWx1cmVSZWFzb24SIgoKY2x1c3Rlcl9pZBgBIAEoCUID4EEBUglj'
-    'bHVzdGVySWQSJAoLa2Fma2FfdG9waWMYAiABKAlCA+BBAVIKa2Fma2FUb3BpYxImCgxwYXJ0aX'
-    'Rpb25faWQYAyABKANCA+BBAVILcGFydGl0aW9uSWQSGwoGb2Zmc2V0GAQgASgDQgPgQQFSBm9m'
-    'ZnNldBJzChRhcGlfdmlvbGF0aW9uX3JlYXNvbhgFIAEoCzI6Lmdvb2dsZS5wdWJzdWIudjEuSW'
-    '5nZXN0aW9uRmFpbHVyZUV2ZW50LkFwaVZpb2xhdGlvblJlYXNvbkID4EEBSABSEmFwaVZpb2xh'
-    'dGlvblJlYXNvbkIICgZyZWFzb25CCQoHZmFpbHVyZQ==');
+    'ChVJbmdlc3Rpb25GYWlsdXJlRXZlbnQSOQoFdG9waWMYASABKAlCI+BBAvpBHQobcHVic3ViLm'
+    'dvb2dsZWFwaXMuY29tL1RvcGljUgV0b3BpYxIoCg1lcnJvcl9tZXNzYWdlGAIgASgJQgPgQQJS'
+    'DGVycm9yTWVzc2FnZRJ2ChVjbG91ZF9zdG9yYWdlX2ZhaWx1cmUYAyABKAsyOy5nb29nbGUucH'
+    'Vic3ViLnYxLkluZ2VzdGlvbkZhaWx1cmVFdmVudC5DbG91ZFN0b3JhZ2VGYWlsdXJlQgPgQQFI'
+    'AFITY2xvdWRTdG9yYWdlRmFpbHVyZRJqCg9hd3NfbXNrX2ZhaWx1cmUYBCABKAsyOy5nb29nbG'
+    'UucHVic3ViLnYxLkluZ2VzdGlvbkZhaWx1cmVFdmVudC5Bd3NNc2tGYWlsdXJlUmVhc29uQgPg'
+    'QQFIAFINYXdzTXNrRmFpbHVyZRKDAQoYYXp1cmVfZXZlbnRfaHVic19mYWlsdXJlGAUgASgLMk'
+    'MuZ29vZ2xlLnB1YnN1Yi52MS5Jbmdlc3Rpb25GYWlsdXJlRXZlbnQuQXp1cmVFdmVudEh1YnNG'
+    'YWlsdXJlUmVhc29uQgPgQQFIAFIVYXp1cmVFdmVudEh1YnNGYWlsdXJlEoIBChdjb25mbHVlbn'
+    'RfY2xvdWRfZmFpbHVyZRgGIAEoCzJDLmdvb2dsZS5wdWJzdWIudjEuSW5nZXN0aW9uRmFpbHVy'
+    'ZUV2ZW50LkNvbmZsdWVudENsb3VkRmFpbHVyZVJlYXNvbkID4EEBSABSFWNvbmZsdWVudENsb3'
+    'VkRmFpbHVyZRJ2ChNhd3Nfa2luZXNpc19mYWlsdXJlGAcgASgLMj8uZ29vZ2xlLnB1YnN1Yi52'
+    'MS5Jbmdlc3Rpb25GYWlsdXJlRXZlbnQuQXdzS2luZXNpc0ZhaWx1cmVSZWFzb25CA+BBAUgAUh'
+    'Fhd3NLaW5lc2lzRmFpbHVyZRoUChJBcGlWaW9sYXRpb25SZWFzb24aEwoRQXZyb0ZhaWx1cmVS'
+    'ZWFzb24aFwoVU2NoZW1hVmlvbGF0aW9uUmVhc29uGiQKIk1lc3NhZ2VUcmFuc2Zvcm1hdGlvbk'
+    'ZhaWx1cmVSZWFzb24aoAUKE0Nsb3VkU3RvcmFnZUZhaWx1cmUSGwoGYnVja2V0GAEgASgJQgPg'
+    'QQFSBmJ1Y2tldBIkCgtvYmplY3RfbmFtZRgCIAEoCUID4EEBUgpvYmplY3ROYW1lEjAKEW9iam'
+    'VjdF9nZW5lcmF0aW9uGAMgASgDQgPgQQFSEG9iamVjdEdlbmVyYXRpb24ScAoTYXZyb19mYWls'
+    'dXJlX3JlYXNvbhgFIAEoCzI5Lmdvb2dsZS5wdWJzdWIudjEuSW5nZXN0aW9uRmFpbHVyZUV2ZW'
+    '50LkF2cm9GYWlsdXJlUmVhc29uQgPgQQFIAFIRYXZyb0ZhaWx1cmVSZWFzb24ScwoUYXBpX3Zp'
+    'b2xhdGlvbl9yZWFzb24YBiABKAsyOi5nb29nbGUucHVic3ViLnYxLkluZ2VzdGlvbkZhaWx1cm'
+    'VFdmVudC5BcGlWaW9sYXRpb25SZWFzb25CA+BBAUgAUhJhcGlWaW9sYXRpb25SZWFzb24SfAoX'
+    'c2NoZW1hX3Zpb2xhdGlvbl9yZWFzb24YByABKAsyPS5nb29nbGUucHVic3ViLnYxLkluZ2VzdG'
+    'lvbkZhaWx1cmVFdmVudC5TY2hlbWFWaW9sYXRpb25SZWFzb25CA+BBAUgAUhVzY2hlbWFWaW9s'
+    'YXRpb25SZWFzb24SpAEKJW1lc3NhZ2VfdHJhbnNmb3JtYXRpb25fZmFpbHVyZV9yZWFzb24YCC'
+    'ABKAsySi5nb29nbGUucHVic3ViLnYxLkluZ2VzdGlvbkZhaWx1cmVFdmVudC5NZXNzYWdlVHJh'
+    'bnNmb3JtYXRpb25GYWlsdXJlUmVhc29uQgPgQQFIAFIibWVzc2FnZVRyYW5zZm9ybWF0aW9uRm'
+    'FpbHVyZVJlYXNvbkIICgZyZWFzb24aygQKE0F3c01za0ZhaWx1cmVSZWFzb24SJAoLY2x1c3Rl'
+    'cl9hcm4YASABKAlCA+BBAVIKY2x1c3RlckFybhIkCgtrYWZrYV90b3BpYxgCIAEoCUID4EEBUg'
+    'prYWZrYVRvcGljEiYKDHBhcnRpdGlvbl9pZBgDIAEoA0ID4EEBUgtwYXJ0aXRpb25JZBIbCgZv'
+    'ZmZzZXQYBCABKANCA+BBAVIGb2Zmc2V0EnMKFGFwaV92aW9sYXRpb25fcmVhc29uGAUgASgLMj'
+    'ouZ29vZ2xlLnB1YnN1Yi52MS5Jbmdlc3Rpb25GYWlsdXJlRXZlbnQuQXBpVmlvbGF0aW9uUmVh'
+    'c29uQgPgQQFIAFISYXBpVmlvbGF0aW9uUmVhc29uEnwKF3NjaGVtYV92aW9sYXRpb25fcmVhc2'
+    '9uGAYgASgLMj0uZ29vZ2xlLnB1YnN1Yi52MS5Jbmdlc3Rpb25GYWlsdXJlRXZlbnQuU2NoZW1h'
+    'VmlvbGF0aW9uUmVhc29uQgPgQQFIAFIVc2NoZW1hVmlvbGF0aW9uUmVhc29uEqQBCiVtZXNzYW'
+    'dlX3RyYW5zZm9ybWF0aW9uX2ZhaWx1cmVfcmVhc29uGAcgASgLMkouZ29vZ2xlLnB1YnN1Yi52'
+    'MS5Jbmdlc3Rpb25GYWlsdXJlRXZlbnQuTWVzc2FnZVRyYW5zZm9ybWF0aW9uRmFpbHVyZVJlYX'
+    'NvbkID4EEBSABSIm1lc3NhZ2VUcmFuc2Zvcm1hdGlvbkZhaWx1cmVSZWFzb25CCAoGcmVhc29u'
+    'GssEChtBenVyZUV2ZW50SHVic0ZhaWx1cmVSZWFzb24SIQoJbmFtZXNwYWNlGAEgASgJQgPgQQ'
+    'FSCW5hbWVzcGFjZRIgCglldmVudF9odWIYAiABKAlCA+BBAVIIZXZlbnRIdWISJgoMcGFydGl0'
+    'aW9uX2lkGAMgASgDQgPgQQFSC3BhcnRpdGlvbklkEhsKBm9mZnNldBgEIAEoA0ID4EEBUgZvZm'
+    'ZzZXQScwoUYXBpX3Zpb2xhdGlvbl9yZWFzb24YBSABKAsyOi5nb29nbGUucHVic3ViLnYxLklu'
+    'Z2VzdGlvbkZhaWx1cmVFdmVudC5BcGlWaW9sYXRpb25SZWFzb25CA+BBAUgAUhJhcGlWaW9sYX'
+    'Rpb25SZWFzb24SfAoXc2NoZW1hX3Zpb2xhdGlvbl9yZWFzb24YBiABKAsyPS5nb29nbGUucHVi'
+    'c3ViLnYxLkluZ2VzdGlvbkZhaWx1cmVFdmVudC5TY2hlbWFWaW9sYXRpb25SZWFzb25CA+BBAU'
+    'gAUhVzY2hlbWFWaW9sYXRpb25SZWFzb24SpAEKJW1lc3NhZ2VfdHJhbnNmb3JtYXRpb25fZmFp'
+    'bHVyZV9yZWFzb24YByABKAsySi5nb29nbGUucHVic3ViLnYxLkluZ2VzdGlvbkZhaWx1cmVFdm'
+    'VudC5NZXNzYWdlVHJhbnNmb3JtYXRpb25GYWlsdXJlUmVhc29uQgPgQQFIAFIibWVzc2FnZVRy'
+    'YW5zZm9ybWF0aW9uRmFpbHVyZVJlYXNvbkIICgZyZWFzb24a0AQKG0NvbmZsdWVudENsb3VkRm'
+    'FpbHVyZVJlYXNvbhIiCgpjbHVzdGVyX2lkGAEgASgJQgPgQQFSCWNsdXN0ZXJJZBIkCgtrYWZr'
+    'YV90b3BpYxgCIAEoCUID4EEBUgprYWZrYVRvcGljEiYKDHBhcnRpdGlvbl9pZBgDIAEoA0ID4E'
+    'EBUgtwYXJ0aXRpb25JZBIbCgZvZmZzZXQYBCABKANCA+BBAVIGb2Zmc2V0EnMKFGFwaV92aW9s'
+    'YXRpb25fcmVhc29uGAUgASgLMjouZ29vZ2xlLnB1YnN1Yi52MS5Jbmdlc3Rpb25GYWlsdXJlRX'
+    'ZlbnQuQXBpVmlvbGF0aW9uUmVhc29uQgPgQQFIAFISYXBpVmlvbGF0aW9uUmVhc29uEnwKF3Nj'
+    'aGVtYV92aW9sYXRpb25fcmVhc29uGAYgASgLMj0uZ29vZ2xlLnB1YnN1Yi52MS5Jbmdlc3Rpb2'
+    '5GYWlsdXJlRXZlbnQuU2NoZW1hVmlvbGF0aW9uUmVhc29uQgPgQQFIAFIVc2NoZW1hVmlvbGF0'
+    'aW9uUmVhc29uEqQBCiVtZXNzYWdlX3RyYW5zZm9ybWF0aW9uX2ZhaWx1cmVfcmVhc29uGAcgAS'
+    'gLMkouZ29vZ2xlLnB1YnN1Yi52MS5Jbmdlc3Rpb25GYWlsdXJlRXZlbnQuTWVzc2FnZVRyYW5z'
+    'Zm9ybWF0aW9uRmFpbHVyZVJlYXNvbkID4EEBSABSIm1lc3NhZ2VUcmFuc2Zvcm1hdGlvbkZhaW'
+    'x1cmVSZWFzb25CCAoGcmVhc29uGrkEChdBd3NLaW5lc2lzRmFpbHVyZVJlYXNvbhIiCgpzdHJl'
+    'YW1fYXJuGAEgASgJQgPgQQFSCXN0cmVhbUFybhIoCg1wYXJ0aXRpb25fa2V5GAIgASgJQgPgQQ'
+    'FSDHBhcnRpdGlvbktleRIsCg9zZXF1ZW5jZV9udW1iZXIYAyABKAlCA+BBAVIOc2VxdWVuY2VO'
+    'dW1iZXISfAoXc2NoZW1hX3Zpb2xhdGlvbl9yZWFzb24YBCABKAsyPS5nb29nbGUucHVic3ViLn'
+    'YxLkluZ2VzdGlvbkZhaWx1cmVFdmVudC5TY2hlbWFWaW9sYXRpb25SZWFzb25CA+BBAUgAUhVz'
+    'Y2hlbWFWaW9sYXRpb25SZWFzb24SpAEKJW1lc3NhZ2VfdHJhbnNmb3JtYXRpb25fZmFpbHVyZV'
+    '9yZWFzb24YBSABKAsySi5nb29nbGUucHVic3ViLnYxLkluZ2VzdGlvbkZhaWx1cmVFdmVudC5N'
+    'ZXNzYWdlVHJhbnNmb3JtYXRpb25GYWlsdXJlUmVhc29uQgPgQQFIAFIibWVzc2FnZVRyYW5zZm'
+    '9ybWF0aW9uRmFpbHVyZVJlYXNvbhJzChRhcGlfdmlvbGF0aW9uX3JlYXNvbhgGIAEoCzI6Lmdv'
+    'b2dsZS5wdWJzdWIudjEuSW5nZXN0aW9uRmFpbHVyZUV2ZW50LkFwaVZpb2xhdGlvblJlYXNvbk'
+    'ID4EEBSABSEmFwaVZpb2xhdGlvblJlYXNvbkIICgZyZWFzb25CCQoHZmFpbHVyZQ==');
 
 @$core.Deprecated('Use javaScriptUDFDescriptor instead')
 const JavaScriptUDF$json = {
@@ -838,7 +1040,15 @@ const MessageTransform$json = {
       '9': 0,
       '10': 'javascriptUdf'
     },
-    {'1': 'enabled', '3': 3, '4': 1, '5': 8, '8': {}, '10': 'enabled'},
+    {
+      '1': 'enabled',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '8': {'3': true},
+      '10': 'enabled',
+    },
+    {'1': 'disabled', '3': 4, '4': 1, '5': 8, '8': {}, '10': 'disabled'},
   ],
   '8': [
     {'1': 'transform'},
@@ -848,8 +1058,9 @@ const MessageTransform$json = {
 /// Descriptor for `MessageTransform`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List messageTransformDescriptor = $convert.base64Decode(
     'ChBNZXNzYWdlVHJhbnNmb3JtEk0KDmphdmFzY3JpcHRfdWRmGAIgASgLMh8uZ29vZ2xlLnB1Yn'
-    'N1Yi52MS5KYXZhU2NyaXB0VURGQgPgQQFIAFINamF2YXNjcmlwdFVkZhIdCgdlbmFibGVkGAMg'
-    'ASgIQgPgQQFSB2VuYWJsZWRCCwoJdHJhbnNmb3Jt');
+    'N1Yi52MS5KYXZhU2NyaXB0VURGQgPgQQFIAFINamF2YXNjcmlwdFVkZhIfCgdlbmFibGVkGAMg'
+    'ASgIQgUYAeBBAVIHZW5hYmxlZBIfCghkaXNhYmxlZBgEIAEoCEID4EEBUghkaXNhYmxlZEILCg'
+    'l0cmFuc2Zvcm0=');
 
 @$core.Deprecated('Use topicDescriptor instead')
 const Topic$json = {
@@ -928,8 +1139,17 @@ const Topic$json = {
       '8': {},
       '10': 'messageTransforms'
     },
+    {
+      '1': 'tags',
+      '3': 14,
+      '4': 3,
+      '5': 11,
+      '6': '.google.pubsub.v1.Topic.TagsEntry',
+      '8': {},
+      '10': 'tags'
+    },
   ],
-  '3': [Topic_LabelsEntry$json],
+  '3': [Topic_LabelsEntry$json, Topic_TagsEntry$json],
   '4': [Topic_State$json],
   '7': {},
 };
@@ -937,6 +1157,16 @@ const Topic$json = {
 @$core.Deprecated('Use topicDescriptor instead')
 const Topic_LabelsEntry$json = {
   '1': 'LabelsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+@$core.Deprecated('Use topicDescriptor instead')
+const Topic_TagsEntry$json = {
+  '1': 'TagsEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
     {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
@@ -959,21 +1189,24 @@ final $typed_data.Uint8List topicDescriptor = $convert.base64Decode(
     'CgVUb3BpYxIXCgRuYW1lGAEgASgJQgPgQQJSBG5hbWUSQAoGbGFiZWxzGAIgAygLMiMuZ29vZ2'
     'xlLnB1YnN1Yi52MS5Ub3BpYy5MYWJlbHNFbnRyeUID4EEBUgZsYWJlbHMSYQoWbWVzc2FnZV9z'
     'dG9yYWdlX3BvbGljeRgDIAEoCzImLmdvb2dsZS5wdWJzdWIudjEuTWVzc2FnZVN0b3JhZ2VQb2'
-    'xpY3lCA+BBAVIUbWVzc2FnZVN0b3JhZ2VQb2xpY3kSJQoMa21zX2tleV9uYW1lGAUgASgJQgPg'
-    'QQFSCmttc0tleU5hbWUSTgoPc2NoZW1hX3NldHRpbmdzGAYgASgLMiAuZ29vZ2xlLnB1YnN1Yi'
-    '52MS5TY2hlbWFTZXR0aW5nc0ID4EEBUg5zY2hlbWFTZXR0aW5ncxIoCg1zYXRpc2ZpZXNfcHpz'
-    'GAcgASgIQgPgQQFSDHNhdGlzZmllc1B6cxJcChptZXNzYWdlX3JldGVudGlvbl9kdXJhdGlvbh'
-    'gIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBUhhtZXNzYWdlUmV0ZW50aW9u'
-    'RHVyYXRpb24SOAoFc3RhdGUYCSABKA4yHS5nb29nbGUucHVic3ViLnYxLlRvcGljLlN0YXRlQg'
-    'PgQQNSBXN0YXRlEncKHmluZ2VzdGlvbl9kYXRhX3NvdXJjZV9zZXR0aW5ncxgKIAEoCzItLmdv'
-    'b2dsZS5wdWJzdWIudjEuSW5nZXN0aW9uRGF0YVNvdXJjZVNldHRpbmdzQgPgQQFSG2luZ2VzdG'
-    'lvbkRhdGFTb3VyY2VTZXR0aW5ncxJWChJtZXNzYWdlX3RyYW5zZm9ybXMYDSADKAsyIi5nb29n'
-    'bGUucHVic3ViLnYxLk1lc3NhZ2VUcmFuc2Zvcm1CA+BBAVIRbWVzc2FnZVRyYW5zZm9ybXMaOQ'
-    'oLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4'
-    'ASJICgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEhwKGElOR0VTVE'
-    'lPTl9SRVNPVVJDRV9FUlJPUhACOmPqQWAKG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpYxIh'
-    'cHJvamVjdHMve3Byb2plY3R9L3RvcGljcy97dG9waWN9Eg9fZGVsZXRlZC10b3BpY18qBnRvcG'
-    'ljczIFdG9waWM=');
+    'xpY3lCA+BBAVIUbWVzc2FnZVN0b3JhZ2VQb2xpY3kSSwoMa21zX2tleV9uYW1lGAUgASgJQing'
+    'QQH6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVIKa21zS2V5TmFtZRJOCg'
+    '9zY2hlbWFfc2V0dGluZ3MYBiABKAsyIC5nb29nbGUucHVic3ViLnYxLlNjaGVtYVNldHRpbmdz'
+    'QgPgQQFSDnNjaGVtYVNldHRpbmdzEigKDXNhdGlzZmllc19wenMYByABKAhCA+BBAVIMc2F0aX'
+    'NmaWVzUHpzElwKGm1lc3NhZ2VfcmV0ZW50aW9uX2R1cmF0aW9uGAggASgLMhkuZ29vZ2xlLnBy'
+    'b3RvYnVmLkR1cmF0aW9uQgPgQQFSGG1lc3NhZ2VSZXRlbnRpb25EdXJhdGlvbhI4CgVzdGF0ZR'
+    'gJIAEoDjIdLmdvb2dsZS5wdWJzdWIudjEuVG9waWMuU3RhdGVCA+BBA1IFc3RhdGUSdwoeaW5n'
+    'ZXN0aW9uX2RhdGFfc291cmNlX3NldHRpbmdzGAogASgLMi0uZ29vZ2xlLnB1YnN1Yi52MS5Jbm'
+    'dlc3Rpb25EYXRhU291cmNlU2V0dGluZ3NCA+BBAVIbaW5nZXN0aW9uRGF0YVNvdXJjZVNldHRp'
+    'bmdzElYKEm1lc3NhZ2VfdHJhbnNmb3JtcxgNIAMoCzIiLmdvb2dsZS5wdWJzdWIudjEuTWVzc2'
+    'FnZVRyYW5zZm9ybUID4EEBUhFtZXNzYWdlVHJhbnNmb3JtcxJACgR0YWdzGA4gAygLMiEuZ29v'
+    'Z2xlLnB1YnN1Yi52MS5Ub3BpYy5UYWdzRW50cnlCCeBBBOBBBeBBAVIEdGFncxo5CgtMYWJlbH'
+    'NFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBGjcKCVRh'
+    'Z3NFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBIkgKBV'
+    'N0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESHAoYSU5HRVNUSU9OX1JF'
+    'U09VUkNFX0VSUk9SEAI6Y+pBYAobcHVic3ViLmdvb2dsZWFwaXMuY29tL1RvcGljEiFwcm9qZW'
+    'N0cy97cHJvamVjdH0vdG9waWNzL3t0b3BpY30SD19kZWxldGVkLXRvcGljXyoGdG9waWNzMgV0'
+    'b3BpYw==');
 
 @$core.Deprecated('Use pubsubMessageDescriptor instead')
 const PubsubMessage$json = {
@@ -1231,8 +1464,9 @@ const ListTopicSnapshotsResponse$json = {
 /// Descriptor for `ListTopicSnapshotsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listTopicSnapshotsResponseDescriptor =
     $convert.base64Decode(
-        'ChpMaXN0VG9waWNTbmFwc2hvdHNSZXNwb25zZRIhCglzbmFwc2hvdHMYASADKAlCA+BBAVIJc2'
-        '5hcHNob3RzEisKD25leHRfcGFnZV90b2tlbhgCIAEoCUID4EEBUg1uZXh0UGFnZVRva2Vu');
+        'ChpMaXN0VG9waWNTbmFwc2hvdHNSZXNwb25zZRJECglzbmFwc2hvdHMYASADKAlCJuBBAfpBIA'
+        'oecHVic3ViLmdvb2dsZWFwaXMuY29tL1NuYXBzaG90UglzbmFwc2hvdHMSKwoPbmV4dF9wYWdl'
+        'X3Rva2VuGAIgASgJQgPgQQFSDW5leHRQYWdlVG9rZW4=');
 
 @$core.Deprecated('Use deleteTopicRequestDescriptor instead')
 const DeleteTopicRequest$json = {
@@ -1425,10 +1659,20 @@ const Subscription$json = {
       '8': {},
       '10': 'messageTransforms'
     },
+    {
+      '1': 'tags',
+      '3': 26,
+      '4': 3,
+      '5': 11,
+      '6': '.google.pubsub.v1.Subscription.TagsEntry',
+      '8': {},
+      '10': 'tags'
+    },
   ],
   '3': [
     Subscription_AnalyticsHubSubscriptionInfo$json,
-    Subscription_LabelsEntry$json
+    Subscription_LabelsEntry$json,
+    Subscription_TagsEntry$json
   ],
   '4': [Subscription_State$json],
   '7': {},
@@ -1453,6 +1697,16 @@ const Subscription_AnalyticsHubSubscriptionInfo$json = {
 @$core.Deprecated('Use subscriptionDescriptor instead')
 const Subscription_LabelsEntry$json = {
   '1': 'LabelsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+@$core.Deprecated('Use subscriptionDescriptor instead')
+const Subscription_TagsEntry$json = {
+  '1': 'TagsEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
     {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
@@ -1498,13 +1752,16 @@ final $typed_data.Uint8List subscriptionDescriptor = $convert.base64Decode(
     '5wdWJzdWIudjEuU3Vic2NyaXB0aW9uLkFuYWx5dGljc0h1YlN1YnNjcmlwdGlvbkluZm9CA+BB'
     'A1IcYW5hbHl0aWNzSHViU3Vic2NyaXB0aW9uSW5mbxJWChJtZXNzYWdlX3RyYW5zZm9ybXMYGS'
     'ADKAsyIi5nb29nbGUucHVic3ViLnYxLk1lc3NhZ2VUcmFuc2Zvcm1CA+BBAVIRbWVzc2FnZVRy'
-    'YW5zZm9ybXMaZgocQW5hbHl0aWNzSHViU3Vic2NyaXB0aW9uSW5mbxIdCgdsaXN0aW5nGAEgAS'
-    'gJQgPgQQFSB2xpc3RpbmcSJwoMc3Vic2NyaXB0aW9uGAIgASgJQgPgQQFSDHN1YnNjcmlwdGlv'
-    'bho5CgtMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdW'
-    'U6AjgBIj4KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESEgoOUkVT'
-    'T1VSQ0VfRVJST1IQAjp16kFyCiJwdWJzdWIuZ29vZ2xlYXBpcy5jb20vU3Vic2NyaXB0aW9uEi'
-    '9wcm9qZWN0cy97cHJvamVjdH0vc3Vic2NyaXB0aW9ucy97c3Vic2NyaXB0aW9ufSoNc3Vic2Ny'
-    'aXB0aW9uczIMc3Vic2NyaXB0aW9u');
+    'YW5zZm9ybXMSRwoEdGFncxgaIAMoCzIoLmdvb2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9uLl'
+    'RhZ3NFbnRyeUIJ4EEE4EEF4EEBUgR0YWdzGo4BChxBbmFseXRpY3NIdWJTdWJzY3JpcHRpb25J'
+    'bmZvEkUKB2xpc3RpbmcYASABKAlCK+BBAfpBJQojYW5hbHl0aWNzaHViLmdvb2dsZWFwaXMuY2'
+    '9tL0xpc3RpbmdSB2xpc3RpbmcSJwoMc3Vic2NyaXB0aW9uGAIgASgJQgPgQQFSDHN1YnNjcmlw'
+    'dGlvbho5CgtMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdm'
+    'FsdWU6AjgBGjcKCVRhZ3NFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIF'
+    'dmFsdWU6AjgBIj4KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESEg'
+    'oOUkVTT1VSQ0VfRVJST1IQAjp16kFyCiJwdWJzdWIuZ29vZ2xlYXBpcy5jb20vU3Vic2NyaXB0'
+    'aW9uEi9wcm9qZWN0cy97cHJvamVjdH0vc3Vic2NyaXB0aW9ucy97c3Vic2NyaXB0aW9ufSoNc3'
+    'Vic2NyaXB0aW9uczIMc3Vic2NyaXB0aW9u');
 
 @$core.Deprecated('Use retryPolicyDescriptor instead')
 const RetryPolicy$json = {
@@ -1562,9 +1819,9 @@ const DeadLetterPolicy$json = {
 
 /// Descriptor for `DeadLetterPolicy`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deadLetterPolicyDescriptor = $convert.base64Decode(
-    'ChBEZWFkTGV0dGVyUG9saWN5Ei8KEWRlYWRfbGV0dGVyX3RvcGljGAEgASgJQgPgQQFSD2RlYW'
-    'RMZXR0ZXJUb3BpYxI3ChVtYXhfZGVsaXZlcnlfYXR0ZW1wdHMYAiABKAVCA+BBAVITbWF4RGVs'
-    'aXZlcnlBdHRlbXB0cw==');
+    'ChBEZWFkTGV0dGVyUG9saWN5Ek8KEWRlYWRfbGV0dGVyX3RvcGljGAEgASgJQiPgQQH6QR0KG3'
+    'B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpY1IPZGVhZExldHRlclRvcGljEjcKFW1heF9kZWxp'
+    'dmVyeV9hdHRlbXB0cxgCIAEoBUID4EEBUhNtYXhEZWxpdmVyeUF0dGVtcHRz');
 
 @$core.Deprecated('Use expirationPolicyDescriptor instead')
 const ExpirationPolicy$json = {
@@ -2284,6 +2541,14 @@ const StreamingPullRequest$json = {
       '8': {},
       '10': 'maxOutstandingBytes'
     },
+    {
+      '1': 'protocol_version',
+      '3': 10,
+      '4': 1,
+      '5': 3,
+      '8': {},
+      '10': 'protocolVersion'
+    },
   ],
 };
 
@@ -2297,7 +2562,8 @@ final $typed_data.Uint8List streamingPullRequestDescriptor = $convert.base64Deco
     'NlY29uZHMYBSABKAVCA+BBAlIYc3RyZWFtQWNrRGVhZGxpbmVTZWNvbmRzEiAKCWNsaWVudF9p'
     'ZBgGIAEoCUID4EEBUghjbGllbnRJZBI9ChhtYXhfb3V0c3RhbmRpbmdfbWVzc2FnZXMYByABKA'
     'NCA+BBAVIWbWF4T3V0c3RhbmRpbmdNZXNzYWdlcxI3ChVtYXhfb3V0c3RhbmRpbmdfYnl0ZXMY'
-    'CCABKANCA+BBAVITbWF4T3V0c3RhbmRpbmdCeXRlcw==');
+    'CCABKANCA+BBAVITbWF4T3V0c3RhbmRpbmdCeXRlcxIuChBwcm90b2NvbF92ZXJzaW9uGAogAS'
+    'gDQgPgQQFSD3Byb3RvY29sVmVyc2lvbg==');
 
 @$core.Deprecated('Use streamingPullResponseDescriptor instead')
 const StreamingPullResponse$json = {
@@ -2472,13 +2738,35 @@ const CreateSnapshotRequest$json = {
       '8': {},
       '10': 'labels'
     },
+    {
+      '1': 'tags',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.pubsub.v1.CreateSnapshotRequest.TagsEntry',
+      '8': {},
+      '10': 'tags'
+    },
   ],
-  '3': [CreateSnapshotRequest_LabelsEntry$json],
+  '3': [
+    CreateSnapshotRequest_LabelsEntry$json,
+    CreateSnapshotRequest_TagsEntry$json
+  ],
 };
 
 @$core.Deprecated('Use createSnapshotRequestDescriptor instead')
 const CreateSnapshotRequest_LabelsEntry$json = {
   '1': 'LabelsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+@$core.Deprecated('Use createSnapshotRequestDescriptor instead')
+const CreateSnapshotRequest_TagsEntry$json = {
+  '1': 'TagsEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
     {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
@@ -2492,8 +2780,10 @@ final $typed_data.Uint8List createSnapshotRequestDescriptor = $convert.base64Dec
     '9vZ2xlYXBpcy5jb20vU25hcHNob3RSBG5hbWUSTgoMc3Vic2NyaXB0aW9uGAIgASgJQirgQQL6'
     'QSQKInB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRpb25SDHN1YnNjcmlwdGlvbhJQCg'
     'ZsYWJlbHMYAyADKAsyMy5nb29nbGUucHVic3ViLnYxLkNyZWF0ZVNuYXBzaG90UmVxdWVzdC5M'
-    'YWJlbHNFbnRyeUID4EEBUgZsYWJlbHMaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZX'
-    'kSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4AQ==');
+    'YWJlbHNFbnRyeUID4EEBUgZsYWJlbHMSUAoEdGFncxgEIAMoCzIxLmdvb2dsZS5wdWJzdWIudj'
+    'EuQ3JlYXRlU25hcHNob3RSZXF1ZXN0LlRhZ3NFbnRyeUIJ4EEE4EEF4EEBUgR0YWdzGjkKC0xh'
+    'YmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEaNw'
+    'oJVGFnc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');
 
 @$core.Deprecated('Use updateSnapshotRequestDescriptor instead')
 const UpdateSnapshotRequest$json = {

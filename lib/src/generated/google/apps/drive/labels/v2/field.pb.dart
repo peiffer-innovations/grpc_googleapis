@@ -1,23 +1,27 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/apps/drive/labels/v2/field.proto
-//
-// @dart = 2.12
+// Generated from google/apps/drive/labels/v2/field.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $1;
 
-import '../../../../protobuf/timestamp.pb.dart' as $1;
 import '../../../../type/date.pb.dart' as $2;
 import 'common.pb.dart' as $0;
 import 'field.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'field.pbenum.dart';
 
@@ -28,25 +32,21 @@ class Field_Properties extends $pb.GeneratedMessage {
     $core.bool? required,
     $core.String? insertBeforeField,
   }) {
-    final $result = create();
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (required != null) {
-      $result.required = required;
-    }
-    if (insertBeforeField != null) {
-      $result.insertBeforeField = insertBeforeField;
-    }
-    return $result;
+    final result = create();
+    if (displayName != null) result.displayName = displayName;
+    if (required != null) result.required = required;
+    if (insertBeforeField != null) result.insertBeforeField = insertBeforeField;
+    return result;
   }
-  Field_Properties._() : super();
-  factory Field_Properties.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_Properties.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_Properties._();
+
+  factory Field_Properties.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_Properties.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.Properties',
@@ -58,24 +58,20 @@ class Field_Properties extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'insertBeforeField')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_Properties clone() => Field_Properties()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_Properties clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_Properties copyWith(void Function(Field_Properties) updates) =>
       super.copyWith((message) => updates(message as Field_Properties))
           as Field_Properties;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_Properties create() => Field_Properties._();
+  @$core.override
   Field_Properties createEmptyInstance() => create();
-  static $pb.PbList<Field_Properties> createRepeated() =>
-      $pb.PbList<Field_Properties>();
   @$core.pragma('dart2js:noInline')
   static Field_Properties getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_Properties>(create);
@@ -85,41 +81,32 @@ class Field_Properties extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get displayName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set displayName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set displayName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDisplayName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDisplayName() => clearField(1);
+  void clearDisplayName() => $_clearField(1);
 
   /// Whether the field should be marked as required.
   @$pb.TagNumber(2)
   $core.bool get required => $_getBF(1);
   @$pb.TagNumber(2)
-  set required($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set required($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasRequired() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRequired() => clearField(2);
+  void clearRequired() => $_clearField(2);
 
   /// Input only. Insert or move this field before the indicated field. If
   /// empty, the field is placed at the end of the list.
   @$pb.TagNumber(3)
   $core.String get insertBeforeField => $_getSZ(2);
   @$pb.TagNumber(3)
-  set insertBeforeField($core.String v) {
-    $_setString(2, v);
-  }
-
+  set insertBeforeField($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasInsertBeforeField() => $_has(2);
   @$pb.TagNumber(3)
-  void clearInsertBeforeField() => clearField(3);
+  void clearInsertBeforeField() => $_clearField(3);
 }
 
 /// UI display hints for rendering a field.
@@ -130,28 +117,22 @@ class Field_DisplayHints extends $pb.GeneratedMessage {
     $core.bool? hiddenInSearch,
     $core.bool? shownInApply,
   }) {
-    final $result = create();
-    if (required != null) {
-      $result.required = required;
-    }
-    if (disabled != null) {
-      $result.disabled = disabled;
-    }
-    if (hiddenInSearch != null) {
-      $result.hiddenInSearch = hiddenInSearch;
-    }
-    if (shownInApply != null) {
-      $result.shownInApply = shownInApply;
-    }
-    return $result;
+    final result = create();
+    if (required != null) result.required = required;
+    if (disabled != null) result.disabled = disabled;
+    if (hiddenInSearch != null) result.hiddenInSearch = hiddenInSearch;
+    if (shownInApply != null) result.shownInApply = shownInApply;
+    return result;
   }
-  Field_DisplayHints._() : super();
-  factory Field_DisplayHints.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_DisplayHints.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_DisplayHints._();
+
+  factory Field_DisplayHints.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_DisplayHints.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.DisplayHints',
@@ -164,24 +145,20 @@ class Field_DisplayHints extends $pb.GeneratedMessage {
     ..aOB(4, _omitFieldNames ? '' : 'shownInApply')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_DisplayHints clone() => Field_DisplayHints()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_DisplayHints clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_DisplayHints copyWith(void Function(Field_DisplayHints) updates) =>
       super.copyWith((message) => updates(message as Field_DisplayHints))
           as Field_DisplayHints;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_DisplayHints create() => Field_DisplayHints._();
+  @$core.override
   Field_DisplayHints createEmptyInstance() => create();
-  static $pb.PbList<Field_DisplayHints> createRepeated() =>
-      $pb.PbList<Field_DisplayHints>();
   @$core.pragma('dart2js:noInline')
   static Field_DisplayHints getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_DisplayHints>(create);
@@ -191,55 +168,43 @@ class Field_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get required => $_getBF(0);
   @$pb.TagNumber(1)
-  set required($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set required($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRequired() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRequired() => clearField(1);
+  void clearRequired() => $_clearField(1);
 
   /// Whether the field should be shown in the UI as disabled.
   @$pb.TagNumber(2)
   $core.bool get disabled => $_getBF(1);
   @$pb.TagNumber(2)
-  set disabled($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set disabled($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisabled() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisabled() => clearField(2);
+  void clearDisabled() => $_clearField(2);
 
   /// This field should be hidden in the search menu when searching for Drive
   /// items.
   @$pb.TagNumber(3)
   $core.bool get hiddenInSearch => $_getBF(2);
   @$pb.TagNumber(3)
-  set hiddenInSearch($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set hiddenInSearch($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasHiddenInSearch() => $_has(2);
   @$pb.TagNumber(3)
-  void clearHiddenInSearch() => clearField(3);
+  void clearHiddenInSearch() => $_clearField(3);
 
   /// This field should be shown in the apply menu when applying values to a
   /// Drive item.
   @$pb.TagNumber(4)
   $core.bool get shownInApply => $_getBF(3);
   @$pb.TagNumber(4)
-  set shownInApply($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set shownInApply($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasShownInApply() => $_has(3);
   @$pb.TagNumber(4)
-  void clearShownInApply() => clearField(4);
+  void clearShownInApply() => $_clearField(4);
 }
 
 /// The capabilities related to this field when editing the field.
@@ -250,28 +215,22 @@ class Field_SchemaCapabilities extends $pb.GeneratedMessage {
     $core.bool? canDisable,
     $core.bool? canEnable,
   }) {
-    final $result = create();
-    if (canUpdate != null) {
-      $result.canUpdate = canUpdate;
-    }
-    if (canDelete != null) {
-      $result.canDelete = canDelete;
-    }
-    if (canDisable != null) {
-      $result.canDisable = canDisable;
-    }
-    if (canEnable != null) {
-      $result.canEnable = canEnable;
-    }
-    return $result;
+    final result = create();
+    if (canUpdate != null) result.canUpdate = canUpdate;
+    if (canDelete != null) result.canDelete = canDelete;
+    if (canDisable != null) result.canDisable = canDisable;
+    if (canEnable != null) result.canEnable = canEnable;
+    return result;
   }
-  Field_SchemaCapabilities._() : super();
-  factory Field_SchemaCapabilities.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_SchemaCapabilities.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_SchemaCapabilities._();
+
+  factory Field_SchemaCapabilities.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_SchemaCapabilities.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.SchemaCapabilities',
@@ -284,26 +243,21 @@ class Field_SchemaCapabilities extends $pb.GeneratedMessage {
     ..aOB(4, _omitFieldNames ? '' : 'canEnable')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_SchemaCapabilities clone() =>
-      Field_SchemaCapabilities()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_SchemaCapabilities clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_SchemaCapabilities copyWith(
           void Function(Field_SchemaCapabilities) updates) =>
       super.copyWith((message) => updates(message as Field_SchemaCapabilities))
           as Field_SchemaCapabilities;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_SchemaCapabilities create() => Field_SchemaCapabilities._();
+  @$core.override
   Field_SchemaCapabilities createEmptyInstance() => create();
-  static $pb.PbList<Field_SchemaCapabilities> createRepeated() =>
-      $pb.PbList<Field_SchemaCapabilities>();
   @$core.pragma('dart2js:noInline')
   static Field_SchemaCapabilities getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_SchemaCapabilities>(create);
@@ -313,28 +267,22 @@ class Field_SchemaCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get canUpdate => $_getBF(0);
   @$pb.TagNumber(1)
-  set canUpdate($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set canUpdate($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasCanUpdate() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCanUpdate() => clearField(1);
+  void clearCanUpdate() => $_clearField(1);
 
   /// Whether the user can delete this field.
   /// The user must have permission and the field must be deprecated.
   @$pb.TagNumber(2)
   $core.bool get canDelete => $_getBF(1);
   @$pb.TagNumber(2)
-  set canDelete($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set canDelete($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCanDelete() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCanDelete() => clearField(2);
+  void clearCanDelete() => $_clearField(2);
 
   /// Whether the user can disable this field.
   /// The user must have permission and this field must not already be
@@ -342,28 +290,22 @@ class Field_SchemaCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get canDisable => $_getBF(2);
   @$pb.TagNumber(3)
-  set canDisable($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set canDisable($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasCanDisable() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCanDisable() => clearField(3);
+  void clearCanDisable() => $_clearField(3);
 
   /// Whether the user can enable this field.
   /// The user must have permission and this field must be disabled.
   @$pb.TagNumber(4)
   $core.bool get canEnable => $_getBF(3);
   @$pb.TagNumber(4)
-  set canEnable($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set canEnable($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasCanEnable() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCanEnable() => clearField(4);
+  void clearCanEnable() => $_clearField(4);
 }
 
 /// The capabilities related to this field on applied metadata.
@@ -373,25 +315,21 @@ class Field_AppliedCapabilities extends $pb.GeneratedMessage {
     $core.bool? canSearch,
     $core.bool? canWrite,
   }) {
-    final $result = create();
-    if (canRead != null) {
-      $result.canRead = canRead;
-    }
-    if (canSearch != null) {
-      $result.canSearch = canSearch;
-    }
-    if (canWrite != null) {
-      $result.canWrite = canWrite;
-    }
-    return $result;
+    final result = create();
+    if (canRead != null) result.canRead = canRead;
+    if (canSearch != null) result.canSearch = canSearch;
+    if (canWrite != null) result.canWrite = canWrite;
+    return result;
   }
-  Field_AppliedCapabilities._() : super();
-  factory Field_AppliedCapabilities.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_AppliedCapabilities.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_AppliedCapabilities._();
+
+  factory Field_AppliedCapabilities.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_AppliedCapabilities.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.AppliedCapabilities',
@@ -403,26 +341,21 @@ class Field_AppliedCapabilities extends $pb.GeneratedMessage {
     ..aOB(3, _omitFieldNames ? '' : 'canWrite')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_AppliedCapabilities clone() =>
-      Field_AppliedCapabilities()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_AppliedCapabilities clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_AppliedCapabilities copyWith(
           void Function(Field_AppliedCapabilities) updates) =>
       super.copyWith((message) => updates(message as Field_AppliedCapabilities))
           as Field_AppliedCapabilities;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_AppliedCapabilities create() => Field_AppliedCapabilities._();
+  @$core.override
   Field_AppliedCapabilities createEmptyInstance() => create();
-  static $pb.PbList<Field_AppliedCapabilities> createRepeated() =>
-      $pb.PbList<Field_AppliedCapabilities>();
   @$core.pragma('dart2js:noInline')
   static Field_AppliedCapabilities getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_AppliedCapabilities>(create);
@@ -432,40 +365,31 @@ class Field_AppliedCapabilities extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get canRead => $_getBF(0);
   @$pb.TagNumber(1)
-  set canRead($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set canRead($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasCanRead() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCanRead() => clearField(1);
+  void clearCanRead() => $_clearField(1);
 
   /// Whether the user can search for Drive items referencing this field.
   @$pb.TagNumber(2)
   $core.bool get canSearch => $_getBF(1);
   @$pb.TagNumber(2)
-  set canSearch($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set canSearch($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCanSearch() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCanSearch() => clearField(2);
+  void clearCanSearch() => $_clearField(2);
 
   /// Whether the user can set this field on Drive items.
   @$pb.TagNumber(3)
   $core.bool get canWrite => $_getBF(2);
   @$pb.TagNumber(3)
-  set canWrite($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set canWrite($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasCanWrite() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCanWrite() => clearField(3);
+  void clearCanWrite() => $_clearField(3);
 }
 
 /// Options for a multi-valued variant of an associated field type.
@@ -473,46 +397,42 @@ class Field_ListOptions extends $pb.GeneratedMessage {
   factory Field_ListOptions({
     $core.int? maxEntries,
   }) {
-    final $result = create();
-    if (maxEntries != null) {
-      $result.maxEntries = maxEntries;
-    }
-    return $result;
+    final result = create();
+    if (maxEntries != null) result.maxEntries = maxEntries;
+    return result;
   }
-  Field_ListOptions._() : super();
-  factory Field_ListOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_ListOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_ListOptions._();
+
+  factory Field_ListOptions.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_ListOptions.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.ListOptions',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'maxEntries', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'maxEntries')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_ListOptions clone() => Field_ListOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_ListOptions clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_ListOptions copyWith(void Function(Field_ListOptions) updates) =>
       super.copyWith((message) => updates(message as Field_ListOptions))
           as Field_ListOptions;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_ListOptions create() => Field_ListOptions._();
+  @$core.override
   Field_ListOptions createEmptyInstance() => create();
-  static $pb.PbList<Field_ListOptions> createRepeated() =>
-      $pb.PbList<Field_ListOptions>();
   @$core.pragma('dart2js:noInline')
   static Field_ListOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_ListOptions>(create);
@@ -522,14 +442,11 @@ class Field_ListOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get maxEntries => $_getIZ(0);
   @$pb.TagNumber(1)
-  set maxEntries($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set maxEntries($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMaxEntries() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMaxEntries() => clearField(1);
+  void clearMaxEntries() => $_clearField(1);
 }
 
 /// Options for the Text field type.
@@ -538,50 +455,44 @@ class Field_TextOptions extends $pb.GeneratedMessage {
     $core.int? minLength,
     $core.int? maxLength,
   }) {
-    final $result = create();
-    if (minLength != null) {
-      $result.minLength = minLength;
-    }
-    if (maxLength != null) {
-      $result.maxLength = maxLength;
-    }
-    return $result;
+    final result = create();
+    if (minLength != null) result.minLength = minLength;
+    if (maxLength != null) result.maxLength = maxLength;
+    return result;
   }
-  Field_TextOptions._() : super();
-  factory Field_TextOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_TextOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_TextOptions._();
+
+  factory Field_TextOptions.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_TextOptions.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.TextOptions',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'minLength', $pb.PbFieldType.O3)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'maxLength', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'minLength')
+    ..aI(2, _omitFieldNames ? '' : 'maxLength')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_TextOptions clone() => Field_TextOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_TextOptions clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_TextOptions copyWith(void Function(Field_TextOptions) updates) =>
       super.copyWith((message) => updates(message as Field_TextOptions))
           as Field_TextOptions;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_TextOptions create() => Field_TextOptions._();
+  @$core.override
   Field_TextOptions createEmptyInstance() => create();
-  static $pb.PbList<Field_TextOptions> createRepeated() =>
-      $pb.PbList<Field_TextOptions>();
   @$core.pragma('dart2js:noInline')
   static Field_TextOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_TextOptions>(create);
@@ -591,27 +502,21 @@ class Field_TextOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get minLength => $_getIZ(0);
   @$pb.TagNumber(1)
-  set minLength($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set minLength($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMinLength() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMinLength() => clearField(1);
+  void clearMinLength() => $_clearField(1);
 
   /// Output only. The maximum valid length of values for the text field.
   @$pb.TagNumber(2)
   $core.int get maxLength => $_getIZ(1);
   @$pb.TagNumber(2)
-  set maxLength($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set maxLength($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasMaxLength() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMaxLength() => clearField(2);
+  void clearMaxLength() => $_clearField(2);
 }
 
 /// Options for the Integer field type.
@@ -620,22 +525,20 @@ class Field_IntegerOptions extends $pb.GeneratedMessage {
     $fixnum.Int64? minValue,
     $fixnum.Int64? maxValue,
   }) {
-    final $result = create();
-    if (minValue != null) {
-      $result.minValue = minValue;
-    }
-    if (maxValue != null) {
-      $result.maxValue = maxValue;
-    }
-    return $result;
+    final result = create();
+    if (minValue != null) result.minValue = minValue;
+    if (maxValue != null) result.maxValue = maxValue;
+    return result;
   }
-  Field_IntegerOptions._() : super();
-  factory Field_IntegerOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_IntegerOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_IntegerOptions._();
+
+  factory Field_IntegerOptions.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_IntegerOptions.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.IntegerOptions',
@@ -646,25 +549,20 @@ class Field_IntegerOptions extends $pb.GeneratedMessage {
     ..aInt64(2, _omitFieldNames ? '' : 'maxValue')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_IntegerOptions clone() =>
-      Field_IntegerOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_IntegerOptions clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_IntegerOptions copyWith(void Function(Field_IntegerOptions) updates) =>
       super.copyWith((message) => updates(message as Field_IntegerOptions))
           as Field_IntegerOptions;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_IntegerOptions create() => Field_IntegerOptions._();
+  @$core.override
   Field_IntegerOptions createEmptyInstance() => create();
-  static $pb.PbList<Field_IntegerOptions> createRepeated() =>
-      $pb.PbList<Field_IntegerOptions>();
   @$core.pragma('dart2js:noInline')
   static Field_IntegerOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_IntegerOptions>(create);
@@ -674,27 +572,21 @@ class Field_IntegerOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $fixnum.Int64 get minValue => $_getI64(0);
   @$pb.TagNumber(1)
-  set minValue($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set minValue($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMinValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMinValue() => clearField(1);
+  void clearMinValue() => $_clearField(1);
 
   /// Output only. The maximum valid value for the integer field.
   @$pb.TagNumber(2)
   $fixnum.Int64 get maxValue => $_getI64(1);
   @$pb.TagNumber(2)
-  set maxValue($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set maxValue($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasMaxValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMaxValue() => clearField(2);
+  void clearMaxValue() => $_clearField(2);
 }
 
 /// Options for the date field type.
@@ -705,38 +597,30 @@ class Field_DateOptions extends $pb.GeneratedMessage {
     $2.Date? minValue,
     $2.Date? maxValue,
   }) {
-    final $result = create();
-    if (dateFormatType != null) {
-      $result.dateFormatType = dateFormatType;
-    }
-    if (dateFormat != null) {
-      $result.dateFormat = dateFormat;
-    }
-    if (minValue != null) {
-      $result.minValue = minValue;
-    }
-    if (maxValue != null) {
-      $result.maxValue = maxValue;
-    }
-    return $result;
+    final result = create();
+    if (dateFormatType != null) result.dateFormatType = dateFormatType;
+    if (dateFormat != null) result.dateFormat = dateFormat;
+    if (minValue != null) result.minValue = minValue;
+    if (maxValue != null) result.maxValue = maxValue;
+    return result;
   }
-  Field_DateOptions._() : super();
-  factory Field_DateOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_DateOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_DateOptions._();
+
+  factory Field_DateOptions.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_DateOptions.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.DateOptions',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
-    ..e<Field_DateOptions_DateFormat>(
-        1, _omitFieldNames ? '' : 'dateFormatType', $pb.PbFieldType.OE,
-        defaultOrMaker: Field_DateOptions_DateFormat.DATE_FORMAT_UNSPECIFIED,
-        valueOf: Field_DateOptions_DateFormat.valueOf,
+    ..aE<Field_DateOptions_DateFormat>(
+        1, _omitFieldNames ? '' : 'dateFormatType',
         enumValues: Field_DateOptions_DateFormat.values)
     ..aOS(2, _omitFieldNames ? '' : 'dateFormat')
     ..aOM<$2.Date>(3, _omitFieldNames ? '' : 'minValue',
@@ -745,24 +629,20 @@ class Field_DateOptions extends $pb.GeneratedMessage {
         subBuilder: $2.Date.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_DateOptions clone() => Field_DateOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_DateOptions clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_DateOptions copyWith(void Function(Field_DateOptions) updates) =>
       super.copyWith((message) => updates(message as Field_DateOptions))
           as Field_DateOptions;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_DateOptions create() => Field_DateOptions._();
+  @$core.override
   Field_DateOptions createEmptyInstance() => create();
-  static $pb.PbList<Field_DateOptions> createRepeated() =>
-      $pb.PbList<Field_DateOptions>();
   @$core.pragma('dart2js:noInline')
   static Field_DateOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_DateOptions>(create);
@@ -773,40 +653,32 @@ class Field_DateOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Field_DateOptions_DateFormat get dateFormatType => $_getN(0);
   @$pb.TagNumber(1)
-  set dateFormatType(Field_DateOptions_DateFormat v) {
-    setField(1, v);
-  }
-
+  set dateFormatType(Field_DateOptions_DateFormat value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasDateFormatType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDateFormatType() => clearField(1);
+  void clearDateFormatType() => $_clearField(1);
 
   /// Output only. ICU date format.
   @$pb.TagNumber(2)
   $core.String get dateFormat => $_getSZ(1);
   @$pb.TagNumber(2)
-  set dateFormat($core.String v) {
-    $_setString(1, v);
-  }
-
+  set dateFormat($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDateFormat() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDateFormat() => clearField(2);
+  void clearDateFormat() => $_clearField(2);
 
   /// Output only. Minimum valid value (year, month, day).
   @$pb.TagNumber(3)
   $2.Date get minValue => $_getN(2);
   @$pb.TagNumber(3)
-  set minValue($2.Date v) {
-    setField(3, v);
-  }
-
+  set minValue($2.Date value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasMinValue() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMinValue() => clearField(3);
+  void clearMinValue() => $_clearField(3);
   @$pb.TagNumber(3)
   $2.Date ensureMinValue() => $_ensure(2);
 
@@ -814,14 +686,11 @@ class Field_DateOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $2.Date get maxValue => $_getN(3);
   @$pb.TagNumber(4)
-  set maxValue($2.Date v) {
-    setField(4, v);
-  }
-
+  set maxValue($2.Date value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasMaxValue() => $_has(3);
   @$pb.TagNumber(4)
-  void clearMaxValue() => clearField(4);
+  void clearMaxValue() => $_clearField(4);
   @$pb.TagNumber(4)
   $2.Date ensureMaxValue() => $_ensure(3);
 }
@@ -834,29 +703,24 @@ class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
     $0.BadgeConfig? badgeConfig,
     $core.String? insertBeforeChoice,
   }) {
-    final $result = create();
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    if (badgeConfig != null) {
-      $result.badgeConfig = badgeConfig;
-    }
-    if (insertBeforeChoice != null) {
-      $result.insertBeforeChoice = insertBeforeChoice;
-    }
-    return $result;
+    final result = create();
+    if (displayName != null) result.displayName = displayName;
+    if (description != null) result.description = description;
+    if (badgeConfig != null) result.badgeConfig = badgeConfig;
+    if (insertBeforeChoice != null)
+      result.insertBeforeChoice = insertBeforeChoice;
+    return result;
   }
-  Field_SelectionOptions_Choice_Properties._() : super();
+
+  Field_SelectionOptions_Choice_Properties._();
+
   factory Field_SelectionOptions_Choice_Properties.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_SelectionOptions_Choice_Properties.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_SelectionOptions_Choice_Properties.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.SelectionOptions.Choice.Properties',
@@ -870,29 +734,23 @@ class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'insertBeforeChoice')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_SelectionOptions_Choice_Properties clone() =>
-      Field_SelectionOptions_Choice_Properties()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_SelectionOptions_Choice_Properties clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_SelectionOptions_Choice_Properties copyWith(
           void Function(Field_SelectionOptions_Choice_Properties) updates) =>
       super.copyWith((message) =>
               updates(message as Field_SelectionOptions_Choice_Properties))
           as Field_SelectionOptions_Choice_Properties;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_Properties create() =>
       Field_SelectionOptions_Choice_Properties._();
+  @$core.override
   Field_SelectionOptions_Choice_Properties createEmptyInstance() => create();
-  static $pb.PbList<Field_SelectionOptions_Choice_Properties>
-      createRepeated() =>
-          $pb.PbList<Field_SelectionOptions_Choice_Properties>();
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_Properties getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -903,41 +761,32 @@ class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get displayName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set displayName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set displayName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDisplayName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDisplayName() => clearField(1);
+  void clearDisplayName() => $_clearField(1);
 
   /// The description of this label.
   @$pb.TagNumber(2)
   $core.String get description => $_getSZ(1);
   @$pb.TagNumber(2)
-  set description($core.String v) {
-    $_setString(1, v);
-  }
-
+  set description($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDescription() => clearField(2);
+  void clearDescription() => $_clearField(2);
 
   /// The badge configuration for this choice. When set, the
   /// label that owns this choice is considered a "badged label".
   @$pb.TagNumber(3)
   $0.BadgeConfig get badgeConfig => $_getN(2);
   @$pb.TagNumber(3)
-  set badgeConfig($0.BadgeConfig v) {
-    setField(3, v);
-  }
-
+  set badgeConfig($0.BadgeConfig value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasBadgeConfig() => $_has(2);
   @$pb.TagNumber(3)
-  void clearBadgeConfig() => clearField(3);
+  void clearBadgeConfig() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.BadgeConfig ensureBadgeConfig() => $_ensure(2);
 
@@ -946,14 +795,11 @@ class Field_SelectionOptions_Choice_Properties extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get insertBeforeChoice => $_getSZ(3);
   @$pb.TagNumber(4)
-  set insertBeforeChoice($core.String v) {
-    $_setString(3, v);
-  }
-
+  set insertBeforeChoice($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasInsertBeforeChoice() => $_has(3);
   @$pb.TagNumber(4)
-  void clearInsertBeforeChoice() => clearField(4);
+  void clearInsertBeforeChoice() => $_clearField(4);
 }
 
 /// UI display hints for rendering an option.
@@ -966,35 +812,25 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
     $0.BadgeColors? darkBadgeColors,
     $fixnum.Int64? badgePriority,
   }) {
-    final $result = create();
-    if (disabled != null) {
-      $result.disabled = disabled;
-    }
-    if (hiddenInSearch != null) {
-      $result.hiddenInSearch = hiddenInSearch;
-    }
-    if (shownInApply != null) {
-      $result.shownInApply = shownInApply;
-    }
-    if (badgeColors != null) {
-      $result.badgeColors = badgeColors;
-    }
-    if (darkBadgeColors != null) {
-      $result.darkBadgeColors = darkBadgeColors;
-    }
-    if (badgePriority != null) {
-      $result.badgePriority = badgePriority;
-    }
-    return $result;
+    final result = create();
+    if (disabled != null) result.disabled = disabled;
+    if (hiddenInSearch != null) result.hiddenInSearch = hiddenInSearch;
+    if (shownInApply != null) result.shownInApply = shownInApply;
+    if (badgeColors != null) result.badgeColors = badgeColors;
+    if (darkBadgeColors != null) result.darkBadgeColors = darkBadgeColors;
+    if (badgePriority != null) result.badgePriority = badgePriority;
+    return result;
   }
-  Field_SelectionOptions_Choice_DisplayHints._() : super();
+
+  Field_SelectionOptions_Choice_DisplayHints._();
+
   factory Field_SelectionOptions_Choice_DisplayHints.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_SelectionOptions_Choice_DisplayHints.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_SelectionOptions_Choice_DisplayHints.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.SelectionOptions.Choice.DisplayHints',
@@ -1011,29 +847,23 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
     ..aInt64(6, _omitFieldNames ? '' : 'badgePriority')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_SelectionOptions_Choice_DisplayHints clone() =>
-      Field_SelectionOptions_Choice_DisplayHints()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_SelectionOptions_Choice_DisplayHints clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_SelectionOptions_Choice_DisplayHints copyWith(
           void Function(Field_SelectionOptions_Choice_DisplayHints) updates) =>
       super.copyWith((message) =>
               updates(message as Field_SelectionOptions_Choice_DisplayHints))
           as Field_SelectionOptions_Choice_DisplayHints;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_DisplayHints create() =>
       Field_SelectionOptions_Choice_DisplayHints._();
+  @$core.override
   Field_SelectionOptions_Choice_DisplayHints createEmptyInstance() => create();
-  static $pb.PbList<Field_SelectionOptions_Choice_DisplayHints>
-      createRepeated() =>
-          $pb.PbList<Field_SelectionOptions_Choice_DisplayHints>();
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_DisplayHints getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1044,56 +874,44 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get disabled => $_getBF(0);
   @$pb.TagNumber(1)
-  set disabled($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set disabled($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDisabled() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDisabled() => clearField(1);
+  void clearDisabled() => $_clearField(1);
 
   /// This option should be hidden in the search menu when searching for
   /// Drive items.
   @$pb.TagNumber(2)
   $core.bool get hiddenInSearch => $_getBF(1);
   @$pb.TagNumber(2)
-  set hiddenInSearch($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set hiddenInSearch($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasHiddenInSearch() => $_has(1);
   @$pb.TagNumber(2)
-  void clearHiddenInSearch() => clearField(2);
+  void clearHiddenInSearch() => $_clearField(2);
 
   /// This option should be shown in the apply menu when applying values to
   /// a Drive item.
   @$pb.TagNumber(3)
   $core.bool get shownInApply => $_getBF(2);
   @$pb.TagNumber(3)
-  set shownInApply($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set shownInApply($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasShownInApply() => $_has(2);
   @$pb.TagNumber(3)
-  void clearShownInApply() => clearField(3);
+  void clearShownInApply() => $_clearField(3);
 
   /// The colors to use for the badge. Changed to Google Material colors
   /// based on the chosen `properties.badge_config.color`.
   @$pb.TagNumber(4)
   $0.BadgeColors get badgeColors => $_getN(3);
   @$pb.TagNumber(4)
-  set badgeColors($0.BadgeColors v) {
-    setField(4, v);
-  }
-
+  set badgeColors($0.BadgeColors value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasBadgeColors() => $_has(3);
   @$pb.TagNumber(4)
-  void clearBadgeColors() => clearField(4);
+  void clearBadgeColors() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.BadgeColors ensureBadgeColors() => $_ensure(3);
 
@@ -1102,14 +920,11 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $0.BadgeColors get darkBadgeColors => $_getN(4);
   @$pb.TagNumber(5)
-  set darkBadgeColors($0.BadgeColors v) {
-    setField(5, v);
-  }
-
+  set darkBadgeColors($0.BadgeColors value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasDarkBadgeColors() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDarkBadgeColors() => clearField(5);
+  void clearDarkBadgeColors() => $_clearField(5);
   @$pb.TagNumber(5)
   $0.BadgeColors ensureDarkBadgeColors() => $_ensure(4);
 
@@ -1122,14 +937,11 @@ class Field_SelectionOptions_Choice_DisplayHints extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $fixnum.Int64 get badgePriority => $_getI64(5);
   @$pb.TagNumber(6)
-  set badgePriority($fixnum.Int64 v) {
-    $_setInt64(5, v);
-  }
-
+  set badgePriority($fixnum.Int64 value) => $_setInt64(5, value);
   @$pb.TagNumber(6)
   $core.bool hasBadgePriority() => $_has(5);
   @$pb.TagNumber(6)
-  void clearBadgePriority() => clearField(6);
+  void clearBadgePriority() => $_clearField(6);
 }
 
 /// The capabilities related to this choice when editing the choice.
@@ -1141,30 +953,24 @@ class Field_SelectionOptions_Choice_SchemaCapabilities
     $core.bool? canDisable,
     $core.bool? canEnable,
   }) {
-    final $result = create();
-    if (canUpdate != null) {
-      $result.canUpdate = canUpdate;
-    }
-    if (canDelete != null) {
-      $result.canDelete = canDelete;
-    }
-    if (canDisable != null) {
-      $result.canDisable = canDisable;
-    }
-    if (canEnable != null) {
-      $result.canEnable = canEnable;
-    }
-    return $result;
+    final result = create();
+    if (canUpdate != null) result.canUpdate = canUpdate;
+    if (canDelete != null) result.canDelete = canDelete;
+    if (canDisable != null) result.canDisable = canDisable;
+    if (canEnable != null) result.canEnable = canEnable;
+    return result;
   }
-  Field_SelectionOptions_Choice_SchemaCapabilities._() : super();
+
+  Field_SelectionOptions_Choice_SchemaCapabilities._();
+
   factory Field_SelectionOptions_Choice_SchemaCapabilities.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory Field_SelectionOptions_Choice_SchemaCapabilities.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -1179,15 +985,9 @@ class Field_SelectionOptions_Choice_SchemaCapabilities
     ..aOB(4, _omitFieldNames ? '' : 'canEnable')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_SelectionOptions_Choice_SchemaCapabilities clone() =>
-      Field_SelectionOptions_Choice_SchemaCapabilities()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_SelectionOptions_Choice_SchemaCapabilities clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_SelectionOptions_Choice_SchemaCapabilities copyWith(
           void Function(Field_SelectionOptions_Choice_SchemaCapabilities)
               updates) =>
@@ -1195,16 +995,15 @@ class Field_SelectionOptions_Choice_SchemaCapabilities
               message as Field_SelectionOptions_Choice_SchemaCapabilities))
           as Field_SelectionOptions_Choice_SchemaCapabilities;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_SchemaCapabilities create() =>
       Field_SelectionOptions_Choice_SchemaCapabilities._();
+  @$core.override
   Field_SelectionOptions_Choice_SchemaCapabilities createEmptyInstance() =>
       create();
-  static $pb.PbList<Field_SelectionOptions_Choice_SchemaCapabilities>
-      createRepeated() =>
-          $pb.PbList<Field_SelectionOptions_Choice_SchemaCapabilities>();
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_SchemaCapabilities getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1215,53 +1014,41 @@ class Field_SelectionOptions_Choice_SchemaCapabilities
   @$pb.TagNumber(1)
   $core.bool get canUpdate => $_getBF(0);
   @$pb.TagNumber(1)
-  set canUpdate($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set canUpdate($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasCanUpdate() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCanUpdate() => clearField(1);
+  void clearCanUpdate() => $_clearField(1);
 
   /// Whether the user can delete this choice.
   @$pb.TagNumber(2)
   $core.bool get canDelete => $_getBF(1);
   @$pb.TagNumber(2)
-  set canDelete($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set canDelete($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCanDelete() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCanDelete() => clearField(2);
+  void clearCanDelete() => $_clearField(2);
 
   /// Whether the user can disable this choice.
   @$pb.TagNumber(3)
   $core.bool get canDisable => $_getBF(2);
   @$pb.TagNumber(3)
-  set canDisable($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set canDisable($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasCanDisable() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCanDisable() => clearField(3);
+  void clearCanDisable() => $_clearField(3);
 
   /// Whether the user can enable this choice.
   @$pb.TagNumber(4)
   $core.bool get canEnable => $_getBF(3);
   @$pb.TagNumber(4)
-  set canEnable($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set canEnable($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasCanEnable() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCanEnable() => clearField(4);
+  void clearCanEnable() => $_clearField(4);
 }
 
 /// The capabilities related to this choice on applied metadata.
@@ -1272,27 +1059,23 @@ class Field_SelectionOptions_Choice_AppliedCapabilities
     $core.bool? canSearch,
     $core.bool? canSelect,
   }) {
-    final $result = create();
-    if (canRead != null) {
-      $result.canRead = canRead;
-    }
-    if (canSearch != null) {
-      $result.canSearch = canSearch;
-    }
-    if (canSelect != null) {
-      $result.canSelect = canSelect;
-    }
-    return $result;
+    final result = create();
+    if (canRead != null) result.canRead = canRead;
+    if (canSearch != null) result.canSearch = canSearch;
+    if (canSelect != null) result.canSelect = canSelect;
+    return result;
   }
-  Field_SelectionOptions_Choice_AppliedCapabilities._() : super();
+
+  Field_SelectionOptions_Choice_AppliedCapabilities._();
+
   factory Field_SelectionOptions_Choice_AppliedCapabilities.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory Field_SelectionOptions_Choice_AppliedCapabilities.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -1306,15 +1089,9 @@ class Field_SelectionOptions_Choice_AppliedCapabilities
     ..aOB(3, _omitFieldNames ? '' : 'canSelect')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_SelectionOptions_Choice_AppliedCapabilities clone() =>
-      Field_SelectionOptions_Choice_AppliedCapabilities()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_SelectionOptions_Choice_AppliedCapabilities clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_SelectionOptions_Choice_AppliedCapabilities copyWith(
           void Function(Field_SelectionOptions_Choice_AppliedCapabilities)
               updates) =>
@@ -1322,16 +1099,15 @@ class Field_SelectionOptions_Choice_AppliedCapabilities
               message as Field_SelectionOptions_Choice_AppliedCapabilities))
           as Field_SelectionOptions_Choice_AppliedCapabilities;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_AppliedCapabilities create() =>
       Field_SelectionOptions_Choice_AppliedCapabilities._();
+  @$core.override
   Field_SelectionOptions_Choice_AppliedCapabilities createEmptyInstance() =>
       create();
-  static $pb.PbList<Field_SelectionOptions_Choice_AppliedCapabilities>
-      createRepeated() =>
-          $pb.PbList<Field_SelectionOptions_Choice_AppliedCapabilities>();
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice_AppliedCapabilities getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1342,40 +1118,31 @@ class Field_SelectionOptions_Choice_AppliedCapabilities
   @$pb.TagNumber(1)
   $core.bool get canRead => $_getBF(0);
   @$pb.TagNumber(1)
-  set canRead($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set canRead($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasCanRead() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCanRead() => clearField(1);
+  void clearCanRead() => $_clearField(1);
 
   /// Whether the user can use this choice in search queries.
   @$pb.TagNumber(2)
   $core.bool get canSearch => $_getBF(1);
   @$pb.TagNumber(2)
-  set canSearch($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set canSearch($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCanSearch() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCanSearch() => clearField(2);
+  void clearCanSearch() => $_clearField(2);
 
   /// Whether the user can select this choice on an item.
   @$pb.TagNumber(3)
   $core.bool get canSelect => $_getBF(2);
   @$pb.TagNumber(3)
-  set canSelect($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set canSelect($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasCanSelect() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCanSelect() => clearField(3);
+  void clearCanSelect() => $_clearField(3);
 }
 
 /// Selection field choice.
@@ -1397,61 +1164,35 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
     $1.Timestamp? disableTime,
     $0.LockStatus? lockStatus,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    if (properties != null) {
-      $result.properties = properties;
-    }
-    if (lifecycle != null) {
-      $result.lifecycle = lifecycle;
-    }
-    if (displayHints != null) {
-      $result.displayHints = displayHints;
-    }
-    if (schemaCapabilities != null) {
-      $result.schemaCapabilities = schemaCapabilities;
-    }
-    if (appliedCapabilities != null) {
-      $result.appliedCapabilities = appliedCapabilities;
-    }
-    if (creator != null) {
-      $result.creator = creator;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (updater != null) {
-      $result.updater = updater;
-    }
-    if (updateTime != null) {
-      $result.updateTime = updateTime;
-    }
-    if (publisher != null) {
-      $result.publisher = publisher;
-    }
-    if (publishTime != null) {
-      $result.publishTime = publishTime;
-    }
-    if (disabler != null) {
-      $result.disabler = disabler;
-    }
-    if (disableTime != null) {
-      $result.disableTime = disableTime;
-    }
-    if (lockStatus != null) {
-      $result.lockStatus = lockStatus;
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    if (properties != null) result.properties = properties;
+    if (lifecycle != null) result.lifecycle = lifecycle;
+    if (displayHints != null) result.displayHints = displayHints;
+    if (schemaCapabilities != null)
+      result.schemaCapabilities = schemaCapabilities;
+    if (appliedCapabilities != null)
+      result.appliedCapabilities = appliedCapabilities;
+    if (creator != null) result.creator = creator;
+    if (createTime != null) result.createTime = createTime;
+    if (updater != null) result.updater = updater;
+    if (updateTime != null) result.updateTime = updateTime;
+    if (publisher != null) result.publisher = publisher;
+    if (publishTime != null) result.publishTime = publishTime;
+    if (disabler != null) result.disabler = disabler;
+    if (disableTime != null) result.disableTime = disableTime;
+    if (lockStatus != null) result.lockStatus = lockStatus;
+    return result;
   }
-  Field_SelectionOptions_Choice._() : super();
-  factory Field_SelectionOptions_Choice.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_SelectionOptions_Choice.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_SelectionOptions_Choice._();
+
+  factory Field_SelectionOptions_Choice.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_SelectionOptions_Choice.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.SelectionOptions.Choice',
@@ -1493,28 +1234,23 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
         subBuilder: $0.LockStatus.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_SelectionOptions_Choice clone() =>
-      Field_SelectionOptions_Choice()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_SelectionOptions_Choice clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_SelectionOptions_Choice copyWith(
           void Function(Field_SelectionOptions_Choice) updates) =>
       super.copyWith(
               (message) => updates(message as Field_SelectionOptions_Choice))
           as Field_SelectionOptions_Choice;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice create() =>
       Field_SelectionOptions_Choice._();
+  @$core.override
   Field_SelectionOptions_Choice createEmptyInstance() => create();
-  static $pb.PbList<Field_SelectionOptions_Choice> createRepeated() =>
-      $pb.PbList<Field_SelectionOptions_Choice>();
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions_Choice getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_SelectionOptions_Choice>(create);
@@ -1525,27 +1261,22 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// Basic properties of the choice.
   @$pb.TagNumber(2)
   Field_SelectionOptions_Choice_Properties get properties => $_getN(1);
   @$pb.TagNumber(2)
-  set properties(Field_SelectionOptions_Choice_Properties v) {
-    setField(2, v);
-  }
-
+  set properties(Field_SelectionOptions_Choice_Properties value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasProperties() => $_has(1);
   @$pb.TagNumber(2)
-  void clearProperties() => clearField(2);
+  void clearProperties() => $_clearField(2);
   @$pb.TagNumber(2)
   Field_SelectionOptions_Choice_Properties ensureProperties() => $_ensure(1);
 
@@ -1553,14 +1284,11 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Lifecycle get lifecycle => $_getN(2);
   @$pb.TagNumber(3)
-  set lifecycle($0.Lifecycle v) {
-    setField(3, v);
-  }
-
+  set lifecycle($0.Lifecycle value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasLifecycle() => $_has(2);
   @$pb.TagNumber(3)
-  void clearLifecycle() => clearField(3);
+  void clearLifecycle() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Lifecycle ensureLifecycle() => $_ensure(2);
 
@@ -1568,14 +1296,12 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   Field_SelectionOptions_Choice_DisplayHints get displayHints => $_getN(3);
   @$pb.TagNumber(4)
-  set displayHints(Field_SelectionOptions_Choice_DisplayHints v) {
-    setField(4, v);
-  }
-
+  set displayHints(Field_SelectionOptions_Choice_DisplayHints value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasDisplayHints() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDisplayHints() => clearField(4);
+  void clearDisplayHints() => $_clearField(4);
   @$pb.TagNumber(4)
   Field_SelectionOptions_Choice_DisplayHints ensureDisplayHints() =>
       $_ensure(3);
@@ -1586,14 +1312,13 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   Field_SelectionOptions_Choice_SchemaCapabilities get schemaCapabilities =>
       $_getN(4);
   @$pb.TagNumber(5)
-  set schemaCapabilities(Field_SelectionOptions_Choice_SchemaCapabilities v) {
-    setField(5, v);
-  }
-
+  set schemaCapabilities(
+          Field_SelectionOptions_Choice_SchemaCapabilities value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasSchemaCapabilities() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSchemaCapabilities() => clearField(5);
+  void clearSchemaCapabilities() => $_clearField(5);
   @$pb.TagNumber(5)
   Field_SelectionOptions_Choice_SchemaCapabilities ensureSchemaCapabilities() =>
       $_ensure(4);
@@ -1604,14 +1329,13 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   Field_SelectionOptions_Choice_AppliedCapabilities get appliedCapabilities =>
       $_getN(5);
   @$pb.TagNumber(6)
-  set appliedCapabilities(Field_SelectionOptions_Choice_AppliedCapabilities v) {
-    setField(6, v);
-  }
-
+  set appliedCapabilities(
+          Field_SelectionOptions_Choice_AppliedCapabilities value) =>
+      $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasAppliedCapabilities() => $_has(5);
   @$pb.TagNumber(6)
-  void clearAppliedCapabilities() => clearField(6);
+  void clearAppliedCapabilities() => $_clearField(6);
   @$pb.TagNumber(6)
   Field_SelectionOptions_Choice_AppliedCapabilities
       ensureAppliedCapabilities() => $_ensure(5);
@@ -1620,14 +1344,11 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $0.UserInfo get creator => $_getN(6);
   @$pb.TagNumber(7)
-  set creator($0.UserInfo v) {
-    setField(7, v);
-  }
-
+  set creator($0.UserInfo value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasCreator() => $_has(6);
   @$pb.TagNumber(7)
-  void clearCreator() => clearField(7);
+  void clearCreator() => $_clearField(7);
   @$pb.TagNumber(7)
   $0.UserInfo ensureCreator() => $_ensure(6);
 
@@ -1635,14 +1356,11 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $1.Timestamp get createTime => $_getN(7);
   @$pb.TagNumber(8)
-  set createTime($1.Timestamp v) {
-    setField(8, v);
-  }
-
+  set createTime($1.Timestamp value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasCreateTime() => $_has(7);
   @$pb.TagNumber(8)
-  void clearCreateTime() => clearField(8);
+  void clearCreateTime() => $_clearField(8);
   @$pb.TagNumber(8)
   $1.Timestamp ensureCreateTime() => $_ensure(7);
 
@@ -1650,14 +1368,11 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $0.UserInfo get updater => $_getN(8);
   @$pb.TagNumber(9)
-  set updater($0.UserInfo v) {
-    setField(9, v);
-  }
-
+  set updater($0.UserInfo value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasUpdater() => $_has(8);
   @$pb.TagNumber(9)
-  void clearUpdater() => clearField(9);
+  void clearUpdater() => $_clearField(9);
   @$pb.TagNumber(9)
   $0.UserInfo ensureUpdater() => $_ensure(8);
 
@@ -1665,14 +1380,11 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $1.Timestamp get updateTime => $_getN(9);
   @$pb.TagNumber(10)
-  set updateTime($1.Timestamp v) {
-    setField(10, v);
-  }
-
+  set updateTime($1.Timestamp value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasUpdateTime() => $_has(9);
   @$pb.TagNumber(10)
-  void clearUpdateTime() => clearField(10);
+  void clearUpdateTime() => $_clearField(10);
   @$pb.TagNumber(10)
   $1.Timestamp ensureUpdateTime() => $_ensure(9);
 
@@ -1681,14 +1393,11 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $0.UserInfo get publisher => $_getN(10);
   @$pb.TagNumber(11)
-  set publisher($0.UserInfo v) {
-    setField(11, v);
-  }
-
+  set publisher($0.UserInfo value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasPublisher() => $_has(10);
   @$pb.TagNumber(11)
-  void clearPublisher() => clearField(11);
+  void clearPublisher() => $_clearField(11);
   @$pb.TagNumber(11)
   $0.UserInfo ensurePublisher() => $_ensure(10);
 
@@ -1697,14 +1406,11 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $1.Timestamp get publishTime => $_getN(11);
   @$pb.TagNumber(12)
-  set publishTime($1.Timestamp v) {
-    setField(12, v);
-  }
-
+  set publishTime($1.Timestamp value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasPublishTime() => $_has(11);
   @$pb.TagNumber(12)
-  void clearPublishTime() => clearField(12);
+  void clearPublishTime() => $_clearField(12);
   @$pb.TagNumber(12)
   $1.Timestamp ensurePublishTime() => $_ensure(11);
 
@@ -1713,14 +1419,11 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $0.UserInfo get disabler => $_getN(12);
   @$pb.TagNumber(13)
-  set disabler($0.UserInfo v) {
-    setField(13, v);
-  }
-
+  set disabler($0.UserInfo value) => $_setField(13, value);
   @$pb.TagNumber(13)
   $core.bool hasDisabler() => $_has(12);
   @$pb.TagNumber(13)
-  void clearDisabler() => clearField(13);
+  void clearDisabler() => $_clearField(13);
   @$pb.TagNumber(13)
   $0.UserInfo ensureDisabler() => $_ensure(12);
 
@@ -1729,14 +1432,11 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $1.Timestamp get disableTime => $_getN(13);
   @$pb.TagNumber(14)
-  set disableTime($1.Timestamp v) {
-    setField(14, v);
-  }
-
+  set disableTime($1.Timestamp value) => $_setField(14, value);
   @$pb.TagNumber(14)
   $core.bool hasDisableTime() => $_has(13);
   @$pb.TagNumber(14)
-  void clearDisableTime() => clearField(14);
+  void clearDisableTime() => $_clearField(14);
   @$pb.TagNumber(14)
   $1.Timestamp ensureDisableTime() => $_ensure(13);
 
@@ -1744,14 +1444,11 @@ class Field_SelectionOptions_Choice extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $0.LockStatus get lockStatus => $_getN(14);
   @$pb.TagNumber(15)
-  set lockStatus($0.LockStatus v) {
-    setField(15, v);
-  }
-
+  set lockStatus($0.LockStatus value) => $_setField(15, value);
   @$pb.TagNumber(15)
   $core.bool hasLockStatus() => $_has(14);
   @$pb.TagNumber(15)
-  void clearLockStatus() => clearField(15);
+  void clearLockStatus() => $_clearField(15);
   @$pb.TagNumber(15)
   $0.LockStatus ensureLockStatus() => $_ensure(14);
 }
@@ -1762,22 +1459,20 @@ class Field_SelectionOptions extends $pb.GeneratedMessage {
     Field_ListOptions? listOptions,
     $core.Iterable<Field_SelectionOptions_Choice>? choices,
   }) {
-    final $result = create();
-    if (listOptions != null) {
-      $result.listOptions = listOptions;
-    }
-    if (choices != null) {
-      $result.choices.addAll(choices);
-    }
-    return $result;
+    final result = create();
+    if (listOptions != null) result.listOptions = listOptions;
+    if (choices != null) result.choices.addAll(choices);
+    return result;
   }
-  Field_SelectionOptions._() : super();
-  factory Field_SelectionOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_SelectionOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_SelectionOptions._();
+
+  factory Field_SelectionOptions.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_SelectionOptions.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.SelectionOptions',
@@ -1786,31 +1481,25 @@ class Field_SelectionOptions extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<Field_ListOptions>(1, _omitFieldNames ? '' : 'listOptions',
         subBuilder: Field_ListOptions.create)
-    ..pc<Field_SelectionOptions_Choice>(
-        2, _omitFieldNames ? '' : 'choices', $pb.PbFieldType.PM,
+    ..pPM<Field_SelectionOptions_Choice>(2, _omitFieldNames ? '' : 'choices',
         subBuilder: Field_SelectionOptions_Choice.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_SelectionOptions clone() =>
-      Field_SelectionOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_SelectionOptions clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_SelectionOptions copyWith(
           void Function(Field_SelectionOptions) updates) =>
       super.copyWith((message) => updates(message as Field_SelectionOptions))
           as Field_SelectionOptions;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions create() => Field_SelectionOptions._();
+  @$core.override
   Field_SelectionOptions createEmptyInstance() => create();
-  static $pb.PbList<Field_SelectionOptions> createRepeated() =>
-      $pb.PbList<Field_SelectionOptions>();
   @$core.pragma('dart2js:noInline')
   static Field_SelectionOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_SelectionOptions>(create);
@@ -1821,21 +1510,18 @@ class Field_SelectionOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Field_ListOptions get listOptions => $_getN(0);
   @$pb.TagNumber(1)
-  set listOptions(Field_ListOptions v) {
-    setField(1, v);
-  }
-
+  set listOptions(Field_ListOptions value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasListOptions() => $_has(0);
   @$pb.TagNumber(1)
-  void clearListOptions() => clearField(1);
+  void clearListOptions() => $_clearField(1);
   @$pb.TagNumber(1)
   Field_ListOptions ensureListOptions() => $_ensure(0);
 
   /// The options available for this selection field.
   /// The list order is consistent, and modified with `insert_before_choice`.
   @$pb.TagNumber(2)
-  $core.List<Field_SelectionOptions_Choice> get choices => $_getList(1);
+  $pb.PbList<Field_SelectionOptions_Choice> get choices => $_getList(1);
 }
 
 /// Options for the user field type.
@@ -1843,19 +1529,19 @@ class Field_UserOptions extends $pb.GeneratedMessage {
   factory Field_UserOptions({
     Field_ListOptions? listOptions,
   }) {
-    final $result = create();
-    if (listOptions != null) {
-      $result.listOptions = listOptions;
-    }
-    return $result;
+    final result = create();
+    if (listOptions != null) result.listOptions = listOptions;
+    return result;
   }
-  Field_UserOptions._() : super();
-  factory Field_UserOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field_UserOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field_UserOptions._();
+
+  factory Field_UserOptions.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field_UserOptions.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Field.UserOptions',
@@ -1866,24 +1552,20 @@ class Field_UserOptions extends $pb.GeneratedMessage {
         subBuilder: Field_ListOptions.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field_UserOptions clone() => Field_UserOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field_UserOptions clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field_UserOptions copyWith(void Function(Field_UserOptions) updates) =>
       super.copyWith((message) => updates(message as Field_UserOptions))
           as Field_UserOptions;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field_UserOptions create() => Field_UserOptions._();
+  @$core.override
   Field_UserOptions createEmptyInstance() => create();
-  static $pb.PbList<Field_UserOptions> createRepeated() =>
-      $pb.PbList<Field_UserOptions>();
   @$core.pragma('dart2js:noInline')
   static Field_UserOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Field_UserOptions>(create);
@@ -1894,14 +1576,11 @@ class Field_UserOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Field_ListOptions get listOptions => $_getN(0);
   @$pb.TagNumber(1)
-  set listOptions(Field_ListOptions v) {
-    setField(1, v);
-  }
-
+  set listOptions(Field_ListOptions value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasListOptions() => $_has(0);
   @$pb.TagNumber(1)
-  void clearListOptions() => clearField(1);
+  void clearListOptions() => $_clearField(1);
   @$pb.TagNumber(1)
   Field_ListOptions ensureListOptions() => $_ensure(0);
 }
@@ -1941,76 +1620,40 @@ class Field extends $pb.GeneratedMessage {
     Field_SelectionOptions? selectionOptions,
     Field_UserOptions? userOptions,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    if (queryKey != null) {
-      $result.queryKey = queryKey;
-    }
-    if (properties != null) {
-      $result.properties = properties;
-    }
-    if (lifecycle != null) {
-      $result.lifecycle = lifecycle;
-    }
-    if (displayHints != null) {
-      $result.displayHints = displayHints;
-    }
-    if (schemaCapabilities != null) {
-      $result.schemaCapabilities = schemaCapabilities;
-    }
-    if (appliedCapabilities != null) {
-      $result.appliedCapabilities = appliedCapabilities;
-    }
-    if (creator != null) {
-      $result.creator = creator;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (updater != null) {
-      $result.updater = updater;
-    }
-    if (updateTime != null) {
-      $result.updateTime = updateTime;
-    }
-    if (publisher != null) {
-      $result.publisher = publisher;
-    }
-    if (disabler != null) {
-      $result.disabler = disabler;
-    }
-    if (disableTime != null) {
-      $result.disableTime = disableTime;
-    }
-    if (lockStatus != null) {
-      $result.lockStatus = lockStatus;
-    }
-    if (textOptions != null) {
-      $result.textOptions = textOptions;
-    }
-    if (integerOptions != null) {
-      $result.integerOptions = integerOptions;
-    }
-    if (dateOptions != null) {
-      $result.dateOptions = dateOptions;
-    }
-    if (selectionOptions != null) {
-      $result.selectionOptions = selectionOptions;
-    }
-    if (userOptions != null) {
-      $result.userOptions = userOptions;
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    if (queryKey != null) result.queryKey = queryKey;
+    if (properties != null) result.properties = properties;
+    if (lifecycle != null) result.lifecycle = lifecycle;
+    if (displayHints != null) result.displayHints = displayHints;
+    if (schemaCapabilities != null)
+      result.schemaCapabilities = schemaCapabilities;
+    if (appliedCapabilities != null)
+      result.appliedCapabilities = appliedCapabilities;
+    if (creator != null) result.creator = creator;
+    if (createTime != null) result.createTime = createTime;
+    if (updater != null) result.updater = updater;
+    if (updateTime != null) result.updateTime = updateTime;
+    if (publisher != null) result.publisher = publisher;
+    if (disabler != null) result.disabler = disabler;
+    if (disableTime != null) result.disableTime = disableTime;
+    if (lockStatus != null) result.lockStatus = lockStatus;
+    if (textOptions != null) result.textOptions = textOptions;
+    if (integerOptions != null) result.integerOptions = integerOptions;
+    if (dateOptions != null) result.dateOptions = dateOptions;
+    if (selectionOptions != null) result.selectionOptions = selectionOptions;
+    if (userOptions != null) result.userOptions = userOptions;
+    return result;
   }
-  Field._() : super();
-  factory Field.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Field.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Field._();
+
+  factory Field.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Field.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Field_Type> _Field_TypeByTag = {
     16: Field_Type.textOptions,
@@ -2068,44 +1711,48 @@ class Field extends $pb.GeneratedMessage {
         subBuilder: Field_UserOptions.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Field clone() => Field()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Field clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Field copyWith(void Function(Field) updates) =>
       super.copyWith((message) => updates(message as Field)) as Field;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Field create() => Field._();
+  @$core.override
   Field createEmptyInstance() => create();
-  static $pb.PbList<Field> createRepeated() => $pb.PbList<Field>();
   @$core.pragma('dart2js:noInline')
   static Field getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Field>(create);
   static Field? _defaultInstance;
 
+  @$pb.TagNumber(16)
+  @$pb.TagNumber(18)
+  @$pb.TagNumber(19)
+  @$pb.TagNumber(20)
+  @$pb.TagNumber(21)
   Field_Type whichType() => _Field_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(16)
+  @$pb.TagNumber(18)
+  @$pb.TagNumber(19)
+  @$pb.TagNumber(20)
+  @$pb.TagNumber(21)
+  void clearType() => $_clearField($_whichOneof(0));
 
-  ///  Output only. The key of a field, unique within a label or library.
+  /// Output only. The key of a field, unique within a label or library.
   ///
-  ///  This value is autogenerated. Matches the regex: `([a-zA-Z0-9])+`
+  /// This value is autogenerated. Matches the regex: `([a-zA-Z0-9])+`
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// Output only. The key to use when constructing Drive search queries to find
   /// files based on values defined for this field on files.
@@ -2113,27 +1760,21 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get queryKey => $_getSZ(1);
   @$pb.TagNumber(2)
-  set queryKey($core.String v) {
-    $_setString(1, v);
-  }
-
+  set queryKey($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasQueryKey() => $_has(1);
   @$pb.TagNumber(2)
-  void clearQueryKey() => clearField(2);
+  void clearQueryKey() => $_clearField(2);
 
   /// The basic properties of the field.
   @$pb.TagNumber(3)
   Field_Properties get properties => $_getN(2);
   @$pb.TagNumber(3)
-  set properties(Field_Properties v) {
-    setField(3, v);
-  }
-
+  set properties(Field_Properties value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasProperties() => $_has(2);
   @$pb.TagNumber(3)
-  void clearProperties() => clearField(3);
+  void clearProperties() => $_clearField(3);
   @$pb.TagNumber(3)
   Field_Properties ensureProperties() => $_ensure(2);
 
@@ -2141,14 +1782,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Lifecycle get lifecycle => $_getN(3);
   @$pb.TagNumber(4)
-  set lifecycle($0.Lifecycle v) {
-    setField(4, v);
-  }
-
+  set lifecycle($0.Lifecycle value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasLifecycle() => $_has(3);
   @$pb.TagNumber(4)
-  void clearLifecycle() => clearField(4);
+  void clearLifecycle() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.Lifecycle ensureLifecycle() => $_ensure(3);
 
@@ -2156,14 +1794,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Field_DisplayHints get displayHints => $_getN(4);
   @$pb.TagNumber(5)
-  set displayHints(Field_DisplayHints v) {
-    setField(5, v);
-  }
-
+  set displayHints(Field_DisplayHints value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasDisplayHints() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDisplayHints() => clearField(5);
+  void clearDisplayHints() => $_clearField(5);
   @$pb.TagNumber(5)
   Field_DisplayHints ensureDisplayHints() => $_ensure(4);
 
@@ -2171,14 +1806,12 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   Field_SchemaCapabilities get schemaCapabilities => $_getN(5);
   @$pb.TagNumber(6)
-  set schemaCapabilities(Field_SchemaCapabilities v) {
-    setField(6, v);
-  }
-
+  set schemaCapabilities(Field_SchemaCapabilities value) =>
+      $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasSchemaCapabilities() => $_has(5);
   @$pb.TagNumber(6)
-  void clearSchemaCapabilities() => clearField(6);
+  void clearSchemaCapabilities() => $_clearField(6);
   @$pb.TagNumber(6)
   Field_SchemaCapabilities ensureSchemaCapabilities() => $_ensure(5);
 
@@ -2187,14 +1820,12 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   Field_AppliedCapabilities get appliedCapabilities => $_getN(6);
   @$pb.TagNumber(7)
-  set appliedCapabilities(Field_AppliedCapabilities v) {
-    setField(7, v);
-  }
-
+  set appliedCapabilities(Field_AppliedCapabilities value) =>
+      $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasAppliedCapabilities() => $_has(6);
   @$pb.TagNumber(7)
-  void clearAppliedCapabilities() => clearField(7);
+  void clearAppliedCapabilities() => $_clearField(7);
   @$pb.TagNumber(7)
   Field_AppliedCapabilities ensureAppliedCapabilities() => $_ensure(6);
 
@@ -2202,14 +1833,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $0.UserInfo get creator => $_getN(7);
   @$pb.TagNumber(8)
-  set creator($0.UserInfo v) {
-    setField(8, v);
-  }
-
+  set creator($0.UserInfo value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasCreator() => $_has(7);
   @$pb.TagNumber(8)
-  void clearCreator() => clearField(8);
+  void clearCreator() => $_clearField(8);
   @$pb.TagNumber(8)
   $0.UserInfo ensureCreator() => $_ensure(7);
 
@@ -2217,14 +1845,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $1.Timestamp get createTime => $_getN(8);
   @$pb.TagNumber(9)
-  set createTime($1.Timestamp v) {
-    setField(9, v);
-  }
-
+  set createTime($1.Timestamp value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasCreateTime() => $_has(8);
   @$pb.TagNumber(9)
-  void clearCreateTime() => clearField(9);
+  void clearCreateTime() => $_clearField(9);
   @$pb.TagNumber(9)
   $1.Timestamp ensureCreateTime() => $_ensure(8);
 
@@ -2232,14 +1857,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $0.UserInfo get updater => $_getN(9);
   @$pb.TagNumber(10)
-  set updater($0.UserInfo v) {
-    setField(10, v);
-  }
-
+  set updater($0.UserInfo value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasUpdater() => $_has(9);
   @$pb.TagNumber(10)
-  void clearUpdater() => clearField(10);
+  void clearUpdater() => $_clearField(10);
   @$pb.TagNumber(10)
   $0.UserInfo ensureUpdater() => $_ensure(9);
 
@@ -2247,14 +1869,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $1.Timestamp get updateTime => $_getN(10);
   @$pb.TagNumber(11)
-  set updateTime($1.Timestamp v) {
-    setField(11, v);
-  }
-
+  set updateTime($1.Timestamp value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasUpdateTime() => $_has(10);
   @$pb.TagNumber(11)
-  void clearUpdateTime() => clearField(11);
+  void clearUpdateTime() => $_clearField(11);
   @$pb.TagNumber(11)
   $1.Timestamp ensureUpdateTime() => $_ensure(10);
 
@@ -2263,14 +1882,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $0.UserInfo get publisher => $_getN(11);
   @$pb.TagNumber(12)
-  set publisher($0.UserInfo v) {
-    setField(12, v);
-  }
-
+  set publisher($0.UserInfo value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasPublisher() => $_has(11);
   @$pb.TagNumber(12)
-  void clearPublisher() => clearField(12);
+  void clearPublisher() => $_clearField(12);
   @$pb.TagNumber(12)
   $0.UserInfo ensurePublisher() => $_ensure(11);
 
@@ -2279,14 +1895,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $0.UserInfo get disabler => $_getN(12);
   @$pb.TagNumber(13)
-  set disabler($0.UserInfo v) {
-    setField(13, v);
-  }
-
+  set disabler($0.UserInfo value) => $_setField(13, value);
   @$pb.TagNumber(13)
   $core.bool hasDisabler() => $_has(12);
   @$pb.TagNumber(13)
-  void clearDisabler() => clearField(13);
+  void clearDisabler() => $_clearField(13);
   @$pb.TagNumber(13)
   $0.UserInfo ensureDisabler() => $_ensure(12);
 
@@ -2295,14 +1908,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $1.Timestamp get disableTime => $_getN(13);
   @$pb.TagNumber(14)
-  set disableTime($1.Timestamp v) {
-    setField(14, v);
-  }
-
+  set disableTime($1.Timestamp value) => $_setField(14, value);
   @$pb.TagNumber(14)
   $core.bool hasDisableTime() => $_has(13);
   @$pb.TagNumber(14)
-  void clearDisableTime() => clearField(14);
+  void clearDisableTime() => $_clearField(14);
   @$pb.TagNumber(14)
   $1.Timestamp ensureDisableTime() => $_ensure(13);
 
@@ -2310,14 +1920,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $0.LockStatus get lockStatus => $_getN(14);
   @$pb.TagNumber(15)
-  set lockStatus($0.LockStatus v) {
-    setField(15, v);
-  }
-
+  set lockStatus($0.LockStatus value) => $_setField(15, value);
   @$pb.TagNumber(15)
   $core.bool hasLockStatus() => $_has(14);
   @$pb.TagNumber(15)
-  void clearLockStatus() => clearField(15);
+  void clearLockStatus() => $_clearField(15);
   @$pb.TagNumber(15)
   $0.LockStatus ensureLockStatus() => $_ensure(14);
 
@@ -2325,14 +1932,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   Field_TextOptions get textOptions => $_getN(15);
   @$pb.TagNumber(16)
-  set textOptions(Field_TextOptions v) {
-    setField(16, v);
-  }
-
+  set textOptions(Field_TextOptions value) => $_setField(16, value);
   @$pb.TagNumber(16)
   $core.bool hasTextOptions() => $_has(15);
   @$pb.TagNumber(16)
-  void clearTextOptions() => clearField(16);
+  void clearTextOptions() => $_clearField(16);
   @$pb.TagNumber(16)
   Field_TextOptions ensureTextOptions() => $_ensure(15);
 
@@ -2340,14 +1944,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   Field_IntegerOptions get integerOptions => $_getN(16);
   @$pb.TagNumber(18)
-  set integerOptions(Field_IntegerOptions v) {
-    setField(18, v);
-  }
-
+  set integerOptions(Field_IntegerOptions value) => $_setField(18, value);
   @$pb.TagNumber(18)
   $core.bool hasIntegerOptions() => $_has(16);
   @$pb.TagNumber(18)
-  void clearIntegerOptions() => clearField(18);
+  void clearIntegerOptions() => $_clearField(18);
   @$pb.TagNumber(18)
   Field_IntegerOptions ensureIntegerOptions() => $_ensure(16);
 
@@ -2355,14 +1956,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   Field_DateOptions get dateOptions => $_getN(17);
   @$pb.TagNumber(19)
-  set dateOptions(Field_DateOptions v) {
-    setField(19, v);
-  }
-
+  set dateOptions(Field_DateOptions value) => $_setField(19, value);
   @$pb.TagNumber(19)
   $core.bool hasDateOptions() => $_has(17);
   @$pb.TagNumber(19)
-  void clearDateOptions() => clearField(19);
+  void clearDateOptions() => $_clearField(19);
   @$pb.TagNumber(19)
   Field_DateOptions ensureDateOptions() => $_ensure(17);
 
@@ -2370,14 +1968,11 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   Field_SelectionOptions get selectionOptions => $_getN(18);
   @$pb.TagNumber(20)
-  set selectionOptions(Field_SelectionOptions v) {
-    setField(20, v);
-  }
-
+  set selectionOptions(Field_SelectionOptions value) => $_setField(20, value);
   @$pb.TagNumber(20)
   $core.bool hasSelectionOptions() => $_has(18);
   @$pb.TagNumber(20)
-  void clearSelectionOptions() => clearField(20);
+  void clearSelectionOptions() => $_clearField(20);
   @$pb.TagNumber(20)
   Field_SelectionOptions ensureSelectionOptions() => $_ensure(18);
 
@@ -2385,18 +1980,16 @@ class Field extends $pb.GeneratedMessage {
   @$pb.TagNumber(21)
   Field_UserOptions get userOptions => $_getN(19);
   @$pb.TagNumber(21)
-  set userOptions(Field_UserOptions v) {
-    setField(21, v);
-  }
-
+  set userOptions(Field_UserOptions value) => $_setField(21, value);
   @$pb.TagNumber(21)
   $core.bool hasUserOptions() => $_has(19);
   @$pb.TagNumber(21)
-  void clearUserOptions() => clearField(21);
+  void clearUserOptions() => $_clearField(21);
   @$pb.TagNumber(21)
   Field_UserOptions ensureUserOptions() => $_ensure(19);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

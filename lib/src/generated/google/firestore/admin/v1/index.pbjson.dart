@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/firestore/admin/v1/index.proto
-//
-// @dart = 2.12
+// Generated from google/firestore/admin/v1/index.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -50,9 +52,25 @@ const Index$json = {
       '6': '.google.firestore.admin.v1.Index.State',
       '10': 'state'
     },
+    {
+      '1': 'density',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.google.firestore.admin.v1.Index.Density',
+      '8': {},
+      '10': 'density'
+    },
+    {'1': 'multikey', '3': 7, '4': 1, '5': 8, '8': {}, '10': 'multikey'},
+    {'1': 'shard_count', '3': 8, '4': 1, '5': 5, '8': {}, '10': 'shardCount'},
   ],
   '3': [Index_IndexField$json],
-  '4': [Index_QueryScope$json, Index_ApiScope$json, Index_State$json],
+  '4': [
+    Index_QueryScope$json,
+    Index_ApiScope$json,
+    Index_State$json,
+    Index_Density$json
+  ],
   '7': {},
 };
 
@@ -158,6 +176,7 @@ const Index_ApiScope$json = {
   '2': [
     {'1': 'ANY_API', '2': 0},
     {'1': 'DATASTORE_MODE_API', '2': 1},
+    {'1': 'MONGODB_COMPATIBLE_API', '2': 2},
   ],
 };
 
@@ -172,6 +191,17 @@ const Index_State$json = {
   ],
 };
 
+@$core.Deprecated('Use indexDescriptor instead')
+const Index_Density$json = {
+  '1': 'Density',
+  '2': [
+    {'1': 'DENSITY_UNSPECIFIED', '2': 0},
+    {'1': 'SPARSE_ALL', '2': 1},
+    {'1': 'SPARSE_ANY', '2': 2},
+    {'1': 'DENSE', '2': 3},
+  ],
+};
+
 /// Descriptor for `Index`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List indexDescriptor = $convert.base64Decode(
     'CgVJbmRleBISCgRuYW1lGAEgASgJUgRuYW1lEkwKC3F1ZXJ5X3Njb3BlGAIgASgOMisuZ29vZ2'
@@ -179,21 +209,26 @@ final $typed_data.Uint8List indexDescriptor = $convert.base64Decode(
     'aV9zY29wZRgFIAEoDjIpLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXguQXBpU2NvcG'
     'VSCGFwaVNjb3BlEkMKBmZpZWxkcxgDIAMoCzIrLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEu'
     'SW5kZXguSW5kZXhGaWVsZFIGZmllbGRzEjwKBXN0YXRlGAQgASgOMiYuZ29vZ2xlLmZpcmVzdG'
-    '9yZS5hZG1pbi52MS5JbmRleC5TdGF0ZVIFc3RhdGUa4AQKCkluZGV4RmllbGQSHQoKZmllbGRf'
-    'cGF0aBgBIAEoCVIJZmllbGRQYXRoEkkKBW9yZGVyGAIgASgOMjEuZ29vZ2xlLmZpcmVzdG9yZS'
-    '5hZG1pbi52MS5JbmRleC5JbmRleEZpZWxkLk9yZGVySABSBW9yZGVyElwKDGFycmF5X2NvbmZp'
-    'ZxgDIAEoDjI3Lmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXguSW5kZXhGaWVsZC5Bcn'
-    'JheUNvbmZpZ0gAUgthcnJheUNvbmZpZxJfCg12ZWN0b3JfY29uZmlnGAQgASgLMjguZ29vZ2xl'
-    'LmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5JbmRleEZpZWxkLlZlY3RvckNvbmZpZ0gAUgx2ZW'
-    'N0b3JDb25maWcaoAEKDFZlY3RvckNvbmZpZxIhCglkaW1lbnNpb24YASABKAVCA+BBAlIJZGlt'
-    'ZW5zaW9uElgKBGZsYXQYAiABKAsyQi5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkluZGV4Lk'
-    'luZGV4RmllbGQuVmVjdG9yQ29uZmlnLkZsYXRJbmRleEgAUgRmbGF0GgsKCUZsYXRJbmRleEIG'
-    'CgR0eXBlIj0KBU9yZGVyEhUKEU9SREVSX1VOU1BFQ0lGSUVEEAASDQoJQVNDRU5ESU5HEAESDg'
-    'oKREVTQ0VORElORxACIjkKC0FycmF5Q29uZmlnEhwKGEFSUkFZX0NPTkZJR19VTlNQRUNJRklF'
-    'RBAAEgwKCENPTlRBSU5TEAFCDAoKdmFsdWVfbW9kZSJpCgpRdWVyeVNjb3BlEhsKF1FVRVJZX1'
-    'NDT1BFX1VOU1BFQ0lGSUVEEAASDgoKQ09MTEVDVElPThABEhQKEENPTExFQ1RJT05fR1JPVVAQ'
-    'AhIYChRDT0xMRUNUSU9OX1JFQ1VSU0lWRRADIi8KCEFwaVNjb3BlEgsKB0FOWV9BUEkQABIWCh'
-    'JEQVRBU1RPUkVfTU9ERV9BUEkQASJJCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwK'
-    'CENSRUFUSU5HEAESCQoFUkVBRFkQAhIQCgxORUVEU19SRVBBSVIQAzp66kF3Ch5maXJlc3Rvcm'
-    'UuZ29vZ2xlYXBpcy5jb20vSW5kZXgSVXByb2plY3RzL3twcm9qZWN0fS9kYXRhYmFzZXMve2Rh'
-    'dGFiYXNlfS9jb2xsZWN0aW9uR3JvdXBzL3tjb2xsZWN0aW9ufS9pbmRleGVzL3tpbmRleH0=');
+    '9yZS5hZG1pbi52MS5JbmRleC5TdGF0ZVIFc3RhdGUSRwoHZGVuc2l0eRgGIAEoDjIoLmdvb2ds'
+    'ZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXguRGVuc2l0eUID4EEFUgdkZW5zaXR5Eh8KCG11bH'
+    'Rpa2V5GAcgASgIQgPgQQFSCG11bHRpa2V5EiQKC3NoYXJkX2NvdW50GAggASgFQgPgQQFSCnNo'
+    'YXJkQ291bnQa4AQKCkluZGV4RmllbGQSHQoKZmllbGRfcGF0aBgBIAEoCVIJZmllbGRQYXRoEk'
+    'kKBW9yZGVyGAIgASgOMjEuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5JbmRleEZp'
+    'ZWxkLk9yZGVySABSBW9yZGVyElwKDGFycmF5X2NvbmZpZxgDIAEoDjI3Lmdvb2dsZS5maXJlc3'
+    'RvcmUuYWRtaW4udjEuSW5kZXguSW5kZXhGaWVsZC5BcnJheUNvbmZpZ0gAUgthcnJheUNvbmZp'
+    'ZxJfCg12ZWN0b3JfY29uZmlnGAQgASgLMjguZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5Jbm'
+    'RleC5JbmRleEZpZWxkLlZlY3RvckNvbmZpZ0gAUgx2ZWN0b3JDb25maWcaoAEKDFZlY3RvckNv'
+    'bmZpZxIhCglkaW1lbnNpb24YASABKAVCA+BBAlIJZGltZW5zaW9uElgKBGZsYXQYAiABKAsyQi'
+    '5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkluZGV4LkluZGV4RmllbGQuVmVjdG9yQ29uZmln'
+    'LkZsYXRJbmRleEgAUgRmbGF0GgsKCUZsYXRJbmRleEIGCgR0eXBlIj0KBU9yZGVyEhUKEU9SRE'
+    'VSX1VOU1BFQ0lGSUVEEAASDQoJQVNDRU5ESU5HEAESDgoKREVTQ0VORElORxACIjkKC0FycmF5'
+    'Q29uZmlnEhwKGEFSUkFZX0NPTkZJR19VTlNQRUNJRklFRBAAEgwKCENPTlRBSU5TEAFCDAoKdm'
+    'FsdWVfbW9kZSJpCgpRdWVyeVNjb3BlEhsKF1FVRVJZX1NDT1BFX1VOU1BFQ0lGSUVEEAASDgoK'
+    'Q09MTEVDVElPThABEhQKEENPTExFQ1RJT05fR1JPVVAQAhIYChRDT0xMRUNUSU9OX1JFQ1VSU0'
+    'lWRRADIksKCEFwaVNjb3BlEgsKB0FOWV9BUEkQABIWChJEQVRBU1RPUkVfTU9ERV9BUEkQARIa'
+    'ChZNT05HT0RCX0NPTVBBVElCTEVfQVBJEAIiSQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRU'
+    'QQABIMCghDUkVBVElORxABEgkKBVJFQURZEAISEAoMTkVFRFNfUkVQQUlSEAMiTQoHRGVuc2l0'
+    'eRIXChNERU5TSVRZX1VOU1BFQ0lGSUVEEAASDgoKU1BBUlNFX0FMTBABEg4KClNQQVJTRV9BTl'
+    'kQAhIJCgVERU5TRRADOnrqQXcKHmZpcmVzdG9yZS5nb29nbGVhcGlzLmNvbS9JbmRleBJVcHJv'
+    'amVjdHMve3Byb2plY3R9L2RhdGFiYXNlcy97ZGF0YWJhc2V9L2NvbGxlY3Rpb25Hcm91cHMve2'
+    'NvbGxlY3Rpb259L2luZGV4ZXMve2luZGV4fQ==');

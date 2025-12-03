@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/addressvalidation/v1/address_validation_service.proto
-//
-// @dart = 2.12
+// Generated from google/maps/addressvalidation/v1/address_validation_service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -231,6 +233,13 @@ const Verdict$json = {
       '5': 8,
       '10': 'hasReplacedComponents'
     },
+    {
+      '1': 'has_spell_corrected_components',
+      '3': 9,
+      '4': 1,
+      '5': 8,
+      '10': 'hasSpellCorrectedComponents'
+    },
   ],
   '4': [Verdict_Granularity$json],
 };
@@ -260,7 +269,8 @@ final $typed_data.Uint8List verdictDescriptor = $convert.base64Decode(
     'c19jb21wbGV0ZRgEIAEoCFIPYWRkcmVzc0NvbXBsZXRlEjwKGmhhc191bmNvbmZpcm1lZF9jb2'
     '1wb25lbnRzGAUgASgIUhhoYXNVbmNvbmZpcm1lZENvbXBvbmVudHMSNgoXaGFzX2luZmVycmVk'
     'X2NvbXBvbmVudHMYBiABKAhSFWhhc0luZmVycmVkQ29tcG9uZW50cxI2ChdoYXNfcmVwbGFjZW'
-    'RfY29tcG9uZW50cxgHIAEoCFIVaGFzUmVwbGFjZWRDb21wb25lbnRzIoABCgtHcmFudWxhcml0'
-    'eRIbChdHUkFOVUxBUklUWV9VTlNQRUNJRklFRBAAEg8KC1NVQl9QUkVNSVNFEAESCwoHUFJFTU'
-    'lTRRACEhUKEVBSRU1JU0VfUFJPWElNSVRZEAMSCQoFQkxPQ0sQBBIJCgVST1VURRAFEgkKBU9U'
-    'SEVSEAY=');
+    'RfY29tcG9uZW50cxgHIAEoCFIVaGFzUmVwbGFjZWRDb21wb25lbnRzEkMKHmhhc19zcGVsbF9j'
+    'b3JyZWN0ZWRfY29tcG9uZW50cxgJIAEoCFIbaGFzU3BlbGxDb3JyZWN0ZWRDb21wb25lbnRzIo'
+    'ABCgtHcmFudWxhcml0eRIbChdHUkFOVUxBUklUWV9VTlNQRUNJRklFRBAAEg8KC1NVQl9QUkVN'
+    'SVNFEAESCwoHUFJFTUlTRRACEhUKEVBSRU1JU0VfUFJPWElNSVRZEAMSCQoFQkxPQ0sQBBIJCg'
+    'VST1VURRAFEgkKBU9USEVSEAY=');

@@ -1,17 +1,20 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/search/partnerdataingestion/logging/v1/platformlog.proto
-//
-// @dart = 2.12
+// Generated from google/search/partnerdataingestion/logging/v1/platformlog.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Log message used to send to Platform Logging.
 class IngestDetailsLog extends $pb.GeneratedMessage {
@@ -19,22 +22,21 @@ class IngestDetailsLog extends $pb.GeneratedMessage {
     $core.String? ingestionTrackingId,
     $core.String? content,
   }) {
-    final $result = create();
-    if (ingestionTrackingId != null) {
-      $result.ingestionTrackingId = ingestionTrackingId;
-    }
-    if (content != null) {
-      $result.content = content;
-    }
-    return $result;
+    final result = create();
+    if (ingestionTrackingId != null)
+      result.ingestionTrackingId = ingestionTrackingId;
+    if (content != null) result.content = content;
+    return result;
   }
-  IngestDetailsLog._() : super();
-  factory IngestDetailsLog.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory IngestDetailsLog.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  IngestDetailsLog._();
+
+  factory IngestDetailsLog.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory IngestDetailsLog.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'IngestDetailsLog',
@@ -46,24 +48,20 @@ class IngestDetailsLog extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'content')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  IngestDetailsLog clone() => IngestDetailsLog()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  IngestDetailsLog clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   IngestDetailsLog copyWith(void Function(IngestDetailsLog) updates) =>
       super.copyWith((message) => updates(message as IngestDetailsLog))
           as IngestDetailsLog;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static IngestDetailsLog create() => IngestDetailsLog._();
+  @$core.override
   IngestDetailsLog createEmptyInstance() => create();
-  static $pb.PbList<IngestDetailsLog> createRepeated() =>
-      $pb.PbList<IngestDetailsLog>();
   @$core.pragma('dart2js:noInline')
   static IngestDetailsLog getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<IngestDetailsLog>(create);
@@ -73,29 +71,24 @@ class IngestDetailsLog extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get ingestionTrackingId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set ingestionTrackingId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set ingestionTrackingId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasIngestionTrackingId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIngestionTrackingId() => clearField(1);
+  void clearIngestionTrackingId() => $_clearField(1);
 
   /// The message content will be sent to Platform Logging.
   @$pb.TagNumber(2)
   $core.String get content => $_getSZ(1);
   @$pb.TagNumber(2)
-  set content($core.String v) {
-    $_setString(1, v);
-  }
-
+  set content($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasContent() => $_has(1);
   @$pb.TagNumber(2)
-  void clearContent() => clearField(2);
+  void clearContent() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

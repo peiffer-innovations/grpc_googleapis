@@ -1,24 +1,28 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/apps/drive/activity/v2/action.proto
-//
-// @dart = 2.12
+// Generated from google/apps/drive/activity/v2/action.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $2;
 
-import '../../../../protobuf/timestamp.pb.dart' as $2;
 import 'action.pbenum.dart';
 import 'actor.pb.dart' as $0;
 import 'common.pb.dart' as $3;
 import 'target.pb.dart' as $1;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'action.pbenum.dart';
 
@@ -33,31 +37,23 @@ class Action extends $pb.GeneratedMessage {
     $2.Timestamp? timestamp,
     $3.TimeRange? timeRange,
   }) {
-    final $result = create();
-    if (detail != null) {
-      $result.detail = detail;
-    }
-    if (actor != null) {
-      $result.actor = actor;
-    }
-    if (target != null) {
-      $result.target = target;
-    }
-    if (timestamp != null) {
-      $result.timestamp = timestamp;
-    }
-    if (timeRange != null) {
-      $result.timeRange = timeRange;
-    }
-    return $result;
+    final result = create();
+    if (detail != null) result.detail = detail;
+    if (actor != null) result.actor = actor;
+    if (target != null) result.target = target;
+    if (timestamp != null) result.timestamp = timestamp;
+    if (timeRange != null) result.timeRange = timeRange;
+    return result;
   }
-  Action._() : super();
-  factory Action.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Action.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Action._();
+
+  factory Action.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Action.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Action_Time> _Action_TimeByTag = {
     5: Action_Time.timestamp,
@@ -82,42 +78,40 @@ class Action extends $pb.GeneratedMessage {
         subBuilder: $3.TimeRange.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Action clone() => Action()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Action clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Action copyWith(void Function(Action) updates) =>
       super.copyWith((message) => updates(message as Action)) as Action;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Action create() => Action._();
+  @$core.override
   Action createEmptyInstance() => create();
-  static $pb.PbList<Action> createRepeated() => $pb.PbList<Action>();
   @$core.pragma('dart2js:noInline')
   static Action getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Action>(create);
   static Action? _defaultInstance;
 
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
   Action_Time whichTime() => _Action_TimeByTag[$_whichOneof(0)]!;
-  void clearTime() => clearField($_whichOneof(0));
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  void clearTime() => $_clearField($_whichOneof(0));
 
   /// The type and detailed information about the action.
   @$pb.TagNumber(1)
   ActionDetail get detail => $_getN(0);
   @$pb.TagNumber(1)
-  set detail(ActionDetail v) {
-    setField(1, v);
-  }
-
+  set detail(ActionDetail value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasDetail() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDetail() => clearField(1);
+  void clearDetail() => $_clearField(1);
   @$pb.TagNumber(1)
   ActionDetail ensureDetail() => $_ensure(0);
 
@@ -126,14 +120,11 @@ class Action extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Actor get actor => $_getN(1);
   @$pb.TagNumber(3)
-  set actor($0.Actor v) {
-    setField(3, v);
-  }
-
+  set actor($0.Actor value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasActor() => $_has(1);
   @$pb.TagNumber(3)
-  void clearActor() => clearField(3);
+  void clearActor() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Actor ensureActor() => $_ensure(1);
 
@@ -142,14 +133,11 @@ class Action extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $1.Target get target => $_getN(2);
   @$pb.TagNumber(4)
-  set target($1.Target v) {
-    setField(4, v);
-  }
-
+  set target($1.Target value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasTarget() => $_has(2);
   @$pb.TagNumber(4)
-  void clearTarget() => clearField(4);
+  void clearTarget() => $_clearField(4);
   @$pb.TagNumber(4)
   $1.Target ensureTarget() => $_ensure(2);
 
@@ -157,14 +145,11 @@ class Action extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Timestamp get timestamp => $_getN(3);
   @$pb.TagNumber(5)
-  set timestamp($2.Timestamp v) {
-    setField(5, v);
-  }
-
+  set timestamp($2.Timestamp value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasTimestamp() => $_has(3);
   @$pb.TagNumber(5)
-  void clearTimestamp() => clearField(5);
+  void clearTimestamp() => $_clearField(5);
   @$pb.TagNumber(5)
   $2.Timestamp ensureTimestamp() => $_ensure(3);
 
@@ -172,14 +157,11 @@ class Action extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $3.TimeRange get timeRange => $_getN(4);
   @$pb.TagNumber(6)
-  set timeRange($3.TimeRange v) {
-    setField(6, v);
-  }
-
+  set timeRange($3.TimeRange value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasTimeRange() => $_has(4);
   @$pb.TagNumber(6)
-  void clearTimeRange() => clearField(6);
+  void clearTimeRange() => $_clearField(6);
   @$pb.TagNumber(6)
   $3.TimeRange ensureTimeRange() => $_ensure(4);
 }
@@ -216,52 +198,31 @@ class ActionDetail extends $pb.GeneratedMessage {
     SettingsChange? settingsChange,
     AppliedLabelChange? appliedLabelChange,
   }) {
-    final $result = create();
-    if (create_1 != null) {
-      $result.create_1 = create_1;
-    }
-    if (edit != null) {
-      $result.edit = edit;
-    }
-    if (move != null) {
-      $result.move = move;
-    }
-    if (rename != null) {
-      $result.rename = rename;
-    }
-    if (delete != null) {
-      $result.delete = delete;
-    }
-    if (restore != null) {
-      $result.restore = restore;
-    }
-    if (permissionChange != null) {
-      $result.permissionChange = permissionChange;
-    }
-    if (comment != null) {
-      $result.comment = comment;
-    }
-    if (dlpChange != null) {
-      $result.dlpChange = dlpChange;
-    }
-    if (reference != null) {
-      $result.reference = reference;
-    }
-    if (settingsChange != null) {
-      $result.settingsChange = settingsChange;
-    }
-    if (appliedLabelChange != null) {
-      $result.appliedLabelChange = appliedLabelChange;
-    }
-    return $result;
+    final result = create();
+    if (create_1 != null) result.create_1 = create_1;
+    if (edit != null) result.edit = edit;
+    if (move != null) result.move = move;
+    if (rename != null) result.rename = rename;
+    if (delete != null) result.delete = delete;
+    if (restore != null) result.restore = restore;
+    if (permissionChange != null) result.permissionChange = permissionChange;
+    if (comment != null) result.comment = comment;
+    if (dlpChange != null) result.dlpChange = dlpChange;
+    if (reference != null) result.reference = reference;
+    if (settingsChange != null) result.settingsChange = settingsChange;
+    if (appliedLabelChange != null)
+      result.appliedLabelChange = appliedLabelChange;
+    return result;
   }
-  ActionDetail._() : super();
-  factory ActionDetail.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ActionDetail.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ActionDetail._();
+
+  factory ActionDetail.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ActionDetail.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, ActionDetail_ActionDetail>
       _ActionDetail_ActionDetailByTag = {
@@ -306,45 +267,62 @@ class ActionDetail extends $pb.GeneratedMessage {
         subBuilder: AppliedLabelChange.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ActionDetail clone() => ActionDetail()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ActionDetail clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ActionDetail copyWith(void Function(ActionDetail) updates) =>
       super.copyWith((message) => updates(message as ActionDetail))
           as ActionDetail;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ActionDetail create() => ActionDetail._();
+  @$core.override
   ActionDetail createEmptyInstance() => create();
-  static $pb.PbList<ActionDetail> createRepeated() =>
-      $pb.PbList<ActionDetail>();
   @$core.pragma('dart2js:noInline')
   static ActionDetail getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ActionDetail>(create);
   static ActionDetail? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(12)
+  @$pb.TagNumber(13)
+  @$pb.TagNumber(19)
   ActionDetail_ActionDetail whichActionDetail() =>
       _ActionDetail_ActionDetailByTag[$_whichOneof(0)]!;
-  void clearActionDetail() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(12)
+  @$pb.TagNumber(13)
+  @$pb.TagNumber(19)
+  void clearActionDetail() => $_clearField($_whichOneof(0));
 
   /// An object was created.
   @$pb.TagNumber(1)
   Create get create_1 => $_getN(0);
   @$pb.TagNumber(1)
-  set create_1(Create v) {
-    setField(1, v);
-  }
-
+  set create_1(Create value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCreate_1() => clearField(1);
+  void clearCreate_1() => $_clearField(1);
   @$pb.TagNumber(1)
   Create ensureCreate_1() => $_ensure(0);
 
@@ -352,14 +330,11 @@ class ActionDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Edit get edit => $_getN(1);
   @$pb.TagNumber(2)
-  set edit(Edit v) {
-    setField(2, v);
-  }
-
+  set edit(Edit value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasEdit() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEdit() => clearField(2);
+  void clearEdit() => $_clearField(2);
   @$pb.TagNumber(2)
   Edit ensureEdit() => $_ensure(1);
 
@@ -367,14 +342,11 @@ class ActionDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Move get move => $_getN(2);
   @$pb.TagNumber(3)
-  set move(Move v) {
-    setField(3, v);
-  }
-
+  set move(Move value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasMove() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMove() => clearField(3);
+  void clearMove() => $_clearField(3);
   @$pb.TagNumber(3)
   Move ensureMove() => $_ensure(2);
 
@@ -382,14 +354,11 @@ class ActionDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   Rename get rename => $_getN(3);
   @$pb.TagNumber(4)
-  set rename(Rename v) {
-    setField(4, v);
-  }
-
+  set rename(Rename value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasRename() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRename() => clearField(4);
+  void clearRename() => $_clearField(4);
   @$pb.TagNumber(4)
   Rename ensureRename() => $_ensure(3);
 
@@ -397,14 +366,11 @@ class ActionDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Delete get delete => $_getN(4);
   @$pb.TagNumber(5)
-  set delete(Delete v) {
-    setField(5, v);
-  }
-
+  set delete(Delete value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasDelete() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDelete() => clearField(5);
+  void clearDelete() => $_clearField(5);
   @$pb.TagNumber(5)
   Delete ensureDelete() => $_ensure(4);
 
@@ -412,14 +378,11 @@ class ActionDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   Restore get restore => $_getN(5);
   @$pb.TagNumber(6)
-  set restore(Restore v) {
-    setField(6, v);
-  }
-
+  set restore(Restore value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasRestore() => $_has(5);
   @$pb.TagNumber(6)
-  void clearRestore() => clearField(6);
+  void clearRestore() => $_clearField(6);
   @$pb.TagNumber(6)
   Restore ensureRestore() => $_ensure(5);
 
@@ -427,14 +390,11 @@ class ActionDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   PermissionChange get permissionChange => $_getN(6);
   @$pb.TagNumber(7)
-  set permissionChange(PermissionChange v) {
-    setField(7, v);
-  }
-
+  set permissionChange(PermissionChange value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasPermissionChange() => $_has(6);
   @$pb.TagNumber(7)
-  void clearPermissionChange() => clearField(7);
+  void clearPermissionChange() => $_clearField(7);
   @$pb.TagNumber(7)
   PermissionChange ensurePermissionChange() => $_ensure(6);
 
@@ -442,14 +402,11 @@ class ActionDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   Comment get comment => $_getN(7);
   @$pb.TagNumber(8)
-  set comment(Comment v) {
-    setField(8, v);
-  }
-
+  set comment(Comment value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasComment() => $_has(7);
   @$pb.TagNumber(8)
-  void clearComment() => clearField(8);
+  void clearComment() => $_clearField(8);
   @$pb.TagNumber(8)
   Comment ensureComment() => $_ensure(7);
 
@@ -457,14 +414,11 @@ class ActionDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   DataLeakPreventionChange get dlpChange => $_getN(8);
   @$pb.TagNumber(9)
-  set dlpChange(DataLeakPreventionChange v) {
-    setField(9, v);
-  }
-
+  set dlpChange(DataLeakPreventionChange value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasDlpChange() => $_has(8);
   @$pb.TagNumber(9)
-  void clearDlpChange() => clearField(9);
+  void clearDlpChange() => $_clearField(9);
   @$pb.TagNumber(9)
   DataLeakPreventionChange ensureDlpChange() => $_ensure(8);
 
@@ -472,14 +426,11 @@ class ActionDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   ApplicationReference get reference => $_getN(9);
   @$pb.TagNumber(12)
-  set reference(ApplicationReference v) {
-    setField(12, v);
-  }
-
+  set reference(ApplicationReference value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasReference() => $_has(9);
   @$pb.TagNumber(12)
-  void clearReference() => clearField(12);
+  void clearReference() => $_clearField(12);
   @$pb.TagNumber(12)
   ApplicationReference ensureReference() => $_ensure(9);
 
@@ -487,14 +438,11 @@ class ActionDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   SettingsChange get settingsChange => $_getN(10);
   @$pb.TagNumber(13)
-  set settingsChange(SettingsChange v) {
-    setField(13, v);
-  }
-
+  set settingsChange(SettingsChange value) => $_setField(13, value);
   @$pb.TagNumber(13)
   $core.bool hasSettingsChange() => $_has(10);
   @$pb.TagNumber(13)
-  void clearSettingsChange() => clearField(13);
+  void clearSettingsChange() => $_clearField(13);
   @$pb.TagNumber(13)
   SettingsChange ensureSettingsChange() => $_ensure(10);
 
@@ -502,14 +450,11 @@ class ActionDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   AppliedLabelChange get appliedLabelChange => $_getN(11);
   @$pb.TagNumber(19)
-  set appliedLabelChange(AppliedLabelChange v) {
-    setField(19, v);
-  }
-
+  set appliedLabelChange(AppliedLabelChange value) => $_setField(19, value);
   @$pb.TagNumber(19)
   $core.bool hasAppliedLabelChange() => $_has(11);
   @$pb.TagNumber(19)
-  void clearAppliedLabelChange() => clearField(19);
+  void clearAppliedLabelChange() => $_clearField(19);
   @$pb.TagNumber(19)
   AppliedLabelChange ensureAppliedLabelChange() => $_ensure(11);
 }
@@ -517,13 +462,15 @@ class ActionDetail extends $pb.GeneratedMessage {
 /// An object was created from scratch.
 class Create_New extends $pb.GeneratedMessage {
   factory Create_New() => create();
-  Create_New._() : super();
-  factory Create_New.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Create_New.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Create_New._();
+
+  factory Create_New.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Create_New.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Create.New',
@@ -532,22 +479,19 @@ class Create_New extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Create_New clone() => Create_New()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Create_New clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Create_New copyWith(void Function(Create_New) updates) =>
       super.copyWith((message) => updates(message as Create_New)) as Create_New;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Create_New create() => Create_New._();
+  @$core.override
   Create_New createEmptyInstance() => create();
-  static $pb.PbList<Create_New> createRepeated() => $pb.PbList<Create_New>();
   @$core.pragma('dart2js:noInline')
   static Create_New getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Create_New>(create);
@@ -557,13 +501,15 @@ class Create_New extends $pb.GeneratedMessage {
 /// An object was uploaded into Drive.
 class Create_Upload extends $pb.GeneratedMessage {
   factory Create_Upload() => create();
-  Create_Upload._() : super();
-  factory Create_Upload.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Create_Upload.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Create_Upload._();
+
+  factory Create_Upload.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Create_Upload.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Create.Upload',
@@ -572,24 +518,20 @@ class Create_Upload extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Create_Upload clone() => Create_Upload()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Create_Upload clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Create_Upload copyWith(void Function(Create_Upload) updates) =>
       super.copyWith((message) => updates(message as Create_Upload))
           as Create_Upload;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Create_Upload create() => Create_Upload._();
+  @$core.override
   Create_Upload createEmptyInstance() => create();
-  static $pb.PbList<Create_Upload> createRepeated() =>
-      $pb.PbList<Create_Upload>();
   @$core.pragma('dart2js:noInline')
   static Create_Upload getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Create_Upload>(create);
@@ -601,19 +543,19 @@ class Create_Copy extends $pb.GeneratedMessage {
   factory Create_Copy({
     $1.TargetReference? originalObject,
   }) {
-    final $result = create();
-    if (originalObject != null) {
-      $result.originalObject = originalObject;
-    }
-    return $result;
+    final result = create();
+    if (originalObject != null) result.originalObject = originalObject;
+    return result;
   }
-  Create_Copy._() : super();
-  factory Create_Copy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Create_Copy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Create_Copy._();
+
+  factory Create_Copy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Create_Copy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Create.Copy',
@@ -624,23 +566,20 @@ class Create_Copy extends $pb.GeneratedMessage {
         subBuilder: $1.TargetReference.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Create_Copy clone() => Create_Copy()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Create_Copy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Create_Copy copyWith(void Function(Create_Copy) updates) =>
       super.copyWith((message) => updates(message as Create_Copy))
           as Create_Copy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Create_Copy create() => Create_Copy._();
+  @$core.override
   Create_Copy createEmptyInstance() => create();
-  static $pb.PbList<Create_Copy> createRepeated() => $pb.PbList<Create_Copy>();
   @$core.pragma('dart2js:noInline')
   static Create_Copy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Create_Copy>(create);
@@ -650,14 +589,11 @@ class Create_Copy extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.TargetReference get originalObject => $_getN(0);
   @$pb.TagNumber(1)
-  set originalObject($1.TargetReference v) {
-    setField(1, v);
-  }
-
+  set originalObject($1.TargetReference value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOriginalObject() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOriginalObject() => clearField(1);
+  void clearOriginalObject() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.TargetReference ensureOriginalObject() => $_ensure(0);
 }
@@ -671,25 +607,21 @@ class Create extends $pb.GeneratedMessage {
     Create_Upload? upload,
     Create_Copy? copy,
   }) {
-    final $result = create();
-    if (new_1 != null) {
-      $result.new_1 = new_1;
-    }
-    if (upload != null) {
-      $result.upload = upload;
-    }
-    if (copy != null) {
-      $result.copy = copy;
-    }
-    return $result;
+    final result = create();
+    if (new_1 != null) result.new_1 = new_1;
+    if (upload != null) result.upload = upload;
+    if (copy != null) result.copy = copy;
+    return result;
   }
-  Create._() : super();
-  factory Create.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Create.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Create._();
+
+  factory Create.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Create.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Create_Origin> _Create_OriginByTag = {
     1: Create_Origin.new_1,
@@ -711,43 +643,43 @@ class Create extends $pb.GeneratedMessage {
         subBuilder: Create_Copy.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Create clone() => Create()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Create clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Create copyWith(void Function(Create) updates) =>
       super.copyWith((message) => updates(message as Create)) as Create;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Create create() => Create._();
+  @$core.override
   Create createEmptyInstance() => create();
-  static $pb.PbList<Create> createRepeated() => $pb.PbList<Create>();
   @$core.pragma('dart2js:noInline')
   static Create getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Create>(create);
   static Create? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   Create_Origin whichOrigin() => _Create_OriginByTag[$_whichOneof(0)]!;
-  void clearOrigin() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearOrigin() => $_clearField($_whichOneof(0));
 
   /// If present, indicates the object was newly created (e.g. as a blank
   /// document), not derived from a Drive object or external object.
   @$pb.TagNumber(1)
   Create_New get new_1 => $_getN(0);
   @$pb.TagNumber(1)
-  set new_1(Create_New v) {
-    setField(1, v);
-  }
-
+  set new_1(Create_New value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasNew_1() => $_has(0);
   @$pb.TagNumber(1)
-  void clearNew_1() => clearField(1);
+  void clearNew_1() => $_clearField(1);
   @$pb.TagNumber(1)
   Create_New ensureNew_1() => $_ensure(0);
 
@@ -756,14 +688,11 @@ class Create extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Create_Upload get upload => $_getN(1);
   @$pb.TagNumber(2)
-  set upload(Create_Upload v) {
-    setField(2, v);
-  }
-
+  set upload(Create_Upload value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpload() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpload() => clearField(2);
+  void clearUpload() => $_clearField(2);
   @$pb.TagNumber(2)
   Create_Upload ensureUpload() => $_ensure(1);
 
@@ -772,14 +701,11 @@ class Create extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Create_Copy get copy => $_getN(2);
   @$pb.TagNumber(3)
-  set copy(Create_Copy v) {
-    setField(3, v);
-  }
-
+  set copy(Create_Copy value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCopy() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCopy() => clearField(3);
+  void clearCopy() => $_clearField(3);
   @$pb.TagNumber(3)
   Create_Copy ensureCopy() => $_ensure(2);
 }
@@ -787,13 +713,15 @@ class Create extends $pb.GeneratedMessage {
 /// An empty message indicating an object was edited.
 class Edit extends $pb.GeneratedMessage {
   factory Edit() => create();
-  Edit._() : super();
-  factory Edit.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Edit.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Edit._();
+
+  factory Edit.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Edit.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Edit',
@@ -802,22 +730,19 @@ class Edit extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Edit clone() => Edit()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Edit clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Edit copyWith(void Function(Edit) updates) =>
       super.copyWith((message) => updates(message as Edit)) as Edit;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Edit create() => Edit._();
+  @$core.override
   Edit createEmptyInstance() => create();
-  static $pb.PbList<Edit> createRepeated() => $pb.PbList<Edit>();
   @$core.pragma('dart2js:noInline')
   static Edit getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Edit>(create);
@@ -830,52 +755,45 @@ class Move extends $pb.GeneratedMessage {
     $core.Iterable<$1.TargetReference>? addedParents,
     $core.Iterable<$1.TargetReference>? removedParents,
   }) {
-    final $result = create();
-    if (addedParents != null) {
-      $result.addedParents.addAll(addedParents);
-    }
-    if (removedParents != null) {
-      $result.removedParents.addAll(removedParents);
-    }
-    return $result;
+    final result = create();
+    if (addedParents != null) result.addedParents.addAll(addedParents);
+    if (removedParents != null) result.removedParents.addAll(removedParents);
+    return result;
   }
-  Move._() : super();
-  factory Move.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Move.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Move._();
+
+  factory Move.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Move.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Move',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..pc<$1.TargetReference>(
-        1, _omitFieldNames ? '' : 'addedParents', $pb.PbFieldType.PM,
+    ..pPM<$1.TargetReference>(1, _omitFieldNames ? '' : 'addedParents',
         subBuilder: $1.TargetReference.create)
-    ..pc<$1.TargetReference>(
-        2, _omitFieldNames ? '' : 'removedParents', $pb.PbFieldType.PM,
+    ..pPM<$1.TargetReference>(2, _omitFieldNames ? '' : 'removedParents',
         subBuilder: $1.TargetReference.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Move clone() => Move()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Move clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Move copyWith(void Function(Move) updates) =>
       super.copyWith((message) => updates(message as Move)) as Move;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Move create() => Move._();
+  @$core.override
   Move createEmptyInstance() => create();
-  static $pb.PbList<Move> createRepeated() => $pb.PbList<Move>();
   @$core.pragma('dart2js:noInline')
   static Move getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Move>(create);
@@ -883,11 +801,11 @@ class Move extends $pb.GeneratedMessage {
 
   /// The added parent object(s).
   @$pb.TagNumber(1)
-  $core.List<$1.TargetReference> get addedParents => $_getList(0);
+  $pb.PbList<$1.TargetReference> get addedParents => $_getList(0);
 
   /// The removed parent object(s).
   @$pb.TagNumber(2)
-  $core.List<$1.TargetReference> get removedParents => $_getList(1);
+  $pb.PbList<$1.TargetReference> get removedParents => $_getList(1);
 }
 
 /// An object was renamed.
@@ -896,22 +814,20 @@ class Rename extends $pb.GeneratedMessage {
     $core.String? oldTitle,
     $core.String? newTitle,
   }) {
-    final $result = create();
-    if (oldTitle != null) {
-      $result.oldTitle = oldTitle;
-    }
-    if (newTitle != null) {
-      $result.newTitle = newTitle;
-    }
-    return $result;
+    final result = create();
+    if (oldTitle != null) result.oldTitle = oldTitle;
+    if (newTitle != null) result.newTitle = newTitle;
+    return result;
   }
-  Rename._() : super();
-  factory Rename.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Rename.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Rename._();
+
+  factory Rename.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Rename.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Rename',
@@ -922,22 +838,19 @@ class Rename extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'newTitle')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Rename clone() => Rename()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Rename clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Rename copyWith(void Function(Rename) updates) =>
       super.copyWith((message) => updates(message as Rename)) as Rename;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Rename create() => Rename._();
+  @$core.override
   Rename createEmptyInstance() => create();
-  static $pb.PbList<Rename> createRepeated() => $pb.PbList<Rename>();
   @$core.pragma('dart2js:noInline')
   static Rename getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Rename>(create);
@@ -947,27 +860,21 @@ class Rename extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get oldTitle => $_getSZ(0);
   @$pb.TagNumber(1)
-  set oldTitle($core.String v) {
-    $_setString(0, v);
-  }
-
+  set oldTitle($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasOldTitle() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOldTitle() => clearField(1);
+  void clearOldTitle() => $_clearField(1);
 
   /// The new title of the drive object.
   @$pb.TagNumber(2)
   $core.String get newTitle => $_getSZ(1);
   @$pb.TagNumber(2)
-  set newTitle($core.String v) {
-    $_setString(1, v);
-  }
-
+  set newTitle($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNewTitle() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNewTitle() => clearField(2);
+  void clearNewTitle() => $_clearField(2);
 }
 
 /// An object was deleted.
@@ -975,47 +882,42 @@ class Delete extends $pb.GeneratedMessage {
   factory Delete({
     Delete_Type? type,
   }) {
-    final $result = create();
-    if (type != null) {
-      $result.type = type;
-    }
-    return $result;
+    final result = create();
+    if (type != null) result.type = type;
+    return result;
   }
-  Delete._() : super();
-  factory Delete.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Delete.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Delete._();
+
+  factory Delete.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Delete.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Delete',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..e<Delete_Type>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: Delete_Type.TYPE_UNSPECIFIED,
-        valueOf: Delete_Type.valueOf,
+    ..aE<Delete_Type>(1, _omitFieldNames ? '' : 'type',
         enumValues: Delete_Type.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Delete clone() => Delete()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Delete clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Delete copyWith(void Function(Delete) updates) =>
       super.copyWith((message) => updates(message as Delete)) as Delete;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Delete create() => Delete._();
+  @$core.override
   Delete createEmptyInstance() => create();
-  static $pb.PbList<Delete> createRepeated() => $pb.PbList<Delete>();
   @$core.pragma('dart2js:noInline')
   static Delete getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Delete>(create);
@@ -1025,14 +927,11 @@ class Delete extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Delete_Type get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(Delete_Type v) {
-    setField(1, v);
-  }
-
+  set type(Delete_Type value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearType() => $_clearField(1);
 }
 
 /// A deleted object was restored.
@@ -1040,47 +939,42 @@ class Restore extends $pb.GeneratedMessage {
   factory Restore({
     Restore_Type? type,
   }) {
-    final $result = create();
-    if (type != null) {
-      $result.type = type;
-    }
-    return $result;
+    final result = create();
+    if (type != null) result.type = type;
+    return result;
   }
-  Restore._() : super();
-  factory Restore.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Restore.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Restore._();
+
+  factory Restore.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Restore.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Restore',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..e<Restore_Type>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: Restore_Type.TYPE_UNSPECIFIED,
-        valueOf: Restore_Type.valueOf,
+    ..aE<Restore_Type>(1, _omitFieldNames ? '' : 'type',
         enumValues: Restore_Type.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Restore clone() => Restore()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Restore clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Restore copyWith(void Function(Restore) updates) =>
       super.copyWith((message) => updates(message as Restore)) as Restore;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Restore create() => Restore._();
+  @$core.override
   Restore createEmptyInstance() => create();
-  static $pb.PbList<Restore> createRepeated() => $pb.PbList<Restore>();
   @$core.pragma('dart2js:noInline')
   static Restore getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Restore>(create);
@@ -1090,14 +984,11 @@ class Restore extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Restore_Type get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(Restore_Type v) {
-    setField(1, v);
-  }
-
+  set type(Restore_Type value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearType() => $_clearField(1);
 }
 
 /// A change of the permission setting on an item.
@@ -1106,54 +997,48 @@ class PermissionChange extends $pb.GeneratedMessage {
     $core.Iterable<Permission>? addedPermissions,
     $core.Iterable<Permission>? removedPermissions,
   }) {
-    final $result = create();
-    if (addedPermissions != null) {
-      $result.addedPermissions.addAll(addedPermissions);
-    }
-    if (removedPermissions != null) {
-      $result.removedPermissions.addAll(removedPermissions);
-    }
-    return $result;
+    final result = create();
+    if (addedPermissions != null)
+      result.addedPermissions.addAll(addedPermissions);
+    if (removedPermissions != null)
+      result.removedPermissions.addAll(removedPermissions);
+    return result;
   }
-  PermissionChange._() : super();
-  factory PermissionChange.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PermissionChange.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PermissionChange._();
+
+  factory PermissionChange.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PermissionChange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PermissionChange',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..pc<Permission>(
-        1, _omitFieldNames ? '' : 'addedPermissions', $pb.PbFieldType.PM,
+    ..pPM<Permission>(1, _omitFieldNames ? '' : 'addedPermissions',
         subBuilder: Permission.create)
-    ..pc<Permission>(
-        2, _omitFieldNames ? '' : 'removedPermissions', $pb.PbFieldType.PM,
+    ..pPM<Permission>(2, _omitFieldNames ? '' : 'removedPermissions',
         subBuilder: Permission.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PermissionChange clone() => PermissionChange()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PermissionChange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PermissionChange copyWith(void Function(PermissionChange) updates) =>
       super.copyWith((message) => updates(message as PermissionChange))
           as PermissionChange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PermissionChange create() => PermissionChange._();
+  @$core.override
   PermissionChange createEmptyInstance() => create();
-  static $pb.PbList<PermissionChange> createRepeated() =>
-      $pb.PbList<PermissionChange>();
   @$core.pragma('dart2js:noInline')
   static PermissionChange getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PermissionChange>(create);
@@ -1161,23 +1046,25 @@ class PermissionChange extends $pb.GeneratedMessage {
 
   /// The set of permissions added by this change.
   @$pb.TagNumber(1)
-  $core.List<Permission> get addedPermissions => $_getList(0);
+  $pb.PbList<Permission> get addedPermissions => $_getList(0);
 
   /// The set of permissions removed by this change.
   @$pb.TagNumber(2)
-  $core.List<Permission> get removedPermissions => $_getList(1);
+  $pb.PbList<Permission> get removedPermissions => $_getList(1);
 }
 
 /// Represents any user (including a logged out user).
 class Permission_Anyone extends $pb.GeneratedMessage {
   factory Permission_Anyone() => create();
-  Permission_Anyone._() : super();
-  factory Permission_Anyone.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Permission_Anyone.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Permission_Anyone._();
+
+  factory Permission_Anyone.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Permission_Anyone.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Permission.Anyone',
@@ -1186,24 +1073,20 @@ class Permission_Anyone extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Permission_Anyone clone() => Permission_Anyone()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Permission_Anyone clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Permission_Anyone copyWith(void Function(Permission_Anyone) updates) =>
       super.copyWith((message) => updates(message as Permission_Anyone))
           as Permission_Anyone;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Permission_Anyone create() => Permission_Anyone._();
+  @$core.override
   Permission_Anyone createEmptyInstance() => create();
-  static $pb.PbList<Permission_Anyone> createRepeated() =>
-      $pb.PbList<Permission_Anyone>();
   @$core.pragma('dart2js:noInline')
   static Permission_Anyone getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Permission_Anyone>(create);
@@ -1222,34 +1105,24 @@ class Permission extends $pb.GeneratedMessage {
     Permission_Anyone? anyone,
     $core.bool? allowDiscovery,
   }) {
-    final $result = create();
-    if (role != null) {
-      $result.role = role;
-    }
-    if (user != null) {
-      $result.user = user;
-    }
-    if (group != null) {
-      $result.group = group;
-    }
-    if (domain != null) {
-      $result.domain = domain;
-    }
-    if (anyone != null) {
-      $result.anyone = anyone;
-    }
-    if (allowDiscovery != null) {
-      $result.allowDiscovery = allowDiscovery;
-    }
-    return $result;
+    final result = create();
+    if (role != null) result.role = role;
+    if (user != null) result.user = user;
+    if (group != null) result.group = group;
+    if (domain != null) result.domain = domain;
+    if (anyone != null) result.anyone = anyone;
+    if (allowDiscovery != null) result.allowDiscovery = allowDiscovery;
+    return result;
   }
-  Permission._() : super();
-  factory Permission.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Permission.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Permission._();
+
+  factory Permission.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Permission.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Permission_Scope> _Permission_ScopeByTag = {
     2: Permission_Scope.user,
@@ -1264,9 +1137,7 @@ class Permission extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
     ..oo(0, [2, 3, 4, 5])
-    ..e<Permission_Role>(1, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE,
-        defaultOrMaker: Permission_Role.ROLE_UNSPECIFIED,
-        valueOf: Permission_Role.valueOf,
+    ..aE<Permission_Role>(1, _omitFieldNames ? '' : 'role',
         enumValues: Permission_Role.values)
     ..aOM<$0.User>(2, _omitFieldNames ? '' : 'user', subBuilder: $0.User.create)
     ..aOM<$3.Group>(3, _omitFieldNames ? '' : 'group',
@@ -1278,29 +1149,34 @@ class Permission extends $pb.GeneratedMessage {
     ..aOB(6, _omitFieldNames ? '' : 'allowDiscovery')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Permission clone() => Permission()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Permission clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Permission copyWith(void Function(Permission) updates) =>
       super.copyWith((message) => updates(message as Permission)) as Permission;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Permission create() => Permission._();
+  @$core.override
   Permission createEmptyInstance() => create();
-  static $pb.PbList<Permission> createRepeated() => $pb.PbList<Permission>();
   @$core.pragma('dart2js:noInline')
   static Permission getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Permission>(create);
   static Permission? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
   Permission_Scope whichScope() => _Permission_ScopeByTag[$_whichOneof(0)]!;
-  void clearScope() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearScope() => $_clearField($_whichOneof(0));
 
   /// Indicates the
   /// [Google Drive permissions
@@ -1309,27 +1185,21 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Permission_Role get role => $_getN(0);
   @$pb.TagNumber(1)
-  set role(Permission_Role v) {
-    setField(1, v);
-  }
-
+  set role(Permission_Role value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasRole() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRole() => clearField(1);
+  void clearRole() => $_clearField(1);
 
   /// The user to whom this permission applies.
   @$pb.TagNumber(2)
   $0.User get user => $_getN(1);
   @$pb.TagNumber(2)
-  set user($0.User v) {
-    setField(2, v);
-  }
-
+  set user($0.User value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUser() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUser() => clearField(2);
+  void clearUser() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.User ensureUser() => $_ensure(1);
 
@@ -1337,14 +1207,11 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $3.Group get group => $_getN(2);
   @$pb.TagNumber(3)
-  set group($3.Group v) {
-    setField(3, v);
-  }
-
+  set group($3.Group value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasGroup() => $_has(2);
   @$pb.TagNumber(3)
-  void clearGroup() => clearField(3);
+  void clearGroup() => $_clearField(3);
   @$pb.TagNumber(3)
   $3.Group ensureGroup() => $_ensure(2);
 
@@ -1352,14 +1219,11 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $3.Domain get domain => $_getN(3);
   @$pb.TagNumber(4)
-  set domain($3.Domain v) {
-    setField(4, v);
-  }
-
+  set domain($3.Domain value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasDomain() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDomain() => clearField(4);
+  void clearDomain() => $_clearField(4);
   @$pb.TagNumber(4)
   $3.Domain ensureDomain() => $_ensure(3);
 
@@ -1367,14 +1231,11 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Permission_Anyone get anyone => $_getN(4);
   @$pb.TagNumber(5)
-  set anyone(Permission_Anyone v) {
-    setField(5, v);
-  }
-
+  set anyone(Permission_Anyone value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasAnyone() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAnyone() => clearField(5);
+  void clearAnyone() => $_clearField(5);
   @$pb.TagNumber(5)
   Permission_Anyone ensureAnyone() => $_ensure(4);
 
@@ -1383,14 +1244,11 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool get allowDiscovery => $_getBF(5);
   @$pb.TagNumber(6)
-  set allowDiscovery($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set allowDiscovery($core.bool value) => $_setBool(5, value);
   @$pb.TagNumber(6)
   $core.bool hasAllowDiscovery() => $_has(5);
   @$pb.TagNumber(6)
-  void clearAllowDiscovery() => clearField(6);
+  void clearAllowDiscovery() => $_clearField(6);
 }
 
 /// A regular posted comment.
@@ -1398,50 +1256,43 @@ class Comment_Post extends $pb.GeneratedMessage {
   factory Comment_Post({
     Comment_Post_Subtype? subtype,
   }) {
-    final $result = create();
-    if (subtype != null) {
-      $result.subtype = subtype;
-    }
-    return $result;
+    final result = create();
+    if (subtype != null) result.subtype = subtype;
+    return result;
   }
-  Comment_Post._() : super();
-  factory Comment_Post.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Comment_Post.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Comment_Post._();
+
+  factory Comment_Post.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Comment_Post.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Comment.Post',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..e<Comment_Post_Subtype>(
-        1, _omitFieldNames ? '' : 'subtype', $pb.PbFieldType.OE,
-        defaultOrMaker: Comment_Post_Subtype.SUBTYPE_UNSPECIFIED,
-        valueOf: Comment_Post_Subtype.valueOf,
+    ..aE<Comment_Post_Subtype>(1, _omitFieldNames ? '' : 'subtype',
         enumValues: Comment_Post_Subtype.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Comment_Post clone() => Comment_Post()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Comment_Post clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Comment_Post copyWith(void Function(Comment_Post) updates) =>
       super.copyWith((message) => updates(message as Comment_Post))
           as Comment_Post;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Comment_Post create() => Comment_Post._();
+  @$core.override
   Comment_Post createEmptyInstance() => create();
-  static $pb.PbList<Comment_Post> createRepeated() =>
-      $pb.PbList<Comment_Post>();
   @$core.pragma('dart2js:noInline')
   static Comment_Post getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Comment_Post>(create);
@@ -1451,14 +1302,11 @@ class Comment_Post extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Comment_Post_Subtype get subtype => $_getN(0);
   @$pb.TagNumber(1)
-  set subtype(Comment_Post_Subtype v) {
-    setField(1, v);
-  }
-
+  set subtype(Comment_Post_Subtype value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSubtype() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSubtype() => clearField(1);
+  void clearSubtype() => $_clearField(1);
 }
 
 /// A comment with an assignment.
@@ -1467,55 +1315,46 @@ class Comment_Assignment extends $pb.GeneratedMessage {
     Comment_Assignment_Subtype? subtype,
     $0.User? assignedUser,
   }) {
-    final $result = create();
-    if (subtype != null) {
-      $result.subtype = subtype;
-    }
-    if (assignedUser != null) {
-      $result.assignedUser = assignedUser;
-    }
-    return $result;
+    final result = create();
+    if (subtype != null) result.subtype = subtype;
+    if (assignedUser != null) result.assignedUser = assignedUser;
+    return result;
   }
-  Comment_Assignment._() : super();
-  factory Comment_Assignment.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Comment_Assignment.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Comment_Assignment._();
+
+  factory Comment_Assignment.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Comment_Assignment.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Comment.Assignment',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..e<Comment_Assignment_Subtype>(
-        1, _omitFieldNames ? '' : 'subtype', $pb.PbFieldType.OE,
-        defaultOrMaker: Comment_Assignment_Subtype.SUBTYPE_UNSPECIFIED,
-        valueOf: Comment_Assignment_Subtype.valueOf,
+    ..aE<Comment_Assignment_Subtype>(1, _omitFieldNames ? '' : 'subtype',
         enumValues: Comment_Assignment_Subtype.values)
     ..aOM<$0.User>(7, _omitFieldNames ? '' : 'assignedUser',
         subBuilder: $0.User.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Comment_Assignment clone() => Comment_Assignment()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Comment_Assignment clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Comment_Assignment copyWith(void Function(Comment_Assignment) updates) =>
       super.copyWith((message) => updates(message as Comment_Assignment))
           as Comment_Assignment;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Comment_Assignment create() => Comment_Assignment._();
+  @$core.override
   Comment_Assignment createEmptyInstance() => create();
-  static $pb.PbList<Comment_Assignment> createRepeated() =>
-      $pb.PbList<Comment_Assignment>();
   @$core.pragma('dart2js:noInline')
   static Comment_Assignment getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Comment_Assignment>(create);
@@ -1525,27 +1364,21 @@ class Comment_Assignment extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Comment_Assignment_Subtype get subtype => $_getN(0);
   @$pb.TagNumber(1)
-  set subtype(Comment_Assignment_Subtype v) {
-    setField(1, v);
-  }
-
+  set subtype(Comment_Assignment_Subtype value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSubtype() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSubtype() => clearField(1);
+  void clearSubtype() => $_clearField(1);
 
   /// The user to whom the comment was assigned.
   @$pb.TagNumber(7)
   $0.User get assignedUser => $_getN(1);
   @$pb.TagNumber(7)
-  set assignedUser($0.User v) {
-    setField(7, v);
-  }
-
+  set assignedUser($0.User value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasAssignedUser() => $_has(1);
   @$pb.TagNumber(7)
-  void clearAssignedUser() => clearField(7);
+  void clearAssignedUser() => $_clearField(7);
   @$pb.TagNumber(7)
   $0.User ensureAssignedUser() => $_ensure(1);
 }
@@ -1555,50 +1388,43 @@ class Comment_Suggestion extends $pb.GeneratedMessage {
   factory Comment_Suggestion({
     Comment_Suggestion_Subtype? subtype,
   }) {
-    final $result = create();
-    if (subtype != null) {
-      $result.subtype = subtype;
-    }
-    return $result;
+    final result = create();
+    if (subtype != null) result.subtype = subtype;
+    return result;
   }
-  Comment_Suggestion._() : super();
-  factory Comment_Suggestion.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Comment_Suggestion.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Comment_Suggestion._();
+
+  factory Comment_Suggestion.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Comment_Suggestion.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Comment.Suggestion',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..e<Comment_Suggestion_Subtype>(
-        1, _omitFieldNames ? '' : 'subtype', $pb.PbFieldType.OE,
-        defaultOrMaker: Comment_Suggestion_Subtype.SUBTYPE_UNSPECIFIED,
-        valueOf: Comment_Suggestion_Subtype.valueOf,
+    ..aE<Comment_Suggestion_Subtype>(1, _omitFieldNames ? '' : 'subtype',
         enumValues: Comment_Suggestion_Subtype.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Comment_Suggestion clone() => Comment_Suggestion()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Comment_Suggestion clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Comment_Suggestion copyWith(void Function(Comment_Suggestion) updates) =>
       super.copyWith((message) => updates(message as Comment_Suggestion))
           as Comment_Suggestion;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Comment_Suggestion create() => Comment_Suggestion._();
+  @$core.override
   Comment_Suggestion createEmptyInstance() => create();
-  static $pb.PbList<Comment_Suggestion> createRepeated() =>
-      $pb.PbList<Comment_Suggestion>();
   @$core.pragma('dart2js:noInline')
   static Comment_Suggestion getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Comment_Suggestion>(create);
@@ -1608,14 +1434,11 @@ class Comment_Suggestion extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Comment_Suggestion_Subtype get subtype => $_getN(0);
   @$pb.TagNumber(1)
-  set subtype(Comment_Suggestion_Subtype v) {
-    setField(1, v);
-  }
-
+  set subtype(Comment_Suggestion_Subtype value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSubtype() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSubtype() => clearField(1);
+  void clearSubtype() => $_clearField(1);
 }
 
 enum Comment_Type { post, assignment, suggestion, notSet }
@@ -1628,28 +1451,22 @@ class Comment extends $pb.GeneratedMessage {
     Comment_Suggestion? suggestion,
     $core.Iterable<$0.User>? mentionedUsers,
   }) {
-    final $result = create();
-    if (post != null) {
-      $result.post = post;
-    }
-    if (assignment != null) {
-      $result.assignment = assignment;
-    }
-    if (suggestion != null) {
-      $result.suggestion = suggestion;
-    }
-    if (mentionedUsers != null) {
-      $result.mentionedUsers.addAll(mentionedUsers);
-    }
-    return $result;
+    final result = create();
+    if (post != null) result.post = post;
+    if (assignment != null) result.assignment = assignment;
+    if (suggestion != null) result.suggestion = suggestion;
+    if (mentionedUsers != null) result.mentionedUsers.addAll(mentionedUsers);
+    return result;
   }
-  Comment._() : super();
-  factory Comment.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Comment.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Comment._();
+
+  factory Comment.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Comment.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Comment_Type> _Comment_TypeByTag = {
     1: Comment_Type.post,
@@ -1669,47 +1486,46 @@ class Comment extends $pb.GeneratedMessage {
         subBuilder: Comment_Assignment.create)
     ..aOM<Comment_Suggestion>(3, _omitFieldNames ? '' : 'suggestion',
         subBuilder: Comment_Suggestion.create)
-    ..pc<$0.User>(
-        7, _omitFieldNames ? '' : 'mentionedUsers', $pb.PbFieldType.PM,
+    ..pPM<$0.User>(7, _omitFieldNames ? '' : 'mentionedUsers',
         subBuilder: $0.User.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Comment clone() => Comment()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Comment clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Comment copyWith(void Function(Comment) updates) =>
       super.copyWith((message) => updates(message as Comment)) as Comment;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Comment create() => Comment._();
+  @$core.override
   Comment createEmptyInstance() => create();
-  static $pb.PbList<Comment> createRepeated() => $pb.PbList<Comment>();
   @$core.pragma('dart2js:noInline')
   static Comment getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Comment>(create);
   static Comment? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   Comment_Type whichType() => _Comment_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearType() => $_clearField($_whichOneof(0));
 
   /// A change on a regular posted comment.
   @$pb.TagNumber(1)
   Comment_Post get post => $_getN(0);
   @$pb.TagNumber(1)
-  set post(Comment_Post v) {
-    setField(1, v);
-  }
-
+  set post(Comment_Post value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasPost() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPost() => clearField(1);
+  void clearPost() => $_clearField(1);
   @$pb.TagNumber(1)
   Comment_Post ensurePost() => $_ensure(0);
 
@@ -1717,14 +1533,11 @@ class Comment extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Comment_Assignment get assignment => $_getN(1);
   @$pb.TagNumber(2)
-  set assignment(Comment_Assignment v) {
-    setField(2, v);
-  }
-
+  set assignment(Comment_Assignment value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasAssignment() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAssignment() => clearField(2);
+  void clearAssignment() => $_clearField(2);
   @$pb.TagNumber(2)
   Comment_Assignment ensureAssignment() => $_ensure(1);
 
@@ -1732,20 +1545,17 @@ class Comment extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Comment_Suggestion get suggestion => $_getN(2);
   @$pb.TagNumber(3)
-  set suggestion(Comment_Suggestion v) {
-    setField(3, v);
-  }
-
+  set suggestion(Comment_Suggestion value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasSuggestion() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSuggestion() => clearField(3);
+  void clearSuggestion() => $_clearField(3);
   @$pb.TagNumber(3)
   Comment_Suggestion ensureSuggestion() => $_ensure(2);
 
   /// Users who are mentioned in this comment.
   @$pb.TagNumber(7)
-  $core.List<$0.User> get mentionedUsers => $_getList(3);
+  $pb.PbList<$0.User> get mentionedUsers => $_getList(3);
 }
 
 /// A change in the object's data leak prevention status.
@@ -1753,52 +1563,44 @@ class DataLeakPreventionChange extends $pb.GeneratedMessage {
   factory DataLeakPreventionChange({
     DataLeakPreventionChange_Type? type,
   }) {
-    final $result = create();
-    if (type != null) {
-      $result.type = type;
-    }
-    return $result;
+    final result = create();
+    if (type != null) result.type = type;
+    return result;
   }
-  DataLeakPreventionChange._() : super();
-  factory DataLeakPreventionChange.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DataLeakPreventionChange.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DataLeakPreventionChange._();
+
+  factory DataLeakPreventionChange.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DataLeakPreventionChange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DataLeakPreventionChange',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..e<DataLeakPreventionChange_Type>(
-        1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: DataLeakPreventionChange_Type.TYPE_UNSPECIFIED,
-        valueOf: DataLeakPreventionChange_Type.valueOf,
+    ..aE<DataLeakPreventionChange_Type>(1, _omitFieldNames ? '' : 'type',
         enumValues: DataLeakPreventionChange_Type.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DataLeakPreventionChange clone() =>
-      DataLeakPreventionChange()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DataLeakPreventionChange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DataLeakPreventionChange copyWith(
           void Function(DataLeakPreventionChange) updates) =>
       super.copyWith((message) => updates(message as DataLeakPreventionChange))
           as DataLeakPreventionChange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DataLeakPreventionChange create() => DataLeakPreventionChange._();
+  @$core.override
   DataLeakPreventionChange createEmptyInstance() => create();
-  static $pb.PbList<DataLeakPreventionChange> createRepeated() =>
-      $pb.PbList<DataLeakPreventionChange>();
   @$core.pragma('dart2js:noInline')
   static DataLeakPreventionChange getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DataLeakPreventionChange>(create);
@@ -1808,14 +1610,11 @@ class DataLeakPreventionChange extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   DataLeakPreventionChange_Type get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(DataLeakPreventionChange_Type v) {
-    setField(1, v);
-  }
-
+  set type(DataLeakPreventionChange_Type value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearType() => $_clearField(1);
 }
 
 /// Activity in applications other than Drive.
@@ -1823,51 +1622,43 @@ class ApplicationReference extends $pb.GeneratedMessage {
   factory ApplicationReference({
     ApplicationReference_Type? type,
   }) {
-    final $result = create();
-    if (type != null) {
-      $result.type = type;
-    }
-    return $result;
+    final result = create();
+    if (type != null) result.type = type;
+    return result;
   }
-  ApplicationReference._() : super();
-  factory ApplicationReference.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ApplicationReference.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ApplicationReference._();
+
+  factory ApplicationReference.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ApplicationReference.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ApplicationReference',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..e<ApplicationReference_Type>(
-        1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: ApplicationReference_Type.UNSPECIFIED_REFERENCE_TYPE,
-        valueOf: ApplicationReference_Type.valueOf,
+    ..aE<ApplicationReference_Type>(1, _omitFieldNames ? '' : 'type',
         enumValues: ApplicationReference_Type.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ApplicationReference clone() =>
-      ApplicationReference()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ApplicationReference clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ApplicationReference copyWith(void Function(ApplicationReference) updates) =>
       super.copyWith((message) => updates(message as ApplicationReference))
           as ApplicationReference;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ApplicationReference create() => ApplicationReference._();
+  @$core.override
   ApplicationReference createEmptyInstance() => create();
-  static $pb.PbList<ApplicationReference> createRepeated() =>
-      $pb.PbList<ApplicationReference>();
   @$core.pragma('dart2js:noInline')
   static ApplicationReference getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ApplicationReference>(create);
@@ -1877,14 +1668,11 @@ class ApplicationReference extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   ApplicationReference_Type get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(ApplicationReference_Type v) {
-    setField(1, v);
-  }
-
+  set type(ApplicationReference_Type value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearType() => $_clearField(1);
 }
 
 /// Information about restriction policy changes to a feature.
@@ -1893,64 +1681,52 @@ class SettingsChange_RestrictionChange extends $pb.GeneratedMessage {
     SettingsChange_RestrictionChange_Feature? feature,
     SettingsChange_RestrictionChange_Restriction? newRestriction,
   }) {
-    final $result = create();
-    if (feature != null) {
-      $result.feature = feature;
-    }
-    if (newRestriction != null) {
-      $result.newRestriction = newRestriction;
-    }
-    return $result;
+    final result = create();
+    if (feature != null) result.feature = feature;
+    if (newRestriction != null) result.newRestriction = newRestriction;
+    return result;
   }
-  SettingsChange_RestrictionChange._() : super();
-  factory SettingsChange_RestrictionChange.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SettingsChange_RestrictionChange.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SettingsChange_RestrictionChange._();
+
+  factory SettingsChange_RestrictionChange.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SettingsChange_RestrictionChange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SettingsChange.RestrictionChange',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..e<SettingsChange_RestrictionChange_Feature>(
-        1, _omitFieldNames ? '' : 'feature', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            SettingsChange_RestrictionChange_Feature.FEATURE_UNSPECIFIED,
-        valueOf: SettingsChange_RestrictionChange_Feature.valueOf,
+    ..aE<SettingsChange_RestrictionChange_Feature>(
+        1, _omitFieldNames ? '' : 'feature',
         enumValues: SettingsChange_RestrictionChange_Feature.values)
-    ..e<SettingsChange_RestrictionChange_Restriction>(
-        2, _omitFieldNames ? '' : 'newRestriction', $pb.PbFieldType.OE,
-        defaultOrMaker: SettingsChange_RestrictionChange_Restriction
-            .RESTRICTION_UNSPECIFIED,
-        valueOf: SettingsChange_RestrictionChange_Restriction.valueOf,
+    ..aE<SettingsChange_RestrictionChange_Restriction>(
+        2, _omitFieldNames ? '' : 'newRestriction',
         enumValues: SettingsChange_RestrictionChange_Restriction.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SettingsChange_RestrictionChange clone() =>
-      SettingsChange_RestrictionChange()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SettingsChange_RestrictionChange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SettingsChange_RestrictionChange copyWith(
           void Function(SettingsChange_RestrictionChange) updates) =>
       super.copyWith(
               (message) => updates(message as SettingsChange_RestrictionChange))
           as SettingsChange_RestrictionChange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SettingsChange_RestrictionChange create() =>
       SettingsChange_RestrictionChange._();
+  @$core.override
   SettingsChange_RestrictionChange createEmptyInstance() => create();
-  static $pb.PbList<SettingsChange_RestrictionChange> createRepeated() =>
-      $pb.PbList<SettingsChange_RestrictionChange>();
   @$core.pragma('dart2js:noInline')
   static SettingsChange_RestrictionChange getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SettingsChange_RestrictionChange>(
@@ -1961,27 +1737,23 @@ class SettingsChange_RestrictionChange extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   SettingsChange_RestrictionChange_Feature get feature => $_getN(0);
   @$pb.TagNumber(1)
-  set feature(SettingsChange_RestrictionChange_Feature v) {
-    setField(1, v);
-  }
-
+  set feature(SettingsChange_RestrictionChange_Feature value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasFeature() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFeature() => clearField(1);
+  void clearFeature() => $_clearField(1);
 
   /// The restriction in place after the change.
   @$pb.TagNumber(2)
   SettingsChange_RestrictionChange_Restriction get newRestriction => $_getN(1);
   @$pb.TagNumber(2)
-  set newRestriction(SettingsChange_RestrictionChange_Restriction v) {
-    setField(2, v);
-  }
-
+  set newRestriction(SettingsChange_RestrictionChange_Restriction value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasNewRestriction() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNewRestriction() => clearField(2);
+  void clearNewRestriction() => $_clearField(2);
 }
 
 /// Information about settings changes.
@@ -1989,48 +1761,45 @@ class SettingsChange extends $pb.GeneratedMessage {
   factory SettingsChange({
     $core.Iterable<SettingsChange_RestrictionChange>? restrictionChanges,
   }) {
-    final $result = create();
-    if (restrictionChanges != null) {
-      $result.restrictionChanges.addAll(restrictionChanges);
-    }
-    return $result;
+    final result = create();
+    if (restrictionChanges != null)
+      result.restrictionChanges.addAll(restrictionChanges);
+    return result;
   }
-  SettingsChange._() : super();
-  factory SettingsChange.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SettingsChange.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SettingsChange._();
+
+  factory SettingsChange.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SettingsChange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SettingsChange',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..pc<SettingsChange_RestrictionChange>(
-        1, _omitFieldNames ? '' : 'restrictionChanges', $pb.PbFieldType.PM,
+    ..pPM<SettingsChange_RestrictionChange>(
+        1, _omitFieldNames ? '' : 'restrictionChanges',
         subBuilder: SettingsChange_RestrictionChange.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SettingsChange clone() => SettingsChange()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SettingsChange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SettingsChange copyWith(void Function(SettingsChange) updates) =>
       super.copyWith((message) => updates(message as SettingsChange))
           as SettingsChange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SettingsChange create() => SettingsChange._();
+  @$core.override
   SettingsChange createEmptyInstance() => create();
-  static $pb.PbList<SettingsChange> createRepeated() =>
-      $pb.PbList<SettingsChange>();
   @$core.pragma('dart2js:noInline')
   static SettingsChange getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SettingsChange>(create);
@@ -2038,7 +1807,7 @@ class SettingsChange extends $pb.GeneratedMessage {
 
   /// The set of changes made to restrictions.
   @$pb.TagNumber(1)
-  $core.List<SettingsChange_RestrictionChange> get restrictionChanges =>
+  $pb.PbList<SettingsChange_RestrictionChange> get restrictionChanges =>
       $_getList(0);
 }
 
@@ -2048,22 +1817,21 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Te
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text({
     $core.String? value,
   }) {
-    final $result = create();
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (value != null) result.value = value;
+    return result;
   }
-  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text._()
-      : super();
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text._();
+
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2075,16 +1843,10 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Te
     ..aOS(1, _omitFieldNames ? '' : 'value')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
-      clone() =>
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text()
-            ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text copyWith(
           void Function(
                   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text)
@@ -2093,6 +1855,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Te
               as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text))
           as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
@@ -2100,12 +1863,9 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Te
       create() =>
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
               ._();
+  @$core.override
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
       createEmptyInstance() => create();
-  static $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>
-      createRepeated() => $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2118,14 +1878,11 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Te
   @$pb.TagNumber(1)
   $core.String get value => $_getSZ(0);
   @$pb.TagNumber(1)
-  set value($core.String v) {
-    $_setString(0, v);
-  }
-
+  set value($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  void clearValue() => $_clearField(1);
 }
 
 /// Wrapper for Text List Field value.
@@ -2136,22 +1893,21 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Te
             AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>?
         values,
   }) {
-    final $result = create();
-    if (values != null) {
-      $result.values.addAll(values);
-    }
-    return $result;
+    final result = create();
+    if (values != null) result.values.addAll(values);
+    return result;
   }
-  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList._()
-      : super();
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList._();
+
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2160,23 +1916,17 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Te
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..pc<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>(
-        1, _omitFieldNames ? '' : 'values', $pb.PbFieldType.PM,
+    ..pPM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>(
+        1, _omitFieldNames ? '' : 'values',
         subBuilder:
             AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
                 .create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
-      clone() =>
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList()
-            ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList copyWith(
           void Function(
                   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList)
@@ -2185,6 +1935,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Te
               as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList))
           as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
@@ -2192,12 +1943,9 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Te
       create() =>
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
               ._();
+  @$core.override
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
       createEmptyInstance() => create();
-  static $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList>
-      createRepeated() => $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2208,7 +1956,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Te
 
   /// Text values.
   @$pb.TagNumber(1)
-  $core.List<
+  $pb.PbList<
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text>
       get values => $_getList(0);
 }
@@ -2221,25 +1969,22 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Se
     $core.String? value,
     $core.String? displayName,
   }) {
-    final $result = create();
-    if (value != null) {
-      $result.value = value;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    return $result;
+    final result = create();
+    if (value != null) result.value = value;
+    if (displayName != null) result.displayName = displayName;
+    return result;
   }
-  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection._()
-      : super();
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection._();
+
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2252,16 +1997,10 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Se
     ..aOS(2, _omitFieldNames ? '' : 'displayName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
-      clone() =>
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection()
-            ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection copyWith(
           void Function(
                   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection)
@@ -2270,6 +2009,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Se
               as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection))
           as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
@@ -2277,12 +2017,9 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Se
       create() =>
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
               ._();
+  @$core.override
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
       createEmptyInstance() => create();
-  static $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>
-      createRepeated() => $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2295,27 +2032,21 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Se
   @$pb.TagNumber(1)
   $core.String get value => $_getSZ(0);
   @$pb.TagNumber(1)
-  set value($core.String v) {
-    $_setString(0, v);
-  }
-
+  set value($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  void clearValue() => $_clearField(1);
 
   /// Selection value as human-readable display string.
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set displayName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisplayName() => clearField(2);
+  void clearDisplayName() => $_clearField(2);
 }
 
 /// Wrapper for SelectionList Field value.
@@ -2326,22 +2057,21 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Se
             AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>?
         values,
   }) {
-    final $result = create();
-    if (values != null) {
-      $result.values.addAll(values);
-    }
-    return $result;
+    final result = create();
+    if (values != null) result.values.addAll(values);
+    return result;
   }
-  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList._()
-      : super();
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList._();
+
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2350,23 +2080,17 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Se
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..pc<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>(
-        1, _omitFieldNames ? '' : 'values', $pb.PbFieldType.PM,
+    ..pPM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>(
+        1, _omitFieldNames ? '' : 'values',
         subBuilder:
             AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
                 .create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
-      clone() =>
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList()
-            ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList copyWith(
           void Function(
                   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList)
@@ -2375,6 +2099,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Se
               as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList))
           as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
@@ -2382,12 +2107,9 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Se
       create() =>
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
               ._();
+  @$core.override
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
       createEmptyInstance() => create();
-  static $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList>
-      createRepeated() => $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2398,7 +2120,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Se
 
   /// Selection values.
   @$pb.TagNumber(1)
-  $core.List<
+  $pb.PbList<
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection>
       get values => $_getList(0);
 }
@@ -2409,22 +2131,21 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_In
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer({
     $fixnum.Int64? value,
   }) {
-    final $result = create();
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (value != null) result.value = value;
+    return result;
   }
-  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer._()
-      : super();
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer._();
+
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2436,16 +2157,10 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_In
     ..aInt64(1, _omitFieldNames ? '' : 'value')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
-      clone() =>
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer()
-            ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer copyWith(
           void Function(
                   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer)
@@ -2454,6 +2169,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_In
               as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer))
           as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
@@ -2461,12 +2177,9 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_In
       create() =>
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
               ._();
+  @$core.override
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
       createEmptyInstance() => create();
-  static $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer>
-      createRepeated() => $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2479,14 +2192,11 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_In
   @$pb.TagNumber(1)
   $fixnum.Int64 get value => $_getI64(0);
   @$pb.TagNumber(1)
-  set value($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set value($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  void clearValue() => $_clearField(1);
 }
 
 /// Wrapper for User Field value.
@@ -2495,22 +2205,21 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Si
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser({
     $core.String? value,
   }) {
-    final $result = create();
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (value != null) result.value = value;
+    return result;
   }
-  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser._()
-      : super();
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser._();
+
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2522,16 +2231,10 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Si
     ..aOS(1, _omitFieldNames ? '' : 'value')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
-      clone() =>
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser()
-            ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser copyWith(
           void Function(
                   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser)
@@ -2540,6 +2243,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Si
               as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser))
           as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
@@ -2547,12 +2251,9 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Si
       create() =>
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
               ._();
+  @$core.override
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
       createEmptyInstance() => create();
-  static $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>
-      createRepeated() => $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2565,14 +2266,11 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Si
   @$pb.TagNumber(1)
   $core.String get value => $_getSZ(0);
   @$pb.TagNumber(1)
-  set value($core.String v) {
-    $_setString(0, v);
-  }
-
+  set value($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  void clearValue() => $_clearField(1);
 }
 
 /// Wrapper for UserList Field value.
@@ -2583,22 +2281,21 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Us
             AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>?
         values,
   }) {
-    final $result = create();
-    if (values != null) {
-      $result.values.addAll(values);
-    }
-    return $result;
+    final result = create();
+    if (values != null) result.values.addAll(values);
+    return result;
   }
-  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList._()
-      : super();
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList._();
+
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2607,23 +2304,17 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Us
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..pc<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>(
-        1, _omitFieldNames ? '' : 'values', $pb.PbFieldType.PM,
+    ..pPM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>(
+        1, _omitFieldNames ? '' : 'values',
         subBuilder:
             AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
                 .create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
-      clone() =>
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList()
-            ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList copyWith(
           void Function(
                   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList)
@@ -2632,6 +2323,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Us
               as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList))
           as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
@@ -2639,12 +2331,9 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Us
       create() =>
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
               ._();
+  @$core.override
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
       createEmptyInstance() => create();
-  static $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList>
-      createRepeated() => $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2655,7 +2344,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Us
 
   /// User values.
   @$pb.TagNumber(1)
-  $core.List<
+  $pb.PbList<
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser>
       get values => $_getList(0);
 }
@@ -2666,22 +2355,21 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Da
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date({
     $2.Timestamp? value,
   }) {
-    final $result = create();
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (value != null) result.value = value;
+    return result;
   }
-  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date._()
-      : super();
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date._();
+
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2694,16 +2382,10 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Da
         subBuilder: $2.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
-      clone() =>
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date()
-            ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date copyWith(
           void Function(
                   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date)
@@ -2712,6 +2394,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Da
               as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date))
           as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
@@ -2719,12 +2402,9 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Da
       create() =>
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
               ._();
+  @$core.override
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
       createEmptyInstance() => create();
-  static $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date>
-      createRepeated() => $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2737,14 +2417,11 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Da
   @$pb.TagNumber(1)
   $2.Timestamp get value => $_getN(0);
   @$pb.TagNumber(1)
-  set value($2.Timestamp v) {
-    setField(1, v);
-  }
-
+  set value($2.Timestamp value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  void clearValue() => $_clearField(1);
   @$pb.TagNumber(1)
   $2.Timestamp ensureValue() => $_ensure(0);
 }
@@ -2782,43 +2459,28 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
     AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date?
         date,
   }) {
-    final $result = create();
-    if (text != null) {
-      $result.text = text;
-    }
-    if (textList != null) {
-      $result.textList = textList;
-    }
-    if (selection != null) {
-      $result.selection = selection;
-    }
-    if (selectionList != null) {
-      $result.selectionList = selectionList;
-    }
-    if (integer != null) {
-      $result.integer = integer;
-    }
-    if (user != null) {
-      $result.user = user;
-    }
-    if (userList != null) {
-      $result.userList = userList;
-    }
-    if (date != null) {
-      $result.date = date;
-    }
-    return $result;
+    final result = create();
+    if (text != null) result.text = text;
+    if (textList != null) result.textList = textList;
+    if (selection != null) result.selection = selection;
+    if (selectionList != null) result.selectionList = selectionList;
+    if (integer != null) result.integer = integer;
+    if (user != null) result.user = user;
+    if (userList != null) result.userList = userList;
+    if (date != null) result.date = date;
+    return result;
   }
-  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue._()
-      : super();
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue._();
+
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int,
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value>
@@ -2893,16 +2555,10 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
                 .create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
-      clone() =>
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue()
-            ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue copyWith(
           void Function(
                   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue)
@@ -2911,6 +2567,7 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
               as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue))
           as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
@@ -2918,12 +2575,9 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       create() =>
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
               ._();
+  @$core.override
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       createEmptyInstance() => create();
-  static $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue>
-      createRepeated() => $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2932,11 +2586,27 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue?
       _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Value
       whichValue() =>
           _AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_ValueByTag[
               $_whichOneof(0)]!;
-  void clearValue() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  void clearValue() => $_clearField($_whichOneof(0));
 
   /// Text Field value.
   @$pb.TagNumber(1)
@@ -2944,15 +2614,13 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       get text => $_getN(0);
   @$pb.TagNumber(1)
   set text(
-      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
-          v) {
-    setField(1, v);
-  }
-
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
+              value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasText() => $_has(0);
   @$pb.TagNumber(1)
-  void clearText() => clearField(1);
+  void clearText() => $_clearField(1);
   @$pb.TagNumber(1)
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Text
       ensureText() => $_ensure(0);
@@ -2963,15 +2631,13 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       get textList => $_getN(1);
   @$pb.TagNumber(3)
   set textList(
-      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
-          v) {
-    setField(3, v);
-  }
-
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
+              value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasTextList() => $_has(1);
   @$pb.TagNumber(3)
-  void clearTextList() => clearField(3);
+  void clearTextList() => $_clearField(3);
   @$pb.TagNumber(3)
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_TextList
       ensureTextList() => $_ensure(1);
@@ -2982,15 +2648,13 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       get selection => $_getN(2);
   @$pb.TagNumber(4)
   set selection(
-      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
-          v) {
-    setField(4, v);
-  }
-
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
+              value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasSelection() => $_has(2);
   @$pb.TagNumber(4)
-  void clearSelection() => clearField(4);
+  void clearSelection() => $_clearField(4);
   @$pb.TagNumber(4)
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Selection
       ensureSelection() => $_ensure(2);
@@ -3001,15 +2665,13 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       get selectionList => $_getN(3);
   @$pb.TagNumber(5)
   set selectionList(
-      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
-          v) {
-    setField(5, v);
-  }
-
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
+              value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasSelectionList() => $_has(3);
   @$pb.TagNumber(5)
-  void clearSelectionList() => clearField(5);
+  void clearSelectionList() => $_clearField(5);
   @$pb.TagNumber(5)
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SelectionList
       ensureSelectionList() => $_ensure(3);
@@ -3020,15 +2682,13 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       get integer => $_getN(4);
   @$pb.TagNumber(6)
   set integer(
-      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
-          v) {
-    setField(6, v);
-  }
-
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
+              value) =>
+      $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasInteger() => $_has(4);
   @$pb.TagNumber(6)
-  void clearInteger() => clearField(6);
+  void clearInteger() => $_clearField(6);
   @$pb.TagNumber(6)
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Integer
       ensureInteger() => $_ensure(4);
@@ -3039,15 +2699,13 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       get user => $_getN(5);
   @$pb.TagNumber(7)
   set user(
-      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
-          v) {
-    setField(7, v);
-  }
-
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
+              value) =>
+      $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasUser() => $_has(5);
   @$pb.TagNumber(7)
-  void clearUser() => clearField(7);
+  void clearUser() => $_clearField(7);
   @$pb.TagNumber(7)
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_SingleUser
       ensureUser() => $_ensure(5);
@@ -3058,15 +2716,13 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       get userList => $_getN(6);
   @$pb.TagNumber(8)
   set userList(
-      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
-          v) {
-    setField(8, v);
-  }
-
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
+              value) =>
+      $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasUserList() => $_has(6);
   @$pb.TagNumber(8)
-  void clearUserList() => clearField(8);
+  void clearUserList() => $_clearField(8);
   @$pb.TagNumber(8)
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_UserList
       ensureUserList() => $_ensure(6);
@@ -3077,15 +2733,13 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       get date => $_getN(7);
   @$pb.TagNumber(9)
   set date(
-      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
-          v) {
-    setField(9, v);
-  }
-
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
+              value) =>
+      $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasDate() => $_has(7);
   @$pb.TagNumber(9)
-  void clearDate() => clearField(9);
+  void clearDate() => $_clearField(9);
   @$pb.TagNumber(9)
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue_Date
       ensureDate() => $_ensure(7);
@@ -3102,30 +2756,24 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
         newValue,
     $core.String? displayName,
   }) {
-    final $result = create();
-    if (fieldId != null) {
-      $result.fieldId = fieldId;
-    }
-    if (oldValue != null) {
-      $result.oldValue = oldValue;
-    }
-    if (newValue != null) {
-      $result.newValue = newValue;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    return $result;
+    final result = create();
+    if (fieldId != null) result.fieldId = fieldId;
+    if (oldValue != null) result.oldValue = oldValue;
+    if (newValue != null) result.newValue = newValue;
+    if (displayName != null) result.displayName = displayName;
+    return result;
   }
-  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange._() : super();
+
+  AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange._();
+
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -3148,15 +2796,10 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
     ..aOS(4, _omitFieldNames ? '' : 'displayName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange clone() =>
-      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange copyWith(
           void Function(
                   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange)
@@ -3165,18 +2808,16 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
               as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange))
           as AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
       create() =>
           AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange._();
+  @$core.override
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
       createEmptyInstance() => create();
-  static $pb
-      .PbList<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>
-      createRepeated() => $pb.PbList<
-          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -3188,14 +2829,11 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
   @$pb.TagNumber(1)
   $core.String get fieldId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set fieldId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set fieldId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFieldId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFieldId() => clearField(1);
+  void clearFieldId() => $_clearField(1);
 
   /// The value that was previously set on the field. If not present,
   /// the field was newly set. At least one of {old_value|new_value} is
@@ -3205,15 +2843,13 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
       get oldValue => $_getN(1);
   @$pb.TagNumber(2)
   set oldValue(
-      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
-          v) {
-    setField(2, v);
-  }
-
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+              value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOldValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOldValue() => clearField(2);
+  void clearOldValue() => $_clearField(2);
   @$pb.TagNumber(2)
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       ensureOldValue() => $_ensure(1);
@@ -3225,15 +2861,13 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
       get newValue => $_getN(2);
   @$pb.TagNumber(3)
   set newValue(
-      AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
-          v) {
-    setField(3, v);
-  }
-
+          AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
+              value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasNewValue() => $_has(2);
   @$pb.TagNumber(3)
-  void clearNewValue() => clearField(3);
+  void clearNewValue() => $_clearField(3);
   @$pb.TagNumber(3)
   AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange_FieldValue
       ensureNewValue() => $_ensure(2);
@@ -3242,14 +2876,11 @@ class AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange
   @$pb.TagNumber(4)
   $core.String get displayName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set displayName($core.String v) {
-    $_setString(3, v);
-  }
-
+  set displayName($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDisplayName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDisplayName() => clearField(4);
+  void clearDisplayName() => $_clearField(4);
 }
 
 /// A change made to a Label on the Target.
@@ -3262,29 +2893,24 @@ class AppliedLabelChange_AppliedLabelChangeDetail extends $pb.GeneratedMessage {
         .Iterable<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>?
         fieldChanges,
   }) {
-    final $result = create();
-    if (label != null) {
-      $result.label = label;
-    }
-    if (types != null) {
-      $result.types.addAll(types);
-    }
-    if (title != null) {
-      $result.title = title;
-    }
-    if (fieldChanges != null) {
-      $result.fieldChanges.addAll(fieldChanges);
-    }
-    return $result;
+    final result = create();
+    if (label != null) result.label = label;
+    if (types != null) result.types.addAll(types);
+    if (title != null) result.title = title;
+    if (fieldChanges != null) result.fieldChanges.addAll(fieldChanges);
+    return result;
   }
-  AppliedLabelChange_AppliedLabelChangeDetail._() : super();
+
+  AppliedLabelChange_AppliedLabelChangeDetail._();
+
   factory AppliedLabelChange_AppliedLabelChangeDetail.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AppliedLabelChange_AppliedLabelChangeDetail.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AppliedLabelChange_AppliedLabelChangeDetail.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AppliedLabelChange.AppliedLabelChangeDetail',
@@ -3299,35 +2925,29 @@ class AppliedLabelChange_AppliedLabelChangeDetail extends $pb.GeneratedMessage {
         defaultEnumValue:
             AppliedLabelChange_AppliedLabelChangeDetail_Type.TYPE_UNSPECIFIED)
     ..aOS(3, _omitFieldNames ? '' : 'title')
-    ..pc<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>(
-        4, _omitFieldNames ? '' : 'fieldChanges', $pb.PbFieldType.PM,
+    ..pPM<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>(
+        4, _omitFieldNames ? '' : 'fieldChanges',
         subBuilder:
             AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AppliedLabelChange_AppliedLabelChangeDetail clone() =>
-      AppliedLabelChange_AppliedLabelChangeDetail()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AppliedLabelChange_AppliedLabelChangeDetail clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange_AppliedLabelChangeDetail copyWith(
           void Function(AppliedLabelChange_AppliedLabelChangeDetail) updates) =>
       super.copyWith((message) =>
               updates(message as AppliedLabelChange_AppliedLabelChangeDetail))
           as AppliedLabelChange_AppliedLabelChangeDetail;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail create() =>
       AppliedLabelChange_AppliedLabelChangeDetail._();
+  @$core.override
   AppliedLabelChange_AppliedLabelChangeDetail createEmptyInstance() => create();
-  static $pb.PbList<AppliedLabelChange_AppliedLabelChangeDetail>
-      createRepeated() =>
-          $pb.PbList<AppliedLabelChange_AppliedLabelChangeDetail>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange_AppliedLabelChangeDetail getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -3341,37 +2961,31 @@ class AppliedLabelChange_AppliedLabelChangeDetail extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get label => $_getSZ(0);
   @$pb.TagNumber(1)
-  set label($core.String v) {
-    $_setString(0, v);
-  }
-
+  set label($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasLabel() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLabel() => clearField(1);
+  void clearLabel() => $_clearField(1);
 
   /// The types of changes made to the Label on the Target.
   @$pb.TagNumber(2)
-  $core.List<AppliedLabelChange_AppliedLabelChangeDetail_Type> get types =>
+  $pb.PbList<AppliedLabelChange_AppliedLabelChangeDetail_Type> get types =>
       $_getList(1);
 
   /// The human-readable title of the label that changed.
   @$pb.TagNumber(3)
   $core.String get title => $_getSZ(2);
   @$pb.TagNumber(3)
-  set title($core.String v) {
-    $_setString(2, v);
-  }
-
+  set title($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasTitle() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTitle() => clearField(3);
+  void clearTitle() => $_clearField(3);
 
   /// Field Changes. Only present if `types` contains
   /// `LABEL_FIELD_VALUE_CHANGED`.
   @$pb.TagNumber(4)
-  $core.List<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>
+  $pb.PbList<AppliedLabelChange_AppliedLabelChangeDetail_FieldValueChange>
       get fieldChanges => $_getList(3);
 }
 
@@ -3380,48 +2994,44 @@ class AppliedLabelChange extends $pb.GeneratedMessage {
   factory AppliedLabelChange({
     $core.Iterable<AppliedLabelChange_AppliedLabelChangeDetail>? changes,
   }) {
-    final $result = create();
-    if (changes != null) {
-      $result.changes.addAll(changes);
-    }
-    return $result;
+    final result = create();
+    if (changes != null) result.changes.addAll(changes);
+    return result;
   }
-  AppliedLabelChange._() : super();
-  factory AppliedLabelChange.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AppliedLabelChange.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AppliedLabelChange._();
+
+  factory AppliedLabelChange.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AppliedLabelChange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AppliedLabelChange',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..pc<AppliedLabelChange_AppliedLabelChangeDetail>(
-        1, _omitFieldNames ? '' : 'changes', $pb.PbFieldType.PM,
+    ..pPM<AppliedLabelChange_AppliedLabelChangeDetail>(
+        1, _omitFieldNames ? '' : 'changes',
         subBuilder: AppliedLabelChange_AppliedLabelChangeDetail.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AppliedLabelChange clone() => AppliedLabelChange()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AppliedLabelChange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AppliedLabelChange copyWith(void Function(AppliedLabelChange) updates) =>
       super.copyWith((message) => updates(message as AppliedLabelChange))
           as AppliedLabelChange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange create() => AppliedLabelChange._();
+  @$core.override
   AppliedLabelChange createEmptyInstance() => create();
-  static $pb.PbList<AppliedLabelChange> createRepeated() =>
-      $pb.PbList<AppliedLabelChange>();
   @$core.pragma('dart2js:noInline')
   static AppliedLabelChange getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AppliedLabelChange>(create);
@@ -3429,10 +3039,11 @@ class AppliedLabelChange extends $pb.GeneratedMessage {
 
   /// Changes that were made to the Label on the Target.
   @$pb.TagNumber(1)
-  $core.List<AppliedLabelChange_AppliedLabelChangeDetail> get changes =>
+  $pb.PbList<AppliedLabelChange_AppliedLabelChangeDetail> get changes =>
       $_getList(0);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

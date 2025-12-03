@@ -1,28 +1,36 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/bigtable/v2/bigtable.proto
-//
-// @dart = 2.12
+// Generated from google/bigtable/v2/bigtable.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-///  The desired view into RequestStats that should be returned in the response.
+/// The desired view into RequestStats that should be returned in the response.
 ///
-///  See also: RequestStats message.
+/// See also: RequestStats message.
 class ReadRowsRequest_RequestStatsView extends $pb.ProtobufEnum {
+  /// The default / unset value. The API will default to the NONE option below.
   static const ReadRowsRequest_RequestStatsView REQUEST_STATS_VIEW_UNSPECIFIED =
       ReadRowsRequest_RequestStatsView._(
           0, _omitEnumNames ? '' : 'REQUEST_STATS_VIEW_UNSPECIFIED');
+
+  /// Do not include any RequestStats in the response. This will leave the
+  /// RequestStats embedded message unset in the response.
   static const ReadRowsRequest_RequestStatsView REQUEST_STATS_NONE =
       ReadRowsRequest_RequestStatsView._(
           1, _omitEnumNames ? '' : 'REQUEST_STATS_NONE');
+
+  /// Include the full set of available RequestStats in the response,
+  /// applicable to this read.
   static const ReadRowsRequest_RequestStatsView REQUEST_STATS_FULL =
       ReadRowsRequest_RequestStatsView._(
           2, _omitEnumNames ? '' : 'REQUEST_STATS_FULL');
@@ -34,26 +42,33 @@ class ReadRowsRequest_RequestStatsView extends $pb.ProtobufEnum {
     REQUEST_STATS_FULL,
   ];
 
-  static final $core.Map<$core.int, ReadRowsRequest_RequestStatsView> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
+  static final $core.List<ReadRowsRequest_RequestStatsView?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
   static ReadRowsRequest_RequestStatsView? valueOf($core.int value) =>
-      _byValue[value];
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const ReadRowsRequest_RequestStatsView._($core.int v, $core.String n)
-      : super(v, n);
+  const ReadRowsRequest_RequestStatsView._(super.value, super.name);
 }
 
 /// The type of mutation.
 class ReadChangeStreamResponse_DataChange_Type extends $pb.ProtobufEnum {
+  /// The type is unspecified.
   static const ReadChangeStreamResponse_DataChange_Type TYPE_UNSPECIFIED =
       ReadChangeStreamResponse_DataChange_Type._(
           0, _omitEnumNames ? '' : 'TYPE_UNSPECIFIED');
+
+  /// A user-initiated mutation.
   static const ReadChangeStreamResponse_DataChange_Type USER =
       ReadChangeStreamResponse_DataChange_Type._(
           1, _omitEnumNames ? '' : 'USER');
+
+  /// A system-initiated mutation as part of garbage collection.
+  /// https://cloud.google.com/bigtable/docs/garbage-collection
   static const ReadChangeStreamResponse_DataChange_Type GARBAGE_COLLECTION =
       ReadChangeStreamResponse_DataChange_Type._(
           2, _omitEnumNames ? '' : 'GARBAGE_COLLECTION');
+
+  /// This is a continuation of a multi-message change.
   static const ReadChangeStreamResponse_DataChange_Type CONTINUATION =
       ReadChangeStreamResponse_DataChange_Type._(
           3, _omitEnumNames ? '' : 'CONTINUATION');
@@ -66,13 +81,13 @@ class ReadChangeStreamResponse_DataChange_Type extends $pb.ProtobufEnum {
     CONTINUATION,
   ];
 
-  static final $core.Map<$core.int, ReadChangeStreamResponse_DataChange_Type>
-      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.List<ReadChangeStreamResponse_DataChange_Type?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
   static ReadChangeStreamResponse_DataChange_Type? valueOf($core.int value) =>
-      _byValue[value];
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const ReadChangeStreamResponse_DataChange_Type._($core.int v, $core.String n)
-      : super(v, n);
+  const ReadChangeStreamResponse_DataChange_Type._(super.value, super.name);
 }
 
-const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');
+const $core.bool _omitEnumNames =
+    $core.bool.fromEnvironment('protobuf.omit_enum_names');

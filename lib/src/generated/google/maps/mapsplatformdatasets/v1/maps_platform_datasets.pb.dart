@@ -1,21 +1,25 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/mapsplatformdatasets/v1/maps_platform_datasets.proto
-//
-// @dart = 2.12
+// Generated from google/maps/mapsplatformdatasets/v1/maps_platform_datasets.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/field_mask.pb.dart'
+    as $1;
 
-import '../../../protobuf/field_mask.pb.dart' as $1;
 import '../../../rpc/status.pb.dart' as $2;
 import 'dataset.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Request to create a maps dataset.
 class CreateDatasetRequest extends $pb.GeneratedMessage {
@@ -23,22 +27,20 @@ class CreateDatasetRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $0.Dataset? dataset,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (dataset != null) {
-      $result.dataset = dataset;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (dataset != null) result.dataset = dataset;
+    return result;
   }
-  CreateDatasetRequest._() : super();
-  factory CreateDatasetRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateDatasetRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateDatasetRequest._();
+
+  factory CreateDatasetRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateDatasetRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateDatasetRequest',
@@ -50,25 +52,20 @@ class CreateDatasetRequest extends $pb.GeneratedMessage {
         subBuilder: $0.Dataset.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateDatasetRequest clone() =>
-      CreateDatasetRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateDatasetRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateDatasetRequest copyWith(void Function(CreateDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as CreateDatasetRequest))
           as CreateDatasetRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateDatasetRequest create() => CreateDatasetRequest._();
+  @$core.override
   CreateDatasetRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateDatasetRequest> createRepeated() =>
-      $pb.PbList<CreateDatasetRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateDatasetRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateDatasetRequest>(create);
@@ -79,27 +76,21 @@ class CreateDatasetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The dataset version to create.
   @$pb.TagNumber(2)
   $0.Dataset get dataset => $_getN(1);
   @$pb.TagNumber(2)
-  set dataset($0.Dataset v) {
-    setField(2, v);
-  }
-
+  set dataset($0.Dataset value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasDataset() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDataset() => clearField(2);
+  void clearDataset() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Dataset ensureDataset() => $_ensure(1);
 }
@@ -110,22 +101,20 @@ class UpdateDatasetMetadataRequest extends $pb.GeneratedMessage {
     $0.Dataset? dataset,
     $1.FieldMask? updateMask,
   }) {
-    final $result = create();
-    if (dataset != null) {
-      $result.dataset = dataset;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    return $result;
+    final result = create();
+    if (dataset != null) result.dataset = dataset;
+    if (updateMask != null) result.updateMask = updateMask;
+    return result;
   }
-  UpdateDatasetMetadataRequest._() : super();
-  factory UpdateDatasetMetadataRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateDatasetMetadataRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateDatasetMetadataRequest._();
+
+  factory UpdateDatasetMetadataRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateDatasetMetadataRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateDatasetMetadataRequest',
@@ -138,28 +127,23 @@ class UpdateDatasetMetadataRequest extends $pb.GeneratedMessage {
         subBuilder: $1.FieldMask.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateDatasetMetadataRequest clone() =>
-      UpdateDatasetMetadataRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateDatasetMetadataRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateDatasetMetadataRequest copyWith(
           void Function(UpdateDatasetMetadataRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateDatasetMetadataRequest))
           as UpdateDatasetMetadataRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateDatasetMetadataRequest create() =>
       UpdateDatasetMetadataRequest._();
+  @$core.override
   UpdateDatasetMetadataRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateDatasetMetadataRequest> createRepeated() =>
-      $pb.PbList<UpdateDatasetMetadataRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateDatasetMetadataRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateDatasetMetadataRequest>(create);
@@ -170,31 +154,25 @@ class UpdateDatasetMetadataRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Dataset get dataset => $_getN(0);
   @$pb.TagNumber(1)
-  set dataset($0.Dataset v) {
-    setField(1, v);
-  }
-
+  set dataset($0.Dataset value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasDataset() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDataset() => clearField(1);
+  void clearDataset() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Dataset ensureDataset() => $_ensure(0);
 
-  ///  The list of fields to be updated.
+  /// The list of fields to be updated.
   ///
-  ///  The value "*" is used for full replacement (default).
+  /// The value "*" is used for full replacement (default).
   @$pb.TagNumber(2)
   $1.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($1.FieldMask v) {
-    setField(2, v);
-  }
-
+  set updateMask($1.FieldMask value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $1.FieldMask ensureUpdateMask() => $_ensure(1);
 }
@@ -204,19 +182,19 @@ class GetDatasetRequest extends $pb.GeneratedMessage {
   factory GetDatasetRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetDatasetRequest._() : super();
-  factory GetDatasetRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetDatasetRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetDatasetRequest._();
+
+  factory GetDatasetRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetDatasetRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetDatasetRequest',
@@ -226,49 +204,42 @@ class GetDatasetRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetDatasetRequest clone() => GetDatasetRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetDatasetRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetDatasetRequest copyWith(void Function(GetDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as GetDatasetRequest))
           as GetDatasetRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetDatasetRequest create() => GetDatasetRequest._();
+  @$core.override
   GetDatasetRequest createEmptyInstance() => create();
-  static $pb.PbList<GetDatasetRequest> createRepeated() =>
-      $pb.PbList<GetDatasetRequest>();
   @$core.pragma('dart2js:noInline')
   static GetDatasetRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetDatasetRequest>(create);
   static GetDatasetRequest? _defaultInstance;
 
-  ///  Required. Resource name.
-  ///  Format: projects/{project}/datasets/{dataset_id}
+  /// Required. Resource name.
+  /// Format: projects/{project}/datasets/{dataset_id}
   ///
   ///
-  ///  Can also fetch some special versions by appending "@" and a tag.
-  ///  Format: projects/{project}/datasets/{dataset_id}@{tag}
+  /// Can also fetch some special versions by appending "@" and a tag.
+  /// Format: projects/{project}/datasets/{dataset_id}@{tag}
   ///
-  ///  Tag "active": The info of the latest completed version will be included,
-  ///  and NOT_FOUND if the dataset does not have one.
+  /// Tag "active": The info of the latest completed version will be included,
+  /// and NOT_FOUND if the dataset does not have one.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request to list datasets for the project.
@@ -279,28 +250,22 @@ class ListDatasetsRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.String? tag,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (tag != null) {
-      $result.tag = tag;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (tag != null) result.tag = tag;
+    return result;
   }
-  ListDatasetsRequest._() : super();
-  factory ListDatasetsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListDatasetsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListDatasetsRequest._();
+
+  factory ListDatasetsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListDatasetsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListDatasetsRequest',
@@ -308,29 +273,25 @@ class ListDatasetsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.maps.mapsplatformdatasets.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..aOS(4, _omitFieldNames ? '' : 'tag')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListDatasetsRequest clone() => ListDatasetsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListDatasetsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListDatasetsRequest copyWith(void Function(ListDatasetsRequest) updates) =>
       super.copyWith((message) => updates(message as ListDatasetsRequest))
           as ListDatasetsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListDatasetsRequest create() => ListDatasetsRequest._();
+  @$core.override
   ListDatasetsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListDatasetsRequest> createRepeated() =>
-      $pb.PbList<ListDatasetsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListDatasetsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListDatasetsRequest>(create);
@@ -341,64 +302,52 @@ class ListDatasetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
-  ///  The maximum number of datasets to return per page.
+  /// The maximum number of datasets to return per page.
   ///
-  ///  If unspecified (or zero), all datasets will be returned.
+  /// If unspecified (or zero), all datasets will be returned.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// The page token, received from a previous ListDatasets call.
   /// Provide this to retrieve the subsequent page.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 
-  ///  The tag that specifies the desired version for each dataset.
+  /// The tag that specifies the desired version for each dataset.
   ///
-  ///  Note that when pagination is also specified, some filtering can happen
-  ///  after pagination, which may cause the response to contain fewer datasets
-  ///  than the page size, even if it's not the last page.
+  /// Note that when pagination is also specified, some filtering can happen
+  /// after pagination, which may cause the response to contain fewer datasets
+  /// than the page size, even if it's not the last page.
   ///
-  ///  Tag "active": Each dataset in the response will include the info of its
-  ///  latest completed version, and the dataset will be skipped if it does not
-  ///  have one.
+  /// Tag "active": Each dataset in the response will include the info of its
+  /// latest completed version, and the dataset will be skipped if it does not
+  /// have one.
   @$pb.TagNumber(4)
   $core.String get tag => $_getSZ(3);
   @$pb.TagNumber(4)
-  set tag($core.String v) {
-    $_setString(3, v);
-  }
-
+  set tag($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasTag() => $_has(3);
   @$pb.TagNumber(4)
-  void clearTag() => clearField(4);
+  void clearTag() => $_clearField(4);
 }
 
 /// Response object of ListDatasets.
@@ -407,52 +356,45 @@ class ListDatasetsResponse extends $pb.GeneratedMessage {
     $core.Iterable<$0.Dataset>? datasets,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (datasets != null) {
-      $result.datasets.addAll(datasets);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (datasets != null) result.datasets.addAll(datasets);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListDatasetsResponse._() : super();
-  factory ListDatasetsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListDatasetsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListDatasetsResponse._();
+
+  factory ListDatasetsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListDatasetsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListDatasetsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.maps.mapsplatformdatasets.v1'),
       createEmptyInstance: create)
-    ..pc<$0.Dataset>(1, _omitFieldNames ? '' : 'datasets', $pb.PbFieldType.PM,
+    ..pPM<$0.Dataset>(1, _omitFieldNames ? '' : 'datasets',
         subBuilder: $0.Dataset.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListDatasetsResponse clone() =>
-      ListDatasetsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListDatasetsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListDatasetsResponse copyWith(void Function(ListDatasetsResponse) updates) =>
       super.copyWith((message) => updates(message as ListDatasetsResponse))
           as ListDatasetsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListDatasetsResponse create() => ListDatasetsResponse._();
+  @$core.override
   ListDatasetsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListDatasetsResponse> createRepeated() =>
-      $pb.PbList<ListDatasetsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListDatasetsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListDatasetsResponse>(create);
@@ -460,22 +402,19 @@ class ListDatasetsResponse extends $pb.GeneratedMessage {
 
   /// All the datasets for the project.
   @$pb.TagNumber(1)
-  $core.List<$0.Dataset> get datasets => $_getList(0);
+  $pb.PbList<$0.Dataset> get datasets => $_getList(0);
 
-  ///  A token that can be sent as `page_token` to retrieve the next page.
+  /// A token that can be sent as `page_token` to retrieve the next page.
   ///
-  ///  If this field is omitted, there are no subsequent pages.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request to list detailed errors belonging to a dataset.
@@ -485,25 +424,21 @@ class FetchDatasetErrorsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (dataset != null) {
-      $result.dataset = dataset;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (dataset != null) result.dataset = dataset;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  FetchDatasetErrorsRequest._() : super();
-  factory FetchDatasetErrorsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FetchDatasetErrorsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FetchDatasetErrorsRequest._();
+
+  factory FetchDatasetErrorsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FetchDatasetErrorsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FetchDatasetErrorsRequest',
@@ -511,30 +446,25 @@ class FetchDatasetErrorsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.maps.mapsplatformdatasets.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'dataset')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FetchDatasetErrorsRequest clone() =>
-      FetchDatasetErrorsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FetchDatasetErrorsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FetchDatasetErrorsRequest copyWith(
           void Function(FetchDatasetErrorsRequest) updates) =>
       super.copyWith((message) => updates(message as FetchDatasetErrorsRequest))
           as FetchDatasetErrorsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FetchDatasetErrorsRequest create() => FetchDatasetErrorsRequest._();
+  @$core.override
   FetchDatasetErrorsRequest createEmptyInstance() => create();
-  static $pb.PbList<FetchDatasetErrorsRequest> createRepeated() =>
-      $pb.PbList<FetchDatasetErrorsRequest>();
   @$core.pragma('dart2js:noInline')
   static FetchDatasetErrorsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FetchDatasetErrorsRequest>(create);
@@ -545,45 +475,36 @@ class FetchDatasetErrorsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get dataset => $_getSZ(0);
   @$pb.TagNumber(1)
-  set dataset($core.String v) {
-    $_setString(0, v);
-  }
-
+  set dataset($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDataset() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDataset() => clearField(1);
+  void clearDataset() => $_clearField(1);
 
-  ///  The maximum number of errors to return per page.
+  /// The maximum number of errors to return per page.
   ///
-  ///  The maximum value is 500; values above 500 will be capped to 500.
+  /// The maximum value is 500; values above 500 will be capped to 500.
   ///
-  ///  If unspecified, at most 50 errors will be returned.
+  /// If unspecified, at most 50 errors will be returned.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// The page token, received from a previous ListDatasetErrors call.
   /// Provide this to retrieve the subsequent page.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 }
 
 /// Response object of FetchDatasetErrors.
@@ -592,22 +513,20 @@ class FetchDatasetErrorsResponse extends $pb.GeneratedMessage {
     $core.String? nextPageToken,
     $core.Iterable<$2.Status>? errors,
   }) {
-    final $result = create();
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    if (errors != null) {
-      $result.errors.addAll(errors);
-    }
-    return $result;
+    final result = create();
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    if (errors != null) result.errors.addAll(errors);
+    return result;
   }
-  FetchDatasetErrorsResponse._() : super();
-  factory FetchDatasetErrorsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FetchDatasetErrorsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FetchDatasetErrorsResponse._();
+
+  factory FetchDatasetErrorsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FetchDatasetErrorsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FetchDatasetErrorsResponse',
@@ -615,54 +534,46 @@ class FetchDatasetErrorsResponse extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.maps.mapsplatformdatasets.v1'),
       createEmptyInstance: create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
-    ..pc<$2.Status>(3, _omitFieldNames ? '' : 'errors', $pb.PbFieldType.PM,
+    ..pPM<$2.Status>(3, _omitFieldNames ? '' : 'errors',
         subBuilder: $2.Status.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FetchDatasetErrorsResponse clone() =>
-      FetchDatasetErrorsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FetchDatasetErrorsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FetchDatasetErrorsResponse copyWith(
           void Function(FetchDatasetErrorsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as FetchDatasetErrorsResponse))
           as FetchDatasetErrorsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FetchDatasetErrorsResponse create() => FetchDatasetErrorsResponse._();
+  @$core.override
   FetchDatasetErrorsResponse createEmptyInstance() => create();
-  static $pb.PbList<FetchDatasetErrorsResponse> createRepeated() =>
-      $pb.PbList<FetchDatasetErrorsResponse>();
   @$core.pragma('dart2js:noInline')
   static FetchDatasetErrorsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FetchDatasetErrorsResponse>(create);
   static FetchDatasetErrorsResponse? _defaultInstance;
 
-  ///  A token that can be sent as `page_token` to retrieve the next page.
+  /// A token that can be sent as `page_token` to retrieve the next page.
   ///
-  ///  If this field is omitted, there are no subsequent pages.
+  /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(0);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(0, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(0, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(0);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 
   /// The errors associated with a dataset.
   @$pb.TagNumber(3)
-  $core.List<$2.Status> get errors => $_getList(1);
+  $pb.PbList<$2.Status> get errors => $_getList(1);
 }
 
 /// Request to delete a dataset.
@@ -670,19 +581,19 @@ class DeleteDatasetRequest extends $pb.GeneratedMessage {
   factory DeleteDatasetRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteDatasetRequest._() : super();
-  factory DeleteDatasetRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteDatasetRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteDatasetRequest._();
+
+  factory DeleteDatasetRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteDatasetRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteDatasetRequest',
@@ -692,25 +603,20 @@ class DeleteDatasetRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteDatasetRequest clone() =>
-      DeleteDatasetRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteDatasetRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteDatasetRequest copyWith(void Function(DeleteDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteDatasetRequest))
           as DeleteDatasetRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteDatasetRequest create() => DeleteDatasetRequest._();
+  @$core.override
   DeleteDatasetRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteDatasetRequest> createRepeated() =>
-      $pb.PbList<DeleteDatasetRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteDatasetRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteDatasetRequest>(create);
@@ -721,16 +627,14 @@ class DeleteDatasetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/spanner/v1/spanner.proto
-//
-// @dart = 2.12
+// Generated from google/spanner/v1/spanner.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -145,9 +147,9 @@ final $typed_data.Uint8List sessionDescriptor = $convert.base64Decode(
     'c3RhbXBCA+BBA1IWYXBwcm94aW1hdGVMYXN0VXNlVGltZRIhCgxjcmVhdG9yX3JvbGUYBSABKA'
     'lSC2NyZWF0b3JSb2xlEiUKC211bHRpcGxleGVkGAYgASgIQgPgQQFSC211bHRpcGxleGVkGjkK'
     'C0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOA'
-    'E6dOpBcQoec3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEk9wcm9qZWN0cy97cHJvamVj'
-    'dH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vc2Vzc2lvbnMve3'
-    'Nlc3Npb259');
+    'E6iAHqQYQBCh5zcGFubmVyLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24ST3Byb2plY3RzL3twcm9q'
+    'ZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9kYXRhYmFzZXMve2RhdGFiYXNlfS9zZXNzaW9ucy'
+    '97c2Vzc2lvbn0qCHNlc3Npb25zMgdzZXNzaW9u');
 
 @$core.Deprecated('Use getSessionRequestDescriptor instead')
 const GetSessionRequest$json = {
@@ -446,6 +448,15 @@ const ExecuteSqlRequest$json = {
       '8': {},
       '10': 'lastStatement'
     },
+    {
+      '1': 'routing_hint',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.v1.RoutingHint',
+      '8': {},
+      '10': 'routingHint'
+    },
   ],
   '3': [
     ExecuteSqlRequest_QueryOptions$json,
@@ -521,12 +532,13 @@ final $typed_data.Uint8List executeSqlRequestDescriptor = $convert.base64Decode(
     'ZWN0ZWRfcmVhZF9vcHRpb25zGA8gASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEuRGlyZWN0ZWRSZW'
     'FkT3B0aW9uc1ITZGlyZWN0ZWRSZWFkT3B0aW9ucxIsChJkYXRhX2Jvb3N0X2VuYWJsZWQYECAB'
     'KAhSEGRhdGFCb29zdEVuYWJsZWQSKgoObGFzdF9zdGF0ZW1lbnQYESABKAhCA+BBAVINbGFzdF'
-    'N0YXRlbWVudBp9CgxRdWVyeU9wdGlvbnMSKwoRb3B0aW1pemVyX3ZlcnNpb24YASABKAlSEG9w'
-    'dGltaXplclZlcnNpb24SQAocb3B0aW1pemVyX3N0YXRpc3RpY3NfcGFja2FnZRgCIAEoCVIab3'
-    'B0aW1pemVyU3RhdGlzdGljc1BhY2thZ2UaVgoPUGFyYW1UeXBlc0VudHJ5EhAKA2tleRgBIAEo'
-    'CVIDa2V5Ei0KBXZhbHVlGAIgASgLMhcuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZVIFdmFsdWU6Aj'
-    'gBIlcKCVF1ZXJ5TW9kZRIKCgZOT1JNQUwQABIICgRQTEFOEAESCwoHUFJPRklMRRACEg4KCldJ'
-    'VEhfU1RBVFMQAxIXChNXSVRIX1BMQU5fQU5EX1NUQVRTEAQ=');
+    'N0YXRlbWVudBJGCgxyb3V0aW5nX2hpbnQYEiABKAsyHi5nb29nbGUuc3Bhbm5lci52MS5Sb3V0'
+    'aW5nSGludEID4EEBUgtyb3V0aW5nSGludBp9CgxRdWVyeU9wdGlvbnMSKwoRb3B0aW1pemVyX3'
+    'ZlcnNpb24YASABKAlSEG9wdGltaXplclZlcnNpb24SQAocb3B0aW1pemVyX3N0YXRpc3RpY3Nf'
+    'cGFja2FnZRgCIAEoCVIab3B0aW1pemVyU3RhdGlzdGljc1BhY2thZ2UaVgoPUGFyYW1UeXBlc0'
+    'VudHJ5EhAKA2tleRgBIAEoCVIDa2V5Ei0KBXZhbHVlGAIgASgLMhcuZ29vZ2xlLnNwYW5uZXIu'
+    'djEuVHlwZVIFdmFsdWU6AjgBIlcKCVF1ZXJ5TW9kZRIKCgZOT1JNQUwQABIICgRQTEFOEAESCw'
+    'oHUFJPRklMRRACEg4KCldJVEhfU1RBVFMQAxIXChNXSVRIX1BMQU5fQU5EX1NUQVRTEAQ=');
 
 @$core.Deprecated('Use executeBatchDmlRequestDescriptor instead')
 const ExecuteBatchDmlRequest$json = {
@@ -918,6 +930,15 @@ const ReadRequest$json = {
       '8': {},
       '10': 'lockHint'
     },
+    {
+      '1': 'routing_hint',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.v1.RoutingHint',
+      '8': {},
+      '10': 'routingHint'
+    },
   ],
   '4': [ReadRequest_OrderBy$json, ReadRequest_LockHint$json],
 };
@@ -957,10 +978,11 @@ final $typed_data.Uint8List readRequestDescriptor = $convert.base64Decode(
     'cxIsChJkYXRhX2Jvb3N0X2VuYWJsZWQYDyABKAhSEGRhdGFCb29zdEVuYWJsZWQSRgoIb3JkZX'
     'JfYnkYECABKA4yJi5nb29nbGUuc3Bhbm5lci52MS5SZWFkUmVxdWVzdC5PcmRlckJ5QgPgQQFS'
     'B29yZGVyQnkSSQoJbG9ja19oaW50GBEgASgOMicuZ29vZ2xlLnNwYW5uZXIudjEuUmVhZFJlcX'
-    'Vlc3QuTG9ja0hpbnRCA+BBAVIIbG9ja0hpbnQiVAoHT3JkZXJCeRIYChRPUkRFUl9CWV9VTlNQ'
-    'RUNJRklFRBAAEhgKFE9SREVSX0JZX1BSSU1BUllfS0VZEAESFQoRT1JERVJfQllfTk9fT1JERV'
-    'IQAiJUCghMb2NrSGludBIZChVMT0NLX0hJTlRfVU5TUEVDSUZJRUQQABIUChBMT0NLX0hJTlRf'
-    'U0hBUkVEEAESFwoTTE9DS19ISU5UX0VYQ0xVU0lWRRAC');
+    'Vlc3QuTG9ja0hpbnRCA+BBAVIIbG9ja0hpbnQSRgoMcm91dGluZ19oaW50GBIgASgLMh4uZ29v'
+    'Z2xlLnNwYW5uZXIudjEuUm91dGluZ0hpbnRCA+BBAVILcm91dGluZ0hpbnQiVAoHT3JkZXJCeR'
+    'IYChRPUkRFUl9CWV9VTlNQRUNJRklFRBAAEhgKFE9SREVSX0JZX1BSSU1BUllfS0VZEAESFQoR'
+    'T1JERVJfQllfTk9fT1JERVIQAiJUCghMb2NrSGludBIZChVMT0NLX0hJTlRfVU5TUEVDSUZJRU'
+    'QQABIUChBMT0NLX0hJTlRfU0hBUkVEEAESFwoTTE9DS19ISU5UX0VYQ0xVU0lWRRAC');
 
 @$core.Deprecated('Use beginTransactionRequestDescriptor instead')
 const BeginTransactionRequest$json = {

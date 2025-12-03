@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: grafeas/v1/cvss.proto
-//
-// @dart = 2.12
+// Generated from grafeas/v1/cvss.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -28,11 +29,12 @@ class CVSSVersion extends $pb.ProtobufEnum {
     CVSS_VERSION_3,
   ];
 
-  static final $core.Map<$core.int, CVSSVersion> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSSVersion? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSSVersion?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static CVSSVersion? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSSVersion._($core.int v, $core.String n) : super(v, n);
+  const CVSSVersion._(super.value, super.name);
 }
 
 class CVSSv3_AttackVector extends $pb.ProtobufEnum {
@@ -56,11 +58,12 @@ class CVSSv3_AttackVector extends $pb.ProtobufEnum {
     ATTACK_VECTOR_PHYSICAL,
   ];
 
-  static final $core.Map<$core.int, CVSSv3_AttackVector> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSSv3_AttackVector? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSSv3_AttackVector?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 4);
+  static CVSSv3_AttackVector? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSSv3_AttackVector._($core.int v, $core.String n) : super(v, n);
+  const CVSSv3_AttackVector._(super.value, super.name);
 }
 
 class CVSSv3_AttackComplexity extends $pb.ProtobufEnum {
@@ -81,11 +84,12 @@ class CVSSv3_AttackComplexity extends $pb.ProtobufEnum {
     ATTACK_COMPLEXITY_HIGH,
   ];
 
-  static final $core.Map<$core.int, CVSSv3_AttackComplexity> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSSv3_AttackComplexity? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSSv3_AttackComplexity?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static CVSSv3_AttackComplexity? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSSv3_AttackComplexity._($core.int v, $core.String n) : super(v, n);
+  const CVSSv3_AttackComplexity._(super.value, super.name);
 }
 
 class CVSSv3_PrivilegesRequired extends $pb.ProtobufEnum {
@@ -110,11 +114,12 @@ class CVSSv3_PrivilegesRequired extends $pb.ProtobufEnum {
     PRIVILEGES_REQUIRED_HIGH,
   ];
 
-  static final $core.Map<$core.int, CVSSv3_PrivilegesRequired> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSSv3_PrivilegesRequired? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSSv3_PrivilegesRequired?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static CVSSv3_PrivilegesRequired? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSSv3_PrivilegesRequired._($core.int v, $core.String n) : super(v, n);
+  const CVSSv3_PrivilegesRequired._(super.value, super.name);
 }
 
 class CVSSv3_UserInteraction extends $pb.ProtobufEnum {
@@ -135,11 +140,12 @@ class CVSSv3_UserInteraction extends $pb.ProtobufEnum {
     USER_INTERACTION_REQUIRED,
   ];
 
-  static final $core.Map<$core.int, CVSSv3_UserInteraction> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSSv3_UserInteraction? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSSv3_UserInteraction?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static CVSSv3_UserInteraction? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSSv3_UserInteraction._($core.int v, $core.String n) : super(v, n);
+  const CVSSv3_UserInteraction._(super.value, super.name);
 }
 
 class CVSSv3_Scope extends $pb.ProtobufEnum {
@@ -156,11 +162,12 @@ class CVSSv3_Scope extends $pb.ProtobufEnum {
     SCOPE_CHANGED,
   ];
 
-  static final $core.Map<$core.int, CVSSv3_Scope> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSSv3_Scope? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSSv3_Scope?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static CVSSv3_Scope? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSSv3_Scope._($core.int v, $core.String n) : super(v, n);
+  const CVSSv3_Scope._(super.value, super.name);
 }
 
 class CVSSv3_Impact extends $pb.ProtobufEnum {
@@ -180,11 +187,12 @@ class CVSSv3_Impact extends $pb.ProtobufEnum {
     IMPACT_NONE,
   ];
 
-  static final $core.Map<$core.int, CVSSv3_Impact> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSSv3_Impact? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSSv3_Impact?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static CVSSv3_Impact? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSSv3_Impact._($core.int v, $core.String n) : super(v, n);
+  const CVSSv3_Impact._(super.value, super.name);
 }
 
 class CVSS_AttackVector extends $pb.ProtobufEnum {
@@ -207,11 +215,12 @@ class CVSS_AttackVector extends $pb.ProtobufEnum {
     ATTACK_VECTOR_PHYSICAL,
   ];
 
-  static final $core.Map<$core.int, CVSS_AttackVector> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSS_AttackVector? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSS_AttackVector?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 4);
+  static CVSS_AttackVector? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSS_AttackVector._($core.int v, $core.String n) : super(v, n);
+  const CVSS_AttackVector._(super.value, super.name);
 }
 
 class CVSS_AttackComplexity extends $pb.ProtobufEnum {
@@ -235,11 +244,12 @@ class CVSS_AttackComplexity extends $pb.ProtobufEnum {
     ATTACK_COMPLEXITY_MEDIUM,
   ];
 
-  static final $core.Map<$core.int, CVSS_AttackComplexity> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSS_AttackComplexity? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSS_AttackComplexity?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static CVSS_AttackComplexity? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSS_AttackComplexity._($core.int v, $core.String n) : super(v, n);
+  const CVSS_AttackComplexity._(super.value, super.name);
 }
 
 class CVSS_Authentication extends $pb.ProtobufEnum {
@@ -260,11 +270,12 @@ class CVSS_Authentication extends $pb.ProtobufEnum {
     AUTHENTICATION_NONE,
   ];
 
-  static final $core.Map<$core.int, CVSS_Authentication> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSS_Authentication? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSS_Authentication?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static CVSS_Authentication? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSS_Authentication._($core.int v, $core.String n) : super(v, n);
+  const CVSS_Authentication._(super.value, super.name);
 }
 
 class CVSS_PrivilegesRequired extends $pb.ProtobufEnum {
@@ -289,11 +300,12 @@ class CVSS_PrivilegesRequired extends $pb.ProtobufEnum {
     PRIVILEGES_REQUIRED_HIGH,
   ];
 
-  static final $core.Map<$core.int, CVSS_PrivilegesRequired> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSS_PrivilegesRequired? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSS_PrivilegesRequired?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static CVSS_PrivilegesRequired? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSS_PrivilegesRequired._($core.int v, $core.String n) : super(v, n);
+  const CVSS_PrivilegesRequired._(super.value, super.name);
 }
 
 class CVSS_UserInteraction extends $pb.ProtobufEnum {
@@ -312,11 +324,12 @@ class CVSS_UserInteraction extends $pb.ProtobufEnum {
     USER_INTERACTION_REQUIRED,
   ];
 
-  static final $core.Map<$core.int, CVSS_UserInteraction> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSS_UserInteraction? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSS_UserInteraction?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static CVSS_UserInteraction? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSS_UserInteraction._($core.int v, $core.String n) : super(v, n);
+  const CVSS_UserInteraction._(super.value, super.name);
 }
 
 class CVSS_Scope extends $pb.ProtobufEnum {
@@ -333,11 +346,12 @@ class CVSS_Scope extends $pb.ProtobufEnum {
     SCOPE_CHANGED,
   ];
 
-  static final $core.Map<$core.int, CVSS_Scope> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSS_Scope? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSS_Scope?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static CVSS_Scope? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSS_Scope._($core.int v, $core.String n) : super(v, n);
+  const CVSS_Scope._(super.value, super.name);
 }
 
 class CVSS_Impact extends $pb.ProtobufEnum {
@@ -363,11 +377,13 @@ class CVSS_Impact extends $pb.ProtobufEnum {
     IMPACT_COMPLETE,
   ];
 
-  static final $core.Map<$core.int, CVSS_Impact> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static CVSS_Impact? valueOf($core.int value) => _byValue[value];
+  static final $core.List<CVSS_Impact?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 5);
+  static CVSS_Impact? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const CVSS_Impact._($core.int v, $core.String n) : super(v, n);
+  const CVSS_Impact._(super.value, super.name);
 }
 
-const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');
+const $core.bool _omitEnumNames =
+    $core.bool.fromEnvironment('protobuf.omit_enum_names');

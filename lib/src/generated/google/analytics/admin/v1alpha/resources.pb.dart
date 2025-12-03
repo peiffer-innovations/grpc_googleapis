@@ -1,26 +1,32 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/analytics/admin/v1alpha/resources.proto
-//
-// @dart = 2.12
+// Generated from google/analytics/admin/v1alpha/resources.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $0;
+import 'package:grpc_googleapis/src/generated/google/protobuf/wrappers.pb.dart'
+    as $1;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../protobuf/wrappers.pb.dart' as $1;
+import '../../../type/date.pb.dart' as $6;
 import 'audience.pb.dart' as $4;
 import 'channel_group.pb.dart' as $3;
 import 'event_create_and_edit.pb.dart' as $5;
 import 'expanded_data_set.pb.dart' as $2;
 import 'resources.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'resources.pbenum.dart';
 
@@ -35,37 +41,25 @@ class Account extends $pb.GeneratedMessage {
     $core.bool? deleted,
     $core.String? gmpOrganization,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (updateTime != null) {
-      $result.updateTime = updateTime;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (regionCode != null) {
-      $result.regionCode = regionCode;
-    }
-    if (deleted != null) {
-      $result.deleted = deleted;
-    }
-    if (gmpOrganization != null) {
-      $result.gmpOrganization = gmpOrganization;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (createTime != null) result.createTime = createTime;
+    if (updateTime != null) result.updateTime = updateTime;
+    if (displayName != null) result.displayName = displayName;
+    if (regionCode != null) result.regionCode = regionCode;
+    if (deleted != null) result.deleted = deleted;
+    if (gmpOrganization != null) result.gmpOrganization = gmpOrganization;
+    return result;
   }
-  Account._() : super();
-  factory Account.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Account.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Account._();
+
+  factory Account.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Account.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Account',
@@ -83,22 +77,19 @@ class Account extends $pb.GeneratedMessage {
     ..aOS(7, _omitFieldNames ? '' : 'gmpOrganization')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Account clone() => Account()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Account clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Account copyWith(void Function(Account) updates) =>
       super.copyWith((message) => updates(message as Account)) as Account;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Account create() => Account._();
+  @$core.override
   Account createEmptyInstance() => create();
-  static $pb.PbList<Account> createRepeated() => $pb.PbList<Account>();
   @$core.pragma('dart2js:noInline')
   static Account getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Account>(create);
@@ -110,27 +101,21 @@ class Account extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Output only. Time when this account was originally created.
   @$pb.TagNumber(2)
   $0.Timestamp get createTime => $_getN(1);
   @$pb.TagNumber(2)
-  set createTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set createTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCreateTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCreateTime() => clearField(2);
+  void clearCreateTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureCreateTime() => $_ensure(1);
 
@@ -138,14 +123,11 @@ class Account extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Timestamp get updateTime => $_getN(2);
   @$pb.TagNumber(3)
-  set updateTime($0.Timestamp v) {
-    setField(3, v);
-  }
-
+  set updateTime($0.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasUpdateTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUpdateTime() => clearField(3);
+  void clearUpdateTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Timestamp ensureUpdateTime() => $_ensure(2);
 
@@ -153,41 +135,32 @@ class Account extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get displayName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set displayName($core.String v) {
-    $_setString(3, v);
-  }
-
+  set displayName($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDisplayName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDisplayName() => clearField(4);
+  void clearDisplayName() => $_clearField(4);
 
   /// Country of business. Must be a Unicode CLDR region code.
   @$pb.TagNumber(5)
   $core.String get regionCode => $_getSZ(4);
   @$pb.TagNumber(5)
-  set regionCode($core.String v) {
-    $_setString(4, v);
-  }
-
+  set regionCode($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasRegionCode() => $_has(4);
   @$pb.TagNumber(5)
-  void clearRegionCode() => clearField(5);
+  void clearRegionCode() => $_clearField(5);
 
   /// Output only. Indicates whether this Account is soft-deleted or not. Deleted
   /// accounts are excluded from List results unless specifically requested.
   @$pb.TagNumber(6)
   $core.bool get deleted => $_getBF(5);
   @$pb.TagNumber(6)
-  set deleted($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set deleted($core.bool value) => $_setBool(5, value);
   @$pb.TagNumber(6)
   $core.bool hasDeleted() => $_has(5);
   @$pb.TagNumber(6)
-  void clearDeleted() => clearField(6);
+  void clearDeleted() => $_clearField(6);
 
   /// Output only. The URI for a Google Marketing Platform organization resource.
   /// Only set when this account is connected to a GMP organization.
@@ -195,14 +168,11 @@ class Account extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.String get gmpOrganization => $_getSZ(6);
   @$pb.TagNumber(7)
-  set gmpOrganization($core.String v) {
-    $_setString(6, v);
-  }
-
+  set gmpOrganization($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
   $core.bool hasGmpOrganization() => $_has(6);
   @$pb.TagNumber(7)
-  void clearGmpOrganization() => clearField(7);
+  void clearGmpOrganization() => $_clearField(7);
 }
 
 /// A resource message representing a Google Analytics property.
@@ -222,55 +192,31 @@ class Property extends $pb.GeneratedMessage {
     $core.String? account,
     PropertyType? propertyType,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (updateTime != null) {
-      $result.updateTime = updateTime;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (industryCategory != null) {
-      $result.industryCategory = industryCategory;
-    }
-    if (timeZone != null) {
-      $result.timeZone = timeZone;
-    }
-    if (currencyCode != null) {
-      $result.currencyCode = currencyCode;
-    }
-    if (serviceLevel != null) {
-      $result.serviceLevel = serviceLevel;
-    }
-    if (deleteTime != null) {
-      $result.deleteTime = deleteTime;
-    }
-    if (expireTime != null) {
-      $result.expireTime = expireTime;
-    }
-    if (account != null) {
-      $result.account = account;
-    }
-    if (propertyType != null) {
-      $result.propertyType = propertyType;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (parent != null) result.parent = parent;
+    if (createTime != null) result.createTime = createTime;
+    if (updateTime != null) result.updateTime = updateTime;
+    if (displayName != null) result.displayName = displayName;
+    if (industryCategory != null) result.industryCategory = industryCategory;
+    if (timeZone != null) result.timeZone = timeZone;
+    if (currencyCode != null) result.currencyCode = currencyCode;
+    if (serviceLevel != null) result.serviceLevel = serviceLevel;
+    if (deleteTime != null) result.deleteTime = deleteTime;
+    if (expireTime != null) result.expireTime = expireTime;
+    if (account != null) result.account = account;
+    if (propertyType != null) result.propertyType = propertyType;
+    return result;
   }
-  Property._() : super();
-  factory Property.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Property.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Property._();
+
+  factory Property.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Property.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Property',
@@ -284,46 +230,34 @@ class Property extends $pb.GeneratedMessage {
     ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'updateTime',
         subBuilder: $0.Timestamp.create)
     ..aOS(5, _omitFieldNames ? '' : 'displayName')
-    ..e<IndustryCategory>(
-        6, _omitFieldNames ? '' : 'industryCategory', $pb.PbFieldType.OE,
-        defaultOrMaker: IndustryCategory.INDUSTRY_CATEGORY_UNSPECIFIED,
-        valueOf: IndustryCategory.valueOf,
+    ..aE<IndustryCategory>(6, _omitFieldNames ? '' : 'industryCategory',
         enumValues: IndustryCategory.values)
     ..aOS(7, _omitFieldNames ? '' : 'timeZone')
     ..aOS(8, _omitFieldNames ? '' : 'currencyCode')
-    ..e<ServiceLevel>(
-        10, _omitFieldNames ? '' : 'serviceLevel', $pb.PbFieldType.OE,
-        defaultOrMaker: ServiceLevel.SERVICE_LEVEL_UNSPECIFIED,
-        valueOf: ServiceLevel.valueOf,
+    ..aE<ServiceLevel>(10, _omitFieldNames ? '' : 'serviceLevel',
         enumValues: ServiceLevel.values)
     ..aOM<$0.Timestamp>(11, _omitFieldNames ? '' : 'deleteTime',
         subBuilder: $0.Timestamp.create)
     ..aOM<$0.Timestamp>(12, _omitFieldNames ? '' : 'expireTime',
         subBuilder: $0.Timestamp.create)
     ..aOS(13, _omitFieldNames ? '' : 'account')
-    ..e<PropertyType>(
-        14, _omitFieldNames ? '' : 'propertyType', $pb.PbFieldType.OE,
-        defaultOrMaker: PropertyType.PROPERTY_TYPE_UNSPECIFIED,
-        valueOf: PropertyType.valueOf,
+    ..aE<PropertyType>(14, _omitFieldNames ? '' : 'propertyType',
         enumValues: PropertyType.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Property clone() => Property()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Property clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Property copyWith(void Function(Property) updates) =>
       super.copyWith((message) => updates(message as Property)) as Property;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Property create() => Property._();
+  @$core.override
   Property createEmptyInstance() => create();
-  static $pb.PbList<Property> createRepeated() => $pb.PbList<Property>();
   @$core.pragma('dart2js:noInline')
   static Property getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Property>(create);
@@ -335,44 +269,35 @@ class Property extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  ///  Immutable. Resource name of this property's logical parent.
+  /// Immutable. Resource name of this property's logical parent.
   ///
-  ///  Note: The Property-Moving UI can be used to change the parent.
-  ///  Format: accounts/{account}, properties/{property}
-  ///  Example: "accounts/100", "properties/101"
+  /// Note: The Property-Moving UI can be used to change the parent.
+  /// Format: accounts/{account}, properties/{property}
+  /// Example: "accounts/100", "properties/101"
   @$pb.TagNumber(2)
   $core.String get parent => $_getSZ(1);
   @$pb.TagNumber(2)
-  set parent($core.String v) {
-    $_setString(1, v);
-  }
-
+  set parent($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasParent() => $_has(1);
   @$pb.TagNumber(2)
-  void clearParent() => clearField(2);
+  void clearParent() => $_clearField(2);
 
   /// Output only. Time when the entity was originally created.
   @$pb.TagNumber(3)
   $0.Timestamp get createTime => $_getN(2);
   @$pb.TagNumber(3)
-  set createTime($0.Timestamp v) {
-    setField(3, v);
-  }
-
+  set createTime($0.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCreateTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCreateTime() => clearField(3);
+  void clearCreateTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Timestamp ensureCreateTime() => $_ensure(2);
 
@@ -380,111 +305,90 @@ class Property extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Timestamp get updateTime => $_getN(3);
   @$pb.TagNumber(4)
-  set updateTime($0.Timestamp v) {
-    setField(4, v);
-  }
-
+  set updateTime($0.Timestamp value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasUpdateTime() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUpdateTime() => clearField(4);
+  void clearUpdateTime() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.Timestamp ensureUpdateTime() => $_ensure(3);
 
-  ///  Required. Human-readable display name for this property.
+  /// Required. Human-readable display name for this property.
   ///
-  ///  The max allowed display name length is 100 UTF-16 code units.
+  /// The max allowed display name length is 100 UTF-16 code units.
   @$pb.TagNumber(5)
   $core.String get displayName => $_getSZ(4);
   @$pb.TagNumber(5)
-  set displayName($core.String v) {
-    $_setString(4, v);
-  }
-
+  set displayName($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasDisplayName() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDisplayName() => clearField(5);
+  void clearDisplayName() => $_clearField(5);
 
   /// Industry associated with this property
   /// Example: AUTOMOTIVE, FOOD_AND_DRINK
   @$pb.TagNumber(6)
   IndustryCategory get industryCategory => $_getN(5);
   @$pb.TagNumber(6)
-  set industryCategory(IndustryCategory v) {
-    setField(6, v);
-  }
-
+  set industryCategory(IndustryCategory value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasIndustryCategory() => $_has(5);
   @$pb.TagNumber(6)
-  void clearIndustryCategory() => clearField(6);
+  void clearIndustryCategory() => $_clearField(6);
 
-  ///  Required. Reporting Time Zone, used as the day boundary for reports,
-  ///  regardless of where the data originates. If the time zone honors DST,
-  ///  Analytics will automatically adjust for the changes.
+  /// Required. Reporting Time Zone, used as the day boundary for reports,
+  /// regardless of where the data originates. If the time zone honors DST,
+  /// Analytics will automatically adjust for the changes.
   ///
-  ///  NOTE: Changing the time zone only affects data going forward, and is not
-  ///  applied retroactively.
+  /// NOTE: Changing the time zone only affects data going forward, and is not
+  /// applied retroactively.
   ///
-  ///  Format: https://www.iana.org/time-zones
-  ///  Example: "America/Los_Angeles"
+  /// Format: https://www.iana.org/time-zones
+  /// Example: "America/Los_Angeles"
   @$pb.TagNumber(7)
   $core.String get timeZone => $_getSZ(6);
   @$pb.TagNumber(7)
-  set timeZone($core.String v) {
-    $_setString(6, v);
-  }
-
+  set timeZone($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
   $core.bool hasTimeZone() => $_has(6);
   @$pb.TagNumber(7)
-  void clearTimeZone() => clearField(7);
+  void clearTimeZone() => $_clearField(7);
 
-  ///  The currency type used in reports involving monetary values.
+  /// The currency type used in reports involving monetary values.
   ///
   ///
-  ///  Format: https://en.wikipedia.org/wiki/ISO_4217
-  ///  Examples: "USD", "EUR", "JPY"
+  /// Format: https://en.wikipedia.org/wiki/ISO_4217
+  /// Examples: "USD", "EUR", "JPY"
   @$pb.TagNumber(8)
   $core.String get currencyCode => $_getSZ(7);
   @$pb.TagNumber(8)
-  set currencyCode($core.String v) {
-    $_setString(7, v);
-  }
-
+  set currencyCode($core.String value) => $_setString(7, value);
   @$pb.TagNumber(8)
   $core.bool hasCurrencyCode() => $_has(7);
   @$pb.TagNumber(8)
-  void clearCurrencyCode() => clearField(8);
+  void clearCurrencyCode() => $_clearField(8);
 
   /// Output only. The Google Analytics service level that applies to this
   /// property.
   @$pb.TagNumber(10)
   ServiceLevel get serviceLevel => $_getN(8);
   @$pb.TagNumber(10)
-  set serviceLevel(ServiceLevel v) {
-    setField(10, v);
-  }
-
+  set serviceLevel(ServiceLevel value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasServiceLevel() => $_has(8);
   @$pb.TagNumber(10)
-  void clearServiceLevel() => clearField(10);
+  void clearServiceLevel() => $_clearField(10);
 
   /// Output only. If set, the time at which this property was trashed. If not
   /// set, then this property is not currently in the trash can.
   @$pb.TagNumber(11)
   $0.Timestamp get deleteTime => $_getN(9);
   @$pb.TagNumber(11)
-  set deleteTime($0.Timestamp v) {
-    setField(11, v);
-  }
-
+  set deleteTime($0.Timestamp value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasDeleteTime() => $_has(9);
   @$pb.TagNumber(11)
-  void clearDeleteTime() => clearField(11);
+  void clearDeleteTime() => $_clearField(11);
   @$pb.TagNumber(11)
   $0.Timestamp ensureDeleteTime() => $_ensure(9);
 
@@ -494,14 +398,11 @@ class Property extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $0.Timestamp get expireTime => $_getN(10);
   @$pb.TagNumber(12)
-  set expireTime($0.Timestamp v) {
-    setField(12, v);
-  }
-
+  set expireTime($0.Timestamp value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasExpireTime() => $_has(10);
   @$pb.TagNumber(12)
-  void clearExpireTime() => clearField(12);
+  void clearExpireTime() => $_clearField(12);
   @$pb.TagNumber(12)
   $0.Timestamp ensureExpireTime() => $_ensure(10);
 
@@ -511,14 +412,11 @@ class Property extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $core.String get account => $_getSZ(11);
   @$pb.TagNumber(13)
-  set account($core.String v) {
-    $_setString(11, v);
-  }
-
+  set account($core.String value) => $_setString(11, value);
   @$pb.TagNumber(13)
   $core.bool hasAccount() => $_has(11);
   @$pb.TagNumber(13)
-  void clearAccount() => clearField(13);
+  void clearAccount() => $_clearField(13);
 
   /// Immutable. The property type for this Property resource. When creating a
   /// property, if the type is "PROPERTY_TYPE_UNSPECIFIED", then
@@ -526,14 +424,11 @@ class Property extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   PropertyType get propertyType => $_getN(12);
   @$pb.TagNumber(14)
-  set propertyType(PropertyType v) {
-    setField(14, v);
-  }
-
+  set propertyType(PropertyType value) => $_setField(14, value);
   @$pb.TagNumber(14)
   $core.bool hasPropertyType() => $_has(12);
   @$pb.TagNumber(14)
-  void clearPropertyType() => clearField(14);
+  void clearPropertyType() => $_clearField(14);
 }
 
 /// Data specific to web streams.
@@ -543,25 +438,21 @@ class DataStream_WebStreamData extends $pb.GeneratedMessage {
     $core.String? firebaseAppId,
     $core.String? defaultUri,
   }) {
-    final $result = create();
-    if (measurementId != null) {
-      $result.measurementId = measurementId;
-    }
-    if (firebaseAppId != null) {
-      $result.firebaseAppId = firebaseAppId;
-    }
-    if (defaultUri != null) {
-      $result.defaultUri = defaultUri;
-    }
-    return $result;
+    final result = create();
+    if (measurementId != null) result.measurementId = measurementId;
+    if (firebaseAppId != null) result.firebaseAppId = firebaseAppId;
+    if (defaultUri != null) result.defaultUri = defaultUri;
+    return result;
   }
-  DataStream_WebStreamData._() : super();
-  factory DataStream_WebStreamData.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DataStream_WebStreamData.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DataStream_WebStreamData._();
+
+  factory DataStream_WebStreamData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DataStream_WebStreamData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DataStream.WebStreamData',
@@ -573,73 +464,59 @@ class DataStream_WebStreamData extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'defaultUri')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DataStream_WebStreamData clone() =>
-      DataStream_WebStreamData()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DataStream_WebStreamData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DataStream_WebStreamData copyWith(
           void Function(DataStream_WebStreamData) updates) =>
       super.copyWith((message) => updates(message as DataStream_WebStreamData))
           as DataStream_WebStreamData;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DataStream_WebStreamData create() => DataStream_WebStreamData._();
+  @$core.override
   DataStream_WebStreamData createEmptyInstance() => create();
-  static $pb.PbList<DataStream_WebStreamData> createRepeated() =>
-      $pb.PbList<DataStream_WebStreamData>();
   @$core.pragma('dart2js:noInline')
   static DataStream_WebStreamData getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DataStream_WebStreamData>(create);
   static DataStream_WebStreamData? _defaultInstance;
 
-  ///  Output only. Analytics Measurement ID.
+  /// Output only. Analytics Measurement ID.
   ///
-  ///  Example: "G-1A2BCD345E"
+  /// Example: "G-1A2BCD345E"
   @$pb.TagNumber(1)
   $core.String get measurementId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set measurementId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set measurementId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMeasurementId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMeasurementId() => clearField(1);
+  void clearMeasurementId() => $_clearField(1);
 
   /// Output only. ID of the corresponding web app in Firebase, if any.
   /// This ID can change if the web app is deleted and recreated.
   @$pb.TagNumber(2)
   $core.String get firebaseAppId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set firebaseAppId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set firebaseAppId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasFirebaseAppId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFirebaseAppId() => clearField(2);
+  void clearFirebaseAppId() => $_clearField(2);
 
   /// Domain name of the web app being measured, or empty.
   /// Example: "http://www.google.com", "https://www.google.com"
   @$pb.TagNumber(3)
   $core.String get defaultUri => $_getSZ(2);
   @$pb.TagNumber(3)
-  set defaultUri($core.String v) {
-    $_setString(2, v);
-  }
-
+  set defaultUri($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDefaultUri() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDefaultUri() => clearField(3);
+  void clearDefaultUri() => $_clearField(3);
 }
 
 /// Data specific to Android app streams.
@@ -648,22 +525,20 @@ class DataStream_AndroidAppStreamData extends $pb.GeneratedMessage {
     $core.String? firebaseAppId,
     $core.String? packageName,
   }) {
-    final $result = create();
-    if (firebaseAppId != null) {
-      $result.firebaseAppId = firebaseAppId;
-    }
-    if (packageName != null) {
-      $result.packageName = packageName;
-    }
-    return $result;
+    final result = create();
+    if (firebaseAppId != null) result.firebaseAppId = firebaseAppId;
+    if (packageName != null) result.packageName = packageName;
+    return result;
   }
-  DataStream_AndroidAppStreamData._() : super();
-  factory DataStream_AndroidAppStreamData.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DataStream_AndroidAppStreamData.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DataStream_AndroidAppStreamData._();
+
+  factory DataStream_AndroidAppStreamData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DataStream_AndroidAppStreamData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DataStream.AndroidAppStreamData',
@@ -674,28 +549,23 @@ class DataStream_AndroidAppStreamData extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'packageName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DataStream_AndroidAppStreamData clone() =>
-      DataStream_AndroidAppStreamData()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DataStream_AndroidAppStreamData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DataStream_AndroidAppStreamData copyWith(
           void Function(DataStream_AndroidAppStreamData) updates) =>
       super.copyWith(
               (message) => updates(message as DataStream_AndroidAppStreamData))
           as DataStream_AndroidAppStreamData;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DataStream_AndroidAppStreamData create() =>
       DataStream_AndroidAppStreamData._();
+  @$core.override
   DataStream_AndroidAppStreamData createEmptyInstance() => create();
-  static $pb.PbList<DataStream_AndroidAppStreamData> createRepeated() =>
-      $pb.PbList<DataStream_AndroidAppStreamData>();
   @$core.pragma('dart2js:noInline')
   static DataStream_AndroidAppStreamData getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DataStream_AndroidAppStreamData>(
@@ -707,28 +577,22 @@ class DataStream_AndroidAppStreamData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get firebaseAppId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set firebaseAppId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set firebaseAppId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFirebaseAppId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFirebaseAppId() => clearField(1);
+  void clearFirebaseAppId() => $_clearField(1);
 
   /// Immutable. The package name for the app being measured.
   /// Example: "com.example.myandroidapp"
   @$pb.TagNumber(2)
   $core.String get packageName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set packageName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set packageName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPackageName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPackageName() => clearField(2);
+  void clearPackageName() => $_clearField(2);
 }
 
 /// Data specific to iOS app streams.
@@ -737,22 +601,20 @@ class DataStream_IosAppStreamData extends $pb.GeneratedMessage {
     $core.String? firebaseAppId,
     $core.String? bundleId,
   }) {
-    final $result = create();
-    if (firebaseAppId != null) {
-      $result.firebaseAppId = firebaseAppId;
-    }
-    if (bundleId != null) {
-      $result.bundleId = bundleId;
-    }
-    return $result;
+    final result = create();
+    if (firebaseAppId != null) result.firebaseAppId = firebaseAppId;
+    if (bundleId != null) result.bundleId = bundleId;
+    return result;
   }
-  DataStream_IosAppStreamData._() : super();
-  factory DataStream_IosAppStreamData.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DataStream_IosAppStreamData.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DataStream_IosAppStreamData._();
+
+  factory DataStream_IosAppStreamData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DataStream_IosAppStreamData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DataStream.IosAppStreamData',
@@ -763,28 +625,23 @@ class DataStream_IosAppStreamData extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'bundleId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DataStream_IosAppStreamData clone() =>
-      DataStream_IosAppStreamData()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DataStream_IosAppStreamData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DataStream_IosAppStreamData copyWith(
           void Function(DataStream_IosAppStreamData) updates) =>
       super.copyWith(
               (message) => updates(message as DataStream_IosAppStreamData))
           as DataStream_IosAppStreamData;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DataStream_IosAppStreamData create() =>
       DataStream_IosAppStreamData._();
+  @$core.override
   DataStream_IosAppStreamData createEmptyInstance() => create();
-  static $pb.PbList<DataStream_IosAppStreamData> createRepeated() =>
-      $pb.PbList<DataStream_IosAppStreamData>();
   @$core.pragma('dart2js:noInline')
   static DataStream_IosAppStreamData getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DataStream_IosAppStreamData>(create);
@@ -795,28 +652,22 @@ class DataStream_IosAppStreamData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get firebaseAppId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set firebaseAppId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set firebaseAppId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFirebaseAppId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFirebaseAppId() => clearField(1);
+  void clearFirebaseAppId() => $_clearField(1);
 
   /// Required. Immutable. The Apple App Store Bundle ID for the app
   /// Example: "com.example.myiosapp"
   @$pb.TagNumber(2)
   $core.String get bundleId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set bundleId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set bundleId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasBundleId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearBundleId() => clearField(2);
+  void clearBundleId() => $_clearField(2);
 }
 
 enum DataStream_StreamData {
@@ -838,40 +689,27 @@ class DataStream extends $pb.GeneratedMessage {
     DataStream_AndroidAppStreamData? androidAppStreamData,
     DataStream_IosAppStreamData? iosAppStreamData,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (updateTime != null) {
-      $result.updateTime = updateTime;
-    }
-    if (webStreamData != null) {
-      $result.webStreamData = webStreamData;
-    }
-    if (androidAppStreamData != null) {
-      $result.androidAppStreamData = androidAppStreamData;
-    }
-    if (iosAppStreamData != null) {
-      $result.iosAppStreamData = iosAppStreamData;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (type != null) result.type = type;
+    if (displayName != null) result.displayName = displayName;
+    if (createTime != null) result.createTime = createTime;
+    if (updateTime != null) result.updateTime = updateTime;
+    if (webStreamData != null) result.webStreamData = webStreamData;
+    if (androidAppStreamData != null)
+      result.androidAppStreamData = androidAppStreamData;
+    if (iosAppStreamData != null) result.iosAppStreamData = iosAppStreamData;
+    return result;
   }
-  DataStream._() : super();
-  factory DataStream.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DataStream.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DataStream._();
+
+  factory DataStream.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DataStream.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, DataStream_StreamData>
       _DataStream_StreamDataByTag = {
@@ -887,10 +725,7 @@ class DataStream extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..oo(0, [6, 7, 8])
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<DataStream_DataStreamType>(
-        2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: DataStream_DataStreamType.DATA_STREAM_TYPE_UNSPECIFIED,
-        valueOf: DataStream_DataStreamType.valueOf,
+    ..aE<DataStream_DataStreamType>(2, _omitFieldNames ? '' : 'type',
         enumValues: DataStream_DataStreamType.values)
     ..aOS(3, _omitFieldNames ? '' : 'displayName')
     ..aOM<$0.Timestamp>(4, _omitFieldNames ? '' : 'createTime',
@@ -907,30 +742,33 @@ class DataStream extends $pb.GeneratedMessage {
         subBuilder: DataStream_IosAppStreamData.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DataStream clone() => DataStream()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DataStream clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DataStream copyWith(void Function(DataStream) updates) =>
       super.copyWith((message) => updates(message as DataStream)) as DataStream;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DataStream create() => DataStream._();
+  @$core.override
   DataStream createEmptyInstance() => create();
-  static $pb.PbList<DataStream> createRepeated() => $pb.PbList<DataStream>();
   @$core.pragma('dart2js:noInline')
   static DataStream getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DataStream>(create);
   static DataStream? _defaultInstance;
 
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
   DataStream_StreamData whichStreamData() =>
       _DataStream_StreamDataByTag[$_whichOneof(0)]!;
-  void clearStreamData() => clearField($_whichOneof(0));
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  void clearStreamData() => $_clearField($_whichOneof(0));
 
   /// Output only. Resource name of this Data Stream.
   /// Format: properties/{property_id}/dataStreams/{stream_id}
@@ -938,57 +776,45 @@ class DataStream extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Required. Immutable. The type of this DataStream resource.
   @$pb.TagNumber(2)
   DataStream_DataStreamType get type => $_getN(1);
   @$pb.TagNumber(2)
-  set type(DataStream_DataStreamType v) {
-    setField(2, v);
-  }
-
+  set type(DataStream_DataStreamType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearType() => clearField(2);
+  void clearType() => $_clearField(2);
 
-  ///  Human-readable display name for the Data Stream.
+  /// Human-readable display name for the Data Stream.
   ///
-  ///  Required for web data streams.
+  /// Required for web data streams.
   ///
-  ///  The max allowed display name length is 255 UTF-16 code units.
+  /// The max allowed display name length is 255 UTF-16 code units.
   @$pb.TagNumber(3)
   $core.String get displayName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set displayName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set displayName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDisplayName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDisplayName() => clearField(3);
+  void clearDisplayName() => $_clearField(3);
 
   /// Output only. Time when this stream was originally created.
   @$pb.TagNumber(4)
   $0.Timestamp get createTime => $_getN(3);
   @$pb.TagNumber(4)
-  set createTime($0.Timestamp v) {
-    setField(4, v);
-  }
-
+  set createTime($0.Timestamp value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCreateTime() => clearField(4);
+  void clearCreateTime() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.Timestamp ensureCreateTime() => $_ensure(3);
 
@@ -996,14 +822,11 @@ class DataStream extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $0.Timestamp get updateTime => $_getN(4);
   @$pb.TagNumber(5)
-  set updateTime($0.Timestamp v) {
-    setField(5, v);
-  }
-
+  set updateTime($0.Timestamp value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasUpdateTime() => $_has(4);
   @$pb.TagNumber(5)
-  void clearUpdateTime() => clearField(5);
+  void clearUpdateTime() => $_clearField(5);
   @$pb.TagNumber(5)
   $0.Timestamp ensureUpdateTime() => $_ensure(4);
 
@@ -1012,14 +835,11 @@ class DataStream extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   DataStream_WebStreamData get webStreamData => $_getN(5);
   @$pb.TagNumber(6)
-  set webStreamData(DataStream_WebStreamData v) {
-    setField(6, v);
-  }
-
+  set webStreamData(DataStream_WebStreamData value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasWebStreamData() => $_has(5);
   @$pb.TagNumber(6)
-  void clearWebStreamData() => clearField(6);
+  void clearWebStreamData() => $_clearField(6);
   @$pb.TagNumber(6)
   DataStream_WebStreamData ensureWebStreamData() => $_ensure(5);
 
@@ -1028,14 +848,12 @@ class DataStream extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   DataStream_AndroidAppStreamData get androidAppStreamData => $_getN(6);
   @$pb.TagNumber(7)
-  set androidAppStreamData(DataStream_AndroidAppStreamData v) {
-    setField(7, v);
-  }
-
+  set androidAppStreamData(DataStream_AndroidAppStreamData value) =>
+      $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasAndroidAppStreamData() => $_has(6);
   @$pb.TagNumber(7)
-  void clearAndroidAppStreamData() => clearField(7);
+  void clearAndroidAppStreamData() => $_clearField(7);
   @$pb.TagNumber(7)
   DataStream_AndroidAppStreamData ensureAndroidAppStreamData() => $_ensure(6);
 
@@ -1044,14 +862,12 @@ class DataStream extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   DataStream_IosAppStreamData get iosAppStreamData => $_getN(7);
   @$pb.TagNumber(8)
-  set iosAppStreamData(DataStream_IosAppStreamData v) {
-    setField(8, v);
-  }
-
+  set iosAppStreamData(DataStream_IosAppStreamData value) =>
+      $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasIosAppStreamData() => $_has(7);
   @$pb.TagNumber(8)
-  void clearIosAppStreamData() => clearField(8);
+  void clearIosAppStreamData() => $_clearField(8);
   @$pb.TagNumber(8)
   DataStream_IosAppStreamData ensureIosAppStreamData() => $_ensure(7);
 }
@@ -1063,25 +879,21 @@ class FirebaseLink extends $pb.GeneratedMessage {
     $core.String? project,
     $0.Timestamp? createTime,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (project != null) {
-      $result.project = project;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (project != null) result.project = project;
+    if (createTime != null) result.createTime = createTime;
+    return result;
   }
-  FirebaseLink._() : super();
-  factory FirebaseLink.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FirebaseLink.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FirebaseLink._();
+
+  factory FirebaseLink.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FirebaseLink.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FirebaseLink',
@@ -1094,24 +906,20 @@ class FirebaseLink extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FirebaseLink clone() => FirebaseLink()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FirebaseLink clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FirebaseLink copyWith(void Function(FirebaseLink) updates) =>
       super.copyWith((message) => updates(message as FirebaseLink))
           as FirebaseLink;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FirebaseLink create() => FirebaseLink._();
+  @$core.override
   FirebaseLink createEmptyInstance() => create();
-  static $pb.PbList<FirebaseLink> createRepeated() =>
-      $pb.PbList<FirebaseLink>();
   @$core.pragma('dart2js:noInline')
   static FirebaseLink getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FirebaseLink>(create);
@@ -1121,46 +929,37 @@ class FirebaseLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  ///  Immutable. Firebase project resource name. When creating a FirebaseLink,
-  ///  you may provide this resource name using either a project number or project
-  ///  ID. Once this resource has been created, returned FirebaseLinks will always
-  ///  have a project_name that contains a project number.
+  /// Immutable. Firebase project resource name. When creating a FirebaseLink,
+  /// you may provide this resource name using either a project number or project
+  /// ID. Once this resource has been created, returned FirebaseLinks will always
+  /// have a project_name that contains a project number.
   ///
-  ///  Format: 'projects/{project number}'
-  ///  Example: 'projects/1234'
+  /// Format: 'projects/{project number}'
+  /// Example: 'projects/1234'
   @$pb.TagNumber(2)
   $core.String get project => $_getSZ(1);
   @$pb.TagNumber(2)
-  set project($core.String v) {
-    $_setString(1, v);
-  }
-
+  set project($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasProject() => $_has(1);
   @$pb.TagNumber(2)
-  void clearProject() => clearField(2);
+  void clearProject() => $_clearField(2);
 
   /// Output only. Time when this FirebaseLink was originally created.
   @$pb.TagNumber(3)
   $0.Timestamp get createTime => $_getN(2);
   @$pb.TagNumber(3)
-  set createTime($0.Timestamp v) {
-    setField(3, v);
-  }
-
+  set createTime($0.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCreateTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCreateTime() => clearField(3);
+  void clearCreateTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Timestamp ensureCreateTime() => $_ensure(2);
 }
@@ -1172,22 +971,20 @@ class GlobalSiteTag extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? snippet,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (snippet != null) {
-      $result.snippet = snippet;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (snippet != null) result.snippet = snippet;
+    return result;
   }
-  GlobalSiteTag._() : super();
-  factory GlobalSiteTag.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GlobalSiteTag.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GlobalSiteTag._();
+
+  factory GlobalSiteTag.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GlobalSiteTag.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GlobalSiteTag',
@@ -1198,24 +995,20 @@ class GlobalSiteTag extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'snippet')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GlobalSiteTag clone() => GlobalSiteTag()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GlobalSiteTag clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GlobalSiteTag copyWith(void Function(GlobalSiteTag) updates) =>
       super.copyWith((message) => updates(message as GlobalSiteTag))
           as GlobalSiteTag;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GlobalSiteTag create() => GlobalSiteTag._();
+  @$core.override
   GlobalSiteTag createEmptyInstance() => create();
-  static $pb.PbList<GlobalSiteTag> createRepeated() =>
-      $pb.PbList<GlobalSiteTag>();
   @$core.pragma('dart2js:noInline')
   static GlobalSiteTag getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GlobalSiteTag>(create);
@@ -1227,28 +1020,22 @@ class GlobalSiteTag extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Immutable. JavaScript code snippet to be pasted as the first item into the
   /// head tag of every webpage to measure.
   @$pb.TagNumber(2)
   $core.String get snippet => $_getSZ(1);
   @$pb.TagNumber(2)
-  set snippet($core.String v) {
-    $_setString(1, v);
-  }
-
+  set snippet($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSnippet() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSnippet() => clearField(2);
+  void clearSnippet() => $_clearField(2);
 }
 
 /// A link between a Google Analytics property and a Google Ads account.
@@ -1262,37 +1049,27 @@ class GoogleAdsLink extends $pb.GeneratedMessage {
     $0.Timestamp? updateTime,
     $core.String? creatorEmailAddress,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (customerId != null) {
-      $result.customerId = customerId;
-    }
-    if (canManageClients != null) {
-      $result.canManageClients = canManageClients;
-    }
-    if (adsPersonalizationEnabled != null) {
-      $result.adsPersonalizationEnabled = adsPersonalizationEnabled;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (updateTime != null) {
-      $result.updateTime = updateTime;
-    }
-    if (creatorEmailAddress != null) {
-      $result.creatorEmailAddress = creatorEmailAddress;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (customerId != null) result.customerId = customerId;
+    if (canManageClients != null) result.canManageClients = canManageClients;
+    if (adsPersonalizationEnabled != null)
+      result.adsPersonalizationEnabled = adsPersonalizationEnabled;
+    if (createTime != null) result.createTime = createTime;
+    if (updateTime != null) result.updateTime = updateTime;
+    if (creatorEmailAddress != null)
+      result.creatorEmailAddress = creatorEmailAddress;
+    return result;
   }
-  GoogleAdsLink._() : super();
-  factory GoogleAdsLink.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GoogleAdsLink.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GoogleAdsLink._();
+
+  factory GoogleAdsLink.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GoogleAdsLink.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GoogleAdsLink',
@@ -1311,70 +1088,57 @@ class GoogleAdsLink extends $pb.GeneratedMessage {
     ..aOS(9, _omitFieldNames ? '' : 'creatorEmailAddress')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GoogleAdsLink clone() => GoogleAdsLink()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GoogleAdsLink clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GoogleAdsLink copyWith(void Function(GoogleAdsLink) updates) =>
       super.copyWith((message) => updates(message as GoogleAdsLink))
           as GoogleAdsLink;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GoogleAdsLink create() => GoogleAdsLink._();
+  @$core.override
   GoogleAdsLink createEmptyInstance() => create();
-  static $pb.PbList<GoogleAdsLink> createRepeated() =>
-      $pb.PbList<GoogleAdsLink>();
   @$core.pragma('dart2js:noInline')
   static GoogleAdsLink getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GoogleAdsLink>(create);
   static GoogleAdsLink? _defaultInstance;
 
-  ///  Output only. Format:
-  ///  properties/{propertyId}/googleAdsLinks/{googleAdsLinkId}
+  /// Output only. Format:
+  /// properties/{propertyId}/googleAdsLinks/{googleAdsLinkId}
   ///
-  ///  Note: googleAdsLinkId is not the Google Ads customer ID.
+  /// Note: googleAdsLinkId is not the Google Ads customer ID.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Immutable. Google Ads customer ID.
   @$pb.TagNumber(3)
   $core.String get customerId => $_getSZ(1);
   @$pb.TagNumber(3)
-  set customerId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set customerId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(3)
   $core.bool hasCustomerId() => $_has(1);
   @$pb.TagNumber(3)
-  void clearCustomerId() => clearField(3);
+  void clearCustomerId() => $_clearField(3);
 
   /// Output only. If true, this link is for a Google Ads manager account.
   @$pb.TagNumber(4)
   $core.bool get canManageClients => $_getBF(2);
   @$pb.TagNumber(4)
-  set canManageClients($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set canManageClients($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(4)
   $core.bool hasCanManageClients() => $_has(2);
   @$pb.TagNumber(4)
-  void clearCanManageClients() => clearField(4);
+  void clearCanManageClients() => $_clearField(4);
 
   /// Enable personalized advertising features with this integration.
   /// Automatically publish my Google Analytics audience lists and Google
@@ -1383,14 +1147,11 @@ class GoogleAdsLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $1.BoolValue get adsPersonalizationEnabled => $_getN(3);
   @$pb.TagNumber(5)
-  set adsPersonalizationEnabled($1.BoolValue v) {
-    setField(5, v);
-  }
-
+  set adsPersonalizationEnabled($1.BoolValue value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasAdsPersonalizationEnabled() => $_has(3);
   @$pb.TagNumber(5)
-  void clearAdsPersonalizationEnabled() => clearField(5);
+  void clearAdsPersonalizationEnabled() => $_clearField(5);
   @$pb.TagNumber(5)
   $1.BoolValue ensureAdsPersonalizationEnabled() => $_ensure(3);
 
@@ -1398,14 +1159,11 @@ class GoogleAdsLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $0.Timestamp get createTime => $_getN(4);
   @$pb.TagNumber(7)
-  set createTime($0.Timestamp v) {
-    setField(7, v);
-  }
-
+  set createTime($0.Timestamp value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasCreateTime() => $_has(4);
   @$pb.TagNumber(7)
-  void clearCreateTime() => clearField(7);
+  void clearCreateTime() => $_clearField(7);
   @$pb.TagNumber(7)
   $0.Timestamp ensureCreateTime() => $_ensure(4);
 
@@ -1413,14 +1171,11 @@ class GoogleAdsLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $0.Timestamp get updateTime => $_getN(5);
   @$pb.TagNumber(8)
-  set updateTime($0.Timestamp v) {
-    setField(8, v);
-  }
-
+  set updateTime($0.Timestamp value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasUpdateTime() => $_has(5);
   @$pb.TagNumber(8)
-  void clearUpdateTime() => clearField(8);
+  void clearUpdateTime() => $_clearField(8);
   @$pb.TagNumber(8)
   $0.Timestamp ensureUpdateTime() => $_ensure(5);
 
@@ -1429,14 +1184,11 @@ class GoogleAdsLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.String get creatorEmailAddress => $_getSZ(6);
   @$pb.TagNumber(9)
-  set creatorEmailAddress($core.String v) {
-    $_setString(6, v);
-  }
-
+  set creatorEmailAddress($core.String value) => $_setString(6, value);
   @$pb.TagNumber(9)
   $core.bool hasCreatorEmailAddress() => $_has(6);
   @$pb.TagNumber(9)
-  void clearCreatorEmailAddress() => clearField(9);
+  void clearCreatorEmailAddress() => $_clearField(9);
 }
 
 /// A resource message representing data sharing settings of a Google Analytics
@@ -1446,41 +1198,37 @@ class DataSharingSettings extends $pb.GeneratedMessage {
     $core.String? name,
     $core.bool? sharingWithGoogleSupportEnabled,
     $core.bool? sharingWithGoogleAssignedSalesEnabled,
+    @$core.Deprecated('This field is deprecated.')
     $core.bool? sharingWithGoogleAnySalesEnabled,
     $core.bool? sharingWithGoogleProductsEnabled,
     $core.bool? sharingWithOthersEnabled,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (sharingWithGoogleSupportEnabled != null) {
-      $result.sharingWithGoogleSupportEnabled = sharingWithGoogleSupportEnabled;
-    }
-    if (sharingWithGoogleAssignedSalesEnabled != null) {
-      $result.sharingWithGoogleAssignedSalesEnabled =
+    final result = create();
+    if (name != null) result.name = name;
+    if (sharingWithGoogleSupportEnabled != null)
+      result.sharingWithGoogleSupportEnabled = sharingWithGoogleSupportEnabled;
+    if (sharingWithGoogleAssignedSalesEnabled != null)
+      result.sharingWithGoogleAssignedSalesEnabled =
           sharingWithGoogleAssignedSalesEnabled;
-    }
-    if (sharingWithGoogleAnySalesEnabled != null) {
-      $result.sharingWithGoogleAnySalesEnabled =
+    if (sharingWithGoogleAnySalesEnabled != null)
+      result.sharingWithGoogleAnySalesEnabled =
           sharingWithGoogleAnySalesEnabled;
-    }
-    if (sharingWithGoogleProductsEnabled != null) {
-      $result.sharingWithGoogleProductsEnabled =
+    if (sharingWithGoogleProductsEnabled != null)
+      result.sharingWithGoogleProductsEnabled =
           sharingWithGoogleProductsEnabled;
-    }
-    if (sharingWithOthersEnabled != null) {
-      $result.sharingWithOthersEnabled = sharingWithOthersEnabled;
-    }
-    return $result;
+    if (sharingWithOthersEnabled != null)
+      result.sharingWithOthersEnabled = sharingWithOthersEnabled;
+    return result;
   }
-  DataSharingSettings._() : super();
-  factory DataSharingSettings.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DataSharingSettings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DataSharingSettings._();
+
+  factory DataSharingSettings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DataSharingSettings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DataSharingSettings',
@@ -1495,24 +1243,20 @@ class DataSharingSettings extends $pb.GeneratedMessage {
     ..aOB(6, _omitFieldNames ? '' : 'sharingWithOthersEnabled')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DataSharingSettings clone() => DataSharingSettings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DataSharingSettings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DataSharingSettings copyWith(void Function(DataSharingSettings) updates) =>
       super.copyWith((message) => updates(message as DataSharingSettings))
           as DataSharingSettings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DataSharingSettings create() => DataSharingSettings._();
+  @$core.override
   DataSharingSettings createEmptyInstance() => create();
-  static $pb.PbList<DataSharingSettings> createRepeated() =>
-      $pb.PbList<DataSharingSettings>();
   @$core.pragma('dart2js:noInline')
   static DataSharingSettings getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DataSharingSettings>(create);
@@ -1524,83 +1268,89 @@ class DataSharingSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  /// Allows Google support to access the data in order to help troubleshoot
-  /// issues.
+  /// Allows Google technical support representatives access to your Google
+  /// Analytics data and account when necessary to provide service and find
+  /// solutions to technical issues.
+  ///
+  /// This field maps to the "Technical support" field in the Google Analytics
+  /// Admin UI.
   @$pb.TagNumber(2)
   $core.bool get sharingWithGoogleSupportEnabled => $_getBF(1);
   @$pb.TagNumber(2)
-  set sharingWithGoogleSupportEnabled($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set sharingWithGoogleSupportEnabled($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSharingWithGoogleSupportEnabled() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSharingWithGoogleSupportEnabled() => clearField(2);
+  void clearSharingWithGoogleSupportEnabled() => $_clearField(2);
 
-  /// Allows Google sales teams that are assigned to the customer to access the
-  /// data in order to suggest configuration changes to improve results.
-  /// Sales team restrictions still apply when enabled.
+  /// Allows Google access to your Google Analytics account data, including
+  /// account usage and configuration data, product spending, and users
+  /// associated with your Google Analytics account, so that Google can help you
+  /// make the most of Google products, providing you with insights, offers,
+  /// recommendations, and optimization tips across Google Analytics and other
+  /// Google products for business.
+  ///
+  /// This field maps to the "Recommendations for your business" field in the
+  /// Google Analytics Admin UI.
   @$pb.TagNumber(3)
   $core.bool get sharingWithGoogleAssignedSalesEnabled => $_getBF(2);
   @$pb.TagNumber(3)
-  set sharingWithGoogleAssignedSalesEnabled($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set sharingWithGoogleAssignedSalesEnabled($core.bool value) =>
+      $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSharingWithGoogleAssignedSalesEnabled() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSharingWithGoogleAssignedSalesEnabled() => clearField(3);
+  void clearSharingWithGoogleAssignedSalesEnabled() => $_clearField(3);
 
-  /// Allows any of Google sales to access the data in order to suggest
-  /// configuration changes to improve results.
+  /// Deprecated. This field is no longer used and always returns false.
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   $core.bool get sharingWithGoogleAnySalesEnabled => $_getBF(3);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
-  set sharingWithGoogleAnySalesEnabled($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set sharingWithGoogleAnySalesEnabled($core.bool value) => $_setBool(3, value);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   $core.bool hasSharingWithGoogleAnySalesEnabled() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
-  void clearSharingWithGoogleAnySalesEnabled() => clearField(4);
+  void clearSharingWithGoogleAnySalesEnabled() => $_clearField(4);
 
   /// Allows Google to use the data to improve other Google products or services.
+  ///
+  /// This fields maps to the "Google products & services" field in the Google
+  /// Analytics Admin UI.
   @$pb.TagNumber(5)
   $core.bool get sharingWithGoogleProductsEnabled => $_getBF(4);
   @$pb.TagNumber(5)
-  set sharingWithGoogleProductsEnabled($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set sharingWithGoogleProductsEnabled($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasSharingWithGoogleProductsEnabled() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSharingWithGoogleProductsEnabled() => clearField(5);
+  void clearSharingWithGoogleProductsEnabled() => $_clearField(5);
 
-  /// Allows Google to share the data anonymously in aggregate form with others.
+  /// Enable features like predictions, modeled data, and benchmarking that can
+  /// provide you with richer business insights when you contribute aggregated
+  /// measurement data. The data you share (including information about the
+  /// property from which it is shared) is aggregated and de-identified before
+  /// being used to generate business insights.
+  ///
+  /// This field maps to the "Modeling contributions & business insights" field
+  /// in the Google Analytics Admin UI.
   @$pb.TagNumber(6)
   $core.bool get sharingWithOthersEnabled => $_getBF(5);
   @$pb.TagNumber(6)
-  set sharingWithOthersEnabled($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set sharingWithOthersEnabled($core.bool value) => $_setBool(5, value);
   @$pb.TagNumber(6)
   $core.bool hasSharingWithOthersEnabled() => $_has(5);
   @$pb.TagNumber(6)
-  void clearSharingWithOthersEnabled() => clearField(6);
+  void clearSharingWithOthersEnabled() => $_clearField(6);
 }
 
 /// A virtual resource representing an overview of an account and
@@ -1612,28 +1362,23 @@ class AccountSummary extends $pb.GeneratedMessage {
     $core.String? displayName,
     $core.Iterable<PropertySummary>? propertySummaries,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (account != null) {
-      $result.account = account;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (propertySummaries != null) {
-      $result.propertySummaries.addAll(propertySummaries);
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (account != null) result.account = account;
+    if (displayName != null) result.displayName = displayName;
+    if (propertySummaries != null)
+      result.propertySummaries.addAll(propertySummaries);
+    return result;
   }
-  AccountSummary._() : super();
-  factory AccountSummary.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccountSummary.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccountSummary._();
+
+  factory AccountSummary.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccountSummary.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccountSummary',
@@ -1643,29 +1388,24 @@ class AccountSummary extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'account')
     ..aOS(3, _omitFieldNames ? '' : 'displayName')
-    ..pc<PropertySummary>(
-        4, _omitFieldNames ? '' : 'propertySummaries', $pb.PbFieldType.PM,
+    ..pPM<PropertySummary>(4, _omitFieldNames ? '' : 'propertySummaries',
         subBuilder: PropertySummary.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccountSummary clone() => AccountSummary()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccountSummary clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccountSummary copyWith(void Function(AccountSummary) updates) =>
       super.copyWith((message) => updates(message as AccountSummary))
           as AccountSummary;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccountSummary create() => AccountSummary._();
+  @$core.override
   AccountSummary createEmptyInstance() => create();
-  static $pb.PbList<AccountSummary> createRepeated() =>
-      $pb.PbList<AccountSummary>();
   @$core.pragma('dart2js:noInline')
   static AccountSummary getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccountSummary>(create);
@@ -1677,14 +1417,11 @@ class AccountSummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Resource name of account referred to by this account summary
   /// Format: accounts/{account_id}
@@ -1692,31 +1429,25 @@ class AccountSummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get account => $_getSZ(1);
   @$pb.TagNumber(2)
-  set account($core.String v) {
-    $_setString(1, v);
-  }
-
+  set account($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAccount() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAccount() => clearField(2);
+  void clearAccount() => $_clearField(2);
 
   /// Display name for the account referred to in this account summary.
   @$pb.TagNumber(3)
   $core.String get displayName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set displayName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set displayName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDisplayName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDisplayName() => clearField(3);
+  void clearDisplayName() => $_clearField(3);
 
   /// List of summaries for child accounts of this account.
   @$pb.TagNumber(4)
-  $core.List<PropertySummary> get propertySummaries => $_getList(3);
+  $pb.PbList<PropertySummary> get propertySummaries => $_getList(3);
 }
 
 /// A virtual resource representing metadata for a Google Analytics property.
@@ -1727,28 +1458,22 @@ class PropertySummary extends $pb.GeneratedMessage {
     PropertyType? propertyType,
     $core.String? parent,
   }) {
-    final $result = create();
-    if (property != null) {
-      $result.property = property;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (propertyType != null) {
-      $result.propertyType = propertyType;
-    }
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    return $result;
+    final result = create();
+    if (property != null) result.property = property;
+    if (displayName != null) result.displayName = displayName;
+    if (propertyType != null) result.propertyType = propertyType;
+    if (parent != null) result.parent = parent;
+    return result;
   }
-  PropertySummary._() : super();
-  factory PropertySummary.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PropertySummary.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PropertySummary._();
+
+  factory PropertySummary.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PropertySummary.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PropertySummary',
@@ -1757,32 +1482,25 @@ class PropertySummary extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'property')
     ..aOS(2, _omitFieldNames ? '' : 'displayName')
-    ..e<PropertyType>(
-        3, _omitFieldNames ? '' : 'propertyType', $pb.PbFieldType.OE,
-        defaultOrMaker: PropertyType.PROPERTY_TYPE_UNSPECIFIED,
-        valueOf: PropertyType.valueOf,
+    ..aE<PropertyType>(3, _omitFieldNames ? '' : 'propertyType',
         enumValues: PropertyType.values)
     ..aOS(4, _omitFieldNames ? '' : 'parent')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PropertySummary clone() => PropertySummary()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PropertySummary clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PropertySummary copyWith(void Function(PropertySummary) updates) =>
       super.copyWith((message) => updates(message as PropertySummary))
           as PropertySummary;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PropertySummary create() => PropertySummary._();
+  @$core.override
   PropertySummary createEmptyInstance() => create();
-  static $pb.PbList<PropertySummary> createRepeated() =>
-      $pb.PbList<PropertySummary>();
   @$core.pragma('dart2js:noInline')
   static PropertySummary getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PropertySummary>(create);
@@ -1794,57 +1512,45 @@ class PropertySummary extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get property => $_getSZ(0);
   @$pb.TagNumber(1)
-  set property($core.String v) {
-    $_setString(0, v);
-  }
-
+  set property($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasProperty() => $_has(0);
   @$pb.TagNumber(1)
-  void clearProperty() => clearField(1);
+  void clearProperty() => $_clearField(1);
 
   /// Display name for the property referred to in this property summary.
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set displayName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisplayName() => clearField(2);
+  void clearDisplayName() => $_clearField(2);
 
   /// The property's property type.
   @$pb.TagNumber(3)
   PropertyType get propertyType => $_getN(2);
   @$pb.TagNumber(3)
-  set propertyType(PropertyType v) {
-    setField(3, v);
-  }
-
+  set propertyType(PropertyType value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasPropertyType() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPropertyType() => clearField(3);
+  void clearPropertyType() => $_clearField(3);
 
-  ///  Resource name of this property's logical parent.
+  /// Resource name of this property's logical parent.
   ///
-  ///  Note: The Property-Moving UI can be used to change the parent.
-  ///  Format: accounts/{account}, properties/{property}
-  ///  Example: "accounts/100", "properties/200"
+  /// Note: The Property-Moving UI can be used to change the parent.
+  /// Format: accounts/{account}, properties/{property}
+  /// Example: "accounts/100", "properties/200"
   @$pb.TagNumber(4)
   $core.String get parent => $_getSZ(3);
   @$pb.TagNumber(4)
-  set parent($core.String v) {
-    $_setString(3, v);
-  }
-
+  set parent($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasParent() => $_has(3);
   @$pb.TagNumber(4)
-  void clearParent() => clearField(4);
+  void clearParent() => $_clearField(4);
 }
 
 /// A secret value used for sending hits to Measurement Protocol.
@@ -1854,25 +1560,21 @@ class MeasurementProtocolSecret extends $pb.GeneratedMessage {
     $core.String? displayName,
     $core.String? secretValue,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (secretValue != null) {
-      $result.secretValue = secretValue;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (displayName != null) result.displayName = displayName;
+    if (secretValue != null) result.secretValue = secretValue;
+    return result;
   }
-  MeasurementProtocolSecret._() : super();
-  factory MeasurementProtocolSecret.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory MeasurementProtocolSecret.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  MeasurementProtocolSecret._();
+
+  factory MeasurementProtocolSecret.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory MeasurementProtocolSecret.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'MeasurementProtocolSecret',
@@ -1884,26 +1586,21 @@ class MeasurementProtocolSecret extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'secretValue')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  MeasurementProtocolSecret clone() =>
-      MeasurementProtocolSecret()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MeasurementProtocolSecret clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   MeasurementProtocolSecret copyWith(
           void Function(MeasurementProtocolSecret) updates) =>
       super.copyWith((message) => updates(message as MeasurementProtocolSecret))
           as MeasurementProtocolSecret;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static MeasurementProtocolSecret create() => MeasurementProtocolSecret._();
+  @$core.override
   MeasurementProtocolSecret createEmptyInstance() => create();
-  static $pb.PbList<MeasurementProtocolSecret> createRepeated() =>
-      $pb.PbList<MeasurementProtocolSecret>();
   @$core.pragma('dart2js:noInline')
   static MeasurementProtocolSecret getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<MeasurementProtocolSecret>(create);
@@ -1915,27 +1612,21 @@ class MeasurementProtocolSecret extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Required. Human-readable display name for this secret.
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set displayName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisplayName() => clearField(2);
+  void clearDisplayName() => $_clearField(2);
 
   /// Output only. The measurement protocol secret value. Pass this value to the
   /// api_secret field of the Measurement Protocol API when sending hits to this
@@ -1943,14 +1634,11 @@ class MeasurementProtocolSecret extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get secretValue => $_getSZ(2);
   @$pb.TagNumber(3)
-  set secretValue($core.String v) {
-    $_setString(2, v);
-  }
-
+  set secretValue($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSecretValue() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSecretValue() => clearField(3);
+  void clearSecretValue() => $_clearField(3);
 }
 
 /// SKAdNetwork conversion value schema of an iOS stream.
@@ -1962,31 +1650,26 @@ class SKAdNetworkConversionValueSchema extends $pb.GeneratedMessage {
     PostbackWindow? postbackWindowThree,
     $core.bool? applyConversionValues,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (postbackWindowOne != null) {
-      $result.postbackWindowOne = postbackWindowOne;
-    }
-    if (postbackWindowTwo != null) {
-      $result.postbackWindowTwo = postbackWindowTwo;
-    }
-    if (postbackWindowThree != null) {
-      $result.postbackWindowThree = postbackWindowThree;
-    }
-    if (applyConversionValues != null) {
-      $result.applyConversionValues = applyConversionValues;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (postbackWindowOne != null) result.postbackWindowOne = postbackWindowOne;
+    if (postbackWindowTwo != null) result.postbackWindowTwo = postbackWindowTwo;
+    if (postbackWindowThree != null)
+      result.postbackWindowThree = postbackWindowThree;
+    if (applyConversionValues != null)
+      result.applyConversionValues = applyConversionValues;
+    return result;
   }
-  SKAdNetworkConversionValueSchema._() : super();
-  factory SKAdNetworkConversionValueSchema.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SKAdNetworkConversionValueSchema.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SKAdNetworkConversionValueSchema._();
+
+  factory SKAdNetworkConversionValueSchema.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SKAdNetworkConversionValueSchema.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SKAdNetworkConversionValueSchema',
@@ -2003,28 +1686,23 @@ class SKAdNetworkConversionValueSchema extends $pb.GeneratedMessage {
     ..aOB(5, _omitFieldNames ? '' : 'applyConversionValues')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SKAdNetworkConversionValueSchema clone() =>
-      SKAdNetworkConversionValueSchema()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SKAdNetworkConversionValueSchema clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SKAdNetworkConversionValueSchema copyWith(
           void Function(SKAdNetworkConversionValueSchema) updates) =>
       super.copyWith(
               (message) => updates(message as SKAdNetworkConversionValueSchema))
           as SKAdNetworkConversionValueSchema;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SKAdNetworkConversionValueSchema create() =>
       SKAdNetworkConversionValueSchema._();
+  @$core.override
   SKAdNetworkConversionValueSchema createEmptyInstance() => create();
-  static $pb.PbList<SKAdNetworkConversionValueSchema> createRepeated() =>
-      $pb.PbList<SKAdNetworkConversionValueSchema>();
   @$core.pragma('dart2js:noInline')
   static SKAdNetworkConversionValueSchema getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SKAdNetworkConversionValueSchema>(
@@ -2038,74 +1716,62 @@ class SKAdNetworkConversionValueSchema extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  ///  Required. The conversion value settings for the first postback window.
-  ///  These differ from values for postback window two and three in that they
-  ///  contain a "Fine" grained conversion value (a numeric value).
+  /// Required. The conversion value settings for the first postback window.
+  /// These differ from values for postback window two and three in that they
+  /// contain a "Fine" grained conversion value (a numeric value).
   ///
-  ///  Conversion values for this postback window must be set.  The other windows
-  ///  are optional and may inherit this window's settings if unset or disabled.
+  /// Conversion values for this postback window must be set.  The other windows
+  /// are optional and may inherit this window's settings if unset or disabled.
   @$pb.TagNumber(2)
   PostbackWindow get postbackWindowOne => $_getN(1);
   @$pb.TagNumber(2)
-  set postbackWindowOne(PostbackWindow v) {
-    setField(2, v);
-  }
-
+  set postbackWindowOne(PostbackWindow value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasPostbackWindowOne() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPostbackWindowOne() => clearField(2);
+  void clearPostbackWindowOne() => $_clearField(2);
   @$pb.TagNumber(2)
   PostbackWindow ensurePostbackWindowOne() => $_ensure(1);
 
-  ///  The conversion value settings for the second postback window.
+  /// The conversion value settings for the second postback window.
   ///
-  ///  This field should only be configured if there is a need to define different
-  ///  conversion values for this postback window.
+  /// This field should only be configured if there is a need to define different
+  /// conversion values for this postback window.
   ///
-  ///  If enable_postback_window_settings is set to false for this postback
-  ///  window, the values from postback_window_one will be used.
+  /// If enable_postback_window_settings is set to false for this postback
+  /// window, the values from postback_window_one will be used.
   @$pb.TagNumber(3)
   PostbackWindow get postbackWindowTwo => $_getN(2);
   @$pb.TagNumber(3)
-  set postbackWindowTwo(PostbackWindow v) {
-    setField(3, v);
-  }
-
+  set postbackWindowTwo(PostbackWindow value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasPostbackWindowTwo() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPostbackWindowTwo() => clearField(3);
+  void clearPostbackWindowTwo() => $_clearField(3);
   @$pb.TagNumber(3)
   PostbackWindow ensurePostbackWindowTwo() => $_ensure(2);
 
-  ///  The conversion value settings for the third postback window.
+  /// The conversion value settings for the third postback window.
   ///
-  ///  This field should only be set if the user chose to define different
-  ///  conversion values for this postback window. It is allowed to configure
-  ///  window 3 without setting window 2. In case window 1 & 2 settings are set
-  ///  and enable_postback_window_settings for this postback window is set to
-  ///  false, the schema will inherit settings from postback_window_two.
+  /// This field should only be set if the user chose to define different
+  /// conversion values for this postback window. It is allowed to configure
+  /// window 3 without setting window 2. In case window 1 & 2 settings are set
+  /// and enable_postback_window_settings for this postback window is set to
+  /// false, the schema will inherit settings from postback_window_two.
   @$pb.TagNumber(4)
   PostbackWindow get postbackWindowThree => $_getN(3);
   @$pb.TagNumber(4)
-  set postbackWindowThree(PostbackWindow v) {
-    setField(4, v);
-  }
-
+  set postbackWindowThree(PostbackWindow value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasPostbackWindowThree() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPostbackWindowThree() => clearField(4);
+  void clearPostbackWindowThree() => $_clearField(4);
   @$pb.TagNumber(4)
   PostbackWindow ensurePostbackWindowThree() => $_ensure(3);
 
@@ -2116,14 +1782,11 @@ class SKAdNetworkConversionValueSchema extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool get applyConversionValues => $_getBF(4);
   @$pb.TagNumber(5)
-  set applyConversionValues($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set applyConversionValues($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasApplyConversionValues() => $_has(4);
   @$pb.TagNumber(5)
-  void clearApplyConversionValues() => clearField(5);
+  void clearApplyConversionValues() => $_clearField(5);
 }
 
 /// Settings for a SKAdNetwork conversion postback window.
@@ -2132,52 +1795,47 @@ class PostbackWindow extends $pb.GeneratedMessage {
     $core.Iterable<ConversionValues>? conversionValues,
     $core.bool? postbackWindowSettingsEnabled,
   }) {
-    final $result = create();
-    if (conversionValues != null) {
-      $result.conversionValues.addAll(conversionValues);
-    }
-    if (postbackWindowSettingsEnabled != null) {
-      $result.postbackWindowSettingsEnabled = postbackWindowSettingsEnabled;
-    }
-    return $result;
+    final result = create();
+    if (conversionValues != null)
+      result.conversionValues.addAll(conversionValues);
+    if (postbackWindowSettingsEnabled != null)
+      result.postbackWindowSettingsEnabled = postbackWindowSettingsEnabled;
+    return result;
   }
-  PostbackWindow._() : super();
-  factory PostbackWindow.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PostbackWindow.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PostbackWindow._();
+
+  factory PostbackWindow.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PostbackWindow.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PostbackWindow',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
-    ..pc<ConversionValues>(
-        1, _omitFieldNames ? '' : 'conversionValues', $pb.PbFieldType.PM,
+    ..pPM<ConversionValues>(1, _omitFieldNames ? '' : 'conversionValues',
         subBuilder: ConversionValues.create)
     ..aOB(2, _omitFieldNames ? '' : 'postbackWindowSettingsEnabled')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PostbackWindow clone() => PostbackWindow()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PostbackWindow clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PostbackWindow copyWith(void Function(PostbackWindow) updates) =>
       super.copyWith((message) => updates(message as PostbackWindow))
           as PostbackWindow;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PostbackWindow create() => PostbackWindow._();
+  @$core.override
   PostbackWindow createEmptyInstance() => create();
-  static $pb.PbList<PostbackWindow> createRepeated() =>
-      $pb.PbList<PostbackWindow>();
   @$core.pragma('dart2js:noInline')
   static PostbackWindow getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PostbackWindow>(create);
@@ -2189,7 +1847,7 @@ class PostbackWindow extends $pb.GeneratedMessage {
   /// have at least one entry if enable_postback_window_settings is set to
   /// true. It can have maximum of 128 entries.
   @$pb.TagNumber(1)
-  $core.List<ConversionValues> get conversionValues => $_getList(0);
+  $pb.PbList<ConversionValues> get conversionValues => $_getList(0);
 
   /// If enable_postback_window_settings is true, conversion_values
   /// must be populated and will be used for determining when and how to set the
@@ -2200,14 +1858,11 @@ class PostbackWindow extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool get postbackWindowSettingsEnabled => $_getBF(1);
   @$pb.TagNumber(2)
-  set postbackWindowSettingsEnabled($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set postbackWindowSettingsEnabled($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPostbackWindowSettingsEnabled() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPostbackWindowSettingsEnabled() => clearField(2);
+  void clearPostbackWindowSettingsEnabled() => $_clearField(2);
 }
 
 /// Conversion value settings for a postback window for SKAdNetwork conversion
@@ -2220,31 +1875,23 @@ class ConversionValues extends $pb.GeneratedMessage {
     $core.Iterable<EventMapping>? eventMappings,
     $core.bool? lockEnabled,
   }) {
-    final $result = create();
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (fineValue != null) {
-      $result.fineValue = fineValue;
-    }
-    if (coarseValue != null) {
-      $result.coarseValue = coarseValue;
-    }
-    if (eventMappings != null) {
-      $result.eventMappings.addAll(eventMappings);
-    }
-    if (lockEnabled != null) {
-      $result.lockEnabled = lockEnabled;
-    }
-    return $result;
+    final result = create();
+    if (displayName != null) result.displayName = displayName;
+    if (fineValue != null) result.fineValue = fineValue;
+    if (coarseValue != null) result.coarseValue = coarseValue;
+    if (eventMappings != null) result.eventMappings.addAll(eventMappings);
+    if (lockEnabled != null) result.lockEnabled = lockEnabled;
+    return result;
   }
-  ConversionValues._() : super();
-  factory ConversionValues.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ConversionValues.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ConversionValues._();
+
+  factory ConversionValues.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ConversionValues.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ConversionValues',
@@ -2252,36 +1899,28 @@ class ConversionValues extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'displayName')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'fineValue', $pb.PbFieldType.O3)
-    ..e<CoarseValue>(
-        3, _omitFieldNames ? '' : 'coarseValue', $pb.PbFieldType.OE,
-        defaultOrMaker: CoarseValue.COARSE_VALUE_UNSPECIFIED,
-        valueOf: CoarseValue.valueOf,
+    ..aI(2, _omitFieldNames ? '' : 'fineValue')
+    ..aE<CoarseValue>(3, _omitFieldNames ? '' : 'coarseValue',
         enumValues: CoarseValue.values)
-    ..pc<EventMapping>(
-        4, _omitFieldNames ? '' : 'eventMappings', $pb.PbFieldType.PM,
+    ..pPM<EventMapping>(4, _omitFieldNames ? '' : 'eventMappings',
         subBuilder: EventMapping.create)
     ..aOB(5, _omitFieldNames ? '' : 'lockEnabled')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ConversionValues clone() => ConversionValues()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConversionValues clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ConversionValues copyWith(void Function(ConversionValues) updates) =>
       super.copyWith((message) => updates(message as ConversionValues))
           as ConversionValues;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ConversionValues create() => ConversionValues._();
+  @$core.override
   ConversionValues createEmptyInstance() => create();
-  static $pb.PbList<ConversionValues> createRepeated() =>
-      $pb.PbList<ConversionValues>();
   @$core.pragma('dart2js:noInline')
   static ConversionValues getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConversionValues>(create);
@@ -2292,68 +1931,56 @@ class ConversionValues extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get displayName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set displayName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set displayName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDisplayName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDisplayName() => clearField(1);
+  void clearDisplayName() => $_clearField(1);
 
-  ///  The fine-grained conversion value.  This is applicable only to the first
-  ///  postback window. Its valid values are [0,63], both inclusive. It must be
-  ///  set for postback window 1, and must not be set for postback window 2 & 3.
-  ///  This value is not guaranteed to be unique.
+  /// The fine-grained conversion value.  This is applicable only to the first
+  /// postback window. Its valid values are [0,63], both inclusive. It must be
+  /// set for postback window 1, and must not be set for postback window 2 & 3.
+  /// This value is not guaranteed to be unique.
   ///
-  ///  If the configuration for the first postback window is re-used for second or
-  ///  third postback windows this field has no effect.
+  /// If the configuration for the first postback window is re-used for second or
+  /// third postback windows this field has no effect.
   @$pb.TagNumber(2)
   $core.int get fineValue => $_getIZ(1);
   @$pb.TagNumber(2)
-  set fineValue($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set fineValue($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasFineValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFineValue() => clearField(2);
+  void clearFineValue() => $_clearField(2);
 
-  ///  Required. A coarse grained conversion value.
+  /// Required. A coarse grained conversion value.
   ///
-  ///  This value is not guaranteed to be unique.
+  /// This value is not guaranteed to be unique.
   @$pb.TagNumber(3)
   CoarseValue get coarseValue => $_getN(2);
   @$pb.TagNumber(3)
-  set coarseValue(CoarseValue v) {
-    setField(3, v);
-  }
-
+  set coarseValue(CoarseValue value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCoarseValue() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCoarseValue() => clearField(3);
+  void clearCoarseValue() => $_clearField(3);
 
   /// Event conditions that must be met for this Conversion Value to be achieved.
   /// The conditions in this list are ANDed together. It must have minimum of 1
   /// entry and maximum of 3 entries, if the postback window is enabled.
   @$pb.TagNumber(4)
-  $core.List<EventMapping> get eventMappings => $_getList(3);
+  $pb.PbList<EventMapping> get eventMappings => $_getList(3);
 
   /// If true, the SDK should lock to this conversion value for the current
   /// postback window.
   @$pb.TagNumber(5)
   $core.bool get lockEnabled => $_getBF(4);
   @$pb.TagNumber(5)
-  set lockEnabled($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set lockEnabled($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasLockEnabled() => $_has(4);
   @$pb.TagNumber(5)
-  void clearLockEnabled() => clearField(5);
+  void clearLockEnabled() => $_clearField(5);
 }
 
 /// Event setting conditions to match an event.
@@ -2365,31 +1992,23 @@ class EventMapping extends $pb.GeneratedMessage {
     $core.double? minEventValue,
     $core.double? maxEventValue,
   }) {
-    final $result = create();
-    if (eventName != null) {
-      $result.eventName = eventName;
-    }
-    if (minEventCount != null) {
-      $result.minEventCount = minEventCount;
-    }
-    if (maxEventCount != null) {
-      $result.maxEventCount = maxEventCount;
-    }
-    if (minEventValue != null) {
-      $result.minEventValue = minEventValue;
-    }
-    if (maxEventValue != null) {
-      $result.maxEventValue = maxEventValue;
-    }
-    return $result;
+    final result = create();
+    if (eventName != null) result.eventName = eventName;
+    if (minEventCount != null) result.minEventCount = minEventCount;
+    if (maxEventCount != null) result.maxEventCount = maxEventCount;
+    if (minEventValue != null) result.minEventValue = minEventValue;
+    if (maxEventValue != null) result.maxEventValue = maxEventValue;
+    return result;
   }
-  EventMapping._() : super();
-  factory EventMapping.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EventMapping.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EventMapping._();
+
+  factory EventMapping.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EventMapping.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EventMapping',
@@ -2399,30 +2018,24 @@ class EventMapping extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'eventName')
     ..aInt64(2, _omitFieldNames ? '' : 'minEventCount')
     ..aInt64(3, _omitFieldNames ? '' : 'maxEventCount')
-    ..a<$core.double>(
-        4, _omitFieldNames ? '' : 'minEventValue', $pb.PbFieldType.OD)
-    ..a<$core.double>(
-        5, _omitFieldNames ? '' : 'maxEventValue', $pb.PbFieldType.OD)
+    ..aD(4, _omitFieldNames ? '' : 'minEventValue')
+    ..aD(5, _omitFieldNames ? '' : 'maxEventValue')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EventMapping clone() => EventMapping()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EventMapping clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EventMapping copyWith(void Function(EventMapping) updates) =>
       super.copyWith((message) => updates(message as EventMapping))
           as EventMapping;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EventMapping create() => EventMapping._();
+  @$core.override
   EventMapping createEmptyInstance() => create();
-  static $pb.PbList<EventMapping> createRepeated() =>
-      $pb.PbList<EventMapping>();
   @$core.pragma('dart2js:noInline')
   static EventMapping getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EventMapping>(create);
@@ -2433,14 +2046,11 @@ class EventMapping extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get eventName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set eventName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set eventName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEventName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEventName() => clearField(1);
+  void clearEventName() => $_clearField(1);
 
   /// At least one of the following four min/max values must be set. The
   /// values set will be ANDed together to qualify an event.
@@ -2449,28 +2059,22 @@ class EventMapping extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $fixnum.Int64 get minEventCount => $_getI64(1);
   @$pb.TagNumber(2)
-  set minEventCount($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set minEventCount($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasMinEventCount() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMinEventCount() => clearField(2);
+  void clearMinEventCount() => $_clearField(2);
 
   /// The maximum number of times the event occurred. If not set, maximum event
   /// count won't be checked.
   @$pb.TagNumber(3)
   $fixnum.Int64 get maxEventCount => $_getI64(2);
   @$pb.TagNumber(3)
-  set maxEventCount($fixnum.Int64 v) {
-    $_setInt64(2, v);
-  }
-
+  set maxEventCount($fixnum.Int64 value) => $_setInt64(2, value);
   @$pb.TagNumber(3)
   $core.bool hasMaxEventCount() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMaxEventCount() => clearField(3);
+  void clearMaxEventCount() => $_clearField(3);
 
   /// The minimum revenue generated due to the event. Revenue currency will be
   /// defined at the property level. If not set, minimum event value won't be
@@ -2478,14 +2082,11 @@ class EventMapping extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.double get minEventValue => $_getN(3);
   @$pb.TagNumber(4)
-  set minEventValue($core.double v) {
-    $_setDouble(3, v);
-  }
-
+  set minEventValue($core.double value) => $_setDouble(3, value);
   @$pb.TagNumber(4)
   $core.bool hasMinEventValue() => $_has(3);
   @$pb.TagNumber(4)
-  void clearMinEventValue() => clearField(4);
+  void clearMinEventValue() => $_clearField(4);
 
   /// The maximum revenue generated due to the event. Revenue currency will be
   /// defined at the property level. If not set, maximum event value won't be
@@ -2493,14 +2094,11 @@ class EventMapping extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.double get maxEventValue => $_getN(4);
   @$pb.TagNumber(5)
-  set maxEventValue($core.double v) {
-    $_setDouble(4, v);
-  }
-
+  set maxEventValue($core.double value) => $_setDouble(4, value);
   @$pb.TagNumber(5)
   $core.bool hasMaxEventValue() => $_has(4);
   @$pb.TagNumber(5)
-  void clearMaxEventValue() => clearField(5);
+  void clearMaxEventValue() => $_clearField(5);
 }
 
 /// A set of changes within a Google Analytics account or its child properties
@@ -2516,34 +2114,24 @@ class ChangeHistoryEvent extends $pb.GeneratedMessage {
     $core.bool? changesFiltered,
     $core.Iterable<ChangeHistoryChange>? changes,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    if (changeTime != null) {
-      $result.changeTime = changeTime;
-    }
-    if (actorType != null) {
-      $result.actorType = actorType;
-    }
-    if (userActorEmail != null) {
-      $result.userActorEmail = userActorEmail;
-    }
-    if (changesFiltered != null) {
-      $result.changesFiltered = changesFiltered;
-    }
-    if (changes != null) {
-      $result.changes.addAll(changes);
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    if (changeTime != null) result.changeTime = changeTime;
+    if (actorType != null) result.actorType = actorType;
+    if (userActorEmail != null) result.userActorEmail = userActorEmail;
+    if (changesFiltered != null) result.changesFiltered = changesFiltered;
+    if (changes != null) result.changes.addAll(changes);
+    return result;
   }
-  ChangeHistoryEvent._() : super();
-  factory ChangeHistoryEvent.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ChangeHistoryEvent.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ChangeHistoryEvent._();
+
+  factory ChangeHistoryEvent.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ChangeHistoryEvent.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ChangeHistoryEvent',
@@ -2553,35 +2141,28 @@ class ChangeHistoryEvent extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'changeTime',
         subBuilder: $0.Timestamp.create)
-    ..e<ActorType>(3, _omitFieldNames ? '' : 'actorType', $pb.PbFieldType.OE,
-        defaultOrMaker: ActorType.ACTOR_TYPE_UNSPECIFIED,
-        valueOf: ActorType.valueOf,
+    ..aE<ActorType>(3, _omitFieldNames ? '' : 'actorType',
         enumValues: ActorType.values)
     ..aOS(4, _omitFieldNames ? '' : 'userActorEmail')
     ..aOB(5, _omitFieldNames ? '' : 'changesFiltered')
-    ..pc<ChangeHistoryChange>(
-        6, _omitFieldNames ? '' : 'changes', $pb.PbFieldType.PM,
+    ..pPM<ChangeHistoryChange>(6, _omitFieldNames ? '' : 'changes',
         subBuilder: ChangeHistoryChange.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ChangeHistoryEvent clone() => ChangeHistoryEvent()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ChangeHistoryEvent clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ChangeHistoryEvent copyWith(void Function(ChangeHistoryEvent) updates) =>
       super.copyWith((message) => updates(message as ChangeHistoryEvent))
           as ChangeHistoryEvent;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ChangeHistoryEvent create() => ChangeHistoryEvent._();
+  @$core.override
   ChangeHistoryEvent createEmptyInstance() => create();
-  static $pb.PbList<ChangeHistoryEvent> createRepeated() =>
-      $pb.PbList<ChangeHistoryEvent>();
   @$core.pragma('dart2js:noInline')
   static ChangeHistoryEvent getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ChangeHistoryEvent>(create);
@@ -2591,27 +2172,21 @@ class ChangeHistoryEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// Time when change was made.
   @$pb.TagNumber(2)
   $0.Timestamp get changeTime => $_getN(1);
   @$pb.TagNumber(2)
-  set changeTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set changeTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasChangeTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearChangeTime() => clearField(2);
+  void clearChangeTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureChangeTime() => $_ensure(1);
 
@@ -2619,14 +2194,11 @@ class ChangeHistoryEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   ActorType get actorType => $_getN(2);
   @$pb.TagNumber(3)
-  set actorType(ActorType v) {
-    setField(3, v);
-  }
-
+  set actorType(ActorType value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasActorType() => $_has(2);
   @$pb.TagNumber(3)
-  void clearActorType() => clearField(3);
+  void clearActorType() => $_clearField(3);
 
   /// Email address of the Google account that made the change. This will be a
   /// valid email address if the actor field is set to USER, and empty otherwise.
@@ -2634,33 +2206,27 @@ class ChangeHistoryEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get userActorEmail => $_getSZ(3);
   @$pb.TagNumber(4)
-  set userActorEmail($core.String v) {
-    $_setString(3, v);
-  }
-
+  set userActorEmail($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasUserActorEmail() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUserActorEmail() => clearField(4);
+  void clearUserActorEmail() => $_clearField(4);
 
   /// If true, then the list of changes returned was filtered, and does not
   /// represent all changes that occurred in this event.
   @$pb.TagNumber(5)
   $core.bool get changesFiltered => $_getBF(4);
   @$pb.TagNumber(5)
-  set changesFiltered($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set changesFiltered($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasChangesFiltered() => $_has(4);
   @$pb.TagNumber(5)
-  void clearChangesFiltered() => clearField(5);
+  void clearChangesFiltered() => $_clearField(5);
 
   /// A list of changes made in this change history event that fit the filters
   /// specified in SearchChangeHistoryEventsRequest.
   @$pb.TagNumber(6)
-  $core.List<ChangeHistoryChange> get changes => $_getList(5);
+  $pb.PbList<ChangeHistoryChange> get changes => $_getList(5);
 }
 
 enum ChangeHistoryChange_ChangeHistoryResource_Resource {
@@ -2688,7 +2254,11 @@ enum ChangeHistoryChange_ChangeHistoryResource_Resource {
   adsenseLink,
   audience,
   eventCreateRule,
+  keyEvent,
   calculatedMetric,
+  reportingDataAnnotation,
+  subpropertySyncConfig,
+  reportingIdentitySettings,
   notSet
 }
 
@@ -2721,96 +2291,68 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     AdSenseLink? adsenseLink,
     $4.Audience? audience,
     $5.EventCreateRule? eventCreateRule,
+    KeyEvent? keyEvent,
     CalculatedMetric? calculatedMetric,
+    ReportingDataAnnotation? reportingDataAnnotation,
+    SubpropertySyncConfig? subpropertySyncConfig,
+    ReportingIdentitySettings? reportingIdentitySettings,
   }) {
-    final $result = create();
-    if (account != null) {
-      $result.account = account;
-    }
-    if (property != null) {
-      $result.property = property;
-    }
-    if (firebaseLink != null) {
-      $result.firebaseLink = firebaseLink;
-    }
-    if (googleAdsLink != null) {
-      $result.googleAdsLink = googleAdsLink;
-    }
-    if (googleSignalsSettings != null) {
-      $result.googleSignalsSettings = googleSignalsSettings;
-    }
-    if (displayVideo360AdvertiserLink != null) {
-      $result.displayVideo360AdvertiserLink = displayVideo360AdvertiserLink;
-    }
-    if (displayVideo360AdvertiserLinkProposal != null) {
-      $result.displayVideo360AdvertiserLinkProposal =
+    final result = create();
+    if (account != null) result.account = account;
+    if (property != null) result.property = property;
+    if (firebaseLink != null) result.firebaseLink = firebaseLink;
+    if (googleAdsLink != null) result.googleAdsLink = googleAdsLink;
+    if (googleSignalsSettings != null)
+      result.googleSignalsSettings = googleSignalsSettings;
+    if (displayVideo360AdvertiserLink != null)
+      result.displayVideo360AdvertiserLink = displayVideo360AdvertiserLink;
+    if (displayVideo360AdvertiserLinkProposal != null)
+      result.displayVideo360AdvertiserLinkProposal =
           displayVideo360AdvertiserLinkProposal;
-    }
-    if (conversionEvent != null) {
-      $result.conversionEvent = conversionEvent;
-    }
-    if (measurementProtocolSecret != null) {
-      $result.measurementProtocolSecret = measurementProtocolSecret;
-    }
-    if (customDimension != null) {
-      $result.customDimension = customDimension;
-    }
-    if (customMetric != null) {
-      $result.customMetric = customMetric;
-    }
-    if (dataRetentionSettings != null) {
-      $result.dataRetentionSettings = dataRetentionSettings;
-    }
-    if (searchAds360Link != null) {
-      $result.searchAds360Link = searchAds360Link;
-    }
-    if (dataStream != null) {
-      $result.dataStream = dataStream;
-    }
-    if (attributionSettings != null) {
-      $result.attributionSettings = attributionSettings;
-    }
-    if (expandedDataSet != null) {
-      $result.expandedDataSet = expandedDataSet;
-    }
-    if (channelGroup != null) {
-      $result.channelGroup = channelGroup;
-    }
-    if (bigqueryLink != null) {
-      $result.bigqueryLink = bigqueryLink;
-    }
-    if (enhancedMeasurementSettings != null) {
-      $result.enhancedMeasurementSettings = enhancedMeasurementSettings;
-    }
-    if (dataRedactionSettings != null) {
-      $result.dataRedactionSettings = dataRedactionSettings;
-    }
-    if (skadnetworkConversionValueSchema != null) {
-      $result.skadnetworkConversionValueSchema =
+    if (conversionEvent != null) result.conversionEvent = conversionEvent;
+    if (measurementProtocolSecret != null)
+      result.measurementProtocolSecret = measurementProtocolSecret;
+    if (customDimension != null) result.customDimension = customDimension;
+    if (customMetric != null) result.customMetric = customMetric;
+    if (dataRetentionSettings != null)
+      result.dataRetentionSettings = dataRetentionSettings;
+    if (searchAds360Link != null) result.searchAds360Link = searchAds360Link;
+    if (dataStream != null) result.dataStream = dataStream;
+    if (attributionSettings != null)
+      result.attributionSettings = attributionSettings;
+    if (expandedDataSet != null) result.expandedDataSet = expandedDataSet;
+    if (channelGroup != null) result.channelGroup = channelGroup;
+    if (bigqueryLink != null) result.bigqueryLink = bigqueryLink;
+    if (enhancedMeasurementSettings != null)
+      result.enhancedMeasurementSettings = enhancedMeasurementSettings;
+    if (dataRedactionSettings != null)
+      result.dataRedactionSettings = dataRedactionSettings;
+    if (skadnetworkConversionValueSchema != null)
+      result.skadnetworkConversionValueSchema =
           skadnetworkConversionValueSchema;
-    }
-    if (adsenseLink != null) {
-      $result.adsenseLink = adsenseLink;
-    }
-    if (audience != null) {
-      $result.audience = audience;
-    }
-    if (eventCreateRule != null) {
-      $result.eventCreateRule = eventCreateRule;
-    }
-    if (calculatedMetric != null) {
-      $result.calculatedMetric = calculatedMetric;
-    }
-    return $result;
+    if (adsenseLink != null) result.adsenseLink = adsenseLink;
+    if (audience != null) result.audience = audience;
+    if (eventCreateRule != null) result.eventCreateRule = eventCreateRule;
+    if (keyEvent != null) result.keyEvent = keyEvent;
+    if (calculatedMetric != null) result.calculatedMetric = calculatedMetric;
+    if (reportingDataAnnotation != null)
+      result.reportingDataAnnotation = reportingDataAnnotation;
+    if (subpropertySyncConfig != null)
+      result.subpropertySyncConfig = subpropertySyncConfig;
+    if (reportingIdentitySettings != null)
+      result.reportingIdentitySettings = reportingIdentitySettings;
+    return result;
   }
-  ChangeHistoryChange_ChangeHistoryResource._() : super();
+
+  ChangeHistoryChange_ChangeHistoryResource._();
+
   factory ChangeHistoryChange_ChangeHistoryResource.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ChangeHistoryChange_ChangeHistoryResource.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ChangeHistoryChange_ChangeHistoryResource.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core
       .Map<$core.int, ChangeHistoryChange_ChangeHistoryResource_Resource>
@@ -2846,7 +2388,14 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
     27: ChangeHistoryChange_ChangeHistoryResource_Resource.adsenseLink,
     28: ChangeHistoryChange_ChangeHistoryResource_Resource.audience,
     29: ChangeHistoryChange_ChangeHistoryResource_Resource.eventCreateRule,
+    30: ChangeHistoryChange_ChangeHistoryResource_Resource.keyEvent,
     31: ChangeHistoryChange_ChangeHistoryResource_Resource.calculatedMetric,
+    32: ChangeHistoryChange_ChangeHistoryResource_Resource
+        .reportingDataAnnotation,
+    33: ChangeHistoryChange_ChangeHistoryResource_Resource
+        .subpropertySyncConfig,
+    34: ChangeHistoryChange_ChangeHistoryResource_Resource
+        .reportingIdentitySettings,
     0: ChangeHistoryChange_ChangeHistoryResource_Resource.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -2879,7 +2428,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
       27,
       28,
       29,
-      31
+      30,
+      31,
+      32,
+      33,
+      34
     ])
     ..aOM<Account>(1, _omitFieldNames ? '' : 'account',
         subBuilder: Account.create)
@@ -2939,56 +2492,116 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
         subBuilder: $4.Audience.create)
     ..aOM<$5.EventCreateRule>(29, _omitFieldNames ? '' : 'eventCreateRule',
         subBuilder: $5.EventCreateRule.create)
+    ..aOM<KeyEvent>(30, _omitFieldNames ? '' : 'keyEvent',
+        subBuilder: KeyEvent.create)
     ..aOM<CalculatedMetric>(31, _omitFieldNames ? '' : 'calculatedMetric',
         subBuilder: CalculatedMetric.create)
+    ..aOM<ReportingDataAnnotation>(
+        32, _omitFieldNames ? '' : 'reportingDataAnnotation',
+        subBuilder: ReportingDataAnnotation.create)
+    ..aOM<SubpropertySyncConfig>(
+        33, _omitFieldNames ? '' : 'subpropertySyncConfig',
+        subBuilder: SubpropertySyncConfig.create)
+    ..aOM<ReportingIdentitySettings>(
+        34, _omitFieldNames ? '' : 'reportingIdentitySettings',
+        subBuilder: ReportingIdentitySettings.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ChangeHistoryChange_ChangeHistoryResource clone() =>
-      ChangeHistoryChange_ChangeHistoryResource()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ChangeHistoryChange_ChangeHistoryResource clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ChangeHistoryChange_ChangeHistoryResource copyWith(
           void Function(ChangeHistoryChange_ChangeHistoryResource) updates) =>
       super.copyWith((message) =>
               updates(message as ChangeHistoryChange_ChangeHistoryResource))
           as ChangeHistoryChange_ChangeHistoryResource;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ChangeHistoryChange_ChangeHistoryResource create() =>
       ChangeHistoryChange_ChangeHistoryResource._();
+  @$core.override
   ChangeHistoryChange_ChangeHistoryResource createEmptyInstance() => create();
-  static $pb.PbList<ChangeHistoryChange_ChangeHistoryResource>
-      createRepeated() =>
-          $pb.PbList<ChangeHistoryChange_ChangeHistoryResource>();
   @$core.pragma('dart2js:noInline')
   static ChangeHistoryChange_ChangeHistoryResource getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
           ChangeHistoryChange_ChangeHistoryResource>(create);
   static ChangeHistoryChange_ChangeHistoryResource? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
+  @$pb.TagNumber(13)
+  @$pb.TagNumber(14)
+  @$pb.TagNumber(15)
+  @$pb.TagNumber(16)
+  @$pb.TagNumber(18)
+  @$pb.TagNumber(20)
+  @$pb.TagNumber(21)
+  @$pb.TagNumber(22)
+  @$pb.TagNumber(23)
+  @$pb.TagNumber(24)
+  @$pb.TagNumber(25)
+  @$pb.TagNumber(26)
+  @$pb.TagNumber(27)
+  @$pb.TagNumber(28)
+  @$pb.TagNumber(29)
+  @$pb.TagNumber(30)
+  @$pb.TagNumber(31)
+  @$pb.TagNumber(32)
+  @$pb.TagNumber(33)
+  @$pb.TagNumber(34)
   ChangeHistoryChange_ChangeHistoryResource_Resource whichResource() =>
       _ChangeHistoryChange_ChangeHistoryResource_ResourceByTag[
           $_whichOneof(0)]!;
-  void clearResource() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
+  @$pb.TagNumber(13)
+  @$pb.TagNumber(14)
+  @$pb.TagNumber(15)
+  @$pb.TagNumber(16)
+  @$pb.TagNumber(18)
+  @$pb.TagNumber(20)
+  @$pb.TagNumber(21)
+  @$pb.TagNumber(22)
+  @$pb.TagNumber(23)
+  @$pb.TagNumber(24)
+  @$pb.TagNumber(25)
+  @$pb.TagNumber(26)
+  @$pb.TagNumber(27)
+  @$pb.TagNumber(28)
+  @$pb.TagNumber(29)
+  @$pb.TagNumber(30)
+  @$pb.TagNumber(31)
+  @$pb.TagNumber(32)
+  @$pb.TagNumber(33)
+  @$pb.TagNumber(34)
+  void clearResource() => $_clearField($_whichOneof(0));
 
   /// A snapshot of an Account resource in change history.
   @$pb.TagNumber(1)
   Account get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account(Account v) {
-    setField(1, v);
-  }
-
+  set account(Account value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAccount() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAccount() => clearField(1);
+  void clearAccount() => $_clearField(1);
   @$pb.TagNumber(1)
   Account ensureAccount() => $_ensure(0);
 
@@ -2996,14 +2609,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Property get property => $_getN(1);
   @$pb.TagNumber(2)
-  set property(Property v) {
-    setField(2, v);
-  }
-
+  set property(Property value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasProperty() => $_has(1);
   @$pb.TagNumber(2)
-  void clearProperty() => clearField(2);
+  void clearProperty() => $_clearField(2);
   @$pb.TagNumber(2)
   Property ensureProperty() => $_ensure(1);
 
@@ -3011,14 +2621,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   FirebaseLink get firebaseLink => $_getN(2);
   @$pb.TagNumber(6)
-  set firebaseLink(FirebaseLink v) {
-    setField(6, v);
-  }
-
+  set firebaseLink(FirebaseLink value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasFirebaseLink() => $_has(2);
   @$pb.TagNumber(6)
-  void clearFirebaseLink() => clearField(6);
+  void clearFirebaseLink() => $_clearField(6);
   @$pb.TagNumber(6)
   FirebaseLink ensureFirebaseLink() => $_ensure(2);
 
@@ -3026,14 +2633,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   GoogleAdsLink get googleAdsLink => $_getN(3);
   @$pb.TagNumber(7)
-  set googleAdsLink(GoogleAdsLink v) {
-    setField(7, v);
-  }
-
+  set googleAdsLink(GoogleAdsLink value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasGoogleAdsLink() => $_has(3);
   @$pb.TagNumber(7)
-  void clearGoogleAdsLink() => clearField(7);
+  void clearGoogleAdsLink() => $_clearField(7);
   @$pb.TagNumber(7)
   GoogleAdsLink ensureGoogleAdsLink() => $_ensure(3);
 
@@ -3041,14 +2645,12 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   GoogleSignalsSettings get googleSignalsSettings => $_getN(4);
   @$pb.TagNumber(8)
-  set googleSignalsSettings(GoogleSignalsSettings v) {
-    setField(8, v);
-  }
-
+  set googleSignalsSettings(GoogleSignalsSettings value) =>
+      $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasGoogleSignalsSettings() => $_has(4);
   @$pb.TagNumber(8)
-  void clearGoogleSignalsSettings() => clearField(8);
+  void clearGoogleSignalsSettings() => $_clearField(8);
   @$pb.TagNumber(8)
   GoogleSignalsSettings ensureGoogleSignalsSettings() => $_ensure(4);
 
@@ -3057,14 +2659,12 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   DisplayVideo360AdvertiserLink get displayVideo360AdvertiserLink => $_getN(5);
   @$pb.TagNumber(9)
-  set displayVideo360AdvertiserLink(DisplayVideo360AdvertiserLink v) {
-    setField(9, v);
-  }
-
+  set displayVideo360AdvertiserLink(DisplayVideo360AdvertiserLink value) =>
+      $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasDisplayVideo360AdvertiserLink() => $_has(5);
   @$pb.TagNumber(9)
-  void clearDisplayVideo360AdvertiserLink() => clearField(9);
+  void clearDisplayVideo360AdvertiserLink() => $_clearField(9);
   @$pb.TagNumber(9)
   DisplayVideo360AdvertiserLink ensureDisplayVideo360AdvertiserLink() =>
       $_ensure(5);
@@ -3076,14 +2676,12 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
       get displayVideo360AdvertiserLinkProposal => $_getN(6);
   @$pb.TagNumber(10)
   set displayVideo360AdvertiserLinkProposal(
-      DisplayVideo360AdvertiserLinkProposal v) {
-    setField(10, v);
-  }
-
+          DisplayVideo360AdvertiserLinkProposal value) =>
+      $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasDisplayVideo360AdvertiserLinkProposal() => $_has(6);
   @$pb.TagNumber(10)
-  void clearDisplayVideo360AdvertiserLinkProposal() => clearField(10);
+  void clearDisplayVideo360AdvertiserLinkProposal() => $_clearField(10);
   @$pb.TagNumber(10)
   DisplayVideo360AdvertiserLinkProposal
       ensureDisplayVideo360AdvertiserLinkProposal() => $_ensure(6);
@@ -3092,14 +2690,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   ConversionEvent get conversionEvent => $_getN(7);
   @$pb.TagNumber(11)
-  set conversionEvent(ConversionEvent v) {
-    setField(11, v);
-  }
-
+  set conversionEvent(ConversionEvent value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasConversionEvent() => $_has(7);
   @$pb.TagNumber(11)
-  void clearConversionEvent() => clearField(11);
+  void clearConversionEvent() => $_clearField(11);
   @$pb.TagNumber(11)
   ConversionEvent ensureConversionEvent() => $_ensure(7);
 
@@ -3107,14 +2702,12 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   MeasurementProtocolSecret get measurementProtocolSecret => $_getN(8);
   @$pb.TagNumber(12)
-  set measurementProtocolSecret(MeasurementProtocolSecret v) {
-    setField(12, v);
-  }
-
+  set measurementProtocolSecret(MeasurementProtocolSecret value) =>
+      $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasMeasurementProtocolSecret() => $_has(8);
   @$pb.TagNumber(12)
-  void clearMeasurementProtocolSecret() => clearField(12);
+  void clearMeasurementProtocolSecret() => $_clearField(12);
   @$pb.TagNumber(12)
   MeasurementProtocolSecret ensureMeasurementProtocolSecret() => $_ensure(8);
 
@@ -3122,14 +2715,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   CustomDimension get customDimension => $_getN(9);
   @$pb.TagNumber(13)
-  set customDimension(CustomDimension v) {
-    setField(13, v);
-  }
-
+  set customDimension(CustomDimension value) => $_setField(13, value);
   @$pb.TagNumber(13)
   $core.bool hasCustomDimension() => $_has(9);
   @$pb.TagNumber(13)
-  void clearCustomDimension() => clearField(13);
+  void clearCustomDimension() => $_clearField(13);
   @$pb.TagNumber(13)
   CustomDimension ensureCustomDimension() => $_ensure(9);
 
@@ -3137,14 +2727,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   CustomMetric get customMetric => $_getN(10);
   @$pb.TagNumber(14)
-  set customMetric(CustomMetric v) {
-    setField(14, v);
-  }
-
+  set customMetric(CustomMetric value) => $_setField(14, value);
   @$pb.TagNumber(14)
   $core.bool hasCustomMetric() => $_has(10);
   @$pb.TagNumber(14)
-  void clearCustomMetric() => clearField(14);
+  void clearCustomMetric() => $_clearField(14);
   @$pb.TagNumber(14)
   CustomMetric ensureCustomMetric() => $_ensure(10);
 
@@ -3152,14 +2739,12 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   DataRetentionSettings get dataRetentionSettings => $_getN(11);
   @$pb.TagNumber(15)
-  set dataRetentionSettings(DataRetentionSettings v) {
-    setField(15, v);
-  }
-
+  set dataRetentionSettings(DataRetentionSettings value) =>
+      $_setField(15, value);
   @$pb.TagNumber(15)
   $core.bool hasDataRetentionSettings() => $_has(11);
   @$pb.TagNumber(15)
-  void clearDataRetentionSettings() => clearField(15);
+  void clearDataRetentionSettings() => $_clearField(15);
   @$pb.TagNumber(15)
   DataRetentionSettings ensureDataRetentionSettings() => $_ensure(11);
 
@@ -3167,14 +2752,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   SearchAds360Link get searchAds360Link => $_getN(12);
   @$pb.TagNumber(16)
-  set searchAds360Link(SearchAds360Link v) {
-    setField(16, v);
-  }
-
+  set searchAds360Link(SearchAds360Link value) => $_setField(16, value);
   @$pb.TagNumber(16)
   $core.bool hasSearchAds360Link() => $_has(12);
   @$pb.TagNumber(16)
-  void clearSearchAds360Link() => clearField(16);
+  void clearSearchAds360Link() => $_clearField(16);
   @$pb.TagNumber(16)
   SearchAds360Link ensureSearchAds360Link() => $_ensure(12);
 
@@ -3182,14 +2764,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   DataStream get dataStream => $_getN(13);
   @$pb.TagNumber(18)
-  set dataStream(DataStream v) {
-    setField(18, v);
-  }
-
+  set dataStream(DataStream value) => $_setField(18, value);
   @$pb.TagNumber(18)
   $core.bool hasDataStream() => $_has(13);
   @$pb.TagNumber(18)
-  void clearDataStream() => clearField(18);
+  void clearDataStream() => $_clearField(18);
   @$pb.TagNumber(18)
   DataStream ensureDataStream() => $_ensure(13);
 
@@ -3197,14 +2776,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   AttributionSettings get attributionSettings => $_getN(14);
   @$pb.TagNumber(20)
-  set attributionSettings(AttributionSettings v) {
-    setField(20, v);
-  }
-
+  set attributionSettings(AttributionSettings value) => $_setField(20, value);
   @$pb.TagNumber(20)
   $core.bool hasAttributionSettings() => $_has(14);
   @$pb.TagNumber(20)
-  void clearAttributionSettings() => clearField(20);
+  void clearAttributionSettings() => $_clearField(20);
   @$pb.TagNumber(20)
   AttributionSettings ensureAttributionSettings() => $_ensure(14);
 
@@ -3212,14 +2788,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(21)
   $2.ExpandedDataSet get expandedDataSet => $_getN(15);
   @$pb.TagNumber(21)
-  set expandedDataSet($2.ExpandedDataSet v) {
-    setField(21, v);
-  }
-
+  set expandedDataSet($2.ExpandedDataSet value) => $_setField(21, value);
   @$pb.TagNumber(21)
   $core.bool hasExpandedDataSet() => $_has(15);
   @$pb.TagNumber(21)
-  void clearExpandedDataSet() => clearField(21);
+  void clearExpandedDataSet() => $_clearField(21);
   @$pb.TagNumber(21)
   $2.ExpandedDataSet ensureExpandedDataSet() => $_ensure(15);
 
@@ -3227,14 +2800,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(22)
   $3.ChannelGroup get channelGroup => $_getN(16);
   @$pb.TagNumber(22)
-  set channelGroup($3.ChannelGroup v) {
-    setField(22, v);
-  }
-
+  set channelGroup($3.ChannelGroup value) => $_setField(22, value);
   @$pb.TagNumber(22)
   $core.bool hasChannelGroup() => $_has(16);
   @$pb.TagNumber(22)
-  void clearChannelGroup() => clearField(22);
+  void clearChannelGroup() => $_clearField(22);
   @$pb.TagNumber(22)
   $3.ChannelGroup ensureChannelGroup() => $_ensure(16);
 
@@ -3242,14 +2812,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(23)
   BigQueryLink get bigqueryLink => $_getN(17);
   @$pb.TagNumber(23)
-  set bigqueryLink(BigQueryLink v) {
-    setField(23, v);
-  }
-
+  set bigqueryLink(BigQueryLink value) => $_setField(23, value);
   @$pb.TagNumber(23)
   $core.bool hasBigqueryLink() => $_has(17);
   @$pb.TagNumber(23)
-  void clearBigqueryLink() => clearField(23);
+  void clearBigqueryLink() => $_clearField(23);
   @$pb.TagNumber(23)
   BigQueryLink ensureBigqueryLink() => $_ensure(17);
 
@@ -3257,14 +2824,12 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(24)
   EnhancedMeasurementSettings get enhancedMeasurementSettings => $_getN(18);
   @$pb.TagNumber(24)
-  set enhancedMeasurementSettings(EnhancedMeasurementSettings v) {
-    setField(24, v);
-  }
-
+  set enhancedMeasurementSettings(EnhancedMeasurementSettings value) =>
+      $_setField(24, value);
   @$pb.TagNumber(24)
   $core.bool hasEnhancedMeasurementSettings() => $_has(18);
   @$pb.TagNumber(24)
-  void clearEnhancedMeasurementSettings() => clearField(24);
+  void clearEnhancedMeasurementSettings() => $_clearField(24);
   @$pb.TagNumber(24)
   EnhancedMeasurementSettings ensureEnhancedMeasurementSettings() =>
       $_ensure(18);
@@ -3273,14 +2838,12 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(25)
   DataRedactionSettings get dataRedactionSettings => $_getN(19);
   @$pb.TagNumber(25)
-  set dataRedactionSettings(DataRedactionSettings v) {
-    setField(25, v);
-  }
-
+  set dataRedactionSettings(DataRedactionSettings value) =>
+      $_setField(25, value);
   @$pb.TagNumber(25)
   $core.bool hasDataRedactionSettings() => $_has(19);
   @$pb.TagNumber(25)
-  void clearDataRedactionSettings() => clearField(25);
+  void clearDataRedactionSettings() => $_clearField(25);
   @$pb.TagNumber(25)
   DataRedactionSettings ensureDataRedactionSettings() => $_ensure(19);
 
@@ -3290,14 +2853,13 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   SKAdNetworkConversionValueSchema get skadnetworkConversionValueSchema =>
       $_getN(20);
   @$pb.TagNumber(26)
-  set skadnetworkConversionValueSchema(SKAdNetworkConversionValueSchema v) {
-    setField(26, v);
-  }
-
+  set skadnetworkConversionValueSchema(
+          SKAdNetworkConversionValueSchema value) =>
+      $_setField(26, value);
   @$pb.TagNumber(26)
   $core.bool hasSkadnetworkConversionValueSchema() => $_has(20);
   @$pb.TagNumber(26)
-  void clearSkadnetworkConversionValueSchema() => clearField(26);
+  void clearSkadnetworkConversionValueSchema() => $_clearField(26);
   @$pb.TagNumber(26)
   SKAdNetworkConversionValueSchema ensureSkadnetworkConversionValueSchema() =>
       $_ensure(20);
@@ -3306,14 +2868,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(27)
   AdSenseLink get adsenseLink => $_getN(21);
   @$pb.TagNumber(27)
-  set adsenseLink(AdSenseLink v) {
-    setField(27, v);
-  }
-
+  set adsenseLink(AdSenseLink value) => $_setField(27, value);
   @$pb.TagNumber(27)
   $core.bool hasAdsenseLink() => $_has(21);
   @$pb.TagNumber(27)
-  void clearAdsenseLink() => clearField(27);
+  void clearAdsenseLink() => $_clearField(27);
   @$pb.TagNumber(27)
   AdSenseLink ensureAdsenseLink() => $_ensure(21);
 
@@ -3321,14 +2880,11 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(28)
   $4.Audience get audience => $_getN(22);
   @$pb.TagNumber(28)
-  set audience($4.Audience v) {
-    setField(28, v);
-  }
-
+  set audience($4.Audience value) => $_setField(28, value);
   @$pb.TagNumber(28)
   $core.bool hasAudience() => $_has(22);
   @$pb.TagNumber(28)
-  void clearAudience() => clearField(28);
+  void clearAudience() => $_clearField(28);
   @$pb.TagNumber(28)
   $4.Audience ensureAudience() => $_ensure(22);
 
@@ -3336,31 +2892,76 @@ class ChangeHistoryChange_ChangeHistoryResource extends $pb.GeneratedMessage {
   @$pb.TagNumber(29)
   $5.EventCreateRule get eventCreateRule => $_getN(23);
   @$pb.TagNumber(29)
-  set eventCreateRule($5.EventCreateRule v) {
-    setField(29, v);
-  }
-
+  set eventCreateRule($5.EventCreateRule value) => $_setField(29, value);
   @$pb.TagNumber(29)
   $core.bool hasEventCreateRule() => $_has(23);
   @$pb.TagNumber(29)
-  void clearEventCreateRule() => clearField(29);
+  void clearEventCreateRule() => $_clearField(29);
   @$pb.TagNumber(29)
   $5.EventCreateRule ensureEventCreateRule() => $_ensure(23);
 
+  /// A snapshot of a KeyEvent resource in change history.
+  @$pb.TagNumber(30)
+  KeyEvent get keyEvent => $_getN(24);
+  @$pb.TagNumber(30)
+  set keyEvent(KeyEvent value) => $_setField(30, value);
+  @$pb.TagNumber(30)
+  $core.bool hasKeyEvent() => $_has(24);
+  @$pb.TagNumber(30)
+  void clearKeyEvent() => $_clearField(30);
+  @$pb.TagNumber(30)
+  KeyEvent ensureKeyEvent() => $_ensure(24);
+
   /// A snapshot of a CalculatedMetric resource in change history.
   @$pb.TagNumber(31)
-  CalculatedMetric get calculatedMetric => $_getN(24);
+  CalculatedMetric get calculatedMetric => $_getN(25);
   @$pb.TagNumber(31)
-  set calculatedMetric(CalculatedMetric v) {
-    setField(31, v);
-  }
+  set calculatedMetric(CalculatedMetric value) => $_setField(31, value);
+  @$pb.TagNumber(31)
+  $core.bool hasCalculatedMetric() => $_has(25);
+  @$pb.TagNumber(31)
+  void clearCalculatedMetric() => $_clearField(31);
+  @$pb.TagNumber(31)
+  CalculatedMetric ensureCalculatedMetric() => $_ensure(25);
 
-  @$pb.TagNumber(31)
-  $core.bool hasCalculatedMetric() => $_has(24);
-  @$pb.TagNumber(31)
-  void clearCalculatedMetric() => clearField(31);
-  @$pb.TagNumber(31)
-  CalculatedMetric ensureCalculatedMetric() => $_ensure(24);
+  /// A snapshot of a ReportingDataAnnotation resource in change history.
+  @$pb.TagNumber(32)
+  ReportingDataAnnotation get reportingDataAnnotation => $_getN(26);
+  @$pb.TagNumber(32)
+  set reportingDataAnnotation(ReportingDataAnnotation value) =>
+      $_setField(32, value);
+  @$pb.TagNumber(32)
+  $core.bool hasReportingDataAnnotation() => $_has(26);
+  @$pb.TagNumber(32)
+  void clearReportingDataAnnotation() => $_clearField(32);
+  @$pb.TagNumber(32)
+  ReportingDataAnnotation ensureReportingDataAnnotation() => $_ensure(26);
+
+  /// A snapshot of a SubpropertySyncConfig resource in change history.
+  @$pb.TagNumber(33)
+  SubpropertySyncConfig get subpropertySyncConfig => $_getN(27);
+  @$pb.TagNumber(33)
+  set subpropertySyncConfig(SubpropertySyncConfig value) =>
+      $_setField(33, value);
+  @$pb.TagNumber(33)
+  $core.bool hasSubpropertySyncConfig() => $_has(27);
+  @$pb.TagNumber(33)
+  void clearSubpropertySyncConfig() => $_clearField(33);
+  @$pb.TagNumber(33)
+  SubpropertySyncConfig ensureSubpropertySyncConfig() => $_ensure(27);
+
+  /// A snapshot of a ReportingIdentitySettings resource in change history.
+  @$pb.TagNumber(34)
+  ReportingIdentitySettings get reportingIdentitySettings => $_getN(28);
+  @$pb.TagNumber(34)
+  set reportingIdentitySettings(ReportingIdentitySettings value) =>
+      $_setField(34, value);
+  @$pb.TagNumber(34)
+  $core.bool hasReportingIdentitySettings() => $_has(28);
+  @$pb.TagNumber(34)
+  void clearReportingIdentitySettings() => $_clearField(34);
+  @$pb.TagNumber(34)
+  ReportingIdentitySettings ensureReportingIdentitySettings() => $_ensure(28);
 }
 
 /// A description of a change to a single Google Analytics resource.
@@ -3371,28 +2972,24 @@ class ChangeHistoryChange extends $pb.GeneratedMessage {
     ChangeHistoryChange_ChangeHistoryResource? resourceBeforeChange,
     ChangeHistoryChange_ChangeHistoryResource? resourceAfterChange,
   }) {
-    final $result = create();
-    if (resource != null) {
-      $result.resource = resource;
-    }
-    if (action != null) {
-      $result.action = action;
-    }
-    if (resourceBeforeChange != null) {
-      $result.resourceBeforeChange = resourceBeforeChange;
-    }
-    if (resourceAfterChange != null) {
-      $result.resourceAfterChange = resourceAfterChange;
-    }
-    return $result;
+    final result = create();
+    if (resource != null) result.resource = resource;
+    if (action != null) result.action = action;
+    if (resourceBeforeChange != null)
+      result.resourceBeforeChange = resourceBeforeChange;
+    if (resourceAfterChange != null)
+      result.resourceAfterChange = resourceAfterChange;
+    return result;
   }
-  ChangeHistoryChange._() : super();
-  factory ChangeHistoryChange.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ChangeHistoryChange.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ChangeHistoryChange._();
+
+  factory ChangeHistoryChange.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ChangeHistoryChange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ChangeHistoryChange',
@@ -3400,9 +2997,7 @@ class ChangeHistoryChange extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resource')
-    ..e<ActionType>(2, _omitFieldNames ? '' : 'action', $pb.PbFieldType.OE,
-        defaultOrMaker: ActionType.ACTION_TYPE_UNSPECIFIED,
-        valueOf: ActionType.valueOf,
+    ..aE<ActionType>(2, _omitFieldNames ? '' : 'action',
         enumValues: ActionType.values)
     ..aOM<ChangeHistoryChange_ChangeHistoryResource>(
         3, _omitFieldNames ? '' : 'resourceBeforeChange',
@@ -3412,24 +3007,20 @@ class ChangeHistoryChange extends $pb.GeneratedMessage {
         subBuilder: ChangeHistoryChange_ChangeHistoryResource.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ChangeHistoryChange clone() => ChangeHistoryChange()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ChangeHistoryChange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ChangeHistoryChange copyWith(void Function(ChangeHistoryChange) updates) =>
       super.copyWith((message) => updates(message as ChangeHistoryChange))
           as ChangeHistoryChange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ChangeHistoryChange create() => ChangeHistoryChange._();
+  @$core.override
   ChangeHistoryChange createEmptyInstance() => create();
-  static $pb.PbList<ChangeHistoryChange> createRepeated() =>
-      $pb.PbList<ChangeHistoryChange>();
   @$core.pragma('dart2js:noInline')
   static ChangeHistoryChange getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ChangeHistoryChange>(create);
@@ -3439,27 +3030,21 @@ class ChangeHistoryChange extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get resource => $_getSZ(0);
   @$pb.TagNumber(1)
-  set resource($core.String v) {
-    $_setString(0, v);
-  }
-
+  set resource($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
   @$pb.TagNumber(1)
-  void clearResource() => clearField(1);
+  void clearResource() => $_clearField(1);
 
   /// The type of action that changed this resource.
   @$pb.TagNumber(2)
   ActionType get action => $_getN(1);
   @$pb.TagNumber(2)
-  set action(ActionType v) {
-    setField(2, v);
-  }
-
+  set action(ActionType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasAction() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAction() => clearField(2);
+  void clearAction() => $_clearField(2);
 
   /// Resource contents from before the change was made. If this resource was
   /// created in this change, this field will be missing.
@@ -3467,14 +3052,12 @@ class ChangeHistoryChange extends $pb.GeneratedMessage {
   ChangeHistoryChange_ChangeHistoryResource get resourceBeforeChange =>
       $_getN(2);
   @$pb.TagNumber(3)
-  set resourceBeforeChange(ChangeHistoryChange_ChangeHistoryResource v) {
-    setField(3, v);
-  }
-
+  set resourceBeforeChange(ChangeHistoryChange_ChangeHistoryResource value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasResourceBeforeChange() => $_has(2);
   @$pb.TagNumber(3)
-  void clearResourceBeforeChange() => clearField(3);
+  void clearResourceBeforeChange() => $_clearField(3);
   @$pb.TagNumber(3)
   ChangeHistoryChange_ChangeHistoryResource ensureResourceBeforeChange() =>
       $_ensure(2);
@@ -3485,14 +3068,12 @@ class ChangeHistoryChange extends $pb.GeneratedMessage {
   ChangeHistoryChange_ChangeHistoryResource get resourceAfterChange =>
       $_getN(3);
   @$pb.TagNumber(4)
-  set resourceAfterChange(ChangeHistoryChange_ChangeHistoryResource v) {
-    setField(4, v);
-  }
-
+  set resourceAfterChange(ChangeHistoryChange_ChangeHistoryResource value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasResourceAfterChange() => $_has(3);
   @$pb.TagNumber(4)
-  void clearResourceAfterChange() => clearField(4);
+  void clearResourceAfterChange() => $_clearField(4);
   @$pb.TagNumber(4)
   ChangeHistoryChange_ChangeHistoryResource ensureResourceAfterChange() =>
       $_ensure(3);
@@ -3509,34 +3090,28 @@ class DisplayVideo360AdvertiserLink extends $pb.GeneratedMessage {
     $1.BoolValue? campaignDataSharingEnabled,
     $1.BoolValue? costDataSharingEnabled,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (advertiserId != null) {
-      $result.advertiserId = advertiserId;
-    }
-    if (advertiserDisplayName != null) {
-      $result.advertiserDisplayName = advertiserDisplayName;
-    }
-    if (adsPersonalizationEnabled != null) {
-      $result.adsPersonalizationEnabled = adsPersonalizationEnabled;
-    }
-    if (campaignDataSharingEnabled != null) {
-      $result.campaignDataSharingEnabled = campaignDataSharingEnabled;
-    }
-    if (costDataSharingEnabled != null) {
-      $result.costDataSharingEnabled = costDataSharingEnabled;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (advertiserId != null) result.advertiserId = advertiserId;
+    if (advertiserDisplayName != null)
+      result.advertiserDisplayName = advertiserDisplayName;
+    if (adsPersonalizationEnabled != null)
+      result.adsPersonalizationEnabled = adsPersonalizationEnabled;
+    if (campaignDataSharingEnabled != null)
+      result.campaignDataSharingEnabled = campaignDataSharingEnabled;
+    if (costDataSharingEnabled != null)
+      result.costDataSharingEnabled = costDataSharingEnabled;
+    return result;
   }
-  DisplayVideo360AdvertiserLink._() : super();
-  factory DisplayVideo360AdvertiserLink.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DisplayVideo360AdvertiserLink.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DisplayVideo360AdvertiserLink._();
+
+  factory DisplayVideo360AdvertiserLink.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DisplayVideo360AdvertiserLink.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DisplayVideo360AdvertiserLink',
@@ -3554,89 +3129,72 @@ class DisplayVideo360AdvertiserLink extends $pb.GeneratedMessage {
         subBuilder: $1.BoolValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DisplayVideo360AdvertiserLink clone() =>
-      DisplayVideo360AdvertiserLink()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DisplayVideo360AdvertiserLink clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DisplayVideo360AdvertiserLink copyWith(
           void Function(DisplayVideo360AdvertiserLink) updates) =>
       super.copyWith(
               (message) => updates(message as DisplayVideo360AdvertiserLink))
           as DisplayVideo360AdvertiserLink;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DisplayVideo360AdvertiserLink create() =>
       DisplayVideo360AdvertiserLink._();
+  @$core.override
   DisplayVideo360AdvertiserLink createEmptyInstance() => create();
-  static $pb.PbList<DisplayVideo360AdvertiserLink> createRepeated() =>
-      $pb.PbList<DisplayVideo360AdvertiserLink>();
   @$core.pragma('dart2js:noInline')
   static DisplayVideo360AdvertiserLink getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DisplayVideo360AdvertiserLink>(create);
   static DisplayVideo360AdvertiserLink? _defaultInstance;
 
-  ///  Output only. The resource name for this DisplayVideo360AdvertiserLink
-  ///  resource. Format:
-  ///  properties/{propertyId}/displayVideo360AdvertiserLinks/{linkId}
+  /// Output only. The resource name for this DisplayVideo360AdvertiserLink
+  /// resource. Format:
+  /// properties/{propertyId}/displayVideo360AdvertiserLinks/{linkId}
   ///
-  ///  Note: linkId is not the Display & Video 360 Advertiser ID
+  /// Note: linkId is not the Display & Video 360 Advertiser ID
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Immutable. The Display & Video 360 Advertiser's advertiser ID.
   @$pb.TagNumber(2)
   $core.String get advertiserId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set advertiserId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set advertiserId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAdvertiserId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAdvertiserId() => clearField(2);
+  void clearAdvertiserId() => $_clearField(2);
 
   /// Output only. The display name of the Display & Video 360 Advertiser.
   @$pb.TagNumber(3)
   $core.String get advertiserDisplayName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set advertiserDisplayName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set advertiserDisplayName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasAdvertiserDisplayName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAdvertiserDisplayName() => clearField(3);
+  void clearAdvertiserDisplayName() => $_clearField(3);
 
   /// Enables personalized advertising features with this integration.
   /// If this field is not set on create/update, it will be defaulted to true.
   @$pb.TagNumber(4)
   $1.BoolValue get adsPersonalizationEnabled => $_getN(3);
   @$pb.TagNumber(4)
-  set adsPersonalizationEnabled($1.BoolValue v) {
-    setField(4, v);
-  }
-
+  set adsPersonalizationEnabled($1.BoolValue value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasAdsPersonalizationEnabled() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAdsPersonalizationEnabled() => clearField(4);
+  void clearAdsPersonalizationEnabled() => $_clearField(4);
   @$pb.TagNumber(4)
   $1.BoolValue ensureAdsPersonalizationEnabled() => $_ensure(3);
 
@@ -3647,14 +3205,11 @@ class DisplayVideo360AdvertiserLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $1.BoolValue get campaignDataSharingEnabled => $_getN(4);
   @$pb.TagNumber(5)
-  set campaignDataSharingEnabled($1.BoolValue v) {
-    setField(5, v);
-  }
-
+  set campaignDataSharingEnabled($1.BoolValue value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasCampaignDataSharingEnabled() => $_has(4);
   @$pb.TagNumber(5)
-  void clearCampaignDataSharingEnabled() => clearField(5);
+  void clearCampaignDataSharingEnabled() => $_clearField(5);
   @$pb.TagNumber(5)
   $1.BoolValue ensureCampaignDataSharingEnabled() => $_ensure(4);
 
@@ -3666,24 +3221,21 @@ class DisplayVideo360AdvertiserLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $1.BoolValue get costDataSharingEnabled => $_getN(5);
   @$pb.TagNumber(6)
-  set costDataSharingEnabled($1.BoolValue v) {
-    setField(6, v);
-  }
-
+  set costDataSharingEnabled($1.BoolValue value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasCostDataSharingEnabled() => $_has(5);
   @$pb.TagNumber(6)
-  void clearCostDataSharingEnabled() => clearField(6);
+  void clearCostDataSharingEnabled() => $_clearField(6);
   @$pb.TagNumber(6)
   $1.BoolValue ensureCostDataSharingEnabled() => $_ensure(5);
 }
 
-///  A proposal for a link between a Google Analytics property and a Display &
-///  Video 360 advertiser.
+/// A proposal for a link between a Google Analytics property and a Display &
+/// Video 360 advertiser.
 ///
-///  A proposal is converted to a DisplayVideo360AdvertiserLink once approved.
-///  Google Analytics admins approve inbound proposals while Display & Video 360
-///  admins approve outbound proposals.
+/// A proposal is converted to a DisplayVideo360AdvertiserLink once approved.
+/// Google Analytics admins approve inbound proposals while Display & Video 360
+/// admins approve outbound proposals.
 class DisplayVideo360AdvertiserLinkProposal extends $pb.GeneratedMessage {
   factory DisplayVideo360AdvertiserLinkProposal({
     $core.String? name,
@@ -3695,41 +3247,32 @@ class DisplayVideo360AdvertiserLinkProposal extends $pb.GeneratedMessage {
     $1.BoolValue? campaignDataSharingEnabled,
     $1.BoolValue? costDataSharingEnabled,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (advertiserId != null) {
-      $result.advertiserId = advertiserId;
-    }
-    if (linkProposalStatusDetails != null) {
-      $result.linkProposalStatusDetails = linkProposalStatusDetails;
-    }
-    if (advertiserDisplayName != null) {
-      $result.advertiserDisplayName = advertiserDisplayName;
-    }
-    if (validationEmail != null) {
-      $result.validationEmail = validationEmail;
-    }
-    if (adsPersonalizationEnabled != null) {
-      $result.adsPersonalizationEnabled = adsPersonalizationEnabled;
-    }
-    if (campaignDataSharingEnabled != null) {
-      $result.campaignDataSharingEnabled = campaignDataSharingEnabled;
-    }
-    if (costDataSharingEnabled != null) {
-      $result.costDataSharingEnabled = costDataSharingEnabled;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (advertiserId != null) result.advertiserId = advertiserId;
+    if (linkProposalStatusDetails != null)
+      result.linkProposalStatusDetails = linkProposalStatusDetails;
+    if (advertiserDisplayName != null)
+      result.advertiserDisplayName = advertiserDisplayName;
+    if (validationEmail != null) result.validationEmail = validationEmail;
+    if (adsPersonalizationEnabled != null)
+      result.adsPersonalizationEnabled = adsPersonalizationEnabled;
+    if (campaignDataSharingEnabled != null)
+      result.campaignDataSharingEnabled = campaignDataSharingEnabled;
+    if (costDataSharingEnabled != null)
+      result.costDataSharingEnabled = costDataSharingEnabled;
+    return result;
   }
-  DisplayVideo360AdvertiserLinkProposal._() : super();
+
+  DisplayVideo360AdvertiserLinkProposal._();
+
   factory DisplayVideo360AdvertiserLinkProposal.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DisplayVideo360AdvertiserLinkProposal.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DisplayVideo360AdvertiserLinkProposal.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DisplayVideo360AdvertiserLinkProposal',
@@ -3751,76 +3294,63 @@ class DisplayVideo360AdvertiserLinkProposal extends $pb.GeneratedMessage {
         subBuilder: $1.BoolValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DisplayVideo360AdvertiserLinkProposal clone() =>
-      DisplayVideo360AdvertiserLinkProposal()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DisplayVideo360AdvertiserLinkProposal clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DisplayVideo360AdvertiserLinkProposal copyWith(
           void Function(DisplayVideo360AdvertiserLinkProposal) updates) =>
       super.copyWith((message) =>
               updates(message as DisplayVideo360AdvertiserLinkProposal))
           as DisplayVideo360AdvertiserLinkProposal;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DisplayVideo360AdvertiserLinkProposal create() =>
       DisplayVideo360AdvertiserLinkProposal._();
+  @$core.override
   DisplayVideo360AdvertiserLinkProposal createEmptyInstance() => create();
-  static $pb.PbList<DisplayVideo360AdvertiserLinkProposal> createRepeated() =>
-      $pb.PbList<DisplayVideo360AdvertiserLinkProposal>();
   @$core.pragma('dart2js:noInline')
   static DisplayVideo360AdvertiserLinkProposal getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
           DisplayVideo360AdvertiserLinkProposal>(create);
   static DisplayVideo360AdvertiserLinkProposal? _defaultInstance;
 
-  ///  Output only. The resource name for this
-  ///  DisplayVideo360AdvertiserLinkProposal resource. Format:
-  ///  properties/{propertyId}/displayVideo360AdvertiserLinkProposals/{proposalId}
+  /// Output only. The resource name for this
+  /// DisplayVideo360AdvertiserLinkProposal resource. Format:
+  /// properties/{propertyId}/displayVideo360AdvertiserLinkProposals/{proposalId}
   ///
-  ///  Note: proposalId is not the Display & Video 360 Advertiser ID
+  /// Note: proposalId is not the Display & Video 360 Advertiser ID
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Immutable. The Display & Video 360 Advertiser's advertiser ID.
   @$pb.TagNumber(2)
   $core.String get advertiserId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set advertiserId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set advertiserId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAdvertiserId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAdvertiserId() => clearField(2);
+  void clearAdvertiserId() => $_clearField(2);
 
   /// Output only. The status information for this link proposal.
   @$pb.TagNumber(3)
   LinkProposalStatusDetails get linkProposalStatusDetails => $_getN(2);
   @$pb.TagNumber(3)
-  set linkProposalStatusDetails(LinkProposalStatusDetails v) {
-    setField(3, v);
-  }
-
+  set linkProposalStatusDetails(LinkProposalStatusDetails value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasLinkProposalStatusDetails() => $_has(2);
   @$pb.TagNumber(3)
-  void clearLinkProposalStatusDetails() => clearField(3);
+  void clearLinkProposalStatusDetails() => $_clearField(3);
   @$pb.TagNumber(3)
   LinkProposalStatusDetails ensureLinkProposalStatusDetails() => $_ensure(2);
 
@@ -3829,14 +3359,11 @@ class DisplayVideo360AdvertiserLinkProposal extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get advertiserDisplayName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set advertiserDisplayName($core.String v) {
-    $_setString(3, v);
-  }
-
+  set advertiserDisplayName($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasAdvertiserDisplayName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAdvertiserDisplayName() => clearField(4);
+  void clearAdvertiserDisplayName() => $_clearField(4);
 
   /// Input only. On a proposal being sent to Display & Video 360, this field
   /// must be set to the email address of an admin on the target advertiser. This
@@ -3847,28 +3374,22 @@ class DisplayVideo360AdvertiserLinkProposal extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get validationEmail => $_getSZ(4);
   @$pb.TagNumber(5)
-  set validationEmail($core.String v) {
-    $_setString(4, v);
-  }
-
+  set validationEmail($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasValidationEmail() => $_has(4);
   @$pb.TagNumber(5)
-  void clearValidationEmail() => clearField(5);
+  void clearValidationEmail() => $_clearField(5);
 
   /// Immutable. Enables personalized advertising features with this integration.
   /// If this field is not set on create, it will be defaulted to true.
   @$pb.TagNumber(6)
   $1.BoolValue get adsPersonalizationEnabled => $_getN(5);
   @$pb.TagNumber(6)
-  set adsPersonalizationEnabled($1.BoolValue v) {
-    setField(6, v);
-  }
-
+  set adsPersonalizationEnabled($1.BoolValue value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasAdsPersonalizationEnabled() => $_has(5);
   @$pb.TagNumber(6)
-  void clearAdsPersonalizationEnabled() => clearField(6);
+  void clearAdsPersonalizationEnabled() => $_clearField(6);
   @$pb.TagNumber(6)
   $1.BoolValue ensureAdsPersonalizationEnabled() => $_ensure(5);
 
@@ -3877,14 +3398,11 @@ class DisplayVideo360AdvertiserLinkProposal extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $1.BoolValue get campaignDataSharingEnabled => $_getN(6);
   @$pb.TagNumber(7)
-  set campaignDataSharingEnabled($1.BoolValue v) {
-    setField(7, v);
-  }
-
+  set campaignDataSharingEnabled($1.BoolValue value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasCampaignDataSharingEnabled() => $_has(6);
   @$pb.TagNumber(7)
-  void clearCampaignDataSharingEnabled() => clearField(7);
+  void clearCampaignDataSharingEnabled() => $_clearField(7);
   @$pb.TagNumber(7)
   $1.BoolValue ensureCampaignDataSharingEnabled() => $_ensure(6);
 
@@ -3894,14 +3412,11 @@ class DisplayVideo360AdvertiserLinkProposal extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $1.BoolValue get costDataSharingEnabled => $_getN(7);
   @$pb.TagNumber(8)
-  set costDataSharingEnabled($1.BoolValue v) {
-    setField(8, v);
-  }
-
+  set costDataSharingEnabled($1.BoolValue value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasCostDataSharingEnabled() => $_has(7);
   @$pb.TagNumber(8)
-  void clearCostDataSharingEnabled() => clearField(8);
+  void clearCostDataSharingEnabled() => $_clearField(8);
   @$pb.TagNumber(8)
   $1.BoolValue ensureCostDataSharingEnabled() => $_ensure(7);
 }
@@ -3917,37 +3432,30 @@ class SearchAds360Link extends $pb.GeneratedMessage {
     $1.BoolValue? adsPersonalizationEnabled,
     $1.BoolValue? siteStatsSharingEnabled,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (advertiserId != null) {
-      $result.advertiserId = advertiserId;
-    }
-    if (campaignDataSharingEnabled != null) {
-      $result.campaignDataSharingEnabled = campaignDataSharingEnabled;
-    }
-    if (costDataSharingEnabled != null) {
-      $result.costDataSharingEnabled = costDataSharingEnabled;
-    }
-    if (advertiserDisplayName != null) {
-      $result.advertiserDisplayName = advertiserDisplayName;
-    }
-    if (adsPersonalizationEnabled != null) {
-      $result.adsPersonalizationEnabled = adsPersonalizationEnabled;
-    }
-    if (siteStatsSharingEnabled != null) {
-      $result.siteStatsSharingEnabled = siteStatsSharingEnabled;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (advertiserId != null) result.advertiserId = advertiserId;
+    if (campaignDataSharingEnabled != null)
+      result.campaignDataSharingEnabled = campaignDataSharingEnabled;
+    if (costDataSharingEnabled != null)
+      result.costDataSharingEnabled = costDataSharingEnabled;
+    if (advertiserDisplayName != null)
+      result.advertiserDisplayName = advertiserDisplayName;
+    if (adsPersonalizationEnabled != null)
+      result.adsPersonalizationEnabled = adsPersonalizationEnabled;
+    if (siteStatsSharingEnabled != null)
+      result.siteStatsSharingEnabled = siteStatsSharingEnabled;
+    return result;
   }
-  SearchAds360Link._() : super();
-  factory SearchAds360Link.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SearchAds360Link.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SearchAds360Link._();
+
+  factory SearchAds360Link.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SearchAds360Link.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SearchAds360Link',
@@ -3967,58 +3475,48 @@ class SearchAds360Link extends $pb.GeneratedMessage {
         subBuilder: $1.BoolValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SearchAds360Link clone() => SearchAds360Link()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SearchAds360Link clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SearchAds360Link copyWith(void Function(SearchAds360Link) updates) =>
       super.copyWith((message) => updates(message as SearchAds360Link))
           as SearchAds360Link;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SearchAds360Link create() => SearchAds360Link._();
+  @$core.override
   SearchAds360Link createEmptyInstance() => create();
-  static $pb.PbList<SearchAds360Link> createRepeated() =>
-      $pb.PbList<SearchAds360Link>();
   @$core.pragma('dart2js:noInline')
   static SearchAds360Link getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SearchAds360Link>(create);
   static SearchAds360Link? _defaultInstance;
 
-  ///  Output only. The resource name for this SearchAds360Link resource.
-  ///  Format: properties/{propertyId}/searchAds360Links/{linkId}
+  /// Output only. The resource name for this SearchAds360Link resource.
+  /// Format: properties/{propertyId}/searchAds360Links/{linkId}
   ///
-  ///  Note: linkId is not the Search Ads 360 advertiser ID
+  /// Note: linkId is not the Search Ads 360 advertiser ID
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Immutable. This field represents the Advertiser ID of the Search Ads 360
   /// Advertiser. that has been linked.
   @$pb.TagNumber(2)
   $core.String get advertiserId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set advertiserId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set advertiserId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAdvertiserId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAdvertiserId() => clearField(2);
+  void clearAdvertiserId() => $_clearField(2);
 
   /// Immutable. Enables the import of campaign data from Search Ads 360 into the
   /// Google Analytics property. After link creation, this can only be updated
@@ -4027,14 +3525,11 @@ class SearchAds360Link extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.BoolValue get campaignDataSharingEnabled => $_getN(2);
   @$pb.TagNumber(3)
-  set campaignDataSharingEnabled($1.BoolValue v) {
-    setField(3, v);
-  }
-
+  set campaignDataSharingEnabled($1.BoolValue value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCampaignDataSharingEnabled() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCampaignDataSharingEnabled() => clearField(3);
+  void clearCampaignDataSharingEnabled() => $_clearField(3);
   @$pb.TagNumber(3)
   $1.BoolValue ensureCampaignDataSharingEnabled() => $_ensure(2);
 
@@ -4046,14 +3541,11 @@ class SearchAds360Link extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $1.BoolValue get costDataSharingEnabled => $_getN(3);
   @$pb.TagNumber(4)
-  set costDataSharingEnabled($1.BoolValue v) {
-    setField(4, v);
-  }
-
+  set costDataSharingEnabled($1.BoolValue value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasCostDataSharingEnabled() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCostDataSharingEnabled() => clearField(4);
+  void clearCostDataSharingEnabled() => $_clearField(4);
   @$pb.TagNumber(4)
   $1.BoolValue ensureCostDataSharingEnabled() => $_ensure(3);
 
@@ -4062,28 +3554,22 @@ class SearchAds360Link extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get advertiserDisplayName => $_getSZ(4);
   @$pb.TagNumber(5)
-  set advertiserDisplayName($core.String v) {
-    $_setString(4, v);
-  }
-
+  set advertiserDisplayName($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasAdvertiserDisplayName() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAdvertiserDisplayName() => clearField(5);
+  void clearAdvertiserDisplayName() => $_clearField(5);
 
   /// Enables personalized advertising features with this integration.
   /// If this field is not set on create, it will be defaulted to true.
   @$pb.TagNumber(6)
   $1.BoolValue get adsPersonalizationEnabled => $_getN(5);
   @$pb.TagNumber(6)
-  set adsPersonalizationEnabled($1.BoolValue v) {
-    setField(6, v);
-  }
-
+  set adsPersonalizationEnabled($1.BoolValue value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasAdsPersonalizationEnabled() => $_has(5);
   @$pb.TagNumber(6)
-  void clearAdsPersonalizationEnabled() => clearField(6);
+  void clearAdsPersonalizationEnabled() => $_clearField(6);
   @$pb.TagNumber(6)
   $1.BoolValue ensureAdsPersonalizationEnabled() => $_ensure(5);
 
@@ -4092,14 +3578,11 @@ class SearchAds360Link extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $1.BoolValue get siteStatsSharingEnabled => $_getN(6);
   @$pb.TagNumber(7)
-  set siteStatsSharingEnabled($1.BoolValue v) {
-    setField(7, v);
-  }
-
+  set siteStatsSharingEnabled($1.BoolValue value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasSiteStatsSharingEnabled() => $_has(6);
   @$pb.TagNumber(7)
-  void clearSiteStatsSharingEnabled() => clearField(7);
+  void clearSiteStatsSharingEnabled() => $_clearField(7);
   @$pb.TagNumber(7)
   $1.BoolValue ensureSiteStatsSharingEnabled() => $_ensure(6);
 }
@@ -4111,67 +3594,51 @@ class LinkProposalStatusDetails extends $pb.GeneratedMessage {
     $core.String? requestorEmail,
     LinkProposalState? linkProposalState,
   }) {
-    final $result = create();
-    if (linkProposalInitiatingProduct != null) {
-      $result.linkProposalInitiatingProduct = linkProposalInitiatingProduct;
-    }
-    if (requestorEmail != null) {
-      $result.requestorEmail = requestorEmail;
-    }
-    if (linkProposalState != null) {
-      $result.linkProposalState = linkProposalState;
-    }
-    return $result;
+    final result = create();
+    if (linkProposalInitiatingProduct != null)
+      result.linkProposalInitiatingProduct = linkProposalInitiatingProduct;
+    if (requestorEmail != null) result.requestorEmail = requestorEmail;
+    if (linkProposalState != null) result.linkProposalState = linkProposalState;
+    return result;
   }
-  LinkProposalStatusDetails._() : super();
-  factory LinkProposalStatusDetails.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory LinkProposalStatusDetails.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  LinkProposalStatusDetails._();
+
+  factory LinkProposalStatusDetails.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LinkProposalStatusDetails.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'LinkProposalStatusDetails',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
-    ..e<LinkProposalInitiatingProduct>(
-        1,
-        _omitFieldNames ? '' : 'linkProposalInitiatingProduct',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: LinkProposalInitiatingProduct
-            .LINK_PROPOSAL_INITIATING_PRODUCT_UNSPECIFIED,
-        valueOf: LinkProposalInitiatingProduct.valueOf,
+    ..aE<LinkProposalInitiatingProduct>(
+        1, _omitFieldNames ? '' : 'linkProposalInitiatingProduct',
         enumValues: LinkProposalInitiatingProduct.values)
     ..aOS(2, _omitFieldNames ? '' : 'requestorEmail')
-    ..e<LinkProposalState>(
-        3, _omitFieldNames ? '' : 'linkProposalState', $pb.PbFieldType.OE,
-        defaultOrMaker: LinkProposalState.LINK_PROPOSAL_STATE_UNSPECIFIED,
-        valueOf: LinkProposalState.valueOf,
+    ..aE<LinkProposalState>(3, _omitFieldNames ? '' : 'linkProposalState',
         enumValues: LinkProposalState.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  LinkProposalStatusDetails clone() =>
-      LinkProposalStatusDetails()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LinkProposalStatusDetails clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   LinkProposalStatusDetails copyWith(
           void Function(LinkProposalStatusDetails) updates) =>
       super.copyWith((message) => updates(message as LinkProposalStatusDetails))
           as LinkProposalStatusDetails;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static LinkProposalStatusDetails create() => LinkProposalStatusDetails._();
+  @$core.override
   LinkProposalStatusDetails createEmptyInstance() => create();
-  static $pb.PbList<LinkProposalStatusDetails> createRepeated() =>
-      $pb.PbList<LinkProposalStatusDetails>();
   @$core.pragma('dart2js:noInline')
   static LinkProposalStatusDetails getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LinkProposalStatusDetails>(create);
@@ -4181,40 +3648,32 @@ class LinkProposalStatusDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   LinkProposalInitiatingProduct get linkProposalInitiatingProduct => $_getN(0);
   @$pb.TagNumber(1)
-  set linkProposalInitiatingProduct(LinkProposalInitiatingProduct v) {
-    setField(1, v);
-  }
-
+  set linkProposalInitiatingProduct(LinkProposalInitiatingProduct value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasLinkProposalInitiatingProduct() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLinkProposalInitiatingProduct() => clearField(1);
+  void clearLinkProposalInitiatingProduct() => $_clearField(1);
 
   /// Output only. The email address of the user that proposed this linkage.
   @$pb.TagNumber(2)
   $core.String get requestorEmail => $_getSZ(1);
   @$pb.TagNumber(2)
-  set requestorEmail($core.String v) {
-    $_setString(1, v);
-  }
-
+  set requestorEmail($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasRequestorEmail() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRequestorEmail() => clearField(2);
+  void clearRequestorEmail() => $_clearField(2);
 
   /// Output only. The state of this proposal.
   @$pb.TagNumber(3)
   LinkProposalState get linkProposalState => $_getN(2);
   @$pb.TagNumber(3)
-  set linkProposalState(LinkProposalState v) {
-    setField(3, v);
-  }
-
+  set linkProposalState(LinkProposalState value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasLinkProposalState() => $_has(2);
   @$pb.TagNumber(3)
-  void clearLinkProposalState() => clearField(3);
+  void clearLinkProposalState() => $_clearField(3);
 }
 
 /// Defines a default value/currency for a conversion event. Both value and
@@ -4224,55 +3683,48 @@ class ConversionEvent_DefaultConversionValue extends $pb.GeneratedMessage {
     $core.double? value,
     $core.String? currencyCode,
   }) {
-    final $result = create();
-    if (value != null) {
-      $result.value = value;
-    }
-    if (currencyCode != null) {
-      $result.currencyCode = currencyCode;
-    }
-    return $result;
+    final result = create();
+    if (value != null) result.value = value;
+    if (currencyCode != null) result.currencyCode = currencyCode;
+    return result;
   }
-  ConversionEvent_DefaultConversionValue._() : super();
+
+  ConversionEvent_DefaultConversionValue._();
+
   factory ConversionEvent_DefaultConversionValue.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ConversionEvent_DefaultConversionValue.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ConversionEvent_DefaultConversionValue.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ConversionEvent.DefaultConversionValue',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..aD(1, _omitFieldNames ? '' : 'value')
     ..aOS(2, _omitFieldNames ? '' : 'currencyCode')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ConversionEvent_DefaultConversionValue clone() =>
-      ConversionEvent_DefaultConversionValue()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConversionEvent_DefaultConversionValue clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ConversionEvent_DefaultConversionValue copyWith(
           void Function(ConversionEvent_DefaultConversionValue) updates) =>
       super.copyWith((message) =>
               updates(message as ConversionEvent_DefaultConversionValue))
           as ConversionEvent_DefaultConversionValue;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ConversionEvent_DefaultConversionValue create() =>
       ConversionEvent_DefaultConversionValue._();
+  @$core.override
   ConversionEvent_DefaultConversionValue createEmptyInstance() => create();
-  static $pb.PbList<ConversionEvent_DefaultConversionValue> createRepeated() =>
-      $pb.PbList<ConversionEvent_DefaultConversionValue>();
   @$core.pragma('dart2js:noInline')
   static ConversionEvent_DefaultConversionValue getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -4284,14 +3736,11 @@ class ConversionEvent_DefaultConversionValue extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.double get value => $_getN(0);
   @$pb.TagNumber(1)
-  set value($core.double v) {
-    $_setDouble(0, v);
-  }
-
+  set value($core.double value) => $_setDouble(0, value);
   @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  void clearValue() => $_clearField(1);
 
   /// When a conversion event for this event_name has no set currency,
   /// this currency will be applied as the default. Must be in ISO 4217
@@ -4300,14 +3749,11 @@ class ConversionEvent_DefaultConversionValue extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get currencyCode => $_getSZ(1);
   @$pb.TagNumber(2)
-  set currencyCode($core.String v) {
-    $_setString(1, v);
-  }
-
+  set currencyCode($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCurrencyCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCurrencyCode() => clearField(2);
+  void clearCurrencyCode() => $_clearField(2);
 }
 
 /// A conversion event in a Google Analytics property.
@@ -4321,37 +3767,26 @@ class ConversionEvent extends $pb.GeneratedMessage {
     ConversionEvent_ConversionCountingMethod? countingMethod,
     ConversionEvent_DefaultConversionValue? defaultConversionValue,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (eventName != null) {
-      $result.eventName = eventName;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (deletable != null) {
-      $result.deletable = deletable;
-    }
-    if (custom != null) {
-      $result.custom = custom;
-    }
-    if (countingMethod != null) {
-      $result.countingMethod = countingMethod;
-    }
-    if (defaultConversionValue != null) {
-      $result.defaultConversionValue = defaultConversionValue;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (eventName != null) result.eventName = eventName;
+    if (createTime != null) result.createTime = createTime;
+    if (deletable != null) result.deletable = deletable;
+    if (custom != null) result.custom = custom;
+    if (countingMethod != null) result.countingMethod = countingMethod;
+    if (defaultConversionValue != null)
+      result.defaultConversionValue = defaultConversionValue;
+    return result;
   }
-  ConversionEvent._() : super();
-  factory ConversionEvent.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ConversionEvent.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ConversionEvent._();
+
+  factory ConversionEvent.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ConversionEvent.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ConversionEvent',
@@ -4364,35 +3799,28 @@ class ConversionEvent extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..aOB(4, _omitFieldNames ? '' : 'deletable')
     ..aOB(5, _omitFieldNames ? '' : 'custom')
-    ..e<ConversionEvent_ConversionCountingMethod>(
-        6, _omitFieldNames ? '' : 'countingMethod', $pb.PbFieldType.OE,
-        defaultOrMaker: ConversionEvent_ConversionCountingMethod
-            .CONVERSION_COUNTING_METHOD_UNSPECIFIED,
-        valueOf: ConversionEvent_ConversionCountingMethod.valueOf,
+    ..aE<ConversionEvent_ConversionCountingMethod>(
+        6, _omitFieldNames ? '' : 'countingMethod',
         enumValues: ConversionEvent_ConversionCountingMethod.values)
     ..aOM<ConversionEvent_DefaultConversionValue>(
         7, _omitFieldNames ? '' : 'defaultConversionValue',
         subBuilder: ConversionEvent_DefaultConversionValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ConversionEvent clone() => ConversionEvent()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConversionEvent clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ConversionEvent copyWith(void Function(ConversionEvent) updates) =>
       super.copyWith((message) => updates(message as ConversionEvent))
           as ConversionEvent;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ConversionEvent create() => ConversionEvent._();
+  @$core.override
   ConversionEvent createEmptyInstance() => create();
-  static $pb.PbList<ConversionEvent> createRepeated() =>
-      $pb.PbList<ConversionEvent>();
   @$core.pragma('dart2js:noInline')
   static ConversionEvent getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConversionEvent>(create);
@@ -4403,41 +3831,32 @@ class ConversionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Immutable. The event name for this conversion event.
   /// Examples: 'click', 'purchase'
   @$pb.TagNumber(2)
   $core.String get eventName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set eventName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set eventName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEventName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEventName() => clearField(2);
+  void clearEventName() => $_clearField(2);
 
   /// Output only. Time when this conversion event was created in the property.
   @$pb.TagNumber(3)
   $0.Timestamp get createTime => $_getN(2);
   @$pb.TagNumber(3)
-  set createTime($0.Timestamp v) {
-    setField(3, v);
-  }
-
+  set createTime($0.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCreateTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCreateTime() => clearField(3);
+  void clearCreateTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Timestamp ensureCreateTime() => $_ensure(2);
 
@@ -4446,14 +3865,11 @@ class ConversionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get deletable => $_getBF(3);
   @$pb.TagNumber(4)
-  set deletable($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set deletable($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDeletable() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDeletable() => clearField(4);
+  void clearDeletable() => $_clearField(4);
 
   /// Output only. If set to true, this conversion event refers to a custom
   /// event.  If set to false, this conversion event refers to a default event in
@@ -4464,14 +3880,11 @@ class ConversionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool get custom => $_getBF(4);
   @$pb.TagNumber(5)
-  set custom($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set custom($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasCustom() => $_has(4);
   @$pb.TagNumber(5)
-  void clearCustom() => clearField(5);
+  void clearCustom() => $_clearField(5);
 
   /// Optional. The method by which conversions will be counted across multiple
   /// events within a session. If this value is not provided, it will be set to
@@ -4479,28 +3892,24 @@ class ConversionEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   ConversionEvent_ConversionCountingMethod get countingMethod => $_getN(5);
   @$pb.TagNumber(6)
-  set countingMethod(ConversionEvent_ConversionCountingMethod v) {
-    setField(6, v);
-  }
-
+  set countingMethod(ConversionEvent_ConversionCountingMethod value) =>
+      $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasCountingMethod() => $_has(5);
   @$pb.TagNumber(6)
-  void clearCountingMethod() => clearField(6);
+  void clearCountingMethod() => $_clearField(6);
 
   /// Optional. Defines a default value/currency for a conversion event.
   @$pb.TagNumber(7)
   ConversionEvent_DefaultConversionValue get defaultConversionValue =>
       $_getN(6);
   @$pb.TagNumber(7)
-  set defaultConversionValue(ConversionEvent_DefaultConversionValue v) {
-    setField(7, v);
-  }
-
+  set defaultConversionValue(ConversionEvent_DefaultConversionValue value) =>
+      $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasDefaultConversionValue() => $_has(6);
   @$pb.TagNumber(7)
-  void clearDefaultConversionValue() => clearField(7);
+  void clearDefaultConversionValue() => $_clearField(7);
   @$pb.TagNumber(7)
   ConversionEvent_DefaultConversionValue ensureDefaultConversionValue() =>
       $_ensure(6);
@@ -4512,53 +3921,45 @@ class KeyEvent_DefaultValue extends $pb.GeneratedMessage {
     $core.double? numericValue,
     $core.String? currencyCode,
   }) {
-    final $result = create();
-    if (numericValue != null) {
-      $result.numericValue = numericValue;
-    }
-    if (currencyCode != null) {
-      $result.currencyCode = currencyCode;
-    }
-    return $result;
+    final result = create();
+    if (numericValue != null) result.numericValue = numericValue;
+    if (currencyCode != null) result.currencyCode = currencyCode;
+    return result;
   }
-  KeyEvent_DefaultValue._() : super();
-  factory KeyEvent_DefaultValue.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory KeyEvent_DefaultValue.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  KeyEvent_DefaultValue._();
+
+  factory KeyEvent_DefaultValue.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory KeyEvent_DefaultValue.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'KeyEvent.DefaultValue',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
-    ..a<$core.double>(
-        1, _omitFieldNames ? '' : 'numericValue', $pb.PbFieldType.OD)
+    ..aD(1, _omitFieldNames ? '' : 'numericValue')
     ..aOS(2, _omitFieldNames ? '' : 'currencyCode')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  KeyEvent_DefaultValue clone() =>
-      KeyEvent_DefaultValue()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  KeyEvent_DefaultValue clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   KeyEvent_DefaultValue copyWith(
           void Function(KeyEvent_DefaultValue) updates) =>
       super.copyWith((message) => updates(message as KeyEvent_DefaultValue))
           as KeyEvent_DefaultValue;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static KeyEvent_DefaultValue create() => KeyEvent_DefaultValue._();
+  @$core.override
   KeyEvent_DefaultValue createEmptyInstance() => create();
-  static $pb.PbList<KeyEvent_DefaultValue> createRepeated() =>
-      $pb.PbList<KeyEvent_DefaultValue>();
   @$core.pragma('dart2js:noInline')
   static KeyEvent_DefaultValue getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<KeyEvent_DefaultValue>(create);
@@ -4570,31 +3971,25 @@ class KeyEvent_DefaultValue extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.double get numericValue => $_getN(0);
   @$pb.TagNumber(1)
-  set numericValue($core.double v) {
-    $_setDouble(0, v);
-  }
-
+  set numericValue($core.double value) => $_setDouble(0, value);
   @$pb.TagNumber(1)
   $core.bool hasNumericValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearNumericValue() => clearField(1);
+  void clearNumericValue() => $_clearField(1);
 
-  ///  Required. When an occurrence of this Key Event (specified by event_name)
-  ///  has no set currency this currency will be applied as the default. Must be
-  ///  in ISO 4217 currency code format.
+  /// Required. When an occurrence of this Key Event (specified by event_name)
+  /// has no set currency this currency will be applied as the default. Must be
+  /// in ISO 4217 currency code format.
   ///
-  ///  See https://en.wikipedia.org/wiki/ISO_4217 for more information.
+  /// See https://en.wikipedia.org/wiki/ISO_4217 for more information.
   @$pb.TagNumber(2)
   $core.String get currencyCode => $_getSZ(1);
   @$pb.TagNumber(2)
-  set currencyCode($core.String v) {
-    $_setString(1, v);
-  }
-
+  set currencyCode($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCurrencyCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCurrencyCode() => clearField(2);
+  void clearCurrencyCode() => $_clearField(2);
 }
 
 /// A key event in a Google Analytics property.
@@ -4608,37 +4003,25 @@ class KeyEvent extends $pb.GeneratedMessage {
     KeyEvent_CountingMethod? countingMethod,
     KeyEvent_DefaultValue? defaultValue,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (eventName != null) {
-      $result.eventName = eventName;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (deletable != null) {
-      $result.deletable = deletable;
-    }
-    if (custom != null) {
-      $result.custom = custom;
-    }
-    if (countingMethod != null) {
-      $result.countingMethod = countingMethod;
-    }
-    if (defaultValue != null) {
-      $result.defaultValue = defaultValue;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (eventName != null) result.eventName = eventName;
+    if (createTime != null) result.createTime = createTime;
+    if (deletable != null) result.deletable = deletable;
+    if (custom != null) result.custom = custom;
+    if (countingMethod != null) result.countingMethod = countingMethod;
+    if (defaultValue != null) result.defaultValue = defaultValue;
+    return result;
   }
-  KeyEvent._() : super();
-  factory KeyEvent.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory KeyEvent.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  KeyEvent._();
+
+  factory KeyEvent.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory KeyEvent.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'KeyEvent',
@@ -4651,31 +4034,25 @@ class KeyEvent extends $pb.GeneratedMessage {
         subBuilder: $0.Timestamp.create)
     ..aOB(4, _omitFieldNames ? '' : 'deletable')
     ..aOB(5, _omitFieldNames ? '' : 'custom')
-    ..e<KeyEvent_CountingMethod>(
-        6, _omitFieldNames ? '' : 'countingMethod', $pb.PbFieldType.OE,
-        defaultOrMaker: KeyEvent_CountingMethod.COUNTING_METHOD_UNSPECIFIED,
-        valueOf: KeyEvent_CountingMethod.valueOf,
+    ..aE<KeyEvent_CountingMethod>(6, _omitFieldNames ? '' : 'countingMethod',
         enumValues: KeyEvent_CountingMethod.values)
     ..aOM<KeyEvent_DefaultValue>(7, _omitFieldNames ? '' : 'defaultValue',
         subBuilder: KeyEvent_DefaultValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  KeyEvent clone() => KeyEvent()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  KeyEvent clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   KeyEvent copyWith(void Function(KeyEvent) updates) =>
       super.copyWith((message) => updates(message as KeyEvent)) as KeyEvent;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static KeyEvent create() => KeyEvent._();
+  @$core.override
   KeyEvent createEmptyInstance() => create();
-  static $pb.PbList<KeyEvent> createRepeated() => $pb.PbList<KeyEvent>();
   @$core.pragma('dart2js:noInline')
   static KeyEvent getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<KeyEvent>(create);
@@ -4686,41 +4063,32 @@ class KeyEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Immutable. The event name for this key event.
   /// Examples: 'click', 'purchase'
   @$pb.TagNumber(2)
   $core.String get eventName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set eventName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set eventName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEventName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEventName() => clearField(2);
+  void clearEventName() => $_clearField(2);
 
   /// Output only. Time when this key event was created in the property.
   @$pb.TagNumber(3)
   $0.Timestamp get createTime => $_getN(2);
   @$pb.TagNumber(3)
-  set createTime($0.Timestamp v) {
-    setField(3, v);
-  }
-
+  set createTime($0.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCreateTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCreateTime() => clearField(3);
+  void clearCreateTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Timestamp ensureCreateTime() => $_ensure(2);
 
@@ -4728,14 +4096,11 @@ class KeyEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get deletable => $_getBF(3);
   @$pb.TagNumber(4)
-  set deletable($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set deletable($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDeletable() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDeletable() => clearField(4);
+  void clearDeletable() => $_clearField(4);
 
   /// Output only. If set to true, this key event refers to a custom event.  If
   /// set to false, this key event refers to a default event in GA. Default
@@ -4746,41 +4111,32 @@ class KeyEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool get custom => $_getBF(4);
   @$pb.TagNumber(5)
-  set custom($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set custom($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasCustom() => $_has(4);
   @$pb.TagNumber(5)
-  void clearCustom() => clearField(5);
+  void clearCustom() => $_clearField(5);
 
   /// Required. The method by which Key Events will be counted across multiple
   /// events within a session.
   @$pb.TagNumber(6)
   KeyEvent_CountingMethod get countingMethod => $_getN(5);
   @$pb.TagNumber(6)
-  set countingMethod(KeyEvent_CountingMethod v) {
-    setField(6, v);
-  }
-
+  set countingMethod(KeyEvent_CountingMethod value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasCountingMethod() => $_has(5);
   @$pb.TagNumber(6)
-  void clearCountingMethod() => clearField(6);
+  void clearCountingMethod() => $_clearField(6);
 
   /// Optional. Defines a default value/currency for a key event.
   @$pb.TagNumber(7)
   KeyEvent_DefaultValue get defaultValue => $_getN(6);
   @$pb.TagNumber(7)
-  set defaultValue(KeyEvent_DefaultValue v) {
-    setField(7, v);
-  }
-
+  set defaultValue(KeyEvent_DefaultValue value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasDefaultValue() => $_has(6);
   @$pb.TagNumber(7)
-  void clearDefaultValue() => clearField(7);
+  void clearDefaultValue() => $_clearField(7);
   @$pb.TagNumber(7)
   KeyEvent_DefaultValue ensureDefaultValue() => $_ensure(6);
 }
@@ -4792,25 +4148,21 @@ class GoogleSignalsSettings extends $pb.GeneratedMessage {
     GoogleSignalsState? state,
     GoogleSignalsConsent? consent,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (state != null) {
-      $result.state = state;
-    }
-    if (consent != null) {
-      $result.consent = consent;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (state != null) result.state = state;
+    if (consent != null) result.consent = consent;
+    return result;
   }
-  GoogleSignalsSettings._() : super();
-  factory GoogleSignalsSettings.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GoogleSignalsSettings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GoogleSignalsSettings._();
+
+  factory GoogleSignalsSettings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GoogleSignalsSettings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GoogleSignalsSettings',
@@ -4818,38 +4170,27 @@ class GoogleSignalsSettings extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<GoogleSignalsState>(
-        3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
-        defaultOrMaker: GoogleSignalsState.GOOGLE_SIGNALS_STATE_UNSPECIFIED,
-        valueOf: GoogleSignalsState.valueOf,
+    ..aE<GoogleSignalsState>(3, _omitFieldNames ? '' : 'state',
         enumValues: GoogleSignalsState.values)
-    ..e<GoogleSignalsConsent>(
-        4, _omitFieldNames ? '' : 'consent', $pb.PbFieldType.OE,
-        defaultOrMaker: GoogleSignalsConsent.GOOGLE_SIGNALS_CONSENT_UNSPECIFIED,
-        valueOf: GoogleSignalsConsent.valueOf,
+    ..aE<GoogleSignalsConsent>(4, _omitFieldNames ? '' : 'consent',
         enumValues: GoogleSignalsConsent.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GoogleSignalsSettings clone() =>
-      GoogleSignalsSettings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GoogleSignalsSettings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GoogleSignalsSettings copyWith(
           void Function(GoogleSignalsSettings) updates) =>
       super.copyWith((message) => updates(message as GoogleSignalsSettings))
           as GoogleSignalsSettings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GoogleSignalsSettings create() => GoogleSignalsSettings._();
+  @$core.override
   GoogleSignalsSettings createEmptyInstance() => create();
-  static $pb.PbList<GoogleSignalsSettings> createRepeated() =>
-      $pb.PbList<GoogleSignalsSettings>();
   @$core.pragma('dart2js:noInline')
   static GoogleSignalsSettings getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GoogleSignalsSettings>(create);
@@ -4861,40 +4202,31 @@ class GoogleSignalsSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Status of this setting.
   @$pb.TagNumber(3)
   GoogleSignalsState get state => $_getN(1);
   @$pb.TagNumber(3)
-  set state(GoogleSignalsState v) {
-    setField(3, v);
-  }
-
+  set state(GoogleSignalsState value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasState() => $_has(1);
   @$pb.TagNumber(3)
-  void clearState() => clearField(3);
+  void clearState() => $_clearField(3);
 
   /// Output only. Terms of Service acceptance.
   @$pb.TagNumber(4)
   GoogleSignalsConsent get consent => $_getN(2);
   @$pb.TagNumber(4)
-  set consent(GoogleSignalsConsent v) {
-    setField(4, v);
-  }
-
+  set consent(GoogleSignalsConsent value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasConsent() => $_has(2);
   @$pb.TagNumber(4)
-  void clearConsent() => clearField(4);
+  void clearConsent() => $_clearField(4);
 }
 
 /// A definition for a CustomDimension.
@@ -4907,34 +4239,25 @@ class CustomDimension extends $pb.GeneratedMessage {
     CustomDimension_DimensionScope? scope,
     $core.bool? disallowAdsPersonalization,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (parameterName != null) {
-      $result.parameterName = parameterName;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    if (scope != null) {
-      $result.scope = scope;
-    }
-    if (disallowAdsPersonalization != null) {
-      $result.disallowAdsPersonalization = disallowAdsPersonalization;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (parameterName != null) result.parameterName = parameterName;
+    if (displayName != null) result.displayName = displayName;
+    if (description != null) result.description = description;
+    if (scope != null) result.scope = scope;
+    if (disallowAdsPersonalization != null)
+      result.disallowAdsPersonalization = disallowAdsPersonalization;
+    return result;
   }
-  CustomDimension._() : super();
-  factory CustomDimension.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CustomDimension.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CustomDimension._();
+
+  factory CustomDimension.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CustomDimension.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CustomDimension',
@@ -4945,33 +4268,25 @@ class CustomDimension extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'parameterName')
     ..aOS(3, _omitFieldNames ? '' : 'displayName')
     ..aOS(4, _omitFieldNames ? '' : 'description')
-    ..e<CustomDimension_DimensionScope>(
-        5, _omitFieldNames ? '' : 'scope', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            CustomDimension_DimensionScope.DIMENSION_SCOPE_UNSPECIFIED,
-        valueOf: CustomDimension_DimensionScope.valueOf,
+    ..aE<CustomDimension_DimensionScope>(5, _omitFieldNames ? '' : 'scope',
         enumValues: CustomDimension_DimensionScope.values)
     ..aOB(6, _omitFieldNames ? '' : 'disallowAdsPersonalization')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CustomDimension clone() => CustomDimension()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CustomDimension clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CustomDimension copyWith(void Function(CustomDimension) updates) =>
       super.copyWith((message) => updates(message as CustomDimension))
           as CustomDimension;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CustomDimension create() => CustomDimension._();
+  @$core.override
   CustomDimension createEmptyInstance() => create();
-  static $pb.PbList<CustomDimension> createRepeated() =>
-      $pb.PbList<CustomDimension>();
   @$core.pragma('dart2js:noInline')
   static CustomDimension getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CustomDimension>(create);
@@ -4982,38 +4297,32 @@ class CustomDimension extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  ///  Required. Immutable. Tagging parameter name for this custom dimension.
+  /// Required. Immutable. Tagging parameter name for this custom dimension.
   ///
-  ///  If this is a user-scoped dimension, then this is the user property name.
-  ///  If this is an event-scoped dimension, then this is the event parameter
-  ///  name.
+  /// If this is a user-scoped dimension, then this is the user property name.
+  /// If this is an event-scoped dimension, then this is the event parameter
+  /// name.
   ///
-  ///  If this is an item-scoped dimension, then this is the parameter
-  ///  name found in the eCommerce items array.
+  /// If this is an item-scoped dimension, then this is the parameter
+  /// name found in the eCommerce items array.
   ///
-  ///  May only contain alphanumeric and underscore characters, starting with a
-  ///  letter. Max length of 24 characters for user-scoped dimensions, 40
-  ///  characters for event-scoped dimensions.
+  /// May only contain alphanumeric and underscore characters, starting with a
+  /// letter. Max length of 24 characters for user-scoped dimensions, 40
+  /// characters for event-scoped dimensions.
   @$pb.TagNumber(2)
   $core.String get parameterName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set parameterName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set parameterName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasParameterName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearParameterName() => clearField(2);
+  void clearParameterName() => $_clearField(2);
 
   /// Required. Display name for this custom dimension as shown in the Analytics
   /// UI. Max length of 82 characters, alphanumeric plus space and underscore
@@ -5023,57 +4332,45 @@ class CustomDimension extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get displayName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set displayName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set displayName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDisplayName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDisplayName() => clearField(3);
+  void clearDisplayName() => $_clearField(3);
 
   /// Optional. Description for this custom dimension. Max length of 150
   /// characters.
   @$pb.TagNumber(4)
   $core.String get description => $_getSZ(3);
   @$pb.TagNumber(4)
-  set description($core.String v) {
-    $_setString(3, v);
-  }
-
+  set description($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDescription() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDescription() => clearField(4);
+  void clearDescription() => $_clearField(4);
 
   /// Required. Immutable. The scope of this dimension.
   @$pb.TagNumber(5)
   CustomDimension_DimensionScope get scope => $_getN(4);
   @$pb.TagNumber(5)
-  set scope(CustomDimension_DimensionScope v) {
-    setField(5, v);
-  }
-
+  set scope(CustomDimension_DimensionScope value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasScope() => $_has(4);
   @$pb.TagNumber(5)
-  void clearScope() => clearField(5);
+  void clearScope() => $_clearField(5);
 
-  ///  Optional. If set to true, sets this dimension as NPA and excludes it from
-  ///  ads personalization.
+  /// Optional. If set to true, sets this dimension as NPA and excludes it from
+  /// ads personalization.
   ///
-  ///  This is currently only supported by user-scoped custom dimensions.
+  /// This is currently only supported by user-scoped custom dimensions.
   @$pb.TagNumber(6)
   $core.bool get disallowAdsPersonalization => $_getBF(5);
   @$pb.TagNumber(6)
-  set disallowAdsPersonalization($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set disallowAdsPersonalization($core.bool value) => $_setBool(5, value);
   @$pb.TagNumber(6)
   $core.bool hasDisallowAdsPersonalization() => $_has(5);
   @$pb.TagNumber(6)
-  void clearDisallowAdsPersonalization() => clearField(6);
+  void clearDisallowAdsPersonalization() => $_clearField(6);
 }
 
 /// A definition for a custom metric.
@@ -5087,37 +4384,26 @@ class CustomMetric extends $pb.GeneratedMessage {
     CustomMetric_MetricScope? scope,
     $core.Iterable<CustomMetric_RestrictedMetricType>? restrictedMetricType,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (parameterName != null) {
-      $result.parameterName = parameterName;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    if (measurementUnit != null) {
-      $result.measurementUnit = measurementUnit;
-    }
-    if (scope != null) {
-      $result.scope = scope;
-    }
-    if (restrictedMetricType != null) {
-      $result.restrictedMetricType.addAll(restrictedMetricType);
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (parameterName != null) result.parameterName = parameterName;
+    if (displayName != null) result.displayName = displayName;
+    if (description != null) result.description = description;
+    if (measurementUnit != null) result.measurementUnit = measurementUnit;
+    if (scope != null) result.scope = scope;
+    if (restrictedMetricType != null)
+      result.restrictedMetricType.addAll(restrictedMetricType);
+    return result;
   }
-  CustomMetric._() : super();
-  factory CustomMetric.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CustomMetric.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CustomMetric._();
+
+  factory CustomMetric.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CustomMetric.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CustomMetric',
@@ -5128,16 +4414,10 @@ class CustomMetric extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'parameterName')
     ..aOS(3, _omitFieldNames ? '' : 'displayName')
     ..aOS(4, _omitFieldNames ? '' : 'description')
-    ..e<CustomMetric_MeasurementUnit>(
-        5, _omitFieldNames ? '' : 'measurementUnit', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            CustomMetric_MeasurementUnit.MEASUREMENT_UNIT_UNSPECIFIED,
-        valueOf: CustomMetric_MeasurementUnit.valueOf,
+    ..aE<CustomMetric_MeasurementUnit>(
+        5, _omitFieldNames ? '' : 'measurementUnit',
         enumValues: CustomMetric_MeasurementUnit.values)
-    ..e<CustomMetric_MetricScope>(
-        6, _omitFieldNames ? '' : 'scope', $pb.PbFieldType.OE,
-        defaultOrMaker: CustomMetric_MetricScope.METRIC_SCOPE_UNSPECIFIED,
-        valueOf: CustomMetric_MetricScope.valueOf,
+    ..aE<CustomMetric_MetricScope>(6, _omitFieldNames ? '' : 'scope',
         enumValues: CustomMetric_MetricScope.values)
     ..pc<CustomMetric_RestrictedMetricType>(
         8, _omitFieldNames ? '' : 'restrictedMetricType', $pb.PbFieldType.KE,
@@ -5147,24 +4427,20 @@ class CustomMetric extends $pb.GeneratedMessage {
             .RESTRICTED_METRIC_TYPE_UNSPECIFIED)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CustomMetric clone() => CustomMetric()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CustomMetric clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CustomMetric copyWith(void Function(CustomMetric) updates) =>
       super.copyWith((message) => updates(message as CustomMetric))
           as CustomMetric;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CustomMetric create() => CustomMetric._();
+  @$core.override
   CustomMetric createEmptyInstance() => create();
-  static $pb.PbList<CustomMetric> createRepeated() =>
-      $pb.PbList<CustomMetric>();
   @$core.pragma('dart2js:noInline')
   static CustomMetric getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CustomMetric>(create);
@@ -5175,33 +4451,27 @@ class CustomMetric extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  ///  Required. Immutable. Tagging name for this custom metric.
+  /// Required. Immutable. Tagging name for this custom metric.
   ///
-  ///  If this is an event-scoped metric, then this is the event parameter
-  ///  name.
+  /// If this is an event-scoped metric, then this is the event parameter
+  /// name.
   ///
-  ///  May only contain alphanumeric and underscore charactes, starting with a
-  ///  letter. Max length of 40 characters for event-scoped metrics.
+  /// May only contain alphanumeric and underscore charactes, starting with a
+  /// letter. Max length of 40 characters for event-scoped metrics.
   @$pb.TagNumber(2)
   $core.String get parameterName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set parameterName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set parameterName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasParameterName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearParameterName() => clearField(2);
+  void clearParameterName() => $_clearField(2);
 
   /// Required. Display name for this custom metric as shown in the Analytics UI.
   /// Max length of 82 characters, alphanumeric plus space and underscore
@@ -5211,60 +4481,49 @@ class CustomMetric extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get displayName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set displayName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set displayName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDisplayName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDisplayName() => clearField(3);
+  void clearDisplayName() => $_clearField(3);
 
   /// Optional. Description for this custom dimension.
   /// Max length of 150 characters.
   @$pb.TagNumber(4)
   $core.String get description => $_getSZ(3);
   @$pb.TagNumber(4)
-  set description($core.String v) {
-    $_setString(3, v);
-  }
-
+  set description($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDescription() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDescription() => clearField(4);
+  void clearDescription() => $_clearField(4);
 
   /// Required. The type for the custom metric's value.
   @$pb.TagNumber(5)
   CustomMetric_MeasurementUnit get measurementUnit => $_getN(4);
   @$pb.TagNumber(5)
-  set measurementUnit(CustomMetric_MeasurementUnit v) {
-    setField(5, v);
-  }
-
+  set measurementUnit(CustomMetric_MeasurementUnit value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasMeasurementUnit() => $_has(4);
   @$pb.TagNumber(5)
-  void clearMeasurementUnit() => clearField(5);
+  void clearMeasurementUnit() => $_clearField(5);
 
   /// Required. Immutable. The scope of this custom metric.
   @$pb.TagNumber(6)
   CustomMetric_MetricScope get scope => $_getN(5);
   @$pb.TagNumber(6)
-  set scope(CustomMetric_MetricScope v) {
-    setField(6, v);
-  }
-
+  set scope(CustomMetric_MetricScope value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasScope() => $_has(5);
   @$pb.TagNumber(6)
-  void clearScope() => clearField(6);
+  void clearScope() => $_clearField(6);
 
   /// Optional. Types of restricted data that this metric may contain. Required
   /// for metrics with CURRENCY measurement unit. Must be empty for metrics with
   /// a non-CURRENCY measurement unit.
   @$pb.TagNumber(8)
-  $core.List<CustomMetric_RestrictedMetricType> get restrictedMetricType =>
+  $pb.PbList<CustomMetric_RestrictedMetricType> get restrictedMetricType =>
       $_getList(6);
 }
 
@@ -5280,40 +4539,29 @@ class CalculatedMetric extends $pb.GeneratedMessage {
     $core.String? formula,
     $core.bool? invalidMetricReference,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (calculatedMetricId != null) {
-      $result.calculatedMetricId = calculatedMetricId;
-    }
-    if (metricUnit != null) {
-      $result.metricUnit = metricUnit;
-    }
-    if (restrictedMetricType != null) {
-      $result.restrictedMetricType.addAll(restrictedMetricType);
-    }
-    if (formula != null) {
-      $result.formula = formula;
-    }
-    if (invalidMetricReference != null) {
-      $result.invalidMetricReference = invalidMetricReference;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (description != null) result.description = description;
+    if (displayName != null) result.displayName = displayName;
+    if (calculatedMetricId != null)
+      result.calculatedMetricId = calculatedMetricId;
+    if (metricUnit != null) result.metricUnit = metricUnit;
+    if (restrictedMetricType != null)
+      result.restrictedMetricType.addAll(restrictedMetricType);
+    if (formula != null) result.formula = formula;
+    if (invalidMetricReference != null)
+      result.invalidMetricReference = invalidMetricReference;
+    return result;
   }
-  CalculatedMetric._() : super();
-  factory CalculatedMetric.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CalculatedMetric.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CalculatedMetric._();
+
+  factory CalculatedMetric.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CalculatedMetric.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CalculatedMetric',
@@ -5324,10 +4572,7 @@ class CalculatedMetric extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'description')
     ..aOS(3, _omitFieldNames ? '' : 'displayName')
     ..aOS(4, _omitFieldNames ? '' : 'calculatedMetricId')
-    ..e<CalculatedMetric_MetricUnit>(
-        5, _omitFieldNames ? '' : 'metricUnit', $pb.PbFieldType.OE,
-        defaultOrMaker: CalculatedMetric_MetricUnit.METRIC_UNIT_UNSPECIFIED,
-        valueOf: CalculatedMetric_MetricUnit.valueOf,
+    ..aE<CalculatedMetric_MetricUnit>(5, _omitFieldNames ? '' : 'metricUnit',
         enumValues: CalculatedMetric_MetricUnit.values)
     ..pc<CalculatedMetric_RestrictedMetricType>(
         6, _omitFieldNames ? '' : 'restrictedMetricType', $pb.PbFieldType.KE,
@@ -5339,24 +4584,20 @@ class CalculatedMetric extends $pb.GeneratedMessage {
     ..aOB(9, _omitFieldNames ? '' : 'invalidMetricReference')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CalculatedMetric clone() => CalculatedMetric()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CalculatedMetric clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CalculatedMetric copyWith(void Function(CalculatedMetric) updates) =>
       super.copyWith((message) => updates(message as CalculatedMetric))
           as CalculatedMetric;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CalculatedMetric create() => CalculatedMetric._();
+  @$core.override
   CalculatedMetric createEmptyInstance() => create();
-  static $pb.PbList<CalculatedMetric> createRepeated() =>
-      $pb.PbList<CalculatedMetric>();
   @$core.pragma('dart2js:noInline')
   static CalculatedMetric getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CalculatedMetric>(create);
@@ -5367,76 +4608,61 @@ class CalculatedMetric extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Optional. Description for this calculated metric.
   /// Max length of 4096 characters.
   @$pb.TagNumber(2)
   $core.String get description => $_getSZ(1);
   @$pb.TagNumber(2)
-  set description($core.String v) {
-    $_setString(1, v);
-  }
-
+  set description($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDescription() => clearField(2);
+  void clearDescription() => $_clearField(2);
 
   /// Required. Display name for this calculated metric as shown in the
   /// Google Analytics UI. Max length 82 characters.
   @$pb.TagNumber(3)
   $core.String get displayName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set displayName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set displayName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDisplayName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDisplayName() => clearField(3);
+  void clearDisplayName() => $_clearField(3);
 
-  ///  Output only. The ID to use for the calculated metric. In the UI, this is
-  ///  referred to as the "API name."
+  /// Output only. The ID to use for the calculated metric. In the UI, this is
+  /// referred to as the "API name."
   ///
-  ///  The calculated_metric_id is used when referencing this calculated metric
-  ///  from external APIs. For example, "calcMetric:{calculated_metric_id}".
+  /// The calculated_metric_id is used when referencing this calculated metric
+  /// from external APIs. For example, "calcMetric:{calculated_metric_id}".
   @$pb.TagNumber(4)
   $core.String get calculatedMetricId => $_getSZ(3);
   @$pb.TagNumber(4)
-  set calculatedMetricId($core.String v) {
-    $_setString(3, v);
-  }
-
+  set calculatedMetricId($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasCalculatedMetricId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCalculatedMetricId() => clearField(4);
+  void clearCalculatedMetricId() => $_clearField(4);
 
   /// Required. The type for the calculated metric's value.
   @$pb.TagNumber(5)
   CalculatedMetric_MetricUnit get metricUnit => $_getN(4);
   @$pb.TagNumber(5)
-  set metricUnit(CalculatedMetric_MetricUnit v) {
-    setField(5, v);
-  }
-
+  set metricUnit(CalculatedMetric_MetricUnit value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasMetricUnit() => $_has(4);
   @$pb.TagNumber(5)
-  void clearMetricUnit() => clearField(5);
+  void clearMetricUnit() => $_clearField(5);
 
   /// Output only. Types of restricted data that this metric contains.
   @$pb.TagNumber(6)
-  $core.List<CalculatedMetric_RestrictedMetricType> get restrictedMetricType =>
+  $pb.PbList<CalculatedMetric_RestrictedMetricType> get restrictedMetricType =>
       $_getList(5);
 
   /// Required. The calculated metric's definition. Maximum number of unique
@@ -5449,14 +4675,11 @@ class CalculatedMetric extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.String get formula => $_getSZ(6);
   @$pb.TagNumber(7)
-  set formula($core.String v) {
-    $_setString(6, v);
-  }
-
+  set formula($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
   $core.bool hasFormula() => $_has(6);
   @$pb.TagNumber(7)
-  void clearFormula() => clearField(7);
+  void clearFormula() => $_clearField(7);
 
   /// Output only. If true, this calculated metric has a invalid metric
   /// reference. Anything using a calculated metric with invalid_metric_reference
@@ -5464,14 +4687,11 @@ class CalculatedMetric extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.bool get invalidMetricReference => $_getBF(7);
   @$pb.TagNumber(9)
-  set invalidMetricReference($core.bool v) {
-    $_setBool(7, v);
-  }
-
+  set invalidMetricReference($core.bool value) => $_setBool(7, value);
   @$pb.TagNumber(9)
   $core.bool hasInvalidMetricReference() => $_has(7);
   @$pb.TagNumber(9)
-  void clearInvalidMetricReference() => clearField(9);
+  void clearInvalidMetricReference() => $_clearField(9);
 }
 
 /// Settings values for data retention. This is a singleton resource.
@@ -5482,28 +4702,24 @@ class DataRetentionSettings extends $pb.GeneratedMessage {
     $core.bool? resetUserDataOnNewActivity,
     DataRetentionSettings_RetentionDuration? userDataRetention,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (eventDataRetention != null) {
-      $result.eventDataRetention = eventDataRetention;
-    }
-    if (resetUserDataOnNewActivity != null) {
-      $result.resetUserDataOnNewActivity = resetUserDataOnNewActivity;
-    }
-    if (userDataRetention != null) {
-      $result.userDataRetention = userDataRetention;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (eventDataRetention != null)
+      result.eventDataRetention = eventDataRetention;
+    if (resetUserDataOnNewActivity != null)
+      result.resetUserDataOnNewActivity = resetUserDataOnNewActivity;
+    if (userDataRetention != null) result.userDataRetention = userDataRetention;
+    return result;
   }
-  DataRetentionSettings._() : super();
-  factory DataRetentionSettings.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DataRetentionSettings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DataRetentionSettings._();
+
+  factory DataRetentionSettings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DataRetentionSettings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DataRetentionSettings',
@@ -5511,41 +4727,30 @@ class DataRetentionSettings extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<DataRetentionSettings_RetentionDuration>(
-        2, _omitFieldNames ? '' : 'eventDataRetention', $pb.PbFieldType.OE,
-        defaultOrMaker: DataRetentionSettings_RetentionDuration
-            .RETENTION_DURATION_UNSPECIFIED,
-        valueOf: DataRetentionSettings_RetentionDuration.valueOf,
+    ..aE<DataRetentionSettings_RetentionDuration>(
+        2, _omitFieldNames ? '' : 'eventDataRetention',
         enumValues: DataRetentionSettings_RetentionDuration.values)
     ..aOB(3, _omitFieldNames ? '' : 'resetUserDataOnNewActivity')
-    ..e<DataRetentionSettings_RetentionDuration>(
-        4, _omitFieldNames ? '' : 'userDataRetention', $pb.PbFieldType.OE,
-        defaultOrMaker: DataRetentionSettings_RetentionDuration
-            .RETENTION_DURATION_UNSPECIFIED,
-        valueOf: DataRetentionSettings_RetentionDuration.valueOf,
+    ..aE<DataRetentionSettings_RetentionDuration>(
+        4, _omitFieldNames ? '' : 'userDataRetention',
         enumValues: DataRetentionSettings_RetentionDuration.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DataRetentionSettings clone() =>
-      DataRetentionSettings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DataRetentionSettings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DataRetentionSettings copyWith(
           void Function(DataRetentionSettings) updates) =>
       super.copyWith((message) => updates(message as DataRetentionSettings))
           as DataRetentionSettings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DataRetentionSettings create() => DataRetentionSettings._();
+  @$core.override
   DataRetentionSettings createEmptyInstance() => create();
-  static $pb.PbList<DataRetentionSettings> createRepeated() =>
-      $pb.PbList<DataRetentionSettings>();
   @$core.pragma('dart2js:noInline')
   static DataRetentionSettings getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DataRetentionSettings>(create);
@@ -5556,54 +4761,44 @@ class DataRetentionSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Required. The length of time that event-level data is retained.
   @$pb.TagNumber(2)
   DataRetentionSettings_RetentionDuration get eventDataRetention => $_getN(1);
   @$pb.TagNumber(2)
-  set eventDataRetention(DataRetentionSettings_RetentionDuration v) {
-    setField(2, v);
-  }
-
+  set eventDataRetention(DataRetentionSettings_RetentionDuration value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasEventDataRetention() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEventDataRetention() => clearField(2);
+  void clearEventDataRetention() => $_clearField(2);
 
   /// If true, reset the retention period for the user identifier with every
   /// event from that user.
   @$pb.TagNumber(3)
   $core.bool get resetUserDataOnNewActivity => $_getBF(2);
   @$pb.TagNumber(3)
-  set resetUserDataOnNewActivity($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set resetUserDataOnNewActivity($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasResetUserDataOnNewActivity() => $_has(2);
   @$pb.TagNumber(3)
-  void clearResetUserDataOnNewActivity() => clearField(3);
+  void clearResetUserDataOnNewActivity() => $_clearField(3);
 
   /// Required. The length of time that user-level data is retained.
   @$pb.TagNumber(4)
   DataRetentionSettings_RetentionDuration get userDataRetention => $_getN(3);
   @$pb.TagNumber(4)
-  set userDataRetention(DataRetentionSettings_RetentionDuration v) {
-    setField(4, v);
-  }
-
+  set userDataRetention(DataRetentionSettings_RetentionDuration value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasUserDataRetention() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUserDataRetention() => clearField(4);
+  void clearUserDataRetention() => $_clearField(4);
 }
 
 /// The attribution settings used for a given property. This is a singleton
@@ -5619,33 +4814,29 @@ class AttributionSettings extends $pb.GeneratedMessage {
     AttributionSettings_AdsWebConversionDataExportScope?
         adsWebConversionDataExportScope,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (acquisitionConversionEventLookbackWindow != null) {
-      $result.acquisitionConversionEventLookbackWindow =
+    final result = create();
+    if (name != null) result.name = name;
+    if (acquisitionConversionEventLookbackWindow != null)
+      result.acquisitionConversionEventLookbackWindow =
           acquisitionConversionEventLookbackWindow;
-    }
-    if (otherConversionEventLookbackWindow != null) {
-      $result.otherConversionEventLookbackWindow =
+    if (otherConversionEventLookbackWindow != null)
+      result.otherConversionEventLookbackWindow =
           otherConversionEventLookbackWindow;
-    }
-    if (reportingAttributionModel != null) {
-      $result.reportingAttributionModel = reportingAttributionModel;
-    }
-    if (adsWebConversionDataExportScope != null) {
-      $result.adsWebConversionDataExportScope = adsWebConversionDataExportScope;
-    }
-    return $result;
+    if (reportingAttributionModel != null)
+      result.reportingAttributionModel = reportingAttributionModel;
+    if (adsWebConversionDataExportScope != null)
+      result.adsWebConversionDataExportScope = adsWebConversionDataExportScope;
+    return result;
   }
-  AttributionSettings._() : super();
-  factory AttributionSettings.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AttributionSettings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AttributionSettings._();
+
+  factory AttributionSettings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AttributionSettings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AttributionSettings',
@@ -5653,60 +4844,36 @@ class AttributionSettings extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<AttributionSettings_AcquisitionConversionEventLookbackWindow>(
-        2,
-        _omitFieldNames ? '' : 'acquisitionConversionEventLookbackWindow',
-        $pb.PbFieldType.OE,
-        defaultOrMaker:
-            AttributionSettings_AcquisitionConversionEventLookbackWindow
-                .ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED,
-        valueOf: AttributionSettings_AcquisitionConversionEventLookbackWindow
-            .valueOf,
+    ..aE<AttributionSettings_AcquisitionConversionEventLookbackWindow>(
+        2, _omitFieldNames ? '' : 'acquisitionConversionEventLookbackWindow',
         enumValues:
             AttributionSettings_AcquisitionConversionEventLookbackWindow.values)
-    ..e<AttributionSettings_OtherConversionEventLookbackWindow>(
-        3,
-        _omitFieldNames ? '' : 'otherConversionEventLookbackWindow',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: AttributionSettings_OtherConversionEventLookbackWindow
-            .OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED,
-        valueOf: AttributionSettings_OtherConversionEventLookbackWindow.valueOf,
+    ..aE<AttributionSettings_OtherConversionEventLookbackWindow>(
+        3, _omitFieldNames ? '' : 'otherConversionEventLookbackWindow',
         enumValues:
             AttributionSettings_OtherConversionEventLookbackWindow.values)
-    ..e<AttributionSettings_ReportingAttributionModel>(4,
-        _omitFieldNames ? '' : 'reportingAttributionModel', $pb.PbFieldType.OE,
-        defaultOrMaker: AttributionSettings_ReportingAttributionModel
-            .REPORTING_ATTRIBUTION_MODEL_UNSPECIFIED,
-        valueOf: AttributionSettings_ReportingAttributionModel.valueOf,
+    ..aE<AttributionSettings_ReportingAttributionModel>(
+        4, _omitFieldNames ? '' : 'reportingAttributionModel',
         enumValues: AttributionSettings_ReportingAttributionModel.values)
-    ..e<AttributionSettings_AdsWebConversionDataExportScope>(
-        5,
-        _omitFieldNames ? '' : 'adsWebConversionDataExportScope',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: AttributionSettings_AdsWebConversionDataExportScope
-            .ADS_WEB_CONVERSION_DATA_EXPORT_SCOPE_UNSPECIFIED,
-        valueOf: AttributionSettings_AdsWebConversionDataExportScope.valueOf,
+    ..aE<AttributionSettings_AdsWebConversionDataExportScope>(
+        5, _omitFieldNames ? '' : 'adsWebConversionDataExportScope',
         enumValues: AttributionSettings_AdsWebConversionDataExportScope.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AttributionSettings clone() => AttributionSettings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AttributionSettings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AttributionSettings copyWith(void Function(AttributionSettings) updates) =>
       super.copyWith((message) => updates(message as AttributionSettings))
           as AttributionSettings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AttributionSettings create() => AttributionSettings._();
+  @$core.override
   AttributionSettings createEmptyInstance() => create();
-  static $pb.PbList<AttributionSettings> createRepeated() =>
-      $pb.PbList<AttributionSettings>();
   @$core.pragma('dart2js:noInline')
   static AttributionSettings getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AttributionSettings>(create);
@@ -5718,14 +4885,11 @@ class AttributionSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Required. The lookback window configuration for acquisition conversion
   /// events. The default window size is 30 days.
@@ -5734,14 +4898,12 @@ class AttributionSettings extends $pb.GeneratedMessage {
       get acquisitionConversionEventLookbackWindow => $_getN(1);
   @$pb.TagNumber(2)
   set acquisitionConversionEventLookbackWindow(
-      AttributionSettings_AcquisitionConversionEventLookbackWindow v) {
-    setField(2, v);
-  }
-
+          AttributionSettings_AcquisitionConversionEventLookbackWindow value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasAcquisitionConversionEventLookbackWindow() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAcquisitionConversionEventLookbackWindow() => clearField(2);
+  void clearAcquisitionConversionEventLookbackWindow() => $_clearField(2);
 
   /// Required. The lookback window for all other, non-acquisition conversion
   /// events. The default window size is 90 days.
@@ -5750,34 +4912,30 @@ class AttributionSettings extends $pb.GeneratedMessage {
       get otherConversionEventLookbackWindow => $_getN(2);
   @$pb.TagNumber(3)
   set otherConversionEventLookbackWindow(
-      AttributionSettings_OtherConversionEventLookbackWindow v) {
-    setField(3, v);
-  }
-
+          AttributionSettings_OtherConversionEventLookbackWindow value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasOtherConversionEventLookbackWindow() => $_has(2);
   @$pb.TagNumber(3)
-  void clearOtherConversionEventLookbackWindow() => clearField(3);
+  void clearOtherConversionEventLookbackWindow() => $_clearField(3);
 
-  ///  Required. The reporting attribution model used to calculate conversion
-  ///  credit in this property's reports.
+  /// Required. The reporting attribution model used to calculate conversion
+  /// credit in this property's reports.
   ///
-  ///  Changing the attribution model will apply to both historical and future
-  ///  data. These changes will be reflected in reports with conversion and
-  ///  revenue data. User and session data will be unaffected.
+  /// Changing the attribution model will apply to both historical and future
+  /// data. These changes will be reflected in reports with conversion and
+  /// revenue data. User and session data will be unaffected.
   @$pb.TagNumber(4)
   AttributionSettings_ReportingAttributionModel get reportingAttributionModel =>
       $_getN(3);
   @$pb.TagNumber(4)
   set reportingAttributionModel(
-      AttributionSettings_ReportingAttributionModel v) {
-    setField(4, v);
-  }
-
+          AttributionSettings_ReportingAttributionModel value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasReportingAttributionModel() => $_has(3);
   @$pb.TagNumber(4)
-  void clearReportingAttributionModel() => clearField(4);
+  void clearReportingAttributionModel() => $_clearField(4);
 
   /// Required. The Conversion Export Scope for data exported to linked Ads
   /// Accounts.
@@ -5786,14 +4944,12 @@ class AttributionSettings extends $pb.GeneratedMessage {
       get adsWebConversionDataExportScope => $_getN(4);
   @$pb.TagNumber(5)
   set adsWebConversionDataExportScope(
-      AttributionSettings_AdsWebConversionDataExportScope v) {
-    setField(5, v);
-  }
-
+          AttributionSettings_AdsWebConversionDataExportScope value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasAdsWebConversionDataExportScope() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAdsWebConversionDataExportScope() => clearField(5);
+  void clearAdsWebConversionDataExportScope() => $_clearField(5);
 }
 
 enum AccessBinding_AccessTarget { user, notSet }
@@ -5805,25 +4961,21 @@ class AccessBinding extends $pb.GeneratedMessage {
     $core.String? user,
     $core.Iterable<$core.String>? roles,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (user != null) {
-      $result.user = user;
-    }
-    if (roles != null) {
-      $result.roles.addAll(roles);
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (user != null) result.user = user;
+    if (roles != null) result.roles.addAll(roles);
+    return result;
   }
-  AccessBinding._() : super();
-  factory AccessBinding.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessBinding.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessBinding._();
+
+  factory AccessBinding.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessBinding.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, AccessBinding_AccessTarget>
       _AccessBinding_AccessTargetByTag = {
@@ -5841,80 +4993,72 @@ class AccessBinding extends $pb.GeneratedMessage {
     ..pPS(3, _omitFieldNames ? '' : 'roles')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessBinding clone() => AccessBinding()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessBinding clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessBinding copyWith(void Function(AccessBinding) updates) =>
       super.copyWith((message) => updates(message as AccessBinding))
           as AccessBinding;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessBinding create() => AccessBinding._();
+  @$core.override
   AccessBinding createEmptyInstance() => create();
-  static $pb.PbList<AccessBinding> createRepeated() =>
-      $pb.PbList<AccessBinding>();
   @$core.pragma('dart2js:noInline')
   static AccessBinding getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessBinding>(create);
   static AccessBinding? _defaultInstance;
 
+  @$pb.TagNumber(2)
   AccessBinding_AccessTarget whichAccessTarget() =>
       _AccessBinding_AccessTargetByTag[$_whichOneof(0)]!;
-  void clearAccessTarget() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  void clearAccessTarget() => $_clearField($_whichOneof(0));
 
-  ///  Output only. Resource name of this binding.
+  /// Output only. Resource name of this binding.
   ///
-  ///  Format: accounts/{account}/accessBindings/{access_binding} or
-  ///  properties/{property}/accessBindings/{access_binding}
+  /// Format: accounts/{account}/accessBindings/{access_binding} or
+  /// properties/{property}/accessBindings/{access_binding}
   ///
-  ///  Example:
-  ///  "accounts/100/accessBindings/200"
+  /// Example:
+  /// "accounts/100/accessBindings/200"
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// If set, the email address of the user to set roles for.
   /// Format: "someuser@gmail.com"
   @$pb.TagNumber(2)
   $core.String get user => $_getSZ(1);
   @$pb.TagNumber(2)
-  set user($core.String v) {
-    $_setString(1, v);
-  }
-
+  set user($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUser() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUser() => clearField(2);
+  void clearUser() => $_clearField(2);
 
-  ///  A list of roles for to grant to the parent resource.
+  /// A list of roles for to grant to the parent resource.
   ///
-  ///  Valid values:
-  ///  predefinedRoles/viewer
-  ///  predefinedRoles/analyst
-  ///  predefinedRoles/editor
-  ///  predefinedRoles/admin
-  ///  predefinedRoles/no-cost-data
-  ///  predefinedRoles/no-revenue-data
+  /// Valid values:
+  /// predefinedRoles/viewer
+  /// predefinedRoles/analyst
+  /// predefinedRoles/editor
+  /// predefinedRoles/admin
+  /// predefinedRoles/no-cost-data
+  /// predefinedRoles/no-revenue-data
   ///
-  ///  For users, if an empty list of roles is set, this AccessBinding will be
-  ///  deleted.
+  /// For users, if an empty list of roles is set, this AccessBinding will be
+  /// deleted.
   @$pb.TagNumber(3)
-  $core.List<$core.String> get roles => $_getList(2);
+  $pb.PbList<$core.String> get roles => $_getList(2);
 }
 
 /// A link between a Google Analytics property and BigQuery project.
@@ -5931,46 +5075,32 @@ class BigQueryLink extends $pb.GeneratedMessage {
     $core.bool? freshDailyExportEnabled,
     $core.String? datasetLocation,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (project != null) {
-      $result.project = project;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (dailyExportEnabled != null) {
-      $result.dailyExportEnabled = dailyExportEnabled;
-    }
-    if (streamingExportEnabled != null) {
-      $result.streamingExportEnabled = streamingExportEnabled;
-    }
-    if (includeAdvertisingId != null) {
-      $result.includeAdvertisingId = includeAdvertisingId;
-    }
-    if (exportStreams != null) {
-      $result.exportStreams.addAll(exportStreams);
-    }
-    if (excludedEvents != null) {
-      $result.excludedEvents.addAll(excludedEvents);
-    }
-    if (freshDailyExportEnabled != null) {
-      $result.freshDailyExportEnabled = freshDailyExportEnabled;
-    }
-    if (datasetLocation != null) {
-      $result.datasetLocation = datasetLocation;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (project != null) result.project = project;
+    if (createTime != null) result.createTime = createTime;
+    if (dailyExportEnabled != null)
+      result.dailyExportEnabled = dailyExportEnabled;
+    if (streamingExportEnabled != null)
+      result.streamingExportEnabled = streamingExportEnabled;
+    if (includeAdvertisingId != null)
+      result.includeAdvertisingId = includeAdvertisingId;
+    if (exportStreams != null) result.exportStreams.addAll(exportStreams);
+    if (excludedEvents != null) result.excludedEvents.addAll(excludedEvents);
+    if (freshDailyExportEnabled != null)
+      result.freshDailyExportEnabled = freshDailyExportEnabled;
+    if (datasetLocation != null) result.datasetLocation = datasetLocation;
+    return result;
   }
-  BigQueryLink._() : super();
-  factory BigQueryLink.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BigQueryLink.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BigQueryLink._();
+
+  factory BigQueryLink.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BigQueryLink.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BigQueryLink',
@@ -5990,24 +5120,20 @@ class BigQueryLink extends $pb.GeneratedMessage {
     ..aOS(10, _omitFieldNames ? '' : 'datasetLocation')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BigQueryLink clone() => BigQueryLink()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BigQueryLink clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BigQueryLink copyWith(void Function(BigQueryLink) updates) =>
       super.copyWith((message) => updates(message as BigQueryLink))
           as BigQueryLink;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BigQueryLink create() => BigQueryLink._();
+  @$core.override
   BigQueryLink createEmptyInstance() => create();
-  static $pb.PbList<BigQueryLink> createRepeated() =>
-      $pb.PbList<BigQueryLink>();
   @$core.pragma('dart2js:noInline')
   static BigQueryLink getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BigQueryLink>(create);
@@ -6019,14 +5145,11 @@ class BigQueryLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Immutable. The linked Google Cloud project. When creating a BigQueryLink,
   /// you may provide this resource name using either a project number or project
@@ -6037,27 +5160,21 @@ class BigQueryLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get project => $_getSZ(1);
   @$pb.TagNumber(2)
-  set project($core.String v) {
-    $_setString(1, v);
-  }
-
+  set project($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasProject() => $_has(1);
   @$pb.TagNumber(2)
-  void clearProject() => clearField(2);
+  void clearProject() => $_clearField(2);
 
   /// Output only. Time when the link was created.
   @$pb.TagNumber(3)
   $0.Timestamp get createTime => $_getN(2);
   @$pb.TagNumber(3)
-  set createTime($0.Timestamp v) {
-    setField(3, v);
-  }
-
+  set createTime($0.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCreateTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCreateTime() => clearField(3);
+  void clearCreateTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Timestamp ensureCreateTime() => $_ensure(2);
 
@@ -6065,65 +5182,53 @@ class BigQueryLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get dailyExportEnabled => $_getBF(3);
   @$pb.TagNumber(4)
-  set dailyExportEnabled($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set dailyExportEnabled($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDailyExportEnabled() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDailyExportEnabled() => clearField(4);
+  void clearDailyExportEnabled() => $_clearField(4);
 
   /// If set true, enables streaming export to the linked Google Cloud project.
   @$pb.TagNumber(5)
   $core.bool get streamingExportEnabled => $_getBF(4);
   @$pb.TagNumber(5)
-  set streamingExportEnabled($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set streamingExportEnabled($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasStreamingExportEnabled() => $_has(4);
   @$pb.TagNumber(5)
-  void clearStreamingExportEnabled() => clearField(5);
+  void clearStreamingExportEnabled() => $_clearField(5);
 
   /// If set true, exported data will include advertising identifiers for mobile
   /// app streams.
   @$pb.TagNumber(6)
   $core.bool get includeAdvertisingId => $_getBF(5);
   @$pb.TagNumber(6)
-  set includeAdvertisingId($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set includeAdvertisingId($core.bool value) => $_setBool(5, value);
   @$pb.TagNumber(6)
   $core.bool hasIncludeAdvertisingId() => $_has(5);
   @$pb.TagNumber(6)
-  void clearIncludeAdvertisingId() => clearField(6);
+  void clearIncludeAdvertisingId() => $_clearField(6);
 
   /// The list of streams under the parent property for which data will be
   /// exported.
   /// Format: properties/{property_id}/dataStreams/{stream_id}
   /// Example: ['properties/1000/dataStreams/2000']
   @$pb.TagNumber(7)
-  $core.List<$core.String> get exportStreams => $_getList(6);
+  $pb.PbList<$core.String> get exportStreams => $_getList(6);
 
   /// The list of event names that will be excluded from exports.
   @$pb.TagNumber(8)
-  $core.List<$core.String> get excludedEvents => $_getList(7);
+  $pb.PbList<$core.String> get excludedEvents => $_getList(7);
 
   /// If set true, enables fresh daily export to the linked Google Cloud project.
   @$pb.TagNumber(9)
   $core.bool get freshDailyExportEnabled => $_getBF(8);
   @$pb.TagNumber(9)
-  set freshDailyExportEnabled($core.bool v) {
-    $_setBool(8, v);
-  }
-
+  set freshDailyExportEnabled($core.bool value) => $_setBool(8, value);
   @$pb.TagNumber(9)
   $core.bool hasFreshDailyExportEnabled() => $_has(8);
   @$pb.TagNumber(9)
-  void clearFreshDailyExportEnabled() => clearField(9);
+  void clearFreshDailyExportEnabled() => $_clearField(9);
 
   /// Required. Immutable. The geographic location where the created BigQuery
   /// dataset should reside. See https://cloud.google.com/bigquery/docs/locations
@@ -6131,14 +5236,11 @@ class BigQueryLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $core.String get datasetLocation => $_getSZ(9);
   @$pb.TagNumber(10)
-  set datasetLocation($core.String v) {
-    $_setString(9, v);
-  }
-
+  set datasetLocation($core.String value) => $_setString(9, value);
   @$pb.TagNumber(10)
   $core.bool hasDatasetLocation() => $_has(9);
   @$pb.TagNumber(10)
-  void clearDatasetLocation() => clearField(10);
+  void clearDatasetLocation() => $_clearField(10);
 }
 
 /// Singleton resource under a web DataStream, configuring measurement of
@@ -6157,49 +5259,35 @@ class EnhancedMeasurementSettings extends $pb.GeneratedMessage {
     $core.String? searchQueryParameter,
     $core.String? uriQueryParameter,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (streamEnabled != null) {
-      $result.streamEnabled = streamEnabled;
-    }
-    if (scrollsEnabled != null) {
-      $result.scrollsEnabled = scrollsEnabled;
-    }
-    if (outboundClicksEnabled != null) {
-      $result.outboundClicksEnabled = outboundClicksEnabled;
-    }
-    if (siteSearchEnabled != null) {
-      $result.siteSearchEnabled = siteSearchEnabled;
-    }
-    if (videoEngagementEnabled != null) {
-      $result.videoEngagementEnabled = videoEngagementEnabled;
-    }
-    if (fileDownloadsEnabled != null) {
-      $result.fileDownloadsEnabled = fileDownloadsEnabled;
-    }
-    if (pageChangesEnabled != null) {
-      $result.pageChangesEnabled = pageChangesEnabled;
-    }
-    if (formInteractionsEnabled != null) {
-      $result.formInteractionsEnabled = formInteractionsEnabled;
-    }
-    if (searchQueryParameter != null) {
-      $result.searchQueryParameter = searchQueryParameter;
-    }
-    if (uriQueryParameter != null) {
-      $result.uriQueryParameter = uriQueryParameter;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (streamEnabled != null) result.streamEnabled = streamEnabled;
+    if (scrollsEnabled != null) result.scrollsEnabled = scrollsEnabled;
+    if (outboundClicksEnabled != null)
+      result.outboundClicksEnabled = outboundClicksEnabled;
+    if (siteSearchEnabled != null) result.siteSearchEnabled = siteSearchEnabled;
+    if (videoEngagementEnabled != null)
+      result.videoEngagementEnabled = videoEngagementEnabled;
+    if (fileDownloadsEnabled != null)
+      result.fileDownloadsEnabled = fileDownloadsEnabled;
+    if (pageChangesEnabled != null)
+      result.pageChangesEnabled = pageChangesEnabled;
+    if (formInteractionsEnabled != null)
+      result.formInteractionsEnabled = formInteractionsEnabled;
+    if (searchQueryParameter != null)
+      result.searchQueryParameter = searchQueryParameter;
+    if (uriQueryParameter != null) result.uriQueryParameter = uriQueryParameter;
+    return result;
   }
-  EnhancedMeasurementSettings._() : super();
-  factory EnhancedMeasurementSettings.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EnhancedMeasurementSettings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EnhancedMeasurementSettings._();
+
+  factory EnhancedMeasurementSettings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EnhancedMeasurementSettings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EnhancedMeasurementSettings',
@@ -6219,28 +5307,23 @@ class EnhancedMeasurementSettings extends $pb.GeneratedMessage {
     ..aOS(11, _omitFieldNames ? '' : 'uriQueryParameter')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EnhancedMeasurementSettings clone() =>
-      EnhancedMeasurementSettings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EnhancedMeasurementSettings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EnhancedMeasurementSettings copyWith(
           void Function(EnhancedMeasurementSettings) updates) =>
       super.copyWith(
               (message) => updates(message as EnhancedMeasurementSettings))
           as EnhancedMeasurementSettings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EnhancedMeasurementSettings create() =>
       EnhancedMeasurementSettings._();
+  @$core.override
   EnhancedMeasurementSettings createEmptyInstance() => create();
-  static $pb.PbList<EnhancedMeasurementSettings> createRepeated() =>
-      $pb.PbList<EnhancedMeasurementSettings>();
   @$core.pragma('dart2js:noInline')
   static EnhancedMeasurementSettings getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EnhancedMeasurementSettings>(create);
@@ -6253,115 +5336,91 @@ class EnhancedMeasurementSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  ///  Indicates whether Enhanced Measurement Settings will be used to
-  ///  automatically measure interactions and content on this web stream.
+  /// Indicates whether Enhanced Measurement Settings will be used to
+  /// automatically measure interactions and content on this web stream.
   ///
-  ///  Changing this value does not affect the settings themselves, but determines
-  ///  whether they are respected.
+  /// Changing this value does not affect the settings themselves, but determines
+  /// whether they are respected.
   @$pb.TagNumber(2)
   $core.bool get streamEnabled => $_getBF(1);
   @$pb.TagNumber(2)
-  set streamEnabled($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set streamEnabled($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasStreamEnabled() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStreamEnabled() => clearField(2);
+  void clearStreamEnabled() => $_clearField(2);
 
   /// If enabled, capture scroll events each time a visitor gets to the bottom of
   /// a page.
   @$pb.TagNumber(3)
   $core.bool get scrollsEnabled => $_getBF(2);
   @$pb.TagNumber(3)
-  set scrollsEnabled($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set scrollsEnabled($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasScrollsEnabled() => $_has(2);
   @$pb.TagNumber(3)
-  void clearScrollsEnabled() => clearField(3);
+  void clearScrollsEnabled() => $_clearField(3);
 
   /// If enabled, capture an outbound click event each time a visitor clicks a
   /// link that leads them away from your domain.
   @$pb.TagNumber(4)
   $core.bool get outboundClicksEnabled => $_getBF(3);
   @$pb.TagNumber(4)
-  set outboundClicksEnabled($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set outboundClicksEnabled($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasOutboundClicksEnabled() => $_has(3);
   @$pb.TagNumber(4)
-  void clearOutboundClicksEnabled() => clearField(4);
+  void clearOutboundClicksEnabled() => $_clearField(4);
 
   /// If enabled, capture a view search results event each time a visitor
   /// performs a search on your site (based on a query parameter).
   @$pb.TagNumber(5)
   $core.bool get siteSearchEnabled => $_getBF(4);
   @$pb.TagNumber(5)
-  set siteSearchEnabled($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set siteSearchEnabled($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasSiteSearchEnabled() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSiteSearchEnabled() => clearField(5);
+  void clearSiteSearchEnabled() => $_clearField(5);
 
   /// If enabled, capture video play, progress, and complete events as visitors
   /// view embedded videos on your site.
   @$pb.TagNumber(6)
   $core.bool get videoEngagementEnabled => $_getBF(5);
   @$pb.TagNumber(6)
-  set videoEngagementEnabled($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set videoEngagementEnabled($core.bool value) => $_setBool(5, value);
   @$pb.TagNumber(6)
   $core.bool hasVideoEngagementEnabled() => $_has(5);
   @$pb.TagNumber(6)
-  void clearVideoEngagementEnabled() => clearField(6);
+  void clearVideoEngagementEnabled() => $_clearField(6);
 
   /// If enabled, capture a file download event each time a link is clicked with
   /// a common document, compressed file, application, video, or audio extension.
   @$pb.TagNumber(7)
   $core.bool get fileDownloadsEnabled => $_getBF(6);
   @$pb.TagNumber(7)
-  set fileDownloadsEnabled($core.bool v) {
-    $_setBool(6, v);
-  }
-
+  set fileDownloadsEnabled($core.bool value) => $_setBool(6, value);
   @$pb.TagNumber(7)
   $core.bool hasFileDownloadsEnabled() => $_has(6);
   @$pb.TagNumber(7)
-  void clearFileDownloadsEnabled() => clearField(7);
+  void clearFileDownloadsEnabled() => $_clearField(7);
 
   /// If enabled, capture a page view event each time the website changes the
   /// browser history state.
   @$pb.TagNumber(8)
   $core.bool get pageChangesEnabled => $_getBF(7);
   @$pb.TagNumber(8)
-  set pageChangesEnabled($core.bool v) {
-    $_setBool(7, v);
-  }
-
+  set pageChangesEnabled($core.bool value) => $_setBool(7, value);
   @$pb.TagNumber(8)
   $core.bool hasPageChangesEnabled() => $_has(7);
   @$pb.TagNumber(8)
-  void clearPageChangesEnabled() => clearField(8);
+  void clearPageChangesEnabled() => $_clearField(8);
 
   /// If enabled, capture a form interaction event each time a visitor interacts
   /// with a form on your website.
@@ -6369,126 +5428,33 @@ class EnhancedMeasurementSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.bool get formInteractionsEnabled => $_getBF(8);
   @$pb.TagNumber(9)
-  set formInteractionsEnabled($core.bool v) {
-    $_setBool(8, v);
-  }
-
+  set formInteractionsEnabled($core.bool value) => $_setBool(8, value);
   @$pb.TagNumber(9)
   $core.bool hasFormInteractionsEnabled() => $_has(8);
   @$pb.TagNumber(9)
-  void clearFormInteractionsEnabled() => clearField(9);
+  void clearFormInteractionsEnabled() => $_clearField(9);
 
   /// Required. URL query parameters to interpret as site search parameters.
   /// Max length is 1024 characters. Must not be empty.
   @$pb.TagNumber(10)
   $core.String get searchQueryParameter => $_getSZ(9);
   @$pb.TagNumber(10)
-  set searchQueryParameter($core.String v) {
-    $_setString(9, v);
-  }
-
+  set searchQueryParameter($core.String value) => $_setString(9, value);
   @$pb.TagNumber(10)
   $core.bool hasSearchQueryParameter() => $_has(9);
   @$pb.TagNumber(10)
-  void clearSearchQueryParameter() => clearField(10);
+  void clearSearchQueryParameter() => $_clearField(10);
 
   /// Additional URL query parameters.
   /// Max length is 1024 characters.
   @$pb.TagNumber(11)
   $core.String get uriQueryParameter => $_getSZ(10);
   @$pb.TagNumber(11)
-  set uriQueryParameter($core.String v) {
-    $_setString(10, v);
-  }
-
+  set uriQueryParameter($core.String value) => $_setString(10, value);
   @$pb.TagNumber(11)
   $core.bool hasUriQueryParameter() => $_has(10);
   @$pb.TagNumber(11)
-  void clearUriQueryParameter() => clearField(11);
-}
-
-/// Configuration for a specific Connected Site Tag.
-class ConnectedSiteTag extends $pb.GeneratedMessage {
-  factory ConnectedSiteTag({
-    $core.String? displayName,
-    $core.String? tagId,
-  }) {
-    final $result = create();
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (tagId != null) {
-      $result.tagId = tagId;
-    }
-    return $result;
-  }
-  ConnectedSiteTag._() : super();
-  factory ConnectedSiteTag.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ConnectedSiteTag.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ConnectedSiteTag',
-      package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
-      createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'displayName')
-    ..aOS(2, _omitFieldNames ? '' : 'tagId')
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ConnectedSiteTag clone() => ConnectedSiteTag()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  ConnectedSiteTag copyWith(void Function(ConnectedSiteTag) updates) =>
-      super.copyWith((message) => updates(message as ConnectedSiteTag))
-          as ConnectedSiteTag;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static ConnectedSiteTag create() => ConnectedSiteTag._();
-  ConnectedSiteTag createEmptyInstance() => create();
-  static $pb.PbList<ConnectedSiteTag> createRepeated() =>
-      $pb.PbList<ConnectedSiteTag>();
-  @$core.pragma('dart2js:noInline')
-  static ConnectedSiteTag getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ConnectedSiteTag>(create);
-  static ConnectedSiteTag? _defaultInstance;
-
-  /// Required. User-provided display name for the connected site tag. Must be
-  /// less than 256 characters.
-  @$pb.TagNumber(1)
-  $core.String get displayName => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set displayName($core.String v) {
-    $_setString(0, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasDisplayName() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearDisplayName() => clearField(1);
-
-  /// Required. "Tag ID to forward events to. Also known as the Measurement ID,
-  /// or the "G-ID"  (For example: G-12345).
-  @$pb.TagNumber(2)
-  $core.String get tagId => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set tagId($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasTagId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearTagId() => clearField(2);
+  void clearUriQueryParameter() => $_clearField(11);
 }
 
 /// Settings for client-side data redaction. Singleton resource under a Web
@@ -6500,28 +5466,25 @@ class DataRedactionSettings extends $pb.GeneratedMessage {
     $core.bool? queryParameterRedactionEnabled,
     $core.Iterable<$core.String>? queryParameterKeys,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (emailRedactionEnabled != null) {
-      $result.emailRedactionEnabled = emailRedactionEnabled;
-    }
-    if (queryParameterRedactionEnabled != null) {
-      $result.queryParameterRedactionEnabled = queryParameterRedactionEnabled;
-    }
-    if (queryParameterKeys != null) {
-      $result.queryParameterKeys.addAll(queryParameterKeys);
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (emailRedactionEnabled != null)
+      result.emailRedactionEnabled = emailRedactionEnabled;
+    if (queryParameterRedactionEnabled != null)
+      result.queryParameterRedactionEnabled = queryParameterRedactionEnabled;
+    if (queryParameterKeys != null)
+      result.queryParameterKeys.addAll(queryParameterKeys);
+    return result;
   }
-  DataRedactionSettings._() : super();
-  factory DataRedactionSettings.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DataRedactionSettings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DataRedactionSettings._();
+
+  factory DataRedactionSettings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DataRedactionSettings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DataRedactionSettings',
@@ -6534,26 +5497,21 @@ class DataRedactionSettings extends $pb.GeneratedMessage {
     ..pPS(4, _omitFieldNames ? '' : 'queryParameterKeys')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DataRedactionSettings clone() =>
-      DataRedactionSettings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DataRedactionSettings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DataRedactionSettings copyWith(
           void Function(DataRedactionSettings) updates) =>
       super.copyWith((message) => updates(message as DataRedactionSettings))
           as DataRedactionSettings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DataRedactionSettings create() => DataRedactionSettings._();
+  @$core.override
   DataRedactionSettings createEmptyInstance() => create();
-  static $pb.PbList<DataRedactionSettings> createRepeated() =>
-      $pb.PbList<DataRedactionSettings>();
   @$core.pragma('dart2js:noInline')
   static DataRedactionSettings getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DataRedactionSettings>(create);
@@ -6566,53 +5524,44 @@ class DataRedactionSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// If enabled, any event parameter or user property values that look like an
   /// email will be redacted.
   @$pb.TagNumber(2)
   $core.bool get emailRedactionEnabled => $_getBF(1);
   @$pb.TagNumber(2)
-  set emailRedactionEnabled($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set emailRedactionEnabled($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEmailRedactionEnabled() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEmailRedactionEnabled() => clearField(2);
+  void clearEmailRedactionEnabled() => $_clearField(2);
 
-  ///  Query Parameter redaction removes the key and value portions of a
-  ///  query parameter if it is in the configured set of query parameters.
+  /// Query Parameter redaction removes the key and value portions of a
+  /// query parameter if it is in the configured set of query parameters.
   ///
-  ///  If enabled, URL query replacement logic will be run for the Stream. Any
-  ///  query parameters defined in query_parameter_keys will be redacted.
+  /// If enabled, URL query replacement logic will be run for the Stream. Any
+  /// query parameters defined in query_parameter_keys will be redacted.
   @$pb.TagNumber(3)
   $core.bool get queryParameterRedactionEnabled => $_getBF(2);
   @$pb.TagNumber(3)
-  set queryParameterRedactionEnabled($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set queryParameterRedactionEnabled($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasQueryParameterRedactionEnabled() => $_has(2);
   @$pb.TagNumber(3)
-  void clearQueryParameterRedactionEnabled() => clearField(3);
+  void clearQueryParameterRedactionEnabled() => $_clearField(3);
 
-  ///  The query parameter keys to apply redaction logic to if present in the URL.
-  ///  Query parameter matching is case-insensitive.
+  /// The query parameter keys to apply redaction logic to if present in the URL.
+  /// Query parameter matching is case-insensitive.
   ///
-  ///  Must contain at least one element if query_parameter_replacement_enabled
-  ///  is true. Keys cannot contain commas.
+  /// Must contain at least one element if query_parameter_replacement_enabled
+  /// is true. Keys cannot contain commas.
   @$pb.TagNumber(4)
-  $core.List<$core.String> get queryParameterKeys => $_getList(3);
+  $pb.PbList<$core.String> get queryParameterKeys => $_getList(3);
 }
 
 /// A link between a Google Analytics property and an AdSense for Content ad
@@ -6622,22 +5571,20 @@ class AdSenseLink extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? adClientCode,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (adClientCode != null) {
-      $result.adClientCode = adClientCode;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (adClientCode != null) result.adClientCode = adClientCode;
+    return result;
   }
-  AdSenseLink._() : super();
-  factory AdSenseLink.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AdSenseLink.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AdSenseLink._();
+
+  factory AdSenseLink.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AdSenseLink.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AdSenseLink',
@@ -6648,23 +5595,20 @@ class AdSenseLink extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'adClientCode')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AdSenseLink clone() => AdSenseLink()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AdSenseLink clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AdSenseLink copyWith(void Function(AdSenseLink) updates) =>
       super.copyWith((message) => updates(message as AdSenseLink))
           as AdSenseLink;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AdSenseLink create() => AdSenseLink._();
+  @$core.override
   AdSenseLink createEmptyInstance() => create();
-  static $pb.PbList<AdSenseLink> createRepeated() => $pb.PbList<AdSenseLink>();
   @$core.pragma('dart2js:noInline')
   static AdSenseLink getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AdSenseLink>(create);
@@ -6676,28 +5620,22 @@ class AdSenseLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Immutable. The AdSense ad client code that the Google Analytics property is
   /// linked to. Example format: "ca-pub-1234567890"
   @$pb.TagNumber(2)
   $core.String get adClientCode => $_getSZ(1);
   @$pb.TagNumber(2)
-  set adClientCode($core.String v) {
-    $_setString(1, v);
-  }
-
+  set adClientCode($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAdClientCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAdClientCode() => clearField(2);
+  void clearAdClientCode() => $_clearField(2);
 }
 
 /// A link that references a source property under the parent rollup property.
@@ -6706,22 +5644,20 @@ class RollupPropertySourceLink extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? sourceProperty,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (sourceProperty != null) {
-      $result.sourceProperty = sourceProperty;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (sourceProperty != null) result.sourceProperty = sourceProperty;
+    return result;
   }
-  RollupPropertySourceLink._() : super();
-  factory RollupPropertySourceLink.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RollupPropertySourceLink.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RollupPropertySourceLink._();
+
+  factory RollupPropertySourceLink.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RollupPropertySourceLink.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RollupPropertySourceLink',
@@ -6732,26 +5668,21 @@ class RollupPropertySourceLink extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'sourceProperty')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RollupPropertySourceLink clone() =>
-      RollupPropertySourceLink()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RollupPropertySourceLink clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RollupPropertySourceLink copyWith(
           void Function(RollupPropertySourceLink) updates) =>
       super.copyWith((message) => updates(message as RollupPropertySourceLink))
           as RollupPropertySourceLink;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RollupPropertySourceLink create() => RollupPropertySourceLink._();
+  @$core.override
   RollupPropertySourceLink createEmptyInstance() => create();
-  static $pb.PbList<RollupPropertySourceLink> createRepeated() =>
-      $pb.PbList<RollupPropertySourceLink>();
   @$core.pragma('dart2js:noInline')
   static RollupPropertySourceLink getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RollupPropertySourceLink>(create);
@@ -6764,14 +5695,11 @@ class RollupPropertySourceLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Immutable. Resource name of the source property.
   /// Format: properties/{property_id}
@@ -6779,16 +5707,459 @@ class RollupPropertySourceLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get sourceProperty => $_getSZ(1);
   @$pb.TagNumber(2)
-  set sourceProperty($core.String v) {
-    $_setString(1, v);
-  }
-
+  set sourceProperty($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSourceProperty() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSourceProperty() => clearField(2);
+  void clearSourceProperty() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+/// Represents a Reporting Data Annotation's date range, both start and end
+/// dates are inclusive. Time zones are based on the parent property.
+class ReportingDataAnnotation_DateRange extends $pb.GeneratedMessage {
+  factory ReportingDataAnnotation_DateRange({
+    $6.Date? startDate,
+    $6.Date? endDate,
+  }) {
+    final result = create();
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
+    return result;
+  }
+
+  ReportingDataAnnotation_DateRange._();
+
+  factory ReportingDataAnnotation_DateRange.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReportingDataAnnotation_DateRange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReportingDataAnnotation.DateRange',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOM<$6.Date>(1, _omitFieldNames ? '' : 'startDate',
+        subBuilder: $6.Date.create)
+    ..aOM<$6.Date>(2, _omitFieldNames ? '' : 'endDate',
+        subBuilder: $6.Date.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportingDataAnnotation_DateRange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportingDataAnnotation_DateRange copyWith(
+          void Function(ReportingDataAnnotation_DateRange) updates) =>
+      super.copyWith((message) =>
+              updates(message as ReportingDataAnnotation_DateRange))
+          as ReportingDataAnnotation_DateRange;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ReportingDataAnnotation_DateRange create() =>
+      ReportingDataAnnotation_DateRange._();
+  @$core.override
+  ReportingDataAnnotation_DateRange createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static ReportingDataAnnotation_DateRange getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReportingDataAnnotation_DateRange>(
+          create);
+  static ReportingDataAnnotation_DateRange? _defaultInstance;
+
+  /// Required. The start date for this range. Must be a valid date with
+  /// year, month, and day set. The date may be in the past, present, or
+  /// future.
+  @$pb.TagNumber(1)
+  $6.Date get startDate => $_getN(0);
+  @$pb.TagNumber(1)
+  set startDate($6.Date value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasStartDate() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStartDate() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $6.Date ensureStartDate() => $_ensure(0);
+
+  /// Required. The end date for this range. Must be a valid date with
+  /// year, month, and day set. This date must be greater than or equal to
+  /// the start date.
+  @$pb.TagNumber(2)
+  $6.Date get endDate => $_getN(1);
+  @$pb.TagNumber(2)
+  set endDate($6.Date value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasEndDate() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEndDate() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $6.Date ensureEndDate() => $_ensure(1);
+}
+
+enum ReportingDataAnnotation_Target {
+  annotationDate,
+  annotationDateRange,
+  notSet
+}
+
+/// A Reporting Data Annotation is a comment connected to certain dates for
+/// reporting data.
+class ReportingDataAnnotation extends $pb.GeneratedMessage {
+  factory ReportingDataAnnotation({
+    $core.String? name,
+    $core.String? title,
+    $core.String? description,
+    $6.Date? annotationDate,
+    ReportingDataAnnotation_DateRange? annotationDateRange,
+    ReportingDataAnnotation_Color? color,
+    $core.bool? systemGenerated,
+  }) {
+    final result = create();
+    if (name != null) result.name = name;
+    if (title != null) result.title = title;
+    if (description != null) result.description = description;
+    if (annotationDate != null) result.annotationDate = annotationDate;
+    if (annotationDateRange != null)
+      result.annotationDateRange = annotationDateRange;
+    if (color != null) result.color = color;
+    if (systemGenerated != null) result.systemGenerated = systemGenerated;
+    return result;
+  }
+
+  ReportingDataAnnotation._();
+
+  factory ReportingDataAnnotation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReportingDataAnnotation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int, ReportingDataAnnotation_Target>
+      _ReportingDataAnnotation_TargetByTag = {
+    4: ReportingDataAnnotation_Target.annotationDate,
+    5: ReportingDataAnnotation_Target.annotationDateRange,
+    0: ReportingDataAnnotation_Target.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReportingDataAnnotation',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..oo(0, [4, 5])
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'title')
+    ..aOS(3, _omitFieldNames ? '' : 'description')
+    ..aOM<$6.Date>(4, _omitFieldNames ? '' : 'annotationDate',
+        subBuilder: $6.Date.create)
+    ..aOM<ReportingDataAnnotation_DateRange>(
+        5, _omitFieldNames ? '' : 'annotationDateRange',
+        subBuilder: ReportingDataAnnotation_DateRange.create)
+    ..aE<ReportingDataAnnotation_Color>(6, _omitFieldNames ? '' : 'color',
+        enumValues: ReportingDataAnnotation_Color.values)
+    ..aOB(7, _omitFieldNames ? '' : 'systemGenerated')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportingDataAnnotation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportingDataAnnotation copyWith(
+          void Function(ReportingDataAnnotation) updates) =>
+      super.copyWith((message) => updates(message as ReportingDataAnnotation))
+          as ReportingDataAnnotation;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ReportingDataAnnotation create() => ReportingDataAnnotation._();
+  @$core.override
+  ReportingDataAnnotation createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static ReportingDataAnnotation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReportingDataAnnotation>(create);
+  static ReportingDataAnnotation? _defaultInstance;
+
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  ReportingDataAnnotation_Target whichTarget() =>
+      _ReportingDataAnnotation_TargetByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearTarget() => $_clearField($_whichOneof(0));
+
+  /// Required. Identifier. Resource name of this Reporting Data Annotation.
+  /// Format:
+  /// 'properties/{property_id}/reportingDataAnnotations/{reporting_data_annotation}'
+  /// Format: 'properties/123/reportingDataAnnotations/456'
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => $_clearField(1);
+
+  /// Required. Human-readable title for this Reporting Data Annotation.
+  @$pb.TagNumber(2)
+  $core.String get title => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set title($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasTitle() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTitle() => $_clearField(2);
+
+  /// Optional. Description for this Reporting Data Annotation.
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set description($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDescription() => $_clearField(3);
+
+  /// If set, the Reporting Data Annotation is for a specific date represented
+  /// by this field. The date must be a valid date with year, month and day
+  /// set. The date may be in the past, present, or future.
+  @$pb.TagNumber(4)
+  $6.Date get annotationDate => $_getN(3);
+  @$pb.TagNumber(4)
+  set annotationDate($6.Date value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasAnnotationDate() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAnnotationDate() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $6.Date ensureAnnotationDate() => $_ensure(3);
+
+  /// If set, the Reporting Data Annotation is for a range of dates represented
+  /// by this field.
+  @$pb.TagNumber(5)
+  ReportingDataAnnotation_DateRange get annotationDateRange => $_getN(4);
+  @$pb.TagNumber(5)
+  set annotationDateRange(ReportingDataAnnotation_DateRange value) =>
+      $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasAnnotationDateRange() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearAnnotationDateRange() => $_clearField(5);
+  @$pb.TagNumber(5)
+  ReportingDataAnnotation_DateRange ensureAnnotationDateRange() => $_ensure(4);
+
+  /// Required. The color used for display of this Reporting Data Annotation.
+  @$pb.TagNumber(6)
+  ReportingDataAnnotation_Color get color => $_getN(5);
+  @$pb.TagNumber(6)
+  set color(ReportingDataAnnotation_Color value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasColor() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearColor() => $_clearField(6);
+
+  /// Output only. If true, this annotation was generated by the Google Analytics
+  /// system. System-generated annotations cannot be updated or deleted.
+  @$pb.TagNumber(7)
+  $core.bool get systemGenerated => $_getBF(6);
+  @$pb.TagNumber(7)
+  set systemGenerated($core.bool value) => $_setBool(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasSystemGenerated() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearSystemGenerated() => $_clearField(7);
+}
+
+/// Subproperty synchronization configuration controls how ordinary property
+/// configurations are synchronized to subproperties. This resource is
+/// provisioned automatically for each subproperty.
+class SubpropertySyncConfig extends $pb.GeneratedMessage {
+  factory SubpropertySyncConfig({
+    $core.String? name,
+    $core.String? applyToProperty,
+    SubpropertySyncConfig_SynchronizationMode? customDimensionAndMetricSyncMode,
+  }) {
+    final result = create();
+    if (name != null) result.name = name;
+    if (applyToProperty != null) result.applyToProperty = applyToProperty;
+    if (customDimensionAndMetricSyncMode != null)
+      result.customDimensionAndMetricSyncMode =
+          customDimensionAndMetricSyncMode;
+    return result;
+  }
+
+  SubpropertySyncConfig._();
+
+  factory SubpropertySyncConfig.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SubpropertySyncConfig.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SubpropertySyncConfig',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'applyToProperty')
+    ..aE<SubpropertySyncConfig_SynchronizationMode>(
+        3, _omitFieldNames ? '' : 'customDimensionAndMetricSyncMode',
+        enumValues: SubpropertySyncConfig_SynchronizationMode.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SubpropertySyncConfig clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SubpropertySyncConfig copyWith(
+          void Function(SubpropertySyncConfig) updates) =>
+      super.copyWith((message) => updates(message as SubpropertySyncConfig))
+          as SubpropertySyncConfig;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SubpropertySyncConfig create() => SubpropertySyncConfig._();
+  @$core.override
+  SubpropertySyncConfig createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static SubpropertySyncConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SubpropertySyncConfig>(create);
+  static SubpropertySyncConfig? _defaultInstance;
+
+  /// Output only. Identifier. Format:
+  /// properties/{ordinary_property_id}/subpropertySyncConfigs/{subproperty_id}
+  /// Example: properties/1234/subpropertySyncConfigs/5678
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => $_clearField(1);
+
+  /// Output only. Immutable. Resource name of the subproperty that these
+  /// settings apply to.
+  @$pb.TagNumber(2)
+  $core.String get applyToProperty => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set applyToProperty($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasApplyToProperty() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearApplyToProperty() => $_clearField(2);
+
+  /// Required. Specifies the Custom Dimension / Metric synchronization mode for
+  /// the subproperty.
+  ///
+  /// If set to ALL, Custom Dimension / Metric synchronization will be
+  /// immediately enabled.  Local configuration of Custom Dimensions / Metrics
+  /// will not be allowed on the subproperty so long as the synchronization mode
+  /// is set to ALL.
+  ///
+  /// If set to NONE, Custom Dimensions / Metric synchronization is disabled.
+  /// Custom Dimensions / Metrics must be configured explicitly on the
+  /// Subproperty.
+  @$pb.TagNumber(3)
+  SubpropertySyncConfig_SynchronizationMode
+      get customDimensionAndMetricSyncMode => $_getN(2);
+  @$pb.TagNumber(3)
+  set customDimensionAndMetricSyncMode(
+          SubpropertySyncConfig_SynchronizationMode value) =>
+      $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasCustomDimensionAndMetricSyncMode() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCustomDimensionAndMetricSyncMode() => $_clearField(3);
+}
+
+/// A resource containing settings related to reporting identity.
+class ReportingIdentitySettings extends $pb.GeneratedMessage {
+  factory ReportingIdentitySettings({
+    $core.String? name,
+    ReportingIdentitySettings_ReportingIdentity? reportingIdentity,
+  }) {
+    final result = create();
+    if (name != null) result.name = name;
+    if (reportingIdentity != null) result.reportingIdentity = reportingIdentity;
+    return result;
+  }
+
+  ReportingIdentitySettings._();
+
+  factory ReportingIdentitySettings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReportingIdentitySettings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReportingIdentitySettings',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.analytics.admin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aE<ReportingIdentitySettings_ReportingIdentity>(
+        2, _omitFieldNames ? '' : 'reportingIdentity',
+        enumValues: ReportingIdentitySettings_ReportingIdentity.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportingIdentitySettings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportingIdentitySettings copyWith(
+          void Function(ReportingIdentitySettings) updates) =>
+      super.copyWith((message) => updates(message as ReportingIdentitySettings))
+          as ReportingIdentitySettings;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ReportingIdentitySettings create() => ReportingIdentitySettings._();
+  @$core.override
+  ReportingIdentitySettings createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static ReportingIdentitySettings getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReportingIdentitySettings>(create);
+  static ReportingIdentitySettings? _defaultInstance;
+
+  /// Output only. Identifier. Resource name for this reporting identity settings
+  /// singleton resource. Format:
+  /// properties/{property_id}/reportingIdentitySettings Example:
+  /// "properties/1234/reportingIdentitySettings"
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => $_clearField(1);
+
+  /// The strategy used for identifying user identities in reports.
+  @$pb.TagNumber(2)
+  ReportingIdentitySettings_ReportingIdentity get reportingIdentity =>
+      $_getN(1);
+  @$pb.TagNumber(2)
+  set reportingIdentity(ReportingIdentitySettings_ReportingIdentity value) =>
+      $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasReportingIdentity() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearReportingIdentity() => $_clearField(2);
+}
+
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

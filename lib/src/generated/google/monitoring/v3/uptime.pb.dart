@@ -1,26 +1,31 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/monitoring/v3/uptime.proto
-//
-// @dart = 2.12
+// Generated from google/monitoring/v3/uptime.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/duration.pb.dart'
+    as $1;
 
 import '../../api/monitored_resource.pb.dart' as $0;
-import '../../protobuf/duration.pb.dart' as $1;
 import 'uptime.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'uptime.pbenum.dart';
 
 /// An internal checker allows Uptime checks to run on private/internal GCP
 /// resources.
+@$core.Deprecated('This message is deprecated')
 class InternalChecker extends $pb.GeneratedMessage {
   factory InternalChecker({
     $core.String? name,
@@ -30,34 +35,24 @@ class InternalChecker extends $pb.GeneratedMessage {
     $core.String? peerProjectId,
     InternalChecker_State? state,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (network != null) {
-      $result.network = network;
-    }
-    if (gcpZone != null) {
-      $result.gcpZone = gcpZone;
-    }
-    if (peerProjectId != null) {
-      $result.peerProjectId = peerProjectId;
-    }
-    if (state != null) {
-      $result.state = state;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (displayName != null) result.displayName = displayName;
+    if (network != null) result.network = network;
+    if (gcpZone != null) result.gcpZone = gcpZone;
+    if (peerProjectId != null) result.peerProjectId = peerProjectId;
+    if (state != null) result.state = state;
+    return result;
   }
-  InternalChecker._() : super();
-  factory InternalChecker.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory InternalChecker.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  InternalChecker._();
+
+  factory InternalChecker.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory InternalChecker.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'InternalChecker',
@@ -69,53 +64,43 @@ class InternalChecker extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'network')
     ..aOS(4, _omitFieldNames ? '' : 'gcpZone')
     ..aOS(6, _omitFieldNames ? '' : 'peerProjectId')
-    ..e<InternalChecker_State>(
-        7, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
-        defaultOrMaker: InternalChecker_State.UNSPECIFIED,
-        valueOf: InternalChecker_State.valueOf,
+    ..aE<InternalChecker_State>(7, _omitFieldNames ? '' : 'state',
         enumValues: InternalChecker_State.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  InternalChecker clone() => InternalChecker()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  InternalChecker clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   InternalChecker copyWith(void Function(InternalChecker) updates) =>
       super.copyWith((message) => updates(message as InternalChecker))
           as InternalChecker;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static InternalChecker create() => InternalChecker._();
+  @$core.override
   InternalChecker createEmptyInstance() => create();
-  static $pb.PbList<InternalChecker> createRepeated() =>
-      $pb.PbList<InternalChecker>();
   @$core.pragma('dart2js:noInline')
   static InternalChecker getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<InternalChecker>(create);
   static InternalChecker? _defaultInstance;
 
-  ///  A unique resource name for this InternalChecker. The format is:
+  /// A unique resource name for this InternalChecker. The format is:
   ///
-  ///      projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID]
+  ///     projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID]
   ///
-  ///  `[PROJECT_ID_OR_NUMBER]` is the Cloud Monitoring Metrics Scope project for
-  ///  the Uptime check config associated with the internal checker.
+  /// `[PROJECT_ID_OR_NUMBER]` is the Cloud Monitoring Metrics Scope project for
+  /// the Uptime check config associated with the internal checker.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The checker's human-readable name. The display name
   /// should be unique within a Cloud Monitoring Metrics Scope in order to make
@@ -123,69 +108,54 @@ class InternalChecker extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set displayName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisplayName() => clearField(2);
+  void clearDisplayName() => $_clearField(2);
 
   /// The [GCP VPC network](https://cloud.google.com/vpc/docs/vpc) where the
   /// internal resource lives (ex: "default").
   @$pb.TagNumber(3)
   $core.String get network => $_getSZ(2);
   @$pb.TagNumber(3)
-  set network($core.String v) {
-    $_setString(2, v);
-  }
-
+  set network($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasNetwork() => $_has(2);
   @$pb.TagNumber(3)
-  void clearNetwork() => clearField(3);
+  void clearNetwork() => $_clearField(3);
 
   /// The GCP zone the Uptime check should egress from. Only respected for
   /// internal Uptime checks, where internal_network is specified.
   @$pb.TagNumber(4)
   $core.String get gcpZone => $_getSZ(3);
   @$pb.TagNumber(4)
-  set gcpZone($core.String v) {
-    $_setString(3, v);
-  }
-
+  set gcpZone($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasGcpZone() => $_has(3);
   @$pb.TagNumber(4)
-  void clearGcpZone() => clearField(4);
+  void clearGcpZone() => $_clearField(4);
 
   /// The GCP project ID where the internal checker lives. Not necessary
   /// the same as the Metrics Scope project.
   @$pb.TagNumber(6)
   $core.String get peerProjectId => $_getSZ(4);
   @$pb.TagNumber(6)
-  set peerProjectId($core.String v) {
-    $_setString(4, v);
-  }
-
+  set peerProjectId($core.String value) => $_setString(4, value);
   @$pb.TagNumber(6)
   $core.bool hasPeerProjectId() => $_has(4);
   @$pb.TagNumber(6)
-  void clearPeerProjectId() => clearField(6);
+  void clearPeerProjectId() => $_clearField(6);
 
   /// The current operational state of the internal checker.
   @$pb.TagNumber(7)
   InternalChecker_State get state => $_getN(5);
   @$pb.TagNumber(7)
-  set state(InternalChecker_State v) {
-    setField(7, v);
-  }
-
+  set state(InternalChecker_State value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasState() => $_has(5);
   @$pb.TagNumber(7)
-  void clearState() => clearField(7);
+  void clearState() => $_clearField(7);
 }
 
 /// A Synthetic Monitor deployed to a Cloud Functions V2 instance.
@@ -195,23 +165,22 @@ class SyntheticMonitorTarget_CloudFunctionV2Target
     $core.String? name,
     $0.MonitoredResource? cloudRunRevision,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (cloudRunRevision != null) {
-      $result.cloudRunRevision = cloudRunRevision;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (cloudRunRevision != null) result.cloudRunRevision = cloudRunRevision;
+    return result;
   }
-  SyntheticMonitorTarget_CloudFunctionV2Target._() : super();
+
+  SyntheticMonitorTarget_CloudFunctionV2Target._();
+
   factory SyntheticMonitorTarget_CloudFunctionV2Target.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SyntheticMonitorTarget_CloudFunctionV2Target.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SyntheticMonitorTarget_CloudFunctionV2Target.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SyntheticMonitorTarget.CloudFunctionV2Target',
@@ -223,14 +192,9 @@ class SyntheticMonitorTarget_CloudFunctionV2Target
         subBuilder: $0.MonitoredResource.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SyntheticMonitorTarget_CloudFunctionV2Target clone() =>
-      SyntheticMonitorTarget_CloudFunctionV2Target()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SyntheticMonitorTarget_CloudFunctionV2Target clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SyntheticMonitorTarget_CloudFunctionV2Target copyWith(
           void Function(SyntheticMonitorTarget_CloudFunctionV2Target)
               updates) =>
@@ -238,16 +202,15 @@ class SyntheticMonitorTarget_CloudFunctionV2Target
               updates(message as SyntheticMonitorTarget_CloudFunctionV2Target))
           as SyntheticMonitorTarget_CloudFunctionV2Target;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SyntheticMonitorTarget_CloudFunctionV2Target create() =>
       SyntheticMonitorTarget_CloudFunctionV2Target._();
+  @$core.override
   SyntheticMonitorTarget_CloudFunctionV2Target createEmptyInstance() =>
       create();
-  static $pb.PbList<SyntheticMonitorTarget_CloudFunctionV2Target>
-      createRepeated() =>
-          $pb.PbList<SyntheticMonitorTarget_CloudFunctionV2Target>();
   @$core.pragma('dart2js:noInline')
   static SyntheticMonitorTarget_CloudFunctionV2Target getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -260,14 +223,11 @@ class SyntheticMonitorTarget_CloudFunctionV2Target
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Output only. The `cloud_run_revision` Monitored Resource associated with
   /// the GCFv2. The Synthetic Monitor execution results (metrics, logs, and
@@ -276,14 +236,11 @@ class SyntheticMonitorTarget_CloudFunctionV2Target
   @$pb.TagNumber(2)
   $0.MonitoredResource get cloudRunRevision => $_getN(1);
   @$pb.TagNumber(2)
-  set cloudRunRevision($0.MonitoredResource v) {
-    setField(2, v);
-  }
-
+  set cloudRunRevision($0.MonitoredResource value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCloudRunRevision() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCloudRunRevision() => clearField(2);
+  void clearCloudRunRevision() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.MonitoredResource ensureCloudRunRevision() => $_ensure(1);
 }
@@ -295,19 +252,19 @@ class SyntheticMonitorTarget extends $pb.GeneratedMessage {
   factory SyntheticMonitorTarget({
     SyntheticMonitorTarget_CloudFunctionV2Target? cloudFunctionV2,
   }) {
-    final $result = create();
-    if (cloudFunctionV2 != null) {
-      $result.cloudFunctionV2 = cloudFunctionV2;
-    }
-    return $result;
+    final result = create();
+    if (cloudFunctionV2 != null) result.cloudFunctionV2 = cloudFunctionV2;
+    return result;
   }
-  SyntheticMonitorTarget._() : super();
-  factory SyntheticMonitorTarget.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SyntheticMonitorTarget.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SyntheticMonitorTarget._();
+
+  factory SyntheticMonitorTarget.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SyntheticMonitorTarget.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, SyntheticMonitorTarget_Target>
       _SyntheticMonitorTarget_TargetByTag = {
@@ -325,47 +282,42 @@ class SyntheticMonitorTarget extends $pb.GeneratedMessage {
         subBuilder: SyntheticMonitorTarget_CloudFunctionV2Target.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SyntheticMonitorTarget clone() =>
-      SyntheticMonitorTarget()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SyntheticMonitorTarget clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SyntheticMonitorTarget copyWith(
           void Function(SyntheticMonitorTarget) updates) =>
       super.copyWith((message) => updates(message as SyntheticMonitorTarget))
           as SyntheticMonitorTarget;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SyntheticMonitorTarget create() => SyntheticMonitorTarget._();
+  @$core.override
   SyntheticMonitorTarget createEmptyInstance() => create();
-  static $pb.PbList<SyntheticMonitorTarget> createRepeated() =>
-      $pb.PbList<SyntheticMonitorTarget>();
   @$core.pragma('dart2js:noInline')
   static SyntheticMonitorTarget getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SyntheticMonitorTarget>(create);
   static SyntheticMonitorTarget? _defaultInstance;
 
+  @$pb.TagNumber(1)
   SyntheticMonitorTarget_Target whichTarget() =>
       _SyntheticMonitorTarget_TargetByTag[$_whichOneof(0)]!;
-  void clearTarget() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  void clearTarget() => $_clearField($_whichOneof(0));
 
   /// Target a Synthetic Monitor GCFv2 instance.
   @$pb.TagNumber(1)
   SyntheticMonitorTarget_CloudFunctionV2Target get cloudFunctionV2 => $_getN(0);
   @$pb.TagNumber(1)
-  set cloudFunctionV2(SyntheticMonitorTarget_CloudFunctionV2Target v) {
-    setField(1, v);
-  }
-
+  set cloudFunctionV2(SyntheticMonitorTarget_CloudFunctionV2Target value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasCloudFunctionV2() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCloudFunctionV2() => clearField(1);
+  void clearCloudFunctionV2() => $_clearField(1);
   @$pb.TagNumber(1)
   SyntheticMonitorTarget_CloudFunctionV2Target ensureCloudFunctionV2() =>
       $_ensure(0);
@@ -378,22 +330,20 @@ class UptimeCheckConfig_ResourceGroup extends $pb.GeneratedMessage {
     $core.String? groupId,
     GroupResourceType? resourceType,
   }) {
-    final $result = create();
-    if (groupId != null) {
-      $result.groupId = groupId;
-    }
-    if (resourceType != null) {
-      $result.resourceType = resourceType;
-    }
-    return $result;
+    final result = create();
+    if (groupId != null) result.groupId = groupId;
+    if (resourceType != null) result.resourceType = resourceType;
+    return result;
   }
-  UptimeCheckConfig_ResourceGroup._() : super();
-  factory UptimeCheckConfig_ResourceGroup.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UptimeCheckConfig_ResourceGroup.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UptimeCheckConfig_ResourceGroup._();
+
+  factory UptimeCheckConfig_ResourceGroup.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UptimeCheckConfig_ResourceGroup.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UptimeCheckConfig.ResourceGroup',
@@ -401,35 +351,27 @@ class UptimeCheckConfig_ResourceGroup extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'groupId')
-    ..e<GroupResourceType>(
-        2, _omitFieldNames ? '' : 'resourceType', $pb.PbFieldType.OE,
-        defaultOrMaker: GroupResourceType.RESOURCE_TYPE_UNSPECIFIED,
-        valueOf: GroupResourceType.valueOf,
+    ..aE<GroupResourceType>(2, _omitFieldNames ? '' : 'resourceType',
         enumValues: GroupResourceType.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UptimeCheckConfig_ResourceGroup clone() =>
-      UptimeCheckConfig_ResourceGroup()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UptimeCheckConfig_ResourceGroup clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UptimeCheckConfig_ResourceGroup copyWith(
           void Function(UptimeCheckConfig_ResourceGroup) updates) =>
       super.copyWith(
               (message) => updates(message as UptimeCheckConfig_ResourceGroup))
           as UptimeCheckConfig_ResourceGroup;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_ResourceGroup create() =>
       UptimeCheckConfig_ResourceGroup._();
+  @$core.override
   UptimeCheckConfig_ResourceGroup createEmptyInstance() => create();
-  static $pb.PbList<UptimeCheckConfig_ResourceGroup> createRepeated() =>
-      $pb.PbList<UptimeCheckConfig_ResourceGroup>();
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_ResourceGroup getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UptimeCheckConfig_ResourceGroup>(
@@ -442,27 +384,21 @@ class UptimeCheckConfig_ResourceGroup extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get groupId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set groupId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set groupId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasGroupId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearGroupId() => clearField(1);
+  void clearGroupId() => $_clearField(1);
 
   /// The resource type of the group members.
   @$pb.TagNumber(2)
   GroupResourceType get resourceType => $_getN(1);
   @$pb.TagNumber(2)
-  set resourceType(GroupResourceType v) {
-    setField(2, v);
-  }
-
+  set resourceType(GroupResourceType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasResourceType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearResourceType() => clearField(2);
+  void clearResourceType() => $_clearField(2);
 }
 
 /// Information involved in sending ICMP pings alongside public HTTP/TCP
@@ -472,50 +408,45 @@ class UptimeCheckConfig_PingConfig extends $pb.GeneratedMessage {
   factory UptimeCheckConfig_PingConfig({
     $core.int? pingsCount,
   }) {
-    final $result = create();
-    if (pingsCount != null) {
-      $result.pingsCount = pingsCount;
-    }
-    return $result;
+    final result = create();
+    if (pingsCount != null) result.pingsCount = pingsCount;
+    return result;
   }
-  UptimeCheckConfig_PingConfig._() : super();
-  factory UptimeCheckConfig_PingConfig.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UptimeCheckConfig_PingConfig.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UptimeCheckConfig_PingConfig._();
+
+  factory UptimeCheckConfig_PingConfig.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UptimeCheckConfig_PingConfig.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UptimeCheckConfig.PingConfig',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'pingsCount', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'pingsCount')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UptimeCheckConfig_PingConfig clone() =>
-      UptimeCheckConfig_PingConfig()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UptimeCheckConfig_PingConfig clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UptimeCheckConfig_PingConfig copyWith(
           void Function(UptimeCheckConfig_PingConfig) updates) =>
       super.copyWith(
               (message) => updates(message as UptimeCheckConfig_PingConfig))
           as UptimeCheckConfig_PingConfig;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_PingConfig create() =>
       UptimeCheckConfig_PingConfig._();
+  @$core.override
   UptimeCheckConfig_PingConfig createEmptyInstance() => create();
-  static $pb.PbList<UptimeCheckConfig_PingConfig> createRepeated() =>
-      $pb.PbList<UptimeCheckConfig_PingConfig>();
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_PingConfig getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UptimeCheckConfig_PingConfig>(create);
@@ -525,14 +456,11 @@ class UptimeCheckConfig_PingConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get pingsCount => $_getIZ(0);
   @$pb.TagNumber(1)
-  set pingsCount($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set pingsCount($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPingsCount() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPingsCount() => clearField(1);
+  void clearPingsCount() => $_clearField(1);
 }
 
 /// The authentication parameters to provide to the specified resource or
@@ -545,24 +473,22 @@ class UptimeCheckConfig_HttpCheck_BasicAuthentication
     $core.String? username,
     $core.String? password,
   }) {
-    final $result = create();
-    if (username != null) {
-      $result.username = username;
-    }
-    if (password != null) {
-      $result.password = password;
-    }
-    return $result;
+    final result = create();
+    if (username != null) result.username = username;
+    if (password != null) result.password = password;
+    return result;
   }
-  UptimeCheckConfig_HttpCheck_BasicAuthentication._() : super();
+
+  UptimeCheckConfig_HttpCheck_BasicAuthentication._();
+
   factory UptimeCheckConfig_HttpCheck_BasicAuthentication.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory UptimeCheckConfig_HttpCheck_BasicAuthentication.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -575,14 +501,9 @@ class UptimeCheckConfig_HttpCheck_BasicAuthentication
     ..aOS(2, _omitFieldNames ? '' : 'password')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UptimeCheckConfig_HttpCheck_BasicAuthentication clone() =>
-      UptimeCheckConfig_HttpCheck_BasicAuthentication()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UptimeCheckConfig_HttpCheck_BasicAuthentication clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UptimeCheckConfig_HttpCheck_BasicAuthentication copyWith(
           void Function(UptimeCheckConfig_HttpCheck_BasicAuthentication)
               updates) =>
@@ -590,16 +511,15 @@ class UptimeCheckConfig_HttpCheck_BasicAuthentication
               message as UptimeCheckConfig_HttpCheck_BasicAuthentication))
           as UptimeCheckConfig_HttpCheck_BasicAuthentication;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_HttpCheck_BasicAuthentication create() =>
       UptimeCheckConfig_HttpCheck_BasicAuthentication._();
+  @$core.override
   UptimeCheckConfig_HttpCheck_BasicAuthentication createEmptyInstance() =>
       create();
-  static $pb.PbList<UptimeCheckConfig_HttpCheck_BasicAuthentication>
-      createRepeated() =>
-          $pb.PbList<UptimeCheckConfig_HttpCheck_BasicAuthentication>();
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_HttpCheck_BasicAuthentication getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -610,27 +530,21 @@ class UptimeCheckConfig_HttpCheck_BasicAuthentication
   @$pb.TagNumber(1)
   $core.String get username => $_getSZ(0);
   @$pb.TagNumber(1)
-  set username($core.String v) {
-    $_setString(0, v);
-  }
-
+  set username($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasUsername() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUsername() => clearField(1);
+  void clearUsername() => $_clearField(1);
 
   /// The password to use when authenticating with the HTTP server.
   @$pb.TagNumber(2)
   $core.String get password => $_getSZ(1);
   @$pb.TagNumber(2)
-  set password($core.String v) {
-    $_setString(1, v);
-  }
-
+  set password($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPassword() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPassword() => clearField(2);
+  void clearPassword() => $_clearField(2);
 }
 
 enum UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCode {
@@ -647,24 +561,22 @@ class UptimeCheckConfig_HttpCheck_ResponseStatusCode
     $core.int? statusValue,
     UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass? statusClass,
   }) {
-    final $result = create();
-    if (statusValue != null) {
-      $result.statusValue = statusValue;
-    }
-    if (statusClass != null) {
-      $result.statusClass = statusClass;
-    }
-    return $result;
+    final result = create();
+    if (statusValue != null) result.statusValue = statusValue;
+    if (statusClass != null) result.statusClass = statusClass;
+    return result;
   }
-  UptimeCheckConfig_HttpCheck_ResponseStatusCode._() : super();
+
+  UptimeCheckConfig_HttpCheck_ResponseStatusCode._();
+
   factory UptimeCheckConfig_HttpCheck_ResponseStatusCode.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory UptimeCheckConfig_HttpCheck_ResponseStatusCode.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core
       .Map<$core.int, UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCode>
@@ -679,26 +591,16 @@ class UptimeCheckConfig_HttpCheck_ResponseStatusCode
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'statusValue', $pb.PbFieldType.O3)
-    ..e<UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass>(
-        2, _omitFieldNames ? '' : 'statusClass', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass
-                .STATUS_CLASS_UNSPECIFIED,
-        valueOf:
-            UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass.valueOf,
+    ..aI(1, _omitFieldNames ? '' : 'statusValue')
+    ..aE<UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass>(
+        2, _omitFieldNames ? '' : 'statusClass',
         enumValues:
             UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UptimeCheckConfig_HttpCheck_ResponseStatusCode clone() =>
-      UptimeCheckConfig_HttpCheck_ResponseStatusCode()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UptimeCheckConfig_HttpCheck_ResponseStatusCode clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UptimeCheckConfig_HttpCheck_ResponseStatusCode copyWith(
           void Function(UptimeCheckConfig_HttpCheck_ResponseStatusCode)
               updates) =>
@@ -706,39 +608,39 @@ class UptimeCheckConfig_HttpCheck_ResponseStatusCode
               message as UptimeCheckConfig_HttpCheck_ResponseStatusCode))
           as UptimeCheckConfig_HttpCheck_ResponseStatusCode;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_HttpCheck_ResponseStatusCode create() =>
       UptimeCheckConfig_HttpCheck_ResponseStatusCode._();
+  @$core.override
   UptimeCheckConfig_HttpCheck_ResponseStatusCode createEmptyInstance() =>
       create();
-  static $pb.PbList<UptimeCheckConfig_HttpCheck_ResponseStatusCode>
-      createRepeated() =>
-          $pb.PbList<UptimeCheckConfig_HttpCheck_ResponseStatusCode>();
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_HttpCheck_ResponseStatusCode getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
           UptimeCheckConfig_HttpCheck_ResponseStatusCode>(create);
   static UptimeCheckConfig_HttpCheck_ResponseStatusCode? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCode whichStatusCode() =>
       _UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusCodeByTag[
           $_whichOneof(0)]!;
-  void clearStatusCode() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearStatusCode() => $_clearField($_whichOneof(0));
 
   /// A status code to accept.
   @$pb.TagNumber(1)
   $core.int get statusValue => $_getIZ(0);
   @$pb.TagNumber(1)
-  set statusValue($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set statusValue($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasStatusValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStatusValue() => clearField(1);
+  void clearStatusValue() => $_clearField(1);
 
   /// A class of status codes to accept.
   @$pb.TagNumber(2)
@@ -746,14 +648,12 @@ class UptimeCheckConfig_HttpCheck_ResponseStatusCode
       $_getN(1);
   @$pb.TagNumber(2)
   set statusClass(
-      UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass v) {
-    setField(2, v);
-  }
-
+          UptimeCheckConfig_HttpCheck_ResponseStatusCode_StatusClass value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasStatusClass() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStatusClass() => clearField(2);
+  void clearStatusClass() => $_clearField(2);
 }
 
 /// Contains information needed for generating either an
@@ -768,21 +668,21 @@ class UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication
     UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication_ServiceAgentAuthenticationType?
         type,
   }) {
-    final $result = create();
-    if (type != null) {
-      $result.type = type;
-    }
-    return $result;
+    final result = create();
+    if (type != null) result.type = type;
+    return result;
   }
-  UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication._() : super();
+
+  UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication._();
+
   factory UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -791,28 +691,16 @@ class UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
-    ..e<UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication_ServiceAgentAuthenticationType>(
-        1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication_ServiceAgentAuthenticationType
-                .SERVICE_AGENT_AUTHENTICATION_TYPE_UNSPECIFIED,
-        valueOf:
-            UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication_ServiceAgentAuthenticationType
-                .valueOf,
+    ..aE<UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication_ServiceAgentAuthenticationType>(
+        1, _omitFieldNames ? '' : 'type',
         enumValues:
             UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication_ServiceAgentAuthenticationType
                 .values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication clone() =>
-      UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication copyWith(
           void Function(UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication)
               updates) =>
@@ -820,16 +708,15 @@ class UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication
               as UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication))
           as UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication create() =>
       UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication._();
+  @$core.override
   UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication
       createEmptyInstance() => create();
-  static $pb.PbList<UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication>
-      createRepeated() =>
-          $pb.PbList<UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication>();
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -843,15 +730,13 @@ class UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication
       get type => $_getN(0);
   @$pb.TagNumber(1)
   set type(
-      UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication_ServiceAgentAuthenticationType
-          v) {
-    setField(1, v);
-  }
-
+          UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication_ServiceAgentAuthenticationType
+              value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearType() => $_clearField(1);
 }
 
 enum UptimeCheckConfig_HttpCheck_AuthMethod {
@@ -867,7 +752,7 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
     $core.int? port,
     UptimeCheckConfig_HttpCheck_BasicAuthentication? authInfo,
     $core.bool? maskHeaders,
-    $core.Map<$core.String, $core.String>? headers,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? headers,
     $core.bool? validateSsl,
     UptimeCheckConfig_HttpCheck_RequestMethod? requestMethod,
     UptimeCheckConfig_HttpCheck_ContentType? contentType,
@@ -879,58 +764,34 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
     UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication?
         serviceAgentAuthentication,
   }) {
-    final $result = create();
-    if (useSsl != null) {
-      $result.useSsl = useSsl;
-    }
-    if (path != null) {
-      $result.path = path;
-    }
-    if (port != null) {
-      $result.port = port;
-    }
-    if (authInfo != null) {
-      $result.authInfo = authInfo;
-    }
-    if (maskHeaders != null) {
-      $result.maskHeaders = maskHeaders;
-    }
-    if (headers != null) {
-      $result.headers.addAll(headers);
-    }
-    if (validateSsl != null) {
-      $result.validateSsl = validateSsl;
-    }
-    if (requestMethod != null) {
-      $result.requestMethod = requestMethod;
-    }
-    if (contentType != null) {
-      $result.contentType = contentType;
-    }
-    if (body != null) {
-      $result.body = body;
-    }
-    if (acceptedResponseStatusCodes != null) {
-      $result.acceptedResponseStatusCodes.addAll(acceptedResponseStatusCodes);
-    }
-    if (pingConfig != null) {
-      $result.pingConfig = pingConfig;
-    }
-    if (customContentType != null) {
-      $result.customContentType = customContentType;
-    }
-    if (serviceAgentAuthentication != null) {
-      $result.serviceAgentAuthentication = serviceAgentAuthentication;
-    }
-    return $result;
+    final result = create();
+    if (useSsl != null) result.useSsl = useSsl;
+    if (path != null) result.path = path;
+    if (port != null) result.port = port;
+    if (authInfo != null) result.authInfo = authInfo;
+    if (maskHeaders != null) result.maskHeaders = maskHeaders;
+    if (headers != null) result.headers.addEntries(headers);
+    if (validateSsl != null) result.validateSsl = validateSsl;
+    if (requestMethod != null) result.requestMethod = requestMethod;
+    if (contentType != null) result.contentType = contentType;
+    if (body != null) result.body = body;
+    if (acceptedResponseStatusCodes != null)
+      result.acceptedResponseStatusCodes.addAll(acceptedResponseStatusCodes);
+    if (pingConfig != null) result.pingConfig = pingConfig;
+    if (customContentType != null) result.customContentType = customContentType;
+    if (serviceAgentAuthentication != null)
+      result.serviceAgentAuthentication = serviceAgentAuthentication;
+    return result;
   }
-  UptimeCheckConfig_HttpCheck._() : super();
-  factory UptimeCheckConfig_HttpCheck.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UptimeCheckConfig_HttpCheck.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UptimeCheckConfig_HttpCheck._();
+
+  factory UptimeCheckConfig_HttpCheck.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UptimeCheckConfig_HttpCheck.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, UptimeCheckConfig_HttpCheck_AuthMethod>
       _UptimeCheckConfig_HttpCheck_AuthMethodByTag = {
@@ -945,7 +806,7 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
     ..oo(0, [14])
     ..aOB(1, _omitFieldNames ? '' : 'useSsl')
     ..aOS(2, _omitFieldNames ? '' : 'path')
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'port', $pb.PbFieldType.O3)
+    ..aI(3, _omitFieldNames ? '' : 'port')
     ..aOM<UptimeCheckConfig_HttpCheck_BasicAuthentication>(
         4, _omitFieldNames ? '' : 'authInfo',
         subBuilder: UptimeCheckConfig_HttpCheck_BasicAuthentication.create)
@@ -956,24 +817,16 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
         valueFieldType: $pb.PbFieldType.OS,
         packageName: const $pb.PackageName('google.monitoring.v3'))
     ..aOB(7, _omitFieldNames ? '' : 'validateSsl')
-    ..e<UptimeCheckConfig_HttpCheck_RequestMethod>(
-        8, _omitFieldNames ? '' : 'requestMethod', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            UptimeCheckConfig_HttpCheck_RequestMethod.METHOD_UNSPECIFIED,
-        valueOf: UptimeCheckConfig_HttpCheck_RequestMethod.valueOf,
+    ..aE<UptimeCheckConfig_HttpCheck_RequestMethod>(
+        8, _omitFieldNames ? '' : 'requestMethod',
         enumValues: UptimeCheckConfig_HttpCheck_RequestMethod.values)
-    ..e<UptimeCheckConfig_HttpCheck_ContentType>(
-        9, _omitFieldNames ? '' : 'contentType', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            UptimeCheckConfig_HttpCheck_ContentType.TYPE_UNSPECIFIED,
-        valueOf: UptimeCheckConfig_HttpCheck_ContentType.valueOf,
+    ..aE<UptimeCheckConfig_HttpCheck_ContentType>(
+        9, _omitFieldNames ? '' : 'contentType',
         enumValues: UptimeCheckConfig_HttpCheck_ContentType.values)
     ..a<$core.List<$core.int>>(
         10, _omitFieldNames ? '' : 'body', $pb.PbFieldType.OY)
-    ..pc<UptimeCheckConfig_HttpCheck_ResponseStatusCode>(
-        11,
-        _omitFieldNames ? '' : 'acceptedResponseStatusCodes',
-        $pb.PbFieldType.PM,
+    ..pPM<UptimeCheckConfig_HttpCheck_ResponseStatusCode>(
+        11, _omitFieldNames ? '' : 'acceptedResponseStatusCodes',
         subBuilder: UptimeCheckConfig_HttpCheck_ResponseStatusCode.create)
     ..aOM<UptimeCheckConfig_PingConfig>(12, _omitFieldNames ? '' : 'pingConfig',
         subBuilder: UptimeCheckConfig_PingConfig.create)
@@ -984,49 +837,43 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
             UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UptimeCheckConfig_HttpCheck clone() =>
-      UptimeCheckConfig_HttpCheck()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UptimeCheckConfig_HttpCheck clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UptimeCheckConfig_HttpCheck copyWith(
           void Function(UptimeCheckConfig_HttpCheck) updates) =>
       super.copyWith(
               (message) => updates(message as UptimeCheckConfig_HttpCheck))
           as UptimeCheckConfig_HttpCheck;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_HttpCheck create() =>
       UptimeCheckConfig_HttpCheck._();
+  @$core.override
   UptimeCheckConfig_HttpCheck createEmptyInstance() => create();
-  static $pb.PbList<UptimeCheckConfig_HttpCheck> createRepeated() =>
-      $pb.PbList<UptimeCheckConfig_HttpCheck>();
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_HttpCheck getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UptimeCheckConfig_HttpCheck>(create);
   static UptimeCheckConfig_HttpCheck? _defaultInstance;
 
+  @$pb.TagNumber(14)
   UptimeCheckConfig_HttpCheck_AuthMethod whichAuthMethod() =>
       _UptimeCheckConfig_HttpCheck_AuthMethodByTag[$_whichOneof(0)]!;
-  void clearAuthMethod() => clearField($_whichOneof(0));
+  @$pb.TagNumber(14)
+  void clearAuthMethod() => $_clearField($_whichOneof(0));
 
   /// If `true`, use HTTPS instead of HTTP to run the check.
   @$pb.TagNumber(1)
   $core.bool get useSsl => $_getBF(0);
   @$pb.TagNumber(1)
-  set useSsl($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set useSsl($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasUseSsl() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUseSsl() => clearField(1);
+  void clearUseSsl() => $_clearField(1);
 
   /// Optional (defaults to "/"). The path to the page against which to run
   /// the check. Will be combined with the `host` (specified within the
@@ -1036,14 +883,11 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get path => $_getSZ(1);
   @$pb.TagNumber(2)
-  set path($core.String v) {
-    $_setString(1, v);
-  }
-
+  set path($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPath() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPath() => clearField(2);
+  void clearPath() => $_clearField(2);
 
   /// Optional (defaults to 80 when `use_ssl` is `false`, and 443 when
   /// `use_ssl` is `true`). The TCP port on the HTTP server against which to
@@ -1052,14 +896,11 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get port => $_getIZ(2);
   @$pb.TagNumber(3)
-  set port($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set port($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPort() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPort() => clearField(3);
+  void clearPort() => $_clearField(3);
 
   /// The authentication information. Optional when creating an HTTP check;
   /// defaults to empty.
@@ -1067,14 +908,12 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   UptimeCheckConfig_HttpCheck_BasicAuthentication get authInfo => $_getN(3);
   @$pb.TagNumber(4)
-  set authInfo(UptimeCheckConfig_HttpCheck_BasicAuthentication v) {
-    setField(4, v);
-  }
-
+  set authInfo(UptimeCheckConfig_HttpCheck_BasicAuthentication value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasAuthInfo() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAuthInfo() => clearField(4);
+  void clearAuthInfo() => $_clearField(4);
   @$pb.TagNumber(4)
   UptimeCheckConfig_HttpCheck_BasicAuthentication ensureAuthInfo() =>
       $_ensure(3);
@@ -1088,14 +927,11 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool get maskHeaders => $_getBF(4);
   @$pb.TagNumber(5)
-  set maskHeaders($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set maskHeaders($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasMaskHeaders() => $_has(4);
   @$pb.TagNumber(5)
-  void clearMaskHeaders() => clearField(5);
+  void clearMaskHeaders() => $_clearField(5);
 
   /// The list of headers to send as part of the Uptime check request.
   /// If two headers have the same key and different values, they should
@@ -1106,7 +942,7 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
   /// cause the first to be overwritten by the second.
   /// The maximum number of headers allowed is 100.
   @$pb.TagNumber(6)
-  $core.Map<$core.String, $core.String> get headers => $_getMap(5);
+  $pb.PbMap<$core.String, $core.String> get headers => $_getMap(5);
 
   /// Boolean specifying whether to include SSL certificate validation as a
   /// part of the Uptime check. Only applies to checks where
@@ -1115,28 +951,23 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.bool get validateSsl => $_getBF(6);
   @$pb.TagNumber(7)
-  set validateSsl($core.bool v) {
-    $_setBool(6, v);
-  }
-
+  set validateSsl($core.bool value) => $_setBool(6, value);
   @$pb.TagNumber(7)
   $core.bool hasValidateSsl() => $_has(6);
   @$pb.TagNumber(7)
-  void clearValidateSsl() => clearField(7);
+  void clearValidateSsl() => $_clearField(7);
 
   /// The HTTP request method to use for the check. If set to
   /// `METHOD_UNSPECIFIED` then `request_method` defaults to `GET`.
   @$pb.TagNumber(8)
   UptimeCheckConfig_HttpCheck_RequestMethod get requestMethod => $_getN(7);
   @$pb.TagNumber(8)
-  set requestMethod(UptimeCheckConfig_HttpCheck_RequestMethod v) {
-    setField(8, v);
-  }
-
+  set requestMethod(UptimeCheckConfig_HttpCheck_RequestMethod value) =>
+      $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasRequestMethod() => $_has(7);
   @$pb.TagNumber(8)
-  void clearRequestMethod() => clearField(8);
+  void clearRequestMethod() => $_clearField(8);
 
   /// The content type header to use for the check. The following
   /// configurations result in errors:
@@ -1149,55 +980,47 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   UptimeCheckConfig_HttpCheck_ContentType get contentType => $_getN(8);
   @$pb.TagNumber(9)
-  set contentType(UptimeCheckConfig_HttpCheck_ContentType v) {
-    setField(9, v);
-  }
-
+  set contentType(UptimeCheckConfig_HttpCheck_ContentType value) =>
+      $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasContentType() => $_has(8);
   @$pb.TagNumber(9)
-  void clearContentType() => clearField(9);
+  void clearContentType() => $_clearField(9);
 
-  ///  The request body associated with the HTTP POST request. If `content_type`
-  ///  is `URL_ENCODED`, the body passed in must be URL-encoded. Users can
-  ///  provide a `Content-Length` header via the `headers` field or the API will
-  ///  do so. If the `request_method` is `GET` and `body` is not empty, the API
-  ///  will return an error. The maximum byte size is 1 megabyte.
+  /// The request body associated with the HTTP POST request. If `content_type`
+  /// is `URL_ENCODED`, the body passed in must be URL-encoded. Users can
+  /// provide a `Content-Length` header via the `headers` field or the API will
+  /// do so. If the `request_method` is `GET` and `body` is not empty, the API
+  /// will return an error. The maximum byte size is 1 megabyte.
   ///
-  ///  Note: If client libraries aren't used (which performs the conversion
-  ///  automatically) base64 encode your `body` data since the field is of
-  ///  `bytes` type.
+  /// Note: If client libraries aren't used (which performs the conversion
+  /// automatically) base64 encode your `body` data since the field is of
+  /// `bytes` type.
   @$pb.TagNumber(10)
   $core.List<$core.int> get body => $_getN(9);
   @$pb.TagNumber(10)
-  set body($core.List<$core.int> v) {
-    $_setBytes(9, v);
-  }
-
+  set body($core.List<$core.int> value) => $_setBytes(9, value);
   @$pb.TagNumber(10)
   $core.bool hasBody() => $_has(9);
   @$pb.TagNumber(10)
-  void clearBody() => clearField(10);
+  void clearBody() => $_clearField(10);
 
   /// If present, the check will only pass if the HTTP response status code is
   /// in this set of status codes. If empty, the HTTP status code will only
   /// pass if the HTTP status code is 200-299.
   @$pb.TagNumber(11)
-  $core.List<UptimeCheckConfig_HttpCheck_ResponseStatusCode>
+  $pb.PbList<UptimeCheckConfig_HttpCheck_ResponseStatusCode>
       get acceptedResponseStatusCodes => $_getList(10);
 
   /// Contains information needed to add pings to an HTTP check.
   @$pb.TagNumber(12)
   UptimeCheckConfig_PingConfig get pingConfig => $_getN(11);
   @$pb.TagNumber(12)
-  set pingConfig(UptimeCheckConfig_PingConfig v) {
-    setField(12, v);
-  }
-
+  set pingConfig(UptimeCheckConfig_PingConfig value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasPingConfig() => $_has(11);
   @$pb.TagNumber(12)
-  void clearPingConfig() => clearField(12);
+  void clearPingConfig() => $_clearField(12);
   @$pb.TagNumber(12)
   UptimeCheckConfig_PingConfig ensurePingConfig() => $_ensure(11);
 
@@ -1210,14 +1033,11 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $core.String get customContentType => $_getSZ(12);
   @$pb.TagNumber(13)
-  set customContentType($core.String v) {
-    $_setString(12, v);
-  }
-
+  set customContentType($core.String value) => $_setString(12, value);
   @$pb.TagNumber(13)
   $core.bool hasCustomContentType() => $_has(12);
   @$pb.TagNumber(13)
-  void clearCustomContentType() => clearField(13);
+  void clearCustomContentType() => $_clearField(13);
 
   /// If specified, Uptime will generate and attach an OIDC JWT token for the
   /// Monitoring service agent service account as an `Authorization` header
@@ -1227,14 +1047,12 @@ class UptimeCheckConfig_HttpCheck extends $pb.GeneratedMessage {
       get serviceAgentAuthentication => $_getN(13);
   @$pb.TagNumber(14)
   set serviceAgentAuthentication(
-      UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication v) {
-    setField(14, v);
-  }
-
+          UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication value) =>
+      $_setField(14, value);
   @$pb.TagNumber(14)
   $core.bool hasServiceAgentAuthentication() => $_has(13);
   @$pb.TagNumber(14)
-  void clearServiceAgentAuthentication() => clearField(14);
+  void clearServiceAgentAuthentication() => $_clearField(14);
   @$pb.TagNumber(14)
   UptimeCheckConfig_HttpCheck_ServiceAgentAuthentication
       ensureServiceAgentAuthentication() => $_ensure(13);
@@ -1246,54 +1064,47 @@ class UptimeCheckConfig_TcpCheck extends $pb.GeneratedMessage {
     $core.int? port,
     UptimeCheckConfig_PingConfig? pingConfig,
   }) {
-    final $result = create();
-    if (port != null) {
-      $result.port = port;
-    }
-    if (pingConfig != null) {
-      $result.pingConfig = pingConfig;
-    }
-    return $result;
+    final result = create();
+    if (port != null) result.port = port;
+    if (pingConfig != null) result.pingConfig = pingConfig;
+    return result;
   }
-  UptimeCheckConfig_TcpCheck._() : super();
-  factory UptimeCheckConfig_TcpCheck.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UptimeCheckConfig_TcpCheck.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UptimeCheckConfig_TcpCheck._();
+
+  factory UptimeCheckConfig_TcpCheck.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UptimeCheckConfig_TcpCheck.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UptimeCheckConfig.TcpCheck',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'port', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'port')
     ..aOM<UptimeCheckConfig_PingConfig>(2, _omitFieldNames ? '' : 'pingConfig',
         subBuilder: UptimeCheckConfig_PingConfig.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UptimeCheckConfig_TcpCheck clone() =>
-      UptimeCheckConfig_TcpCheck()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UptimeCheckConfig_TcpCheck clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UptimeCheckConfig_TcpCheck copyWith(
           void Function(UptimeCheckConfig_TcpCheck) updates) =>
       super.copyWith(
               (message) => updates(message as UptimeCheckConfig_TcpCheck))
           as UptimeCheckConfig_TcpCheck;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_TcpCheck create() => UptimeCheckConfig_TcpCheck._();
+  @$core.override
   UptimeCheckConfig_TcpCheck createEmptyInstance() => create();
-  static $pb.PbList<UptimeCheckConfig_TcpCheck> createRepeated() =>
-      $pb.PbList<UptimeCheckConfig_TcpCheck>();
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_TcpCheck getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UptimeCheckConfig_TcpCheck>(create);
@@ -1305,27 +1116,21 @@ class UptimeCheckConfig_TcpCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get port => $_getIZ(0);
   @$pb.TagNumber(1)
-  set port($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set port($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPort() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPort() => clearField(1);
+  void clearPort() => $_clearField(1);
 
   /// Contains information needed to add pings to a TCP check.
   @$pb.TagNumber(2)
   UptimeCheckConfig_PingConfig get pingConfig => $_getN(1);
   @$pb.TagNumber(2)
-  set pingConfig(UptimeCheckConfig_PingConfig v) {
-    setField(2, v);
-  }
-
+  set pingConfig(UptimeCheckConfig_PingConfig value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasPingConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPingConfig() => clearField(2);
+  void clearPingConfig() => $_clearField(2);
   @$pb.TagNumber(2)
   UptimeCheckConfig_PingConfig ensurePingConfig() => $_ensure(1);
 }
@@ -1340,24 +1145,22 @@ class UptimeCheckConfig_ContentMatcher_JsonPathMatcher
     UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption?
         jsonMatcher,
   }) {
-    final $result = create();
-    if (jsonPath != null) {
-      $result.jsonPath = jsonPath;
-    }
-    if (jsonMatcher != null) {
-      $result.jsonMatcher = jsonMatcher;
-    }
-    return $result;
+    final result = create();
+    if (jsonPath != null) result.jsonPath = jsonPath;
+    if (jsonMatcher != null) result.jsonMatcher = jsonMatcher;
+    return result;
   }
-  UptimeCheckConfig_ContentMatcher_JsonPathMatcher._() : super();
+
+  UptimeCheckConfig_ContentMatcher_JsonPathMatcher._();
+
   factory UptimeCheckConfig_ContentMatcher_JsonPathMatcher.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory UptimeCheckConfig_ContentMatcher_JsonPathMatcher.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -1367,28 +1170,16 @@ class UptimeCheckConfig_ContentMatcher_JsonPathMatcher
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'jsonPath')
-    ..e<UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption>(
-        2, _omitFieldNames ? '' : 'jsonMatcher', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption
-                .JSON_PATH_MATCHER_OPTION_UNSPECIFIED,
-        valueOf:
-            UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption
-                .valueOf,
+    ..aE<UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption>(
+        2, _omitFieldNames ? '' : 'jsonMatcher',
         enumValues:
             UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption
                 .values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UptimeCheckConfig_ContentMatcher_JsonPathMatcher clone() =>
-      UptimeCheckConfig_ContentMatcher_JsonPathMatcher()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UptimeCheckConfig_ContentMatcher_JsonPathMatcher clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UptimeCheckConfig_ContentMatcher_JsonPathMatcher copyWith(
           void Function(UptimeCheckConfig_ContentMatcher_JsonPathMatcher)
               updates) =>
@@ -1396,16 +1187,15 @@ class UptimeCheckConfig_ContentMatcher_JsonPathMatcher
               message as UptimeCheckConfig_ContentMatcher_JsonPathMatcher))
           as UptimeCheckConfig_ContentMatcher_JsonPathMatcher;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_ContentMatcher_JsonPathMatcher create() =>
       UptimeCheckConfig_ContentMatcher_JsonPathMatcher._();
+  @$core.override
   UptimeCheckConfig_ContentMatcher_JsonPathMatcher createEmptyInstance() =>
       create();
-  static $pb.PbList<UptimeCheckConfig_ContentMatcher_JsonPathMatcher>
-      createRepeated() =>
-          $pb.PbList<UptimeCheckConfig_ContentMatcher_JsonPathMatcher>();
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_ContentMatcher_JsonPathMatcher getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1417,14 +1207,11 @@ class UptimeCheckConfig_ContentMatcher_JsonPathMatcher
   @$pb.TagNumber(1)
   $core.String get jsonPath => $_getSZ(0);
   @$pb.TagNumber(1)
-  set jsonPath($core.String v) {
-    $_setString(0, v);
-  }
-
+  set jsonPath($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasJsonPath() => $_has(0);
   @$pb.TagNumber(1)
-  void clearJsonPath() => clearField(1);
+  void clearJsonPath() => $_clearField(1);
 
   /// The type of JSONPath match that will be applied to the JSON output
   /// (`ContentMatcher.content`)
@@ -1433,15 +1220,13 @@ class UptimeCheckConfig_ContentMatcher_JsonPathMatcher
       get jsonMatcher => $_getN(1);
   @$pb.TagNumber(2)
   set jsonMatcher(
-      UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption
-          v) {
-    setField(2, v);
-  }
-
+          UptimeCheckConfig_ContentMatcher_JsonPathMatcher_JsonPathMatcherOption
+              value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasJsonMatcher() => $_has(1);
   @$pb.TagNumber(2)
-  void clearJsonMatcher() => clearField(2);
+  void clearJsonMatcher() => $_clearField(2);
 }
 
 enum UptimeCheckConfig_ContentMatcher_AdditionalMatcherInfo {
@@ -1460,25 +1245,22 @@ class UptimeCheckConfig_ContentMatcher extends $pb.GeneratedMessage {
     UptimeCheckConfig_ContentMatcher_ContentMatcherOption? matcher,
     UptimeCheckConfig_ContentMatcher_JsonPathMatcher? jsonPathMatcher,
   }) {
-    final $result = create();
-    if (content != null) {
-      $result.content = content;
-    }
-    if (matcher != null) {
-      $result.matcher = matcher;
-    }
-    if (jsonPathMatcher != null) {
-      $result.jsonPathMatcher = jsonPathMatcher;
-    }
-    return $result;
+    final result = create();
+    if (content != null) result.content = content;
+    if (matcher != null) result.matcher = matcher;
+    if (jsonPathMatcher != null) result.jsonPathMatcher = jsonPathMatcher;
+    return result;
   }
-  UptimeCheckConfig_ContentMatcher._() : super();
-  factory UptimeCheckConfig_ContentMatcher.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UptimeCheckConfig_ContentMatcher.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UptimeCheckConfig_ContentMatcher._();
+
+  factory UptimeCheckConfig_ContentMatcher.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UptimeCheckConfig_ContentMatcher.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core
       .Map<$core.int, UptimeCheckConfig_ContentMatcher_AdditionalMatcherInfo>
@@ -1493,11 +1275,8 @@ class UptimeCheckConfig_ContentMatcher extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..oo(0, [3])
     ..aOS(1, _omitFieldNames ? '' : 'content')
-    ..e<UptimeCheckConfig_ContentMatcher_ContentMatcherOption>(
-        2, _omitFieldNames ? '' : 'matcher', $pb.PbFieldType.OE,
-        defaultOrMaker: UptimeCheckConfig_ContentMatcher_ContentMatcherOption
-            .CONTENT_MATCHER_OPTION_UNSPECIFIED,
-        valueOf: UptimeCheckConfig_ContentMatcher_ContentMatcherOption.valueOf,
+    ..aE<UptimeCheckConfig_ContentMatcher_ContentMatcherOption>(
+        2, _omitFieldNames ? '' : 'matcher',
         enumValues:
             UptimeCheckConfig_ContentMatcher_ContentMatcherOption.values)
     ..aOM<UptimeCheckConfig_ContentMatcher_JsonPathMatcher>(
@@ -1505,53 +1284,47 @@ class UptimeCheckConfig_ContentMatcher extends $pb.GeneratedMessage {
         subBuilder: UptimeCheckConfig_ContentMatcher_JsonPathMatcher.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UptimeCheckConfig_ContentMatcher clone() =>
-      UptimeCheckConfig_ContentMatcher()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UptimeCheckConfig_ContentMatcher clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UptimeCheckConfig_ContentMatcher copyWith(
           void Function(UptimeCheckConfig_ContentMatcher) updates) =>
       super.copyWith(
               (message) => updates(message as UptimeCheckConfig_ContentMatcher))
           as UptimeCheckConfig_ContentMatcher;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_ContentMatcher create() =>
       UptimeCheckConfig_ContentMatcher._();
+  @$core.override
   UptimeCheckConfig_ContentMatcher createEmptyInstance() => create();
-  static $pb.PbList<UptimeCheckConfig_ContentMatcher> createRepeated() =>
-      $pb.PbList<UptimeCheckConfig_ContentMatcher>();
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig_ContentMatcher getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UptimeCheckConfig_ContentMatcher>(
           create);
   static UptimeCheckConfig_ContentMatcher? _defaultInstance;
 
+  @$pb.TagNumber(3)
   UptimeCheckConfig_ContentMatcher_AdditionalMatcherInfo
       whichAdditionalMatcherInfo() =>
           _UptimeCheckConfig_ContentMatcher_AdditionalMatcherInfoByTag[
               $_whichOneof(0)]!;
-  void clearAdditionalMatcherInfo() => clearField($_whichOneof(0));
+  @$pb.TagNumber(3)
+  void clearAdditionalMatcherInfo() => $_clearField($_whichOneof(0));
 
   /// String, regex or JSON content to match. Maximum 1024 bytes. An empty
   /// `content` string indicates no content matching is to be performed.
   @$pb.TagNumber(1)
   $core.String get content => $_getSZ(0);
   @$pb.TagNumber(1)
-  set content($core.String v) {
-    $_setString(0, v);
-  }
-
+  set content($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasContent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearContent() => clearField(1);
+  void clearContent() => $_clearField(1);
 
   /// The type of content matcher that will be applied to the server output,
   /// compared to the `content` string when the check is run.
@@ -1559,28 +1332,24 @@ class UptimeCheckConfig_ContentMatcher extends $pb.GeneratedMessage {
   UptimeCheckConfig_ContentMatcher_ContentMatcherOption get matcher =>
       $_getN(1);
   @$pb.TagNumber(2)
-  set matcher(UptimeCheckConfig_ContentMatcher_ContentMatcherOption v) {
-    setField(2, v);
-  }
-
+  set matcher(UptimeCheckConfig_ContentMatcher_ContentMatcherOption value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasMatcher() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMatcher() => clearField(2);
+  void clearMatcher() => $_clearField(2);
 
   /// Matcher information for `MATCHES_JSON_PATH` and `NOT_MATCHES_JSON_PATH`
   @$pb.TagNumber(3)
   UptimeCheckConfig_ContentMatcher_JsonPathMatcher get jsonPathMatcher =>
       $_getN(2);
   @$pb.TagNumber(3)
-  set jsonPathMatcher(UptimeCheckConfig_ContentMatcher_JsonPathMatcher v) {
-    setField(3, v);
-  }
-
+  set jsonPathMatcher(UptimeCheckConfig_ContentMatcher_JsonPathMatcher value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasJsonPathMatcher() => $_has(2);
   @$pb.TagNumber(3)
-  void clearJsonPathMatcher() => clearField(3);
+  void clearJsonPathMatcher() => $_clearField(3);
   @$pb.TagNumber(3)
   UptimeCheckConfig_ContentMatcher_JsonPathMatcher ensureJsonPathMatcher() =>
       $_ensure(2);
@@ -1613,66 +1382,37 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
     $core.Iterable<InternalChecker>? internalCheckers,
     @$core.Deprecated('This field is deprecated.') $core.bool? isInternal,
     UptimeCheckConfig_CheckerType? checkerType,
-    $core.Map<$core.String, $core.String>? userLabels,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? userLabels,
     SyntheticMonitorTarget? syntheticMonitor,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (monitoredResource != null) {
-      $result.monitoredResource = monitoredResource;
-    }
-    if (resourceGroup != null) {
-      $result.resourceGroup = resourceGroup;
-    }
-    if (httpCheck != null) {
-      $result.httpCheck = httpCheck;
-    }
-    if (tcpCheck != null) {
-      $result.tcpCheck = tcpCheck;
-    }
-    if (period != null) {
-      $result.period = period;
-    }
-    if (timeout != null) {
-      $result.timeout = timeout;
-    }
-    if (contentMatchers != null) {
-      $result.contentMatchers.addAll(contentMatchers);
-    }
-    if (selectedRegions != null) {
-      $result.selectedRegions.addAll(selectedRegions);
-    }
-    if (internalCheckers != null) {
-      // ignore: deprecated_member_use_from_same_package
-      $result.internalCheckers.addAll(internalCheckers);
-    }
-    if (isInternal != null) {
-      // ignore: deprecated_member_use_from_same_package
-      $result.isInternal = isInternal;
-    }
-    if (checkerType != null) {
-      $result.checkerType = checkerType;
-    }
-    if (userLabels != null) {
-      $result.userLabels.addAll(userLabels);
-    }
-    if (syntheticMonitor != null) {
-      $result.syntheticMonitor = syntheticMonitor;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (displayName != null) result.displayName = displayName;
+    if (monitoredResource != null) result.monitoredResource = monitoredResource;
+    if (resourceGroup != null) result.resourceGroup = resourceGroup;
+    if (httpCheck != null) result.httpCheck = httpCheck;
+    if (tcpCheck != null) result.tcpCheck = tcpCheck;
+    if (period != null) result.period = period;
+    if (timeout != null) result.timeout = timeout;
+    if (contentMatchers != null) result.contentMatchers.addAll(contentMatchers);
+    if (selectedRegions != null) result.selectedRegions.addAll(selectedRegions);
+    if (internalCheckers != null)
+      result.internalCheckers.addAll(internalCheckers);
+    if (isInternal != null) result.isInternal = isInternal;
+    if (checkerType != null) result.checkerType = checkerType;
+    if (userLabels != null) result.userLabels.addEntries(userLabels);
+    if (syntheticMonitor != null) result.syntheticMonitor = syntheticMonitor;
+    return result;
   }
-  UptimeCheckConfig._() : super();
-  factory UptimeCheckConfig.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UptimeCheckConfig.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UptimeCheckConfig._();
+
+  factory UptimeCheckConfig.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UptimeCheckConfig.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, UptimeCheckConfig_Resource>
       _UptimeCheckConfig_ResourceByTag = {
@@ -1709,22 +1449,19 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
         subBuilder: $1.Duration.create)
     ..aOM<$1.Duration>(8, _omitFieldNames ? '' : 'timeout',
         subBuilder: $1.Duration.create)
-    ..pc<UptimeCheckConfig_ContentMatcher>(
-        9, _omitFieldNames ? '' : 'contentMatchers', $pb.PbFieldType.PM,
+    ..pPM<UptimeCheckConfig_ContentMatcher>(
+        9, _omitFieldNames ? '' : 'contentMatchers',
         subBuilder: UptimeCheckConfig_ContentMatcher.create)
     ..pc<UptimeCheckRegion>(
         10, _omitFieldNames ? '' : 'selectedRegions', $pb.PbFieldType.KE,
         valueOf: UptimeCheckRegion.valueOf,
         enumValues: UptimeCheckRegion.values,
         defaultEnumValue: UptimeCheckRegion.REGION_UNSPECIFIED)
-    ..pc<InternalChecker>(
-        14, _omitFieldNames ? '' : 'internalCheckers', $pb.PbFieldType.PM,
+    ..pPM<InternalChecker>(14, _omitFieldNames ? '' : 'internalCheckers',
         subBuilder: InternalChecker.create)
     ..aOB(15, _omitFieldNames ? '' : 'isInternal')
-    ..e<UptimeCheckConfig_CheckerType>(
-        17, _omitFieldNames ? '' : 'checkerType', $pb.PbFieldType.OE,
-        defaultOrMaker: UptimeCheckConfig_CheckerType.CHECKER_TYPE_UNSPECIFIED,
-        valueOf: UptimeCheckConfig_CheckerType.valueOf,
+    ..aE<UptimeCheckConfig_CheckerType>(
+        17, _omitFieldNames ? '' : 'checkerType',
         enumValues: UptimeCheckConfig_CheckerType.values)
     ..m<$core.String, $core.String>(20, _omitFieldNames ? '' : 'userLabels',
         entryClassName: 'UptimeCheckConfig.UserLabelsEntry',
@@ -1735,59 +1472,62 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
         subBuilder: SyntheticMonitorTarget.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UptimeCheckConfig clone() => UptimeCheckConfig()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UptimeCheckConfig clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UptimeCheckConfig copyWith(void Function(UptimeCheckConfig) updates) =>
       super.copyWith((message) => updates(message as UptimeCheckConfig))
           as UptimeCheckConfig;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig create() => UptimeCheckConfig._();
+  @$core.override
   UptimeCheckConfig createEmptyInstance() => create();
-  static $pb.PbList<UptimeCheckConfig> createRepeated() =>
-      $pb.PbList<UptimeCheckConfig>();
   @$core.pragma('dart2js:noInline')
   static UptimeCheckConfig getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UptimeCheckConfig>(create);
   static UptimeCheckConfig? _defaultInstance;
 
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(21)
   UptimeCheckConfig_Resource whichResource() =>
       _UptimeCheckConfig_ResourceByTag[$_whichOneof(0)]!;
-  void clearResource() => clearField($_whichOneof(0));
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(21)
+  void clearResource() => $_clearField($_whichOneof(0));
 
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
   UptimeCheckConfig_CheckRequestType whichCheckRequestType() =>
       _UptimeCheckConfig_CheckRequestTypeByTag[$_whichOneof(1)]!;
-  void clearCheckRequestType() => clearField($_whichOneof(1));
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  void clearCheckRequestType() => $_clearField($_whichOneof(1));
 
-  ///  Identifier. A unique resource name for this Uptime check configuration. The
-  ///  format is:
+  /// Identifier. A unique resource name for this Uptime check configuration. The
+  /// format is:
   ///
-  ///       projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
+  ///      projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
   ///
-  ///  `[PROJECT_ID_OR_NUMBER]` is the Workspace host project associated with the
-  ///  Uptime check.
+  /// `[PROJECT_ID_OR_NUMBER]` is the Workspace host project associated with the
+  /// Uptime check.
   ///
-  ///  This field should be omitted when creating the Uptime check configuration;
-  ///  on create, the resource name is assigned by the server and included in the
-  ///  response.
+  /// This field should be omitted when creating the Uptime check configuration;
+  /// on create, the resource name is assigned by the server and included in the
+  /// response.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// A human-friendly name for the Uptime check configuration. The display name
   /// should be unique within a Cloud Monitoring Workspace in order to make it
@@ -1795,14 +1535,11 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set displayName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisplayName() => clearField(2);
+  void clearDisplayName() => $_clearField(2);
 
   /// The [monitored
   /// resource](https://cloud.google.com/monitoring/api/resources) associated
@@ -1819,14 +1556,11 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.MonitoredResource get monitoredResource => $_getN(2);
   @$pb.TagNumber(3)
-  set monitoredResource($0.MonitoredResource v) {
-    setField(3, v);
-  }
-
+  set monitoredResource($0.MonitoredResource value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasMonitoredResource() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMonitoredResource() => clearField(3);
+  void clearMonitoredResource() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.MonitoredResource ensureMonitoredResource() => $_ensure(2);
 
@@ -1834,14 +1568,12 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   UptimeCheckConfig_ResourceGroup get resourceGroup => $_getN(3);
   @$pb.TagNumber(4)
-  set resourceGroup(UptimeCheckConfig_ResourceGroup v) {
-    setField(4, v);
-  }
-
+  set resourceGroup(UptimeCheckConfig_ResourceGroup value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasResourceGroup() => $_has(3);
   @$pb.TagNumber(4)
-  void clearResourceGroup() => clearField(4);
+  void clearResourceGroup() => $_clearField(4);
   @$pb.TagNumber(4)
   UptimeCheckConfig_ResourceGroup ensureResourceGroup() => $_ensure(3);
 
@@ -1849,14 +1581,11 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   UptimeCheckConfig_HttpCheck get httpCheck => $_getN(4);
   @$pb.TagNumber(5)
-  set httpCheck(UptimeCheckConfig_HttpCheck v) {
-    setField(5, v);
-  }
-
+  set httpCheck(UptimeCheckConfig_HttpCheck value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasHttpCheck() => $_has(4);
   @$pb.TagNumber(5)
-  void clearHttpCheck() => clearField(5);
+  void clearHttpCheck() => $_clearField(5);
   @$pb.TagNumber(5)
   UptimeCheckConfig_HttpCheck ensureHttpCheck() => $_ensure(4);
 
@@ -1864,14 +1593,11 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   UptimeCheckConfig_TcpCheck get tcpCheck => $_getN(5);
   @$pb.TagNumber(6)
-  set tcpCheck(UptimeCheckConfig_TcpCheck v) {
-    setField(6, v);
-  }
-
+  set tcpCheck(UptimeCheckConfig_TcpCheck value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasTcpCheck() => $_has(5);
   @$pb.TagNumber(6)
-  void clearTcpCheck() => clearField(6);
+  void clearTcpCheck() => $_clearField(6);
   @$pb.TagNumber(6)
   UptimeCheckConfig_TcpCheck ensureTcpCheck() => $_ensure(5);
 
@@ -1882,14 +1608,11 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $1.Duration get period => $_getN(6);
   @$pb.TagNumber(7)
-  set period($1.Duration v) {
-    setField(7, v);
-  }
-
+  set period($1.Duration value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasPeriod() => $_has(6);
   @$pb.TagNumber(7)
-  void clearPeriod() => clearField(7);
+  void clearPeriod() => $_clearField(7);
   @$pb.TagNumber(7)
   $1.Duration ensurePeriod() => $_ensure(6);
 
@@ -1898,14 +1621,11 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $1.Duration get timeout => $_getN(7);
   @$pb.TagNumber(8)
-  set timeout($1.Duration v) {
-    setField(8, v);
-  }
-
+  set timeout($1.Duration value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasTimeout() => $_has(7);
   @$pb.TagNumber(8)
-  void clearTimeout() => clearField(8);
+  void clearTimeout() => $_clearField(8);
   @$pb.TagNumber(8)
   $1.Duration ensureTimeout() => $_ensure(7);
 
@@ -1915,7 +1635,7 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   /// be ignored. This field is optional and should only be specified if a
   /// content match is required as part of the/ Uptime check.
   @$pb.TagNumber(9)
-  $core.List<UptimeCheckConfig_ContentMatcher> get contentMatchers =>
+  $pb.PbList<UptimeCheckConfig_ContentMatcher> get contentMatchers =>
       $_getList(8);
 
   /// The list of regions from which the check will be run.
@@ -1924,7 +1644,7 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   /// minimum of 3 locations.  Not specifying this field will result in Uptime
   /// checks running from all available regions.
   @$pb.TagNumber(10)
-  $core.List<UptimeCheckRegion> get selectedRegions => $_getList(9);
+  $pb.PbList<UptimeCheckRegion> get selectedRegions => $_getList(9);
 
   /// The internal checkers that this check will egress from. If `is_internal` is
   /// `true` and this list is empty, the check will egress from all the
@@ -1932,7 +1652,7 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   /// `UptimeCheckConfig`.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(14)
-  $core.List<InternalChecker> get internalCheckers => $_getList(10);
+  $pb.PbList<InternalChecker> get internalCheckers => $_getList(10);
 
   /// If this is `true`, then checks are made only from the 'internal_checkers'.
   /// If it is `false`, then checks are made only from the 'selected_regions'.
@@ -1943,52 +1663,43 @@ class UptimeCheckConfig extends $pb.GeneratedMessage {
   $core.bool get isInternal => $_getBF(11);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(15)
-  set isInternal($core.bool v) {
-    $_setBool(11, v);
-  }
-
+  set isInternal($core.bool value) => $_setBool(11, value);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(15)
   $core.bool hasIsInternal() => $_has(11);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(15)
-  void clearIsInternal() => clearField(15);
+  void clearIsInternal() => $_clearField(15);
 
   /// The type of checkers to use to execute the Uptime check.
   @$pb.TagNumber(17)
   UptimeCheckConfig_CheckerType get checkerType => $_getN(12);
   @$pb.TagNumber(17)
-  set checkerType(UptimeCheckConfig_CheckerType v) {
-    setField(17, v);
-  }
-
+  set checkerType(UptimeCheckConfig_CheckerType value) => $_setField(17, value);
   @$pb.TagNumber(17)
   $core.bool hasCheckerType() => $_has(12);
   @$pb.TagNumber(17)
-  void clearCheckerType() => clearField(17);
+  void clearCheckerType() => $_clearField(17);
 
-  ///  User-supplied key/value data to be used for organizing and
-  ///  identifying the `UptimeCheckConfig` objects.
+  /// User-supplied key/value data to be used for organizing and
+  /// identifying the `UptimeCheckConfig` objects.
   ///
-  ///  The field can contain up to 64 entries. Each key and value is limited to
-  ///  63 Unicode characters or 128 bytes, whichever is smaller. Labels and
-  ///  values can contain only lowercase letters, numerals, underscores, and
-  ///  dashes. Keys must begin with a letter.
+  /// The field can contain up to 64 entries. Each key and value is limited to
+  /// 63 Unicode characters or 128 bytes, whichever is smaller. Labels and
+  /// values can contain only lowercase letters, numerals, underscores, and
+  /// dashes. Keys must begin with a letter.
   @$pb.TagNumber(20)
-  $core.Map<$core.String, $core.String> get userLabels => $_getMap(13);
+  $pb.PbMap<$core.String, $core.String> get userLabels => $_getMap(13);
 
   /// Specifies a Synthetic Monitor to invoke.
   @$pb.TagNumber(21)
   SyntheticMonitorTarget get syntheticMonitor => $_getN(14);
   @$pb.TagNumber(21)
-  set syntheticMonitor(SyntheticMonitorTarget v) {
-    setField(21, v);
-  }
-
+  set syntheticMonitor(SyntheticMonitorTarget value) => $_setField(21, value);
   @$pb.TagNumber(21)
   $core.bool hasSyntheticMonitor() => $_has(14);
   @$pb.TagNumber(21)
-  void clearSyntheticMonitor() => clearField(21);
+  void clearSyntheticMonitor() => $_clearField(21);
   @$pb.TagNumber(21)
   SyntheticMonitorTarget ensureSyntheticMonitor() => $_ensure(14);
 }
@@ -2001,58 +1712,47 @@ class UptimeCheckIp extends $pb.GeneratedMessage {
     $core.String? location,
     $core.String? ipAddress,
   }) {
-    final $result = create();
-    if (region != null) {
-      $result.region = region;
-    }
-    if (location != null) {
-      $result.location = location;
-    }
-    if (ipAddress != null) {
-      $result.ipAddress = ipAddress;
-    }
-    return $result;
+    final result = create();
+    if (region != null) result.region = region;
+    if (location != null) result.location = location;
+    if (ipAddress != null) result.ipAddress = ipAddress;
+    return result;
   }
-  UptimeCheckIp._() : super();
-  factory UptimeCheckIp.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UptimeCheckIp.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UptimeCheckIp._();
+
+  factory UptimeCheckIp.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UptimeCheckIp.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UptimeCheckIp',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
-    ..e<UptimeCheckRegion>(
-        1, _omitFieldNames ? '' : 'region', $pb.PbFieldType.OE,
-        defaultOrMaker: UptimeCheckRegion.REGION_UNSPECIFIED,
-        valueOf: UptimeCheckRegion.valueOf,
+    ..aE<UptimeCheckRegion>(1, _omitFieldNames ? '' : 'region',
         enumValues: UptimeCheckRegion.values)
     ..aOS(2, _omitFieldNames ? '' : 'location')
     ..aOS(3, _omitFieldNames ? '' : 'ipAddress')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UptimeCheckIp clone() => UptimeCheckIp()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UptimeCheckIp clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UptimeCheckIp copyWith(void Function(UptimeCheckIp) updates) =>
       super.copyWith((message) => updates(message as UptimeCheckIp))
           as UptimeCheckIp;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UptimeCheckIp create() => UptimeCheckIp._();
+  @$core.override
   UptimeCheckIp createEmptyInstance() => create();
-  static $pb.PbList<UptimeCheckIp> createRepeated() =>
-      $pb.PbList<UptimeCheckIp>();
   @$core.pragma('dart2js:noInline')
   static UptimeCheckIp getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UptimeCheckIp>(create);
@@ -2062,14 +1762,11 @@ class UptimeCheckIp extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   UptimeCheckRegion get region => $_getN(0);
   @$pb.TagNumber(1)
-  set region(UptimeCheckRegion v) {
-    setField(1, v);
-  }
-
+  set region(UptimeCheckRegion value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasRegion() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRegion() => clearField(1);
+  void clearRegion() => $_clearField(1);
 
   /// A more specific location within the region that typically encodes
   /// a particular city/town/metro (and its containing state/province or country)
@@ -2077,14 +1774,11 @@ class UptimeCheckIp extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get location => $_getSZ(1);
   @$pb.TagNumber(2)
-  set location($core.String v) {
-    $_setString(1, v);
-  }
-
+  set location($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasLocation() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLocation() => clearField(2);
+  void clearLocation() => $_clearField(2);
 
   /// The IP address from which the Uptime check originates. This is a fully
   /// specified IP address (not an IP address range). Most IP addresses, as of
@@ -2094,16 +1788,14 @@ class UptimeCheckIp extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get ipAddress => $_getSZ(2);
   @$pb.TagNumber(3)
-  set ipAddress($core.String v) {
-    $_setString(2, v);
-  }
-
+  set ipAddress($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasIpAddress() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIpAddress() => clearField(3);
+  void clearIpAddress() => $_clearField(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

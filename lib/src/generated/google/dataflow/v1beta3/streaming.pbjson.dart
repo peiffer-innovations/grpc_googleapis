@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/dataflow/v1beta3/streaming.proto
-//
-// @dart = 2.12
+// Generated from google/dataflow/v1beta3/streaming.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -100,6 +102,13 @@ const PubsubLocation$json = {
       '10': 'trackingSubscription'
     },
     {'1': 'with_attributes', '3': 7, '4': 1, '5': 8, '10': 'withAttributes'},
+    {
+      '1': 'dynamic_destinations',
+      '3': 8,
+      '4': 1,
+      '5': 8,
+      '10': 'dynamicDestinations'
+    },
   ],
 };
 
@@ -109,7 +118,8 @@ final $typed_data.Uint8List pubsubLocationDescriptor = $convert.base64Decode(
     'IgASgJUgxzdWJzY3JpcHRpb24SJwoPdGltZXN0YW1wX2xhYmVsGAMgASgJUg50aW1lc3RhbXBM'
     'YWJlbBIZCghpZF9sYWJlbBgEIAEoCVIHaWRMYWJlbBIkCg5kcm9wX2xhdGVfZGF0YRgFIAEoCF'
     'IMZHJvcExhdGVEYXRhEjMKFXRyYWNraW5nX3N1YnNjcmlwdGlvbhgGIAEoCVIUdHJhY2tpbmdT'
-    'dWJzY3JpcHRpb24SJwoPd2l0aF9hdHRyaWJ1dGVzGAcgASgIUg53aXRoQXR0cmlidXRlcw==');
+    'dWJzY3JpcHRpb24SJwoPd2l0aF9hdHRyaWJ1dGVzGAcgASgIUg53aXRoQXR0cmlidXRlcxIxCh'
+    'RkeW5hbWljX2Rlc3RpbmF0aW9ucxgIIAEoCFITZHluYW1pY0Rlc3RpbmF0aW9ucw==');
 
 @$core.Deprecated('Use streamingStageLocationDescriptor instead')
 const StreamingStageLocation$json = {

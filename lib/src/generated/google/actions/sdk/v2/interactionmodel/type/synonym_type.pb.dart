@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/interactionmodel/type/synonym_type.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/interactionmodel/type/synonym_type.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,6 +16,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'entity_display.pb.dart' as $0;
 import 'synonym_type.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'synonym_type.pbenum.dart';
 
@@ -25,22 +28,20 @@ class SynonymType_Entity extends $pb.GeneratedMessage {
     $0.EntityDisplay? display,
     $core.Iterable<$core.String>? synonyms,
   }) {
-    final $result = create();
-    if (display != null) {
-      $result.display = display;
-    }
-    if (synonyms != null) {
-      $result.synonyms.addAll(synonyms);
-    }
-    return $result;
+    final result = create();
+    if (display != null) result.display = display;
+    if (synonyms != null) result.synonyms.addAll(synonyms);
+    return result;
   }
-  SynonymType_Entity._() : super();
-  factory SynonymType_Entity.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SynonymType_Entity.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SynonymType_Entity._();
+
+  factory SynonymType_Entity.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SynonymType_Entity.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SynonymType.Entity',
@@ -53,24 +54,20 @@ class SynonymType_Entity extends $pb.GeneratedMessage {
     ..pPS(2, _omitFieldNames ? '' : 'synonyms')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SynonymType_Entity clone() => SynonymType_Entity()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SynonymType_Entity clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SynonymType_Entity copyWith(void Function(SynonymType_Entity) updates) =>
       super.copyWith((message) => updates(message as SynonymType_Entity))
           as SynonymType_Entity;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SynonymType_Entity create() => SynonymType_Entity._();
+  @$core.override
   SynonymType_Entity createEmptyInstance() => create();
-  static $pb.PbList<SynonymType_Entity> createRepeated() =>
-      $pb.PbList<SynonymType_Entity>();
   @$core.pragma('dart2js:noInline')
   static SynonymType_Entity getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SynonymType_Entity>(create);
@@ -80,49 +77,43 @@ class SynonymType_Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.EntityDisplay get display => $_getN(0);
   @$pb.TagNumber(1)
-  set display($0.EntityDisplay v) {
-    setField(1, v);
-  }
-
+  set display($0.EntityDisplay value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasDisplay() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDisplay() => clearField(1);
+  void clearDisplay() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.EntityDisplay ensureDisplay() => $_ensure(0);
 
   /// Optional. The list of synonyms for the entity.
   /// **This field is localizable.**
   @$pb.TagNumber(2)
-  $core.List<$core.String> get synonyms => $_getList(1);
+  $pb.PbList<$core.String> get synonyms => $_getList(1);
 }
 
 /// Type that matches text by set of synonyms.
 class SynonymType extends $pb.GeneratedMessage {
   factory SynonymType({
     SynonymType_MatchType? matchType,
-    $core.Map<$core.String, SynonymType_Entity>? entities,
+    $core.Iterable<$core.MapEntry<$core.String, SynonymType_Entity>>? entities,
     $core.bool? acceptUnknownValues,
   }) {
-    final $result = create();
-    if (matchType != null) {
-      $result.matchType = matchType;
-    }
-    if (entities != null) {
-      $result.entities.addAll(entities);
-    }
-    if (acceptUnknownValues != null) {
-      $result.acceptUnknownValues = acceptUnknownValues;
-    }
-    return $result;
+    final result = create();
+    if (matchType != null) result.matchType = matchType;
+    if (entities != null) result.entities.addEntries(entities);
+    if (acceptUnknownValues != null)
+      result.acceptUnknownValues = acceptUnknownValues;
+    return result;
   }
-  SynonymType._() : super();
-  factory SynonymType.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SynonymType.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SynonymType._();
+
+  factory SynonymType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SynonymType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SynonymType',
@@ -130,10 +121,7 @@ class SynonymType extends $pb.GeneratedMessage {
           ? ''
           : 'google.actions.sdk.v2.interactionmodel.type'),
       createEmptyInstance: create)
-    ..e<SynonymType_MatchType>(
-        1, _omitFieldNames ? '' : 'matchType', $pb.PbFieldType.OE,
-        defaultOrMaker: SynonymType_MatchType.UNSPECIFIED,
-        valueOf: SynonymType_MatchType.valueOf,
+    ..aE<SynonymType_MatchType>(1, _omitFieldNames ? '' : 'matchType',
         enumValues: SynonymType_MatchType.values)
     ..m<$core.String, SynonymType_Entity>(2, _omitFieldNames ? '' : 'entities',
         entryClassName: 'SynonymType.EntitiesEntry',
@@ -146,23 +134,20 @@ class SynonymType extends $pb.GeneratedMessage {
     ..aOB(3, _omitFieldNames ? '' : 'acceptUnknownValues')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SynonymType clone() => SynonymType()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SynonymType clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SynonymType copyWith(void Function(SynonymType) updates) =>
       super.copyWith((message) => updates(message as SynonymType))
           as SynonymType;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SynonymType create() => SynonymType._();
+  @$core.override
   SynonymType createEmptyInstance() => create();
-  static $pb.PbList<SynonymType> createRepeated() => $pb.PbList<SynonymType>();
   @$core.pragma('dart2js:noInline')
   static SynonymType getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SynonymType>(create);
@@ -172,18 +157,15 @@ class SynonymType extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   SynonymType_MatchType get matchType => $_getN(0);
   @$pb.TagNumber(1)
-  set matchType(SynonymType_MatchType v) {
-    setField(1, v);
-  }
-
+  set matchType(SynonymType_MatchType value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasMatchType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMatchType() => clearField(1);
+  void clearMatchType() => $_clearField(1);
 
   /// Required. Named map of synonym entities.
   @$pb.TagNumber(2)
-  $core.Map<$core.String, SynonymType_Entity> get entities => $_getMap(1);
+  $pb.PbMap<$core.String, SynonymType_Entity> get entities => $_getMap(1);
 
   /// Optional. When set to true this will match unknown words or phrases based on
   /// surrounding input and intent training data, such as items that might be
@@ -191,16 +173,14 @@ class SynonymType extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get acceptUnknownValues => $_getBF(2);
   @$pb.TagNumber(3)
-  set acceptUnknownValues($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set acceptUnknownValues($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasAcceptUnknownValues() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAcceptUnknownValues() => clearField(3);
+  void clearAcceptUnknownValues() => $_clearField(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

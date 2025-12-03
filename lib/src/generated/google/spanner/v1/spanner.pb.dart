@@ -1,29 +1,36 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/spanner/v1/spanner.proto
-//
-// @dart = 2.12
+// Generated from google/spanner/v1/spanner.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/duration.pb.dart'
+    as $12;
+import 'package:grpc_googleapis/src/generated/google/protobuf/struct.pb.dart'
+    as $6;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $5;
 
-import '../../protobuf/duration.pb.dart' as $11;
-import '../../protobuf/struct.pb.dart' as $6;
-import '../../protobuf/timestamp.pb.dart' as $5;
-import '../../rpc/status.pb.dart' as $8;
-import 'keys.pb.dart' as $9;
-import 'mutation.pb.dart' as $10;
+import '../../rpc/status.pb.dart' as $9;
+import 'keys.pb.dart' as $10;
+import 'location.pb.dart' as $7;
+import 'mutation.pb.dart' as $11;
 import 'result_set.pb.dart' as $2;
 import 'spanner.pbenum.dart';
 import 'transaction.pb.dart' as $3;
-import 'type.pb.dart' as $7;
+import 'type.pb.dart' as $8;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'commit_response.pb.dart';
 export 'spanner.pbenum.dart';
@@ -34,22 +41,20 @@ class CreateSessionRequest extends $pb.GeneratedMessage {
     $core.String? database,
     Session? session,
   }) {
-    final $result = create();
-    if (database != null) {
-      $result.database = database;
-    }
-    if (session != null) {
-      $result.session = session;
-    }
-    return $result;
+    final result = create();
+    if (database != null) result.database = database;
+    if (session != null) result.session = session;
+    return result;
   }
-  CreateSessionRequest._() : super();
-  factory CreateSessionRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateSessionRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateSessionRequest._();
+
+  factory CreateSessionRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateSessionRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateSessionRequest',
@@ -61,25 +66,20 @@ class CreateSessionRequest extends $pb.GeneratedMessage {
         subBuilder: Session.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateSessionRequest clone() =>
-      CreateSessionRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateSessionRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateSessionRequest copyWith(void Function(CreateSessionRequest) updates) =>
       super.copyWith((message) => updates(message as CreateSessionRequest))
           as CreateSessionRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateSessionRequest create() => CreateSessionRequest._();
+  @$core.override
   CreateSessionRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateSessionRequest> createRepeated() =>
-      $pb.PbList<CreateSessionRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateSessionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateSessionRequest>(create);
@@ -89,27 +89,21 @@ class CreateSessionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get database => $_getSZ(0);
   @$pb.TagNumber(1)
-  set database($core.String v) {
-    $_setString(0, v);
-  }
-
+  set database($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDatabase() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDatabase() => clearField(1);
+  void clearDatabase() => $_clearField(1);
 
   /// Required. The session to create.
   @$pb.TagNumber(2)
   Session get session => $_getN(1);
   @$pb.TagNumber(2)
-  set session(Session v) {
-    setField(2, v);
-  }
-
+  set session(Session value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSession() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSession() => clearField(2);
+  void clearSession() => $_clearField(2);
   @$pb.TagNumber(2)
   Session ensureSession() => $_ensure(1);
 }
@@ -122,25 +116,21 @@ class BatchCreateSessionsRequest extends $pb.GeneratedMessage {
     Session? sessionTemplate,
     $core.int? sessionCount,
   }) {
-    final $result = create();
-    if (database != null) {
-      $result.database = database;
-    }
-    if (sessionTemplate != null) {
-      $result.sessionTemplate = sessionTemplate;
-    }
-    if (sessionCount != null) {
-      $result.sessionCount = sessionCount;
-    }
-    return $result;
+    final result = create();
+    if (database != null) result.database = database;
+    if (sessionTemplate != null) result.sessionTemplate = sessionTemplate;
+    if (sessionCount != null) result.sessionCount = sessionCount;
+    return result;
   }
-  BatchCreateSessionsRequest._() : super();
-  factory BatchCreateSessionsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchCreateSessionsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchCreateSessionsRequest._();
+
+  factory BatchCreateSessionsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchCreateSessionsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchCreateSessionsRequest',
@@ -150,30 +140,25 @@ class BatchCreateSessionsRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'database')
     ..aOM<Session>(2, _omitFieldNames ? '' : 'sessionTemplate',
         subBuilder: Session.create)
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'sessionCount', $pb.PbFieldType.O3)
+    ..aI(3, _omitFieldNames ? '' : 'sessionCount')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchCreateSessionsRequest clone() =>
-      BatchCreateSessionsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchCreateSessionsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchCreateSessionsRequest copyWith(
           void Function(BatchCreateSessionsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as BatchCreateSessionsRequest))
           as BatchCreateSessionsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchCreateSessionsRequest create() => BatchCreateSessionsRequest._();
+  @$core.override
   BatchCreateSessionsRequest createEmptyInstance() => create();
-  static $pb.PbList<BatchCreateSessionsRequest> createRepeated() =>
-      $pb.PbList<BatchCreateSessionsRequest>();
   @$core.pragma('dart2js:noInline')
   static BatchCreateSessionsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchCreateSessionsRequest>(create);
@@ -183,47 +168,38 @@ class BatchCreateSessionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get database => $_getSZ(0);
   @$pb.TagNumber(1)
-  set database($core.String v) {
-    $_setString(0, v);
-  }
-
+  set database($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDatabase() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDatabase() => clearField(1);
+  void clearDatabase() => $_clearField(1);
 
-  /// Parameters to be applied to each created session.
+  /// Parameters to apply to each created session.
   @$pb.TagNumber(2)
   Session get sessionTemplate => $_getN(1);
   @$pb.TagNumber(2)
-  set sessionTemplate(Session v) {
-    setField(2, v);
-  }
-
+  set sessionTemplate(Session value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSessionTemplate() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSessionTemplate() => clearField(2);
+  void clearSessionTemplate() => $_clearField(2);
   @$pb.TagNumber(2)
   Session ensureSessionTemplate() => $_ensure(1);
 
-  /// Required. The number of sessions to be created in this batch call.
-  /// The API may return fewer than the requested number of sessions. If a
-  /// specific number of sessions are desired, the client can make additional
-  /// calls to BatchCreateSessions (adjusting
+  /// Required. The number of sessions to be created in this batch call. At least
+  /// one session is created. The API can return fewer than the requested number
+  /// of sessions. If a specific number of sessions are desired, the client can
+  /// make additional calls to `BatchCreateSessions` (adjusting
   /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
   /// as necessary).
   @$pb.TagNumber(3)
   $core.int get sessionCount => $_getIZ(2);
   @$pb.TagNumber(3)
-  set sessionCount($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set sessionCount($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSessionCount() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSessionCount() => clearField(3);
+  void clearSessionCount() => $_clearField(3);
 }
 
 /// The response for
@@ -232,51 +208,46 @@ class BatchCreateSessionsResponse extends $pb.GeneratedMessage {
   factory BatchCreateSessionsResponse({
     $core.Iterable<Session>? session,
   }) {
-    final $result = create();
-    if (session != null) {
-      $result.session.addAll(session);
-    }
-    return $result;
+    final result = create();
+    if (session != null) result.session.addAll(session);
+    return result;
   }
-  BatchCreateSessionsResponse._() : super();
-  factory BatchCreateSessionsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchCreateSessionsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchCreateSessionsResponse._();
+
+  factory BatchCreateSessionsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchCreateSessionsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchCreateSessionsResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..pc<Session>(1, _omitFieldNames ? '' : 'session', $pb.PbFieldType.PM,
+    ..pPM<Session>(1, _omitFieldNames ? '' : 'session',
         subBuilder: Session.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchCreateSessionsResponse clone() =>
-      BatchCreateSessionsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchCreateSessionsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchCreateSessionsResponse copyWith(
           void Function(BatchCreateSessionsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as BatchCreateSessionsResponse))
           as BatchCreateSessionsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchCreateSessionsResponse create() =>
       BatchCreateSessionsResponse._();
+  @$core.override
   BatchCreateSessionsResponse createEmptyInstance() => create();
-  static $pb.PbList<BatchCreateSessionsResponse> createRepeated() =>
-      $pb.PbList<BatchCreateSessionsResponse>();
   @$core.pragma('dart2js:noInline')
   static BatchCreateSessionsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchCreateSessionsResponse>(create);
@@ -284,47 +255,38 @@ class BatchCreateSessionsResponse extends $pb.GeneratedMessage {
 
   /// The freshly created sessions.
   @$pb.TagNumber(1)
-  $core.List<Session> get session => $_getList(0);
+  $pb.PbList<Session> get session => $_getList(0);
 }
 
 /// A session in the Cloud Spanner API.
 class Session extends $pb.GeneratedMessage {
   factory Session({
     $core.String? name,
-    $core.Map<$core.String, $core.String>? labels,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? labels,
     $5.Timestamp? createTime,
     $5.Timestamp? approximateLastUseTime,
     $core.String? creatorRole,
     $core.bool? multiplexed,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (labels != null) {
-      $result.labels.addAll(labels);
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (approximateLastUseTime != null) {
-      $result.approximateLastUseTime = approximateLastUseTime;
-    }
-    if (creatorRole != null) {
-      $result.creatorRole = creatorRole;
-    }
-    if (multiplexed != null) {
-      $result.multiplexed = multiplexed;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (labels != null) result.labels.addEntries(labels);
+    if (createTime != null) result.createTime = createTime;
+    if (approximateLastUseTime != null)
+      result.approximateLastUseTime = approximateLastUseTime;
+    if (creatorRole != null) result.creatorRole = creatorRole;
+    if (multiplexed != null) result.multiplexed = multiplexed;
+    return result;
   }
-  Session._() : super();
-  factory Session.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Session.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Session._();
+
+  factory Session.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Session.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Session',
@@ -345,22 +307,19 @@ class Session extends $pb.GeneratedMessage {
     ..aOB(6, _omitFieldNames ? '' : 'multiplexed')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Session clone() => Session()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Session clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Session copyWith(void Function(Session) updates) =>
       super.copyWith((message) => updates(message as Session)) as Session;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Session create() => Session._();
+  @$core.override
   Session createEmptyInstance() => create();
-  static $pb.PbList<Session> createRepeated() => $pb.PbList<Session>();
   @$core.pragma('dart2js:noInline')
   static Session getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Session>(create);
@@ -370,55 +329,46 @@ class Session extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  ///  The labels for the session.
+  /// The labels for the session.
   ///
-  ///   * Label keys must be between 1 and 63 characters long and must conform to
-  ///     the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
-  ///   * Label values must be between 0 and 63 characters long and must conform
-  ///     to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-  ///   * No more than 64 labels can be associated with a given session.
+  ///  * Label keys must be between 1 and 63 characters long and must conform to
+  ///    the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
+  ///  * Label values must be between 0 and 63 characters long and must conform
+  ///    to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+  ///  * No more than 64 labels can be associated with a given session.
   ///
-  ///  See https://goo.gl/xmQnxf for more information on and examples of labels.
+  /// See https://goo.gl/xmQnxf for more information on and examples of labels.
   @$pb.TagNumber(2)
-  $core.Map<$core.String, $core.String> get labels => $_getMap(1);
+  $pb.PbMap<$core.String, $core.String> get labels => $_getMap(1);
 
   /// Output only. The timestamp when the session is created.
   @$pb.TagNumber(3)
   $5.Timestamp get createTime => $_getN(2);
   @$pb.TagNumber(3)
-  set createTime($5.Timestamp v) {
-    setField(3, v);
-  }
-
+  set createTime($5.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCreateTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCreateTime() => clearField(3);
+  void clearCreateTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $5.Timestamp ensureCreateTime() => $_ensure(2);
 
-  /// Output only. The approximate timestamp when the session is last used. It is
+  /// Output only. The approximate timestamp when the session is last used. It's
   /// typically earlier than the actual last use time.
   @$pb.TagNumber(4)
   $5.Timestamp get approximateLastUseTime => $_getN(3);
   @$pb.TagNumber(4)
-  set approximateLastUseTime($5.Timestamp v) {
-    setField(4, v);
-  }
-
+  set approximateLastUseTime($5.Timestamp value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasApproximateLastUseTime() => $_has(3);
   @$pb.TagNumber(4)
-  void clearApproximateLastUseTime() => clearField(4);
+  void clearApproximateLastUseTime() => $_clearField(4);
   @$pb.TagNumber(4)
   $5.Timestamp ensureApproximateLastUseTime() => $_ensure(3);
 
@@ -426,33 +376,28 @@ class Session extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get creatorRole => $_getSZ(4);
   @$pb.TagNumber(5)
-  set creatorRole($core.String v) {
-    $_setString(4, v);
-  }
-
+  set creatorRole($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasCreatorRole() => $_has(4);
   @$pb.TagNumber(5)
-  void clearCreatorRole() => clearField(5);
+  void clearCreatorRole() => $_clearField(5);
 
-  /// Optional. If true, specifies a multiplexed session. A multiplexed session
-  /// may be used for multiple, concurrent read-only operations but can not be
-  /// used for read-write transactions, partitioned reads, or partitioned
-  /// queries. Multiplexed sessions can be created via
-  /// [CreateSession][google.spanner.v1.Spanner.CreateSession] but not via
-  /// [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions].
-  /// Multiplexed sessions may not be deleted nor listed.
+  /// Optional. If `true`, specifies a multiplexed session. Use a multiplexed
+  /// session for multiple, concurrent operations including any combination of
+  /// read-only and read-write transactions. Use
+  /// [`sessions.create`][google.spanner.v1.Spanner.CreateSession] to create
+  /// multiplexed sessions. Don't use
+  /// [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions] to
+  /// create a multiplexed session. You can't delete or list multiplexed
+  /// sessions.
   @$pb.TagNumber(6)
   $core.bool get multiplexed => $_getBF(5);
   @$pb.TagNumber(6)
-  set multiplexed($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set multiplexed($core.bool value) => $_setBool(5, value);
   @$pb.TagNumber(6)
   $core.bool hasMultiplexed() => $_has(5);
   @$pb.TagNumber(6)
-  void clearMultiplexed() => clearField(6);
+  void clearMultiplexed() => $_clearField(6);
 }
 
 /// The request for [GetSession][google.spanner.v1.Spanner.GetSession].
@@ -460,19 +405,19 @@ class GetSessionRequest extends $pb.GeneratedMessage {
   factory GetSessionRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetSessionRequest._() : super();
-  factory GetSessionRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetSessionRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetSessionRequest._();
+
+  factory GetSessionRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSessionRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetSessionRequest',
@@ -482,24 +427,20 @@ class GetSessionRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetSessionRequest clone() => GetSessionRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSessionRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetSessionRequest copyWith(void Function(GetSessionRequest) updates) =>
       super.copyWith((message) => updates(message as GetSessionRequest))
           as GetSessionRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetSessionRequest create() => GetSessionRequest._();
+  @$core.override
   GetSessionRequest createEmptyInstance() => create();
-  static $pb.PbList<GetSessionRequest> createRepeated() =>
-      $pb.PbList<GetSessionRequest>();
   @$core.pragma('dart2js:noInline')
   static GetSessionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetSessionRequest>(create);
@@ -509,14 +450,11 @@ class GetSessionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// The request for [ListSessions][google.spanner.v1.Spanner.ListSessions].
@@ -527,28 +465,22 @@ class ListSessionsRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.String? filter,
   }) {
-    final $result = create();
-    if (database != null) {
-      $result.database = database;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    return $result;
+    final result = create();
+    if (database != null) result.database = database;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (filter != null) result.filter = filter;
+    return result;
   }
-  ListSessionsRequest._() : super();
-  factory ListSessionsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListSessionsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListSessionsRequest._();
+
+  factory ListSessionsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListSessionsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListSessionsRequest',
@@ -556,29 +488,25 @@ class ListSessionsRequest extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'database')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..aOS(4, _omitFieldNames ? '' : 'filter')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListSessionsRequest clone() => ListSessionsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSessionsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListSessionsRequest copyWith(void Function(ListSessionsRequest) updates) =>
       super.copyWith((message) => updates(message as ListSessionsRequest))
           as ListSessionsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListSessionsRequest create() => ListSessionsRequest._();
+  @$core.override
   ListSessionsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListSessionsRequest> createRepeated() =>
-      $pb.PbList<ListSessionsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListSessionsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListSessionsRequest>(create);
@@ -588,28 +516,22 @@ class ListSessionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get database => $_getSZ(0);
   @$pb.TagNumber(1)
-  set database($core.String v) {
-    $_setString(0, v);
-  }
-
+  set database($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDatabase() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDatabase() => clearField(1);
+  void clearDatabase() => $_clearField(1);
 
   /// Number of sessions to be returned in the response. If 0 or less, defaults
   /// to the server's maximum allowed page size.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// If non-empty, `page_token` should contain a
   /// [next_page_token][google.spanner.v1.ListSessionsResponse.next_page_token]
@@ -618,36 +540,30 @@ class ListSessionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 
-  ///  An expression for filtering the results of the request. Filter rules are
-  ///  case insensitive. The fields eligible for filtering are:
+  /// An expression for filtering the results of the request. Filter rules are
+  /// case insensitive. The fields eligible for filtering are:
   ///
-  ///    * `labels.key` where key is the name of a label
+  ///   * `labels.key` where key is the name of a label
   ///
-  ///  Some examples of using filters are:
+  /// Some examples of using filters are:
   ///
-  ///    * `labels.env:*` --> The session has the label "env".
-  ///    * `labels.env:dev` --> The session has the label "env" and the value of
-  ///                         the label contains the string "dev".
+  ///   * `labels.env:*` --> The session has the label "env".
+  ///   * `labels.env:dev` --> The session has the label "env" and the value of
+  ///                        the label contains the string "dev".
   @$pb.TagNumber(4)
   $core.String get filter => $_getSZ(3);
   @$pb.TagNumber(4)
-  set filter($core.String v) {
-    $_setString(3, v);
-  }
-
+  set filter($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFilter() => clearField(4);
+  void clearFilter() => $_clearField(4);
 }
 
 /// The response for [ListSessions][google.spanner.v1.Spanner.ListSessions].
@@ -656,52 +572,45 @@ class ListSessionsResponse extends $pb.GeneratedMessage {
     $core.Iterable<Session>? sessions,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (sessions != null) {
-      $result.sessions.addAll(sessions);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (sessions != null) result.sessions.addAll(sessions);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListSessionsResponse._() : super();
-  factory ListSessionsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListSessionsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListSessionsResponse._();
+
+  factory ListSessionsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListSessionsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListSessionsResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..pc<Session>(1, _omitFieldNames ? '' : 'sessions', $pb.PbFieldType.PM,
+    ..pPM<Session>(1, _omitFieldNames ? '' : 'sessions',
         subBuilder: Session.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListSessionsResponse clone() =>
-      ListSessionsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSessionsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListSessionsResponse copyWith(void Function(ListSessionsResponse) updates) =>
       super.copyWith((message) => updates(message as ListSessionsResponse))
           as ListSessionsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListSessionsResponse create() => ListSessionsResponse._();
+  @$core.override
   ListSessionsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListSessionsResponse> createRepeated() =>
-      $pb.PbList<ListSessionsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListSessionsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListSessionsResponse>(create);
@@ -709,7 +618,7 @@ class ListSessionsResponse extends $pb.GeneratedMessage {
 
   /// The list of requested sessions.
   @$pb.TagNumber(1)
-  $core.List<Session> get sessions => $_getList(0);
+  $pb.PbList<Session> get sessions => $_getList(0);
 
   /// `next_page_token` can be sent in a subsequent
   /// [ListSessions][google.spanner.v1.Spanner.ListSessions] call to fetch more
@@ -717,14 +626,11 @@ class ListSessionsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// The request for [DeleteSession][google.spanner.v1.Spanner.DeleteSession].
@@ -732,19 +638,19 @@ class DeleteSessionRequest extends $pb.GeneratedMessage {
   factory DeleteSessionRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteSessionRequest._() : super();
-  factory DeleteSessionRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteSessionRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteSessionRequest._();
+
+  factory DeleteSessionRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteSessionRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteSessionRequest',
@@ -754,25 +660,20 @@ class DeleteSessionRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteSessionRequest clone() =>
-      DeleteSessionRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteSessionRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteSessionRequest copyWith(void Function(DeleteSessionRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteSessionRequest))
           as DeleteSessionRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteSessionRequest create() => DeleteSessionRequest._();
+  @$core.override
   DeleteSessionRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteSessionRequest> createRepeated() =>
-      $pb.PbList<DeleteSessionRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteSessionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteSessionRequest>(create);
@@ -782,14 +683,11 @@ class DeleteSessionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Common request options for various APIs.
@@ -799,58 +697,47 @@ class RequestOptions extends $pb.GeneratedMessage {
     $core.String? requestTag,
     $core.String? transactionTag,
   }) {
-    final $result = create();
-    if (priority != null) {
-      $result.priority = priority;
-    }
-    if (requestTag != null) {
-      $result.requestTag = requestTag;
-    }
-    if (transactionTag != null) {
-      $result.transactionTag = transactionTag;
-    }
-    return $result;
+    final result = create();
+    if (priority != null) result.priority = priority;
+    if (requestTag != null) result.requestTag = requestTag;
+    if (transactionTag != null) result.transactionTag = transactionTag;
+    return result;
   }
-  RequestOptions._() : super();
-  factory RequestOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RequestOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RequestOptions._();
+
+  factory RequestOptions.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RequestOptions.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RequestOptions',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..e<RequestOptions_Priority>(
-        1, _omitFieldNames ? '' : 'priority', $pb.PbFieldType.OE,
-        defaultOrMaker: RequestOptions_Priority.PRIORITY_UNSPECIFIED,
-        valueOf: RequestOptions_Priority.valueOf,
+    ..aE<RequestOptions_Priority>(1, _omitFieldNames ? '' : 'priority',
         enumValues: RequestOptions_Priority.values)
     ..aOS(2, _omitFieldNames ? '' : 'requestTag')
     ..aOS(3, _omitFieldNames ? '' : 'transactionTag')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RequestOptions clone() => RequestOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RequestOptions clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RequestOptions copyWith(void Function(RequestOptions) updates) =>
       super.copyWith((message) => updates(message as RequestOptions))
           as RequestOptions;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RequestOptions create() => RequestOptions._();
+  @$core.override
   RequestOptions createEmptyInstance() => create();
-  static $pb.PbList<RequestOptions> createRepeated() =>
-      $pb.PbList<RequestOptions>();
   @$core.pragma('dart2js:noInline')
   static RequestOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RequestOptions>(create);
@@ -860,101 +747,90 @@ class RequestOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   RequestOptions_Priority get priority => $_getN(0);
   @$pb.TagNumber(1)
-  set priority(RequestOptions_Priority v) {
-    setField(1, v);
-  }
-
+  set priority(RequestOptions_Priority value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasPriority() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPriority() => clearField(1);
+  void clearPriority() => $_clearField(1);
 
   /// A per-request tag which can be applied to queries or reads, used for
   /// statistics collection.
-  /// Both request_tag and transaction_tag can be specified for a read or query
-  /// that belongs to a transaction.
-  /// This field is ignored for requests where it's not applicable (e.g.
-  /// CommitRequest).
+  /// Both `request_tag` and `transaction_tag` can be specified for a read or
+  /// query that belongs to a transaction.
+  /// This field is ignored for requests where it's not applicable (for example,
+  /// `CommitRequest`).
   /// Legal characters for `request_tag` values are all printable characters
   /// (ASCII 32 - 126) and the length of a request_tag is limited to 50
   /// characters. Values that exceed this limit are truncated.
-  /// Any leading underscore (_) characters will be removed from the string.
+  /// Any leading underscore (_) characters are removed from the string.
   @$pb.TagNumber(2)
   $core.String get requestTag => $_getSZ(1);
   @$pb.TagNumber(2)
-  set requestTag($core.String v) {
-    $_setString(1, v);
-  }
-
+  set requestTag($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasRequestTag() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRequestTag() => clearField(2);
+  void clearRequestTag() => $_clearField(2);
 
   /// A tag used for statistics collection about this transaction.
-  /// Both request_tag and transaction_tag can be specified for a read or query
-  /// that belongs to a transaction.
+  /// Both `request_tag` and `transaction_tag` can be specified for a read or
+  /// query that belongs to a transaction.
   /// The value of transaction_tag should be the same for all requests belonging
   /// to the same transaction.
-  /// If this request doesn't belong to any transaction, transaction_tag will be
+  /// If this request doesn't belong to any transaction, `transaction_tag` is
   /// ignored.
   /// Legal characters for `transaction_tag` values are all printable characters
-  /// (ASCII 32 - 126) and the length of a transaction_tag is limited to 50
+  /// (ASCII 32 - 126) and the length of a `transaction_tag` is limited to 50
   /// characters. Values that exceed this limit are truncated.
-  /// Any leading underscore (_) characters will be removed from the string.
+  /// Any leading underscore (_) characters are removed from the string.
   @$pb.TagNumber(3)
   $core.String get transactionTag => $_getSZ(2);
   @$pb.TagNumber(3)
-  set transactionTag($core.String v) {
-    $_setString(2, v);
-  }
-
+  set transactionTag($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasTransactionTag() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTransactionTag() => clearField(3);
+  void clearTransactionTag() => $_clearField(3);
 }
 
-///  The directed read replica selector.
-///  Callers must provide one or more of the following fields for replica
-///  selection:
+/// The directed read replica selector.
+/// Callers must provide one or more of the following fields for replica
+/// selection:
 ///
-///    * `location` - The location must be one of the regions within the
-///       multi-region configuration of your database.
-///    * `type` - The type of the replica.
+///   * `location` - The location must be one of the regions within the
+///      multi-region configuration of your database.
+///   * `type` - The type of the replica.
 ///
-///  Some examples of using replica_selectors are:
+/// Some examples of using replica_selectors are:
 ///
-///    * `location:us-east1` --> The "us-east1" replica(s) of any available type
-///                              will be used to process the request.
-///    * `type:READ_ONLY`    --> The "READ_ONLY" type replica(s) in nearest
-///                              available location will be used to process the
-///                              request.
-///    * `location:us-east1 type:READ_ONLY` --> The "READ_ONLY" type replica(s)
-///                           in location "us-east1" will be used to process
-///                           the request.
+///   * `location:us-east1` --> The "us-east1" replica(s) of any available type
+///                             is used to process the request.
+///   * `type:READ_ONLY`    --> The "READ_ONLY" type replica(s) in the nearest
+///                             available location are used to process the
+///                             request.
+///   * `location:us-east1 type:READ_ONLY` --> The "READ_ONLY" type replica(s)
+///                          in location "us-east1" is used to process
+///                          the request.
 class DirectedReadOptions_ReplicaSelection extends $pb.GeneratedMessage {
   factory DirectedReadOptions_ReplicaSelection({
     $core.String? location,
     DirectedReadOptions_ReplicaSelection_Type? type,
   }) {
-    final $result = create();
-    if (location != null) {
-      $result.location = location;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    return $result;
+    final result = create();
+    if (location != null) result.location = location;
+    if (type != null) result.type = type;
+    return result;
   }
-  DirectedReadOptions_ReplicaSelection._() : super();
+
+  DirectedReadOptions_ReplicaSelection._();
+
   factory DirectedReadOptions_ReplicaSelection.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DirectedReadOptions_ReplicaSelection.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DirectedReadOptions_ReplicaSelection.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DirectedReadOptions.ReplicaSelection',
@@ -962,127 +838,109 @@ class DirectedReadOptions_ReplicaSelection extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'location')
-    ..e<DirectedReadOptions_ReplicaSelection_Type>(
-        2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            DirectedReadOptions_ReplicaSelection_Type.TYPE_UNSPECIFIED,
-        valueOf: DirectedReadOptions_ReplicaSelection_Type.valueOf,
+    ..aE<DirectedReadOptions_ReplicaSelection_Type>(
+        2, _omitFieldNames ? '' : 'type',
         enumValues: DirectedReadOptions_ReplicaSelection_Type.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DirectedReadOptions_ReplicaSelection clone() =>
-      DirectedReadOptions_ReplicaSelection()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DirectedReadOptions_ReplicaSelection clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DirectedReadOptions_ReplicaSelection copyWith(
           void Function(DirectedReadOptions_ReplicaSelection) updates) =>
       super.copyWith((message) =>
               updates(message as DirectedReadOptions_ReplicaSelection))
           as DirectedReadOptions_ReplicaSelection;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DirectedReadOptions_ReplicaSelection create() =>
       DirectedReadOptions_ReplicaSelection._();
+  @$core.override
   DirectedReadOptions_ReplicaSelection createEmptyInstance() => create();
-  static $pb.PbList<DirectedReadOptions_ReplicaSelection> createRepeated() =>
-      $pb.PbList<DirectedReadOptions_ReplicaSelection>();
   @$core.pragma('dart2js:noInline')
   static DirectedReadOptions_ReplicaSelection getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
           DirectedReadOptions_ReplicaSelection>(create);
   static DirectedReadOptions_ReplicaSelection? _defaultInstance;
 
-  /// The location or region of the serving requests, e.g. "us-east1".
+  /// The location or region of the serving requests, for example, "us-east1".
   @$pb.TagNumber(1)
   $core.String get location => $_getSZ(0);
   @$pb.TagNumber(1)
-  set location($core.String v) {
-    $_setString(0, v);
-  }
-
+  set location($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasLocation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLocation() => clearField(1);
+  void clearLocation() => $_clearField(1);
 
   /// The type of replica.
   @$pb.TagNumber(2)
   DirectedReadOptions_ReplicaSelection_Type get type => $_getN(1);
   @$pb.TagNumber(2)
-  set type(DirectedReadOptions_ReplicaSelection_Type v) {
-    setField(2, v);
-  }
-
+  set type(DirectedReadOptions_ReplicaSelection_Type value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearType() => clearField(2);
+  void clearType() => $_clearField(2);
 }
 
-/// An IncludeReplicas contains a repeated set of ReplicaSelection which
+/// An `IncludeReplicas` contains a repeated set of `ReplicaSelection` which
 /// indicates the order in which replicas should be considered.
 class DirectedReadOptions_IncludeReplicas extends $pb.GeneratedMessage {
   factory DirectedReadOptions_IncludeReplicas({
     $core.Iterable<DirectedReadOptions_ReplicaSelection>? replicaSelections,
     $core.bool? autoFailoverDisabled,
   }) {
-    final $result = create();
-    if (replicaSelections != null) {
-      $result.replicaSelections.addAll(replicaSelections);
-    }
-    if (autoFailoverDisabled != null) {
-      $result.autoFailoverDisabled = autoFailoverDisabled;
-    }
-    return $result;
+    final result = create();
+    if (replicaSelections != null)
+      result.replicaSelections.addAll(replicaSelections);
+    if (autoFailoverDisabled != null)
+      result.autoFailoverDisabled = autoFailoverDisabled;
+    return result;
   }
-  DirectedReadOptions_IncludeReplicas._() : super();
+
+  DirectedReadOptions_IncludeReplicas._();
+
   factory DirectedReadOptions_IncludeReplicas.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DirectedReadOptions_IncludeReplicas.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DirectedReadOptions_IncludeReplicas.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DirectedReadOptions.IncludeReplicas',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..pc<DirectedReadOptions_ReplicaSelection>(
-        1, _omitFieldNames ? '' : 'replicaSelections', $pb.PbFieldType.PM,
+    ..pPM<DirectedReadOptions_ReplicaSelection>(
+        1, _omitFieldNames ? '' : 'replicaSelections',
         subBuilder: DirectedReadOptions_ReplicaSelection.create)
     ..aOB(2, _omitFieldNames ? '' : 'autoFailoverDisabled')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DirectedReadOptions_IncludeReplicas clone() =>
-      DirectedReadOptions_IncludeReplicas()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DirectedReadOptions_IncludeReplicas clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DirectedReadOptions_IncludeReplicas copyWith(
           void Function(DirectedReadOptions_IncludeReplicas) updates) =>
       super.copyWith((message) =>
               updates(message as DirectedReadOptions_IncludeReplicas))
           as DirectedReadOptions_IncludeReplicas;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DirectedReadOptions_IncludeReplicas create() =>
       DirectedReadOptions_IncludeReplicas._();
+  @$core.override
   DirectedReadOptions_IncludeReplicas createEmptyInstance() => create();
-  static $pb.PbList<DirectedReadOptions_IncludeReplicas> createRepeated() =>
-      $pb.PbList<DirectedReadOptions_IncludeReplicas>();
   @$core.pragma('dart2js:noInline')
   static DirectedReadOptions_IncludeReplicas getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1091,23 +949,20 @@ class DirectedReadOptions_IncludeReplicas extends $pb.GeneratedMessage {
 
   /// The directed read replica selector.
   @$pb.TagNumber(1)
-  $core.List<DirectedReadOptions_ReplicaSelection> get replicaSelections =>
+  $pb.PbList<DirectedReadOptions_ReplicaSelection> get replicaSelections =>
       $_getList(0);
 
-  /// If true, Spanner will not route requests to a replica outside the
-  /// include_replicas list when all of the specified replicas are unavailable
-  /// or unhealthy. Default value is `false`.
+  /// If `true`, Spanner doesn't route requests to a replica outside the
+  /// <`include_replicas` list when all of the specified replicas are
+  /// unavailable or unhealthy. Default value is `false`.
   @$pb.TagNumber(2)
   $core.bool get autoFailoverDisabled => $_getBF(1);
   @$pb.TagNumber(2)
-  set autoFailoverDisabled($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set autoFailoverDisabled($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAutoFailoverDisabled() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAutoFailoverDisabled() => clearField(2);
+  void clearAutoFailoverDisabled() => $_clearField(2);
 }
 
 /// An ExcludeReplicas contains a repeated set of ReplicaSelection that should
@@ -1116,53 +971,49 @@ class DirectedReadOptions_ExcludeReplicas extends $pb.GeneratedMessage {
   factory DirectedReadOptions_ExcludeReplicas({
     $core.Iterable<DirectedReadOptions_ReplicaSelection>? replicaSelections,
   }) {
-    final $result = create();
-    if (replicaSelections != null) {
-      $result.replicaSelections.addAll(replicaSelections);
-    }
-    return $result;
+    final result = create();
+    if (replicaSelections != null)
+      result.replicaSelections.addAll(replicaSelections);
+    return result;
   }
-  DirectedReadOptions_ExcludeReplicas._() : super();
+
+  DirectedReadOptions_ExcludeReplicas._();
+
   factory DirectedReadOptions_ExcludeReplicas.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DirectedReadOptions_ExcludeReplicas.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DirectedReadOptions_ExcludeReplicas.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DirectedReadOptions.ExcludeReplicas',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..pc<DirectedReadOptions_ReplicaSelection>(
-        1, _omitFieldNames ? '' : 'replicaSelections', $pb.PbFieldType.PM,
+    ..pPM<DirectedReadOptions_ReplicaSelection>(
+        1, _omitFieldNames ? '' : 'replicaSelections',
         subBuilder: DirectedReadOptions_ReplicaSelection.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DirectedReadOptions_ExcludeReplicas clone() =>
-      DirectedReadOptions_ExcludeReplicas()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DirectedReadOptions_ExcludeReplicas clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DirectedReadOptions_ExcludeReplicas copyWith(
           void Function(DirectedReadOptions_ExcludeReplicas) updates) =>
       super.copyWith((message) =>
               updates(message as DirectedReadOptions_ExcludeReplicas))
           as DirectedReadOptions_ExcludeReplicas;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DirectedReadOptions_ExcludeReplicas create() =>
       DirectedReadOptions_ExcludeReplicas._();
+  @$core.override
   DirectedReadOptions_ExcludeReplicas createEmptyInstance() => create();
-  static $pb.PbList<DirectedReadOptions_ExcludeReplicas> createRepeated() =>
-      $pb.PbList<DirectedReadOptions_ExcludeReplicas>();
   @$core.pragma('dart2js:noInline')
   static DirectedReadOptions_ExcludeReplicas getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1171,38 +1022,36 @@ class DirectedReadOptions_ExcludeReplicas extends $pb.GeneratedMessage {
 
   /// The directed read replica selector.
   @$pb.TagNumber(1)
-  $core.List<DirectedReadOptions_ReplicaSelection> get replicaSelections =>
+  $pb.PbList<DirectedReadOptions_ReplicaSelection> get replicaSelections =>
       $_getList(0);
 }
 
 enum DirectedReadOptions_Replicas { includeReplicas, excludeReplicas, notSet }
 
-///  The DirectedReadOptions can be used to indicate which replicas or regions
-///  should be used for non-transactional reads or queries.
+/// The `DirectedReadOptions` can be used to indicate which replicas or regions
+/// should be used for non-transactional reads or queries.
 ///
-///  DirectedReadOptions may only be specified for a read-only transaction,
-///  otherwise the API will return an `INVALID_ARGUMENT` error.
+/// `DirectedReadOptions` can only be specified for a read-only transaction,
+/// otherwise the API returns an `INVALID_ARGUMENT` error.
 class DirectedReadOptions extends $pb.GeneratedMessage {
   factory DirectedReadOptions({
     DirectedReadOptions_IncludeReplicas? includeReplicas,
     DirectedReadOptions_ExcludeReplicas? excludeReplicas,
   }) {
-    final $result = create();
-    if (includeReplicas != null) {
-      $result.includeReplicas = includeReplicas;
-    }
-    if (excludeReplicas != null) {
-      $result.excludeReplicas = excludeReplicas;
-    }
-    return $result;
+    final result = create();
+    if (includeReplicas != null) result.includeReplicas = includeReplicas;
+    if (excludeReplicas != null) result.excludeReplicas = excludeReplicas;
+    return result;
   }
-  DirectedReadOptions._() : super();
-  factory DirectedReadOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DirectedReadOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DirectedReadOptions._();
+
+  factory DirectedReadOptions.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DirectedReadOptions.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, DirectedReadOptions_Replicas>
       _DirectedReadOptions_ReplicasByTag = {
@@ -1224,66 +1073,62 @@ class DirectedReadOptions extends $pb.GeneratedMessage {
         subBuilder: DirectedReadOptions_ExcludeReplicas.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DirectedReadOptions clone() => DirectedReadOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DirectedReadOptions clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DirectedReadOptions copyWith(void Function(DirectedReadOptions) updates) =>
       super.copyWith((message) => updates(message as DirectedReadOptions))
           as DirectedReadOptions;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DirectedReadOptions create() => DirectedReadOptions._();
+  @$core.override
   DirectedReadOptions createEmptyInstance() => create();
-  static $pb.PbList<DirectedReadOptions> createRepeated() =>
-      $pb.PbList<DirectedReadOptions>();
   @$core.pragma('dart2js:noInline')
   static DirectedReadOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DirectedReadOptions>(create);
   static DirectedReadOptions? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   DirectedReadOptions_Replicas whichReplicas() =>
       _DirectedReadOptions_ReplicasByTag[$_whichOneof(0)]!;
-  void clearReplicas() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearReplicas() => $_clearField($_whichOneof(0));
 
-  /// Include_replicas indicates the order of replicas (as they appear in
-  /// this list) to process the request. If auto_failover_disabled is set to
-  /// true and all replicas are exhausted without finding a healthy replica,
-  /// Spanner will wait for a replica in the list to become available, requests
-  /// may fail due to `DEADLINE_EXCEEDED` errors.
+  /// `Include_replicas` indicates the order of replicas (as they appear in
+  /// this list) to process the request. If `auto_failover_disabled` is set to
+  /// `true` and all replicas are exhausted without finding a healthy replica,
+  /// Spanner waits for a replica in the list to become available, requests
+  /// might fail due to `DEADLINE_EXCEEDED` errors.
   @$pb.TagNumber(1)
   DirectedReadOptions_IncludeReplicas get includeReplicas => $_getN(0);
   @$pb.TagNumber(1)
-  set includeReplicas(DirectedReadOptions_IncludeReplicas v) {
-    setField(1, v);
-  }
-
+  set includeReplicas(DirectedReadOptions_IncludeReplicas value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasIncludeReplicas() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIncludeReplicas() => clearField(1);
+  void clearIncludeReplicas() => $_clearField(1);
   @$pb.TagNumber(1)
   DirectedReadOptions_IncludeReplicas ensureIncludeReplicas() => $_ensure(0);
 
-  /// Exclude_replicas indicates that specified replicas should be excluded
-  /// from serving requests. Spanner will not route requests to the replicas
+  /// `Exclude_replicas` indicates that specified replicas should be excluded
+  /// from serving requests. Spanner doesn't route requests to the replicas
   /// in this list.
   @$pb.TagNumber(2)
   DirectedReadOptions_ExcludeReplicas get excludeReplicas => $_getN(1);
   @$pb.TagNumber(2)
-  set excludeReplicas(DirectedReadOptions_ExcludeReplicas v) {
-    setField(2, v);
-  }
-
+  set excludeReplicas(DirectedReadOptions_ExcludeReplicas value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasExcludeReplicas() => $_has(1);
   @$pb.TagNumber(2)
-  void clearExcludeReplicas() => clearField(2);
+  void clearExcludeReplicas() => $_clearField(2);
   @$pb.TagNumber(2)
   DirectedReadOptions_ExcludeReplicas ensureExcludeReplicas() => $_ensure(1);
 }
@@ -1294,22 +1139,21 @@ class ExecuteSqlRequest_QueryOptions extends $pb.GeneratedMessage {
     $core.String? optimizerVersion,
     $core.String? optimizerStatisticsPackage,
   }) {
-    final $result = create();
-    if (optimizerVersion != null) {
-      $result.optimizerVersion = optimizerVersion;
-    }
-    if (optimizerStatisticsPackage != null) {
-      $result.optimizerStatisticsPackage = optimizerStatisticsPackage;
-    }
-    return $result;
+    final result = create();
+    if (optimizerVersion != null) result.optimizerVersion = optimizerVersion;
+    if (optimizerStatisticsPackage != null)
+      result.optimizerStatisticsPackage = optimizerStatisticsPackage;
+    return result;
   }
-  ExecuteSqlRequest_QueryOptions._() : super();
-  factory ExecuteSqlRequest_QueryOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExecuteSqlRequest_QueryOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ExecuteSqlRequest_QueryOptions._();
+
+  factory ExecuteSqlRequest_QueryOptions.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ExecuteSqlRequest_QueryOptions.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ExecuteSqlRequest.QueryOptions',
@@ -1320,102 +1164,91 @@ class ExecuteSqlRequest_QueryOptions extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'optimizerStatisticsPackage')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ExecuteSqlRequest_QueryOptions clone() =>
-      ExecuteSqlRequest_QueryOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ExecuteSqlRequest_QueryOptions clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ExecuteSqlRequest_QueryOptions copyWith(
           void Function(ExecuteSqlRequest_QueryOptions) updates) =>
       super.copyWith(
               (message) => updates(message as ExecuteSqlRequest_QueryOptions))
           as ExecuteSqlRequest_QueryOptions;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ExecuteSqlRequest_QueryOptions create() =>
       ExecuteSqlRequest_QueryOptions._();
+  @$core.override
   ExecuteSqlRequest_QueryOptions createEmptyInstance() => create();
-  static $pb.PbList<ExecuteSqlRequest_QueryOptions> createRepeated() =>
-      $pb.PbList<ExecuteSqlRequest_QueryOptions>();
   @$core.pragma('dart2js:noInline')
   static ExecuteSqlRequest_QueryOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ExecuteSqlRequest_QueryOptions>(create);
   static ExecuteSqlRequest_QueryOptions? _defaultInstance;
 
-  ///  An option to control the selection of optimizer version.
+  /// An option to control the selection of optimizer version.
   ///
-  ///  This parameter allows individual queries to pick different query
-  ///  optimizer versions.
+  /// This parameter allows individual queries to pick different query
+  /// optimizer versions.
   ///
-  ///  Specifying `latest` as a value instructs Cloud Spanner to use the
-  ///  latest supported query optimizer version. If not specified, Cloud Spanner
-  ///  uses the optimizer version set at the database level options. Any other
-  ///  positive integer (from the list of supported optimizer versions)
-  ///  overrides the default optimizer version for query execution.
+  /// Specifying `latest` as a value instructs Cloud Spanner to use the
+  /// latest supported query optimizer version. If not specified, Cloud Spanner
+  /// uses the optimizer version set at the database level options. Any other
+  /// positive integer (from the list of supported optimizer versions)
+  /// overrides the default optimizer version for query execution.
   ///
-  ///  The list of supported optimizer versions can be queried from
-  ///  SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS.
+  /// The list of supported optimizer versions can be queried from
+  /// `SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS`.
   ///
-  ///  Executing a SQL statement with an invalid optimizer version fails with
-  ///  an `INVALID_ARGUMENT` error.
+  /// Executing a SQL statement with an invalid optimizer version fails with
+  /// an `INVALID_ARGUMENT` error.
   ///
-  ///  See
-  ///  https://cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer
-  ///  for more information on managing the query optimizer.
+  /// See
+  /// https://cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer
+  /// for more information on managing the query optimizer.
   ///
-  ///  The `optimizer_version` statement hint has precedence over this setting.
+  /// The `optimizer_version` statement hint has precedence over this setting.
   @$pb.TagNumber(1)
   $core.String get optimizerVersion => $_getSZ(0);
   @$pb.TagNumber(1)
-  set optimizerVersion($core.String v) {
-    $_setString(0, v);
-  }
-
+  set optimizerVersion($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasOptimizerVersion() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOptimizerVersion() => clearField(1);
+  void clearOptimizerVersion() => $_clearField(1);
 
-  ///  An option to control the selection of optimizer statistics package.
+  /// An option to control the selection of optimizer statistics package.
   ///
-  ///  This parameter allows individual queries to use a different query
-  ///  optimizer statistics package.
+  /// This parameter allows individual queries to use a different query
+  /// optimizer statistics package.
   ///
-  ///  Specifying `latest` as a value instructs Cloud Spanner to use the latest
-  ///  generated statistics package. If not specified, Cloud Spanner uses
-  ///  the statistics package set at the database level options, or the latest
-  ///  package if the database option is not set.
+  /// Specifying `latest` as a value instructs Cloud Spanner to use the latest
+  /// generated statistics package. If not specified, Cloud Spanner uses
+  /// the statistics package set at the database level options, or the latest
+  /// package if the database option isn't set.
   ///
-  ///  The statistics package requested by the query has to be exempt from
-  ///  garbage collection. This can be achieved with the following DDL
-  ///  statement:
+  /// The statistics package requested by the query has to be exempt from
+  /// garbage collection. This can be achieved with the following DDL
+  /// statement:
   ///
-  ///  ```
-  ///  ALTER STATISTICS <package_name> SET OPTIONS (allow_gc=false)
-  ///  ```
+  /// ```sql
+  /// ALTER STATISTICS <package_name> SET OPTIONS (allow_gc=false)
+  /// ```
   ///
-  ///  The list of available statistics packages can be queried from
-  ///  `INFORMATION_SCHEMA.SPANNER_STATISTICS`.
+  /// The list of available statistics packages can be queried from
+  /// `INFORMATION_SCHEMA.SPANNER_STATISTICS`.
   ///
-  ///  Executing a SQL statement with an invalid optimizer statistics package
-  ///  or with a statistics package that allows garbage collection fails with
-  ///  an `INVALID_ARGUMENT` error.
+  /// Executing a SQL statement with an invalid optimizer statistics package
+  /// or with a statistics package that allows garbage collection fails with
+  /// an `INVALID_ARGUMENT` error.
   @$pb.TagNumber(2)
   $core.String get optimizerStatisticsPackage => $_getSZ(1);
   @$pb.TagNumber(2)
-  set optimizerStatisticsPackage($core.String v) {
-    $_setString(1, v);
-  }
-
+  set optimizerStatisticsPackage($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasOptimizerStatisticsPackage() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOptimizerStatisticsPackage() => clearField(2);
+  void clearOptimizerStatisticsPackage() => $_clearField(2);
 }
 
 /// The request for [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
@@ -1426,7 +1259,7 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
     $3.TransactionSelector? transaction,
     $core.String? sql,
     $6.Struct? params,
-    $core.Map<$core.String, $7.Type>? paramTypes,
+    $core.Iterable<$core.MapEntry<$core.String, $8.Type>>? paramTypes,
     $core.List<$core.int>? resumeToken,
     ExecuteSqlRequest_QueryMode? queryMode,
     $core.List<$core.int>? partitionToken,
@@ -1436,59 +1269,36 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
     DirectedReadOptions? directedReadOptions,
     $core.bool? dataBoostEnabled,
     $core.bool? lastStatement,
+    $7.RoutingHint? routingHint,
   }) {
-    final $result = create();
-    if (session != null) {
-      $result.session = session;
-    }
-    if (transaction != null) {
-      $result.transaction = transaction;
-    }
-    if (sql != null) {
-      $result.sql = sql;
-    }
-    if (params != null) {
-      $result.params = params;
-    }
-    if (paramTypes != null) {
-      $result.paramTypes.addAll(paramTypes);
-    }
-    if (resumeToken != null) {
-      $result.resumeToken = resumeToken;
-    }
-    if (queryMode != null) {
-      $result.queryMode = queryMode;
-    }
-    if (partitionToken != null) {
-      $result.partitionToken = partitionToken;
-    }
-    if (seqno != null) {
-      $result.seqno = seqno;
-    }
-    if (queryOptions != null) {
-      $result.queryOptions = queryOptions;
-    }
-    if (requestOptions != null) {
-      $result.requestOptions = requestOptions;
-    }
-    if (directedReadOptions != null) {
-      $result.directedReadOptions = directedReadOptions;
-    }
-    if (dataBoostEnabled != null) {
-      $result.dataBoostEnabled = dataBoostEnabled;
-    }
-    if (lastStatement != null) {
-      $result.lastStatement = lastStatement;
-    }
-    return $result;
+    final result = create();
+    if (session != null) result.session = session;
+    if (transaction != null) result.transaction = transaction;
+    if (sql != null) result.sql = sql;
+    if (params != null) result.params = params;
+    if (paramTypes != null) result.paramTypes.addEntries(paramTypes);
+    if (resumeToken != null) result.resumeToken = resumeToken;
+    if (queryMode != null) result.queryMode = queryMode;
+    if (partitionToken != null) result.partitionToken = partitionToken;
+    if (seqno != null) result.seqno = seqno;
+    if (queryOptions != null) result.queryOptions = queryOptions;
+    if (requestOptions != null) result.requestOptions = requestOptions;
+    if (directedReadOptions != null)
+      result.directedReadOptions = directedReadOptions;
+    if (dataBoostEnabled != null) result.dataBoostEnabled = dataBoostEnabled;
+    if (lastStatement != null) result.lastStatement = lastStatement;
+    if (routingHint != null) result.routingHint = routingHint;
+    return result;
   }
-  ExecuteSqlRequest._() : super();
-  factory ExecuteSqlRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExecuteSqlRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ExecuteSqlRequest._();
+
+  factory ExecuteSqlRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ExecuteSqlRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ExecuteSqlRequest',
@@ -1501,19 +1311,16 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'sql')
     ..aOM<$6.Struct>(4, _omitFieldNames ? '' : 'params',
         subBuilder: $6.Struct.create)
-    ..m<$core.String, $7.Type>(5, _omitFieldNames ? '' : 'paramTypes',
+    ..m<$core.String, $8.Type>(5, _omitFieldNames ? '' : 'paramTypes',
         entryClassName: 'ExecuteSqlRequest.ParamTypesEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $7.Type.create,
-        valueDefaultOrMaker: $7.Type.getDefault,
+        valueCreator: $8.Type.create,
+        valueDefaultOrMaker: $8.Type.getDefault,
         packageName: const $pb.PackageName('google.spanner.v1'))
     ..a<$core.List<$core.int>>(
         6, _omitFieldNames ? '' : 'resumeToken', $pb.PbFieldType.OY)
-    ..e<ExecuteSqlRequest_QueryMode>(
-        7, _omitFieldNames ? '' : 'queryMode', $pb.PbFieldType.OE,
-        defaultOrMaker: ExecuteSqlRequest_QueryMode.NORMAL,
-        valueOf: ExecuteSqlRequest_QueryMode.valueOf,
+    ..aE<ExecuteSqlRequest_QueryMode>(7, _omitFieldNames ? '' : 'queryMode',
         enumValues: ExecuteSqlRequest_QueryMode.values)
     ..a<$core.List<$core.int>>(
         8, _omitFieldNames ? '' : 'partitionToken', $pb.PbFieldType.OY)
@@ -1527,26 +1334,24 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
         subBuilder: DirectedReadOptions.create)
     ..aOB(16, _omitFieldNames ? '' : 'dataBoostEnabled')
     ..aOB(17, _omitFieldNames ? '' : 'lastStatement')
+    ..aOM<$7.RoutingHint>(18, _omitFieldNames ? '' : 'routingHint',
+        subBuilder: $7.RoutingHint.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ExecuteSqlRequest clone() => ExecuteSqlRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ExecuteSqlRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ExecuteSqlRequest copyWith(void Function(ExecuteSqlRequest) updates) =>
       super.copyWith((message) => updates(message as ExecuteSqlRequest))
           as ExecuteSqlRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ExecuteSqlRequest create() => ExecuteSqlRequest._();
+  @$core.override
   ExecuteSqlRequest createEmptyInstance() => create();
-  static $pb.PbList<ExecuteSqlRequest> createRepeated() =>
-      $pb.PbList<ExecuteSqlRequest>();
   @$core.pragma('dart2js:noInline')
   static ExecuteSqlRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ExecuteSqlRequest>(create);
@@ -1556,36 +1361,30 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get session => $_getSZ(0);
   @$pb.TagNumber(1)
-  set session($core.String v) {
-    $_setString(0, v);
-  }
-
+  set session($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSession() => clearField(1);
+  void clearSession() => $_clearField(1);
 
-  ///  The transaction to use.
+  /// The transaction to use.
   ///
-  ///  For queries, if none is provided, the default is a temporary read-only
-  ///  transaction with strong concurrency.
+  /// For queries, if none is provided, the default is a temporary read-only
+  /// transaction with strong concurrency.
   ///
-  ///  Standard DML statements require a read-write transaction. To protect
-  ///  against replays, single-use transactions are not supported.  The caller
-  ///  must either supply an existing transaction ID or begin a new transaction.
+  /// Standard DML statements require a read-write transaction. To protect
+  /// against replays, single-use transactions are not supported. The caller
+  /// must either supply an existing transaction ID or begin a new transaction.
   ///
-  ///  Partitioned DML requires an existing Partitioned DML transaction ID.
+  /// Partitioned DML requires an existing Partitioned DML transaction ID.
   @$pb.TagNumber(2)
   $3.TransactionSelector get transaction => $_getN(1);
   @$pb.TagNumber(2)
-  set transaction($3.TransactionSelector v) {
-    setField(2, v);
-  }
-
+  set transaction($3.TransactionSelector value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTransaction() => clearField(2);
+  void clearTransaction() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.TransactionSelector ensureTransaction() => $_ensure(1);
 
@@ -1593,53 +1392,47 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get sql => $_getSZ(2);
   @$pb.TagNumber(3)
-  set sql($core.String v) {
-    $_setString(2, v);
-  }
-
+  set sql($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSql() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSql() => clearField(3);
+  void clearSql() => $_clearField(3);
 
-  ///  Parameter names and values that bind to placeholders in the SQL string.
+  /// Parameter names and values that bind to placeholders in the SQL string.
   ///
-  ///  A parameter placeholder consists of the `@` character followed by the
-  ///  parameter name (for example, `@firstName`). Parameter names must conform
-  ///  to the naming requirements of identifiers as specified at
-  ///  https://cloud.google.com/spanner/docs/lexical#identifiers.
+  /// A parameter placeholder consists of the `@` character followed by the
+  /// parameter name (for example, `@firstName`). Parameter names must conform
+  /// to the naming requirements of identifiers as specified at
+  /// https://cloud.google.com/spanner/docs/lexical#identifiers.
   ///
-  ///  Parameters can appear anywhere that a literal value is expected.  The same
-  ///  parameter name can be used more than once, for example:
+  /// Parameters can appear anywhere that a literal value is expected. The same
+  /// parameter name can be used more than once, for example:
   ///
-  ///  `"WHERE id > @msg_id AND id < @msg_id + 100"`
+  /// `"WHERE id > @msg_id AND id < @msg_id + 100"`
   ///
-  ///  It is an error to execute a SQL statement with unbound parameters.
+  /// It's an error to execute a SQL statement with unbound parameters.
   @$pb.TagNumber(4)
   $6.Struct get params => $_getN(3);
   @$pb.TagNumber(4)
-  set params($6.Struct v) {
-    setField(4, v);
-  }
-
+  set params($6.Struct value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasParams() => $_has(3);
   @$pb.TagNumber(4)
-  void clearParams() => clearField(4);
+  void clearParams() => $_clearField(4);
   @$pb.TagNumber(4)
   $6.Struct ensureParams() => $_ensure(3);
 
-  ///  It is not always possible for Cloud Spanner to infer the right SQL type
-  ///  from a JSON value.  For example, values of type `BYTES` and values
-  ///  of type `STRING` both appear in
-  ///  [params][google.spanner.v1.ExecuteSqlRequest.params] as JSON strings.
+  /// It isn't always possible for Cloud Spanner to infer the right SQL type
+  /// from a JSON value. For example, values of type `BYTES` and values
+  /// of type `STRING` both appear in
+  /// [params][google.spanner.v1.ExecuteSqlRequest.params] as JSON strings.
   ///
-  ///  In these cases, `param_types` can be used to specify the exact
-  ///  SQL type for some or all of the SQL statement parameters. See the
-  ///  definition of [Type][google.spanner.v1.Type] for more information
-  ///  about SQL types.
+  /// In these cases, you can use `param_types` to specify the exact
+  /// SQL type for some or all of the SQL statement parameters. See the
+  /// definition of [Type][google.spanner.v1.Type] for more information
+  /// about SQL types.
   @$pb.TagNumber(5)
-  $core.Map<$core.String, $7.Type> get paramTypes => $_getMap(4);
+  $pb.PbMap<$core.String, $8.Type> get paramTypes => $_getMap(4);
 
   /// If this request is resuming a previously interrupted SQL statement
   /// execution, `resume_token` should be copied from the last
@@ -1650,14 +1443,11 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.List<$core.int> get resumeToken => $_getN(5);
   @$pb.TagNumber(6)
-  set resumeToken($core.List<$core.int> v) {
-    $_setBytes(5, v);
-  }
-
+  set resumeToken($core.List<$core.int> value) => $_setBytes(5, value);
   @$pb.TagNumber(6)
   $core.bool hasResumeToken() => $_has(5);
   @$pb.TagNumber(6)
-  void clearResumeToken() => clearField(6);
+  void clearResumeToken() => $_clearField(6);
 
   /// Used to control the amount of debugging information returned in
   /// [ResultSetStats][google.spanner.v1.ResultSetStats]. If
@@ -1668,65 +1458,54 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   ExecuteSqlRequest_QueryMode get queryMode => $_getN(6);
   @$pb.TagNumber(7)
-  set queryMode(ExecuteSqlRequest_QueryMode v) {
-    setField(7, v);
-  }
-
+  set queryMode(ExecuteSqlRequest_QueryMode value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasQueryMode() => $_has(6);
   @$pb.TagNumber(7)
-  void clearQueryMode() => clearField(7);
+  void clearQueryMode() => $_clearField(7);
 
-  /// If present, results will be restricted to the specified partition
-  /// previously created using PartitionQuery().  There must be an exact
+  /// If present, results are restricted to the specified partition
+  /// previously created using `PartitionQuery`. There must be an exact
   /// match for the values of fields common to this message and the
-  /// PartitionQueryRequest message used to create this partition_token.
+  /// `PartitionQueryRequest` message used to create this `partition_token`.
   @$pb.TagNumber(8)
   $core.List<$core.int> get partitionToken => $_getN(7);
   @$pb.TagNumber(8)
-  set partitionToken($core.List<$core.int> v) {
-    $_setBytes(7, v);
-  }
-
+  set partitionToken($core.List<$core.int> value) => $_setBytes(7, value);
   @$pb.TagNumber(8)
   $core.bool hasPartitionToken() => $_has(7);
   @$pb.TagNumber(8)
-  void clearPartitionToken() => clearField(8);
+  void clearPartitionToken() => $_clearField(8);
 
-  ///  A per-transaction sequence number used to identify this request. This field
-  ///  makes each request idempotent such that if the request is received multiple
-  ///  times, at most one will succeed.
+  /// A per-transaction sequence number used to identify this request. This field
+  /// makes each request idempotent such that if the request is received multiple
+  /// times, at most one succeeds.
   ///
-  ///  The sequence number must be monotonically increasing within the
-  ///  transaction. If a request arrives for the first time with an out-of-order
-  ///  sequence number, the transaction may be aborted. Replays of previously
-  ///  handled requests will yield the same response as the first execution.
+  /// The sequence number must be monotonically increasing within the
+  /// transaction. If a request arrives for the first time with an out-of-order
+  /// sequence number, the transaction can be aborted. Replays of previously
+  /// handled requests yield the same response as the first execution.
   ///
-  ///  Required for DML statements. Ignored for queries.
+  /// Required for DML statements. Ignored for queries.
   @$pb.TagNumber(9)
   $fixnum.Int64 get seqno => $_getI64(8);
   @$pb.TagNumber(9)
-  set seqno($fixnum.Int64 v) {
-    $_setInt64(8, v);
-  }
-
+  set seqno($fixnum.Int64 value) => $_setInt64(8, value);
   @$pb.TagNumber(9)
   $core.bool hasSeqno() => $_has(8);
   @$pb.TagNumber(9)
-  void clearSeqno() => clearField(9);
+  void clearSeqno() => $_clearField(9);
 
   /// Query optimizer configuration to use for the given query.
   @$pb.TagNumber(10)
   ExecuteSqlRequest_QueryOptions get queryOptions => $_getN(9);
   @$pb.TagNumber(10)
-  set queryOptions(ExecuteSqlRequest_QueryOptions v) {
-    setField(10, v);
-  }
-
+  set queryOptions(ExecuteSqlRequest_QueryOptions value) =>
+      $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasQueryOptions() => $_has(9);
   @$pb.TagNumber(10)
-  void clearQueryOptions() => clearField(10);
+  void clearQueryOptions() => $_clearField(10);
   @$pb.TagNumber(10)
   ExecuteSqlRequest_QueryOptions ensureQueryOptions() => $_ensure(9);
 
@@ -1734,14 +1513,11 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   RequestOptions get requestOptions => $_getN(10);
   @$pb.TagNumber(11)
-  set requestOptions(RequestOptions v) {
-    setField(11, v);
-  }
-
+  set requestOptions(RequestOptions value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasRequestOptions() => $_has(10);
   @$pb.TagNumber(11)
-  void clearRequestOptions() => clearField(11);
+  void clearRequestOptions() => $_clearField(11);
   @$pb.TagNumber(11)
   RequestOptions ensureRequestOptions() => $_ensure(10);
 
@@ -1749,54 +1525,62 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   DirectedReadOptions get directedReadOptions => $_getN(11);
   @$pb.TagNumber(15)
-  set directedReadOptions(DirectedReadOptions v) {
-    setField(15, v);
-  }
-
+  set directedReadOptions(DirectedReadOptions value) => $_setField(15, value);
   @$pb.TagNumber(15)
   $core.bool hasDirectedReadOptions() => $_has(11);
   @$pb.TagNumber(15)
-  void clearDirectedReadOptions() => clearField(15);
+  void clearDirectedReadOptions() => $_clearField(15);
   @$pb.TagNumber(15)
   DirectedReadOptions ensureDirectedReadOptions() => $_ensure(11);
 
-  ///  If this is for a partitioned query and this field is set to `true`, the
-  ///  request is executed with Spanner Data Boost independent compute resources.
+  /// If this is for a partitioned query and this field is set to `true`, the
+  /// request is executed with Spanner Data Boost independent compute resources.
   ///
-  ///  If the field is set to `true` but the request does not set
-  ///  `partition_token`, the API returns an `INVALID_ARGUMENT` error.
+  /// If the field is set to `true` but the request doesn't set
+  /// `partition_token`, the API returns an `INVALID_ARGUMENT` error.
   @$pb.TagNumber(16)
   $core.bool get dataBoostEnabled => $_getBF(12);
   @$pb.TagNumber(16)
-  set dataBoostEnabled($core.bool v) {
-    $_setBool(12, v);
-  }
-
+  set dataBoostEnabled($core.bool value) => $_setBool(12, value);
   @$pb.TagNumber(16)
   $core.bool hasDataBoostEnabled() => $_has(12);
   @$pb.TagNumber(16)
-  void clearDataBoostEnabled() => clearField(16);
+  void clearDataBoostEnabled() => $_clearField(16);
 
-  ///  Optional. If set to true, this statement marks the end of the transaction.
-  ///  The transaction should be committed or aborted after this statement
-  ///  executes, and attempts to execute any other requests against this
-  ///  transaction (including reads and queries) will be rejected.
+  /// Optional. If set to `true`, this statement marks the end of the
+  /// transaction. After this statement executes, you must commit or abort the
+  /// transaction. Attempts to execute any other requests against this
+  /// transaction (including reads and queries) are rejected.
   ///
-  ///  For DML statements, setting this option may cause some error reporting to
-  ///  be deferred until commit time (e.g. validation of unique constraints).
-  ///  Given this, successful execution of a DML statement should not be assumed
-  ///  until a subsequent Commit call completes successfully.
+  /// For DML statements, setting this option might cause some error reporting to
+  /// be deferred until commit time (for example, validation of unique
+  /// constraints). Given this, successful execution of a DML statement shouldn't
+  /// be assumed until a subsequent `Commit` call completes successfully.
   @$pb.TagNumber(17)
   $core.bool get lastStatement => $_getBF(13);
   @$pb.TagNumber(17)
-  set lastStatement($core.bool v) {
-    $_setBool(13, v);
-  }
-
+  set lastStatement($core.bool value) => $_setBool(13, value);
   @$pb.TagNumber(17)
   $core.bool hasLastStatement() => $_has(13);
   @$pb.TagNumber(17)
-  void clearLastStatement() => clearField(17);
+  void clearLastStatement() => $_clearField(17);
+
+  /// Optional. If present, it makes the Spanner requests location-aware.
+  ///
+  /// It gives the server hints that can be used to route the request
+  /// to an appropriate server, potentially significantly decreasing latency and
+  /// improving throughput. To achieve improved performance, most fields must be
+  /// filled in with accurate values.
+  @$pb.TagNumber(18)
+  $7.RoutingHint get routingHint => $_getN(14);
+  @$pb.TagNumber(18)
+  set routingHint($7.RoutingHint value) => $_setField(18, value);
+  @$pb.TagNumber(18)
+  $core.bool hasRoutingHint() => $_has(14);
+  @$pb.TagNumber(18)
+  void clearRoutingHint() => $_clearField(18);
+  @$pb.TagNumber(18)
+  $7.RoutingHint ensureRoutingHint() => $_ensure(14);
 }
 
 /// A single DML statement.
@@ -1804,27 +1588,24 @@ class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
   factory ExecuteBatchDmlRequest_Statement({
     $core.String? sql,
     $6.Struct? params,
-    $core.Map<$core.String, $7.Type>? paramTypes,
+    $core.Iterable<$core.MapEntry<$core.String, $8.Type>>? paramTypes,
   }) {
-    final $result = create();
-    if (sql != null) {
-      $result.sql = sql;
-    }
-    if (params != null) {
-      $result.params = params;
-    }
-    if (paramTypes != null) {
-      $result.paramTypes.addAll(paramTypes);
-    }
-    return $result;
+    final result = create();
+    if (sql != null) result.sql = sql;
+    if (params != null) result.params = params;
+    if (paramTypes != null) result.paramTypes.addEntries(paramTypes);
+    return result;
   }
-  ExecuteBatchDmlRequest_Statement._() : super();
-  factory ExecuteBatchDmlRequest_Statement.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExecuteBatchDmlRequest_Statement.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ExecuteBatchDmlRequest_Statement._();
+
+  factory ExecuteBatchDmlRequest_Statement.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ExecuteBatchDmlRequest_Statement.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ExecuteBatchDmlRequest.Statement',
@@ -1834,37 +1615,32 @@ class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'sql')
     ..aOM<$6.Struct>(2, _omitFieldNames ? '' : 'params',
         subBuilder: $6.Struct.create)
-    ..m<$core.String, $7.Type>(3, _omitFieldNames ? '' : 'paramTypes',
+    ..m<$core.String, $8.Type>(3, _omitFieldNames ? '' : 'paramTypes',
         entryClassName: 'ExecuteBatchDmlRequest.Statement.ParamTypesEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $7.Type.create,
-        valueDefaultOrMaker: $7.Type.getDefault,
+        valueCreator: $8.Type.create,
+        valueDefaultOrMaker: $8.Type.getDefault,
         packageName: const $pb.PackageName('google.spanner.v1'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ExecuteBatchDmlRequest_Statement clone() =>
-      ExecuteBatchDmlRequest_Statement()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ExecuteBatchDmlRequest_Statement clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ExecuteBatchDmlRequest_Statement copyWith(
           void Function(ExecuteBatchDmlRequest_Statement) updates) =>
       super.copyWith(
               (message) => updates(message as ExecuteBatchDmlRequest_Statement))
           as ExecuteBatchDmlRequest_Statement;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ExecuteBatchDmlRequest_Statement create() =>
       ExecuteBatchDmlRequest_Statement._();
+  @$core.override
   ExecuteBatchDmlRequest_Statement createEmptyInstance() => create();
-  static $pb.PbList<ExecuteBatchDmlRequest_Statement> createRepeated() =>
-      $pb.PbList<ExecuteBatchDmlRequest_Statement>();
   @$core.pragma('dart2js:noInline')
   static ExecuteBatchDmlRequest_Statement getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ExecuteBatchDmlRequest_Statement>(
@@ -1875,53 +1651,47 @@ class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get sql => $_getSZ(0);
   @$pb.TagNumber(1)
-  set sql($core.String v) {
-    $_setString(0, v);
-  }
-
+  set sql($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSql() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSql() => clearField(1);
+  void clearSql() => $_clearField(1);
 
-  ///  Parameter names and values that bind to placeholders in the DML string.
+  /// Parameter names and values that bind to placeholders in the DML string.
   ///
-  ///  A parameter placeholder consists of the `@` character followed by the
-  ///  parameter name (for example, `@firstName`). Parameter names can contain
-  ///  letters, numbers, and underscores.
+  /// A parameter placeholder consists of the `@` character followed by the
+  /// parameter name (for example, `@firstName`). Parameter names can contain
+  /// letters, numbers, and underscores.
   ///
-  ///  Parameters can appear anywhere that a literal value is expected.  The
-  ///  same parameter name can be used more than once, for example:
+  /// Parameters can appear anywhere that a literal value is expected. The
+  /// same parameter name can be used more than once, for example:
   ///
-  ///  `"WHERE id > @msg_id AND id < @msg_id + 100"`
+  /// `"WHERE id > @msg_id AND id < @msg_id + 100"`
   ///
-  ///  It is an error to execute a SQL statement with unbound parameters.
+  /// It's an error to execute a SQL statement with unbound parameters.
   @$pb.TagNumber(2)
   $6.Struct get params => $_getN(1);
   @$pb.TagNumber(2)
-  set params($6.Struct v) {
-    setField(2, v);
-  }
-
+  set params($6.Struct value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
   @$pb.TagNumber(2)
-  void clearParams() => clearField(2);
+  void clearParams() => $_clearField(2);
   @$pb.TagNumber(2)
   $6.Struct ensureParams() => $_ensure(1);
 
-  ///  It is not always possible for Cloud Spanner to infer the right SQL type
-  ///  from a JSON value.  For example, values of type `BYTES` and values
-  ///  of type `STRING` both appear in
-  ///  [params][google.spanner.v1.ExecuteBatchDmlRequest.Statement.params] as
-  ///  JSON strings.
+  /// It isn't always possible for Cloud Spanner to infer the right SQL type
+  /// from a JSON value. For example, values of type `BYTES` and values
+  /// of type `STRING` both appear in
+  /// [params][google.spanner.v1.ExecuteBatchDmlRequest.Statement.params] as
+  /// JSON strings.
   ///
-  ///  In these cases, `param_types` can be used to specify the exact
-  ///  SQL type for some or all of the SQL statement parameters. See the
-  ///  definition of [Type][google.spanner.v1.Type] for more information
-  ///  about SQL types.
+  /// In these cases, `param_types` can be used to specify the exact
+  /// SQL type for some or all of the SQL statement parameters. See the
+  /// definition of [Type][google.spanner.v1.Type] for more information
+  /// about SQL types.
   @$pb.TagNumber(3)
-  $core.Map<$core.String, $7.Type> get paramTypes => $_getMap(2);
+  $pb.PbMap<$core.String, $8.Type> get paramTypes => $_getMap(2);
 }
 
 /// The request for [ExecuteBatchDml][google.spanner.v1.Spanner.ExecuteBatchDml].
@@ -1934,34 +1704,24 @@ class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
     RequestOptions? requestOptions,
     $core.bool? lastStatements,
   }) {
-    final $result = create();
-    if (session != null) {
-      $result.session = session;
-    }
-    if (transaction != null) {
-      $result.transaction = transaction;
-    }
-    if (statements != null) {
-      $result.statements.addAll(statements);
-    }
-    if (seqno != null) {
-      $result.seqno = seqno;
-    }
-    if (requestOptions != null) {
-      $result.requestOptions = requestOptions;
-    }
-    if (lastStatements != null) {
-      $result.lastStatements = lastStatements;
-    }
-    return $result;
+    final result = create();
+    if (session != null) result.session = session;
+    if (transaction != null) result.transaction = transaction;
+    if (statements != null) result.statements.addAll(statements);
+    if (seqno != null) result.seqno = seqno;
+    if (requestOptions != null) result.requestOptions = requestOptions;
+    if (lastStatements != null) result.lastStatements = lastStatements;
+    return result;
   }
-  ExecuteBatchDmlRequest._() : super();
-  factory ExecuteBatchDmlRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExecuteBatchDmlRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ExecuteBatchDmlRequest._();
+
+  factory ExecuteBatchDmlRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ExecuteBatchDmlRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ExecuteBatchDmlRequest',
@@ -1971,8 +1731,8 @@ class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'session')
     ..aOM<$3.TransactionSelector>(2, _omitFieldNames ? '' : 'transaction',
         subBuilder: $3.TransactionSelector.create)
-    ..pc<ExecuteBatchDmlRequest_Statement>(
-        3, _omitFieldNames ? '' : 'statements', $pb.PbFieldType.PM,
+    ..pPM<ExecuteBatchDmlRequest_Statement>(
+        3, _omitFieldNames ? '' : 'statements',
         subBuilder: ExecuteBatchDmlRequest_Statement.create)
     ..aInt64(4, _omitFieldNames ? '' : 'seqno')
     ..aOM<RequestOptions>(5, _omitFieldNames ? '' : 'requestOptions',
@@ -1980,26 +1740,21 @@ class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
     ..aOB(6, _omitFieldNames ? '' : 'lastStatements')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ExecuteBatchDmlRequest clone() =>
-      ExecuteBatchDmlRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ExecuteBatchDmlRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ExecuteBatchDmlRequest copyWith(
           void Function(ExecuteBatchDmlRequest) updates) =>
       super.copyWith((message) => updates(message as ExecuteBatchDmlRequest))
           as ExecuteBatchDmlRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ExecuteBatchDmlRequest create() => ExecuteBatchDmlRequest._();
+  @$core.override
   ExecuteBatchDmlRequest createEmptyInstance() => create();
-  static $pb.PbList<ExecuteBatchDmlRequest> createRepeated() =>
-      $pb.PbList<ExecuteBatchDmlRequest>();
   @$core.pragma('dart2js:noInline')
   static ExecuteBatchDmlRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ExecuteBatchDmlRequest>(create);
@@ -2009,270 +1764,235 @@ class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get session => $_getSZ(0);
   @$pb.TagNumber(1)
-  set session($core.String v) {
-    $_setString(0, v);
-  }
-
+  set session($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSession() => clearField(1);
+  void clearSession() => $_clearField(1);
 
-  ///  Required. The transaction to use. Must be a read-write transaction.
+  /// Required. The transaction to use. Must be a read-write transaction.
   ///
-  ///  To protect against replays, single-use transactions are not supported. The
-  ///  caller must either supply an existing transaction ID or begin a new
-  ///  transaction.
+  /// To protect against replays, single-use transactions are not supported. The
+  /// caller must either supply an existing transaction ID or begin a new
+  /// transaction.
   @$pb.TagNumber(2)
   $3.TransactionSelector get transaction => $_getN(1);
   @$pb.TagNumber(2)
-  set transaction($3.TransactionSelector v) {
-    setField(2, v);
-  }
-
+  set transaction($3.TransactionSelector value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTransaction() => clearField(2);
+  void clearTransaction() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.TransactionSelector ensureTransaction() => $_ensure(1);
 
-  ///  Required. The list of statements to execute in this batch. Statements are
-  ///  executed serially, such that the effects of statement `i` are visible to
-  ///  statement `i+1`. Each statement must be a DML statement. Execution stops at
-  ///  the first failed statement; the remaining statements are not executed.
+  /// Required. The list of statements to execute in this batch. Statements are
+  /// executed serially, such that the effects of statement `i` are visible to
+  /// statement `i+1`. Each statement must be a DML statement. Execution stops at
+  /// the first failed statement; the remaining statements are not executed.
   ///
-  ///  Callers must provide at least one statement.
+  /// Callers must provide at least one statement.
   @$pb.TagNumber(3)
-  $core.List<ExecuteBatchDmlRequest_Statement> get statements => $_getList(2);
+  $pb.PbList<ExecuteBatchDmlRequest_Statement> get statements => $_getList(2);
 
-  ///  Required. A per-transaction sequence number used to identify this request.
-  ///  This field makes each request idempotent such that if the request is
-  ///  received multiple times, at most one will succeed.
+  /// Required. A per-transaction sequence number used to identify this request.
+  /// This field makes each request idempotent such that if the request is
+  /// received multiple times, at most one succeeds.
   ///
-  ///  The sequence number must be monotonically increasing within the
-  ///  transaction. If a request arrives for the first time with an out-of-order
-  ///  sequence number, the transaction may be aborted. Replays of previously
-  ///  handled requests will yield the same response as the first execution.
+  /// The sequence number must be monotonically increasing within the
+  /// transaction. If a request arrives for the first time with an out-of-order
+  /// sequence number, the transaction might be aborted. Replays of previously
+  /// handled requests yield the same response as the first execution.
   @$pb.TagNumber(4)
   $fixnum.Int64 get seqno => $_getI64(3);
   @$pb.TagNumber(4)
-  set seqno($fixnum.Int64 v) {
-    $_setInt64(3, v);
-  }
-
+  set seqno($fixnum.Int64 value) => $_setInt64(3, value);
   @$pb.TagNumber(4)
   $core.bool hasSeqno() => $_has(3);
   @$pb.TagNumber(4)
-  void clearSeqno() => clearField(4);
+  void clearSeqno() => $_clearField(4);
 
   /// Common options for this request.
   @$pb.TagNumber(5)
   RequestOptions get requestOptions => $_getN(4);
   @$pb.TagNumber(5)
-  set requestOptions(RequestOptions v) {
-    setField(5, v);
-  }
-
+  set requestOptions(RequestOptions value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasRequestOptions() => $_has(4);
   @$pb.TagNumber(5)
-  void clearRequestOptions() => clearField(5);
+  void clearRequestOptions() => $_clearField(5);
   @$pb.TagNumber(5)
   RequestOptions ensureRequestOptions() => $_ensure(4);
 
-  ///  Optional. If set to true, this request marks the end of the transaction.
-  ///  The transaction should be committed or aborted after these statements
-  ///  execute, and attempts to execute any other requests against this
-  ///  transaction (including reads and queries) will be rejected.
+  /// Optional. If set to `true`, this request marks the end of the transaction.
+  /// After these statements execute, you must commit or abort the transaction.
+  /// Attempts to execute any other requests against this transaction
+  /// (including reads and queries) are rejected.
   ///
-  ///  Setting this option may cause some error reporting to be deferred until
-  ///  commit time (e.g. validation of unique constraints). Given this, successful
-  ///  execution of statements should not be assumed until a subsequent Commit
-  ///  call completes successfully.
+  /// Setting this option might cause some error reporting to be deferred until
+  /// commit time (for example, validation of unique constraints). Given this,
+  /// successful execution of statements shouldn't be assumed until a subsequent
+  /// `Commit` call completes successfully.
   @$pb.TagNumber(6)
   $core.bool get lastStatements => $_getBF(5);
   @$pb.TagNumber(6)
-  set lastStatements($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set lastStatements($core.bool value) => $_setBool(5, value);
   @$pb.TagNumber(6)
   $core.bool hasLastStatements() => $_has(5);
   @$pb.TagNumber(6)
-  void clearLastStatements() => clearField(6);
+  void clearLastStatements() => $_clearField(6);
 }
 
-///  The response for
-///  [ExecuteBatchDml][google.spanner.v1.Spanner.ExecuteBatchDml]. Contains a list
-///  of [ResultSet][google.spanner.v1.ResultSet] messages, one for each DML
-///  statement that has successfully executed, in the same order as the statements
-///  in the request. If a statement fails, the status in the response body
-///  identifies the cause of the failure.
+/// The response for
+/// [ExecuteBatchDml][google.spanner.v1.Spanner.ExecuteBatchDml]. Contains a list
+/// of [ResultSet][google.spanner.v1.ResultSet] messages, one for each DML
+/// statement that has successfully executed, in the same order as the statements
+/// in the request. If a statement fails, the status in the response body
+/// identifies the cause of the failure.
 ///
-///  To check for DML statements that failed, use the following approach:
+/// To check for DML statements that failed, use the following approach:
 ///
-///  1. Check the status in the response message. The
-///  [google.rpc.Code][google.rpc.Code] enum
-///     value `OK` indicates that all statements were executed successfully.
-///  2. If the status was not `OK`, check the number of result sets in the
-///     response. If the response contains `N`
-///     [ResultSet][google.spanner.v1.ResultSet] messages, then statement `N+1` in
-///     the request failed.
+/// 1. Check the status in the response message. The
+/// [google.rpc.Code][google.rpc.Code] enum
+///    value `OK` indicates that all statements were executed successfully.
+/// 2. If the status was not `OK`, check the number of result sets in the
+///    response. If the response contains `N`
+///    [ResultSet][google.spanner.v1.ResultSet] messages, then statement `N+1` in
+///    the request failed.
 ///
-///  Example 1:
+/// Example 1:
 ///
-///  * Request: 5 DML statements, all executed successfully.
-///  * Response: 5 [ResultSet][google.spanner.v1.ResultSet] messages, with the
-///  status `OK`.
+/// * Request: 5 DML statements, all executed successfully.
+/// * Response: 5 [ResultSet][google.spanner.v1.ResultSet] messages, with the
+/// status `OK`.
 ///
-///  Example 2:
+/// Example 2:
 ///
-///  * Request: 5 DML statements. The third statement has a syntax error.
-///  * Response: 2 [ResultSet][google.spanner.v1.ResultSet] messages, and a syntax
-///  error (`INVALID_ARGUMENT`)
-///    status. The number of [ResultSet][google.spanner.v1.ResultSet] messages
-///    indicates that the third statement failed, and the fourth and fifth
-///    statements were not executed.
+/// * Request: 5 DML statements. The third statement has a syntax error.
+/// * Response: 2 [ResultSet][google.spanner.v1.ResultSet] messages, and a syntax
+/// error (`INVALID_ARGUMENT`)
+///   status. The number of [ResultSet][google.spanner.v1.ResultSet] messages
+///   indicates that the third statement failed, and the fourth and fifth
+///   statements were not executed.
 class ExecuteBatchDmlResponse extends $pb.GeneratedMessage {
   factory ExecuteBatchDmlResponse({
     $core.Iterable<$2.ResultSet>? resultSets,
-    $8.Status? status,
+    $9.Status? status,
     $3.MultiplexedSessionPrecommitToken? precommitToken,
   }) {
-    final $result = create();
-    if (resultSets != null) {
-      $result.resultSets.addAll(resultSets);
-    }
-    if (status != null) {
-      $result.status = status;
-    }
-    if (precommitToken != null) {
-      $result.precommitToken = precommitToken;
-    }
-    return $result;
+    final result = create();
+    if (resultSets != null) result.resultSets.addAll(resultSets);
+    if (status != null) result.status = status;
+    if (precommitToken != null) result.precommitToken = precommitToken;
+    return result;
   }
-  ExecuteBatchDmlResponse._() : super();
-  factory ExecuteBatchDmlResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExecuteBatchDmlResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ExecuteBatchDmlResponse._();
+
+  factory ExecuteBatchDmlResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ExecuteBatchDmlResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ExecuteBatchDmlResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..pc<$2.ResultSet>(
-        1, _omitFieldNames ? '' : 'resultSets', $pb.PbFieldType.PM,
+    ..pPM<$2.ResultSet>(1, _omitFieldNames ? '' : 'resultSets',
         subBuilder: $2.ResultSet.create)
-    ..aOM<$8.Status>(2, _omitFieldNames ? '' : 'status',
-        subBuilder: $8.Status.create)
+    ..aOM<$9.Status>(2, _omitFieldNames ? '' : 'status',
+        subBuilder: $9.Status.create)
     ..aOM<$3.MultiplexedSessionPrecommitToken>(
         3, _omitFieldNames ? '' : 'precommitToken',
         subBuilder: $3.MultiplexedSessionPrecommitToken.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ExecuteBatchDmlResponse clone() =>
-      ExecuteBatchDmlResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ExecuteBatchDmlResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ExecuteBatchDmlResponse copyWith(
           void Function(ExecuteBatchDmlResponse) updates) =>
       super.copyWith((message) => updates(message as ExecuteBatchDmlResponse))
           as ExecuteBatchDmlResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ExecuteBatchDmlResponse create() => ExecuteBatchDmlResponse._();
+  @$core.override
   ExecuteBatchDmlResponse createEmptyInstance() => create();
-  static $pb.PbList<ExecuteBatchDmlResponse> createRepeated() =>
-      $pb.PbList<ExecuteBatchDmlResponse>();
   @$core.pragma('dart2js:noInline')
   static ExecuteBatchDmlResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ExecuteBatchDmlResponse>(create);
   static ExecuteBatchDmlResponse? _defaultInstance;
 
-  ///  One [ResultSet][google.spanner.v1.ResultSet] for each statement in the
-  ///  request that ran successfully, in the same order as the statements in the
-  ///  request. Each [ResultSet][google.spanner.v1.ResultSet] does not contain any
-  ///  rows. The [ResultSetStats][google.spanner.v1.ResultSetStats] in each
-  ///  [ResultSet][google.spanner.v1.ResultSet] contain the number of rows
-  ///  modified by the statement.
+  /// One [ResultSet][google.spanner.v1.ResultSet] for each statement in the
+  /// request that ran successfully, in the same order as the statements in the
+  /// request. Each [ResultSet][google.spanner.v1.ResultSet] does not contain any
+  /// rows. The [ResultSetStats][google.spanner.v1.ResultSetStats] in each
+  /// [ResultSet][google.spanner.v1.ResultSet] contain the number of rows
+  /// modified by the statement.
   ///
-  ///  Only the first [ResultSet][google.spanner.v1.ResultSet] in the response
-  ///  contains valid [ResultSetMetadata][google.spanner.v1.ResultSetMetadata].
+  /// Only the first [ResultSet][google.spanner.v1.ResultSet] in the response
+  /// contains valid [ResultSetMetadata][google.spanner.v1.ResultSetMetadata].
   @$pb.TagNumber(1)
-  $core.List<$2.ResultSet> get resultSets => $_getList(0);
+  $pb.PbList<$2.ResultSet> get resultSets => $_getList(0);
 
   /// If all DML statements are executed successfully, the status is `OK`.
   /// Otherwise, the error status of the first failed statement.
   @$pb.TagNumber(2)
-  $8.Status get status => $_getN(1);
+  $9.Status get status => $_getN(1);
   @$pb.TagNumber(2)
-  set status($8.Status v) {
-    setField(2, v);
-  }
-
+  set status($9.Status value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasStatus() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStatus() => clearField(2);
+  void clearStatus() => $_clearField(2);
   @$pb.TagNumber(2)
-  $8.Status ensureStatus() => $_ensure(1);
+  $9.Status ensureStatus() => $_ensure(1);
 
-  /// Optional. A precommit token will be included if the read-write transaction
-  /// is on a multiplexed session.
-  /// The precommit token with the highest sequence number from this transaction
-  /// attempt should be passed to the
+  /// Optional. A precommit token is included if the read-write transaction
+  /// is on a multiplexed session. Pass the precommit token with the highest
+  /// sequence number from this transaction attempt should be passed to the
   /// [Commit][google.spanner.v1.Spanner.Commit] request for this transaction.
-  /// This feature is not yet supported and will result in an UNIMPLEMENTED
-  /// error.
   @$pb.TagNumber(3)
   $3.MultiplexedSessionPrecommitToken get precommitToken => $_getN(2);
   @$pb.TagNumber(3)
-  set precommitToken($3.MultiplexedSessionPrecommitToken v) {
-    setField(3, v);
-  }
-
+  set precommitToken($3.MultiplexedSessionPrecommitToken value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasPrecommitToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPrecommitToken() => clearField(3);
+  void clearPrecommitToken() => $_clearField(3);
   @$pb.TagNumber(3)
   $3.MultiplexedSessionPrecommitToken ensurePrecommitToken() => $_ensure(2);
 }
 
-/// Options for a PartitionQueryRequest and
-/// PartitionReadRequest.
+/// Options for a `PartitionQueryRequest` and `PartitionReadRequest`.
 class PartitionOptions extends $pb.GeneratedMessage {
   factory PartitionOptions({
     $fixnum.Int64? partitionSizeBytes,
     $fixnum.Int64? maxPartitions,
   }) {
-    final $result = create();
-    if (partitionSizeBytes != null) {
-      $result.partitionSizeBytes = partitionSizeBytes;
-    }
-    if (maxPartitions != null) {
-      $result.maxPartitions = maxPartitions;
-    }
-    return $result;
+    final result = create();
+    if (partitionSizeBytes != null)
+      result.partitionSizeBytes = partitionSizeBytes;
+    if (maxPartitions != null) result.maxPartitions = maxPartitions;
+    return result;
   }
-  PartitionOptions._() : super();
-  factory PartitionOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PartitionOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PartitionOptions._();
+
+  factory PartitionOptions.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PartitionOptions.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PartitionOptions',
@@ -2283,66 +2003,56 @@ class PartitionOptions extends $pb.GeneratedMessage {
     ..aInt64(2, _omitFieldNames ? '' : 'maxPartitions')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PartitionOptions clone() => PartitionOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PartitionOptions clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PartitionOptions copyWith(void Function(PartitionOptions) updates) =>
       super.copyWith((message) => updates(message as PartitionOptions))
           as PartitionOptions;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PartitionOptions create() => PartitionOptions._();
+  @$core.override
   PartitionOptions createEmptyInstance() => create();
-  static $pb.PbList<PartitionOptions> createRepeated() =>
-      $pb.PbList<PartitionOptions>();
   @$core.pragma('dart2js:noInline')
   static PartitionOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PartitionOptions>(create);
   static PartitionOptions? _defaultInstance;
 
-  ///  **Note:** This hint is currently ignored by PartitionQuery and
-  ///  PartitionRead requests.
+  /// **Note:** This hint is currently ignored by `PartitionQuery` and
+  /// `PartitionRead` requests.
   ///
-  ///  The desired data size for each partition generated.  The default for this
-  ///  option is currently 1 GiB.  This is only a hint. The actual size of each
-  ///  partition may be smaller or larger than this size request.
+  /// The desired data size for each partition generated. The default for this
+  /// option is currently 1 GiB. This is only a hint. The actual size of each
+  /// partition can be smaller or larger than this size request.
   @$pb.TagNumber(1)
   $fixnum.Int64 get partitionSizeBytes => $_getI64(0);
   @$pb.TagNumber(1)
-  set partitionSizeBytes($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set partitionSizeBytes($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPartitionSizeBytes() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPartitionSizeBytes() => clearField(1);
+  void clearPartitionSizeBytes() => $_clearField(1);
 
-  ///  **Note:** This hint is currently ignored by PartitionQuery and
-  ///  PartitionRead requests.
+  /// **Note:** This hint is currently ignored by `PartitionQuery` and
+  /// `PartitionRead` requests.
   ///
-  ///  The desired maximum number of partitions to return.  For example, this may
-  ///  be set to the number of workers available.  The default for this option
-  ///  is currently 10,000. The maximum value is currently 200,000.  This is only
-  ///  a hint.  The actual number of partitions returned may be smaller or larger
-  ///  than this maximum count request.
+  /// The desired maximum number of partitions to return. For example, this
+  /// might be set to the number of workers available. The default for this
+  /// option is currently 10,000. The maximum value is currently 200,000. This
+  /// is only a hint. The actual number of partitions returned can be smaller or
+  /// larger than this maximum count request.
   @$pb.TagNumber(2)
   $fixnum.Int64 get maxPartitions => $_getI64(1);
   @$pb.TagNumber(2)
-  set maxPartitions($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set maxPartitions($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasMaxPartitions() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMaxPartitions() => clearField(2);
+  void clearMaxPartitions() => $_clearField(2);
 }
 
 /// The request for [PartitionQuery][google.spanner.v1.Spanner.PartitionQuery]
@@ -2352,37 +2062,27 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
     $3.TransactionSelector? transaction,
     $core.String? sql,
     $6.Struct? params,
-    $core.Map<$core.String, $7.Type>? paramTypes,
+    $core.Iterable<$core.MapEntry<$core.String, $8.Type>>? paramTypes,
     PartitionOptions? partitionOptions,
   }) {
-    final $result = create();
-    if (session != null) {
-      $result.session = session;
-    }
-    if (transaction != null) {
-      $result.transaction = transaction;
-    }
-    if (sql != null) {
-      $result.sql = sql;
-    }
-    if (params != null) {
-      $result.params = params;
-    }
-    if (paramTypes != null) {
-      $result.paramTypes.addAll(paramTypes);
-    }
-    if (partitionOptions != null) {
-      $result.partitionOptions = partitionOptions;
-    }
-    return $result;
+    final result = create();
+    if (session != null) result.session = session;
+    if (transaction != null) result.transaction = transaction;
+    if (sql != null) result.sql = sql;
+    if (params != null) result.params = params;
+    if (paramTypes != null) result.paramTypes.addEntries(paramTypes);
+    if (partitionOptions != null) result.partitionOptions = partitionOptions;
+    return result;
   }
-  PartitionQueryRequest._() : super();
-  factory PartitionQueryRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PartitionQueryRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PartitionQueryRequest._();
+
+  factory PartitionQueryRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PartitionQueryRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PartitionQueryRequest',
@@ -2395,37 +2095,32 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'sql')
     ..aOM<$6.Struct>(4, _omitFieldNames ? '' : 'params',
         subBuilder: $6.Struct.create)
-    ..m<$core.String, $7.Type>(5, _omitFieldNames ? '' : 'paramTypes',
+    ..m<$core.String, $8.Type>(5, _omitFieldNames ? '' : 'paramTypes',
         entryClassName: 'PartitionQueryRequest.ParamTypesEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $7.Type.create,
-        valueDefaultOrMaker: $7.Type.getDefault,
+        valueCreator: $8.Type.create,
+        valueDefaultOrMaker: $8.Type.getDefault,
         packageName: const $pb.PackageName('google.spanner.v1'))
     ..aOM<PartitionOptions>(6, _omitFieldNames ? '' : 'partitionOptions',
         subBuilder: PartitionOptions.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PartitionQueryRequest clone() =>
-      PartitionQueryRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PartitionQueryRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PartitionQueryRequest copyWith(
           void Function(PartitionQueryRequest) updates) =>
       super.copyWith((message) => updates(message as PartitionQueryRequest))
           as PartitionQueryRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PartitionQueryRequest create() => PartitionQueryRequest._();
+  @$core.override
   PartitionQueryRequest createEmptyInstance() => create();
-  static $pb.PbList<PartitionQueryRequest> createRepeated() =>
-      $pb.PbList<PartitionQueryRequest>();
   @$core.pragma('dart2js:noInline')
   static PartitionQueryRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PartitionQueryRequest>(create);
@@ -2435,105 +2130,91 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get session => $_getSZ(0);
   @$pb.TagNumber(1)
-  set session($core.String v) {
-    $_setString(0, v);
-  }
-
+  set session($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSession() => clearField(1);
+  void clearSession() => $_clearField(1);
 
-  /// Read only snapshot transactions are supported, read/write and single use
-  /// transactions are not.
+  /// Read-only snapshot transactions are supported, read and write and
+  /// single-use transactions are not.
   @$pb.TagNumber(2)
   $3.TransactionSelector get transaction => $_getN(1);
   @$pb.TagNumber(2)
-  set transaction($3.TransactionSelector v) {
-    setField(2, v);
-  }
-
+  set transaction($3.TransactionSelector value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTransaction() => clearField(2);
+  void clearTransaction() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.TransactionSelector ensureTransaction() => $_ensure(1);
 
-  ///  Required. The query request to generate partitions for. The request will
-  ///  fail if the query is not root partitionable. For a query to be root
-  ///  partitionable, it needs to satisfy a few conditions. For example, if the
-  ///  query execution plan contains a distributed union operator, then it must be
-  ///  the first operator in the plan. For more information about other
-  ///  conditions, see [Read data in
-  ///  parallel](https://cloud.google.com/spanner/docs/reads#read_data_in_parallel).
+  /// Required. The query request to generate partitions for. The request fails
+  /// if the query isn't root partitionable. For a query to be root
+  /// partitionable, it needs to satisfy a few conditions. For example, if the
+  /// query execution plan contains a distributed union operator, then it must be
+  /// the first operator in the plan. For more information about other
+  /// conditions, see [Read data in
+  /// parallel](https://cloud.google.com/spanner/docs/reads#read_data_in_parallel).
   ///
-  ///  The query request must not contain DML commands, such as INSERT, UPDATE, or
-  ///  DELETE. Use
-  ///  [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] with a
-  ///  PartitionedDml transaction for large, partition-friendly DML operations.
+  /// The query request must not contain DML commands, such as `INSERT`,
+  /// `UPDATE`, or `DELETE`. Use
+  /// [`ExecuteStreamingSql`][google.spanner.v1.Spanner.ExecuteStreamingSql] with
+  /// a `PartitionedDml` transaction for large, partition-friendly DML
+  /// operations.
   @$pb.TagNumber(3)
   $core.String get sql => $_getSZ(2);
   @$pb.TagNumber(3)
-  set sql($core.String v) {
-    $_setString(2, v);
-  }
-
+  set sql($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSql() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSql() => clearField(3);
+  void clearSql() => $_clearField(3);
 
-  ///  Parameter names and values that bind to placeholders in the SQL string.
+  /// Parameter names and values that bind to placeholders in the SQL string.
   ///
-  ///  A parameter placeholder consists of the `@` character followed by the
-  ///  parameter name (for example, `@firstName`). Parameter names can contain
-  ///  letters, numbers, and underscores.
+  /// A parameter placeholder consists of the `@` character followed by the
+  /// parameter name (for example, `@firstName`). Parameter names can contain
+  /// letters, numbers, and underscores.
   ///
-  ///  Parameters can appear anywhere that a literal value is expected.  The same
-  ///  parameter name can be used more than once, for example:
+  /// Parameters can appear anywhere that a literal value is expected. The same
+  /// parameter name can be used more than once, for example:
   ///
-  ///  `"WHERE id > @msg_id AND id < @msg_id + 100"`
+  /// `"WHERE id > @msg_id AND id < @msg_id + 100"`
   ///
-  ///  It is an error to execute a SQL statement with unbound parameters.
+  /// It's an error to execute a SQL statement with unbound parameters.
   @$pb.TagNumber(4)
   $6.Struct get params => $_getN(3);
   @$pb.TagNumber(4)
-  set params($6.Struct v) {
-    setField(4, v);
-  }
-
+  set params($6.Struct value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasParams() => $_has(3);
   @$pb.TagNumber(4)
-  void clearParams() => clearField(4);
+  void clearParams() => $_clearField(4);
   @$pb.TagNumber(4)
   $6.Struct ensureParams() => $_ensure(3);
 
-  ///  It is not always possible for Cloud Spanner to infer the right SQL type
-  ///  from a JSON value.  For example, values of type `BYTES` and values
-  ///  of type `STRING` both appear in
-  ///  [params][google.spanner.v1.PartitionQueryRequest.params] as JSON strings.
+  /// It isn't always possible for Cloud Spanner to infer the right SQL type
+  /// from a JSON value. For example, values of type `BYTES` and values
+  /// of type `STRING` both appear in
+  /// [params][google.spanner.v1.PartitionQueryRequest.params] as JSON strings.
   ///
-  ///  In these cases, `param_types` can be used to specify the exact
-  ///  SQL type for some or all of the SQL query parameters. See the
-  ///  definition of [Type][google.spanner.v1.Type] for more information
-  ///  about SQL types.
+  /// In these cases, `param_types` can be used to specify the exact
+  /// SQL type for some or all of the SQL query parameters. See the
+  /// definition of [Type][google.spanner.v1.Type] for more information
+  /// about SQL types.
   @$pb.TagNumber(5)
-  $core.Map<$core.String, $7.Type> get paramTypes => $_getMap(4);
+  $pb.PbMap<$core.String, $8.Type> get paramTypes => $_getMap(4);
 
   /// Additional options that affect how many partitions are created.
   @$pb.TagNumber(6)
   PartitionOptions get partitionOptions => $_getN(5);
   @$pb.TagNumber(6)
-  set partitionOptions(PartitionOptions v) {
-    setField(6, v);
-  }
-
+  set partitionOptions(PartitionOptions value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasPartitionOptions() => $_has(5);
   @$pb.TagNumber(6)
-  void clearPartitionOptions() => clearField(6);
+  void clearPartitionOptions() => $_clearField(6);
   @$pb.TagNumber(6)
   PartitionOptions ensurePartitionOptions() => $_ensure(5);
 }
@@ -2546,40 +2227,28 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
     $core.String? table,
     $core.String? index,
     $core.Iterable<$core.String>? columns,
-    $9.KeySet? keySet,
+    $10.KeySet? keySet,
     PartitionOptions? partitionOptions,
   }) {
-    final $result = create();
-    if (session != null) {
-      $result.session = session;
-    }
-    if (transaction != null) {
-      $result.transaction = transaction;
-    }
-    if (table != null) {
-      $result.table = table;
-    }
-    if (index != null) {
-      $result.index = index;
-    }
-    if (columns != null) {
-      $result.columns.addAll(columns);
-    }
-    if (keySet != null) {
-      $result.keySet = keySet;
-    }
-    if (partitionOptions != null) {
-      $result.partitionOptions = partitionOptions;
-    }
-    return $result;
+    final result = create();
+    if (session != null) result.session = session;
+    if (transaction != null) result.transaction = transaction;
+    if (table != null) result.table = table;
+    if (index != null) result.index = index;
+    if (columns != null) result.columns.addAll(columns);
+    if (keySet != null) result.keySet = keySet;
+    if (partitionOptions != null) result.partitionOptions = partitionOptions;
+    return result;
   }
-  PartitionReadRequest._() : super();
-  factory PartitionReadRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PartitionReadRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PartitionReadRequest._();
+
+  factory PartitionReadRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PartitionReadRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PartitionReadRequest',
@@ -2592,31 +2261,26 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'table')
     ..aOS(4, _omitFieldNames ? '' : 'index')
     ..pPS(5, _omitFieldNames ? '' : 'columns')
-    ..aOM<$9.KeySet>(6, _omitFieldNames ? '' : 'keySet',
-        subBuilder: $9.KeySet.create)
+    ..aOM<$10.KeySet>(6, _omitFieldNames ? '' : 'keySet',
+        subBuilder: $10.KeySet.create)
     ..aOM<PartitionOptions>(9, _omitFieldNames ? '' : 'partitionOptions',
         subBuilder: PartitionOptions.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PartitionReadRequest clone() =>
-      PartitionReadRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PartitionReadRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PartitionReadRequest copyWith(void Function(PartitionReadRequest) updates) =>
       super.copyWith((message) => updates(message as PartitionReadRequest))
           as PartitionReadRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PartitionReadRequest create() => PartitionReadRequest._();
+  @$core.override
   PartitionReadRequest createEmptyInstance() => create();
-  static $pb.PbList<PartitionReadRequest> createRepeated() =>
-      $pb.PbList<PartitionReadRequest>();
   @$core.pragma('dart2js:noInline')
   static PartitionReadRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PartitionReadRequest>(create);
@@ -2626,28 +2290,22 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get session => $_getSZ(0);
   @$pb.TagNumber(1)
-  set session($core.String v) {
-    $_setString(0, v);
-  }
-
+  set session($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSession() => clearField(1);
+  void clearSession() => $_clearField(1);
 
   /// Read only snapshot transactions are supported, read/write and single use
   /// transactions are not.
   @$pb.TagNumber(2)
   $3.TransactionSelector get transaction => $_getN(1);
   @$pb.TagNumber(2)
-  set transaction($3.TransactionSelector v) {
-    setField(2, v);
-  }
-
+  set transaction($3.TransactionSelector value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTransaction() => clearField(2);
+  void clearTransaction() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.TransactionSelector ensureTransaction() => $_ensure(1);
 
@@ -2655,14 +2313,11 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get table => $_getSZ(2);
   @$pb.TagNumber(3)
-  set table($core.String v) {
-    $_setString(2, v);
-  }
-
+  set table($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasTable() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTable() => clearField(3);
+  void clearTable() => $_clearField(3);
 
   /// If non-empty, the name of an index on
   /// [table][google.spanner.v1.PartitionReadRequest.table]. This index is used
@@ -2673,56 +2328,47 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get index => $_getSZ(3);
   @$pb.TagNumber(4)
-  set index($core.String v) {
-    $_setString(3, v);
-  }
-
+  set index($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasIndex() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIndex() => clearField(4);
+  void clearIndex() => $_clearField(4);
 
   /// The columns of [table][google.spanner.v1.PartitionReadRequest.table] to be
   /// returned for each row matching this request.
   @$pb.TagNumber(5)
-  $core.List<$core.String> get columns => $_getList(4);
+  $pb.PbList<$core.String> get columns => $_getList(4);
 
-  ///  Required. `key_set` identifies the rows to be yielded. `key_set` names the
-  ///  primary keys of the rows in
-  ///  [table][google.spanner.v1.PartitionReadRequest.table] to be yielded, unless
-  ///  [index][google.spanner.v1.PartitionReadRequest.index] is present. If
-  ///  [index][google.spanner.v1.PartitionReadRequest.index] is present, then
-  ///  [key_set][google.spanner.v1.PartitionReadRequest.key_set] instead names
-  ///  index keys in [index][google.spanner.v1.PartitionReadRequest.index].
+  /// Required. `key_set` identifies the rows to be yielded. `key_set` names the
+  /// primary keys of the rows in
+  /// [table][google.spanner.v1.PartitionReadRequest.table] to be yielded, unless
+  /// [index][google.spanner.v1.PartitionReadRequest.index] is present. If
+  /// [index][google.spanner.v1.PartitionReadRequest.index] is present, then
+  /// [key_set][google.spanner.v1.PartitionReadRequest.key_set] instead names
+  /// index keys in [index][google.spanner.v1.PartitionReadRequest.index].
   ///
-  ///  It is not an error for the `key_set` to name rows that do not
-  ///  exist in the database. Read yields nothing for nonexistent rows.
+  /// It isn't an error for the `key_set` to name rows that don't
+  /// exist in the database. Read yields nothing for nonexistent rows.
   @$pb.TagNumber(6)
-  $9.KeySet get keySet => $_getN(5);
+  $10.KeySet get keySet => $_getN(5);
   @$pb.TagNumber(6)
-  set keySet($9.KeySet v) {
-    setField(6, v);
-  }
-
+  set keySet($10.KeySet value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasKeySet() => $_has(5);
   @$pb.TagNumber(6)
-  void clearKeySet() => clearField(6);
+  void clearKeySet() => $_clearField(6);
   @$pb.TagNumber(6)
-  $9.KeySet ensureKeySet() => $_ensure(5);
+  $10.KeySet ensureKeySet() => $_ensure(5);
 
   /// Additional options that affect how many partitions are created.
   @$pb.TagNumber(9)
   PartitionOptions get partitionOptions => $_getN(6);
   @$pb.TagNumber(9)
-  set partitionOptions(PartitionOptions v) {
-    setField(9, v);
-  }
-
+  set partitionOptions(PartitionOptions value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasPartitionOptions() => $_has(6);
   @$pb.TagNumber(9)
-  void clearPartitionOptions() => clearField(9);
+  void clearPartitionOptions() => $_clearField(9);
   @$pb.TagNumber(9)
   PartitionOptions ensurePartitionOptions() => $_ensure(6);
 }
@@ -2733,19 +2379,19 @@ class Partition extends $pb.GeneratedMessage {
   factory Partition({
     $core.List<$core.int>? partitionToken,
   }) {
-    final $result = create();
-    if (partitionToken != null) {
-      $result.partitionToken = partitionToken;
-    }
-    return $result;
+    final result = create();
+    if (partitionToken != null) result.partitionToken = partitionToken;
+    return result;
   }
-  Partition._() : super();
-  factory Partition.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Partition.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Partition._();
+
+  factory Partition.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Partition.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Partition',
@@ -2756,41 +2402,35 @@ class Partition extends $pb.GeneratedMessage {
         1, _omitFieldNames ? '' : 'partitionToken', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Partition clone() => Partition()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Partition clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Partition copyWith(void Function(Partition) updates) =>
       super.copyWith((message) => updates(message as Partition)) as Partition;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Partition create() => Partition._();
+  @$core.override
   Partition createEmptyInstance() => create();
-  static $pb.PbList<Partition> createRepeated() => $pb.PbList<Partition>();
   @$core.pragma('dart2js:noInline')
   static Partition getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Partition>(create);
   static Partition? _defaultInstance;
 
-  /// This token can be passed to Read, StreamingRead, ExecuteSql, or
-  /// ExecuteStreamingSql requests to restrict the results to those identified by
-  /// this partition token.
+  /// This token can be passed to `Read`, `StreamingRead`, `ExecuteSql`, or
+  /// `ExecuteStreamingSql` requests to restrict the results to those identified
+  /// by this partition token.
   @$pb.TagNumber(1)
   $core.List<$core.int> get partitionToken => $_getN(0);
   @$pb.TagNumber(1)
-  set partitionToken($core.List<$core.int> v) {
-    $_setBytes(0, v);
-  }
-
+  set partitionToken($core.List<$core.int> value) => $_setBytes(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPartitionToken() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPartitionToken() => clearField(1);
+  void clearPartitionToken() => $_clearField(1);
 }
 
 /// The response for [PartitionQuery][google.spanner.v1.Spanner.PartitionQuery]
@@ -2800,52 +2440,46 @@ class PartitionResponse extends $pb.GeneratedMessage {
     $core.Iterable<Partition>? partitions,
     $3.Transaction? transaction,
   }) {
-    final $result = create();
-    if (partitions != null) {
-      $result.partitions.addAll(partitions);
-    }
-    if (transaction != null) {
-      $result.transaction = transaction;
-    }
-    return $result;
+    final result = create();
+    if (partitions != null) result.partitions.addAll(partitions);
+    if (transaction != null) result.transaction = transaction;
+    return result;
   }
-  PartitionResponse._() : super();
-  factory PartitionResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PartitionResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PartitionResponse._();
+
+  factory PartitionResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PartitionResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PartitionResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..pc<Partition>(1, _omitFieldNames ? '' : 'partitions', $pb.PbFieldType.PM,
+    ..pPM<Partition>(1, _omitFieldNames ? '' : 'partitions',
         subBuilder: Partition.create)
     ..aOM<$3.Transaction>(2, _omitFieldNames ? '' : 'transaction',
         subBuilder: $3.Transaction.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PartitionResponse clone() => PartitionResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PartitionResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PartitionResponse copyWith(void Function(PartitionResponse) updates) =>
       super.copyWith((message) => updates(message as PartitionResponse))
           as PartitionResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PartitionResponse create() => PartitionResponse._();
+  @$core.override
   PartitionResponse createEmptyInstance() => create();
-  static $pb.PbList<PartitionResponse> createRepeated() =>
-      $pb.PbList<PartitionResponse>();
   @$core.pragma('dart2js:noInline')
   static PartitionResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PartitionResponse>(create);
@@ -2853,20 +2487,17 @@ class PartitionResponse extends $pb.GeneratedMessage {
 
   /// Partitions created by this request.
   @$pb.TagNumber(1)
-  $core.List<Partition> get partitions => $_getList(0);
+  $pb.PbList<Partition> get partitions => $_getList(0);
 
   /// Transaction created by this request.
   @$pb.TagNumber(2)
   $3.Transaction get transaction => $_getN(1);
   @$pb.TagNumber(2)
-  set transaction($3.Transaction v) {
-    setField(2, v);
-  }
-
+  set transaction($3.Transaction value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTransaction() => clearField(2);
+  void clearTransaction() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.Transaction ensureTransaction() => $_ensure(1);
 }
@@ -2880,7 +2511,7 @@ class ReadRequest extends $pb.GeneratedMessage {
     $core.String? table,
     $core.String? index,
     $core.Iterable<$core.String>? columns,
-    $9.KeySet? keySet,
+    $10.KeySet? keySet,
     $fixnum.Int64? limit,
     $core.List<$core.int>? resumeToken,
     $core.List<$core.int>? partitionToken,
@@ -2889,59 +2520,36 @@ class ReadRequest extends $pb.GeneratedMessage {
     $core.bool? dataBoostEnabled,
     ReadRequest_OrderBy? orderBy,
     ReadRequest_LockHint? lockHint,
+    $7.RoutingHint? routingHint,
   }) {
-    final $result = create();
-    if (session != null) {
-      $result.session = session;
-    }
-    if (transaction != null) {
-      $result.transaction = transaction;
-    }
-    if (table != null) {
-      $result.table = table;
-    }
-    if (index != null) {
-      $result.index = index;
-    }
-    if (columns != null) {
-      $result.columns.addAll(columns);
-    }
-    if (keySet != null) {
-      $result.keySet = keySet;
-    }
-    if (limit != null) {
-      $result.limit = limit;
-    }
-    if (resumeToken != null) {
-      $result.resumeToken = resumeToken;
-    }
-    if (partitionToken != null) {
-      $result.partitionToken = partitionToken;
-    }
-    if (requestOptions != null) {
-      $result.requestOptions = requestOptions;
-    }
-    if (directedReadOptions != null) {
-      $result.directedReadOptions = directedReadOptions;
-    }
-    if (dataBoostEnabled != null) {
-      $result.dataBoostEnabled = dataBoostEnabled;
-    }
-    if (orderBy != null) {
-      $result.orderBy = orderBy;
-    }
-    if (lockHint != null) {
-      $result.lockHint = lockHint;
-    }
-    return $result;
+    final result = create();
+    if (session != null) result.session = session;
+    if (transaction != null) result.transaction = transaction;
+    if (table != null) result.table = table;
+    if (index != null) result.index = index;
+    if (columns != null) result.columns.addAll(columns);
+    if (keySet != null) result.keySet = keySet;
+    if (limit != null) result.limit = limit;
+    if (resumeToken != null) result.resumeToken = resumeToken;
+    if (partitionToken != null) result.partitionToken = partitionToken;
+    if (requestOptions != null) result.requestOptions = requestOptions;
+    if (directedReadOptions != null)
+      result.directedReadOptions = directedReadOptions;
+    if (dataBoostEnabled != null) result.dataBoostEnabled = dataBoostEnabled;
+    if (orderBy != null) result.orderBy = orderBy;
+    if (lockHint != null) result.lockHint = lockHint;
+    if (routingHint != null) result.routingHint = routingHint;
+    return result;
   }
-  ReadRequest._() : super();
-  factory ReadRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ReadRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ReadRequest._();
+
+  factory ReadRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReadRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ReadRequest',
@@ -2954,8 +2562,8 @@ class ReadRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'table')
     ..aOS(4, _omitFieldNames ? '' : 'index')
     ..pPS(5, _omitFieldNames ? '' : 'columns')
-    ..aOM<$9.KeySet>(6, _omitFieldNames ? '' : 'keySet',
-        subBuilder: $9.KeySet.create)
+    ..aOM<$10.KeySet>(6, _omitFieldNames ? '' : 'keySet',
+        subBuilder: $10.KeySet.create)
     ..aInt64(8, _omitFieldNames ? '' : 'limit')
     ..a<$core.List<$core.int>>(
         9, _omitFieldNames ? '' : 'resumeToken', $pb.PbFieldType.OY)
@@ -2966,35 +2574,28 @@ class ReadRequest extends $pb.GeneratedMessage {
     ..aOM<DirectedReadOptions>(14, _omitFieldNames ? '' : 'directedReadOptions',
         subBuilder: DirectedReadOptions.create)
     ..aOB(15, _omitFieldNames ? '' : 'dataBoostEnabled')
-    ..e<ReadRequest_OrderBy>(
-        16, _omitFieldNames ? '' : 'orderBy', $pb.PbFieldType.OE,
-        defaultOrMaker: ReadRequest_OrderBy.ORDER_BY_UNSPECIFIED,
-        valueOf: ReadRequest_OrderBy.valueOf,
+    ..aE<ReadRequest_OrderBy>(16, _omitFieldNames ? '' : 'orderBy',
         enumValues: ReadRequest_OrderBy.values)
-    ..e<ReadRequest_LockHint>(
-        17, _omitFieldNames ? '' : 'lockHint', $pb.PbFieldType.OE,
-        defaultOrMaker: ReadRequest_LockHint.LOCK_HINT_UNSPECIFIED,
-        valueOf: ReadRequest_LockHint.valueOf,
+    ..aE<ReadRequest_LockHint>(17, _omitFieldNames ? '' : 'lockHint',
         enumValues: ReadRequest_LockHint.values)
+    ..aOM<$7.RoutingHint>(18, _omitFieldNames ? '' : 'routingHint',
+        subBuilder: $7.RoutingHint.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ReadRequest clone() => ReadRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReadRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ReadRequest copyWith(void Function(ReadRequest) updates) =>
       super.copyWith((message) => updates(message as ReadRequest))
           as ReadRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ReadRequest create() => ReadRequest._();
+  @$core.override
   ReadRequest createEmptyInstance() => create();
-  static $pb.PbList<ReadRequest> createRepeated() => $pb.PbList<ReadRequest>();
   @$core.pragma('dart2js:noInline')
   static ReadRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReadRequest>(create);
@@ -3004,28 +2605,22 @@ class ReadRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get session => $_getSZ(0);
   @$pb.TagNumber(1)
-  set session($core.String v) {
-    $_setString(0, v);
-  }
-
+  set session($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSession() => clearField(1);
+  void clearSession() => $_clearField(1);
 
   /// The transaction to use. If none is provided, the default is a
   /// temporary read-only transaction with strong concurrency.
   @$pb.TagNumber(2)
   $3.TransactionSelector get transaction => $_getN(1);
   @$pb.TagNumber(2)
-  set transaction($3.TransactionSelector v) {
-    setField(2, v);
-  }
-
+  set transaction($3.TransactionSelector value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTransaction() => clearField(2);
+  void clearTransaction() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.TransactionSelector ensureTransaction() => $_ensure(1);
 
@@ -3033,14 +2628,11 @@ class ReadRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get table => $_getSZ(2);
   @$pb.TagNumber(3)
-  set table($core.String v) {
-    $_setString(2, v);
-  }
-
+  set table($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasTable() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTable() => clearField(3);
+  void clearTable() => $_clearField(3);
 
   /// If non-empty, the name of an index on
   /// [table][google.spanner.v1.ReadRequest.table]. This index is used instead of
@@ -3051,64 +2643,55 @@ class ReadRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get index => $_getSZ(3);
   @$pb.TagNumber(4)
-  set index($core.String v) {
-    $_setString(3, v);
-  }
-
+  set index($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasIndex() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIndex() => clearField(4);
+  void clearIndex() => $_clearField(4);
 
   /// Required. The columns of [table][google.spanner.v1.ReadRequest.table] to be
   /// returned for each row matching this request.
   @$pb.TagNumber(5)
-  $core.List<$core.String> get columns => $_getList(4);
+  $pb.PbList<$core.String> get columns => $_getList(4);
 
-  ///  Required. `key_set` identifies the rows to be yielded. `key_set` names the
-  ///  primary keys of the rows in [table][google.spanner.v1.ReadRequest.table] to
-  ///  be yielded, unless [index][google.spanner.v1.ReadRequest.index] is present.
-  ///  If [index][google.spanner.v1.ReadRequest.index] is present, then
-  ///  [key_set][google.spanner.v1.ReadRequest.key_set] instead names index keys
-  ///  in [index][google.spanner.v1.ReadRequest.index].
+  /// Required. `key_set` identifies the rows to be yielded. `key_set` names the
+  /// primary keys of the rows in [table][google.spanner.v1.ReadRequest.table] to
+  /// be yielded, unless [index][google.spanner.v1.ReadRequest.index] is present.
+  /// If [index][google.spanner.v1.ReadRequest.index] is present, then
+  /// [key_set][google.spanner.v1.ReadRequest.key_set] instead names index keys
+  /// in [index][google.spanner.v1.ReadRequest.index].
   ///
-  ///  If the [partition_token][google.spanner.v1.ReadRequest.partition_token]
-  ///  field is empty, rows are yielded in table primary key order (if
-  ///  [index][google.spanner.v1.ReadRequest.index] is empty) or index key order
-  ///  (if [index][google.spanner.v1.ReadRequest.index] is non-empty).  If the
-  ///  [partition_token][google.spanner.v1.ReadRequest.partition_token] field is
-  ///  not empty, rows will be yielded in an unspecified order.
+  /// If the [partition_token][google.spanner.v1.ReadRequest.partition_token]
+  /// field is empty, rows are yielded in table primary key order (if
+  /// [index][google.spanner.v1.ReadRequest.index] is empty) or index key order
+  /// (if [index][google.spanner.v1.ReadRequest.index] is non-empty). If the
+  /// [partition_token][google.spanner.v1.ReadRequest.partition_token] field
+  /// isn't empty, rows are yielded in an unspecified order.
   ///
-  ///  It is not an error for the `key_set` to name rows that do not
-  ///  exist in the database. Read yields nothing for nonexistent rows.
+  /// It isn't an error for the `key_set` to name rows that don't
+  /// exist in the database. Read yields nothing for nonexistent rows.
   @$pb.TagNumber(6)
-  $9.KeySet get keySet => $_getN(5);
+  $10.KeySet get keySet => $_getN(5);
   @$pb.TagNumber(6)
-  set keySet($9.KeySet v) {
-    setField(6, v);
-  }
-
+  set keySet($10.KeySet value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasKeySet() => $_has(5);
   @$pb.TagNumber(6)
-  void clearKeySet() => clearField(6);
+  void clearKeySet() => $_clearField(6);
   @$pb.TagNumber(6)
-  $9.KeySet ensureKeySet() => $_ensure(5);
+  $10.KeySet ensureKeySet() => $_ensure(5);
 
   /// If greater than zero, only the first `limit` rows are yielded. If `limit`
-  /// is zero, the default is no limit. A limit cannot be specified if
+  /// is zero, the default is no limit. A limit can't be specified if
   /// `partition_token` is set.
   @$pb.TagNumber(8)
   $fixnum.Int64 get limit => $_getI64(6);
   @$pb.TagNumber(8)
-  set limit($fixnum.Int64 v) {
-    $_setInt64(6, v);
-  }
-
+  set limit($fixnum.Int64 value) => $_setInt64(6, value);
   @$pb.TagNumber(8)
   $core.bool hasLimit() => $_has(6);
   @$pb.TagNumber(8)
-  void clearLimit() => clearField(8);
+  void clearLimit() => $_clearField(8);
 
   /// If this request is resuming a previously interrupted read,
   /// `resume_token` should be copied from the last
@@ -3119,43 +2702,34 @@ class ReadRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.List<$core.int> get resumeToken => $_getN(7);
   @$pb.TagNumber(9)
-  set resumeToken($core.List<$core.int> v) {
-    $_setBytes(7, v);
-  }
-
+  set resumeToken($core.List<$core.int> value) => $_setBytes(7, value);
   @$pb.TagNumber(9)
   $core.bool hasResumeToken() => $_has(7);
   @$pb.TagNumber(9)
-  void clearResumeToken() => clearField(9);
+  void clearResumeToken() => $_clearField(9);
 
-  /// If present, results will be restricted to the specified partition
-  /// previously created using PartitionRead().    There must be an exact
+  /// If present, results are restricted to the specified partition
+  /// previously created using `PartitionRead`. There must be an exact
   /// match for the values of fields common to this message and the
   /// PartitionReadRequest message used to create this partition_token.
   @$pb.TagNumber(10)
   $core.List<$core.int> get partitionToken => $_getN(8);
   @$pb.TagNumber(10)
-  set partitionToken($core.List<$core.int> v) {
-    $_setBytes(8, v);
-  }
-
+  set partitionToken($core.List<$core.int> value) => $_setBytes(8, value);
   @$pb.TagNumber(10)
   $core.bool hasPartitionToken() => $_has(8);
   @$pb.TagNumber(10)
-  void clearPartitionToken() => clearField(10);
+  void clearPartitionToken() => $_clearField(10);
 
   /// Common options for this request.
   @$pb.TagNumber(11)
   RequestOptions get requestOptions => $_getN(9);
   @$pb.TagNumber(11)
-  set requestOptions(RequestOptions v) {
-    setField(11, v);
-  }
-
+  set requestOptions(RequestOptions value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasRequestOptions() => $_has(9);
   @$pb.TagNumber(11)
-  void clearRequestOptions() => clearField(11);
+  void clearRequestOptions() => $_clearField(11);
   @$pb.TagNumber(11)
   RequestOptions ensureRequestOptions() => $_ensure(9);
 
@@ -3163,66 +2737,72 @@ class ReadRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   DirectedReadOptions get directedReadOptions => $_getN(10);
   @$pb.TagNumber(14)
-  set directedReadOptions(DirectedReadOptions v) {
-    setField(14, v);
-  }
-
+  set directedReadOptions(DirectedReadOptions value) => $_setField(14, value);
   @$pb.TagNumber(14)
   $core.bool hasDirectedReadOptions() => $_has(10);
   @$pb.TagNumber(14)
-  void clearDirectedReadOptions() => clearField(14);
+  void clearDirectedReadOptions() => $_clearField(14);
   @$pb.TagNumber(14)
   DirectedReadOptions ensureDirectedReadOptions() => $_ensure(10);
 
-  ///  If this is for a partitioned read and this field is set to `true`, the
-  ///  request is executed with Spanner Data Boost independent compute resources.
+  /// If this is for a partitioned read and this field is set to `true`, the
+  /// request is executed with Spanner Data Boost independent compute resources.
   ///
-  ///  If the field is set to `true` but the request does not set
-  ///  `partition_token`, the API returns an `INVALID_ARGUMENT` error.
+  /// If the field is set to `true` but the request doesn't set
+  /// `partition_token`, the API returns an `INVALID_ARGUMENT` error.
   @$pb.TagNumber(15)
   $core.bool get dataBoostEnabled => $_getBF(11);
   @$pb.TagNumber(15)
-  set dataBoostEnabled($core.bool v) {
-    $_setBool(11, v);
-  }
-
+  set dataBoostEnabled($core.bool value) => $_setBool(11, value);
   @$pb.TagNumber(15)
   $core.bool hasDataBoostEnabled() => $_has(11);
   @$pb.TagNumber(15)
-  void clearDataBoostEnabled() => clearField(15);
+  void clearDataBoostEnabled() => $_clearField(15);
 
-  ///  Optional. Order for the returned rows.
+  /// Optional. Order for the returned rows.
   ///
-  ///  By default, Spanner will return result rows in primary key order except for
-  ///  PartitionRead requests. For applications that do not require rows to be
-  ///  returned in primary key (`ORDER_BY_PRIMARY_KEY`) order, setting
-  ///  `ORDER_BY_NO_ORDER` option allows Spanner to optimize row retrieval,
-  ///  resulting in lower latencies in certain cases (e.g. bulk point lookups).
+  /// By default, Spanner returns result rows in primary key order except for
+  /// PartitionRead requests. For applications that don't require rows to be
+  /// returned in primary key (`ORDER_BY_PRIMARY_KEY`) order, setting
+  /// `ORDER_BY_NO_ORDER` option allows Spanner to optimize row retrieval,
+  /// resulting in lower latencies in certain cases (for example, bulk point
+  /// lookups).
   @$pb.TagNumber(16)
   ReadRequest_OrderBy get orderBy => $_getN(12);
   @$pb.TagNumber(16)
-  set orderBy(ReadRequest_OrderBy v) {
-    setField(16, v);
-  }
-
+  set orderBy(ReadRequest_OrderBy value) => $_setField(16, value);
   @$pb.TagNumber(16)
   $core.bool hasOrderBy() => $_has(12);
   @$pb.TagNumber(16)
-  void clearOrderBy() => clearField(16);
+  void clearOrderBy() => $_clearField(16);
 
   /// Optional. Lock Hint for the request, it can only be used with read-write
   /// transactions.
   @$pb.TagNumber(17)
   ReadRequest_LockHint get lockHint => $_getN(13);
   @$pb.TagNumber(17)
-  set lockHint(ReadRequest_LockHint v) {
-    setField(17, v);
-  }
-
+  set lockHint(ReadRequest_LockHint value) => $_setField(17, value);
   @$pb.TagNumber(17)
   $core.bool hasLockHint() => $_has(13);
   @$pb.TagNumber(17)
-  void clearLockHint() => clearField(17);
+  void clearLockHint() => $_clearField(17);
+
+  /// Optional. If present, it makes the Spanner requests location-aware.
+  ///
+  /// It gives the server hints that can be used to route the request
+  /// to an appropriate server, potentially significantly decreasing latency and
+  /// improving throughput. To achieve improved performance, most fields must be
+  /// filled in with accurate values.
+  @$pb.TagNumber(18)
+  $7.RoutingHint get routingHint => $_getN(14);
+  @$pb.TagNumber(18)
+  set routingHint($7.RoutingHint value) => $_setField(18, value);
+  @$pb.TagNumber(18)
+  $core.bool hasRoutingHint() => $_has(14);
+  @$pb.TagNumber(18)
+  void clearRoutingHint() => $_clearField(18);
+  @$pb.TagNumber(18)
+  $7.RoutingHint ensureRoutingHint() => $_ensure(14);
 }
 
 /// The request for
@@ -3232,30 +2812,24 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
     $core.String? session,
     $3.TransactionOptions? options,
     RequestOptions? requestOptions,
-    $10.Mutation? mutationKey,
+    $11.Mutation? mutationKey,
   }) {
-    final $result = create();
-    if (session != null) {
-      $result.session = session;
-    }
-    if (options != null) {
-      $result.options = options;
-    }
-    if (requestOptions != null) {
-      $result.requestOptions = requestOptions;
-    }
-    if (mutationKey != null) {
-      $result.mutationKey = mutationKey;
-    }
-    return $result;
+    final result = create();
+    if (session != null) result.session = session;
+    if (options != null) result.options = options;
+    if (requestOptions != null) result.requestOptions = requestOptions;
+    if (mutationKey != null) result.mutationKey = mutationKey;
+    return result;
   }
-  BeginTransactionRequest._() : super();
-  factory BeginTransactionRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BeginTransactionRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BeginTransactionRequest._();
+
+  factory BeginTransactionRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BeginTransactionRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BeginTransactionRequest',
@@ -3267,30 +2841,25 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
         subBuilder: $3.TransactionOptions.create)
     ..aOM<RequestOptions>(3, _omitFieldNames ? '' : 'requestOptions',
         subBuilder: RequestOptions.create)
-    ..aOM<$10.Mutation>(4, _omitFieldNames ? '' : 'mutationKey',
-        subBuilder: $10.Mutation.create)
+    ..aOM<$11.Mutation>(4, _omitFieldNames ? '' : 'mutationKey',
+        subBuilder: $11.Mutation.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BeginTransactionRequest clone() =>
-      BeginTransactionRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BeginTransactionRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BeginTransactionRequest copyWith(
           void Function(BeginTransactionRequest) updates) =>
       super.copyWith((message) => updates(message as BeginTransactionRequest))
           as BeginTransactionRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BeginTransactionRequest create() => BeginTransactionRequest._();
+  @$core.override
   BeginTransactionRequest createEmptyInstance() => create();
-  static $pb.PbList<BeginTransactionRequest> createRepeated() =>
-      $pb.PbList<BeginTransactionRequest>();
   @$core.pragma('dart2js:noInline')
   static BeginTransactionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BeginTransactionRequest>(create);
@@ -3300,68 +2869,54 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get session => $_getSZ(0);
   @$pb.TagNumber(1)
-  set session($core.String v) {
-    $_setString(0, v);
-  }
-
+  set session($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSession() => clearField(1);
+  void clearSession() => $_clearField(1);
 
   /// Required. Options for the new transaction.
   @$pb.TagNumber(2)
   $3.TransactionOptions get options => $_getN(1);
   @$pb.TagNumber(2)
-  set options($3.TransactionOptions v) {
-    setField(2, v);
-  }
-
+  set options($3.TransactionOptions value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOptions() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOptions() => clearField(2);
+  void clearOptions() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.TransactionOptions ensureOptions() => $_ensure(1);
 
   /// Common options for this request.
   /// Priority is ignored for this request. Setting the priority in this
-  /// request_options struct will not do anything. To set the priority for a
+  /// `request_options` struct doesn't do anything. To set the priority for a
   /// transaction, set it on the reads and writes that are part of this
   /// transaction instead.
   @$pb.TagNumber(3)
   RequestOptions get requestOptions => $_getN(2);
   @$pb.TagNumber(3)
-  set requestOptions(RequestOptions v) {
-    setField(3, v);
-  }
-
+  set requestOptions(RequestOptions value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasRequestOptions() => $_has(2);
   @$pb.TagNumber(3)
-  void clearRequestOptions() => clearField(3);
+  void clearRequestOptions() => $_clearField(3);
   @$pb.TagNumber(3)
   RequestOptions ensureRequestOptions() => $_ensure(2);
 
   /// Optional. Required for read-write transactions on a multiplexed session
-  /// that commit mutations but do not perform any reads or queries. Clients
-  /// should randomly select one of the mutations from the mutation set and send
-  /// it as a part of this request.
-  /// This feature is not yet supported and will result in an UNIMPLEMENTED
-  /// error.
+  /// that commit mutations but don't perform any reads or queries. You must
+  /// randomly select one of the mutations from the mutation set and send it as a
+  /// part of this request.
   @$pb.TagNumber(4)
-  $10.Mutation get mutationKey => $_getN(3);
+  $11.Mutation get mutationKey => $_getN(3);
   @$pb.TagNumber(4)
-  set mutationKey($10.Mutation v) {
-    setField(4, v);
-  }
-
+  set mutationKey($11.Mutation value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasMutationKey() => $_has(3);
   @$pb.TagNumber(4)
-  void clearMutationKey() => clearField(4);
+  void clearMutationKey() => $_clearField(4);
   @$pb.TagNumber(4)
-  $10.Mutation ensureMutationKey() => $_ensure(3);
+  $11.Mutation ensureMutationKey() => $_ensure(3);
 }
 
 enum CommitRequest_Transaction { transactionId, singleUseTransaction, notSet }
@@ -3372,46 +2927,33 @@ class CommitRequest extends $pb.GeneratedMessage {
     $core.String? session,
     $core.List<$core.int>? transactionId,
     $3.TransactionOptions? singleUseTransaction,
-    $core.Iterable<$10.Mutation>? mutations,
+    $core.Iterable<$11.Mutation>? mutations,
     $core.bool? returnCommitStats,
     RequestOptions? requestOptions,
-    $11.Duration? maxCommitDelay,
+    $12.Duration? maxCommitDelay,
     $3.MultiplexedSessionPrecommitToken? precommitToken,
   }) {
-    final $result = create();
-    if (session != null) {
-      $result.session = session;
-    }
-    if (transactionId != null) {
-      $result.transactionId = transactionId;
-    }
-    if (singleUseTransaction != null) {
-      $result.singleUseTransaction = singleUseTransaction;
-    }
-    if (mutations != null) {
-      $result.mutations.addAll(mutations);
-    }
-    if (returnCommitStats != null) {
-      $result.returnCommitStats = returnCommitStats;
-    }
-    if (requestOptions != null) {
-      $result.requestOptions = requestOptions;
-    }
-    if (maxCommitDelay != null) {
-      $result.maxCommitDelay = maxCommitDelay;
-    }
-    if (precommitToken != null) {
-      $result.precommitToken = precommitToken;
-    }
-    return $result;
+    final result = create();
+    if (session != null) result.session = session;
+    if (transactionId != null) result.transactionId = transactionId;
+    if (singleUseTransaction != null)
+      result.singleUseTransaction = singleUseTransaction;
+    if (mutations != null) result.mutations.addAll(mutations);
+    if (returnCommitStats != null) result.returnCommitStats = returnCommitStats;
+    if (requestOptions != null) result.requestOptions = requestOptions;
+    if (maxCommitDelay != null) result.maxCommitDelay = maxCommitDelay;
+    if (precommitToken != null) result.precommitToken = precommitToken;
+    return result;
   }
-  CommitRequest._() : super();
-  factory CommitRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CommitRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CommitRequest._();
+
+  factory CommitRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CommitRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, CommitRequest_Transaction>
       _CommitRequest_TransactionByTag = {
@@ -3431,92 +2973,82 @@ class CommitRequest extends $pb.GeneratedMessage {
     ..aOM<$3.TransactionOptions>(
         3, _omitFieldNames ? '' : 'singleUseTransaction',
         subBuilder: $3.TransactionOptions.create)
-    ..pc<$10.Mutation>(
-        4, _omitFieldNames ? '' : 'mutations', $pb.PbFieldType.PM,
-        subBuilder: $10.Mutation.create)
+    ..pPM<$11.Mutation>(4, _omitFieldNames ? '' : 'mutations',
+        subBuilder: $11.Mutation.create)
     ..aOB(5, _omitFieldNames ? '' : 'returnCommitStats')
     ..aOM<RequestOptions>(6, _omitFieldNames ? '' : 'requestOptions',
         subBuilder: RequestOptions.create)
-    ..aOM<$11.Duration>(8, _omitFieldNames ? '' : 'maxCommitDelay',
-        subBuilder: $11.Duration.create)
+    ..aOM<$12.Duration>(8, _omitFieldNames ? '' : 'maxCommitDelay',
+        subBuilder: $12.Duration.create)
     ..aOM<$3.MultiplexedSessionPrecommitToken>(
         9, _omitFieldNames ? '' : 'precommitToken',
         subBuilder: $3.MultiplexedSessionPrecommitToken.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CommitRequest clone() => CommitRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CommitRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CommitRequest copyWith(void Function(CommitRequest) updates) =>
       super.copyWith((message) => updates(message as CommitRequest))
           as CommitRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CommitRequest create() => CommitRequest._();
+  @$core.override
   CommitRequest createEmptyInstance() => create();
-  static $pb.PbList<CommitRequest> createRepeated() =>
-      $pb.PbList<CommitRequest>();
   @$core.pragma('dart2js:noInline')
   static CommitRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CommitRequest>(create);
   static CommitRequest? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   CommitRequest_Transaction whichTransaction() =>
       _CommitRequest_TransactionByTag[$_whichOneof(0)]!;
-  void clearTransaction() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearTransaction() => $_clearField($_whichOneof(0));
 
   /// Required. The session in which the transaction to be committed is running.
   @$pb.TagNumber(1)
   $core.String get session => $_getSZ(0);
   @$pb.TagNumber(1)
-  set session($core.String v) {
-    $_setString(0, v);
-  }
-
+  set session($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSession() => clearField(1);
+  void clearSession() => $_clearField(1);
 
   /// Commit a previously-started transaction.
   @$pb.TagNumber(2)
   $core.List<$core.int> get transactionId => $_getN(1);
   @$pb.TagNumber(2)
-  set transactionId($core.List<$core.int> v) {
-    $_setBytes(1, v);
-  }
-
+  set transactionId($core.List<$core.int> value) => $_setBytes(1, value);
   @$pb.TagNumber(2)
   $core.bool hasTransactionId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTransactionId() => clearField(2);
+  void clearTransactionId() => $_clearField(2);
 
   /// Execute mutations in a temporary transaction. Note that unlike
   /// commit of a previously-started transaction, commit with a
   /// temporary transaction is non-idempotent. That is, if the
   /// `CommitRequest` is sent to Cloud Spanner more than once (for
   /// instance, due to retries in the application, or in the
-  /// transport library), it is possible that the mutations are
+  /// transport library), it's possible that the mutations are
   /// executed more than once. If this is undesirable, use
   /// [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction] and
   /// [Commit][google.spanner.v1.Spanner.Commit] instead.
   @$pb.TagNumber(3)
   $3.TransactionOptions get singleUseTransaction => $_getN(2);
   @$pb.TagNumber(3)
-  set singleUseTransaction($3.TransactionOptions v) {
-    setField(3, v);
-  }
-
+  set singleUseTransaction($3.TransactionOptions value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasSingleUseTransaction() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSingleUseTransaction() => clearField(3);
+  void clearSingleUseTransaction() => $_clearField(3);
   @$pb.TagNumber(3)
   $3.TransactionOptions ensureSingleUseTransaction() => $_ensure(2);
 
@@ -3524,74 +3056,61 @@ class CommitRequest extends $pb.GeneratedMessage {
   /// mutations are applied atomically, in the order they appear in
   /// this list.
   @$pb.TagNumber(4)
-  $core.List<$10.Mutation> get mutations => $_getList(3);
+  $pb.PbList<$11.Mutation> get mutations => $_getList(3);
 
-  /// If `true`, then statistics related to the transaction will be included in
+  /// If `true`, then statistics related to the transaction is included in
   /// the [CommitResponse][google.spanner.v1.CommitResponse.commit_stats].
   /// Default value is `false`.
   @$pb.TagNumber(5)
   $core.bool get returnCommitStats => $_getBF(4);
   @$pb.TagNumber(5)
-  set returnCommitStats($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set returnCommitStats($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasReturnCommitStats() => $_has(4);
   @$pb.TagNumber(5)
-  void clearReturnCommitStats() => clearField(5);
+  void clearReturnCommitStats() => $_clearField(5);
 
   /// Common options for this request.
   @$pb.TagNumber(6)
   RequestOptions get requestOptions => $_getN(5);
   @$pb.TagNumber(6)
-  set requestOptions(RequestOptions v) {
-    setField(6, v);
-  }
-
+  set requestOptions(RequestOptions value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasRequestOptions() => $_has(5);
   @$pb.TagNumber(6)
-  void clearRequestOptions() => clearField(6);
+  void clearRequestOptions() => $_clearField(6);
   @$pb.TagNumber(6)
   RequestOptions ensureRequestOptions() => $_ensure(5);
 
-  /// Optional. The amount of latency this request is willing to incur in order
-  /// to improve throughput. If this field is not set, Spanner assumes requests
-  /// are relatively latency sensitive and automatically determines an
-  /// appropriate delay time. You can specify a batching delay value between 0
-  /// and 500 ms.
+  /// Optional. The amount of latency this request is configured to incur in
+  /// order to improve throughput. If this field isn't set, Spanner assumes
+  /// requests are relatively latency sensitive and automatically determines an
+  /// appropriate delay time. You can specify a commit delay value between 0 and
+  /// 500 ms.
   @$pb.TagNumber(8)
-  $11.Duration get maxCommitDelay => $_getN(6);
+  $12.Duration get maxCommitDelay => $_getN(6);
   @$pb.TagNumber(8)
-  set maxCommitDelay($11.Duration v) {
-    setField(8, v);
-  }
-
+  set maxCommitDelay($12.Duration value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasMaxCommitDelay() => $_has(6);
   @$pb.TagNumber(8)
-  void clearMaxCommitDelay() => clearField(8);
+  void clearMaxCommitDelay() => $_clearField(8);
   @$pb.TagNumber(8)
-  $11.Duration ensureMaxCommitDelay() => $_ensure(6);
+  $12.Duration ensureMaxCommitDelay() => $_ensure(6);
 
   /// Optional. If the read-write transaction was executed on a multiplexed
-  /// session, the precommit token with the highest sequence number received in
-  /// this transaction attempt, should be included here. Failing to do so will
-  /// result in a FailedPrecondition error.
-  /// This feature is not yet supported and will result in an UNIMPLEMENTED
-  /// error.
+  /// session, then you must include the precommit token with the highest
+  /// sequence number received in this transaction attempt. Failing to do so
+  /// results in a `FailedPrecondition` error.
   @$pb.TagNumber(9)
   $3.MultiplexedSessionPrecommitToken get precommitToken => $_getN(7);
   @$pb.TagNumber(9)
-  set precommitToken($3.MultiplexedSessionPrecommitToken v) {
-    setField(9, v);
-  }
-
+  set precommitToken($3.MultiplexedSessionPrecommitToken value) =>
+      $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasPrecommitToken() => $_has(7);
   @$pb.TagNumber(9)
-  void clearPrecommitToken() => clearField(9);
+  void clearPrecommitToken() => $_clearField(9);
   @$pb.TagNumber(9)
   $3.MultiplexedSessionPrecommitToken ensurePrecommitToken() => $_ensure(7);
 }
@@ -3602,22 +3121,20 @@ class RollbackRequest extends $pb.GeneratedMessage {
     $core.String? session,
     $core.List<$core.int>? transactionId,
   }) {
-    final $result = create();
-    if (session != null) {
-      $result.session = session;
-    }
-    if (transactionId != null) {
-      $result.transactionId = transactionId;
-    }
-    return $result;
+    final result = create();
+    if (session != null) result.session = session;
+    if (transactionId != null) result.transactionId = transactionId;
+    return result;
   }
-  RollbackRequest._() : super();
-  factory RollbackRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RollbackRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RollbackRequest._();
+
+  factory RollbackRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RollbackRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RollbackRequest',
@@ -3629,24 +3146,20 @@ class RollbackRequest extends $pb.GeneratedMessage {
         2, _omitFieldNames ? '' : 'transactionId', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RollbackRequest clone() => RollbackRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RollbackRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RollbackRequest copyWith(void Function(RollbackRequest) updates) =>
       super.copyWith((message) => updates(message as RollbackRequest))
           as RollbackRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RollbackRequest create() => RollbackRequest._();
+  @$core.override
   RollbackRequest createEmptyInstance() => create();
-  static $pb.PbList<RollbackRequest> createRepeated() =>
-      $pb.PbList<RollbackRequest>();
   @$core.pragma('dart2js:noInline')
   static RollbackRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RollbackRequest>(create);
@@ -3656,27 +3169,21 @@ class RollbackRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get session => $_getSZ(0);
   @$pb.TagNumber(1)
-  set session($core.String v) {
-    $_setString(0, v);
-  }
-
+  set session($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSession() => clearField(1);
+  void clearSession() => $_clearField(1);
 
   /// Required. The transaction to roll back.
   @$pb.TagNumber(2)
   $core.List<$core.int> get transactionId => $_getN(1);
   @$pb.TagNumber(2)
-  set transactionId($core.List<$core.int> v) {
-    $_setBytes(1, v);
-  }
-
+  set transactionId($core.List<$core.int> value) => $_setBytes(1, value);
   @$pb.TagNumber(2)
   $core.bool hasTransactionId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTransactionId() => clearField(2);
+  void clearTransactionId() => $_clearField(2);
 }
 
 /// A group of mutations to be committed together. Related mutations should be
@@ -3684,54 +3191,48 @@ class RollbackRequest extends $pb.GeneratedMessage {
 /// primary key prefix in both parent and child tables are related.
 class BatchWriteRequest_MutationGroup extends $pb.GeneratedMessage {
   factory BatchWriteRequest_MutationGroup({
-    $core.Iterable<$10.Mutation>? mutations,
+    $core.Iterable<$11.Mutation>? mutations,
   }) {
-    final $result = create();
-    if (mutations != null) {
-      $result.mutations.addAll(mutations);
-    }
-    return $result;
+    final result = create();
+    if (mutations != null) result.mutations.addAll(mutations);
+    return result;
   }
-  BatchWriteRequest_MutationGroup._() : super();
-  factory BatchWriteRequest_MutationGroup.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchWriteRequest_MutationGroup.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchWriteRequest_MutationGroup._();
+
+  factory BatchWriteRequest_MutationGroup.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchWriteRequest_MutationGroup.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchWriteRequest.MutationGroup',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..pc<$10.Mutation>(
-        1, _omitFieldNames ? '' : 'mutations', $pb.PbFieldType.PM,
-        subBuilder: $10.Mutation.create)
+    ..pPM<$11.Mutation>(1, _omitFieldNames ? '' : 'mutations',
+        subBuilder: $11.Mutation.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchWriteRequest_MutationGroup clone() =>
-      BatchWriteRequest_MutationGroup()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchWriteRequest_MutationGroup clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchWriteRequest_MutationGroup copyWith(
           void Function(BatchWriteRequest_MutationGroup) updates) =>
       super.copyWith(
               (message) => updates(message as BatchWriteRequest_MutationGroup))
           as BatchWriteRequest_MutationGroup;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchWriteRequest_MutationGroup create() =>
       BatchWriteRequest_MutationGroup._();
+  @$core.override
   BatchWriteRequest_MutationGroup createEmptyInstance() => create();
-  static $pb.PbList<BatchWriteRequest_MutationGroup> createRepeated() =>
-      $pb.PbList<BatchWriteRequest_MutationGroup>();
   @$core.pragma('dart2js:noInline')
   static BatchWriteRequest_MutationGroup getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchWriteRequest_MutationGroup>(
@@ -3740,7 +3241,7 @@ class BatchWriteRequest_MutationGroup extends $pb.GeneratedMessage {
 
   /// Required. The mutations in this group.
   @$pb.TagNumber(1)
-  $core.List<$10.Mutation> get mutations => $_getList(0);
+  $pb.PbList<$11.Mutation> get mutations => $_getList(0);
 }
 
 /// The request for [BatchWrite][google.spanner.v1.Spanner.BatchWrite].
@@ -3751,28 +3252,23 @@ class BatchWriteRequest extends $pb.GeneratedMessage {
     $core.Iterable<BatchWriteRequest_MutationGroup>? mutationGroups,
     $core.bool? excludeTxnFromChangeStreams,
   }) {
-    final $result = create();
-    if (session != null) {
-      $result.session = session;
-    }
-    if (requestOptions != null) {
-      $result.requestOptions = requestOptions;
-    }
-    if (mutationGroups != null) {
-      $result.mutationGroups.addAll(mutationGroups);
-    }
-    if (excludeTxnFromChangeStreams != null) {
-      $result.excludeTxnFromChangeStreams = excludeTxnFromChangeStreams;
-    }
-    return $result;
+    final result = create();
+    if (session != null) result.session = session;
+    if (requestOptions != null) result.requestOptions = requestOptions;
+    if (mutationGroups != null) result.mutationGroups.addAll(mutationGroups);
+    if (excludeTxnFromChangeStreams != null)
+      result.excludeTxnFromChangeStreams = excludeTxnFromChangeStreams;
+    return result;
   }
-  BatchWriteRequest._() : super();
-  factory BatchWriteRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchWriteRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchWriteRequest._();
+
+  factory BatchWriteRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchWriteRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchWriteRequest',
@@ -3782,30 +3278,26 @@ class BatchWriteRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'session')
     ..aOM<RequestOptions>(3, _omitFieldNames ? '' : 'requestOptions',
         subBuilder: RequestOptions.create)
-    ..pc<BatchWriteRequest_MutationGroup>(
-        4, _omitFieldNames ? '' : 'mutationGroups', $pb.PbFieldType.PM,
+    ..pPM<BatchWriteRequest_MutationGroup>(
+        4, _omitFieldNames ? '' : 'mutationGroups',
         subBuilder: BatchWriteRequest_MutationGroup.create)
     ..aOB(5, _omitFieldNames ? '' : 'excludeTxnFromChangeStreams')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchWriteRequest clone() => BatchWriteRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchWriteRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchWriteRequest copyWith(void Function(BatchWriteRequest) updates) =>
       super.copyWith((message) => updates(message as BatchWriteRequest))
           as BatchWriteRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchWriteRequest create() => BatchWriteRequest._();
+  @$core.override
   BatchWriteRequest createEmptyInstance() => create();
-  static $pb.PbList<BatchWriteRequest> createRepeated() =>
-      $pb.PbList<BatchWriteRequest>();
   @$core.pragma('dart2js:noInline')
   static BatchWriteRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchWriteRequest>(create);
@@ -3815,86 +3307,64 @@ class BatchWriteRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get session => $_getSZ(0);
   @$pb.TagNumber(1)
-  set session($core.String v) {
-    $_setString(0, v);
-  }
-
+  set session($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSession() => clearField(1);
+  void clearSession() => $_clearField(1);
 
   /// Common options for this request.
   @$pb.TagNumber(3)
   RequestOptions get requestOptions => $_getN(1);
   @$pb.TagNumber(3)
-  set requestOptions(RequestOptions v) {
-    setField(3, v);
-  }
-
+  set requestOptions(RequestOptions value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasRequestOptions() => $_has(1);
   @$pb.TagNumber(3)
-  void clearRequestOptions() => clearField(3);
+  void clearRequestOptions() => $_clearField(3);
   @$pb.TagNumber(3)
   RequestOptions ensureRequestOptions() => $_ensure(1);
 
   /// Required. The groups of mutations to be applied.
   @$pb.TagNumber(4)
-  $core.List<BatchWriteRequest_MutationGroup> get mutationGroups =>
+  $pb.PbList<BatchWriteRequest_MutationGroup> get mutationGroups =>
       $_getList(2);
 
-  ///  Optional. When `exclude_txn_from_change_streams` is set to `true`:
-  ///   * Mutations from all transactions in this batch write operation will not
-  ///   be recorded in change streams with DDL option `allow_txn_exclusion=true`
-  ///   that are tracking columns modified by these transactions.
-  ///   * Mutations from all transactions in this batch write operation will be
-  ///   recorded in change streams with DDL option `allow_txn_exclusion=false or
-  ///   not set` that are tracking columns modified by these transactions.
-  ///
-  ///  When `exclude_txn_from_change_streams` is set to `false` or not set,
-  ///  mutations from all transactions in this batch write operation will be
-  ///  recorded in all change streams that are tracking columns modified by these
-  ///  transactions.
+  /// Optional. If you don't set the `exclude_txn_from_change_streams` option or
+  /// if it's set to `false`, then any change streams monitoring columns modified
+  /// by transactions will capture the updates made within that transaction.
   @$pb.TagNumber(5)
   $core.bool get excludeTxnFromChangeStreams => $_getBF(3);
   @$pb.TagNumber(5)
-  set excludeTxnFromChangeStreams($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set excludeTxnFromChangeStreams($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(5)
   $core.bool hasExcludeTxnFromChangeStreams() => $_has(3);
   @$pb.TagNumber(5)
-  void clearExcludeTxnFromChangeStreams() => clearField(5);
+  void clearExcludeTxnFromChangeStreams() => $_clearField(5);
 }
 
 /// The result of applying a batch of mutations.
 class BatchWriteResponse extends $pb.GeneratedMessage {
   factory BatchWriteResponse({
     $core.Iterable<$core.int>? indexes,
-    $8.Status? status,
+    $9.Status? status,
     $5.Timestamp? commitTimestamp,
   }) {
-    final $result = create();
-    if (indexes != null) {
-      $result.indexes.addAll(indexes);
-    }
-    if (status != null) {
-      $result.status = status;
-    }
-    if (commitTimestamp != null) {
-      $result.commitTimestamp = commitTimestamp;
-    }
-    return $result;
+    final result = create();
+    if (indexes != null) result.indexes.addAll(indexes);
+    if (status != null) result.status = status;
+    if (commitTimestamp != null) result.commitTimestamp = commitTimestamp;
+    return result;
   }
-  BatchWriteResponse._() : super();
-  factory BatchWriteResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchWriteResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchWriteResponse._();
+
+  factory BatchWriteResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchWriteResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchWriteResponse',
@@ -3902,30 +3372,26 @@ class BatchWriteResponse extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
     ..p<$core.int>(1, _omitFieldNames ? '' : 'indexes', $pb.PbFieldType.K3)
-    ..aOM<$8.Status>(2, _omitFieldNames ? '' : 'status',
-        subBuilder: $8.Status.create)
+    ..aOM<$9.Status>(2, _omitFieldNames ? '' : 'status',
+        subBuilder: $9.Status.create)
     ..aOM<$5.Timestamp>(3, _omitFieldNames ? '' : 'commitTimestamp',
         subBuilder: $5.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchWriteResponse clone() => BatchWriteResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchWriteResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchWriteResponse copyWith(void Function(BatchWriteResponse) updates) =>
       super.copyWith((message) => updates(message as BatchWriteResponse))
           as BatchWriteResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchWriteResponse create() => BatchWriteResponse._();
+  @$core.override
   BatchWriteResponse createEmptyInstance() => create();
-  static $pb.PbList<BatchWriteResponse> createRepeated() =>
-      $pb.PbList<BatchWriteResponse>();
   @$core.pragma('dart2js:noInline')
   static BatchWriteResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchWriteResponse>(create);
@@ -3934,40 +3400,35 @@ class BatchWriteResponse extends $pb.GeneratedMessage {
   /// The mutation groups applied in this batch. The values index into the
   /// `mutation_groups` field in the corresponding `BatchWriteRequest`.
   @$pb.TagNumber(1)
-  $core.List<$core.int> get indexes => $_getList(0);
+  $pb.PbList<$core.int> get indexes => $_getList(0);
 
   /// An `OK` status indicates success. Any other status indicates a failure.
   @$pb.TagNumber(2)
-  $8.Status get status => $_getN(1);
+  $9.Status get status => $_getN(1);
   @$pb.TagNumber(2)
-  set status($8.Status v) {
-    setField(2, v);
-  }
-
+  set status($9.Status value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasStatus() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStatus() => clearField(2);
+  void clearStatus() => $_clearField(2);
   @$pb.TagNumber(2)
-  $8.Status ensureStatus() => $_ensure(1);
+  $9.Status ensureStatus() => $_ensure(1);
 
   /// The commit timestamp of the transaction that applied this batch.
   /// Present if `status` is `OK`, absent otherwise.
   @$pb.TagNumber(3)
   $5.Timestamp get commitTimestamp => $_getN(2);
   @$pb.TagNumber(3)
-  set commitTimestamp($5.Timestamp v) {
-    setField(3, v);
-  }
-
+  set commitTimestamp($5.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCommitTimestamp() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCommitTimestamp() => clearField(3);
+  void clearCommitTimestamp() => $_clearField(3);
   @$pb.TagNumber(3)
   $5.Timestamp ensureCommitTimestamp() => $_ensure(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

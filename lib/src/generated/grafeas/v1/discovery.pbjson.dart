@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: grafeas/v1/discovery.proto
-//
-// @dart = 2.12
+// Generated from grafeas/v1/discovery.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -111,11 +113,20 @@ const DiscoveryOccurrence$json = {
       '6': '.grafeas.v1.DiscoveryOccurrence.VulnerabilityAttestation',
       '10': 'vulnerabilityAttestation'
     },
+    {
+      '1': 'files',
+      '3': 11,
+      '4': 3,
+      '5': 11,
+      '6': '.grafeas.v1.DiscoveryOccurrence.File',
+      '10': 'files'
+    },
   ],
   '3': [
     DiscoveryOccurrence_AnalysisCompleted$json,
     DiscoveryOccurrence_SBOMStatus$json,
-    DiscoveryOccurrence_VulnerabilityAttestation$json
+    DiscoveryOccurrence_VulnerabilityAttestation$json,
+    DiscoveryOccurrence_File$json
   ],
   '4': [
     DiscoveryOccurrence_ContinuousAnalysis$json,
@@ -198,6 +209,33 @@ const DiscoveryOccurrence_VulnerabilityAttestation_VulnerabilityAttestationState
 };
 
 @$core.Deprecated('Use discoveryOccurrenceDescriptor instead')
+const DiscoveryOccurrence_File$json = {
+  '1': 'File',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'digest',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.grafeas.v1.DiscoveryOccurrence.File.DigestEntry',
+      '10': 'digest'
+    },
+  ],
+  '3': [DiscoveryOccurrence_File_DigestEntry$json],
+};
+
+@$core.Deprecated('Use discoveryOccurrenceDescriptor instead')
+const DiscoveryOccurrence_File_DigestEntry$json = {
+  '1': 'DigestEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+@$core.Deprecated('Use discoveryOccurrenceDescriptor instead')
 const DiscoveryOccurrence_ContinuousAnalysis$json = {
   '1': 'ContinuousAnalysis',
   '2': [
@@ -238,17 +276,21 @@ final $typed_data.Uint8List discoveryOccurrenceDescriptor = $convert.base64Decod
     'EoCzIqLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5jZS5TQk9NU3RhdHVzUgpzYm9tU3Rh'
     'dHVzEnUKGXZ1bG5lcmFiaWxpdHlfYXR0ZXN0YXRpb24YCiABKAsyOC5ncmFmZWFzLnYxLkRpc2'
     'NvdmVyeU9jY3VycmVuY2UuVnVsbmVyYWJpbGl0eUF0dGVzdGF0aW9uUhh2dWxuZXJhYmlsaXR5'
-    'QXR0ZXN0YXRpb24aOAoRQW5hbHlzaXNDb21wbGV0ZWQSIwoNYW5hbHlzaXNfdHlwZRgBIAMoCV'
-    'IMYW5hbHlzaXNUeXBlGrsBCgpTQk9NU3RhdHVzElMKCnNib21fc3RhdGUYASABKA4yNC5ncmFm'
-    'ZWFzLnYxLkRpc2NvdmVyeU9jY3VycmVuY2UuU0JPTVN0YXR1cy5TQk9NU3RhdGVSCXNib21TdG'
-    'F0ZRIUCgVlcnJvchgCIAEoCVIFZXJyb3IiQgoJU0JPTVN0YXRlEhoKFlNCT01fU1RBVEVfVU5T'
-    'UEVDSUZJRUQQABILCgdQRU5ESU5HEAESDAoIQ09NUExFVEUQAhrSAgoYVnVsbmVyYWJpbGl0eU'
-    'F0dGVzdGF0aW9uEkYKEWxhc3RfYXR0ZW1wdF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVm'
-    'LlRpbWVzdGFtcFIPbGFzdEF0dGVtcHRUaW1lEmwKBXN0YXRlGAIgASgOMlYuZ3JhZmVhcy52MS'
-    '5EaXNjb3ZlcnlPY2N1cnJlbmNlLlZ1bG5lcmFiaWxpdHlBdHRlc3RhdGlvbi5WdWxuZXJhYmls'
-    'aXR5QXR0ZXN0YXRpb25TdGF0ZVIFc3RhdGUSFAoFZXJyb3IYAyABKAlSBWVycm9yImoKHVZ1bG'
-    '5lcmFiaWxpdHlBdHRlc3RhdGlvblN0YXRlEi8KK1ZVTE5FUkFCSUxJVFlfQVRURVNUQVRJT05f'
-    'U1RBVEVfVU5TUEVDSUZJRUQQABILCgdTVUNDRVNTEAESCwoHRkFJTFVSRRACIlMKEkNvbnRpbn'
+    'QXR0ZXN0YXRpb24SOgoFZmlsZXMYCyADKAsyJC5ncmFmZWFzLnYxLkRpc2NvdmVyeU9jY3Vycm'
+    'VuY2UuRmlsZVIFZmlsZXMaOAoRQW5hbHlzaXNDb21wbGV0ZWQSIwoNYW5hbHlzaXNfdHlwZRgB'
+    'IAMoCVIMYW5hbHlzaXNUeXBlGrsBCgpTQk9NU3RhdHVzElMKCnNib21fc3RhdGUYASABKA4yNC'
+    '5ncmFmZWFzLnYxLkRpc2NvdmVyeU9jY3VycmVuY2UuU0JPTVN0YXR1cy5TQk9NU3RhdGVSCXNi'
+    'b21TdGF0ZRIUCgVlcnJvchgCIAEoCVIFZXJyb3IiQgoJU0JPTVN0YXRlEhoKFlNCT01fU1RBVE'
+    'VfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESDAoIQ09NUExFVEUQAhrSAgoYVnVsbmVyYWJp'
+    'bGl0eUF0dGVzdGF0aW9uEkYKEWxhc3RfYXR0ZW1wdF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3'
+    'RvYnVmLlRpbWVzdGFtcFIPbGFzdEF0dGVtcHRUaW1lEmwKBXN0YXRlGAIgASgOMlYuZ3JhZmVh'
+    'cy52MS5EaXNjb3ZlcnlPY2N1cnJlbmNlLlZ1bG5lcmFiaWxpdHlBdHRlc3RhdGlvbi5WdWxuZX'
+    'JhYmlsaXR5QXR0ZXN0YXRpb25TdGF0ZVIFc3RhdGUSFAoFZXJyb3IYAyABKAlSBWVycm9yImoK'
+    'HVZ1bG5lcmFiaWxpdHlBdHRlc3RhdGlvblN0YXRlEi8KK1ZVTE5FUkFCSUxJVFlfQVRURVNUQV'
+    'RJT05fU1RBVEVfVU5TUEVDSUZJRUQQABILCgdTVUNDRVNTEAESCwoHRkFJTFVSRRACGp8BCgRG'
+    'aWxlEhIKBG5hbWUYASABKAlSBG5hbWUSSAoGZGlnZXN0GAIgAygLMjAuZ3JhZmVhcy52MS5EaX'
+    'Njb3ZlcnlPY2N1cnJlbmNlLkZpbGUuRGlnZXN0RW50cnlSBmRpZ2VzdBo5CgtEaWdlc3RFbnRy'
+    'eRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBIlMKEkNvbnRpbn'
     'VvdXNBbmFseXNpcxIjCh9DT05USU5VT1VTX0FOQUxZU0lTX1VOU1BFQ0lGSUVEEAASCgoGQUNU'
     'SVZFEAESDAoISU5BQ1RJVkUQAiKjAQoOQW5hbHlzaXNTdGF0dXMSHwobQU5BTFlTSVNfU1RBVF'
     'VTX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgwKCFNDQU5OSU5HEAISFAoQRklOSVNIRURf'

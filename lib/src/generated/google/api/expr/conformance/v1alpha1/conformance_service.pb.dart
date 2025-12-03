@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/api/expr/conformance/v1alpha1/conformance_service.proto
-//
-// @dart = 2.12
+// Generated from google/api/expr/conformance/v1alpha1/conformance_service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -20,6 +21,8 @@ import '../../v1alpha1/eval.pb.dart' as $4;
 import '../../v1alpha1/syntax.pb.dart' as $1;
 import 'conformance_service.pbenum.dart';
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 export 'conformance_service.pbenum.dart';
 
 /// Request message for the Parse method.
@@ -30,28 +33,22 @@ class ParseRequest extends $pb.GeneratedMessage {
     $core.String? sourceLocation,
     $core.bool? disableMacros,
   }) {
-    final $result = create();
-    if (celSource != null) {
-      $result.celSource = celSource;
-    }
-    if (syntaxVersion != null) {
-      $result.syntaxVersion = syntaxVersion;
-    }
-    if (sourceLocation != null) {
-      $result.sourceLocation = sourceLocation;
-    }
-    if (disableMacros != null) {
-      $result.disableMacros = disableMacros;
-    }
-    return $result;
+    final result = create();
+    if (celSource != null) result.celSource = celSource;
+    if (syntaxVersion != null) result.syntaxVersion = syntaxVersion;
+    if (sourceLocation != null) result.sourceLocation = sourceLocation;
+    if (disableMacros != null) result.disableMacros = disableMacros;
+    return result;
   }
-  ParseRequest._() : super();
-  factory ParseRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ParseRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ParseRequest._();
+
+  factory ParseRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ParseRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ParseRequest',
@@ -64,24 +61,20 @@ class ParseRequest extends $pb.GeneratedMessage {
     ..aOB(4, _omitFieldNames ? '' : 'disableMacros')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ParseRequest clone() => ParseRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParseRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ParseRequest copyWith(void Function(ParseRequest) updates) =>
       super.copyWith((message) => updates(message as ParseRequest))
           as ParseRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ParseRequest create() => ParseRequest._();
+  @$core.override
   ParseRequest createEmptyInstance() => create();
-  static $pb.PbList<ParseRequest> createRepeated() =>
-      $pb.PbList<ParseRequest>();
   @$core.pragma('dart2js:noInline')
   static ParseRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ParseRequest>(create);
@@ -91,53 +84,41 @@ class ParseRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get celSource => $_getSZ(0);
   @$pb.TagNumber(1)
-  set celSource($core.String v) {
-    $_setString(0, v);
-  }
-
+  set celSource($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasCelSource() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCelSource() => clearField(1);
+  void clearCelSource() => $_clearField(1);
 
   /// Tag for version of CEL syntax, for future use.
   @$pb.TagNumber(2)
   $core.String get syntaxVersion => $_getSZ(1);
   @$pb.TagNumber(2)
-  set syntaxVersion($core.String v) {
-    $_setString(1, v);
-  }
-
+  set syntaxVersion($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSyntaxVersion() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSyntaxVersion() => clearField(2);
+  void clearSyntaxVersion() => $_clearField(2);
 
   /// File or resource for source text, used in [SourceInfo][google.api.SourceInfo].
   @$pb.TagNumber(3)
   $core.String get sourceLocation => $_getSZ(2);
   @$pb.TagNumber(3)
-  set sourceLocation($core.String v) {
-    $_setString(2, v);
-  }
-
+  set sourceLocation($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSourceLocation() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSourceLocation() => clearField(3);
+  void clearSourceLocation() => $_clearField(3);
 
   /// Prevent macro expansion.  See "Macros" in Language Defiinition.
   @$pb.TagNumber(4)
   $core.bool get disableMacros => $_getBF(3);
   @$pb.TagNumber(4)
-  set disableMacros($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set disableMacros($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDisableMacros() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDisableMacros() => clearField(4);
+  void clearDisableMacros() => $_clearField(4);
 }
 
 /// Response message for the Parse method.
@@ -146,22 +127,20 @@ class ParseResponse extends $pb.GeneratedMessage {
     $1.ParsedExpr? parsedExpr,
     $core.Iterable<$2.Status>? issues,
   }) {
-    final $result = create();
-    if (parsedExpr != null) {
-      $result.parsedExpr = parsedExpr;
-    }
-    if (issues != null) {
-      $result.issues.addAll(issues);
-    }
-    return $result;
+    final result = create();
+    if (parsedExpr != null) result.parsedExpr = parsedExpr;
+    if (issues != null) result.issues.addAll(issues);
+    return result;
   }
-  ParseResponse._() : super();
-  factory ParseResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ParseResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ParseResponse._();
+
+  factory ParseResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ParseResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ParseResponse',
@@ -170,28 +149,24 @@ class ParseResponse extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$1.ParsedExpr>(1, _omitFieldNames ? '' : 'parsedExpr',
         subBuilder: $1.ParsedExpr.create)
-    ..pc<$2.Status>(2, _omitFieldNames ? '' : 'issues', $pb.PbFieldType.PM,
+    ..pPM<$2.Status>(2, _omitFieldNames ? '' : 'issues',
         subBuilder: $2.Status.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ParseResponse clone() => ParseResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ParseResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ParseResponse copyWith(void Function(ParseResponse) updates) =>
       super.copyWith((message) => updates(message as ParseResponse))
           as ParseResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ParseResponse create() => ParseResponse._();
+  @$core.override
   ParseResponse createEmptyInstance() => create();
-  static $pb.PbList<ParseResponse> createRepeated() =>
-      $pb.PbList<ParseResponse>();
   @$core.pragma('dart2js:noInline')
   static ParseResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ParseResponse>(create);
@@ -201,20 +176,17 @@ class ParseResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.ParsedExpr get parsedExpr => $_getN(0);
   @$pb.TagNumber(1)
-  set parsedExpr($1.ParsedExpr v) {
-    setField(1, v);
-  }
-
+  set parsedExpr($1.ParsedExpr value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasParsedExpr() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParsedExpr() => clearField(1);
+  void clearParsedExpr() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.ParsedExpr ensureParsedExpr() => $_ensure(0);
 
   /// Any number of issues with [StatusDetails][] as the details.
   @$pb.TagNumber(2)
-  $core.List<$2.Status> get issues => $_getList(1);
+  $pb.PbList<$2.Status> get issues => $_getList(1);
 }
 
 /// Request message for the Check method.
@@ -225,28 +197,22 @@ class CheckRequest extends $pb.GeneratedMessage {
     $core.String? container,
     $core.bool? noStdEnv,
   }) {
-    final $result = create();
-    if (parsedExpr != null) {
-      $result.parsedExpr = parsedExpr;
-    }
-    if (typeEnv != null) {
-      $result.typeEnv.addAll(typeEnv);
-    }
-    if (container != null) {
-      $result.container = container;
-    }
-    if (noStdEnv != null) {
-      $result.noStdEnv = noStdEnv;
-    }
-    return $result;
+    final result = create();
+    if (parsedExpr != null) result.parsedExpr = parsedExpr;
+    if (typeEnv != null) result.typeEnv.addAll(typeEnv);
+    if (container != null) result.container = container;
+    if (noStdEnv != null) result.noStdEnv = noStdEnv;
+    return result;
   }
-  CheckRequest._() : super();
-  factory CheckRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CheckRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CheckRequest._();
+
+  factory CheckRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CheckRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CheckRequest',
@@ -255,30 +221,26 @@ class CheckRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$1.ParsedExpr>(1, _omitFieldNames ? '' : 'parsedExpr',
         subBuilder: $1.ParsedExpr.create)
-    ..pc<$3.Decl>(2, _omitFieldNames ? '' : 'typeEnv', $pb.PbFieldType.PM,
+    ..pPM<$3.Decl>(2, _omitFieldNames ? '' : 'typeEnv',
         subBuilder: $3.Decl.create)
     ..aOS(3, _omitFieldNames ? '' : 'container')
     ..aOB(4, _omitFieldNames ? '' : 'noStdEnv')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CheckRequest clone() => CheckRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CheckRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CheckRequest copyWith(void Function(CheckRequest) updates) =>
       super.copyWith((message) => updates(message as CheckRequest))
           as CheckRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CheckRequest create() => CheckRequest._();
+  @$core.override
   CheckRequest createEmptyInstance() => create();
-  static $pb.PbList<CheckRequest> createRepeated() =>
-      $pb.PbList<CheckRequest>();
   @$core.pragma('dart2js:noInline')
   static CheckRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CheckRequest>(create);
@@ -288,14 +250,11 @@ class CheckRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.ParsedExpr get parsedExpr => $_getN(0);
   @$pb.TagNumber(1)
-  set parsedExpr($1.ParsedExpr v) {
-    setField(1, v);
-  }
-
+  set parsedExpr($1.ParsedExpr value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasParsedExpr() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParsedExpr() => clearField(1);
+  void clearParsedExpr() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.ParsedExpr ensureParsedExpr() => $_ensure(0);
 
@@ -303,21 +262,18 @@ class CheckRequest extends $pb.GeneratedMessage {
   /// Required if program uses external variables or functions
   /// not in the default environment.
   @$pb.TagNumber(2)
-  $core.List<$3.Decl> get typeEnv => $_getList(1);
+  $pb.PbList<$3.Decl> get typeEnv => $_getList(1);
 
   /// The protocol buffer context.  See "Name Resolution" in the
   /// Language Definition.
   @$pb.TagNumber(3)
   $core.String get container => $_getSZ(2);
   @$pb.TagNumber(3)
-  set container($core.String v) {
-    $_setString(2, v);
-  }
-
+  set container($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasContainer() => $_has(2);
   @$pb.TagNumber(3)
-  void clearContainer() => clearField(3);
+  void clearContainer() => $_clearField(3);
 
   /// If true, use only the declarations in [type_env][google.api.expr.conformance.v1alpha1.CheckRequest.type_env].  If false (default),
   /// add declarations for the standard definitions to the type environment.  See
@@ -325,14 +281,11 @@ class CheckRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get noStdEnv => $_getBF(3);
   @$pb.TagNumber(4)
-  set noStdEnv($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set noStdEnv($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasNoStdEnv() => $_has(3);
   @$pb.TagNumber(4)
-  void clearNoStdEnv() => clearField(4);
+  void clearNoStdEnv() => $_clearField(4);
 }
 
 /// Response message for the Check method.
@@ -341,22 +294,20 @@ class CheckResponse extends $pb.GeneratedMessage {
     $3.CheckedExpr? checkedExpr,
     $core.Iterable<$2.Status>? issues,
   }) {
-    final $result = create();
-    if (checkedExpr != null) {
-      $result.checkedExpr = checkedExpr;
-    }
-    if (issues != null) {
-      $result.issues.addAll(issues);
-    }
-    return $result;
+    final result = create();
+    if (checkedExpr != null) result.checkedExpr = checkedExpr;
+    if (issues != null) result.issues.addAll(issues);
+    return result;
   }
-  CheckResponse._() : super();
-  factory CheckResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CheckResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CheckResponse._();
+
+  factory CheckResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CheckResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CheckResponse',
@@ -365,28 +316,24 @@ class CheckResponse extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$3.CheckedExpr>(1, _omitFieldNames ? '' : 'checkedExpr',
         subBuilder: $3.CheckedExpr.create)
-    ..pc<$2.Status>(2, _omitFieldNames ? '' : 'issues', $pb.PbFieldType.PM,
+    ..pPM<$2.Status>(2, _omitFieldNames ? '' : 'issues',
         subBuilder: $2.Status.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CheckResponse clone() => CheckResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CheckResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CheckResponse copyWith(void Function(CheckResponse) updates) =>
       super.copyWith((message) => updates(message as CheckResponse))
           as CheckResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CheckResponse create() => CheckResponse._();
+  @$core.override
   CheckResponse createEmptyInstance() => create();
-  static $pb.PbList<CheckResponse> createRepeated() =>
-      $pb.PbList<CheckResponse>();
   @$core.pragma('dart2js:noInline')
   static CheckResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CheckResponse>(create);
@@ -396,20 +343,17 @@ class CheckResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $3.CheckedExpr get checkedExpr => $_getN(0);
   @$pb.TagNumber(1)
-  set checkedExpr($3.CheckedExpr v) {
-    setField(1, v);
-  }
-
+  set checkedExpr($3.CheckedExpr value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasCheckedExpr() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCheckedExpr() => clearField(1);
+  void clearCheckedExpr() => $_clearField(1);
   @$pb.TagNumber(1)
   $3.CheckedExpr ensureCheckedExpr() => $_ensure(0);
 
   /// Any number of issues with [StatusDetails][] as the details.
   @$pb.TagNumber(2)
-  $core.List<$2.Status> get issues => $_getList(1);
+  $pb.PbList<$2.Status> get issues => $_getList(1);
 }
 
 enum EvalRequest_ExprKind { parsedExpr, checkedExpr, notSet }
@@ -419,31 +363,25 @@ class EvalRequest extends $pb.GeneratedMessage {
   factory EvalRequest({
     $1.ParsedExpr? parsedExpr,
     $3.CheckedExpr? checkedExpr,
-    $core.Map<$core.String, $4.ExprValue>? bindings,
+    $core.Iterable<$core.MapEntry<$core.String, $4.ExprValue>>? bindings,
     $core.String? container,
   }) {
-    final $result = create();
-    if (parsedExpr != null) {
-      $result.parsedExpr = parsedExpr;
-    }
-    if (checkedExpr != null) {
-      $result.checkedExpr = checkedExpr;
-    }
-    if (bindings != null) {
-      $result.bindings.addAll(bindings);
-    }
-    if (container != null) {
-      $result.container = container;
-    }
-    return $result;
+    final result = create();
+    if (parsedExpr != null) result.parsedExpr = parsedExpr;
+    if (checkedExpr != null) result.checkedExpr = checkedExpr;
+    if (bindings != null) result.bindings.addEntries(bindings);
+    if (container != null) result.container = container;
+    return result;
   }
-  EvalRequest._() : super();
-  factory EvalRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EvalRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EvalRequest._();
+
+  factory EvalRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EvalRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, EvalRequest_ExprKind>
       _EvalRequest_ExprKindByTag = {
@@ -472,44 +410,42 @@ class EvalRequest extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'container')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EvalRequest clone() => EvalRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EvalRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EvalRequest copyWith(void Function(EvalRequest) updates) =>
       super.copyWith((message) => updates(message as EvalRequest))
           as EvalRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EvalRequest create() => EvalRequest._();
+  @$core.override
   EvalRequest createEmptyInstance() => create();
-  static $pb.PbList<EvalRequest> createRepeated() => $pb.PbList<EvalRequest>();
   @$core.pragma('dart2js:noInline')
   static EvalRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EvalRequest>(create);
   static EvalRequest? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   EvalRequest_ExprKind whichExprKind() =>
       _EvalRequest_ExprKindByTag[$_whichOneof(0)]!;
-  void clearExprKind() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearExprKind() => $_clearField($_whichOneof(0));
 
   /// Evaluate based on the parsed representation.
   @$pb.TagNumber(1)
   $1.ParsedExpr get parsedExpr => $_getN(0);
   @$pb.TagNumber(1)
-  set parsedExpr($1.ParsedExpr v) {
-    setField(1, v);
-  }
-
+  set parsedExpr($1.ParsedExpr value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasParsedExpr() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParsedExpr() => clearField(1);
+  void clearParsedExpr() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.ParsedExpr ensureParsedExpr() => $_ensure(0);
 
@@ -517,34 +453,28 @@ class EvalRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $3.CheckedExpr get checkedExpr => $_getN(1);
   @$pb.TagNumber(2)
-  set checkedExpr($3.CheckedExpr v) {
-    setField(2, v);
-  }
-
+  set checkedExpr($3.CheckedExpr value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCheckedExpr() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCheckedExpr() => clearField(2);
+  void clearCheckedExpr() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.CheckedExpr ensureCheckedExpr() => $_ensure(1);
 
   /// Bindings for the external variables.  The types SHOULD be compatible
   /// with the type environment in [CheckRequest][google.api.expr.conformance.v1alpha1.CheckRequest], if checked.
   @$pb.TagNumber(3)
-  $core.Map<$core.String, $4.ExprValue> get bindings => $_getMap(2);
+  $pb.PbMap<$core.String, $4.ExprValue> get bindings => $_getMap(2);
 
   /// SHOULD be the same container as used in [CheckRequest][google.api.expr.conformance.v1alpha1.CheckRequest], if checked.
   @$pb.TagNumber(4)
   $core.String get container => $_getSZ(3);
   @$pb.TagNumber(4)
-  set container($core.String v) {
-    $_setString(3, v);
-  }
-
+  set container($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasContainer() => $_has(3);
   @$pb.TagNumber(4)
-  void clearContainer() => clearField(4);
+  void clearContainer() => $_clearField(4);
 }
 
 /// Response message for the Eval method.
@@ -553,22 +483,20 @@ class EvalResponse extends $pb.GeneratedMessage {
     $4.ExprValue? result,
     $core.Iterable<$2.Status>? issues,
   }) {
-    final $result = create();
-    if (result != null) {
-      $result.result = result;
-    }
-    if (issues != null) {
-      $result.issues.addAll(issues);
-    }
-    return $result;
+    final result$ = create();
+    if (result != null) result$.result = result;
+    if (issues != null) result$.issues.addAll(issues);
+    return result$;
   }
-  EvalResponse._() : super();
-  factory EvalResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EvalResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EvalResponse._();
+
+  factory EvalResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EvalResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EvalResponse',
@@ -577,28 +505,24 @@ class EvalResponse extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$4.ExprValue>(1, _omitFieldNames ? '' : 'result',
         subBuilder: $4.ExprValue.create)
-    ..pc<$2.Status>(2, _omitFieldNames ? '' : 'issues', $pb.PbFieldType.PM,
+    ..pPM<$2.Status>(2, _omitFieldNames ? '' : 'issues',
         subBuilder: $2.Status.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EvalResponse clone() => EvalResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EvalResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EvalResponse copyWith(void Function(EvalResponse) updates) =>
       super.copyWith((message) => updates(message as EvalResponse))
           as EvalResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EvalResponse create() => EvalResponse._();
+  @$core.override
   EvalResponse createEmptyInstance() => create();
-  static $pb.PbList<EvalResponse> createRepeated() =>
-      $pb.PbList<EvalResponse>();
   @$core.pragma('dart2js:noInline')
   static EvalResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EvalResponse>(create);
@@ -608,14 +532,11 @@ class EvalResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $4.ExprValue get result => $_getN(0);
   @$pb.TagNumber(1)
-  set result($4.ExprValue v) {
-    setField(1, v);
-  }
-
+  set result($4.ExprValue value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasResult() => $_has(0);
   @$pb.TagNumber(1)
-  void clearResult() => clearField(1);
+  void clearResult() => $_clearField(1);
   @$pb.TagNumber(1)
   $4.ExprValue ensureResult() => $_ensure(0);
 
@@ -624,7 +545,7 @@ class EvalResponse extends $pb.GeneratedMessage {
   /// Nevertheless, we'll allow out-of-band issues to be raised,
   /// which also makes the replies more regular.
   @$pb.TagNumber(2)
-  $core.List<$2.Status> get issues => $_getList(1);
+  $pb.PbList<$2.Status> get issues => $_getList(1);
 }
 
 /// A specific position in source.
@@ -635,28 +556,22 @@ class SourcePosition extends $pb.GeneratedMessage {
     $core.int? line,
     $core.int? column,
   }) {
-    final $result = create();
-    if (location != null) {
-      $result.location = location;
-    }
-    if (offset != null) {
-      $result.offset = offset;
-    }
-    if (line != null) {
-      $result.line = line;
-    }
-    if (column != null) {
-      $result.column = column;
-    }
-    return $result;
+    final result = create();
+    if (location != null) result.location = location;
+    if (offset != null) result.offset = offset;
+    if (line != null) result.line = line;
+    if (column != null) result.column = column;
+    return result;
   }
-  SourcePosition._() : super();
-  factory SourcePosition.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SourcePosition.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SourcePosition._();
+
+  factory SourcePosition.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SourcePosition.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SourcePosition',
@@ -664,29 +579,25 @@ class SourcePosition extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.api.expr.conformance.v1alpha1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'location')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'offset', $pb.PbFieldType.O3)
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'line', $pb.PbFieldType.O3)
-    ..a<$core.int>(4, _omitFieldNames ? '' : 'column', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'offset')
+    ..aI(3, _omitFieldNames ? '' : 'line')
+    ..aI(4, _omitFieldNames ? '' : 'column')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SourcePosition clone() => SourcePosition()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SourcePosition clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SourcePosition copyWith(void Function(SourcePosition) updates) =>
       super.copyWith((message) => updates(message as SourcePosition))
           as SourcePosition;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SourcePosition create() => SourcePosition._();
+  @$core.override
   SourcePosition createEmptyInstance() => create();
-  static $pb.PbList<SourcePosition> createRepeated() =>
-      $pb.PbList<SourcePosition>();
   @$core.pragma('dart2js:noInline')
   static SourcePosition getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SourcePosition>(create);
@@ -696,55 +607,43 @@ class SourcePosition extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get location => $_getSZ(0);
   @$pb.TagNumber(1)
-  set location($core.String v) {
-    $_setString(0, v);
-  }
-
+  set location($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasLocation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLocation() => clearField(1);
+  void clearLocation() => $_clearField(1);
 
   /// The UTF-8 code unit offset.
   @$pb.TagNumber(2)
   $core.int get offset => $_getIZ(1);
   @$pb.TagNumber(2)
-  set offset($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set offset($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasOffset() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOffset() => clearField(2);
+  void clearOffset() => $_clearField(2);
 
   /// The 1-based index of the starting line in the source text
   /// where the issue occurs, or 0 if unknown.
   @$pb.TagNumber(3)
   $core.int get line => $_getIZ(2);
   @$pb.TagNumber(3)
-  set line($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set line($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
   $core.bool hasLine() => $_has(2);
   @$pb.TagNumber(3)
-  void clearLine() => clearField(3);
+  void clearLine() => $_clearField(3);
 
   /// The 0-based index of the starting position within the line of source text
   /// where the issue occurs.  Only meaningful if line is nonzero.
   @$pb.TagNumber(4)
   $core.int get column => $_getIZ(3);
   @$pb.TagNumber(4)
-  set column($core.int v) {
-    $_setSignedInt32(3, v);
-  }
-
+  set column($core.int value) => $_setSignedInt32(3, value);
   @$pb.TagNumber(4)
   $core.bool hasColumn() => $_has(3);
   @$pb.TagNumber(4)
-  void clearColumn() => clearField(4);
+  void clearColumn() => $_clearField(4);
 }
 
 /// Warnings or errors in service execution are represented by
@@ -756,59 +655,48 @@ class IssueDetails extends $pb.GeneratedMessage {
     SourcePosition? position,
     $fixnum.Int64? id,
   }) {
-    final $result = create();
-    if (severity != null) {
-      $result.severity = severity;
-    }
-    if (position != null) {
-      $result.position = position;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    return $result;
+    final result = create();
+    if (severity != null) result.severity = severity;
+    if (position != null) result.position = position;
+    if (id != null) result.id = id;
+    return result;
   }
-  IssueDetails._() : super();
-  factory IssueDetails.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory IssueDetails.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  IssueDetails._();
+
+  factory IssueDetails.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory IssueDetails.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'IssueDetails',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.api.expr.conformance.v1alpha1'),
       createEmptyInstance: create)
-    ..e<IssueDetails_Severity>(
-        1, _omitFieldNames ? '' : 'severity', $pb.PbFieldType.OE,
-        defaultOrMaker: IssueDetails_Severity.SEVERITY_UNSPECIFIED,
-        valueOf: IssueDetails_Severity.valueOf,
+    ..aE<IssueDetails_Severity>(1, _omitFieldNames ? '' : 'severity',
         enumValues: IssueDetails_Severity.values)
     ..aOM<SourcePosition>(2, _omitFieldNames ? '' : 'position',
         subBuilder: SourcePosition.create)
     ..aInt64(3, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  IssueDetails clone() => IssueDetails()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  IssueDetails clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   IssueDetails copyWith(void Function(IssueDetails) updates) =>
       super.copyWith((message) => updates(message as IssueDetails))
           as IssueDetails;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static IssueDetails create() => IssueDetails._();
+  @$core.override
   IssueDetails createEmptyInstance() => create();
-  static $pb.PbList<IssueDetails> createRepeated() =>
-      $pb.PbList<IssueDetails>();
   @$core.pragma('dart2js:noInline')
   static IssueDetails getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<IssueDetails>(create);
@@ -818,27 +706,21 @@ class IssueDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   IssueDetails_Severity get severity => $_getN(0);
   @$pb.TagNumber(1)
-  set severity(IssueDetails_Severity v) {
-    setField(1, v);
-  }
-
+  set severity(IssueDetails_Severity value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSeverity() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSeverity() => clearField(1);
+  void clearSeverity() => $_clearField(1);
 
   /// Position in the source, if known.
   @$pb.TagNumber(2)
   SourcePosition get position => $_getN(1);
   @$pb.TagNumber(2)
-  set position(SourcePosition v) {
-    setField(2, v);
-  }
-
+  set position(SourcePosition value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasPosition() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPosition() => clearField(2);
+  void clearPosition() => $_clearField(2);
   @$pb.TagNumber(2)
   SourcePosition ensurePosition() => $_ensure(1);
 
@@ -846,16 +728,14 @@ class IssueDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $fixnum.Int64 get id => $_getI64(2);
   @$pb.TagNumber(3)
-  set id($fixnum.Int64 v) {
-    $_setInt64(2, v);
-  }
-
+  set id($fixnum.Int64 value) => $_setInt64(2, value);
   @$pb.TagNumber(3)
   $core.bool hasId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearId() => clearField(3);
+  void clearId() => $_clearField(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/interactionmodel/intent.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/interactionmodel/intent.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,27 +16,29 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'type/class_reference.pb.dart' as $0;
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 /// A reference to the set of allowed entities for this intent parameter.
 class Intent_IntentParameter_EntitySetReferences_EntitySetReference
     extends $pb.GeneratedMessage {
   factory Intent_IntentParameter_EntitySetReferences_EntitySetReference({
     $core.String? entitySet,
   }) {
-    final $result = create();
-    if (entitySet != null) {
-      $result.entitySet = entitySet;
-    }
-    return $result;
+    final result = create();
+    if (entitySet != null) result.entitySet = entitySet;
+    return result;
   }
-  Intent_IntentParameter_EntitySetReferences_EntitySetReference._() : super();
+
+  Intent_IntentParameter_EntitySetReferences_EntitySetReference._();
+
   factory Intent_IntentParameter_EntitySetReferences_EntitySetReference.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory Intent_IntentParameter_EntitySetReferences_EntitySetReference.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -47,15 +50,10 @@ class Intent_IntentParameter_EntitySetReferences_EntitySetReference
     ..aOS(1, _omitFieldNames ? '' : 'entitySet')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Intent_IntentParameter_EntitySetReferences_EntitySetReference clone() =>
-      Intent_IntentParameter_EntitySetReferences_EntitySetReference()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Intent_IntentParameter_EntitySetReferences_EntitySetReference copyWith(
           void Function(
                   Intent_IntentParameter_EntitySetReferences_EntitySetReference)
@@ -64,18 +62,16 @@ class Intent_IntentParameter_EntitySetReferences_EntitySetReference
               as Intent_IntentParameter_EntitySetReferences_EntitySetReference))
           as Intent_IntentParameter_EntitySetReferences_EntitySetReference;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Intent_IntentParameter_EntitySetReferences_EntitySetReference
       create() =>
           Intent_IntentParameter_EntitySetReferences_EntitySetReference._();
+  @$core.override
   Intent_IntentParameter_EntitySetReferences_EntitySetReference
       createEmptyInstance() => create();
-  static $pb
-      .PbList<Intent_IntentParameter_EntitySetReferences_EntitySetReference>
-      createRepeated() => $pb.PbList<
-          Intent_IntentParameter_EntitySetReferences_EntitySetReference>();
   @$core.pragma('dart2js:noInline')
   static Intent_IntentParameter_EntitySetReferences_EntitySetReference
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -90,14 +86,11 @@ class Intent_IntentParameter_EntitySetReferences_EntitySetReference
   @$pb.TagNumber(1)
   $core.String get entitySet => $_getSZ(0);
   @$pb.TagNumber(1)
-  set entitySet($core.String v) {
-    $_setString(0, v);
-  }
-
+  set entitySet($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEntitySet() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEntitySet() => clearField(1);
+  void clearEntitySet() => $_clearField(1);
 }
 
 /// Entity set references for an intent parameter.
@@ -107,56 +100,51 @@ class Intent_IntentParameter_EntitySetReferences extends $pb.GeneratedMessage {
             Intent_IntentParameter_EntitySetReferences_EntitySetReference>?
         entitySetReferences,
   }) {
-    final $result = create();
-    if (entitySetReferences != null) {
-      $result.entitySetReferences.addAll(entitySetReferences);
-    }
-    return $result;
+    final result = create();
+    if (entitySetReferences != null)
+      result.entitySetReferences.addAll(entitySetReferences);
+    return result;
   }
-  Intent_IntentParameter_EntitySetReferences._() : super();
+
+  Intent_IntentParameter_EntitySetReferences._();
+
   factory Intent_IntentParameter_EntitySetReferences.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Intent_IntentParameter_EntitySetReferences.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Intent_IntentParameter_EntitySetReferences.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Intent.IntentParameter.EntitySetReferences',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.actions.sdk.v2.interactionmodel'),
       createEmptyInstance: create)
-    ..pc<Intent_IntentParameter_EntitySetReferences_EntitySetReference>(
-        1, _omitFieldNames ? '' : 'entitySetReferences', $pb.PbFieldType.PM,
+    ..pPM<Intent_IntentParameter_EntitySetReferences_EntitySetReference>(
+        1, _omitFieldNames ? '' : 'entitySetReferences',
         subBuilder:
             Intent_IntentParameter_EntitySetReferences_EntitySetReference
                 .create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Intent_IntentParameter_EntitySetReferences clone() =>
-      Intent_IntentParameter_EntitySetReferences()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Intent_IntentParameter_EntitySetReferences clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Intent_IntentParameter_EntitySetReferences copyWith(
           void Function(Intent_IntentParameter_EntitySetReferences) updates) =>
       super.copyWith((message) =>
               updates(message as Intent_IntentParameter_EntitySetReferences))
           as Intent_IntentParameter_EntitySetReferences;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Intent_IntentParameter_EntitySetReferences create() =>
       Intent_IntentParameter_EntitySetReferences._();
+  @$core.override
   Intent_IntentParameter_EntitySetReferences createEmptyInstance() => create();
-  static $pb.PbList<Intent_IntentParameter_EntitySetReferences>
-      createRepeated() =>
-          $pb.PbList<Intent_IntentParameter_EntitySetReferences>();
   @$core.pragma('dart2js:noInline')
   static Intent_IntentParameter_EntitySetReferences getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -165,7 +153,7 @@ class Intent_IntentParameter_EntitySetReferences extends $pb.GeneratedMessage {
 
   /// Required. Entity set references for an intent parameter.
   @$pb.TagNumber(1)
-  $core.List<Intent_IntentParameter_EntitySetReferences_EntitySetReference>
+  $pb.PbList<Intent_IntentParameter_EntitySetReferences_EntitySetReference>
       get entitySetReferences => $_getList(0);
 }
 
@@ -178,25 +166,22 @@ class Intent_IntentParameter extends $pb.GeneratedMessage {
     $0.ClassReference? type,
     Intent_IntentParameter_EntitySetReferences? entitySetReferences,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    if (entitySetReferences != null) {
-      $result.entitySetReferences = entitySetReferences;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (type != null) result.type = type;
+    if (entitySetReferences != null)
+      result.entitySetReferences = entitySetReferences;
+    return result;
   }
-  Intent_IntentParameter._() : super();
-  factory Intent_IntentParameter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Intent_IntentParameter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Intent_IntentParameter._();
+
+  factory Intent_IntentParameter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Intent_IntentParameter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Intent_IntentParameter_ParameterType>
       _Intent_IntentParameter_ParameterTypeByTag = {
@@ -218,34 +203,33 @@ class Intent_IntentParameter extends $pb.GeneratedMessage {
         subBuilder: Intent_IntentParameter_EntitySetReferences.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Intent_IntentParameter clone() =>
-      Intent_IntentParameter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Intent_IntentParameter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Intent_IntentParameter copyWith(
           void Function(Intent_IntentParameter) updates) =>
       super.copyWith((message) => updates(message as Intent_IntentParameter))
           as Intent_IntentParameter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Intent_IntentParameter create() => Intent_IntentParameter._();
+  @$core.override
   Intent_IntentParameter createEmptyInstance() => create();
-  static $pb.PbList<Intent_IntentParameter> createRepeated() =>
-      $pb.PbList<Intent_IntentParameter>();
   @$core.pragma('dart2js:noInline')
   static Intent_IntentParameter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Intent_IntentParameter>(create);
   static Intent_IntentParameter? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   Intent_IntentParameter_ParameterType whichParameterType() =>
       _Intent_IntentParameter_ParameterTypeByTag[$_whichOneof(0)]!;
-  void clearParameterType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearParameterType() => $_clearField($_whichOneof(0));
 
   /// Required. Unique name of the intent parameter. Can be used in conditions and
   /// responses to reference intent parameters extracted by NLU with
@@ -253,28 +237,22 @@ class Intent_IntentParameter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Optional. Declares the data type of this parameter.
   /// This should not be set for built-in intents.
   @$pb.TagNumber(2)
   $0.ClassReference get type => $_getN(1);
   @$pb.TagNumber(2)
-  set type($0.ClassReference v) {
-    setField(2, v);
-  }
-
+  set type($0.ClassReference value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearType() => clearField(2);
+  void clearType() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.ClassReference ensureType() => $_ensure(1);
 
@@ -285,14 +263,12 @@ class Intent_IntentParameter extends $pb.GeneratedMessage {
   Intent_IntentParameter_EntitySetReferences get entitySetReferences =>
       $_getN(2);
   @$pb.TagNumber(3)
-  set entitySetReferences(Intent_IntentParameter_EntitySetReferences v) {
-    setField(3, v);
-  }
-
+  set entitySetReferences(Intent_IntentParameter_EntitySetReferences value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasEntitySetReferences() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEntitySetReferences() => clearField(3);
+  void clearEntitySetReferences() => $_clearField(3);
   @$pb.TagNumber(3)
   Intent_IntentParameter_EntitySetReferences ensureEntitySetReferences() =>
       $_ensure(2);
@@ -308,50 +284,44 @@ class Intent extends $pb.GeneratedMessage {
     $core.Iterable<Intent_IntentParameter>? parameters,
     $core.Iterable<$core.String>? trainingPhrases,
   }) {
-    final $result = create();
-    if (parameters != null) {
-      $result.parameters.addAll(parameters);
-    }
-    if (trainingPhrases != null) {
-      $result.trainingPhrases.addAll(trainingPhrases);
-    }
-    return $result;
+    final result = create();
+    if (parameters != null) result.parameters.addAll(parameters);
+    if (trainingPhrases != null) result.trainingPhrases.addAll(trainingPhrases);
+    return result;
   }
-  Intent._() : super();
-  factory Intent.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Intent.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Intent._();
+
+  factory Intent.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Intent.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Intent',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.actions.sdk.v2.interactionmodel'),
       createEmptyInstance: create)
-    ..pc<Intent_IntentParameter>(
-        1, _omitFieldNames ? '' : 'parameters', $pb.PbFieldType.PM,
+    ..pPM<Intent_IntentParameter>(1, _omitFieldNames ? '' : 'parameters',
         subBuilder: Intent_IntentParameter.create)
     ..pPS(2, _omitFieldNames ? '' : 'trainingPhrases')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Intent clone() => Intent()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Intent clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Intent copyWith(void Function(Intent) updates) =>
       super.copyWith((message) => updates(message as Intent)) as Intent;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Intent create() => Intent._();
+  @$core.override
   Intent createEmptyInstance() => create();
-  static $pb.PbList<Intent> createRepeated() => $pb.PbList<Intent>();
   @$core.pragma('dart2js:noInline')
   static Intent getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Intent>(create);
@@ -360,7 +330,7 @@ class Intent extends $pb.GeneratedMessage {
   /// The list of parameters within the training phrases. All parameters must be
   /// defined here to be used in the training phrase.
   @$pb.TagNumber(1)
-  $core.List<Intent_IntentParameter> get parameters => $_getList(0);
+  $pb.PbList<Intent_IntentParameter> get parameters => $_getList(0);
 
   /// Training phrases allow Google’s NLU to automatically match intents with
   /// user input. The more unique phrases that are provided, the better chance
@@ -376,9 +346,10 @@ class Intent extends $pb.GeneratedMessage {
   /// "Book a flight from ($source 'San Francisco' auto=false) to ($dest
   /// 'Vancouver')"
   @$pb.TagNumber(2)
-  $core.List<$core.String> get trainingPhrases => $_getList(1);
+  $pb.PbList<$core.String> get trainingPhrases => $_getList(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,20 +1,24 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: grafeas/v1/upgrade.proto
-//
-// @dart = 2.12
+// Generated from grafeas/v1/upgrade.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $1;
 
-import '../../google/protobuf/timestamp.pb.dart' as $1;
 import 'package.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// An Upgrade Note represents a potential upgrade of a package to a given
 /// version. For each package version combination (i.e. bash 4.0, bash 4.1,
@@ -27,28 +31,22 @@ class UpgradeNote extends $pb.GeneratedMessage {
     $core.Iterable<UpgradeDistribution>? distributions,
     WindowsUpdate? windowsUpdate,
   }) {
-    final $result = create();
-    if (package != null) {
-      $result.package = package;
-    }
-    if (version != null) {
-      $result.version = version;
-    }
-    if (distributions != null) {
-      $result.distributions.addAll(distributions);
-    }
-    if (windowsUpdate != null) {
-      $result.windowsUpdate = windowsUpdate;
-    }
-    return $result;
+    final result = create();
+    if (package != null) result.package = package;
+    if (version != null) result.version = version;
+    if (distributions != null) result.distributions.addAll(distributions);
+    if (windowsUpdate != null) result.windowsUpdate = windowsUpdate;
+    return result;
   }
-  UpgradeNote._() : super();
-  factory UpgradeNote.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpgradeNote.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpgradeNote._();
+
+  factory UpgradeNote.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpgradeNote.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpgradeNote',
@@ -57,30 +55,26 @@ class UpgradeNote extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'package')
     ..aOM<$0.Version>(2, _omitFieldNames ? '' : 'version',
         subBuilder: $0.Version.create)
-    ..pc<UpgradeDistribution>(
-        3, _omitFieldNames ? '' : 'distributions', $pb.PbFieldType.PM,
+    ..pPM<UpgradeDistribution>(3, _omitFieldNames ? '' : 'distributions',
         subBuilder: UpgradeDistribution.create)
     ..aOM<WindowsUpdate>(4, _omitFieldNames ? '' : 'windowsUpdate',
         subBuilder: WindowsUpdate.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpgradeNote clone() => UpgradeNote()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpgradeNote clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpgradeNote copyWith(void Function(UpgradeNote) updates) =>
       super.copyWith((message) => updates(message as UpgradeNote))
           as UpgradeNote;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpgradeNote create() => UpgradeNote._();
+  @$core.override
   UpgradeNote createEmptyInstance() => create();
-  static $pb.PbList<UpgradeNote> createRepeated() => $pb.PbList<UpgradeNote>();
   @$core.pragma('dart2js:noInline')
   static UpgradeNote getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpgradeNote>(create);
@@ -90,47 +84,38 @@ class UpgradeNote extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get package => $_getSZ(0);
   @$pb.TagNumber(1)
-  set package($core.String v) {
-    $_setString(0, v);
-  }
-
+  set package($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPackage() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPackage() => clearField(1);
+  void clearPackage() => $_clearField(1);
 
   /// Required for non-Windows OS. The version of the package in machine + human
   /// readable form.
   @$pb.TagNumber(2)
   $0.Version get version => $_getN(1);
   @$pb.TagNumber(2)
-  set version($0.Version v) {
-    setField(2, v);
-  }
-
+  set version($0.Version value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasVersion() => $_has(1);
   @$pb.TagNumber(2)
-  void clearVersion() => clearField(2);
+  void clearVersion() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Version ensureVersion() => $_ensure(1);
 
   /// Metadata about the upgrade for each specific operating system.
   @$pb.TagNumber(3)
-  $core.List<UpgradeDistribution> get distributions => $_getList(2);
+  $pb.PbList<UpgradeDistribution> get distributions => $_getList(2);
 
   /// Required for Windows OS. Represents the metadata about the Windows update.
   @$pb.TagNumber(4)
   WindowsUpdate get windowsUpdate => $_getN(3);
   @$pb.TagNumber(4)
-  set windowsUpdate(WindowsUpdate v) {
-    setField(4, v);
-  }
-
+  set windowsUpdate(WindowsUpdate value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasWindowsUpdate() => $_has(3);
   @$pb.TagNumber(4)
-  void clearWindowsUpdate() => clearField(4);
+  void clearWindowsUpdate() => $_clearField(4);
   @$pb.TagNumber(4)
   WindowsUpdate ensureWindowsUpdate() => $_ensure(3);
 }
@@ -145,28 +130,22 @@ class UpgradeDistribution extends $pb.GeneratedMessage {
     $core.String? severity,
     $core.Iterable<$core.String>? cve,
   }) {
-    final $result = create();
-    if (cpeUri != null) {
-      $result.cpeUri = cpeUri;
-    }
-    if (classification != null) {
-      $result.classification = classification;
-    }
-    if (severity != null) {
-      $result.severity = severity;
-    }
-    if (cve != null) {
-      $result.cve.addAll(cve);
-    }
-    return $result;
+    final result = create();
+    if (cpeUri != null) result.cpeUri = cpeUri;
+    if (classification != null) result.classification = classification;
+    if (severity != null) result.severity = severity;
+    if (cve != null) result.cve.addAll(cve);
+    return result;
   }
-  UpgradeDistribution._() : super();
-  factory UpgradeDistribution.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpgradeDistribution.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpgradeDistribution._();
+
+  factory UpgradeDistribution.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpgradeDistribution.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpgradeDistribution',
@@ -178,24 +157,20 @@ class UpgradeDistribution extends $pb.GeneratedMessage {
     ..pPS(4, _omitFieldNames ? '' : 'cve')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpgradeDistribution clone() => UpgradeDistribution()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpgradeDistribution clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpgradeDistribution copyWith(void Function(UpgradeDistribution) updates) =>
       super.copyWith((message) => updates(message as UpgradeDistribution))
           as UpgradeDistribution;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpgradeDistribution create() => UpgradeDistribution._();
+  @$core.override
   UpgradeDistribution createEmptyInstance() => create();
-  static $pb.PbList<UpgradeDistribution> createRepeated() =>
-      $pb.PbList<UpgradeDistribution>();
   @$core.pragma('dart2js:noInline')
   static UpgradeDistribution getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpgradeDistribution>(create);
@@ -206,14 +181,11 @@ class UpgradeDistribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get cpeUri => $_getSZ(0);
   @$pb.TagNumber(1)
-  set cpeUri($core.String v) {
-    $_setString(0, v);
-  }
-
+  set cpeUri($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasCpeUri() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCpeUri() => clearField(1);
+  void clearCpeUri() => $_clearField(1);
 
   /// The operating system classification of this Upgrade, as specified by the
   /// upstream operating system upgrade feed. For Windows the classification is
@@ -221,31 +193,25 @@ class UpgradeDistribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get classification => $_getSZ(1);
   @$pb.TagNumber(2)
-  set classification($core.String v) {
-    $_setString(1, v);
-  }
-
+  set classification($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasClassification() => $_has(1);
   @$pb.TagNumber(2)
-  void clearClassification() => clearField(2);
+  void clearClassification() => $_clearField(2);
 
   /// The severity as specified by the upstream operating system.
   @$pb.TagNumber(3)
   $core.String get severity => $_getSZ(2);
   @$pb.TagNumber(3)
-  set severity($core.String v) {
-    $_setString(2, v);
-  }
-
+  set severity($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSeverity() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSeverity() => clearField(3);
+  void clearSeverity() => $_clearField(3);
 
   /// The cve tied to this Upgrade.
   @$pb.TagNumber(4)
-  $core.List<$core.String> get cve => $_getList(3);
+  $pb.PbList<$core.String> get cve => $_getList(3);
 }
 
 /// The unique identifier of the update.
@@ -254,51 +220,44 @@ class WindowsUpdate_Identity extends $pb.GeneratedMessage {
     $core.String? updateId,
     $core.int? revision,
   }) {
-    final $result = create();
-    if (updateId != null) {
-      $result.updateId = updateId;
-    }
-    if (revision != null) {
-      $result.revision = revision;
-    }
-    return $result;
+    final result = create();
+    if (updateId != null) result.updateId = updateId;
+    if (revision != null) result.revision = revision;
+    return result;
   }
-  WindowsUpdate_Identity._() : super();
-  factory WindowsUpdate_Identity.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WindowsUpdate_Identity.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WindowsUpdate_Identity._();
+
+  factory WindowsUpdate_Identity.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WindowsUpdate_Identity.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WindowsUpdate.Identity',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'grafeas.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'updateId')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'revision', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'revision')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WindowsUpdate_Identity clone() =>
-      WindowsUpdate_Identity()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WindowsUpdate_Identity clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WindowsUpdate_Identity copyWith(
           void Function(WindowsUpdate_Identity) updates) =>
       super.copyWith((message) => updates(message as WindowsUpdate_Identity))
           as WindowsUpdate_Identity;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WindowsUpdate_Identity create() => WindowsUpdate_Identity._();
+  @$core.override
   WindowsUpdate_Identity createEmptyInstance() => create();
-  static $pb.PbList<WindowsUpdate_Identity> createRepeated() =>
-      $pb.PbList<WindowsUpdate_Identity>();
   @$core.pragma('dart2js:noInline')
   static WindowsUpdate_Identity getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WindowsUpdate_Identity>(create);
@@ -308,27 +267,21 @@ class WindowsUpdate_Identity extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get updateId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set updateId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set updateId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasUpdateId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUpdateId() => clearField(1);
+  void clearUpdateId() => $_clearField(1);
 
   /// The revision number of the update.
   @$pb.TagNumber(2)
   $core.int get revision => $_getIZ(1);
   @$pb.TagNumber(2)
-  set revision($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set revision($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasRevision() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRevision() => clearField(2);
+  void clearRevision() => $_clearField(2);
 }
 
 /// The category to which the update belongs.
@@ -337,22 +290,20 @@ class WindowsUpdate_Category extends $pb.GeneratedMessage {
     $core.String? categoryId,
     $core.String? name,
   }) {
-    final $result = create();
-    if (categoryId != null) {
-      $result.categoryId = categoryId;
-    }
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (categoryId != null) result.categoryId = categoryId;
+    if (name != null) result.name = name;
+    return result;
   }
-  WindowsUpdate_Category._() : super();
-  factory WindowsUpdate_Category.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WindowsUpdate_Category.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WindowsUpdate_Category._();
+
+  factory WindowsUpdate_Category.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WindowsUpdate_Category.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WindowsUpdate.Category',
@@ -362,26 +313,21 @@ class WindowsUpdate_Category extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WindowsUpdate_Category clone() =>
-      WindowsUpdate_Category()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WindowsUpdate_Category clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WindowsUpdate_Category copyWith(
           void Function(WindowsUpdate_Category) updates) =>
       super.copyWith((message) => updates(message as WindowsUpdate_Category))
           as WindowsUpdate_Category;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WindowsUpdate_Category create() => WindowsUpdate_Category._();
+  @$core.override
   WindowsUpdate_Category createEmptyInstance() => create();
-  static $pb.PbList<WindowsUpdate_Category> createRepeated() =>
-      $pb.PbList<WindowsUpdate_Category>();
   @$core.pragma('dart2js:noInline')
   static WindowsUpdate_Category getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WindowsUpdate_Category>(create);
@@ -391,27 +337,21 @@ class WindowsUpdate_Category extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get categoryId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set categoryId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set categoryId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasCategoryId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCategoryId() => clearField(1);
+  void clearCategoryId() => $_clearField(1);
 
   /// The localized name of the category.
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
-  set name($core.String v) {
-    $_setString(1, v);
-  }
-
+  set name($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => clearField(2);
+  void clearName() => $_clearField(2);
 }
 
 /// Windows Update represents the metadata about the update for the Windows
@@ -428,37 +368,26 @@ class WindowsUpdate extends $pb.GeneratedMessage {
     $core.String? supportUrl,
     $1.Timestamp? lastPublishedTimestamp,
   }) {
-    final $result = create();
-    if (identity != null) {
-      $result.identity = identity;
-    }
-    if (title != null) {
-      $result.title = title;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    if (categories != null) {
-      $result.categories.addAll(categories);
-    }
-    if (kbArticleIds != null) {
-      $result.kbArticleIds.addAll(kbArticleIds);
-    }
-    if (supportUrl != null) {
-      $result.supportUrl = supportUrl;
-    }
-    if (lastPublishedTimestamp != null) {
-      $result.lastPublishedTimestamp = lastPublishedTimestamp;
-    }
-    return $result;
+    final result = create();
+    if (identity != null) result.identity = identity;
+    if (title != null) result.title = title;
+    if (description != null) result.description = description;
+    if (categories != null) result.categories.addAll(categories);
+    if (kbArticleIds != null) result.kbArticleIds.addAll(kbArticleIds);
+    if (supportUrl != null) result.supportUrl = supportUrl;
+    if (lastPublishedTimestamp != null)
+      result.lastPublishedTimestamp = lastPublishedTimestamp;
+    return result;
   }
-  WindowsUpdate._() : super();
-  factory WindowsUpdate.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WindowsUpdate.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WindowsUpdate._();
+
+  factory WindowsUpdate.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WindowsUpdate.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WindowsUpdate',
@@ -468,8 +397,7 @@ class WindowsUpdate extends $pb.GeneratedMessage {
         subBuilder: WindowsUpdate_Identity.create)
     ..aOS(2, _omitFieldNames ? '' : 'title')
     ..aOS(3, _omitFieldNames ? '' : 'description')
-    ..pc<WindowsUpdate_Category>(
-        4, _omitFieldNames ? '' : 'categories', $pb.PbFieldType.PM,
+    ..pPM<WindowsUpdate_Category>(4, _omitFieldNames ? '' : 'categories',
         subBuilder: WindowsUpdate_Category.create)
     ..pPS(5, _omitFieldNames ? '' : 'kbArticleIds')
     ..aOS(6, _omitFieldNames ? '' : 'supportUrl')
@@ -477,24 +405,20 @@ class WindowsUpdate extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WindowsUpdate clone() => WindowsUpdate()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WindowsUpdate clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WindowsUpdate copyWith(void Function(WindowsUpdate) updates) =>
       super.copyWith((message) => updates(message as WindowsUpdate))
           as WindowsUpdate;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WindowsUpdate create() => WindowsUpdate._();
+  @$core.override
   WindowsUpdate createEmptyInstance() => create();
-  static $pb.PbList<WindowsUpdate> createRepeated() =>
-      $pb.PbList<WindowsUpdate>();
   @$core.pragma('dart2js:noInline')
   static WindowsUpdate getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WindowsUpdate>(create);
@@ -504,14 +428,11 @@ class WindowsUpdate extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   WindowsUpdate_Identity get identity => $_getN(0);
   @$pb.TagNumber(1)
-  set identity(WindowsUpdate_Identity v) {
-    setField(1, v);
-  }
-
+  set identity(WindowsUpdate_Identity value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasIdentity() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIdentity() => clearField(1);
+  void clearIdentity() => $_clearField(1);
   @$pb.TagNumber(1)
   WindowsUpdate_Identity ensureIdentity() => $_ensure(0);
 
@@ -519,62 +440,50 @@ class WindowsUpdate extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
   @$pb.TagNumber(2)
-  set title($core.String v) {
-    $_setString(1, v);
-  }
-
+  set title($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasTitle() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTitle() => clearField(2);
+  void clearTitle() => $_clearField(2);
 
   /// The localized description of the update.
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(3)
-  set description($core.String v) {
-    $_setString(2, v);
-  }
-
+  set description($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDescription() => clearField(3);
+  void clearDescription() => $_clearField(3);
 
   /// The list of categories to which the update belongs.
   @$pb.TagNumber(4)
-  $core.List<WindowsUpdate_Category> get categories => $_getList(3);
+  $pb.PbList<WindowsUpdate_Category> get categories => $_getList(3);
 
   /// The Microsoft Knowledge Base article IDs that are associated with the
   /// update.
   @$pb.TagNumber(5)
-  $core.List<$core.String> get kbArticleIds => $_getList(4);
+  $pb.PbList<$core.String> get kbArticleIds => $_getList(4);
 
   /// The hyperlink to the support information for the update.
   @$pb.TagNumber(6)
   $core.String get supportUrl => $_getSZ(5);
   @$pb.TagNumber(6)
-  set supportUrl($core.String v) {
-    $_setString(5, v);
-  }
-
+  set supportUrl($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasSupportUrl() => $_has(5);
   @$pb.TagNumber(6)
-  void clearSupportUrl() => clearField(6);
+  void clearSupportUrl() => $_clearField(6);
 
   /// The last published timestamp of the update.
   @$pb.TagNumber(7)
   $1.Timestamp get lastPublishedTimestamp => $_getN(6);
   @$pb.TagNumber(7)
-  set lastPublishedTimestamp($1.Timestamp v) {
-    setField(7, v);
-  }
-
+  set lastPublishedTimestamp($1.Timestamp value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasLastPublishedTimestamp() => $_has(6);
   @$pb.TagNumber(7)
-  void clearLastPublishedTimestamp() => clearField(7);
+  void clearLastPublishedTimestamp() => $_clearField(7);
   @$pb.TagNumber(7)
   $1.Timestamp ensureLastPublishedTimestamp() => $_ensure(6);
 }
@@ -591,28 +500,22 @@ class UpgradeOccurrence extends $pb.GeneratedMessage {
     UpgradeDistribution? distribution,
     WindowsUpdate? windowsUpdate,
   }) {
-    final $result = create();
-    if (package != null) {
-      $result.package = package;
-    }
-    if (parsedVersion != null) {
-      $result.parsedVersion = parsedVersion;
-    }
-    if (distribution != null) {
-      $result.distribution = distribution;
-    }
-    if (windowsUpdate != null) {
-      $result.windowsUpdate = windowsUpdate;
-    }
-    return $result;
+    final result = create();
+    if (package != null) result.package = package;
+    if (parsedVersion != null) result.parsedVersion = parsedVersion;
+    if (distribution != null) result.distribution = distribution;
+    if (windowsUpdate != null) result.windowsUpdate = windowsUpdate;
+    return result;
   }
-  UpgradeOccurrence._() : super();
-  factory UpgradeOccurrence.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpgradeOccurrence.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpgradeOccurrence._();
+
+  factory UpgradeOccurrence.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpgradeOccurrence.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpgradeOccurrence',
@@ -627,24 +530,20 @@ class UpgradeOccurrence extends $pb.GeneratedMessage {
         subBuilder: WindowsUpdate.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpgradeOccurrence clone() => UpgradeOccurrence()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpgradeOccurrence clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpgradeOccurrence copyWith(void Function(UpgradeOccurrence) updates) =>
       super.copyWith((message) => updates(message as UpgradeOccurrence))
           as UpgradeOccurrence;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpgradeOccurrence create() => UpgradeOccurrence._();
+  @$core.override
   UpgradeOccurrence createEmptyInstance() => create();
-  static $pb.PbList<UpgradeOccurrence> createRepeated() =>
-      $pb.PbList<UpgradeOccurrence>();
   @$core.pragma('dart2js:noInline')
   static UpgradeOccurrence getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpgradeOccurrence>(create);
@@ -654,28 +553,22 @@ class UpgradeOccurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get package => $_getSZ(0);
   @$pb.TagNumber(1)
-  set package($core.String v) {
-    $_setString(0, v);
-  }
-
+  set package($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPackage() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPackage() => clearField(1);
+  void clearPackage() => $_clearField(1);
 
   /// Required for non-Windows OS. The version of the package in a machine +
   /// human readable form.
   @$pb.TagNumber(3)
   $0.Version get parsedVersion => $_getN(1);
   @$pb.TagNumber(3)
-  set parsedVersion($0.Version v) {
-    setField(3, v);
-  }
-
+  set parsedVersion($0.Version value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasParsedVersion() => $_has(1);
   @$pb.TagNumber(3)
-  void clearParsedVersion() => clearField(3);
+  void clearParsedVersion() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Version ensureParsedVersion() => $_ensure(1);
 
@@ -685,14 +578,11 @@ class UpgradeOccurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   UpgradeDistribution get distribution => $_getN(2);
   @$pb.TagNumber(4)
-  set distribution(UpgradeDistribution v) {
-    setField(4, v);
-  }
-
+  set distribution(UpgradeDistribution value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasDistribution() => $_has(2);
   @$pb.TagNumber(4)
-  void clearDistribution() => clearField(4);
+  void clearDistribution() => $_clearField(4);
   @$pb.TagNumber(4)
   UpgradeDistribution ensureDistribution() => $_ensure(2);
 
@@ -700,18 +590,16 @@ class UpgradeOccurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   WindowsUpdate get windowsUpdate => $_getN(3);
   @$pb.TagNumber(5)
-  set windowsUpdate(WindowsUpdate v) {
-    setField(5, v);
-  }
-
+  set windowsUpdate(WindowsUpdate value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasWindowsUpdate() => $_has(3);
   @$pb.TagNumber(5)
-  void clearWindowsUpdate() => clearField(5);
+  void clearWindowsUpdate() => $_clearField(5);
   @$pb.TagNumber(5)
   WindowsUpdate ensureWindowsUpdate() => $_ensure(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

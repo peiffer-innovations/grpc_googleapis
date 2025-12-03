@@ -1,19 +1,22 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/routing/v2/waypoint.proto
-//
-// @dart = 2.12
+// Generated from google/maps/routing/v2/waypoint.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'location.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum Waypoint_LocationType { location, placeId, address, notSet }
 
@@ -28,34 +31,24 @@ class Waypoint extends $pb.GeneratedMessage {
     $core.bool? sideOfRoad,
     $core.String? address,
   }) {
-    final $result = create();
-    if (location != null) {
-      $result.location = location;
-    }
-    if (placeId != null) {
-      $result.placeId = placeId;
-    }
-    if (via != null) {
-      $result.via = via;
-    }
-    if (vehicleStopover != null) {
-      $result.vehicleStopover = vehicleStopover;
-    }
-    if (sideOfRoad != null) {
-      $result.sideOfRoad = sideOfRoad;
-    }
-    if (address != null) {
-      $result.address = address;
-    }
-    return $result;
+    final result = create();
+    if (location != null) result.location = location;
+    if (placeId != null) result.placeId = placeId;
+    if (via != null) result.via = via;
+    if (vehicleStopover != null) result.vehicleStopover = vehicleStopover;
+    if (sideOfRoad != null) result.sideOfRoad = sideOfRoad;
+    if (address != null) result.address = address;
+    return result;
   }
-  Waypoint._() : super();
-  factory Waypoint.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Waypoint.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Waypoint._();
+
+  factory Waypoint.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Waypoint.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Waypoint_LocationType>
       _Waypoint_LocationTypeByTag = {
@@ -79,44 +72,44 @@ class Waypoint extends $pb.GeneratedMessage {
     ..aOS(7, _omitFieldNames ? '' : 'address')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Waypoint clone() => Waypoint()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Waypoint clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Waypoint copyWith(void Function(Waypoint) updates) =>
       super.copyWith((message) => updates(message as Waypoint)) as Waypoint;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Waypoint create() => Waypoint._();
+  @$core.override
   Waypoint createEmptyInstance() => create();
-  static $pb.PbList<Waypoint> createRepeated() => $pb.PbList<Waypoint>();
   @$core.pragma('dart2js:noInline')
   static Waypoint getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Waypoint>(create);
   static Waypoint? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(7)
   Waypoint_LocationType whichLocationType() =>
       _Waypoint_LocationTypeByTag[$_whichOneof(0)]!;
-  void clearLocationType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(7)
+  void clearLocationType() => $_clearField($_whichOneof(0));
 
   /// A point specified using geographic coordinates, including an optional
   /// heading.
   @$pb.TagNumber(1)
   $0.Location get location => $_getN(0);
   @$pb.TagNumber(1)
-  set location($0.Location v) {
-    setField(1, v);
-  }
-
+  set location($0.Location value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasLocation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLocation() => clearField(1);
+  void clearLocation() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Location ensureLocation() => $_ensure(0);
 
@@ -124,14 +117,11 @@ class Waypoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get placeId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set placeId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set placeId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPlaceId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPlaceId() => clearField(2);
+  void clearPlaceId() => $_clearField(2);
 
   /// Marks this waypoint as a milestone rather a stopping point. For
   /// each non-via waypoint in the request, the response appends an entry to the
@@ -147,14 +137,11 @@ class Waypoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get via => $_getBF(2);
   @$pb.TagNumber(3)
-  set via($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set via($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasVia() => $_has(2);
   @$pb.TagNumber(3)
-  void clearVia() => clearField(3);
+  void clearVia() => $_clearField(3);
 
   /// Indicates that the waypoint is meant for vehicles to stop at, where the
   /// intention is to either pickup or drop-off. When you set this value, the
@@ -165,14 +152,11 @@ class Waypoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get vehicleStopover => $_getBF(3);
   @$pb.TagNumber(4)
-  set vehicleStopover($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set vehicleStopover($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasVehicleStopover() => $_has(3);
   @$pb.TagNumber(4)
-  void clearVehicleStopover() => clearField(4);
+  void clearVehicleStopover() => $_clearField(4);
 
   /// Indicates that the location of this waypoint is meant to have a preference
   /// for the vehicle to stop at a particular side of road. When you set this
@@ -183,30 +167,25 @@ class Waypoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool get sideOfRoad => $_getBF(4);
   @$pb.TagNumber(5)
-  set sideOfRoad($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set sideOfRoad($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasSideOfRoad() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSideOfRoad() => clearField(5);
+  void clearSideOfRoad() => $_clearField(5);
 
   /// Human readable address or a plus code.
   /// See https://plus.codes for details.
   @$pb.TagNumber(7)
   $core.String get address => $_getSZ(5);
   @$pb.TagNumber(7)
-  set address($core.String v) {
-    $_setString(5, v);
-  }
-
+  set address($core.String value) => $_setString(5, value);
   @$pb.TagNumber(7)
   $core.bool hasAddress() => $_has(5);
   @$pb.TagNumber(7)
-  void clearAddress() => clearField(7);
+  void clearAddress() => $_clearField(7);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

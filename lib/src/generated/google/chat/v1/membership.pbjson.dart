@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/chat/v1/membership.proto
-//
-// @dart = 2.12
+// Generated from google/chat/v1/membership.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -100,6 +102,7 @@ const Membership_MembershipRole$json = {
     {'1': 'MEMBERSHIP_ROLE_UNSPECIFIED', '2': 0},
     {'1': 'ROLE_MEMBER', '2': 1},
     {'1': 'ROLE_MANAGER', '2': 2},
+    {'1': 'ROLE_ASSISTANT_MANAGER', '2': 4},
   ],
 };
 
@@ -114,10 +117,11 @@ final $typed_data.Uint8List membershipDescriptor = $convert.base64Decode(
     'LlRpbWVzdGFtcEIG4EEF4EEBUgpjcmVhdGVUaW1lEkMKC2RlbGV0ZV90aW1lGAggASgLMhouZ2'
     '9vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIG4EEF4EEBUgpkZWxldGVUaW1lIl4KD01lbWJlcnNo'
     'aXBTdGF0ZRIgChxNRU1CRVJTSElQX1NUQVRFX1VOU1BFQ0lGSUVEEAASCgoGSk9JTkVEEAESCw'
-    'oHSU5WSVRFRBACEhAKDE5PVF9BX01FTUJFUhADIlQKDk1lbWJlcnNoaXBSb2xlEh8KG01FTUJF'
+    'oHSU5WSVRFRBACEhAKDE5PVF9BX01FTUJFUhADInAKDk1lbWJlcnNoaXBSb2xlEh8KG01FTUJF'
     'UlNISVBfUk9MRV9VTlNQRUNJRklFRBAAEg8KC1JPTEVfTUVNQkVSEAESEAoMUk9MRV9NQU5BR0'
-    'VSEAI6ROpBQQoeY2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEh9zcGFjZXMve3NwYWNl'
-    'fS9tZW1iZXJzL3ttZW1iZXJ9QgwKCm1lbWJlclR5cGU=');
+    'VSEAISGgoWUk9MRV9BU1NJU1RBTlRfTUFOQUdFUhAEOkTqQUEKHmNoYXQuZ29vZ2xlYXBpcy5j'
+    'b20vTWVtYmVyc2hpcBIfc3BhY2VzL3tzcGFjZX0vbWVtYmVycy97bWVtYmVyfUIMCgptZW1iZX'
+    'JUeXBl');
 
 @$core.Deprecated('Use createMembershipRequestDescriptor instead')
 const CreateMembershipRequest$json = {

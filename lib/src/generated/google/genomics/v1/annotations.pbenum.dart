@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/genomics/v1/annotations.proto
-//
-// @dart = 2.12
+// Generated from google/genomics/v1/annotations.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -19,12 +20,26 @@ import 'package:protobuf/protobuf.dart' as $pb;
 class AnnotationType extends $pb.ProtobufEnum {
   static const AnnotationType ANNOTATION_TYPE_UNSPECIFIED =
       AnnotationType._(0, _omitEnumNames ? '' : 'ANNOTATION_TYPE_UNSPECIFIED');
+
+  /// A `GENERIC` annotation type should be used when no other annotation
+  /// type will suffice. This represents an untyped annotation of the reference
+  /// genome.
   static const AnnotationType GENERIC =
       AnnotationType._(1, _omitEnumNames ? '' : 'GENERIC');
+
+  /// A `VARIANT` annotation type.
   static const AnnotationType VARIANT =
       AnnotationType._(2, _omitEnumNames ? '' : 'VARIANT');
+
+  /// A `GENE` annotation type represents the existence of a gene at the
+  /// associated reference coordinates. The start coordinate is typically the
+  /// gene's transcription start site and the end is typically the end of the
+  /// gene's last exon.
   static const AnnotationType GENE =
       AnnotationType._(3, _omitEnumNames ? '' : 'GENE');
+
+  /// A `TRANSCRIPT` annotation type represents the assertion that a
+  /// particular region of the reference genome may be transcribed as RNA.
   static const AnnotationType TRANSCRIPT =
       AnnotationType._(4, _omitEnumNames ? '' : 'TRANSCRIPT');
 
@@ -36,28 +51,47 @@ class AnnotationType extends $pb.ProtobufEnum {
     TRANSCRIPT,
   ];
 
-  static final $core.Map<$core.int, AnnotationType> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static AnnotationType? valueOf($core.int value) => _byValue[value];
+  static final $core.List<AnnotationType?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 4);
+  static AnnotationType? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const AnnotationType._($core.int v, $core.String n) : super(v, n);
+  const AnnotationType._(super.value, super.name);
 }
 
 class VariantAnnotation_Type extends $pb.ProtobufEnum {
   static const VariantAnnotation_Type TYPE_UNSPECIFIED =
       VariantAnnotation_Type._(0, _omitEnumNames ? '' : 'TYPE_UNSPECIFIED');
+
+  /// `TYPE_OTHER` should be used when no other Type will suffice.
+  /// Further explanation of the variant type may be included in the
+  /// [info][google.genomics.v1.Annotation.info] field.
   static const VariantAnnotation_Type TYPE_OTHER =
       VariantAnnotation_Type._(1, _omitEnumNames ? '' : 'TYPE_OTHER');
+
+  /// `INSERTION` indicates an insertion.
   static const VariantAnnotation_Type INSERTION =
       VariantAnnotation_Type._(2, _omitEnumNames ? '' : 'INSERTION');
+
+  /// `DELETION` indicates a deletion.
   static const VariantAnnotation_Type DELETION =
       VariantAnnotation_Type._(3, _omitEnumNames ? '' : 'DELETION');
+
+  /// `SUBSTITUTION` indicates a block substitution of
+  /// two or more nucleotides.
   static const VariantAnnotation_Type SUBSTITUTION =
       VariantAnnotation_Type._(4, _omitEnumNames ? '' : 'SUBSTITUTION');
+
+  /// `SNP` indicates a single nucleotide polymorphism.
   static const VariantAnnotation_Type SNP =
       VariantAnnotation_Type._(5, _omitEnumNames ? '' : 'SNP');
+
+  /// `STRUCTURAL` indicates a large structural variant,
+  /// including chromosomal fusions, inversions, etc.
   static const VariantAnnotation_Type STRUCTURAL =
       VariantAnnotation_Type._(6, _omitEnumNames ? '' : 'STRUCTURAL');
+
+  /// `CNV` indicates a variation in copy number.
   static const VariantAnnotation_Type CNV =
       VariantAnnotation_Type._(7, _omitEnumNames ? '' : 'CNV');
 
@@ -73,31 +107,59 @@ class VariantAnnotation_Type extends $pb.ProtobufEnum {
     CNV,
   ];
 
-  static final $core.Map<$core.int, VariantAnnotation_Type> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static VariantAnnotation_Type? valueOf($core.int value) => _byValue[value];
+  static final $core.List<VariantAnnotation_Type?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 7);
+  static VariantAnnotation_Type? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const VariantAnnotation_Type._($core.int v, $core.String n) : super(v, n);
+  const VariantAnnotation_Type._(super.value, super.name);
 }
 
 class VariantAnnotation_Effect extends $pb.ProtobufEnum {
   static const VariantAnnotation_Effect EFFECT_UNSPECIFIED =
       VariantAnnotation_Effect._(0, _omitEnumNames ? '' : 'EFFECT_UNSPECIFIED');
+
+  /// `EFFECT_OTHER` should be used when no other Effect
+  /// will suffice.
   static const VariantAnnotation_Effect EFFECT_OTHER =
       VariantAnnotation_Effect._(1, _omitEnumNames ? '' : 'EFFECT_OTHER');
+
+  /// `FRAMESHIFT` indicates a mutation in which the insertion or
+  /// deletion of nucleotides resulted in a frameshift change.
   static const VariantAnnotation_Effect FRAMESHIFT =
       VariantAnnotation_Effect._(2, _omitEnumNames ? '' : 'FRAMESHIFT');
+
+  /// `FRAME_PRESERVING_INDEL` indicates a mutation in which a
+  /// multiple of three nucleotides has been inserted or deleted, resulting
+  /// in no change to the reading frame of the coding sequence.
   static const VariantAnnotation_Effect FRAME_PRESERVING_INDEL =
       VariantAnnotation_Effect._(
           3, _omitEnumNames ? '' : 'FRAME_PRESERVING_INDEL');
+
+  /// `SYNONYMOUS_SNP` indicates a single nucleotide polymorphism
+  /// mutation that results in no amino acid change.
   static const VariantAnnotation_Effect SYNONYMOUS_SNP =
       VariantAnnotation_Effect._(4, _omitEnumNames ? '' : 'SYNONYMOUS_SNP');
+
+  /// `NONSYNONYMOUS_SNP` indicates a single nucleotide
+  /// polymorphism mutation that results in an amino acid change.
   static const VariantAnnotation_Effect NONSYNONYMOUS_SNP =
       VariantAnnotation_Effect._(5, _omitEnumNames ? '' : 'NONSYNONYMOUS_SNP');
+
+  /// `STOP_GAIN` indicates a mutation that leads to the creation
+  /// of a stop codon at the variant site. Frameshift mutations creating
+  /// downstream stop codons do not count as `STOP_GAIN`.
   static const VariantAnnotation_Effect STOP_GAIN =
       VariantAnnotation_Effect._(6, _omitEnumNames ? '' : 'STOP_GAIN');
+
+  /// `STOP_LOSS` indicates a mutation that eliminates a
+  /// stop codon at the variant site.
   static const VariantAnnotation_Effect STOP_LOSS =
       VariantAnnotation_Effect._(7, _omitEnumNames ? '' : 'STOP_LOSS');
+
+  /// `SPLICE_SITE_DISRUPTION` indicates that this variant is
+  /// found in a splice site for the associated transcript, and alters the
+  /// normal splicing pattern.
   static const VariantAnnotation_Effect SPLICE_SITE_DISRUPTION =
       VariantAnnotation_Effect._(
           8, _omitEnumNames ? '' : 'SPLICE_SITE_DISRUPTION');
@@ -115,11 +177,12 @@ class VariantAnnotation_Effect extends $pb.ProtobufEnum {
     SPLICE_SITE_DISRUPTION,
   ];
 
-  static final $core.Map<$core.int, VariantAnnotation_Effect> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static VariantAnnotation_Effect? valueOf($core.int value) => _byValue[value];
+  static final $core.List<VariantAnnotation_Effect?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 8);
+  static VariantAnnotation_Effect? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const VariantAnnotation_Effect._($core.int v, $core.String n) : super(v, n);
+  const VariantAnnotation_Effect._(super.value, super.name);
 }
 
 class VariantAnnotation_ClinicalSignificance extends $pb.ProtobufEnum {
@@ -127,6 +190,9 @@ class VariantAnnotation_ClinicalSignificance extends $pb.ProtobufEnum {
       CLINICAL_SIGNIFICANCE_UNSPECIFIED =
       VariantAnnotation_ClinicalSignificance._(
           0, _omitEnumNames ? '' : 'CLINICAL_SIGNIFICANCE_UNSPECIFIED');
+
+  /// `OTHER` should be used when no other clinical significance
+  /// value will suffice.
   static const VariantAnnotation_ClinicalSignificance
       CLINICAL_SIGNIFICANCE_OTHER = VariantAnnotation_ClinicalSignificance._(
           1, _omitEnumNames ? '' : 'CLINICAL_SIGNIFICANCE_OTHER');
@@ -163,6 +229,10 @@ class VariantAnnotation_ClinicalSignificance extends $pb.ProtobufEnum {
   static const VariantAnnotation_ClinicalSignificance PROTECTIVE =
       VariantAnnotation_ClinicalSignificance._(
           12, _omitEnumNames ? '' : 'PROTECTIVE');
+
+  /// `MULTIPLE_REPORTED` should be used when multiple clinical
+  /// signficances are reported for a variant. The original clinical
+  /// significance values may be provided in the `info` field.
   static const VariantAnnotation_ClinicalSignificance MULTIPLE_REPORTED =
       VariantAnnotation_ClinicalSignificance._(
           13, _omitEnumNames ? '' : 'MULTIPLE_REPORTED');
@@ -185,13 +255,13 @@ class VariantAnnotation_ClinicalSignificance extends $pb.ProtobufEnum {
     MULTIPLE_REPORTED,
   ];
 
-  static final $core.Map<$core.int, VariantAnnotation_ClinicalSignificance>
-      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.List<VariantAnnotation_ClinicalSignificance?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 13);
   static VariantAnnotation_ClinicalSignificance? valueOf($core.int value) =>
-      _byValue[value];
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const VariantAnnotation_ClinicalSignificance._($core.int v, $core.String n)
-      : super(v, n);
+  const VariantAnnotation_ClinicalSignificance._(super.value, super.name);
 }
 
-const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');
+const $core.bool _omitEnumNames =
+    $core.bool.fromEnvironment('protobuf.omit_enum_names');

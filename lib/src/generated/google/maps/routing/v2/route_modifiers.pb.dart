@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/routing/v2/route_modifiers.proto
-//
-// @dart = 2.12
+// Generated from google/maps/routing/v2/route_modifiers.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,6 +16,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'toll_passes.pbenum.dart' as $1;
 import 'vehicle_info.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Encapsulates a set of optional conditions to satisfy when calculating the
 /// routes.
@@ -27,34 +30,24 @@ class RouteModifiers extends $pb.GeneratedMessage {
     $0.VehicleInfo? vehicleInfo,
     $core.Iterable<$1.TollPass>? tollPasses,
   }) {
-    final $result = create();
-    if (avoidTolls != null) {
-      $result.avoidTolls = avoidTolls;
-    }
-    if (avoidHighways != null) {
-      $result.avoidHighways = avoidHighways;
-    }
-    if (avoidFerries != null) {
-      $result.avoidFerries = avoidFerries;
-    }
-    if (avoidIndoor != null) {
-      $result.avoidIndoor = avoidIndoor;
-    }
-    if (vehicleInfo != null) {
-      $result.vehicleInfo = vehicleInfo;
-    }
-    if (tollPasses != null) {
-      $result.tollPasses.addAll(tollPasses);
-    }
-    return $result;
+    final result = create();
+    if (avoidTolls != null) result.avoidTolls = avoidTolls;
+    if (avoidHighways != null) result.avoidHighways = avoidHighways;
+    if (avoidFerries != null) result.avoidFerries = avoidFerries;
+    if (avoidIndoor != null) result.avoidIndoor = avoidIndoor;
+    if (vehicleInfo != null) result.vehicleInfo = vehicleInfo;
+    if (tollPasses != null) result.tollPasses.addAll(tollPasses);
+    return result;
   }
-  RouteModifiers._() : super();
-  factory RouteModifiers.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RouteModifiers.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RouteModifiers._();
+
+  factory RouteModifiers.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RouteModifiers.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RouteModifiers',
@@ -74,24 +67,20 @@ class RouteModifiers extends $pb.GeneratedMessage {
         defaultEnumValue: $1.TollPass.TOLL_PASS_UNSPECIFIED)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RouteModifiers clone() => RouteModifiers()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RouteModifiers clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RouteModifiers copyWith(void Function(RouteModifiers) updates) =>
       super.copyWith((message) => updates(message as RouteModifiers))
           as RouteModifiers;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RouteModifiers create() => RouteModifiers._();
+  @$core.override
   RouteModifiers createEmptyInstance() => create();
-  static $pb.PbList<RouteModifiers> createRepeated() =>
-      $pb.PbList<RouteModifiers>();
   @$core.pragma('dart2js:noInline')
   static RouteModifiers getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RouteModifiers>(create);
@@ -103,14 +92,11 @@ class RouteModifiers extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get avoidTolls => $_getBF(0);
   @$pb.TagNumber(1)
-  set avoidTolls($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set avoidTolls($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAvoidTolls() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAvoidTolls() => clearField(1);
+  void clearAvoidTolls() => $_clearField(1);
 
   /// When set to true, avoids highways where reasonable, giving preference to
   /// routes not containing highways. Applies only to the `DRIVE` and
@@ -118,14 +104,11 @@ class RouteModifiers extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool get avoidHighways => $_getBF(1);
   @$pb.TagNumber(2)
-  set avoidHighways($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set avoidHighways($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAvoidHighways() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAvoidHighways() => clearField(2);
+  void clearAvoidHighways() => $_clearField(2);
 
   /// When set to true, avoids ferries where reasonable, giving preference to
   /// routes not containing ferries. Applies only to the `DRIVE` and`TWO_WHEELER`
@@ -133,14 +116,11 @@ class RouteModifiers extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get avoidFerries => $_getBF(2);
   @$pb.TagNumber(3)
-  set avoidFerries($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set avoidFerries($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasAvoidFerries() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAvoidFerries() => clearField(3);
+  void clearAvoidFerries() => $_clearField(3);
 
   /// When set to true, avoids navigating indoors where reasonable, giving
   /// preference to routes not containing indoor navigation. Applies only to the
@@ -148,27 +128,21 @@ class RouteModifiers extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get avoidIndoor => $_getBF(3);
   @$pb.TagNumber(4)
-  set avoidIndoor($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set avoidIndoor($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasAvoidIndoor() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAvoidIndoor() => clearField(4);
+  void clearAvoidIndoor() => $_clearField(4);
 
   /// Specifies the vehicle information.
   @$pb.TagNumber(5)
   $0.VehicleInfo get vehicleInfo => $_getN(4);
   @$pb.TagNumber(5)
-  set vehicleInfo($0.VehicleInfo v) {
-    setField(5, v);
-  }
-
+  set vehicleInfo($0.VehicleInfo value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasVehicleInfo() => $_has(4);
   @$pb.TagNumber(5)
-  void clearVehicleInfo() => clearField(5);
+  void clearVehicleInfo() => $_clearField(5);
   @$pb.TagNumber(5)
   $0.VehicleInfo ensureVehicleInfo() => $_ensure(4);
 
@@ -179,9 +153,10 @@ class RouteModifiers extends $pb.GeneratedMessage {
   /// Applies only to the `DRIVE` and `TWO_WHEELER`
   /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode].
   @$pb.TagNumber(6)
-  $core.List<$1.TollPass> get tollPasses => $_getList(5);
+  $pb.PbList<$1.TollPass> get tollPasses => $_getList(5);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/weather/v1/weather_service.proto
-//
-// @dart = 2.12
+// Generated from google/maps/weather/v1/weather_service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -253,6 +255,14 @@ const LookupCurrentConditionsResponse_CurrentConditionsHistory$json = {
       '10': 'minTemperature'
     },
     {
+      '1': 'snow_qpf',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.maps.weather.v1.QuantitativePrecipitationForecast',
+      '10': 'snowQpf'
+    },
+    {
       '1': 'qpf',
       '3': 6,
       '4': 1,
@@ -287,15 +297,16 @@ final $typed_data.Uint8List lookupCurrentConditionsResponseDescriptor = $convert
     '91ZF9jb3ZlchgRIAEoBUgEUgpjbG91ZENvdmVyiAEBEo4BChpjdXJyZW50X2NvbmRpdGlvbnNf'
     'aGlzdG9yeRgSIAEoCzJQLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuTG9va3VwQ3VycmVudENvbm'
     'RpdGlvbnNSZXNwb25zZS5DdXJyZW50Q29uZGl0aW9uc0hpc3RvcnlSGGN1cnJlbnRDb25kaXRp'
-    'b25zSGlzdG9yeRrXAgoYQ3VycmVudENvbmRpdGlvbnNIaXN0b3J5ElIKEnRlbXBlcmF0dXJlX2'
+    'b25zSGlzdG9yeRqtAwoYQ3VycmVudENvbmRpdGlvbnNIaXN0b3J5ElIKEnRlbXBlcmF0dXJlX2'
     'NoYW5nZRgBIAEoCzIjLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuVGVtcGVyYXR1cmVSEXRlbXBl'
     'cmF0dXJlQ2hhbmdlEkwKD21heF90ZW1wZXJhdHVyZRgCIAEoCzIjLmdvb2dsZS5tYXBzLndlYX'
     'RoZXIudjEuVGVtcGVyYXR1cmVSDm1heFRlbXBlcmF0dXJlEkwKD21pbl90ZW1wZXJhdHVyZRgD'
     'IAEoCzIjLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuVGVtcGVyYXR1cmVSDm1pblRlbXBlcmF0dX'
-    'JlEksKA3FwZhgGIAEoCzI5Lmdvb2dsZS5tYXBzLndlYXRoZXIudjEuUXVhbnRpdGF0aXZlUHJl'
-    'Y2lwaXRhdGlvbkZvcmVjYXN0UgNxcGZCDQoLX2lzX2RheXRpbWVCFAoSX3JlbGF0aXZlX2h1bW'
-    'lkaXR5QgsKCV91dl9pbmRleEIbChlfdGh1bmRlcnN0b3JtX3Byb2JhYmlsaXR5Qg4KDF9jbG91'
-    'ZF9jb3Zlcg==');
+    'JlElQKCHNub3dfcXBmGAUgASgLMjkuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5RdWFudGl0YXRp'
+    'dmVQcmVjaXBpdGF0aW9uRm9yZWNhc3RSB3Nub3dRcGYSSwoDcXBmGAYgASgLMjkuZ29vZ2xlLm'
+    '1hcHMud2VhdGhlci52MS5RdWFudGl0YXRpdmVQcmVjaXBpdGF0aW9uRm9yZWNhc3RSA3FwZkIN'
+    'CgtfaXNfZGF5dGltZUIUChJfcmVsYXRpdmVfaHVtaWRpdHlCCwoJX3V2X2luZGV4QhsKGV90aH'
+    'VuZGVyc3Rvcm1fcHJvYmFiaWxpdHlCDgoMX2Nsb3VkX2NvdmVy');
 
 @$core.Deprecated('Use lookupForecastHoursRequestDescriptor instead')
 const LookupForecastHoursRequest$json = {
@@ -571,3 +582,65 @@ final $typed_data.Uint8List lookupHistoryHoursResponseDescriptor = $convert.base
     '9vZ2xlLm1hcHMud2VhdGhlci52MS5IaXN0b3J5SG91clIMaGlzdG9yeUhvdXJzEjIKCXRpbWVf'
     'em9uZRgCIAEoCzIVLmdvb2dsZS50eXBlLlRpbWVab25lUgh0aW1lWm9uZRImCg9uZXh0X3BhZ2'
     'VfdG9rZW4YAyABKAlSDW5leHRQYWdlVG9rZW4=');
+
+@$core.Deprecated('Use lookupPublicAlertsRequestDescriptor instead')
+const LookupPublicAlertsRequest$json = {
+  '1': 'LookupPublicAlertsRequest',
+  '2': [
+    {
+      '1': 'location',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.type.LatLng',
+      '8': {},
+      '10': 'location'
+    },
+    {
+      '1': 'language_code',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '9': 0,
+      '10': 'languageCode',
+      '17': true
+    },
+    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'pageToken'},
+  ],
+  '8': [
+    {'1': '_language_code'},
+  ],
+};
+
+/// Descriptor for `LookupPublicAlertsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List lookupPublicAlertsRequestDescriptor = $convert.base64Decode(
+    'ChlMb29rdXBQdWJsaWNBbGVydHNSZXF1ZXN0EjQKCGxvY2F0aW9uGAEgASgLMhMuZ29vZ2xlLn'
+    'R5cGUuTGF0TG5nQgPgQQJSCGxvY2F0aW9uEi0KDWxhbmd1YWdlX2NvZGUYAiABKAlCA+BBAUgA'
+    'UgxsYW5ndWFnZUNvZGWIAQESIAoJcGFnZV9zaXplGAMgASgFQgPgQQFSCHBhZ2VTaXplEiIKCn'
+    'BhZ2VfdG9rZW4YBCABKAlCA+BBAVIJcGFnZVRva2VuQhAKDl9sYW5ndWFnZV9jb2Rl');
+
+@$core.Deprecated('Use lookupPublicAlertsResponseDescriptor instead')
+const LookupPublicAlertsResponse$json = {
+  '1': 'LookupPublicAlertsResponse',
+  '2': [
+    {
+      '1': 'weather_alerts',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.maps.weather.v1.PublicAlerts',
+      '10': 'weatherAlerts'
+    },
+    {'1': 'region_code', '3': 2, '4': 1, '5': 9, '10': 'regionCode'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+/// Descriptor for `LookupPublicAlertsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List lookupPublicAlertsResponseDescriptor = $convert.base64Decode(
+    'ChpMb29rdXBQdWJsaWNBbGVydHNSZXNwb25zZRJLCg53ZWF0aGVyX2FsZXJ0cxgBIAMoCzIkLm'
+    'dvb2dsZS5tYXBzLndlYXRoZXIudjEuUHVibGljQWxlcnRzUg13ZWF0aGVyQWxlcnRzEh8KC3Jl'
+    'Z2lvbl9jb2RlGAIgASgJUgpyZWdpb25Db2RlEiYKD25leHRfcGFnZV90b2tlbhgDIAEoCVINbm'
+    'V4dFBhZ2VUb2tlbg==');

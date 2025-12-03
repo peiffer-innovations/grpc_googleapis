@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/analytics/admin/v1alpha/resources.proto
-//
-// @dart = 2.12
+// Generated from google/analytics/admin/v1alpha/resources.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -136,7 +138,11 @@ const ChangeHistoryResourceType$json = {
     {'1': 'ADSENSE_LINK', '2': 27},
     {'1': 'AUDIENCE', '2': 28},
     {'1': 'EVENT_CREATE_RULE', '2': 29},
+    {'1': 'KEY_EVENT', '2': 30},
     {'1': 'CALCULATED_METRIC', '2': 31},
+    {'1': 'REPORTING_DATA_ANNOTATION', '2': 32},
+    {'1': 'SUBPROPERTY_SYNC_CONFIG', '2': 33},
+    {'1': 'REPORTING_IDENTITY_SETTINGS', '2': 34},
   ],
 };
 
@@ -154,7 +160,9 @@ final $typed_data.Uint8List changeHistoryResourceTypeDescriptor = $convert.base6
     'VFUllfTElOSxAXEiEKHUVOSEFOQ0VEX01FQVNVUkVNRU5UX1NFVFRJTkdTEBgSGwoXREFUQV9S'
     'RURBQ1RJT05fU0VUVElOR1MQGRInCiNTS0FETkVUV09SS19DT05WRVJTSU9OX1ZBTFVFX1NDSE'
     'VNQRAaEhAKDEFEU0VOU0VfTElOSxAbEgwKCEFVRElFTkNFEBwSFQoRRVZFTlRfQ1JFQVRFX1JV'
-    'TEUQHRIVChFDQUxDVUxBVEVEX01FVFJJQxAf');
+    'TEUQHRINCglLRVlfRVZFTlQQHhIVChFDQUxDVUxBVEVEX01FVFJJQxAfEh0KGVJFUE9SVElOR1'
+    '9EQVRBX0FOTk9UQVRJT04QIBIbChdTVUJQUk9QRVJUWV9TWU5DX0NPTkZJRxAhEh8KG1JFUE9S'
+    'VElOR19JREVOVElUWV9TRVRUSU5HUxAi');
 
 @$core.Deprecated('Use googleSignalsStateDescriptor instead')
 const GoogleSignalsState$json = {
@@ -702,7 +710,8 @@ const DataSharingSettings$json = {
       '3': 4,
       '4': 1,
       '5': 8,
-      '10': 'sharingWithGoogleAnySalesEnabled'
+      '8': {'3': true},
+      '10': 'sharingWithGoogleAnySalesEnabled',
     },
     {
       '1': 'sharing_with_google_products_enabled',
@@ -727,13 +736,13 @@ final $typed_data.Uint8List dataSharingSettingsDescriptor = $convert.base64Decod
     'ChNEYXRhU2hhcmluZ1NldHRpbmdzEhcKBG5hbWUYASABKAlCA+BBA1IEbmFtZRJMCiNzaGFyaW'
     '5nX3dpdGhfZ29vZ2xlX3N1cHBvcnRfZW5hYmxlZBgCIAEoCFIfc2hhcmluZ1dpdGhHb29nbGVT'
     'dXBwb3J0RW5hYmxlZBJZCipzaGFyaW5nX3dpdGhfZ29vZ2xlX2Fzc2lnbmVkX3NhbGVzX2VuYW'
-    'JsZWQYAyABKAhSJXNoYXJpbmdXaXRoR29vZ2xlQXNzaWduZWRTYWxlc0VuYWJsZWQSTwolc2hh'
-    'cmluZ193aXRoX2dvb2dsZV9hbnlfc2FsZXNfZW5hYmxlZBgEIAEoCFIgc2hhcmluZ1dpdGhHb2'
-    '9nbGVBbnlTYWxlc0VuYWJsZWQSTgokc2hhcmluZ193aXRoX2dvb2dsZV9wcm9kdWN0c19lbmFi'
-    'bGVkGAUgASgIUiBzaGFyaW5nV2l0aEdvb2dsZVByb2R1Y3RzRW5hYmxlZBI9ChtzaGFyaW5nX3'
-    'dpdGhfb3RoZXJzX2VuYWJsZWQYBiABKAhSGHNoYXJpbmdXaXRoT3RoZXJzRW5hYmxlZDpe6kFb'
-    'CjFhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhU2hhcmluZ1NldHRpbmdzEiZhY2'
-    'NvdW50cy97YWNjb3VudH0vZGF0YVNoYXJpbmdTZXR0aW5ncw==');
+    'JsZWQYAyABKAhSJXNoYXJpbmdXaXRoR29vZ2xlQXNzaWduZWRTYWxlc0VuYWJsZWQSUwolc2hh'
+    'cmluZ193aXRoX2dvb2dsZV9hbnlfc2FsZXNfZW5hYmxlZBgEIAEoCEICGAFSIHNoYXJpbmdXaX'
+    'RoR29vZ2xlQW55U2FsZXNFbmFibGVkEk4KJHNoYXJpbmdfd2l0aF9nb29nbGVfcHJvZHVjdHNf'
+    'ZW5hYmxlZBgFIAEoCFIgc2hhcmluZ1dpdGhHb29nbGVQcm9kdWN0c0VuYWJsZWQSPQobc2hhcm'
+    'luZ193aXRoX290aGVyc19lbmFibGVkGAYgASgIUhhzaGFyaW5nV2l0aE90aGVyc0VuYWJsZWQ6'
+    'XupBWwoxYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRGF0YVNoYXJpbmdTZXR0aW5ncx'
+    'ImYWNjb3VudHMve2FjY291bnR9L2RhdGFTaGFyaW5nU2V0dGluZ3M=');
 
 @$core.Deprecated('Use accountSummaryDescriptor instead')
 const AccountSummary$json = {
@@ -1300,6 +1309,15 @@ const ChangeHistoryChange_ChangeHistoryResource$json = {
       '10': 'eventCreateRule'
     },
     {
+      '1': 'key_event',
+      '3': 30,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.KeyEvent',
+      '9': 0,
+      '10': 'keyEvent'
+    },
+    {
       '1': 'calculated_metric',
       '3': 31,
       '4': 1,
@@ -1307,6 +1325,33 @@ const ChangeHistoryChange_ChangeHistoryResource$json = {
       '6': '.google.analytics.admin.v1alpha.CalculatedMetric',
       '9': 0,
       '10': 'calculatedMetric'
+    },
+    {
+      '1': 'reporting_data_annotation',
+      '3': 32,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ReportingDataAnnotation',
+      '9': 0,
+      '10': 'reportingDataAnnotation'
+    },
+    {
+      '1': 'subproperty_sync_config',
+      '3': 33,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.SubpropertySyncConfig',
+      '9': 0,
+      '10': 'subpropertySyncConfig'
+    },
+    {
+      '1': 'reporting_identity_settings',
+      '3': 34,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ReportingIdentitySettings',
+      '9': 0,
+      '10': 'reportingIdentitySettings'
     },
   ],
   '8': [
@@ -1322,7 +1367,7 @@ final $typed_data.Uint8List changeHistoryChangeDescriptor = $convert.base64Decod
     'NzLmFkbWluLnYxYWxwaGEuQ2hhbmdlSGlzdG9yeUNoYW5nZS5DaGFuZ2VIaXN0b3J5UmVzb3Vy'
     'Y2VSFHJlc291cmNlQmVmb3JlQ2hhbmdlEn0KFXJlc291cmNlX2FmdGVyX2NoYW5nZRgEIAEoCz'
     'JJLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5DaGFuZ2VIaXN0b3J5Q2hhbmdlLkNo'
-    'YW5nZUhpc3RvcnlSZXNvdXJjZVITcmVzb3VyY2VBZnRlckNoYW5nZRqHFAoVQ2hhbmdlSGlzdG'
+    'YW5nZUhpc3RvcnlSZXNvdXJjZVITcmVzb3VyY2VBZnRlckNoYW5nZRq1FwoVQ2hhbmdlSGlzdG'
     '9yeVJlc291cmNlEkMKB2FjY291bnQYASABKAsyJy5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYx'
     'YWxwaGEuQWNjb3VudEgAUgdhY2NvdW50EkYKCHByb3BlcnR5GAIgASgLMiguZ29vZ2xlLmFuYW'
     'x5dGljcy5hZG1pbi52MWFscGhhLlByb3BlcnR5SABSCHByb3BlcnR5ElMKDWZpcmViYXNlX2xp'
@@ -1367,9 +1412,16 @@ final $typed_data.Uint8List changeHistoryChangeDescriptor = $convert.base64Decod
     'aW5rEkYKCGF1ZGllbmNlGBwgASgLMiguZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLk'
     'F1ZGllbmNlSABSCGF1ZGllbmNlEl0KEWV2ZW50X2NyZWF0ZV9ydWxlGB0gASgLMi8uZ29vZ2xl'
     'LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkV2ZW50Q3JlYXRlUnVsZUgAUg9ldmVudENyZWF0ZV'
-    'J1bGUSXwoRY2FsY3VsYXRlZF9tZXRyaWMYHyABKAsyMC5nb29nbGUuYW5hbHl0aWNzLmFkbWlu'
-    'LnYxYWxwaGEuQ2FsY3VsYXRlZE1ldHJpY0gAUhBjYWxjdWxhdGVkTWV0cmljQgoKCHJlc291cm'
-    'Nl');
+    'J1bGUSRwoJa2V5X2V2ZW50GB4gASgLMiguZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh'
+    'LktleUV2ZW50SABSCGtleUV2ZW50El8KEWNhbGN1bGF0ZWRfbWV0cmljGB8gASgLMjAuZ29vZ2'
+    'xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNhbGN1bGF0ZWRNZXRyaWNIAFIQY2FsY3VsYXRl'
+    'ZE1ldHJpYxJ1ChlyZXBvcnRpbmdfZGF0YV9hbm5vdGF0aW9uGCAgASgLMjcuZ29vZ2xlLmFuYW'
+    'x5dGljcy5hZG1pbi52MWFscGhhLlJlcG9ydGluZ0RhdGFBbm5vdGF0aW9uSABSF3JlcG9ydGlu'
+    'Z0RhdGFBbm5vdGF0aW9uEm8KF3N1YnByb3BlcnR5X3N5bmNfY29uZmlnGCEgASgLMjUuZ29vZ2'
+    'xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlN1YnByb3BlcnR5U3luY0NvbmZpZ0gAUhVzdWJw'
+    'cm9wZXJ0eVN5bmNDb25maWcSewobcmVwb3J0aW5nX2lkZW50aXR5X3NldHRpbmdzGCIgASgLMj'
+    'kuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlJlcG9ydGluZ0lkZW50aXR5U2V0dGlu'
+    'Z3NIAFIZcmVwb3J0aW5nSWRlbnRpdHlTZXR0aW5nc0IKCghyZXNvdXJjZQ==');
 
 @$core.Deprecated('Use displayVideo360AdvertiserLinkDescriptor instead')
 const DisplayVideo360AdvertiserLink$json = {
@@ -2504,20 +2556,6 @@ final $typed_data.Uint8List enhancedMeasurementSettingsDescriptor = $convert.bas
     '5jZWRNZWFzdXJlbWVudFNldHRpbmdzEktwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZGF0YVN0cmVh'
     'bXMve2RhdGFfc3RyZWFtfS9lbmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3M=');
 
-@$core.Deprecated('Use connectedSiteTagDescriptor instead')
-const ConnectedSiteTag$json = {
-  '1': 'ConnectedSiteTag',
-  '2': [
-    {'1': 'display_name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'displayName'},
-    {'1': 'tag_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'tagId'},
-  ],
-};
-
-/// Descriptor for `ConnectedSiteTag`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List connectedSiteTagDescriptor = $convert.base64Decode(
-    'ChBDb25uZWN0ZWRTaXRlVGFnEiYKDGRpc3BsYXlfbmFtZRgBIAEoCUID4EECUgtkaXNwbGF5Tm'
-    'FtZRIaCgZ0YWdfaWQYAiABKAlCA+BBAlIFdGFnSWQ=');
-
 @$core.Deprecated('Use dataRedactionSettingsDescriptor instead')
 const DataRedactionSettings$json = {
   '1': 'DataRedactionSettings',
@@ -2607,3 +2645,206 @@ final $typed_data.Uint8List rollupPropertySourceLinkDescriptor = $convert.base64
     'VydGllcy97cHJvcGVydHl9L3JvbGx1cFByb3BlcnR5U291cmNlTGlua3Mve3JvbGx1cF9wcm9w'
     'ZXJ0eV9zb3VyY2VfbGlua30qGXJvbGx1cFByb3BlcnR5U291cmNlTGlua3MyGHJvbGx1cFByb3'
     'BlcnR5U291cmNlTGluaw==');
+
+@$core.Deprecated('Use reportingDataAnnotationDescriptor instead')
+const ReportingDataAnnotation$json = {
+  '1': 'ReportingDataAnnotation',
+  '2': [
+    {
+      '1': 'annotation_date',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.type.Date',
+      '9': 0,
+      '10': 'annotationDate'
+    },
+    {
+      '1': 'annotation_date_range',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ReportingDataAnnotation.DateRange',
+      '9': 0,
+      '10': 'annotationDateRange'
+    },
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'title', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'title'},
+    {'1': 'description', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'description'},
+    {
+      '1': 'color',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.google.analytics.admin.v1alpha.ReportingDataAnnotation.Color',
+      '8': {},
+      '10': 'color'
+    },
+    {
+      '1': 'system_generated',
+      '3': 7,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'systemGenerated'
+    },
+  ],
+  '3': [ReportingDataAnnotation_DateRange$json],
+  '4': [ReportingDataAnnotation_Color$json],
+  '7': {},
+  '8': [
+    {'1': 'target'},
+  ],
+};
+
+@$core.Deprecated('Use reportingDataAnnotationDescriptor instead')
+const ReportingDataAnnotation_DateRange$json = {
+  '1': 'DateRange',
+  '2': [
+    {
+      '1': 'start_date',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.type.Date',
+      '8': {},
+      '10': 'startDate'
+    },
+    {
+      '1': 'end_date',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.type.Date',
+      '8': {},
+      '10': 'endDate'
+    },
+  ],
+};
+
+@$core.Deprecated('Use reportingDataAnnotationDescriptor instead')
+const ReportingDataAnnotation_Color$json = {
+  '1': 'Color',
+  '2': [
+    {'1': 'COLOR_UNSPECIFIED', '2': 0},
+    {'1': 'PURPLE', '2': 1},
+    {'1': 'BROWN', '2': 2},
+    {'1': 'BLUE', '2': 3},
+    {'1': 'GREEN', '2': 4},
+    {'1': 'RED', '2': 5},
+    {'1': 'CYAN', '2': 6},
+    {'1': 'ORANGE', '2': 7},
+  ],
+};
+
+/// Descriptor for `ReportingDataAnnotation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List reportingDataAnnotationDescriptor = $convert.base64Decode(
+    'ChdSZXBvcnRpbmdEYXRhQW5ub3RhdGlvbhI8Cg9hbm5vdGF0aW9uX2RhdGUYBCABKAsyES5nb2'
+    '9nbGUudHlwZS5EYXRlSABSDmFubm90YXRpb25EYXRlEncKFWFubm90YXRpb25fZGF0ZV9yYW5n'
+    'ZRgFIAEoCzJBLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5SZXBvcnRpbmdEYXRhQW'
+    '5ub3RhdGlvbi5EYXRlUmFuZ2VIAFITYW5ub3RhdGlvbkRhdGVSYW5nZRIaCgRuYW1lGAEgASgJ'
+    'QgbgQQjgQQJSBG5hbWUSGQoFdGl0bGUYAiABKAlCA+BBAlIFdGl0bGUSJQoLZGVzY3JpcHRpb2'
+    '4YAyABKAlCA+BBAVILZGVzY3JpcHRpb24SWAoFY29sb3IYBiABKA4yPS5nb29nbGUuYW5hbHl0'
+    'aWNzLmFkbWluLnYxYWxwaGEuUmVwb3J0aW5nRGF0YUFubm90YXRpb24uQ29sb3JCA+BBAlIFY2'
+    '9sb3ISLgoQc3lzdGVtX2dlbmVyYXRlZBgHIAEoCEID4EEDUg9zeXN0ZW1HZW5lcmF0ZWQadQoJ'
+    'RGF0ZVJhbmdlEjUKCnN0YXJ0X2RhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQJSCX'
+    'N0YXJ0RGF0ZRIxCghlbmRfZGF0ZRgCIAEoCzIRLmdvb2dsZS50eXBlLkRhdGVCA+BBAlIHZW5k'
+    'RGF0ZSJpCgVDb2xvchIVChFDT0xPUl9VTlNQRUNJRklFRBAAEgoKBlBVUlBMRRABEgkKBUJST1'
+    'dOEAISCAoEQkxVRRADEgkKBUdSRUVOEAQSBwoDUkVEEAUSCAoEQ1lBThAGEgoKBk9SQU5HRRAH'
+    'OroB6kG2AQo1YW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUmVwb3J0aW5nRGF0YUFubm'
+    '90YXRpb24SSnByb3BlcnRpZXMve3Byb3BlcnR5fS9yZXBvcnRpbmdEYXRhQW5ub3RhdGlvbnMv'
+    'e3JlcG9ydGluZ19kYXRhX2Fubm90YXRpb259KhhyZXBvcnRpbmdEYXRhQW5ub3RhdGlvbnMyF3'
+    'JlcG9ydGluZ0RhdGFBbm5vdGF0aW9uQggKBnRhcmdldA==');
+
+@$core.Deprecated('Use subpropertySyncConfigDescriptor instead')
+const SubpropertySyncConfig$json = {
+  '1': 'SubpropertySyncConfig',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {
+      '1': 'apply_to_property',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'applyToProperty'
+    },
+    {
+      '1': 'custom_dimension_and_metric_sync_mode',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.analytics.admin.v1alpha.SubpropertySyncConfig.SynchronizationMode',
+      '8': {},
+      '10': 'customDimensionAndMetricSyncMode'
+    },
+  ],
+  '4': [SubpropertySyncConfig_SynchronizationMode$json],
+  '7': {},
+};
+
+@$core.Deprecated('Use subpropertySyncConfigDescriptor instead')
+const SubpropertySyncConfig_SynchronizationMode$json = {
+  '1': 'SynchronizationMode',
+  '2': [
+    {'1': 'SYNCHRONIZATION_MODE_UNSPECIFIED', '2': 0},
+    {'1': 'NONE', '2': 1},
+    {'1': 'ALL', '2': 2},
+  ],
+};
+
+/// Descriptor for `SubpropertySyncConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List subpropertySyncConfigDescriptor = $convert.base64Decode(
+    'ChVTdWJwcm9wZXJ0eVN5bmNDb25maWcSGgoEbmFtZRgBIAEoCUIG4EEI4EEDUgRuYW1lEjIKEW'
+    'FwcGx5X3RvX3Byb3BlcnR5GAIgASgJQgbgQQXgQQNSD2FwcGx5VG9Qcm9wZXJ0eRKfAQolY3Vz'
+    'dG9tX2RpbWVuc2lvbl9hbmRfbWV0cmljX3N5bmNfbW9kZRgDIAEoDjJJLmdvb2dsZS5hbmFseX'
+    'RpY3MuYWRtaW4udjFhbHBoYS5TdWJwcm9wZXJ0eVN5bmNDb25maWcuU3luY2hyb25pemF0aW9u'
+    'TW9kZUID4EECUiBjdXN0b21EaW1lbnNpb25BbmRNZXRyaWNTeW5jTW9kZSJOChNTeW5jaHJvbm'
+    'l6YXRpb25Nb2RlEiQKIFNZTkNIUk9OSVpBVElPTl9NT0RFX1VOU1BFQ0lGSUVEEAASCAoETk9O'
+    'RRABEgcKA0FMTBACOrAB6kGsAQozYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vU3VicH'
+    'JvcGVydHlTeW5jQ29uZmlnEkZwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vc3VicHJvcGVydHlTeW5j'
+    'Q29uZmlncy97c3VicHJvcGVydHlfc3luY19jb25maWd9KhZzdWJwcm9wZXJ0eVN5bmNDb25maW'
+    'dzMhVzdWJwcm9wZXJ0eVN5bmNDb25maWc=');
+
+@$core.Deprecated('Use reportingIdentitySettingsDescriptor instead')
+const ReportingIdentitySettings$json = {
+  '1': 'ReportingIdentitySettings',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {
+      '1': 'reporting_identity',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.analytics.admin.v1alpha.ReportingIdentitySettings.ReportingIdentity',
+      '10': 'reportingIdentity'
+    },
+  ],
+  '4': [ReportingIdentitySettings_ReportingIdentity$json],
+  '7': {},
+};
+
+@$core.Deprecated('Use reportingIdentitySettingsDescriptor instead')
+const ReportingIdentitySettings_ReportingIdentity$json = {
+  '1': 'ReportingIdentity',
+  '2': [
+    {'1': 'IDENTITY_BLENDING_STRATEGY_UNSPECIFIED', '2': 0},
+    {'1': 'BLENDED', '2': 1},
+    {'1': 'OBSERVED', '2': 2},
+    {'1': 'DEVICE_BASED', '2': 3},
+  ],
+};
+
+/// Descriptor for `ReportingIdentitySettings`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List reportingIdentitySettingsDescriptor = $convert.base64Decode(
+    'ChlSZXBvcnRpbmdJZGVudGl0eVNldHRpbmdzEhoKBG5hbWUYASABKAlCBuBBCOBBA1IEbmFtZR'
+    'J6ChJyZXBvcnRpbmdfaWRlbnRpdHkYAiABKA4ySy5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYx'
+    'YWxwaGEuUmVwb3J0aW5nSWRlbnRpdHlTZXR0aW5ncy5SZXBvcnRpbmdJZGVudGl0eVIRcmVwb3'
+    'J0aW5nSWRlbnRpdHkibAoRUmVwb3J0aW5nSWRlbnRpdHkSKgomSURFTlRJVFlfQkxFTkRJTkdf'
+    'U1RSQVRFR1lfVU5TUEVDSUZJRUQQABILCgdCTEVOREVEEAESDAoIT0JTRVJWRUQQAhIQCgxERV'
+    'ZJQ0VfQkFTRUQQAzqkAepBoAEKN2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1JlcG9y'
+    'dGluZ0lkZW50aXR5U2V0dGluZ3MSL3Byb3BlcnRpZXMve3Byb3BlcnR5fS9yZXBvcnRpbmdJZG'
+    'VudGl0eVNldHRpbmdzKhlyZXBvcnRpbmdJZGVudGl0eVNldHRpbmdzMhlyZXBvcnRpbmdJZGVu'
+    'dGl0eVNldHRpbmdz');

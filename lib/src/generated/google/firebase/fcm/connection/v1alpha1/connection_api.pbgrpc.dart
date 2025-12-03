@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/firebase/fcm/connection/v1alpha1/connection_api.proto
-//
-// @dart = 2.12
+// Generated from google/firebase/fcm/connection/v1alpha1/connection_api.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:async' as $async;
 import 'dart:core' as $core;
@@ -19,25 +20,45 @@ import 'connection_api.pb.dart' as $0;
 
 export 'connection_api.pb.dart';
 
+/// FCM's service to create client connections to send/receive messages.
 @$pb.GrpcServiceName('google.firebase.fcm.connection.v1alpha1.ConnectionApi')
 class ConnectionApiClient extends $grpc.Client {
+  /// The hostname for this service.
+  static const $core.String defaultHost = '';
+
+  /// OAuth scopes needed for the client.
+  static const $core.List<$core.String> oauthScopes = [
+    '',
+  ];
+
+  ConnectionApiClient(super.channel, {super.options, super.interceptors});
+
+  /// Creates a streaming connection with FCM to send messages and their
+  /// respective ACKs.
+  ///
+  /// The client credentials need to be passed in the [gRPC
+  /// Metadata](https://grpc.io/docs/guides/concepts.html#metadata). The Format
+  /// of the header is:
+  ///   Key: "authorization"
+  ///   Value: "Checkin [client_id:secret]"
+  ///
+  ///
+  /// The project's API key also needs to be sent to authorize the project.
+  /// That can be set in the X-Goog-Api-Key Metadata header.
+  $grpc.ResponseStream<$0.DownstreamResponse> connect(
+    $async.Stream<$0.UpstreamRequest> request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(_$connect, request, options: options);
+  }
+
+  // method descriptors
+
   static final _$connect =
       $grpc.ClientMethod<$0.UpstreamRequest, $0.DownstreamResponse>(
           '/google.firebase.fcm.connection.v1alpha1.ConnectionApi/Connect',
           ($0.UpstreamRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $0.DownstreamResponse.fromBuffer(value));
-
-  ConnectionApiClient($grpc.ClientChannel channel,
-      {$grpc.CallOptions? options,
-      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
-      : super(channel, options: options, interceptors: interceptors);
-
-  $grpc.ResponseStream<$0.DownstreamResponse> connect(
-      $async.Stream<$0.UpstreamRequest> request,
-      {$grpc.CallOptions? options}) {
-    return $createStreamingCall(_$connect, request, options: options);
-  }
+          $0.DownstreamResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('google.firebase.fcm.connection.v1alpha1.ConnectionApi')

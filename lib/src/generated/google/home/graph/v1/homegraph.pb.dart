@@ -1,20 +1,24 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/home/graph/v1/homegraph.proto
-//
-// @dart = 2.12
+// Generated from google/home/graph/v1/homegraph.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/struct.pb.dart'
+    as $2;
 
-import '../../../protobuf/struct.pb.dart' as $2;
 import 'device.pb.dart' as $3;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Request type for the
 /// [`RequestSyncDevices`](#google.home.graph.v1.HomeGraphApiService.RequestSyncDevices)
@@ -24,22 +28,20 @@ class RequestSyncDevicesRequest extends $pb.GeneratedMessage {
     $core.String? agentUserId,
     $core.bool? async,
   }) {
-    final $result = create();
-    if (agentUserId != null) {
-      $result.agentUserId = agentUserId;
-    }
-    if (async != null) {
-      $result.async = async;
-    }
-    return $result;
+    final result = create();
+    if (agentUserId != null) result.agentUserId = agentUserId;
+    if (async != null) result.async = async;
+    return result;
   }
-  RequestSyncDevicesRequest._() : super();
-  factory RequestSyncDevicesRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RequestSyncDevicesRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RequestSyncDevicesRequest._();
+
+  factory RequestSyncDevicesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RequestSyncDevicesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RequestSyncDevicesRequest',
@@ -50,26 +52,21 @@ class RequestSyncDevicesRequest extends $pb.GeneratedMessage {
     ..aOB(2, _omitFieldNames ? '' : 'async')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RequestSyncDevicesRequest clone() =>
-      RequestSyncDevicesRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RequestSyncDevicesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RequestSyncDevicesRequest copyWith(
           void Function(RequestSyncDevicesRequest) updates) =>
       super.copyWith((message) => updates(message as RequestSyncDevicesRequest))
           as RequestSyncDevicesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RequestSyncDevicesRequest create() => RequestSyncDevicesRequest._();
+  @$core.override
   RequestSyncDevicesRequest createEmptyInstance() => create();
-  static $pb.PbList<RequestSyncDevicesRequest> createRepeated() =>
-      $pb.PbList<RequestSyncDevicesRequest>();
   @$core.pragma('dart2js:noInline')
   static RequestSyncDevicesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RequestSyncDevicesRequest>(create);
@@ -79,14 +76,11 @@ class RequestSyncDevicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get agentUserId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set agentUserId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set agentUserId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAgentUserId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAgentUserId() => clearField(1);
+  void clearAgentUserId() => $_clearField(1);
 
   /// Optional. If set, the request will be added to a queue and a response will
   /// be returned immediately. This enables concurrent requests for the given
@@ -94,31 +88,30 @@ class RequestSyncDevicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool get async => $_getBF(1);
   @$pb.TagNumber(2)
-  set async($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set async($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAsync() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAsync() => clearField(2);
+  void clearAsync() => $_clearField(2);
 }
 
-///  Response type for the
-///  [`RequestSyncDevices`](#google.home.graph.v1.HomeGraphApiService.RequestSyncDevices)
-///  call.
+/// Response type for the
+/// [`RequestSyncDevices`](#google.home.graph.v1.HomeGraphApiService.RequestSyncDevices)
+/// call.
 ///
-///  Intentionally empty upon success. An HTTP response code is returned
-///  with more details upon failure.
+/// Intentionally empty upon success. An HTTP response code is returned
+/// with more details upon failure.
 class RequestSyncDevicesResponse extends $pb.GeneratedMessage {
   factory RequestSyncDevicesResponse() => create();
-  RequestSyncDevicesResponse._() : super();
-  factory RequestSyncDevicesResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RequestSyncDevicesResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RequestSyncDevicesResponse._();
+
+  factory RequestSyncDevicesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RequestSyncDevicesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RequestSyncDevicesResponse',
@@ -127,60 +120,55 @@ class RequestSyncDevicesResponse extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RequestSyncDevicesResponse clone() =>
-      RequestSyncDevicesResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RequestSyncDevicesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RequestSyncDevicesResponse copyWith(
           void Function(RequestSyncDevicesResponse) updates) =>
       super.copyWith(
               (message) => updates(message as RequestSyncDevicesResponse))
           as RequestSyncDevicesResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RequestSyncDevicesResponse create() => RequestSyncDevicesResponse._();
+  @$core.override
   RequestSyncDevicesResponse createEmptyInstance() => create();
-  static $pb.PbList<RequestSyncDevicesResponse> createRepeated() =>
-      $pb.PbList<RequestSyncDevicesResponse>();
   @$core.pragma('dart2js:noInline')
   static RequestSyncDevicesResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RequestSyncDevicesResponse>(create);
   static RequestSyncDevicesResponse? _defaultInstance;
 }
 
-///  Request type for the
-///  [`ReportStateAndNotification`](#google.home.graph.v1.HomeGraphApiService.ReportStateAndNotification)
-///  call. It may include states, notifications, or both. States and notifications
-///  are defined per `device_id` (for example, "123" and "456" in the following
-///  example).
+/// Request type for the
+/// [`ReportStateAndNotification`](#google.home.graph.v1.HomeGraphApiService.ReportStateAndNotification)
+/// call. It may include states, notifications, or both. States and notifications
+/// are defined per `device_id` (for example, "123" and "456" in the following
+/// example).
 ///
-///  Example:
+/// Example:
 ///
-///  ```json
-///  {
-///    "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf",
-///    "agentUserId": "1234",
-///    "payload": {
-///      "devices": {
-///        "states": {
-///          "123": {
-///            "on": true
-///          },
-///          "456": {
-///            "on": true,
-///            "brightness": 10
-///          }
-///        },
-///      }
-///    }
-///  }
-///  ```
+/// ```json
+/// {
+///   "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf",
+///   "agentUserId": "1234",
+///   "payload": {
+///     "devices": {
+///       "states": {
+///         "123": {
+///           "on": true
+///         },
+///         "456": {
+///           "on": true,
+///           "brightness": 10
+///         }
+///       },
+///     }
+///   }
+/// }
+/// ```
 class ReportStateAndNotificationRequest extends $pb.GeneratedMessage {
   factory ReportStateAndNotificationRequest({
     $core.String? requestId,
@@ -189,32 +177,24 @@ class ReportStateAndNotificationRequest extends $pb.GeneratedMessage {
     $core.String? eventId,
     @$core.Deprecated('This field is deprecated.') $core.String? followUpToken,
   }) {
-    final $result = create();
-    if (requestId != null) {
-      $result.requestId = requestId;
-    }
-    if (agentUserId != null) {
-      $result.agentUserId = agentUserId;
-    }
-    if (payload != null) {
-      $result.payload = payload;
-    }
-    if (eventId != null) {
-      $result.eventId = eventId;
-    }
-    if (followUpToken != null) {
-      // ignore: deprecated_member_use_from_same_package
-      $result.followUpToken = followUpToken;
-    }
-    return $result;
+    final result = create();
+    if (requestId != null) result.requestId = requestId;
+    if (agentUserId != null) result.agentUserId = agentUserId;
+    if (payload != null) result.payload = payload;
+    if (eventId != null) result.eventId = eventId;
+    if (followUpToken != null) result.followUpToken = followUpToken;
+    return result;
   }
-  ReportStateAndNotificationRequest._() : super();
-  factory ReportStateAndNotificationRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ReportStateAndNotificationRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ReportStateAndNotificationRequest._();
+
+  factory ReportStateAndNotificationRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReportStateAndNotificationRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ReportStateAndNotificationRequest',
@@ -229,28 +209,23 @@ class ReportStateAndNotificationRequest extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'followUpToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ReportStateAndNotificationRequest clone() =>
-      ReportStateAndNotificationRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportStateAndNotificationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ReportStateAndNotificationRequest copyWith(
           void Function(ReportStateAndNotificationRequest) updates) =>
       super.copyWith((message) =>
               updates(message as ReportStateAndNotificationRequest))
           as ReportStateAndNotificationRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ReportStateAndNotificationRequest create() =>
       ReportStateAndNotificationRequest._();
+  @$core.override
   ReportStateAndNotificationRequest createEmptyInstance() => create();
-  static $pb.PbList<ReportStateAndNotificationRequest> createRepeated() =>
-      $pb.PbList<ReportStateAndNotificationRequest>();
   @$core.pragma('dart2js:noInline')
   static ReportStateAndNotificationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReportStateAndNotificationRequest>(
@@ -261,40 +236,31 @@ class ReportStateAndNotificationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get requestId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set requestId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set requestId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRequestId() => clearField(1);
+  void clearRequestId() => $_clearField(1);
 
   /// Required. Third-party user ID.
   @$pb.TagNumber(2)
   $core.String get agentUserId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set agentUserId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set agentUserId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAgentUserId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAgentUserId() => clearField(2);
+  void clearAgentUserId() => $_clearField(2);
 
   /// Required. State of devices to update and notification metadata for devices.
   @$pb.TagNumber(3)
   StateAndNotificationPayload get payload => $_getN(2);
   @$pb.TagNumber(3)
-  set payload(StateAndNotificationPayload v) {
-    setField(3, v);
-  }
-
+  set payload(StateAndNotificationPayload value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasPayload() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPayload() => clearField(3);
+  void clearPayload() => $_clearField(3);
   @$pb.TagNumber(3)
   StateAndNotificationPayload ensurePayload() => $_ensure(2);
 
@@ -302,14 +268,11 @@ class ReportStateAndNotificationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get eventId => $_getSZ(3);
   @$pb.TagNumber(4)
-  set eventId($core.String v) {
-    $_setString(3, v);
-  }
-
+  set eventId($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasEventId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEventId() => clearField(4);
+  void clearEventId() => $_clearField(4);
 
   /// Deprecated.
   @$core.Deprecated('This field is deprecated.')
@@ -317,16 +280,13 @@ class ReportStateAndNotificationRequest extends $pb.GeneratedMessage {
   $core.String get followUpToken => $_getSZ(4);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  set followUpToken($core.String v) {
-    $_setString(4, v);
-  }
-
+  set followUpToken($core.String value) => $_setString(4, value);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
   $core.bool hasFollowUpToken() => $_has(4);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(5)
-  void clearFollowUpToken() => clearField(5);
+  void clearFollowUpToken() => $_clearField(5);
 }
 
 /// Response type for the
@@ -336,19 +296,20 @@ class ReportStateAndNotificationResponse extends $pb.GeneratedMessage {
   factory ReportStateAndNotificationResponse({
     $core.String? requestId,
   }) {
-    final $result = create();
-    if (requestId != null) {
-      $result.requestId = requestId;
-    }
-    return $result;
+    final result = create();
+    if (requestId != null) result.requestId = requestId;
+    return result;
   }
-  ReportStateAndNotificationResponse._() : super();
-  factory ReportStateAndNotificationResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ReportStateAndNotificationResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ReportStateAndNotificationResponse._();
+
+  factory ReportStateAndNotificationResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReportStateAndNotificationResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ReportStateAndNotificationResponse',
@@ -358,28 +319,23 @@ class ReportStateAndNotificationResponse extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'requestId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ReportStateAndNotificationResponse clone() =>
-      ReportStateAndNotificationResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportStateAndNotificationResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ReportStateAndNotificationResponse copyWith(
           void Function(ReportStateAndNotificationResponse) updates) =>
       super.copyWith((message) =>
               updates(message as ReportStateAndNotificationResponse))
           as ReportStateAndNotificationResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ReportStateAndNotificationResponse create() =>
       ReportStateAndNotificationResponse._();
+  @$core.override
   ReportStateAndNotificationResponse createEmptyInstance() => create();
-  static $pb.PbList<ReportStateAndNotificationResponse> createRepeated() =>
-      $pb.PbList<ReportStateAndNotificationResponse>();
   @$core.pragma('dart2js:noInline')
   static ReportStateAndNotificationResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReportStateAndNotificationResponse>(
@@ -391,14 +347,11 @@ class ReportStateAndNotificationResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get requestId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set requestId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set requestId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRequestId() => clearField(1);
+  void clearRequestId() => $_clearField(1);
 }
 
 /// Payload containing the state and notification information for devices.
@@ -406,19 +359,19 @@ class StateAndNotificationPayload extends $pb.GeneratedMessage {
   factory StateAndNotificationPayload({
     ReportStateAndNotificationDevice? devices,
   }) {
-    final $result = create();
-    if (devices != null) {
-      $result.devices = devices;
-    }
-    return $result;
+    final result = create();
+    if (devices != null) result.devices = devices;
+    return result;
   }
-  StateAndNotificationPayload._() : super();
-  factory StateAndNotificationPayload.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory StateAndNotificationPayload.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  StateAndNotificationPayload._();
+
+  factory StateAndNotificationPayload.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StateAndNotificationPayload.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'StateAndNotificationPayload',
@@ -429,28 +382,23 @@ class StateAndNotificationPayload extends $pb.GeneratedMessage {
         subBuilder: ReportStateAndNotificationDevice.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  StateAndNotificationPayload clone() =>
-      StateAndNotificationPayload()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StateAndNotificationPayload clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   StateAndNotificationPayload copyWith(
           void Function(StateAndNotificationPayload) updates) =>
       super.copyWith(
               (message) => updates(message as StateAndNotificationPayload))
           as StateAndNotificationPayload;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static StateAndNotificationPayload create() =>
       StateAndNotificationPayload._();
+  @$core.override
   StateAndNotificationPayload createEmptyInstance() => create();
-  static $pb.PbList<StateAndNotificationPayload> createRepeated() =>
-      $pb.PbList<StateAndNotificationPayload>();
   @$core.pragma('dart2js:noInline')
   static StateAndNotificationPayload getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<StateAndNotificationPayload>(create);
@@ -460,14 +408,11 @@ class StateAndNotificationPayload extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   ReportStateAndNotificationDevice get devices => $_getN(0);
   @$pb.TagNumber(1)
-  set devices(ReportStateAndNotificationDevice v) {
-    setField(1, v);
-  }
-
+  set devices(ReportStateAndNotificationDevice value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasDevices() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDevices() => clearField(1);
+  void clearDevices() => $_clearField(1);
   @$pb.TagNumber(1)
   ReportStateAndNotificationDevice ensureDevices() => $_ensure(0);
 }
@@ -478,22 +423,21 @@ class ReportStateAndNotificationDevice extends $pb.GeneratedMessage {
     $2.Struct? states,
     $2.Struct? notifications,
   }) {
-    final $result = create();
-    if (states != null) {
-      $result.states = states;
-    }
-    if (notifications != null) {
-      $result.notifications = notifications;
-    }
-    return $result;
+    final result = create();
+    if (states != null) result.states = states;
+    if (notifications != null) result.notifications = notifications;
+    return result;
   }
-  ReportStateAndNotificationDevice._() : super();
-  factory ReportStateAndNotificationDevice.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ReportStateAndNotificationDevice.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ReportStateAndNotificationDevice._();
+
+  factory ReportStateAndNotificationDevice.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReportStateAndNotificationDevice.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ReportStateAndNotificationDevice',
@@ -506,28 +450,23 @@ class ReportStateAndNotificationDevice extends $pb.GeneratedMessage {
         subBuilder: $2.Struct.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ReportStateAndNotificationDevice clone() =>
-      ReportStateAndNotificationDevice()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportStateAndNotificationDevice clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ReportStateAndNotificationDevice copyWith(
           void Function(ReportStateAndNotificationDevice) updates) =>
       super.copyWith(
               (message) => updates(message as ReportStateAndNotificationDevice))
           as ReportStateAndNotificationDevice;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ReportStateAndNotificationDevice create() =>
       ReportStateAndNotificationDevice._();
+  @$core.override
   ReportStateAndNotificationDevice createEmptyInstance() => create();
-  static $pb.PbList<ReportStateAndNotificationDevice> createRepeated() =>
-      $pb.PbList<ReportStateAndNotificationDevice>();
   @$core.pragma('dart2js:noInline')
   static ReportStateAndNotificationDevice getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReportStateAndNotificationDevice>(
@@ -540,14 +479,11 @@ class ReportStateAndNotificationDevice extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.Struct get states => $_getN(0);
   @$pb.TagNumber(1)
-  set states($2.Struct v) {
-    setField(1, v);
-  }
-
+  set states($2.Struct value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStates() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStates() => clearField(1);
+  void clearStates() => $_clearField(1);
   @$pb.TagNumber(1)
   $2.Struct ensureStates() => $_ensure(0);
 
@@ -557,14 +493,11 @@ class ReportStateAndNotificationDevice extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $2.Struct get notifications => $_getN(1);
   @$pb.TagNumber(2)
-  set notifications($2.Struct v) {
-    setField(2, v);
-  }
-
+  set notifications($2.Struct value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasNotifications() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNotifications() => clearField(2);
+  void clearNotifications() => $_clearField(2);
   @$pb.TagNumber(2)
   $2.Struct ensureNotifications() => $_ensure(1);
 }
@@ -577,22 +510,20 @@ class DeleteAgentUserRequest extends $pb.GeneratedMessage {
     $core.String? requestId,
     $core.String? agentUserId,
   }) {
-    final $result = create();
-    if (requestId != null) {
-      $result.requestId = requestId;
-    }
-    if (agentUserId != null) {
-      $result.agentUserId = agentUserId;
-    }
-    return $result;
+    final result = create();
+    if (requestId != null) result.requestId = requestId;
+    if (agentUserId != null) result.agentUserId = agentUserId;
+    return result;
   }
-  DeleteAgentUserRequest._() : super();
-  factory DeleteAgentUserRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteAgentUserRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteAgentUserRequest._();
+
+  factory DeleteAgentUserRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteAgentUserRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteAgentUserRequest',
@@ -603,26 +534,21 @@ class DeleteAgentUserRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'agentUserId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteAgentUserRequest clone() =>
-      DeleteAgentUserRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteAgentUserRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteAgentUserRequest copyWith(
           void Function(DeleteAgentUserRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteAgentUserRequest))
           as DeleteAgentUserRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteAgentUserRequest create() => DeleteAgentUserRequest._();
+  @$core.override
   DeleteAgentUserRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteAgentUserRequest> createRepeated() =>
-      $pb.PbList<DeleteAgentUserRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteAgentUserRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteAgentUserRequest>(create);
@@ -632,27 +558,21 @@ class DeleteAgentUserRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get requestId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set requestId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set requestId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRequestId() => clearField(1);
+  void clearRequestId() => $_clearField(1);
 
   /// Required. Third-party user ID.
   @$pb.TagNumber(2)
   $core.String get agentUserId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set agentUserId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set agentUserId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAgentUserId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAgentUserId() => clearField(2);
+  void clearAgentUserId() => $_clearField(2);
 }
 
 /// Request type for the
@@ -663,25 +583,21 @@ class QueryRequest extends $pb.GeneratedMessage {
     $core.String? agentUserId,
     $core.Iterable<QueryRequestInput>? inputs,
   }) {
-    final $result = create();
-    if (requestId != null) {
-      $result.requestId = requestId;
-    }
-    if (agentUserId != null) {
-      $result.agentUserId = agentUserId;
-    }
-    if (inputs != null) {
-      $result.inputs.addAll(inputs);
-    }
-    return $result;
+    final result = create();
+    if (requestId != null) result.requestId = requestId;
+    if (agentUserId != null) result.agentUserId = agentUserId;
+    if (inputs != null) result.inputs.addAll(inputs);
+    return result;
   }
-  QueryRequest._() : super();
-  factory QueryRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory QueryRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  QueryRequest._();
+
+  factory QueryRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QueryRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'QueryRequest',
@@ -690,29 +606,24 @@ class QueryRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'requestId')
     ..aOS(2, _omitFieldNames ? '' : 'agentUserId')
-    ..pc<QueryRequestInput>(
-        3, _omitFieldNames ? '' : 'inputs', $pb.PbFieldType.PM,
+    ..pPM<QueryRequestInput>(3, _omitFieldNames ? '' : 'inputs',
         subBuilder: QueryRequestInput.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  QueryRequest clone() => QueryRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   QueryRequest copyWith(void Function(QueryRequest) updates) =>
       super.copyWith((message) => updates(message as QueryRequest))
           as QueryRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static QueryRequest create() => QueryRequest._();
+  @$core.override
   QueryRequest createEmptyInstance() => create();
-  static $pb.PbList<QueryRequest> createRepeated() =>
-      $pb.PbList<QueryRequest>();
   @$core.pragma('dart2js:noInline')
   static QueryRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<QueryRequest>(create);
@@ -722,32 +633,26 @@ class QueryRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get requestId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set requestId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set requestId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRequestId() => clearField(1);
+  void clearRequestId() => $_clearField(1);
 
   /// Required. Third-party user ID.
   @$pb.TagNumber(2)
   $core.String get agentUserId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set agentUserId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set agentUserId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAgentUserId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAgentUserId() => clearField(2);
+  void clearAgentUserId() => $_clearField(2);
 
   /// Required. Inputs containing third-party device IDs for which to
   /// get the device states.
   @$pb.TagNumber(3)
-  $core.List<QueryRequestInput> get inputs => $_getList(2);
+  $pb.PbList<QueryRequestInput> get inputs => $_getList(2);
 }
 
 /// Device ID inputs to [QueryRequest][google.home.graph.v1.QueryRequest].
@@ -755,19 +660,19 @@ class QueryRequestInput extends $pb.GeneratedMessage {
   factory QueryRequestInput({
     QueryRequestPayload? payload,
   }) {
-    final $result = create();
-    if (payload != null) {
-      $result.payload = payload;
-    }
-    return $result;
+    final result = create();
+    if (payload != null) result.payload = payload;
+    return result;
   }
-  QueryRequestInput._() : super();
-  factory QueryRequestInput.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory QueryRequestInput.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  QueryRequestInput._();
+
+  factory QueryRequestInput.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QueryRequestInput.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'QueryRequestInput',
@@ -778,24 +683,20 @@ class QueryRequestInput extends $pb.GeneratedMessage {
         subBuilder: QueryRequestPayload.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  QueryRequestInput clone() => QueryRequestInput()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryRequestInput clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   QueryRequestInput copyWith(void Function(QueryRequestInput) updates) =>
       super.copyWith((message) => updates(message as QueryRequestInput))
           as QueryRequestInput;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static QueryRequestInput create() => QueryRequestInput._();
+  @$core.override
   QueryRequestInput createEmptyInstance() => create();
-  static $pb.PbList<QueryRequestInput> createRepeated() =>
-      $pb.PbList<QueryRequestInput>();
   @$core.pragma('dart2js:noInline')
   static QueryRequestInput getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<QueryRequestInput>(create);
@@ -805,14 +706,11 @@ class QueryRequestInput extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   QueryRequestPayload get payload => $_getN(0);
   @$pb.TagNumber(1)
-  set payload(QueryRequestPayload v) {
-    setField(1, v);
-  }
-
+  set payload(QueryRequestPayload value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasPayload() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPayload() => clearField(1);
+  void clearPayload() => $_clearField(1);
   @$pb.TagNumber(1)
   QueryRequestPayload ensurePayload() => $_ensure(0);
 }
@@ -822,47 +720,43 @@ class QueryRequestPayload extends $pb.GeneratedMessage {
   factory QueryRequestPayload({
     $core.Iterable<AgentDeviceId>? devices,
   }) {
-    final $result = create();
-    if (devices != null) {
-      $result.devices.addAll(devices);
-    }
-    return $result;
+    final result = create();
+    if (devices != null) result.devices.addAll(devices);
+    return result;
   }
-  QueryRequestPayload._() : super();
-  factory QueryRequestPayload.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory QueryRequestPayload.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  QueryRequestPayload._();
+
+  factory QueryRequestPayload.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QueryRequestPayload.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'QueryRequestPayload',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.home.graph.v1'),
       createEmptyInstance: create)
-    ..pc<AgentDeviceId>(1, _omitFieldNames ? '' : 'devices', $pb.PbFieldType.PM,
+    ..pPM<AgentDeviceId>(1, _omitFieldNames ? '' : 'devices',
         subBuilder: AgentDeviceId.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  QueryRequestPayload clone() => QueryRequestPayload()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryRequestPayload clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   QueryRequestPayload copyWith(void Function(QueryRequestPayload) updates) =>
       super.copyWith((message) => updates(message as QueryRequestPayload))
           as QueryRequestPayload;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static QueryRequestPayload create() => QueryRequestPayload._();
+  @$core.override
   QueryRequestPayload createEmptyInstance() => create();
-  static $pb.PbList<QueryRequestPayload> createRepeated() =>
-      $pb.PbList<QueryRequestPayload>();
   @$core.pragma('dart2js:noInline')
   static QueryRequestPayload getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<QueryRequestPayload>(create);
@@ -870,7 +764,7 @@ class QueryRequestPayload extends $pb.GeneratedMessage {
 
   /// Third-party device IDs for which to get the device states.
   @$pb.TagNumber(1)
-  $core.List<AgentDeviceId> get devices => $_getList(0);
+  $pb.PbList<AgentDeviceId> get devices => $_getList(0);
 }
 
 /// Third-party device ID for one device.
@@ -878,19 +772,19 @@ class AgentDeviceId extends $pb.GeneratedMessage {
   factory AgentDeviceId({
     $core.String? id,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    return result;
   }
-  AgentDeviceId._() : super();
-  factory AgentDeviceId.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AgentDeviceId.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AgentDeviceId._();
+
+  factory AgentDeviceId.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AgentDeviceId.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AgentDeviceId',
@@ -900,24 +794,20 @@ class AgentDeviceId extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AgentDeviceId clone() => AgentDeviceId()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AgentDeviceId clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AgentDeviceId copyWith(void Function(AgentDeviceId) updates) =>
       super.copyWith((message) => updates(message as AgentDeviceId))
           as AgentDeviceId;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AgentDeviceId create() => AgentDeviceId._();
+  @$core.override
   AgentDeviceId createEmptyInstance() => create();
-  static $pb.PbList<AgentDeviceId> createRepeated() =>
-      $pb.PbList<AgentDeviceId>();
   @$core.pragma('dart2js:noInline')
   static AgentDeviceId getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AgentDeviceId>(create);
@@ -927,67 +817,62 @@ class AgentDeviceId extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
-///  Response type for the
-///  [`Query`](#google.home.graph.v1.HomeGraphApiService.Query) call.
-///  This should follow the same format as the Google smart home
-///  `action.devices.QUERY`
-///  [response](https://developers.home.google.com/cloud-to-cloud/intents/query).
+/// Response type for the
+/// [`Query`](#google.home.graph.v1.HomeGraphApiService.Query) call.
+/// This should follow the same format as the Google smart home
+/// `action.devices.QUERY`
+/// [response](https://developers.home.google.com/cloud-to-cloud/intents/query).
 ///
-///  Example:
+/// Example:
 ///
-///  ```json
-///  {
-///    "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf",
-///    "payload": {
-///      "devices": {
-///        "123": {
-///          "on": true,
-///          "online": true
-///        },
-///        "456": {
-///          "on": true,
-///          "online": true,
-///          "brightness": 80,
-///          "color": {
-///            "name": "cerulean",
-///            "spectrumRGB": 31655
-///          }
-///        }
-///      }
-///    }
-///  }
-///  ```
+/// ```json
+/// {
+///   "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf",
+///   "payload": {
+///     "devices": {
+///       "123": {
+///         "on": true,
+///         "online": true
+///       },
+///       "456": {
+///         "on": true,
+///         "online": true,
+///         "brightness": 80,
+///         "color": {
+///           "name": "cerulean",
+///           "spectrumRGB": 31655
+///         }
+///       }
+///     }
+///   }
+/// }
+/// ```
 class QueryResponse extends $pb.GeneratedMessage {
   factory QueryResponse({
     $core.String? requestId,
     QueryResponsePayload? payload,
   }) {
-    final $result = create();
-    if (requestId != null) {
-      $result.requestId = requestId;
-    }
-    if (payload != null) {
-      $result.payload = payload;
-    }
-    return $result;
+    final result = create();
+    if (requestId != null) result.requestId = requestId;
+    if (payload != null) result.payload = payload;
+    return result;
   }
-  QueryResponse._() : super();
-  factory QueryResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory QueryResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  QueryResponse._();
+
+  factory QueryResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QueryResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'QueryResponse',
@@ -999,24 +884,20 @@ class QueryResponse extends $pb.GeneratedMessage {
         subBuilder: QueryResponsePayload.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  QueryResponse clone() => QueryResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   QueryResponse copyWith(void Function(QueryResponse) updates) =>
       super.copyWith((message) => updates(message as QueryResponse))
           as QueryResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static QueryResponse create() => QueryResponse._();
+  @$core.override
   QueryResponse createEmptyInstance() => create();
-  static $pb.PbList<QueryResponse> createRepeated() =>
-      $pb.PbList<QueryResponse>();
   @$core.pragma('dart2js:noInline')
   static QueryResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<QueryResponse>(create);
@@ -1026,27 +907,21 @@ class QueryResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get requestId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set requestId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set requestId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRequestId() => clearField(1);
+  void clearRequestId() => $_clearField(1);
 
   /// Device states for the devices given in the request.
   @$pb.TagNumber(2)
   QueryResponsePayload get payload => $_getN(1);
   @$pb.TagNumber(2)
-  set payload(QueryResponsePayload v) {
-    setField(2, v);
-  }
-
+  set payload(QueryResponsePayload value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasPayload() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPayload() => clearField(2);
+  void clearPayload() => $_clearField(2);
   @$pb.TagNumber(2)
   QueryResponsePayload ensurePayload() => $_ensure(1);
 }
@@ -1054,21 +929,21 @@ class QueryResponse extends $pb.GeneratedMessage {
 /// Payload containing device states information.
 class QueryResponsePayload extends $pb.GeneratedMessage {
   factory QueryResponsePayload({
-    $core.Map<$core.String, $2.Struct>? devices,
+    $core.Iterable<$core.MapEntry<$core.String, $2.Struct>>? devices,
   }) {
-    final $result = create();
-    if (devices != null) {
-      $result.devices.addAll(devices);
-    }
-    return $result;
+    final result = create();
+    if (devices != null) result.devices.addEntries(devices);
+    return result;
   }
-  QueryResponsePayload._() : super();
-  factory QueryResponsePayload.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory QueryResponsePayload.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  QueryResponsePayload._();
+
+  factory QueryResponsePayload.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QueryResponsePayload.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'QueryResponsePayload',
@@ -1084,25 +959,20 @@ class QueryResponsePayload extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.home.graph.v1'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  QueryResponsePayload clone() =>
-      QueryResponsePayload()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryResponsePayload clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   QueryResponsePayload copyWith(void Function(QueryResponsePayload) updates) =>
       super.copyWith((message) => updates(message as QueryResponsePayload))
           as QueryResponsePayload;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static QueryResponsePayload create() => QueryResponsePayload._();
+  @$core.override
   QueryResponsePayload createEmptyInstance() => create();
-  static $pb.PbList<QueryResponsePayload> createRepeated() =>
-      $pb.PbList<QueryResponsePayload>();
   @$core.pragma('dart2js:noInline')
   static QueryResponsePayload getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<QueryResponsePayload>(create);
@@ -1111,7 +981,7 @@ class QueryResponsePayload extends $pb.GeneratedMessage {
   /// States of the devices. Map of third-party device ID to struct of device
   /// states.
   @$pb.TagNumber(1)
-  $core.Map<$core.String, $2.Struct> get devices => $_getMap(0);
+  $pb.PbMap<$core.String, $2.Struct> get devices => $_getMap(0);
 }
 
 /// Request type for the [`Sync`](#google.home.graph.v1.HomeGraphApiService.Sync)
@@ -1121,22 +991,20 @@ class SyncRequest extends $pb.GeneratedMessage {
     $core.String? requestId,
     $core.String? agentUserId,
   }) {
-    final $result = create();
-    if (requestId != null) {
-      $result.requestId = requestId;
-    }
-    if (agentUserId != null) {
-      $result.agentUserId = agentUserId;
-    }
-    return $result;
+    final result = create();
+    if (requestId != null) result.requestId = requestId;
+    if (agentUserId != null) result.agentUserId = agentUserId;
+    return result;
   }
-  SyncRequest._() : super();
-  factory SyncRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SyncRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SyncRequest._();
+
+  factory SyncRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SyncRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SyncRequest',
@@ -1147,23 +1015,20 @@ class SyncRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'agentUserId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SyncRequest clone() => SyncRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SyncRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SyncRequest copyWith(void Function(SyncRequest) updates) =>
       super.copyWith((message) => updates(message as SyncRequest))
           as SyncRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SyncRequest create() => SyncRequest._();
+  @$core.override
   SyncRequest createEmptyInstance() => create();
-  static $pb.PbList<SyncRequest> createRepeated() => $pb.PbList<SyncRequest>();
   @$core.pragma('dart2js:noInline')
   static SyncRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SyncRequest>(create);
@@ -1173,90 +1038,82 @@ class SyncRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get requestId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set requestId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set requestId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRequestId() => clearField(1);
+  void clearRequestId() => $_clearField(1);
 
   /// Required. Third-party user ID.
   @$pb.TagNumber(2)
   $core.String get agentUserId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set agentUserId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set agentUserId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAgentUserId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAgentUserId() => clearField(2);
+  void clearAgentUserId() => $_clearField(2);
 }
 
-///  Response type for the
-///  [`Sync`](#google.home.graph.v1.HomeGraphApiService.Sync) call.
-///  This should follow the same format as the Google smart home
-///  `action.devices.SYNC`
-///  [response](https://developers.home.google.com/cloud-to-cloud/intents/sync).
+/// Response type for the
+/// [`Sync`](#google.home.graph.v1.HomeGraphApiService.Sync) call.
+/// This should follow the same format as the Google smart home
+/// `action.devices.SYNC`
+/// [response](https://developers.home.google.com/cloud-to-cloud/intents/sync).
 ///
-///  Example:
+/// Example:
 ///
-///  ```json
-///  {
-///    "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf",
-///    "payload": {
-///      "agentUserId": "1836.15267389",
-///      "devices": [{
-///        "id": "123",
-///        "type": "action.devices.types.OUTLET",
-///        "traits": [
-///          "action.devices.traits.OnOff"
-///        ],
-///        "name": {
-///          "defaultNames": ["My Outlet 1234"],
-///          "name": "Night light",
-///          "nicknames": ["wall plug"]
-///        },
-///        "willReportState": false,
-///        "deviceInfo": {
-///          "manufacturer": "lights-out-inc",
-///          "model": "hs1234",
-///          "hwVersion": "3.2",
-///          "swVersion": "11.4"
-///        },
-///        "customData": {
-///          "fooValue": 74,
-///          "barValue": true,
-///          "bazValue": "foo"
-///        }
-///      }]
-///    }
-///  }
-///  ```
+/// ```json
+/// {
+///   "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf",
+///   "payload": {
+///     "agentUserId": "1836.15267389",
+///     "devices": [{
+///       "id": "123",
+///       "type": "action.devices.types.OUTLET",
+///       "traits": [
+///         "action.devices.traits.OnOff"
+///       ],
+///       "name": {
+///         "defaultNames": ["My Outlet 1234"],
+///         "name": "Night light",
+///         "nicknames": ["wall plug"]
+///       },
+///       "willReportState": false,
+///       "deviceInfo": {
+///         "manufacturer": "lights-out-inc",
+///         "model": "hs1234",
+///         "hwVersion": "3.2",
+///         "swVersion": "11.4"
+///       },
+///       "customData": {
+///         "fooValue": 74,
+///         "barValue": true,
+///         "bazValue": "foo"
+///       }
+///     }]
+///   }
+/// }
+/// ```
 class SyncResponse extends $pb.GeneratedMessage {
   factory SyncResponse({
     $core.String? requestId,
     SyncResponsePayload? payload,
   }) {
-    final $result = create();
-    if (requestId != null) {
-      $result.requestId = requestId;
-    }
-    if (payload != null) {
-      $result.payload = payload;
-    }
-    return $result;
+    final result = create();
+    if (requestId != null) result.requestId = requestId;
+    if (payload != null) result.payload = payload;
+    return result;
   }
-  SyncResponse._() : super();
-  factory SyncResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SyncResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SyncResponse._();
+
+  factory SyncResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SyncResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SyncResponse',
@@ -1268,24 +1125,20 @@ class SyncResponse extends $pb.GeneratedMessage {
         subBuilder: SyncResponsePayload.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SyncResponse clone() => SyncResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SyncResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SyncResponse copyWith(void Function(SyncResponse) updates) =>
       super.copyWith((message) => updates(message as SyncResponse))
           as SyncResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SyncResponse create() => SyncResponse._();
+  @$core.override
   SyncResponse createEmptyInstance() => create();
-  static $pb.PbList<SyncResponse> createRepeated() =>
-      $pb.PbList<SyncResponse>();
   @$core.pragma('dart2js:noInline')
   static SyncResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SyncResponse>(create);
@@ -1295,27 +1148,21 @@ class SyncResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get requestId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set requestId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set requestId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRequestId() => clearField(1);
+  void clearRequestId() => $_clearField(1);
 
   /// Devices associated with the third-party user.
   @$pb.TagNumber(2)
   SyncResponsePayload get payload => $_getN(1);
   @$pb.TagNumber(2)
-  set payload(SyncResponsePayload v) {
-    setField(2, v);
-  }
-
+  set payload(SyncResponsePayload value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasPayload() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPayload() => clearField(2);
+  void clearPayload() => $_clearField(2);
   @$pb.TagNumber(2)
   SyncResponsePayload ensurePayload() => $_ensure(1);
 }
@@ -1326,22 +1173,20 @@ class SyncResponsePayload extends $pb.GeneratedMessage {
     $core.String? agentUserId,
     $core.Iterable<$3.Device>? devices,
   }) {
-    final $result = create();
-    if (agentUserId != null) {
-      $result.agentUserId = agentUserId;
-    }
-    if (devices != null) {
-      $result.devices.addAll(devices);
-    }
-    return $result;
+    final result = create();
+    if (agentUserId != null) result.agentUserId = agentUserId;
+    if (devices != null) result.devices.addAll(devices);
+    return result;
   }
-  SyncResponsePayload._() : super();
-  factory SyncResponsePayload.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SyncResponsePayload.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SyncResponsePayload._();
+
+  factory SyncResponsePayload.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SyncResponsePayload.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SyncResponsePayload',
@@ -1349,28 +1194,24 @@ class SyncResponsePayload extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.home.graph.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'agentUserId')
-    ..pc<$3.Device>(2, _omitFieldNames ? '' : 'devices', $pb.PbFieldType.PM,
+    ..pPM<$3.Device>(2, _omitFieldNames ? '' : 'devices',
         subBuilder: $3.Device.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SyncResponsePayload clone() => SyncResponsePayload()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SyncResponsePayload clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SyncResponsePayload copyWith(void Function(SyncResponsePayload) updates) =>
       super.copyWith((message) => updates(message as SyncResponsePayload))
           as SyncResponsePayload;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SyncResponsePayload create() => SyncResponsePayload._();
+  @$core.override
   SyncResponsePayload createEmptyInstance() => create();
-  static $pb.PbList<SyncResponsePayload> createRepeated() =>
-      $pb.PbList<SyncResponsePayload>();
   @$core.pragma('dart2js:noInline')
   static SyncResponsePayload getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SyncResponsePayload>(create);
@@ -1380,20 +1221,18 @@ class SyncResponsePayload extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get agentUserId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set agentUserId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set agentUserId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAgentUserId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAgentUserId() => clearField(1);
+  void clearAgentUserId() => $_clearField(1);
 
   /// Devices associated with the third-party user.
   @$pb.TagNumber(2)
-  $core.List<$3.Device> get devices => $_getList(1);
+  $pb.PbList<$3.Device> get devices => $_getList(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

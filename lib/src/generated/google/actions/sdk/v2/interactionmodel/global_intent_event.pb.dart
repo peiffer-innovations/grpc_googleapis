@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/interactionmodel/global_intent_event.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/interactionmodel/global_intent_event.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,36 +16,36 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'event_handler.pb.dart' as $0;
 
-///  Defines a global intent handler. Global intent events are scoped to the
-///  entire Actions project and may be overridden by intent handlers in a scene.
-///  Intent names must be unique within an Actions project.
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
+/// Defines a global intent handler. Global intent events are scoped to the
+/// entire Actions project and may be overridden by intent handlers in a scene.
+/// Intent names must be unique within an Actions project.
 ///
-///  Global intents can be matched anytime during a session, allowing users to
-///  access common flows like  "get help" or "go back home." They can also be
-///  used to deep link users into specific flows when they invoke an Action.
+/// Global intents can be matched anytime during a session, allowing users to
+/// access common flows like  "get help" or "go back home." They can also be
+/// used to deep link users into specific flows when they invoke an Action.
 ///
-///  Note, the intent name is specified in the name of the file.
+/// Note, the intent name is specified in the name of the file.
 class GlobalIntentEvent extends $pb.GeneratedMessage {
   factory GlobalIntentEvent({
     $core.String? transitionToScene,
     $0.EventHandler? handler,
   }) {
-    final $result = create();
-    if (transitionToScene != null) {
-      $result.transitionToScene = transitionToScene;
-    }
-    if (handler != null) {
-      $result.handler = handler;
-    }
-    return $result;
+    final result = create();
+    if (transitionToScene != null) result.transitionToScene = transitionToScene;
+    if (handler != null) result.handler = handler;
+    return result;
   }
-  GlobalIntentEvent._() : super();
-  factory GlobalIntentEvent.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GlobalIntentEvent.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GlobalIntentEvent._();
+
+  factory GlobalIntentEvent.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GlobalIntentEvent.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GlobalIntentEvent',
@@ -56,24 +57,20 @@ class GlobalIntentEvent extends $pb.GeneratedMessage {
         subBuilder: $0.EventHandler.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GlobalIntentEvent clone() => GlobalIntentEvent()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GlobalIntentEvent clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GlobalIntentEvent copyWith(void Function(GlobalIntentEvent) updates) =>
       super.copyWith((message) => updates(message as GlobalIntentEvent))
           as GlobalIntentEvent;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GlobalIntentEvent create() => GlobalIntentEvent._();
+  @$core.override
   GlobalIntentEvent createEmptyInstance() => create();
-  static $pb.PbList<GlobalIntentEvent> createRepeated() =>
-      $pb.PbList<GlobalIntentEvent>();
   @$core.pragma('dart2js:noInline')
   static GlobalIntentEvent getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GlobalIntentEvent>(create);
@@ -84,14 +81,11 @@ class GlobalIntentEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get transitionToScene => $_getSZ(0);
   @$pb.TagNumber(1)
-  set transitionToScene($core.String v) {
-    $_setString(0, v);
-  }
-
+  set transitionToScene($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasTransitionToScene() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTransitionToScene() => clearField(1);
+  void clearTransitionToScene() => $_clearField(1);
 
   /// Optional. Event handler which is triggered when the intent is matched. Should execute
   /// before transitioning to the destination scene. Useful to generate Prompts
@@ -99,18 +93,16 @@ class GlobalIntentEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.EventHandler get handler => $_getN(1);
   @$pb.TagNumber(2)
-  set handler($0.EventHandler v) {
-    setField(2, v);
-  }
-
+  set handler($0.EventHandler value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasHandler() => $_has(1);
   @$pb.TagNumber(2)
-  void clearHandler() => clearField(2);
+  void clearHandler() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.EventHandler ensureHandler() => $_ensure(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

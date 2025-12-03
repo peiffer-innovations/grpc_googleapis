@@ -1,17 +1,20 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/account_linking_secret.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/account_linking_secret.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Information about the encrypted OAuth client secret used in account linking
 /// flows (for AUTH_CODE grant type).
@@ -20,22 +23,22 @@ class AccountLinkingSecret extends $pb.GeneratedMessage {
     $core.List<$core.int>? encryptedClientSecret,
     $core.String? encryptionKeyVersion,
   }) {
-    final $result = create();
-    if (encryptedClientSecret != null) {
-      $result.encryptedClientSecret = encryptedClientSecret;
-    }
-    if (encryptionKeyVersion != null) {
-      $result.encryptionKeyVersion = encryptionKeyVersion;
-    }
-    return $result;
+    final result = create();
+    if (encryptedClientSecret != null)
+      result.encryptedClientSecret = encryptedClientSecret;
+    if (encryptionKeyVersion != null)
+      result.encryptionKeyVersion = encryptionKeyVersion;
+    return result;
   }
-  AccountLinkingSecret._() : super();
-  factory AccountLinkingSecret.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccountLinkingSecret.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccountLinkingSecret._();
+
+  factory AccountLinkingSecret.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccountLinkingSecret.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccountLinkingSecret',
@@ -47,25 +50,20 @@ class AccountLinkingSecret extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'encryptionKeyVersion')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccountLinkingSecret clone() =>
-      AccountLinkingSecret()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccountLinkingSecret clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccountLinkingSecret copyWith(void Function(AccountLinkingSecret) updates) =>
       super.copyWith((message) => updates(message as AccountLinkingSecret))
           as AccountLinkingSecret;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccountLinkingSecret create() => AccountLinkingSecret._();
+  @$core.override
   AccountLinkingSecret createEmptyInstance() => create();
-  static $pb.PbList<AccountLinkingSecret> createRepeated() =>
-      $pb.PbList<AccountLinkingSecret>();
   @$core.pragma('dart2js:noInline')
   static AccountLinkingSecret getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccountLinkingSecret>(create);
@@ -75,14 +73,12 @@ class AccountLinkingSecret extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.List<$core.int> get encryptedClientSecret => $_getN(0);
   @$pb.TagNumber(1)
-  set encryptedClientSecret($core.List<$core.int> v) {
-    $_setBytes(0, v);
-  }
-
+  set encryptedClientSecret($core.List<$core.int> value) =>
+      $_setBytes(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEncryptedClientSecret() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEncryptedClientSecret() => clearField(1);
+  void clearEncryptedClientSecret() => $_clearField(1);
 
   /// The version of the crypto key used to encrypt the account linking client
   /// secret.
@@ -91,16 +87,14 @@ class AccountLinkingSecret extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get encryptionKeyVersion => $_getSZ(1);
   @$pb.TagNumber(2)
-  set encryptionKeyVersion($core.String v) {
-    $_setString(1, v);
-  }
-
+  set encryptionKeyVersion($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEncryptionKeyVersion() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEncryptionKeyVersion() => clearField(2);
+  void clearEncryptionKeyVersion() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

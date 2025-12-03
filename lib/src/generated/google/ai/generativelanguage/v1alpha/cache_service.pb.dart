@@ -1,20 +1,24 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/ai/generativelanguage/v1alpha/cache_service.proto
-//
-// @dart = 2.12
+// Generated from google/ai/generativelanguage/v1alpha/cache_service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/field_mask.pb.dart'
+    as $3;
 
-import '../../../protobuf/field_mask.pb.dart' as $3;
 import 'cached_content.pb.dart' as $1;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Request to list CachedContents.
 class ListCachedContentsRequest extends $pb.GeneratedMessage {
@@ -22,52 +26,45 @@ class ListCachedContentsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListCachedContentsRequest._() : super();
-  factory ListCachedContentsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListCachedContentsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListCachedContentsRequest._();
+
+  factory ListCachedContentsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListCachedContentsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListCachedContentsRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.ai.generativelanguage.v1alpha'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'pageSize')
     ..aOS(2, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListCachedContentsRequest clone() =>
-      ListCachedContentsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListCachedContentsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListCachedContentsRequest copyWith(
           void Function(ListCachedContentsRequest) updates) =>
       super.copyWith((message) => updates(message as ListCachedContentsRequest))
           as ListCachedContentsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListCachedContentsRequest create() => ListCachedContentsRequest._();
+  @$core.override
   ListCachedContentsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListCachedContentsRequest> createRepeated() =>
-      $pb.PbList<ListCachedContentsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListCachedContentsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListCachedContentsRequest>(create);
@@ -80,31 +77,25 @@ class ListCachedContentsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get pageSize => $_getIZ(0);
   @$pb.TagNumber(1)
-  set pageSize($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPageSize() => clearField(1);
+  void clearPageSize() => $_clearField(1);
 
-  ///  Optional. A page token, received from a previous `ListCachedContents` call.
-  ///  Provide this to retrieve the subsequent page.
+  /// Optional. A page token, received from a previous `ListCachedContents` call.
+  /// Provide this to retrieve the subsequent page.
   ///
-  ///  When paginating, all other parameters provided to `ListCachedContents` must
-  ///  match the call that provided the page token.
+  /// When paginating, all other parameters provided to `ListCachedContents` must
+  /// match the call that provided the page token.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set pageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set pageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageToken() => clearField(2);
+  void clearPageToken() => $_clearField(2);
 }
 
 /// Response with CachedContents list.
@@ -113,55 +104,47 @@ class ListCachedContentsResponse extends $pb.GeneratedMessage {
     $core.Iterable<$1.CachedContent>? cachedContents,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (cachedContents != null) {
-      $result.cachedContents.addAll(cachedContents);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (cachedContents != null) result.cachedContents.addAll(cachedContents);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListCachedContentsResponse._() : super();
-  factory ListCachedContentsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListCachedContentsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListCachedContentsResponse._();
+
+  factory ListCachedContentsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListCachedContentsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListCachedContentsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.ai.generativelanguage.v1alpha'),
       createEmptyInstance: create)
-    ..pc<$1.CachedContent>(
-        1, _omitFieldNames ? '' : 'cachedContents', $pb.PbFieldType.PM,
+    ..pPM<$1.CachedContent>(1, _omitFieldNames ? '' : 'cachedContents',
         subBuilder: $1.CachedContent.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListCachedContentsResponse clone() =>
-      ListCachedContentsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListCachedContentsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListCachedContentsResponse copyWith(
           void Function(ListCachedContentsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListCachedContentsResponse))
           as ListCachedContentsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListCachedContentsResponse create() => ListCachedContentsResponse._();
+  @$core.override
   ListCachedContentsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListCachedContentsResponse> createRepeated() =>
-      $pb.PbList<ListCachedContentsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListCachedContentsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListCachedContentsResponse>(create);
@@ -169,21 +152,18 @@ class ListCachedContentsResponse extends $pb.GeneratedMessage {
 
   /// List of cached contents.
   @$pb.TagNumber(1)
-  $core.List<$1.CachedContent> get cachedContents => $_getList(0);
+  $pb.PbList<$1.CachedContent> get cachedContents => $_getList(0);
 
   /// A token, which can be sent as `page_token` to retrieve the next page.
   /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request to create CachedContent.
@@ -191,19 +171,19 @@ class CreateCachedContentRequest extends $pb.GeneratedMessage {
   factory CreateCachedContentRequest({
     $1.CachedContent? cachedContent,
   }) {
-    final $result = create();
-    if (cachedContent != null) {
-      $result.cachedContent = cachedContent;
-    }
-    return $result;
+    final result = create();
+    if (cachedContent != null) result.cachedContent = cachedContent;
+    return result;
   }
-  CreateCachedContentRequest._() : super();
-  factory CreateCachedContentRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateCachedContentRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateCachedContentRequest._();
+
+  factory CreateCachedContentRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateCachedContentRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateCachedContentRequest',
@@ -214,27 +194,22 @@ class CreateCachedContentRequest extends $pb.GeneratedMessage {
         subBuilder: $1.CachedContent.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateCachedContentRequest clone() =>
-      CreateCachedContentRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateCachedContentRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateCachedContentRequest copyWith(
           void Function(CreateCachedContentRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateCachedContentRequest))
           as CreateCachedContentRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateCachedContentRequest create() => CreateCachedContentRequest._();
+  @$core.override
   CreateCachedContentRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateCachedContentRequest> createRepeated() =>
-      $pb.PbList<CreateCachedContentRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateCachedContentRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateCachedContentRequest>(create);
@@ -244,14 +219,11 @@ class CreateCachedContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.CachedContent get cachedContent => $_getN(0);
   @$pb.TagNumber(1)
-  set cachedContent($1.CachedContent v) {
-    setField(1, v);
-  }
-
+  set cachedContent($1.CachedContent value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasCachedContent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCachedContent() => clearField(1);
+  void clearCachedContent() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.CachedContent ensureCachedContent() => $_ensure(0);
 }
@@ -261,19 +233,19 @@ class GetCachedContentRequest extends $pb.GeneratedMessage {
   factory GetCachedContentRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetCachedContentRequest._() : super();
-  factory GetCachedContentRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetCachedContentRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetCachedContentRequest._();
+
+  factory GetCachedContentRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetCachedContentRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetCachedContentRequest',
@@ -283,26 +255,21 @@ class GetCachedContentRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetCachedContentRequest clone() =>
-      GetCachedContentRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetCachedContentRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetCachedContentRequest copyWith(
           void Function(GetCachedContentRequest) updates) =>
       super.copyWith((message) => updates(message as GetCachedContentRequest))
           as GetCachedContentRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetCachedContentRequest create() => GetCachedContentRequest._();
+  @$core.override
   GetCachedContentRequest createEmptyInstance() => create();
-  static $pb.PbList<GetCachedContentRequest> createRepeated() =>
-      $pb.PbList<GetCachedContentRequest>();
   @$core.pragma('dart2js:noInline')
   static GetCachedContentRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetCachedContentRequest>(create);
@@ -313,14 +280,11 @@ class GetCachedContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request to update CachedContent.
@@ -329,22 +293,20 @@ class UpdateCachedContentRequest extends $pb.GeneratedMessage {
     $1.CachedContent? cachedContent,
     $3.FieldMask? updateMask,
   }) {
-    final $result = create();
-    if (cachedContent != null) {
-      $result.cachedContent = cachedContent;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    return $result;
+    final result = create();
+    if (cachedContent != null) result.cachedContent = cachedContent;
+    if (updateMask != null) result.updateMask = updateMask;
+    return result;
   }
-  UpdateCachedContentRequest._() : super();
-  factory UpdateCachedContentRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateCachedContentRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateCachedContentRequest._();
+
+  factory UpdateCachedContentRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateCachedContentRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateCachedContentRequest',
@@ -357,27 +319,22 @@ class UpdateCachedContentRequest extends $pb.GeneratedMessage {
         subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateCachedContentRequest clone() =>
-      UpdateCachedContentRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateCachedContentRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateCachedContentRequest copyWith(
           void Function(UpdateCachedContentRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateCachedContentRequest))
           as UpdateCachedContentRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateCachedContentRequest create() => UpdateCachedContentRequest._();
+  @$core.override
   UpdateCachedContentRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateCachedContentRequest> createRepeated() =>
-      $pb.PbList<UpdateCachedContentRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateCachedContentRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateCachedContentRequest>(create);
@@ -387,14 +344,11 @@ class UpdateCachedContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.CachedContent get cachedContent => $_getN(0);
   @$pb.TagNumber(1)
-  set cachedContent($1.CachedContent v) {
-    setField(1, v);
-  }
-
+  set cachedContent($1.CachedContent value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasCachedContent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCachedContent() => clearField(1);
+  void clearCachedContent() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.CachedContent ensureCachedContent() => $_ensure(0);
 
@@ -402,14 +356,11 @@ class UpdateCachedContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
-    setField(2, v);
-  }
-
+  set updateMask($3.FieldMask value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
@@ -419,19 +370,19 @@ class DeleteCachedContentRequest extends $pb.GeneratedMessage {
   factory DeleteCachedContentRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteCachedContentRequest._() : super();
-  factory DeleteCachedContentRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteCachedContentRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteCachedContentRequest._();
+
+  factory DeleteCachedContentRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteCachedContentRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteCachedContentRequest',
@@ -441,27 +392,22 @@ class DeleteCachedContentRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteCachedContentRequest clone() =>
-      DeleteCachedContentRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteCachedContentRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteCachedContentRequest copyWith(
           void Function(DeleteCachedContentRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeleteCachedContentRequest))
           as DeleteCachedContentRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteCachedContentRequest create() => DeleteCachedContentRequest._();
+  @$core.override
   DeleteCachedContentRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteCachedContentRequest> createRepeated() =>
-      $pb.PbList<DeleteCachedContentRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteCachedContentRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteCachedContentRequest>(create);
@@ -472,16 +418,14 @@ class DeleteCachedContentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

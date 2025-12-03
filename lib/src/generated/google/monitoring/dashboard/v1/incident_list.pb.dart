@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/monitoring/dashboard/v1/incident_list.proto
-//
-// @dart = 2.12
+// Generated from google/monitoring/dashboard/v1/incident_list.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,58 +16,54 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../api/monitored_resource.pb.dart' as $0;
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 /// A widget that displays a list of incidents
 class IncidentList extends $pb.GeneratedMessage {
   factory IncidentList({
     $core.Iterable<$0.MonitoredResource>? monitoredResources,
     $core.Iterable<$core.String>? policyNames,
   }) {
-    final $result = create();
-    if (monitoredResources != null) {
-      $result.monitoredResources.addAll(monitoredResources);
-    }
-    if (policyNames != null) {
-      $result.policyNames.addAll(policyNames);
-    }
-    return $result;
+    final result = create();
+    if (monitoredResources != null)
+      result.monitoredResources.addAll(monitoredResources);
+    if (policyNames != null) result.policyNames.addAll(policyNames);
+    return result;
   }
-  IncidentList._() : super();
-  factory IncidentList.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory IncidentList.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  IncidentList._();
+
+  factory IncidentList.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory IncidentList.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'IncidentList',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
       createEmptyInstance: create)
-    ..pc<$0.MonitoredResource>(
-        1, _omitFieldNames ? '' : 'monitoredResources', $pb.PbFieldType.PM,
+    ..pPM<$0.MonitoredResource>(1, _omitFieldNames ? '' : 'monitoredResources',
         subBuilder: $0.MonitoredResource.create)
     ..pPS(2, _omitFieldNames ? '' : 'policyNames')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  IncidentList clone() => IncidentList()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  IncidentList clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   IncidentList copyWith(void Function(IncidentList) updates) =>
       super.copyWith((message) => updates(message as IncidentList))
           as IncidentList;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static IncidentList create() => IncidentList._();
+  @$core.override
   IncidentList createEmptyInstance() => create();
-  static $pb.PbList<IncidentList> createRepeated() =>
-      $pb.PbList<IncidentList>();
   @$core.pragma('dart2js:noInline')
   static IncidentList getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<IncidentList>(create);
@@ -77,15 +74,16 @@ class IncidentList extends $pb.GeneratedMessage {
   /// the resource type but not the values of the resource labels.
   /// The resource type and labels are used for filtering.
   @$pb.TagNumber(1)
-  $core.List<$0.MonitoredResource> get monitoredResources => $_getList(0);
+  $pb.PbList<$0.MonitoredResource> get monitoredResources => $_getList(0);
 
   /// Optional. A list of alert policy names to filter the incident list by.
   /// Don't include the project ID prefix in the policy name. For
   /// example, use `alertPolicies/utilization`.
   @$pb.TagNumber(2)
-  $core.List<$core.String> get policyNames => $_getList(1);
+  $pb.PbList<$core.String> get policyNames => $_getList(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,19 +1,22 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/apps/script/type/addon_widget_set.proto
-//
-// @dart = 2.12
+// Generated from google/apps/script/type/addon_widget_set.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'addon_widget_set.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'addon_widget_set.pbenum.dart';
 
@@ -22,19 +25,19 @@ class AddOnWidgetSet extends $pb.GeneratedMessage {
   factory AddOnWidgetSet({
     $core.Iterable<AddOnWidgetSet_WidgetType>? usedWidgets,
   }) {
-    final $result = create();
-    if (usedWidgets != null) {
-      $result.usedWidgets.addAll(usedWidgets);
-    }
-    return $result;
+    final result = create();
+    if (usedWidgets != null) result.usedWidgets.addAll(usedWidgets);
+    return result;
   }
-  AddOnWidgetSet._() : super();
-  factory AddOnWidgetSet.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AddOnWidgetSet.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AddOnWidgetSet._();
+
+  factory AddOnWidgetSet.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddOnWidgetSet.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AddOnWidgetSet',
@@ -48,24 +51,20 @@ class AddOnWidgetSet extends $pb.GeneratedMessage {
         defaultEnumValue: AddOnWidgetSet_WidgetType.WIDGET_TYPE_UNSPECIFIED)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AddOnWidgetSet clone() => AddOnWidgetSet()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddOnWidgetSet clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AddOnWidgetSet copyWith(void Function(AddOnWidgetSet) updates) =>
       super.copyWith((message) => updates(message as AddOnWidgetSet))
           as AddOnWidgetSet;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AddOnWidgetSet create() => AddOnWidgetSet._();
+  @$core.override
   AddOnWidgetSet createEmptyInstance() => create();
-  static $pb.PbList<AddOnWidgetSet> createRepeated() =>
-      $pb.PbList<AddOnWidgetSet>();
   @$core.pragma('dart2js:noInline')
   static AddOnWidgetSet getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AddOnWidgetSet>(create);
@@ -73,9 +72,10 @@ class AddOnWidgetSet extends $pb.GeneratedMessage {
 
   /// The list of widgets used in an add-on.
   @$pb.TagNumber(1)
-  $core.List<AddOnWidgetSet_WidgetType> get usedWidgets => $_getList(0);
+  $pb.PbList<AddOnWidgetSet_WidgetType> get usedWidgets => $_getList(0);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

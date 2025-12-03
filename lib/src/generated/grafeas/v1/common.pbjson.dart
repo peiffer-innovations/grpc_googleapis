@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: grafeas/v1/common.proto
-//
-// @dart = 2.12
+// Generated from grafeas/v1/common.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -30,6 +32,7 @@ const NoteKind$json = {
     {'1': 'DSSE_ATTESTATION', '2': 10},
     {'1': 'VULNERABILITY_ASSESSMENT', '2': 11},
     {'1': 'SBOM_REFERENCE', '2': 12},
+    {'1': 'SECRET', '2': 13},
   ],
 };
 
@@ -39,7 +42,7 @@ final $typed_data.Uint8List noteKindDescriptor = $convert.base64Decode(
     'ESCQoFQlVJTEQQAhIJCgVJTUFHRRADEgsKB1BBQ0tBR0UQBBIOCgpERVBMT1lNRU5UEAUSDQoJ'
     'RElTQ09WRVJZEAYSDwoLQVRURVNUQVRJT04QBxILCgdVUEdSQURFEAgSDgoKQ09NUExJQU5DRR'
     'AJEhQKEERTU0VfQVRURVNUQVRJT04QChIcChhWVUxORVJBQklMSVRZX0FTU0VTU01FTlQQCxIS'
-    'Cg5TQk9NX1JFRkVSRU5DRRAM');
+    'Cg5TQk9NX1JFRkVSRU5DRRAMEgoKBlNFQ1JFVBAN');
 
 @$core.Deprecated('Use relatedUrlDescriptor instead')
 const RelatedUrl$json = {
@@ -147,6 +150,7 @@ const LayerDetails$json = {
   '2': [
     {'1': 'index', '3': 1, '4': 1, '5': 5, '10': 'index'},
     {'1': 'diff_id', '3': 2, '4': 1, '5': 9, '10': 'diffId'},
+    {'1': 'chain_id', '3': 5, '4': 1, '5': 9, '10': 'chainId'},
     {'1': 'command', '3': 3, '4': 1, '5': 9, '10': 'command'},
     {
       '1': 'base_images',
@@ -162,8 +166,9 @@ const LayerDetails$json = {
 /// Descriptor for `LayerDetails`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List layerDetailsDescriptor = $convert.base64Decode(
     'CgxMYXllckRldGFpbHMSFAoFaW5kZXgYASABKAVSBWluZGV4EhcKB2RpZmZfaWQYAiABKAlSBm'
-    'RpZmZJZBIYCgdjb21tYW5kGAMgASgJUgdjb21tYW5kEjYKC2Jhc2VfaW1hZ2VzGAQgAygLMhUu'
-    'Z3JhZmVhcy52MS5CYXNlSW1hZ2VSCmJhc2VJbWFnZXM=');
+    'RpZmZJZBIZCghjaGFpbl9pZBgFIAEoCVIHY2hhaW5JZBIYCgdjb21tYW5kGAMgASgJUgdjb21t'
+    'YW5kEjYKC2Jhc2VfaW1hZ2VzGAQgAygLMhUuZ3JhZmVhcy52MS5CYXNlSW1hZ2VSCmJhc2VJbW'
+    'FnZXM=');
 
 @$core.Deprecated('Use licenseDescriptor instead')
 const License$json = {

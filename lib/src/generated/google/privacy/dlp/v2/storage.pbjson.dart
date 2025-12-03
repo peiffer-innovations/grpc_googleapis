@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/privacy/dlp/v2/storage.proto
-//
-// @dart = 2.12
+// Generated from google/privacy/dlp/v2/storage.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -1003,13 +1005,14 @@ const TableReference$json = {
   '2': [
     {'1': 'dataset_id', '3': 1, '4': 1, '5': 9, '10': 'datasetId'},
     {'1': 'table_id', '3': 2, '4': 1, '5': 9, '10': 'tableId'},
+    {'1': 'project_id', '3': 3, '4': 1, '5': 9, '10': 'projectId'},
   ],
 };
 
 /// Descriptor for `TableReference`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List tableReferenceDescriptor = $convert.base64Decode(
     'Cg5UYWJsZVJlZmVyZW5jZRIdCgpkYXRhc2V0X2lkGAEgASgJUglkYXRhc2V0SWQSGQoIdGFibG'
-    'VfaWQYAiABKAlSB3RhYmxlSWQ=');
+    'VfaWQYAiABKAlSB3RhYmxlSWQSHQoKcHJvamVjdF9pZBgDIAEoCVIJcHJvamVjdElk');
 
 @$core.Deprecated('Use bigQueryFieldDescriptor instead')
 const BigQueryField$json = {

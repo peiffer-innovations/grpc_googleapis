@@ -1,17 +1,20 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/dataflow/v1beta3/streaming.proto
-//
-// @dart = 2.12
+// Generated from google/dataflow/v1beta3/streaming.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Global topology of the streaming Dataflow job, including all
 /// computations and their sharded locations.
@@ -19,47 +22,41 @@ class TopologyConfig extends $pb.GeneratedMessage {
   factory TopologyConfig({
     $core.Iterable<ComputationTopology>? computations,
     $core.Iterable<DataDiskAssignment>? dataDiskAssignments,
-    $core.Map<$core.String, $core.String>? userStageToComputationNameMap,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>?
+        userStageToComputationNameMap,
     $core.int? forwardingKeyBits,
     $core.int? persistentStateVersion,
   }) {
-    final $result = create();
-    if (computations != null) {
-      $result.computations.addAll(computations);
-    }
-    if (dataDiskAssignments != null) {
-      $result.dataDiskAssignments.addAll(dataDiskAssignments);
-    }
-    if (userStageToComputationNameMap != null) {
-      $result.userStageToComputationNameMap
-          .addAll(userStageToComputationNameMap);
-    }
-    if (forwardingKeyBits != null) {
-      $result.forwardingKeyBits = forwardingKeyBits;
-    }
-    if (persistentStateVersion != null) {
-      $result.persistentStateVersion = persistentStateVersion;
-    }
-    return $result;
+    final result = create();
+    if (computations != null) result.computations.addAll(computations);
+    if (dataDiskAssignments != null)
+      result.dataDiskAssignments.addAll(dataDiskAssignments);
+    if (userStageToComputationNameMap != null)
+      result.userStageToComputationNameMap
+          .addEntries(userStageToComputationNameMap);
+    if (forwardingKeyBits != null) result.forwardingKeyBits = forwardingKeyBits;
+    if (persistentStateVersion != null)
+      result.persistentStateVersion = persistentStateVersion;
+    return result;
   }
-  TopologyConfig._() : super();
-  factory TopologyConfig.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TopologyConfig.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TopologyConfig._();
+
+  factory TopologyConfig.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TopologyConfig.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TopologyConfig',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
       createEmptyInstance: create)
-    ..pc<ComputationTopology>(
-        1, _omitFieldNames ? '' : 'computations', $pb.PbFieldType.PM,
+    ..pPM<ComputationTopology>(1, _omitFieldNames ? '' : 'computations',
         subBuilder: ComputationTopology.create)
-    ..pc<DataDiskAssignment>(
-        2, _omitFieldNames ? '' : 'dataDiskAssignments', $pb.PbFieldType.PM,
+    ..pPM<DataDiskAssignment>(2, _omitFieldNames ? '' : 'dataDiskAssignments',
         subBuilder: DataDiskAssignment.create)
     ..m<$core.String, $core.String>(
         3, _omitFieldNames ? '' : 'userStageToComputationNameMap',
@@ -67,30 +64,24 @@ class TopologyConfig extends $pb.GeneratedMessage {
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OS,
         packageName: const $pb.PackageName('google.dataflow.v1beta3'))
-    ..a<$core.int>(
-        4, _omitFieldNames ? '' : 'forwardingKeyBits', $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        5, _omitFieldNames ? '' : 'persistentStateVersion', $pb.PbFieldType.O3)
+    ..aI(4, _omitFieldNames ? '' : 'forwardingKeyBits')
+    ..aI(5, _omitFieldNames ? '' : 'persistentStateVersion')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TopologyConfig clone() => TopologyConfig()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TopologyConfig clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TopologyConfig copyWith(void Function(TopologyConfig) updates) =>
       super.copyWith((message) => updates(message as TopologyConfig))
           as TopologyConfig;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TopologyConfig create() => TopologyConfig._();
+  @$core.override
   TopologyConfig createEmptyInstance() => create();
-  static $pb.PbList<TopologyConfig> createRepeated() =>
-      $pb.PbList<TopologyConfig>();
   @$core.pragma('dart2js:noInline')
   static TopologyConfig getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TopologyConfig>(create);
@@ -98,42 +89,36 @@ class TopologyConfig extends $pb.GeneratedMessage {
 
   /// The computations associated with a streaming Dataflow job.
   @$pb.TagNumber(1)
-  $core.List<ComputationTopology> get computations => $_getList(0);
+  $pb.PbList<ComputationTopology> get computations => $_getList(0);
 
   /// The disks assigned to a streaming Dataflow job.
   @$pb.TagNumber(2)
-  $core.List<DataDiskAssignment> get dataDiskAssignments => $_getList(1);
+  $pb.PbList<DataDiskAssignment> get dataDiskAssignments => $_getList(1);
 
   /// Maps user stage names to stable computation names.
   @$pb.TagNumber(3)
-  $core.Map<$core.String, $core.String> get userStageToComputationNameMap =>
+  $pb.PbMap<$core.String, $core.String> get userStageToComputationNameMap =>
       $_getMap(2);
 
   /// The size (in bits) of keys that will be assigned to source messages.
   @$pb.TagNumber(4)
   $core.int get forwardingKeyBits => $_getIZ(3);
   @$pb.TagNumber(4)
-  set forwardingKeyBits($core.int v) {
-    $_setSignedInt32(3, v);
-  }
-
+  set forwardingKeyBits($core.int value) => $_setSignedInt32(3, value);
   @$pb.TagNumber(4)
   $core.bool hasForwardingKeyBits() => $_has(3);
   @$pb.TagNumber(4)
-  void clearForwardingKeyBits() => clearField(4);
+  void clearForwardingKeyBits() => $_clearField(4);
 
   /// Version number for persistent state.
   @$pb.TagNumber(5)
   $core.int get persistentStateVersion => $_getIZ(4);
   @$pb.TagNumber(5)
-  set persistentStateVersion($core.int v) {
-    $_setSignedInt32(4, v);
-  }
-
+  set persistentStateVersion($core.int value) => $_setSignedInt32(4, value);
   @$pb.TagNumber(5)
   $core.bool hasPersistentStateVersion() => $_has(4);
   @$pb.TagNumber(5)
-  void clearPersistentStateVersion() => clearField(5);
+  void clearPersistentStateVersion() => $_clearField(5);
 }
 
 /// Identifies a pubsub location to use for transferring data into or
@@ -147,38 +132,30 @@ class PubsubLocation extends $pb.GeneratedMessage {
     $core.bool? dropLateData,
     $core.String? trackingSubscription,
     $core.bool? withAttributes,
+    $core.bool? dynamicDestinations,
   }) {
-    final $result = create();
-    if (topic != null) {
-      $result.topic = topic;
-    }
-    if (subscription != null) {
-      $result.subscription = subscription;
-    }
-    if (timestampLabel != null) {
-      $result.timestampLabel = timestampLabel;
-    }
-    if (idLabel != null) {
-      $result.idLabel = idLabel;
-    }
-    if (dropLateData != null) {
-      $result.dropLateData = dropLateData;
-    }
-    if (trackingSubscription != null) {
-      $result.trackingSubscription = trackingSubscription;
-    }
-    if (withAttributes != null) {
-      $result.withAttributes = withAttributes;
-    }
-    return $result;
+    final result = create();
+    if (topic != null) result.topic = topic;
+    if (subscription != null) result.subscription = subscription;
+    if (timestampLabel != null) result.timestampLabel = timestampLabel;
+    if (idLabel != null) result.idLabel = idLabel;
+    if (dropLateData != null) result.dropLateData = dropLateData;
+    if (trackingSubscription != null)
+      result.trackingSubscription = trackingSubscription;
+    if (withAttributes != null) result.withAttributes = withAttributes;
+    if (dynamicDestinations != null)
+      result.dynamicDestinations = dynamicDestinations;
+    return result;
   }
-  PubsubLocation._() : super();
-  factory PubsubLocation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PubsubLocation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PubsubLocation._();
+
+  factory PubsubLocation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PubsubLocation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PubsubLocation',
@@ -192,26 +169,23 @@ class PubsubLocation extends $pb.GeneratedMessage {
     ..aOB(5, _omitFieldNames ? '' : 'dropLateData')
     ..aOS(6, _omitFieldNames ? '' : 'trackingSubscription')
     ..aOB(7, _omitFieldNames ? '' : 'withAttributes')
+    ..aOB(8, _omitFieldNames ? '' : 'dynamicDestinations')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PubsubLocation clone() => PubsubLocation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PubsubLocation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PubsubLocation copyWith(void Function(PubsubLocation) updates) =>
       super.copyWith((message) => updates(message as PubsubLocation))
           as PubsubLocation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PubsubLocation create() => PubsubLocation._();
+  @$core.override
   PubsubLocation createEmptyInstance() => create();
-  static $pb.PbList<PubsubLocation> createRepeated() =>
-      $pb.PbList<PubsubLocation>();
   @$core.pragma('dart2js:noInline')
   static PubsubLocation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PubsubLocation>(create);
@@ -222,96 +196,85 @@ class PubsubLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get topic => $_getSZ(0);
   @$pb.TagNumber(1)
-  set topic($core.String v) {
-    $_setString(0, v);
-  }
-
+  set topic($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTopic() => clearField(1);
+  void clearTopic() => $_clearField(1);
 
   /// A pubsub subscription, in the form of
   /// "pubsub.googleapis.com/subscriptions/<project-id>/<subscription-name>"
   @$pb.TagNumber(2)
   $core.String get subscription => $_getSZ(1);
   @$pb.TagNumber(2)
-  set subscription($core.String v) {
-    $_setString(1, v);
-  }
-
+  set subscription($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSubscription() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSubscription() => clearField(2);
+  void clearSubscription() => $_clearField(2);
 
   /// If set, contains a pubsub label from which to extract record timestamps.
   /// If left empty, record timestamps will be generated upon arrival.
   @$pb.TagNumber(3)
   $core.String get timestampLabel => $_getSZ(2);
   @$pb.TagNumber(3)
-  set timestampLabel($core.String v) {
-    $_setString(2, v);
-  }
-
+  set timestampLabel($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasTimestampLabel() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTimestampLabel() => clearField(3);
+  void clearTimestampLabel() => $_clearField(3);
 
   /// If set, contains a pubsub label from which to extract record ids.
   /// If left empty, record deduplication will be strictly best effort.
   @$pb.TagNumber(4)
   $core.String get idLabel => $_getSZ(3);
   @$pb.TagNumber(4)
-  set idLabel($core.String v) {
-    $_setString(3, v);
-  }
-
+  set idLabel($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasIdLabel() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIdLabel() => clearField(4);
+  void clearIdLabel() => $_clearField(4);
 
   /// Indicates whether the pipeline allows late-arriving data.
   @$pb.TagNumber(5)
   $core.bool get dropLateData => $_getBF(4);
   @$pb.TagNumber(5)
-  set dropLateData($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set dropLateData($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasDropLateData() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDropLateData() => clearField(5);
+  void clearDropLateData() => $_clearField(5);
 
   /// If set, specifies the pubsub subscription that will be used for tracking
   /// custom time timestamps for watermark estimation.
   @$pb.TagNumber(6)
   $core.String get trackingSubscription => $_getSZ(5);
   @$pb.TagNumber(6)
-  set trackingSubscription($core.String v) {
-    $_setString(5, v);
-  }
-
+  set trackingSubscription($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasTrackingSubscription() => $_has(5);
   @$pb.TagNumber(6)
-  void clearTrackingSubscription() => clearField(6);
+  void clearTrackingSubscription() => $_clearField(6);
 
   /// If true, then the client has requested to get pubsub attributes.
   @$pb.TagNumber(7)
   $core.bool get withAttributes => $_getBF(6);
   @$pb.TagNumber(7)
-  set withAttributes($core.bool v) {
-    $_setBool(6, v);
-  }
-
+  set withAttributes($core.bool value) => $_setBool(6, value);
   @$pb.TagNumber(7)
   $core.bool hasWithAttributes() => $_has(6);
   @$pb.TagNumber(7)
-  void clearWithAttributes() => clearField(7);
+  void clearWithAttributes() => $_clearField(7);
+
+  /// If true, then this location represents dynamic topics.
+  @$pb.TagNumber(8)
+  $core.bool get dynamicDestinations => $_getBF(7);
+  @$pb.TagNumber(8)
+  set dynamicDestinations($core.bool value) => $_setBool(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasDynamicDestinations() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearDynamicDestinations() => $_clearField(8);
 }
 
 /// Identifies the location of a streaming computation stage, for
@@ -320,19 +283,19 @@ class StreamingStageLocation extends $pb.GeneratedMessage {
   factory StreamingStageLocation({
     $core.String? streamId,
   }) {
-    final $result = create();
-    if (streamId != null) {
-      $result.streamId = streamId;
-    }
-    return $result;
+    final result = create();
+    if (streamId != null) result.streamId = streamId;
+    return result;
   }
-  StreamingStageLocation._() : super();
-  factory StreamingStageLocation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory StreamingStageLocation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  StreamingStageLocation._();
+
+  factory StreamingStageLocation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StreamingStageLocation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'StreamingStageLocation',
@@ -342,26 +305,21 @@ class StreamingStageLocation extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'streamId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  StreamingStageLocation clone() =>
-      StreamingStageLocation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StreamingStageLocation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   StreamingStageLocation copyWith(
           void Function(StreamingStageLocation) updates) =>
       super.copyWith((message) => updates(message as StreamingStageLocation))
           as StreamingStageLocation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static StreamingStageLocation create() => StreamingStageLocation._();
+  @$core.override
   StreamingStageLocation createEmptyInstance() => create();
-  static $pb.PbList<StreamingStageLocation> createRepeated() =>
-      $pb.PbList<StreamingStageLocation>();
   @$core.pragma('dart2js:noInline')
   static StreamingStageLocation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<StreamingStageLocation>(create);
@@ -372,14 +330,11 @@ class StreamingStageLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get streamId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set streamId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set streamId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasStreamId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStreamId() => clearField(1);
+  void clearStreamId() => $_clearField(1);
 }
 
 /// Identifies the location of a streaming side input.
@@ -388,22 +343,20 @@ class StreamingSideInputLocation extends $pb.GeneratedMessage {
     $core.String? tag,
     $core.String? stateFamily,
   }) {
-    final $result = create();
-    if (tag != null) {
-      $result.tag = tag;
-    }
-    if (stateFamily != null) {
-      $result.stateFamily = stateFamily;
-    }
-    return $result;
+    final result = create();
+    if (tag != null) result.tag = tag;
+    if (stateFamily != null) result.stateFamily = stateFamily;
+    return result;
   }
-  StreamingSideInputLocation._() : super();
-  factory StreamingSideInputLocation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory StreamingSideInputLocation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  StreamingSideInputLocation._();
+
+  factory StreamingSideInputLocation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StreamingSideInputLocation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'StreamingSideInputLocation',
@@ -414,27 +367,22 @@ class StreamingSideInputLocation extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'stateFamily')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  StreamingSideInputLocation clone() =>
-      StreamingSideInputLocation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StreamingSideInputLocation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   StreamingSideInputLocation copyWith(
           void Function(StreamingSideInputLocation) updates) =>
       super.copyWith(
               (message) => updates(message as StreamingSideInputLocation))
           as StreamingSideInputLocation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static StreamingSideInputLocation create() => StreamingSideInputLocation._();
+  @$core.override
   StreamingSideInputLocation createEmptyInstance() => create();
-  static $pb.PbList<StreamingSideInputLocation> createRepeated() =>
-      $pb.PbList<StreamingSideInputLocation>();
   @$core.pragma('dart2js:noInline')
   static StreamingSideInputLocation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<StreamingSideInputLocation>(create);
@@ -444,27 +392,21 @@ class StreamingSideInputLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get tag => $_getSZ(0);
   @$pb.TagNumber(1)
-  set tag($core.String v) {
-    $_setString(0, v);
-  }
-
+  set tag($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasTag() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTag() => clearField(1);
+  void clearTag() => $_clearField(1);
 
   /// Identifies the state family where this side input is stored.
   @$pb.TagNumber(2)
   $core.String get stateFamily => $_getSZ(1);
   @$pb.TagNumber(2)
-  set stateFamily($core.String v) {
-    $_setString(1, v);
-  }
-
+  set stateFamily($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasStateFamily() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStateFamily() => clearField(2);
+  void clearStateFamily() => $_clearField(2);
 }
 
 /// Identifies the location of a custom souce.
@@ -472,19 +414,19 @@ class CustomSourceLocation extends $pb.GeneratedMessage {
   factory CustomSourceLocation({
     $core.bool? stateful,
   }) {
-    final $result = create();
-    if (stateful != null) {
-      $result.stateful = stateful;
-    }
-    return $result;
+    final result = create();
+    if (stateful != null) result.stateful = stateful;
+    return result;
   }
-  CustomSourceLocation._() : super();
-  factory CustomSourceLocation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CustomSourceLocation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CustomSourceLocation._();
+
+  factory CustomSourceLocation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CustomSourceLocation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CustomSourceLocation',
@@ -494,25 +436,20 @@ class CustomSourceLocation extends $pb.GeneratedMessage {
     ..aOB(1, _omitFieldNames ? '' : 'stateful')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CustomSourceLocation clone() =>
-      CustomSourceLocation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CustomSourceLocation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CustomSourceLocation copyWith(void Function(CustomSourceLocation) updates) =>
       super.copyWith((message) => updates(message as CustomSourceLocation))
           as CustomSourceLocation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CustomSourceLocation create() => CustomSourceLocation._();
+  @$core.override
   CustomSourceLocation createEmptyInstance() => create();
-  static $pb.PbList<CustomSourceLocation> createRepeated() =>
-      $pb.PbList<CustomSourceLocation>();
   @$core.pragma('dart2js:noInline')
   static CustomSourceLocation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CustomSourceLocation>(create);
@@ -522,14 +459,11 @@ class CustomSourceLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get stateful => $_getBF(0);
   @$pb.TagNumber(1)
-  set stateful($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set stateful($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasStateful() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStateful() => clearField(1);
+  void clearStateful() => $_clearField(1);
 }
 
 enum StreamLocation_Location {
@@ -549,28 +483,24 @@ class StreamLocation extends $pb.GeneratedMessage {
     StreamingSideInputLocation? sideInputLocation,
     CustomSourceLocation? customSourceLocation,
   }) {
-    final $result = create();
-    if (streamingStageLocation != null) {
-      $result.streamingStageLocation = streamingStageLocation;
-    }
-    if (pubsubLocation != null) {
-      $result.pubsubLocation = pubsubLocation;
-    }
-    if (sideInputLocation != null) {
-      $result.sideInputLocation = sideInputLocation;
-    }
-    if (customSourceLocation != null) {
-      $result.customSourceLocation = customSourceLocation;
-    }
-    return $result;
+    final result = create();
+    if (streamingStageLocation != null)
+      result.streamingStageLocation = streamingStageLocation;
+    if (pubsubLocation != null) result.pubsubLocation = pubsubLocation;
+    if (sideInputLocation != null) result.sideInputLocation = sideInputLocation;
+    if (customSourceLocation != null)
+      result.customSourceLocation = customSourceLocation;
+    return result;
   }
-  StreamLocation._() : super();
-  factory StreamLocation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory StreamLocation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  StreamLocation._();
+
+  factory StreamLocation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StreamLocation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, StreamLocation_Location>
       _StreamLocation_LocationByTag = {
@@ -599,46 +529,48 @@ class StreamLocation extends $pb.GeneratedMessage {
         subBuilder: CustomSourceLocation.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  StreamLocation clone() => StreamLocation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StreamLocation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   StreamLocation copyWith(void Function(StreamLocation) updates) =>
       super.copyWith((message) => updates(message as StreamLocation))
           as StreamLocation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static StreamLocation create() => StreamLocation._();
+  @$core.override
   StreamLocation createEmptyInstance() => create();
-  static $pb.PbList<StreamLocation> createRepeated() =>
-      $pb.PbList<StreamLocation>();
   @$core.pragma('dart2js:noInline')
   static StreamLocation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<StreamLocation>(create);
   static StreamLocation? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
   StreamLocation_Location whichLocation() =>
       _StreamLocation_LocationByTag[$_whichOneof(0)]!;
-  void clearLocation() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  void clearLocation() => $_clearField($_whichOneof(0));
 
   /// The stream is part of another computation within the current
   /// streaming Dataflow job.
   @$pb.TagNumber(1)
   StreamingStageLocation get streamingStageLocation => $_getN(0);
   @$pb.TagNumber(1)
-  set streamingStageLocation(StreamingStageLocation v) {
-    setField(1, v);
-  }
-
+  set streamingStageLocation(StreamingStageLocation value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStreamingStageLocation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStreamingStageLocation() => clearField(1);
+  void clearStreamingStageLocation() => $_clearField(1);
   @$pb.TagNumber(1)
   StreamingStageLocation ensureStreamingStageLocation() => $_ensure(0);
 
@@ -646,14 +578,11 @@ class StreamLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   PubsubLocation get pubsubLocation => $_getN(1);
   @$pb.TagNumber(2)
-  set pubsubLocation(PubsubLocation v) {
-    setField(2, v);
-  }
-
+  set pubsubLocation(PubsubLocation value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasPubsubLocation() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPubsubLocation() => clearField(2);
+  void clearPubsubLocation() => $_clearField(2);
   @$pb.TagNumber(2)
   PubsubLocation ensurePubsubLocation() => $_ensure(1);
 
@@ -661,14 +590,12 @@ class StreamLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   StreamingSideInputLocation get sideInputLocation => $_getN(2);
   @$pb.TagNumber(3)
-  set sideInputLocation(StreamingSideInputLocation v) {
-    setField(3, v);
-  }
-
+  set sideInputLocation(StreamingSideInputLocation value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasSideInputLocation() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSideInputLocation() => clearField(3);
+  void clearSideInputLocation() => $_clearField(3);
   @$pb.TagNumber(3)
   StreamingSideInputLocation ensureSideInputLocation() => $_ensure(2);
 
@@ -676,14 +603,11 @@ class StreamLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   CustomSourceLocation get customSourceLocation => $_getN(3);
   @$pb.TagNumber(4)
-  set customSourceLocation(CustomSourceLocation v) {
-    setField(4, v);
-  }
-
+  set customSourceLocation(CustomSourceLocation value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasCustomSourceLocation() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCustomSourceLocation() => clearField(4);
+  void clearCustomSourceLocation() => $_clearField(4);
   @$pb.TagNumber(4)
   CustomSourceLocation ensureCustomSourceLocation() => $_ensure(3);
 }
@@ -694,22 +618,20 @@ class StateFamilyConfig extends $pb.GeneratedMessage {
     $core.String? stateFamily,
     $core.bool? isRead,
   }) {
-    final $result = create();
-    if (stateFamily != null) {
-      $result.stateFamily = stateFamily;
-    }
-    if (isRead != null) {
-      $result.isRead = isRead;
-    }
-    return $result;
+    final result = create();
+    if (stateFamily != null) result.stateFamily = stateFamily;
+    if (isRead != null) result.isRead = isRead;
+    return result;
   }
-  StateFamilyConfig._() : super();
-  factory StateFamilyConfig.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory StateFamilyConfig.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  StateFamilyConfig._();
+
+  factory StateFamilyConfig.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StateFamilyConfig.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'StateFamilyConfig',
@@ -720,24 +642,20 @@ class StateFamilyConfig extends $pb.GeneratedMessage {
     ..aOB(2, _omitFieldNames ? '' : 'isRead')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  StateFamilyConfig clone() => StateFamilyConfig()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StateFamilyConfig clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   StateFamilyConfig copyWith(void Function(StateFamilyConfig) updates) =>
       super.copyWith((message) => updates(message as StateFamilyConfig))
           as StateFamilyConfig;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static StateFamilyConfig create() => StateFamilyConfig._();
+  @$core.override
   StateFamilyConfig createEmptyInstance() => create();
-  static $pb.PbList<StateFamilyConfig> createRepeated() =>
-      $pb.PbList<StateFamilyConfig>();
   @$core.pragma('dart2js:noInline')
   static StateFamilyConfig getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<StateFamilyConfig>(create);
@@ -747,27 +665,21 @@ class StateFamilyConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get stateFamily => $_getSZ(0);
   @$pb.TagNumber(1)
-  set stateFamily($core.String v) {
-    $_setString(0, v);
-  }
-
+  set stateFamily($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasStateFamily() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStateFamily() => clearField(1);
+  void clearStateFamily() => $_clearField(1);
 
   /// If true, this family corresponds to a read operation.
   @$pb.TagNumber(2)
   $core.bool get isRead => $_getBF(1);
   @$pb.TagNumber(2)
-  set isRead($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set isRead($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasIsRead() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIsRead() => clearField(2);
+  void clearIsRead() => $_clearField(2);
 }
 
 /// All configuration data for a particular Computation.
@@ -780,34 +692,24 @@ class ComputationTopology extends $pb.GeneratedMessage {
     $core.String? computationId,
     $core.Iterable<StateFamilyConfig>? stateFamilies,
   }) {
-    final $result = create();
-    if (systemStageName != null) {
-      $result.systemStageName = systemStageName;
-    }
-    if (keyRanges != null) {
-      $result.keyRanges.addAll(keyRanges);
-    }
-    if (inputs != null) {
-      $result.inputs.addAll(inputs);
-    }
-    if (outputs != null) {
-      $result.outputs.addAll(outputs);
-    }
-    if (computationId != null) {
-      $result.computationId = computationId;
-    }
-    if (stateFamilies != null) {
-      $result.stateFamilies.addAll(stateFamilies);
-    }
-    return $result;
+    final result = create();
+    if (systemStageName != null) result.systemStageName = systemStageName;
+    if (keyRanges != null) result.keyRanges.addAll(keyRanges);
+    if (inputs != null) result.inputs.addAll(inputs);
+    if (outputs != null) result.outputs.addAll(outputs);
+    if (computationId != null) result.computationId = computationId;
+    if (stateFamilies != null) result.stateFamilies.addAll(stateFamilies);
+    return result;
   }
-  ComputationTopology._() : super();
-  factory ComputationTopology.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ComputationTopology.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ComputationTopology._();
+
+  factory ComputationTopology.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ComputationTopology.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ComputationTopology',
@@ -815,38 +717,31 @@ class ComputationTopology extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'systemStageName')
-    ..pc<KeyRangeLocation>(
-        2, _omitFieldNames ? '' : 'keyRanges', $pb.PbFieldType.PM,
+    ..pPM<KeyRangeLocation>(2, _omitFieldNames ? '' : 'keyRanges',
         subBuilder: KeyRangeLocation.create)
-    ..pc<StreamLocation>(3, _omitFieldNames ? '' : 'inputs', $pb.PbFieldType.PM,
+    ..pPM<StreamLocation>(3, _omitFieldNames ? '' : 'inputs',
         subBuilder: StreamLocation.create)
-    ..pc<StreamLocation>(
-        4, _omitFieldNames ? '' : 'outputs', $pb.PbFieldType.PM,
+    ..pPM<StreamLocation>(4, _omitFieldNames ? '' : 'outputs',
         subBuilder: StreamLocation.create)
     ..aOS(5, _omitFieldNames ? '' : 'computationId')
-    ..pc<StateFamilyConfig>(
-        7, _omitFieldNames ? '' : 'stateFamilies', $pb.PbFieldType.PM,
+    ..pPM<StateFamilyConfig>(7, _omitFieldNames ? '' : 'stateFamilies',
         subBuilder: StateFamilyConfig.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ComputationTopology clone() => ComputationTopology()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ComputationTopology clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ComputationTopology copyWith(void Function(ComputationTopology) updates) =>
       super.copyWith((message) => updates(message as ComputationTopology))
           as ComputationTopology;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ComputationTopology create() => ComputationTopology._();
+  @$core.override
   ComputationTopology createEmptyInstance() => create();
-  static $pb.PbList<ComputationTopology> createRepeated() =>
-      $pb.PbList<ComputationTopology>();
   @$core.pragma('dart2js:noInline')
   static ComputationTopology getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ComputationTopology>(create);
@@ -856,43 +751,37 @@ class ComputationTopology extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get systemStageName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set systemStageName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set systemStageName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSystemStageName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSystemStageName() => clearField(1);
+  void clearSystemStageName() => $_clearField(1);
 
   /// The key ranges processed by the computation.
   @$pb.TagNumber(2)
-  $core.List<KeyRangeLocation> get keyRanges => $_getList(1);
+  $pb.PbList<KeyRangeLocation> get keyRanges => $_getList(1);
 
   /// The inputs to the computation.
   @$pb.TagNumber(3)
-  $core.List<StreamLocation> get inputs => $_getList(2);
+  $pb.PbList<StreamLocation> get inputs => $_getList(2);
 
   /// The outputs from the computation.
   @$pb.TagNumber(4)
-  $core.List<StreamLocation> get outputs => $_getList(3);
+  $pb.PbList<StreamLocation> get outputs => $_getList(3);
 
   /// The ID of the computation.
   @$pb.TagNumber(5)
   $core.String get computationId => $_getSZ(4);
   @$pb.TagNumber(5)
-  set computationId($core.String v) {
-    $_setString(4, v);
-  }
-
+  set computationId($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasComputationId() => $_has(4);
   @$pb.TagNumber(5)
-  void clearComputationId() => clearField(5);
+  void clearComputationId() => $_clearField(5);
 
   /// The state family values.
   @$pb.TagNumber(7)
-  $core.List<StateFamilyConfig> get stateFamilies => $_getList(5);
+  $pb.PbList<StateFamilyConfig> get stateFamilies => $_getList(5);
 }
 
 /// Location information for a specific key-range of a sharded computation.
@@ -907,32 +796,24 @@ class KeyRangeLocation extends $pb.GeneratedMessage {
     $core.String? deprecatedPersistentDirectory,
     $core.String? dataDisk,
   }) {
-    final $result = create();
-    if (start != null) {
-      $result.start = start;
-    }
-    if (end != null) {
-      $result.end = end;
-    }
-    if (deliveryEndpoint != null) {
-      $result.deliveryEndpoint = deliveryEndpoint;
-    }
-    if (deprecatedPersistentDirectory != null) {
-      // ignore: deprecated_member_use_from_same_package
-      $result.deprecatedPersistentDirectory = deprecatedPersistentDirectory;
-    }
-    if (dataDisk != null) {
-      $result.dataDisk = dataDisk;
-    }
-    return $result;
+    final result = create();
+    if (start != null) result.start = start;
+    if (end != null) result.end = end;
+    if (deliveryEndpoint != null) result.deliveryEndpoint = deliveryEndpoint;
+    if (deprecatedPersistentDirectory != null)
+      result.deprecatedPersistentDirectory = deprecatedPersistentDirectory;
+    if (dataDisk != null) result.dataDisk = dataDisk;
+    return result;
   }
-  KeyRangeLocation._() : super();
-  factory KeyRangeLocation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory KeyRangeLocation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  KeyRangeLocation._();
+
+  factory KeyRangeLocation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory KeyRangeLocation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'KeyRangeLocation',
@@ -946,24 +827,20 @@ class KeyRangeLocation extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'dataDisk')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  KeyRangeLocation clone() => KeyRangeLocation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  KeyRangeLocation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   KeyRangeLocation copyWith(void Function(KeyRangeLocation) updates) =>
       super.copyWith((message) => updates(message as KeyRangeLocation))
           as KeyRangeLocation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static KeyRangeLocation create() => KeyRangeLocation._();
+  @$core.override
   KeyRangeLocation createEmptyInstance() => create();
-  static $pb.PbList<KeyRangeLocation> createRepeated() =>
-      $pb.PbList<KeyRangeLocation>();
   @$core.pragma('dart2js:noInline')
   static KeyRangeLocation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<KeyRangeLocation>(create);
@@ -973,41 +850,32 @@ class KeyRangeLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get start => $_getSZ(0);
   @$pb.TagNumber(1)
-  set start($core.String v) {
-    $_setString(0, v);
-  }
-
+  set start($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasStart() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStart() => clearField(1);
+  void clearStart() => $_clearField(1);
 
   /// The end (exclusive) of the key range.
   @$pb.TagNumber(2)
   $core.String get end => $_getSZ(1);
   @$pb.TagNumber(2)
-  set end($core.String v) {
-    $_setString(1, v);
-  }
-
+  set end($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEnd() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEnd() => clearField(2);
+  void clearEnd() => $_clearField(2);
 
   /// The physical location of this range assignment to be used for
   /// streaming computation cross-worker message delivery.
   @$pb.TagNumber(3)
   $core.String get deliveryEndpoint => $_getSZ(2);
   @$pb.TagNumber(3)
-  set deliveryEndpoint($core.String v) {
-    $_setString(2, v);
-  }
-
+  set deliveryEndpoint($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDeliveryEndpoint() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDeliveryEndpoint() => clearField(3);
+  void clearDeliveryEndpoint() => $_clearField(3);
 
   /// DEPRECATED. The location of the persistent state for this range, as a
   /// persistent directory in the worker local filesystem.
@@ -1016,16 +884,14 @@ class KeyRangeLocation extends $pb.GeneratedMessage {
   $core.String get deprecatedPersistentDirectory => $_getSZ(3);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
-  set deprecatedPersistentDirectory($core.String v) {
-    $_setString(3, v);
-  }
-
+  set deprecatedPersistentDirectory($core.String value) =>
+      $_setString(3, value);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
   $core.bool hasDeprecatedPersistentDirectory() => $_has(3);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(4)
-  void clearDeprecatedPersistentDirectory() => clearField(4);
+  void clearDeprecatedPersistentDirectory() => $_clearField(4);
 
   /// The name of the data disk where data for this range is stored.
   /// This name is local to the Google Cloud Platform project and uniquely
@@ -1034,14 +900,11 @@ class KeyRangeLocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get dataDisk => $_getSZ(4);
   @$pb.TagNumber(5)
-  set dataDisk($core.String v) {
-    $_setString(4, v);
-  }
-
+  set dataDisk($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasDataDisk() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDataDisk() => clearField(5);
+  void clearDataDisk() => $_clearField(5);
 }
 
 /// Describes mounted data disk.
@@ -1049,19 +912,19 @@ class MountedDataDisk extends $pb.GeneratedMessage {
   factory MountedDataDisk({
     $core.String? dataDisk,
   }) {
-    final $result = create();
-    if (dataDisk != null) {
-      $result.dataDisk = dataDisk;
-    }
-    return $result;
+    final result = create();
+    if (dataDisk != null) result.dataDisk = dataDisk;
+    return result;
   }
-  MountedDataDisk._() : super();
-  factory MountedDataDisk.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory MountedDataDisk.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  MountedDataDisk._();
+
+  factory MountedDataDisk.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory MountedDataDisk.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'MountedDataDisk',
@@ -1071,24 +934,20 @@ class MountedDataDisk extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'dataDisk')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  MountedDataDisk clone() => MountedDataDisk()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MountedDataDisk clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   MountedDataDisk copyWith(void Function(MountedDataDisk) updates) =>
       super.copyWith((message) => updates(message as MountedDataDisk))
           as MountedDataDisk;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static MountedDataDisk create() => MountedDataDisk._();
+  @$core.override
   MountedDataDisk createEmptyInstance() => create();
-  static $pb.PbList<MountedDataDisk> createRepeated() =>
-      $pb.PbList<MountedDataDisk>();
   @$core.pragma('dart2js:noInline')
   static MountedDataDisk getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<MountedDataDisk>(create);
@@ -1101,14 +960,11 @@ class MountedDataDisk extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get dataDisk => $_getSZ(0);
   @$pb.TagNumber(1)
-  set dataDisk($core.String v) {
-    $_setString(0, v);
-  }
-
+  set dataDisk($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDataDisk() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDataDisk() => clearField(1);
+  void clearDataDisk() => $_clearField(1);
 }
 
 /// Data disk assignment for a given VM instance.
@@ -1117,22 +973,20 @@ class DataDiskAssignment extends $pb.GeneratedMessage {
     $core.String? vmInstance,
     $core.Iterable<$core.String>? dataDisks,
   }) {
-    final $result = create();
-    if (vmInstance != null) {
-      $result.vmInstance = vmInstance;
-    }
-    if (dataDisks != null) {
-      $result.dataDisks.addAll(dataDisks);
-    }
-    return $result;
+    final result = create();
+    if (vmInstance != null) result.vmInstance = vmInstance;
+    if (dataDisks != null) result.dataDisks.addAll(dataDisks);
+    return result;
   }
-  DataDiskAssignment._() : super();
-  factory DataDiskAssignment.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DataDiskAssignment.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DataDiskAssignment._();
+
+  factory DataDiskAssignment.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DataDiskAssignment.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DataDiskAssignment',
@@ -1143,24 +997,20 @@ class DataDiskAssignment extends $pb.GeneratedMessage {
     ..pPS(2, _omitFieldNames ? '' : 'dataDisks')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DataDiskAssignment clone() => DataDiskAssignment()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DataDiskAssignment clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DataDiskAssignment copyWith(void Function(DataDiskAssignment) updates) =>
       super.copyWith((message) => updates(message as DataDiskAssignment))
           as DataDiskAssignment;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DataDiskAssignment create() => DataDiskAssignment._();
+  @$core.override
   DataDiskAssignment createEmptyInstance() => create();
-  static $pb.PbList<DataDiskAssignment> createRepeated() =>
-      $pb.PbList<DataDiskAssignment>();
   @$core.pragma('dart2js:noInline')
   static DataDiskAssignment getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DataDiskAssignment>(create);
@@ -1171,21 +1021,18 @@ class DataDiskAssignment extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get vmInstance => $_getSZ(0);
   @$pb.TagNumber(1)
-  set vmInstance($core.String v) {
-    $_setString(0, v);
-  }
-
+  set vmInstance($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasVmInstance() => $_has(0);
   @$pb.TagNumber(1)
-  void clearVmInstance() => clearField(1);
+  void clearVmInstance() => $_clearField(1);
 
   /// Mounted data disks. The order is important a data disk's 0-based index in
   /// this list defines which persistent directory the disk is mounted to, for
   /// example the list of { "myproject-1014-104817-4c2-harness-0-disk-0" },
   /// { "myproject-1014-104817-4c2-harness-0-disk-1" }.
   @$pb.TagNumber(2)
-  $core.List<$core.String> get dataDisks => $_getList(1);
+  $pb.PbList<$core.String> get dataDisks => $_getList(1);
 }
 
 /// Data disk assignment information for a specific key-range of a sharded
@@ -1198,25 +1045,21 @@ class KeyRangeDataDiskAssignment extends $pb.GeneratedMessage {
     $core.String? end,
     $core.String? dataDisk,
   }) {
-    final $result = create();
-    if (start != null) {
-      $result.start = start;
-    }
-    if (end != null) {
-      $result.end = end;
-    }
-    if (dataDisk != null) {
-      $result.dataDisk = dataDisk;
-    }
-    return $result;
+    final result = create();
+    if (start != null) result.start = start;
+    if (end != null) result.end = end;
+    if (dataDisk != null) result.dataDisk = dataDisk;
+    return result;
   }
-  KeyRangeDataDiskAssignment._() : super();
-  factory KeyRangeDataDiskAssignment.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory KeyRangeDataDiskAssignment.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  KeyRangeDataDiskAssignment._();
+
+  factory KeyRangeDataDiskAssignment.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory KeyRangeDataDiskAssignment.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'KeyRangeDataDiskAssignment',
@@ -1228,27 +1071,22 @@ class KeyRangeDataDiskAssignment extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'dataDisk')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  KeyRangeDataDiskAssignment clone() =>
-      KeyRangeDataDiskAssignment()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  KeyRangeDataDiskAssignment clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   KeyRangeDataDiskAssignment copyWith(
           void Function(KeyRangeDataDiskAssignment) updates) =>
       super.copyWith(
               (message) => updates(message as KeyRangeDataDiskAssignment))
           as KeyRangeDataDiskAssignment;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static KeyRangeDataDiskAssignment create() => KeyRangeDataDiskAssignment._();
+  @$core.override
   KeyRangeDataDiskAssignment createEmptyInstance() => create();
-  static $pb.PbList<KeyRangeDataDiskAssignment> createRepeated() =>
-      $pb.PbList<KeyRangeDataDiskAssignment>();
   @$core.pragma('dart2js:noInline')
   static KeyRangeDataDiskAssignment getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<KeyRangeDataDiskAssignment>(create);
@@ -1258,27 +1096,21 @@ class KeyRangeDataDiskAssignment extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get start => $_getSZ(0);
   @$pb.TagNumber(1)
-  set start($core.String v) {
-    $_setString(0, v);
-  }
-
+  set start($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasStart() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStart() => clearField(1);
+  void clearStart() => $_clearField(1);
 
   /// The end (exclusive) of the key range.
   @$pb.TagNumber(2)
   $core.String get end => $_getSZ(1);
   @$pb.TagNumber(2)
-  set end($core.String v) {
-    $_setString(1, v);
-  }
-
+  set end($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEnd() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEnd() => clearField(2);
+  void clearEnd() => $_clearField(2);
 
   /// The name of the data disk where data for this range is stored.
   /// This name is local to the Google Cloud Platform project and uniquely
@@ -1287,14 +1119,11 @@ class KeyRangeDataDiskAssignment extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get dataDisk => $_getSZ(2);
   @$pb.TagNumber(3)
-  set dataDisk($core.String v) {
-    $_setString(2, v);
-  }
-
+  set dataDisk($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDataDisk() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDataDisk() => clearField(3);
+  void clearDataDisk() => $_clearField(3);
 }
 
 /// Describes full or partial data disk assignment information of the computation
@@ -1304,22 +1133,21 @@ class StreamingComputationRanges extends $pb.GeneratedMessage {
     $core.String? computationId,
     $core.Iterable<KeyRangeDataDiskAssignment>? rangeAssignments,
   }) {
-    final $result = create();
-    if (computationId != null) {
-      $result.computationId = computationId;
-    }
-    if (rangeAssignments != null) {
-      $result.rangeAssignments.addAll(rangeAssignments);
-    }
-    return $result;
+    final result = create();
+    if (computationId != null) result.computationId = computationId;
+    if (rangeAssignments != null)
+      result.rangeAssignments.addAll(rangeAssignments);
+    return result;
   }
-  StreamingComputationRanges._() : super();
-  factory StreamingComputationRanges.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory StreamingComputationRanges.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  StreamingComputationRanges._();
+
+  factory StreamingComputationRanges.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StreamingComputationRanges.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'StreamingComputationRanges',
@@ -1327,32 +1155,27 @@ class StreamingComputationRanges extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.dataflow.v1beta3'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'computationId')
-    ..pc<KeyRangeDataDiskAssignment>(
-        2, _omitFieldNames ? '' : 'rangeAssignments', $pb.PbFieldType.PM,
+    ..pPM<KeyRangeDataDiskAssignment>(
+        2, _omitFieldNames ? '' : 'rangeAssignments',
         subBuilder: KeyRangeDataDiskAssignment.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  StreamingComputationRanges clone() =>
-      StreamingComputationRanges()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StreamingComputationRanges clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   StreamingComputationRanges copyWith(
           void Function(StreamingComputationRanges) updates) =>
       super.copyWith(
               (message) => updates(message as StreamingComputationRanges))
           as StreamingComputationRanges;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static StreamingComputationRanges create() => StreamingComputationRanges._();
+  @$core.override
   StreamingComputationRanges createEmptyInstance() => create();
-  static $pb.PbList<StreamingComputationRanges> createRepeated() =>
-      $pb.PbList<StreamingComputationRanges>();
   @$core.pragma('dart2js:noInline')
   static StreamingComputationRanges getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<StreamingComputationRanges>(create);
@@ -1362,18 +1185,15 @@ class StreamingComputationRanges extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get computationId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set computationId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set computationId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasComputationId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearComputationId() => clearField(1);
+  void clearComputationId() => $_clearField(1);
 
   /// Data disk assignments for ranges from this computation.
   @$pb.TagNumber(2)
-  $core.List<KeyRangeDataDiskAssignment> get rangeAssignments => $_getList(1);
+  $pb.PbList<KeyRangeDataDiskAssignment> get rangeAssignments => $_getList(1);
 }
 
 /// Streaming appliance snapshot configuration.
@@ -1382,22 +1202,22 @@ class StreamingApplianceSnapshotConfig extends $pb.GeneratedMessage {
     $core.String? snapshotId,
     $core.String? importStateEndpoint,
   }) {
-    final $result = create();
-    if (snapshotId != null) {
-      $result.snapshotId = snapshotId;
-    }
-    if (importStateEndpoint != null) {
-      $result.importStateEndpoint = importStateEndpoint;
-    }
-    return $result;
+    final result = create();
+    if (snapshotId != null) result.snapshotId = snapshotId;
+    if (importStateEndpoint != null)
+      result.importStateEndpoint = importStateEndpoint;
+    return result;
   }
-  StreamingApplianceSnapshotConfig._() : super();
-  factory StreamingApplianceSnapshotConfig.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory StreamingApplianceSnapshotConfig.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  StreamingApplianceSnapshotConfig._();
+
+  factory StreamingApplianceSnapshotConfig.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StreamingApplianceSnapshotConfig.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'StreamingApplianceSnapshotConfig',
@@ -1408,28 +1228,23 @@ class StreamingApplianceSnapshotConfig extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'importStateEndpoint')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  StreamingApplianceSnapshotConfig clone() =>
-      StreamingApplianceSnapshotConfig()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StreamingApplianceSnapshotConfig clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   StreamingApplianceSnapshotConfig copyWith(
           void Function(StreamingApplianceSnapshotConfig) updates) =>
       super.copyWith(
               (message) => updates(message as StreamingApplianceSnapshotConfig))
           as StreamingApplianceSnapshotConfig;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static StreamingApplianceSnapshotConfig create() =>
       StreamingApplianceSnapshotConfig._();
+  @$core.override
   StreamingApplianceSnapshotConfig createEmptyInstance() => create();
-  static $pb.PbList<StreamingApplianceSnapshotConfig> createRepeated() =>
-      $pb.PbList<StreamingApplianceSnapshotConfig>();
   @$core.pragma('dart2js:noInline')
   static StreamingApplianceSnapshotConfig getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<StreamingApplianceSnapshotConfig>(
@@ -1440,29 +1255,24 @@ class StreamingApplianceSnapshotConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get snapshotId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set snapshotId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set snapshotId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSnapshotId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSnapshotId() => clearField(1);
+  void clearSnapshotId() => $_clearField(1);
 
   /// Indicates which endpoint is used to import appliance state.
   @$pb.TagNumber(2)
   $core.String get importStateEndpoint => $_getSZ(1);
   @$pb.TagNumber(2)
-  set importStateEndpoint($core.String v) {
-    $_setString(1, v);
-  }
-
+  set importStateEndpoint($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasImportStateEndpoint() => $_has(1);
   @$pb.TagNumber(2)
-  void clearImportStateEndpoint() => clearField(2);
+  void clearImportStateEndpoint() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

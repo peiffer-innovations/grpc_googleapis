@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/firestore/admin/v1/firestore_admin.proto
-//
-// @dart = 2.12
+// Generated from google/firestore/admin/v1/firestore_admin.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -158,6 +160,140 @@ const DeleteDatabaseMetadata$json = {
 /// Descriptor for `DeleteDatabaseMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteDatabaseMetadataDescriptor =
     $convert.base64Decode('ChZEZWxldGVEYXRhYmFzZU1ldGFkYXRh');
+
+@$core.Deprecated('Use createUserCredsRequestDescriptor instead')
+const CreateUserCredsRequest$json = {
+  '1': 'CreateUserCredsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {
+      '1': 'user_creds',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.firestore.admin.v1.UserCreds',
+      '8': {},
+      '10': 'userCreds'
+    },
+    {
+      '1': 'user_creds_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'userCredsId'
+    },
+  ],
+};
+
+/// Descriptor for `CreateUserCredsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createUserCredsRequestDescriptor = $convert.base64Decode(
+    'ChZDcmVhdGVVc2VyQ3JlZHNSZXF1ZXN0EkIKBnBhcmVudBgBIAEoCUIq4EEC+kEkEiJmaXJlc3'
+    'RvcmUuZ29vZ2xlYXBpcy5jb20vVXNlckNyZWRzUgZwYXJlbnQSSAoKdXNlcl9jcmVkcxgCIAEo'
+    'CzIkLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuVXNlckNyZWRzQgPgQQJSCXVzZXJDcmVkcx'
+    'InCg11c2VyX2NyZWRzX2lkGAMgASgJQgPgQQJSC3VzZXJDcmVkc0lk');
+
+@$core.Deprecated('Use getUserCredsRequestDescriptor instead')
+const GetUserCredsRequest$json = {
+  '1': 'GetUserCredsRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetUserCredsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserCredsRequestDescriptor = $convert.base64Decode(
+    'ChNHZXRVc2VyQ3JlZHNSZXF1ZXN0Ej4KBG5hbWUYASABKAlCKuBBAvpBJAoiZmlyZXN0b3JlLm'
+    'dvb2dsZWFwaXMuY29tL1VzZXJDcmVkc1IEbmFtZQ==');
+
+@$core.Deprecated('Use listUserCredsRequestDescriptor instead')
+const ListUserCredsRequest$json = {
+  '1': 'ListUserCredsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+  ],
+};
+
+/// Descriptor for `ListUserCredsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listUserCredsRequestDescriptor = $convert.base64Decode(
+    'ChRMaXN0VXNlckNyZWRzUmVxdWVzdBJCCgZwYXJlbnQYASABKAlCKuBBAvpBJBIiZmlyZXN0b3'
+    'JlLmdvb2dsZWFwaXMuY29tL1VzZXJDcmVkc1IGcGFyZW50');
+
+@$core.Deprecated('Use listUserCredsResponseDescriptor instead')
+const ListUserCredsResponse$json = {
+  '1': 'ListUserCredsResponse',
+  '2': [
+    {
+      '1': 'user_creds',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.firestore.admin.v1.UserCreds',
+      '10': 'userCreds'
+    },
+  ],
+};
+
+/// Descriptor for `ListUserCredsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listUserCredsResponseDescriptor = $convert.base64Decode(
+    'ChVMaXN0VXNlckNyZWRzUmVzcG9uc2USQwoKdXNlcl9jcmVkcxgBIAMoCzIkLmdvb2dsZS5maX'
+    'Jlc3RvcmUuYWRtaW4udjEuVXNlckNyZWRzUgl1c2VyQ3JlZHM=');
+
+@$core.Deprecated('Use enableUserCredsRequestDescriptor instead')
+const EnableUserCredsRequest$json = {
+  '1': 'EnableUserCredsRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `EnableUserCredsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enableUserCredsRequestDescriptor =
+    $convert.base64Decode(
+        'ChZFbmFibGVVc2VyQ3JlZHNSZXF1ZXN0Ej4KBG5hbWUYASABKAlCKuBBAvpBJAoiZmlyZXN0b3'
+        'JlLmdvb2dsZWFwaXMuY29tL1VzZXJDcmVkc1IEbmFtZQ==');
+
+@$core.Deprecated('Use disableUserCredsRequestDescriptor instead')
+const DisableUserCredsRequest$json = {
+  '1': 'DisableUserCredsRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DisableUserCredsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List disableUserCredsRequestDescriptor =
+    $convert.base64Decode(
+        'ChdEaXNhYmxlVXNlckNyZWRzUmVxdWVzdBI+CgRuYW1lGAEgASgJQirgQQL6QSQKImZpcmVzdG'
+        '9yZS5nb29nbGVhcGlzLmNvbS9Vc2VyQ3JlZHNSBG5hbWU=');
+
+@$core.Deprecated('Use resetUserPasswordRequestDescriptor instead')
+const ResetUserPasswordRequest$json = {
+  '1': 'ResetUserPasswordRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `ResetUserPasswordRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List resetUserPasswordRequestDescriptor =
+    $convert.base64Decode(
+        'ChhSZXNldFVzZXJQYXNzd29yZFJlcXVlc3QSPgoEbmFtZRgBIAEoCUIq4EEC+kEkCiJmaXJlc3'
+        'RvcmUuZ29vZ2xlYXBpcy5jb20vVXNlckNyZWRzUgRuYW1l');
+
+@$core.Deprecated('Use deleteUserCredsRequestDescriptor instead')
+const DeleteUserCredsRequest$json = {
+  '1': 'DeleteUserCredsRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DeleteUserCredsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteUserCredsRequestDescriptor =
+    $convert.base64Decode(
+        'ChZEZWxldGVVc2VyQ3JlZHNSZXF1ZXN0Ej4KBG5hbWUYASABKAlCKuBBAvpBJAoiZmlyZXN0b3'
+        'JlLmdvb2dsZWFwaXMuY29tL1VzZXJDcmVkc1IEbmFtZQ==');
 
 @$core.Deprecated('Use createBackupScheduleRequestDescriptor instead')
 const CreateBackupScheduleRequest$json = {
@@ -613,7 +749,27 @@ const RestoreDatabaseRequest$json = {
       '8': {},
       '10': 'encryptionConfig'
     },
+    {
+      '1': 'tags',
+      '3': 10,
+      '4': 3,
+      '5': 11,
+      '6': '.google.firestore.admin.v1.RestoreDatabaseRequest.TagsEntry',
+      '8': {},
+      '10': 'tags'
+    },
   ],
+  '3': [RestoreDatabaseRequest_TagsEntry$json],
+};
+
+@$core.Deprecated('Use restoreDatabaseRequestDescriptor instead')
+const RestoreDatabaseRequest_TagsEntry$json = {
+  '1': 'TagsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
 };
 
 /// Descriptor for `RestoreDatabaseRequest`. Decode as a `google.protobuf.DescriptorProto`.
@@ -623,4 +779,65 @@ final $typed_data.Uint8List restoreDatabaseRequestDescriptor = $convert.base64De
     'CUID4EECUgpkYXRhYmFzZUlkEj8KBmJhY2t1cBgDIAEoCUIn4EEC+kEhCh9maXJlc3RvcmUuZ2'
     '9vZ2xlYXBpcy5jb20vQmFja3VwUgZiYWNrdXASZgoRZW5jcnlwdGlvbl9jb25maWcYCSABKAsy'
     'NC5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkRhdGFiYXNlLkVuY3J5cHRpb25Db25maWdCA+'
-    'BBAVIQZW5jcnlwdGlvbkNvbmZpZw==');
+    'BBAVIQZW5jcnlwdGlvbkNvbmZpZxJXCgR0YWdzGAogAygLMjsuZ29vZ2xlLmZpcmVzdG9yZS5h'
+    'ZG1pbi52MS5SZXN0b3JlRGF0YWJhc2VSZXF1ZXN0LlRhZ3NFbnRyeUIG4EEF4EEBUgR0YWdzGj'
+    'cKCVRhZ3NFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+
+@$core.Deprecated('Use cloneDatabaseRequestDescriptor instead')
+const CloneDatabaseRequest$json = {
+  '1': 'CloneDatabaseRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'database_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'databaseId'},
+    {
+      '1': 'pitr_snapshot',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.firestore.admin.v1.PitrSnapshot',
+      '8': {},
+      '10': 'pitrSnapshot'
+    },
+    {
+      '1': 'encryption_config',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.firestore.admin.v1.Database.EncryptionConfig',
+      '8': {},
+      '10': 'encryptionConfig'
+    },
+    {
+      '1': 'tags',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.google.firestore.admin.v1.CloneDatabaseRequest.TagsEntry',
+      '8': {},
+      '10': 'tags'
+    },
+  ],
+  '3': [CloneDatabaseRequest_TagsEntry$json],
+};
+
+@$core.Deprecated('Use cloneDatabaseRequestDescriptor instead')
+const CloneDatabaseRequest_TagsEntry$json = {
+  '1': 'TagsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+/// Descriptor for `CloneDatabaseRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cloneDatabaseRequestDescriptor = $convert.base64Decode(
+    'ChRDbG9uZURhdGFiYXNlUmVxdWVzdBJBCgZwYXJlbnQYASABKAlCKeBBAvpBIxIhZmlyZXN0b3'
+    'JlLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlUgZwYXJlbnQSJAoLZGF0YWJhc2VfaWQYAiABKAlC'
+    'A+BBAlIKZGF0YWJhc2VJZBJRCg1waXRyX3NuYXBzaG90GAYgASgLMicuZ29vZ2xlLmZpcmVzdG'
+    '9yZS5hZG1pbi52MS5QaXRyU25hcHNob3RCA+BBAlIMcGl0clNuYXBzaG90EmYKEWVuY3J5cHRp'
+    'b25fY29uZmlnGAQgASgLMjQuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5EYXRhYmFzZS5Fbm'
+    'NyeXB0aW9uQ29uZmlnQgPgQQFSEGVuY3J5cHRpb25Db25maWcSVQoEdGFncxgFIAMoCzI5Lmdv'
+    'b2dsZS5maXJlc3RvcmUuYWRtaW4udjEuQ2xvbmVEYXRhYmFzZVJlcXVlc3QuVGFnc0VudHJ5Qg'
+    'bgQQXgQQFSBHRhZ3MaNwoJVGFnc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIg'
+    'ASgJUgV2YWx1ZToCOAE=');

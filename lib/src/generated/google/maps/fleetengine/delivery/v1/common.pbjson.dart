@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/fleetengine/delivery/v1/common.proto
-//
-// @dart = 2.12
+// Generated from google/maps/fleetengine/delivery/v1/common.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -275,6 +277,38 @@ const DeliveryVehicleLocation$json = {
       '10': 'rawLocationAccuracy'
     },
     {
+      '1': 'flp_location',
+      '3': 29,
+      '4': 1,
+      '5': 11,
+      '6': '.google.type.LatLng',
+      '10': 'flpLocation'
+    },
+    {
+      '1': 'flp_update_time',
+      '3': 30,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'flpUpdateTime'
+    },
+    {
+      '1': 'flp_latlng_accuracy_meters',
+      '3': 31,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.DoubleValue',
+      '10': 'flpLatlngAccuracyMeters'
+    },
+    {
+      '1': 'flp_heading_degrees',
+      '3': 32,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int32Value',
+      '10': 'flpHeadingDegrees'
+    },
+    {
       '1': 'supplemental_location',
       '3': 18,
       '4': 1,
@@ -349,15 +383,20 @@ final $typed_data.Uint8List deliveryVehicleLocationDescriptor = $convert.base64D
     'sKE3Jhd19sb2NhdGlvbl9zZW5zb3IYHCABKA4yOy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5'
     'LnYxLkRlbGl2ZXJ5VmVoaWNsZUxvY2F0aW9uU2Vuc29yUhFyYXdMb2NhdGlvblNlbnNvchJQCh'
     'VyYXdfbG9jYXRpb25fYWNjdXJhY3kYGSABKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFs'
-    'dWVSE3Jhd0xvY2F0aW9uQWNjdXJhY3kSSAoVc3VwcGxlbWVudGFsX2xvY2F0aW9uGBIgASgLMh'
-    'MuZ29vZ2xlLnR5cGUuTGF0TG5nUhRzdXBwbGVtZW50YWxMb2NhdGlvbhJYChpzdXBwbGVtZW50'
-    'YWxfbG9jYXRpb25fdGltZRgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSGHN1cH'
-    'BsZW1lbnRhbExvY2F0aW9uVGltZRJ9ChxzdXBwbGVtZW50YWxfbG9jYXRpb25fc2Vuc29yGBQg'
-    'ASgOMjsubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVZlaGljbGVMb2NhdG'
-    'lvblNlbnNvclIac3VwcGxlbWVudGFsTG9jYXRpb25TZW5zb3ISYgoec3VwcGxlbWVudGFsX2xv'
-    'Y2F0aW9uX2FjY3VyYWN5GBUgASgLMhwuZ29vZ2xlLnByb3RvYnVmLkRvdWJsZVZhbHVlUhxzdX'
-    'BwbGVtZW50YWxMb2NhdGlvbkFjY3VyYWN5EiUKDHJvYWRfc25hcHBlZBgaIAEoCEICGAFSC3Jv'
-    'YWRTbmFwcGVk');
+    'dWVSE3Jhd0xvY2F0aW9uQWNjdXJhY3kSNgoMZmxwX2xvY2F0aW9uGB0gASgLMhMuZ29vZ2xlLn'
+    'R5cGUuTGF0TG5nUgtmbHBMb2NhdGlvbhJCCg9mbHBfdXBkYXRlX3RpbWUYHiABKAsyGi5nb29n'
+    'bGUucHJvdG9idWYuVGltZXN0YW1wUg1mbHBVcGRhdGVUaW1lElkKGmZscF9sYXRsbmdfYWNjdX'
+    'JhY3lfbWV0ZXJzGB8gASgLMhwuZ29vZ2xlLnByb3RvYnVmLkRvdWJsZVZhbHVlUhdmbHBMYXRs'
+    'bmdBY2N1cmFjeU1ldGVycxJLChNmbHBfaGVhZGluZ19kZWdyZWVzGCAgASgLMhsuZ29vZ2xlLn'
+    'Byb3RvYnVmLkludDMyVmFsdWVSEWZscEhlYWRpbmdEZWdyZWVzEkgKFXN1cHBsZW1lbnRhbF9s'
+    'b2NhdGlvbhgSIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZ1IUc3VwcGxlbWVudGFsTG9jYXRpb2'
+    '4SWAoac3VwcGxlbWVudGFsX2xvY2F0aW9uX3RpbWUYEyABKAsyGi5nb29nbGUucHJvdG9idWYu'
+    'VGltZXN0YW1wUhhzdXBwbGVtZW50YWxMb2NhdGlvblRpbWUSfQocc3VwcGxlbWVudGFsX2xvY2'
+    'F0aW9uX3NlbnNvchgUIAEoDjI7Lm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZl'
+    'cnlWZWhpY2xlTG9jYXRpb25TZW5zb3JSGnN1cHBsZW1lbnRhbExvY2F0aW9uU2Vuc29yEmIKHn'
+    'N1cHBsZW1lbnRhbF9sb2NhdGlvbl9hY2N1cmFjeRgVIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5E'
+    'b3VibGVWYWx1ZVIcc3VwcGxlbWVudGFsTG9jYXRpb25BY2N1cmFjeRIlCgxyb2FkX3NuYXBwZW'
+    'QYGiABKAhCAhgBUgtyb2FkU25hcHBlZA==');
 
 @$core.Deprecated('Use timeWindowDescriptor instead')
 const TimeWindow$json = {

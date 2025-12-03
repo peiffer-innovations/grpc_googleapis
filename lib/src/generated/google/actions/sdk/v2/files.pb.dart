@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/files.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/files.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,6 +16,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'config_file.pb.dart' as $0;
 import 'data_file.pb.dart' as $1;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum Files_FileType { configFiles, dataFiles, notSet }
 
@@ -24,22 +27,20 @@ class Files extends $pb.GeneratedMessage {
     $0.ConfigFiles? configFiles,
     $1.DataFiles? dataFiles,
   }) {
-    final $result = create();
-    if (configFiles != null) {
-      $result.configFiles = configFiles;
-    }
-    if (dataFiles != null) {
-      $result.dataFiles = dataFiles;
-    }
-    return $result;
+    final result = create();
+    if (configFiles != null) result.configFiles = configFiles;
+    if (dataFiles != null) result.dataFiles = dataFiles;
+    return result;
   }
-  Files._() : super();
-  factory Files.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Files.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Files._();
+
+  factory Files.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Files.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Files_FileType> _Files_FileTypeByTag = {
     1: Files_FileType.configFiles,
@@ -58,43 +59,41 @@ class Files extends $pb.GeneratedMessage {
         subBuilder: $1.DataFiles.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Files clone() => Files()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Files clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Files copyWith(void Function(Files) updates) =>
       super.copyWith((message) => updates(message as Files)) as Files;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Files create() => Files._();
+  @$core.override
   Files createEmptyInstance() => create();
-  static $pb.PbList<Files> createRepeated() => $pb.PbList<Files>();
   @$core.pragma('dart2js:noInline')
   static Files getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Files>(create);
   static Files? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   Files_FileType whichFileType() => _Files_FileTypeByTag[$_whichOneof(0)]!;
-  void clearFileType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearFileType() => $_clearField($_whichOneof(0));
 
   /// List of config files. This includes manifest, settings, interaction model
   /// resource bundles and more.
   @$pb.TagNumber(1)
   $0.ConfigFiles get configFiles => $_getN(0);
   @$pb.TagNumber(1)
-  set configFiles($0.ConfigFiles v) {
-    setField(1, v);
-  }
-
+  set configFiles($0.ConfigFiles value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasConfigFiles() => $_has(0);
   @$pb.TagNumber(1)
-  void clearConfigFiles() => clearField(1);
+  void clearConfigFiles() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.ConfigFiles ensureConfigFiles() => $_ensure(0);
 
@@ -103,18 +102,16 @@ class Files extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.DataFiles get dataFiles => $_getN(1);
   @$pb.TagNumber(2)
-  set dataFiles($1.DataFiles v) {
-    setField(2, v);
-  }
-
+  set dataFiles($1.DataFiles value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasDataFiles() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDataFiles() => clearField(2);
+  void clearDataFiles() => $_clearField(2);
   @$pb.TagNumber(2)
   $1.DataFiles ensureDataFiles() => $_ensure(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

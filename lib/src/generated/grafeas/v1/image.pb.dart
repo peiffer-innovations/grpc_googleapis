@@ -1,17 +1,20 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: grafeas/v1/image.proto
-//
-// @dart = 2.12
+// Generated from grafeas/v1/image.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Layer holds metadata specific to a layer of a Docker image.
 class Layer extends $pb.GeneratedMessage {
@@ -19,22 +22,20 @@ class Layer extends $pb.GeneratedMessage {
     $core.String? directive,
     $core.String? arguments,
   }) {
-    final $result = create();
-    if (directive != null) {
-      $result.directive = directive;
-    }
-    if (arguments != null) {
-      $result.arguments = arguments;
-    }
-    return $result;
+    final result = create();
+    if (directive != null) result.directive = directive;
+    if (arguments != null) result.arguments = arguments;
+    return result;
   }
-  Layer._() : super();
-  factory Layer.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Layer.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Layer._();
+
+  factory Layer.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Layer.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Layer',
@@ -44,22 +45,19 @@ class Layer extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'arguments')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Layer clone() => Layer()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Layer clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Layer copyWith(void Function(Layer) updates) =>
       super.copyWith((message) => updates(message as Layer)) as Layer;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Layer create() => Layer._();
+  @$core.override
   Layer createEmptyInstance() => create();
-  static $pb.PbList<Layer> createRepeated() => $pb.PbList<Layer>();
   @$core.pragma('dart2js:noInline')
   static Layer getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Layer>(create);
@@ -70,27 +68,21 @@ class Layer extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get directive => $_getSZ(0);
   @$pb.TagNumber(1)
-  set directive($core.String v) {
-    $_setString(0, v);
-  }
-
+  set directive($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDirective() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDirective() => clearField(1);
+  void clearDirective() => $_clearField(1);
 
   /// The recovered arguments to the Dockerfile directive.
   @$pb.TagNumber(2)
   $core.String get arguments => $_getSZ(1);
   @$pb.TagNumber(2)
-  set arguments($core.String v) {
-    $_setString(1, v);
-  }
-
+  set arguments($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasArguments() => $_has(1);
   @$pb.TagNumber(2)
-  void clearArguments() => clearField(2);
+  void clearArguments() => $_clearField(2);
 }
 
 /// A set of properties that uniquely identify a given Docker image.
@@ -100,25 +92,21 @@ class Fingerprint extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? v2Blob,
     $core.String? v2Name,
   }) {
-    final $result = create();
-    if (v1Name != null) {
-      $result.v1Name = v1Name;
-    }
-    if (v2Blob != null) {
-      $result.v2Blob.addAll(v2Blob);
-    }
-    if (v2Name != null) {
-      $result.v2Name = v2Name;
-    }
-    return $result;
+    final result = create();
+    if (v1Name != null) result.v1Name = v1Name;
+    if (v2Blob != null) result.v2Blob.addAll(v2Blob);
+    if (v2Name != null) result.v2Name = v2Name;
+    return result;
   }
-  Fingerprint._() : super();
-  factory Fingerprint.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Fingerprint.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Fingerprint._();
+
+  factory Fingerprint.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Fingerprint.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Fingerprint',
@@ -129,23 +117,20 @@ class Fingerprint extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'v2Name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Fingerprint clone() => Fingerprint()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Fingerprint clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Fingerprint copyWith(void Function(Fingerprint) updates) =>
       super.copyWith((message) => updates(message as Fingerprint))
           as Fingerprint;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Fingerprint create() => Fingerprint._();
+  @$core.override
   Fingerprint createEmptyInstance() => create();
-  static $pb.PbList<Fingerprint> createRepeated() => $pb.PbList<Fingerprint>();
   @$core.pragma('dart2js:noInline')
   static Fingerprint getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Fingerprint>(create);
@@ -156,18 +141,15 @@ class Fingerprint extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get v1Name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set v1Name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set v1Name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasV1Name() => $_has(0);
   @$pb.TagNumber(1)
-  void clearV1Name() => clearField(1);
+  void clearV1Name() => $_clearField(1);
 
   /// Required. The ordered list of v2 blobs that represent a given image.
   @$pb.TagNumber(2)
-  $core.List<$core.String> get v2Blob => $_getList(1);
+  $pb.PbList<$core.String> get v2Blob => $_getList(1);
 
   /// Output only. The name of the image's v2 blobs computed via:
   ///   [bottom] := v2_blob[bottom]
@@ -176,14 +158,11 @@ class Fingerprint extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get v2Name => $_getSZ(2);
   @$pb.TagNumber(3)
-  set v2Name($core.String v) {
-    $_setString(2, v);
-  }
-
+  set v2Name($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasV2Name() => $_has(2);
   @$pb.TagNumber(3)
-  void clearV2Name() => clearField(3);
+  void clearV2Name() => $_clearField(3);
 }
 
 /// Basis describes the base image portion (Note) of the DockerImage
@@ -196,22 +175,20 @@ class ImageNote extends $pb.GeneratedMessage {
     $core.String? resourceUrl,
     Fingerprint? fingerprint,
   }) {
-    final $result = create();
-    if (resourceUrl != null) {
-      $result.resourceUrl = resourceUrl;
-    }
-    if (fingerprint != null) {
-      $result.fingerprint = fingerprint;
-    }
-    return $result;
+    final result = create();
+    if (resourceUrl != null) result.resourceUrl = resourceUrl;
+    if (fingerprint != null) result.fingerprint = fingerprint;
+    return result;
   }
-  ImageNote._() : super();
-  factory ImageNote.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ImageNote.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ImageNote._();
+
+  factory ImageNote.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ImageNote.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ImageNote',
@@ -222,22 +199,19 @@ class ImageNote extends $pb.GeneratedMessage {
         subBuilder: Fingerprint.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ImageNote clone() => ImageNote()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ImageNote clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ImageNote copyWith(void Function(ImageNote) updates) =>
       super.copyWith((message) => updates(message as ImageNote)) as ImageNote;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ImageNote create() => ImageNote._();
+  @$core.override
   ImageNote createEmptyInstance() => create();
-  static $pb.PbList<ImageNote> createRepeated() => $pb.PbList<ImageNote>();
   @$core.pragma('dart2js:noInline')
   static ImageNote getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ImageNote>(create);
@@ -248,27 +222,21 @@ class ImageNote extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get resourceUrl => $_getSZ(0);
   @$pb.TagNumber(1)
-  set resourceUrl($core.String v) {
-    $_setString(0, v);
-  }
-
+  set resourceUrl($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasResourceUrl() => $_has(0);
   @$pb.TagNumber(1)
-  void clearResourceUrl() => clearField(1);
+  void clearResourceUrl() => $_clearField(1);
 
   /// Required. Immutable. The fingerprint of the base image.
   @$pb.TagNumber(2)
   Fingerprint get fingerprint => $_getN(1);
   @$pb.TagNumber(2)
-  set fingerprint(Fingerprint v) {
-    setField(2, v);
-  }
-
+  set fingerprint(Fingerprint value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasFingerprint() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFingerprint() => clearField(2);
+  void clearFingerprint() => $_clearField(2);
   @$pb.TagNumber(2)
   Fingerprint ensureFingerprint() => $_ensure(1);
 }
@@ -283,28 +251,22 @@ class ImageOccurrence extends $pb.GeneratedMessage {
     $core.Iterable<Layer>? layerInfo,
     $core.String? baseResourceUrl,
   }) {
-    final $result = create();
-    if (fingerprint != null) {
-      $result.fingerprint = fingerprint;
-    }
-    if (distance != null) {
-      $result.distance = distance;
-    }
-    if (layerInfo != null) {
-      $result.layerInfo.addAll(layerInfo);
-    }
-    if (baseResourceUrl != null) {
-      $result.baseResourceUrl = baseResourceUrl;
-    }
-    return $result;
+    final result = create();
+    if (fingerprint != null) result.fingerprint = fingerprint;
+    if (distance != null) result.distance = distance;
+    if (layerInfo != null) result.layerInfo.addAll(layerInfo);
+    if (baseResourceUrl != null) result.baseResourceUrl = baseResourceUrl;
+    return result;
   }
-  ImageOccurrence._() : super();
-  factory ImageOccurrence.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ImageOccurrence.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ImageOccurrence._();
+
+  factory ImageOccurrence.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ImageOccurrence.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ImageOccurrence',
@@ -312,30 +274,26 @@ class ImageOccurrence extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<Fingerprint>(1, _omitFieldNames ? '' : 'fingerprint',
         subBuilder: Fingerprint.create)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'distance', $pb.PbFieldType.O3)
-    ..pc<Layer>(3, _omitFieldNames ? '' : 'layerInfo', $pb.PbFieldType.PM,
+    ..aI(2, _omitFieldNames ? '' : 'distance')
+    ..pPM<Layer>(3, _omitFieldNames ? '' : 'layerInfo',
         subBuilder: Layer.create)
     ..aOS(4, _omitFieldNames ? '' : 'baseResourceUrl')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ImageOccurrence clone() => ImageOccurrence()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ImageOccurrence clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ImageOccurrence copyWith(void Function(ImageOccurrence) updates) =>
       super.copyWith((message) => updates(message as ImageOccurrence))
           as ImageOccurrence;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ImageOccurrence create() => ImageOccurrence._();
+  @$core.override
   ImageOccurrence createEmptyInstance() => create();
-  static $pb.PbList<ImageOccurrence> createRepeated() =>
-      $pb.PbList<ImageOccurrence>();
   @$core.pragma('dart2js:noInline')
   static ImageOccurrence getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ImageOccurrence>(create);
@@ -345,14 +303,11 @@ class ImageOccurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Fingerprint get fingerprint => $_getN(0);
   @$pb.TagNumber(1)
-  set fingerprint(Fingerprint v) {
-    setField(1, v);
-  }
-
+  set fingerprint(Fingerprint value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasFingerprint() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFingerprint() => clearField(1);
+  void clearFingerprint() => $_clearField(1);
   @$pb.TagNumber(1)
   Fingerprint ensureFingerprint() => $_ensure(0);
 
@@ -361,36 +316,31 @@ class ImageOccurrence extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get distance => $_getIZ(1);
   @$pb.TagNumber(2)
-  set distance($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set distance($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDistance() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDistance() => clearField(2);
+  void clearDistance() => $_clearField(2);
 
   /// This contains layer-specific metadata, if populated it has length
   /// "distance" and is ordered with [distance] being the layer immediately
   /// following the base image and [1] being the final layer.
   @$pb.TagNumber(3)
-  $core.List<Layer> get layerInfo => $_getList(2);
+  $pb.PbList<Layer> get layerInfo => $_getList(2);
 
   /// Output only. This contains the base image URL for the derived image
   /// occurrence.
   @$pb.TagNumber(4)
   $core.String get baseResourceUrl => $_getSZ(3);
   @$pb.TagNumber(4)
-  set baseResourceUrl($core.String v) {
-    $_setString(3, v);
-  }
-
+  set baseResourceUrl($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasBaseResourceUrl() => $_has(3);
   @$pb.TagNumber(4)
-  void clearBaseResourceUrl() => clearField(4);
+  void clearBaseResourceUrl() => $_clearField(4);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

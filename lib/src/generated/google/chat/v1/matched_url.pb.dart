@@ -1,17 +1,20 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/chat/v1/matched_url.proto
-//
-// @dart = 2.12
+// Generated from google/chat/v1/matched_url.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// A matched URL in a Chat message. Chat apps can preview matched URLs. For more
 /// information, see [Preview
@@ -20,19 +23,19 @@ class MatchedUrl extends $pb.GeneratedMessage {
   factory MatchedUrl({
     $core.String? url,
   }) {
-    final $result = create();
-    if (url != null) {
-      $result.url = url;
-    }
-    return $result;
+    final result = create();
+    if (url != null) result.url = url;
+    return result;
   }
-  MatchedUrl._() : super();
-  factory MatchedUrl.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory MatchedUrl.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  MatchedUrl._();
+
+  factory MatchedUrl.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory MatchedUrl.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'MatchedUrl',
@@ -41,22 +44,19 @@ class MatchedUrl extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'url')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  MatchedUrl clone() => MatchedUrl()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MatchedUrl clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   MatchedUrl copyWith(void Function(MatchedUrl) updates) =>
       super.copyWith((message) => updates(message as MatchedUrl)) as MatchedUrl;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static MatchedUrl create() => MatchedUrl._();
+  @$core.override
   MatchedUrl createEmptyInstance() => create();
-  static $pb.PbList<MatchedUrl> createRepeated() => $pb.PbList<MatchedUrl>();
   @$core.pragma('dart2js:noInline')
   static MatchedUrl getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<MatchedUrl>(create);
@@ -66,16 +66,14 @@ class MatchedUrl extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get url => $_getSZ(0);
   @$pb.TagNumber(2)
-  set url($core.String v) {
-    $_setString(0, v);
-  }
-
+  set url($core.String value) => $_setString(0, value);
   @$pb.TagNumber(2)
   $core.bool hasUrl() => $_has(0);
   @$pb.TagNumber(2)
-  void clearUrl() => clearField(2);
+  void clearUrl() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

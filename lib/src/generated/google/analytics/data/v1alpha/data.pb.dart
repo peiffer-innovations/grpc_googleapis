@@ -1,21 +1,25 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/analytics/data/v1alpha/data.proto
-//
-// @dart = 2.12
+// Generated from google/analytics/data/v1alpha/data.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/duration.pb.dart'
+    as $0;
 
-import '../../../protobuf/duration.pb.dart' as $0;
 import 'data.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'data.pbenum.dart';
 
@@ -27,25 +31,21 @@ class DateRange extends $pb.GeneratedMessage {
     $core.String? endDate,
     $core.String? name,
   }) {
-    final $result = create();
-    if (startDate != null) {
-      $result.startDate = startDate;
-    }
-    if (endDate != null) {
-      $result.endDate = endDate;
-    }
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
+    if (name != null) result.name = name;
+    return result;
   }
-  DateRange._() : super();
-  factory DateRange.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DateRange.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DateRange._();
+
+  factory DateRange.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DateRange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DateRange',
@@ -57,22 +57,19 @@ class DateRange extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DateRange clone() => DateRange()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DateRange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DateRange copyWith(void Function(DateRange) updates) =>
       super.copyWith((message) => updates(message as DateRange)) as DateRange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DateRange create() => DateRange._();
+  @$core.override
   DateRange createEmptyInstance() => create();
-  static $pb.PbList<DateRange> createRepeated() => $pb.PbList<DateRange>();
   @$core.pragma('dart2js:noInline')
   static DateRange getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DateRange>(create);
@@ -85,14 +82,11 @@ class DateRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get startDate => $_getSZ(0);
   @$pb.TagNumber(1)
-  set startDate($core.String v) {
-    $_setString(0, v);
-  }
-
+  set startDate($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasStartDate() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStartDate() => clearField(1);
+  void clearStartDate() => $_clearField(1);
 
   /// The inclusive end date for the query in the format `YYYY-MM-DD`. Cannot
   /// be before `start_date`. The format `NdaysAgo`, `yesterday`, or `today` is
@@ -101,14 +95,11 @@ class DateRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get endDate => $_getSZ(1);
   @$pb.TagNumber(2)
-  set endDate($core.String v) {
-    $_setString(1, v);
-  }
-
+  set endDate($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEndDate() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEndDate() => clearField(2);
+  void clearEndDate() => $_clearField(2);
 
   /// Assigns a name to this date range. The dimension `dateRange` is valued to
   /// this name in a report response. If set, cannot begin with `date_range_` or
@@ -117,14 +108,11 @@ class DateRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get name => $_getSZ(2);
   @$pb.TagNumber(3)
-  set name($core.String v) {
-    $_setString(2, v);
-  }
-
+  set name($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearName() => clearField(3);
+  void clearName() => $_clearField(3);
 }
 
 /// Dimensions are attributes of your data. For example, the dimension city
@@ -135,22 +123,21 @@ class Dimension extends $pb.GeneratedMessage {
     $core.String? name,
     DimensionExpression? dimensionExpression,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (dimensionExpression != null) {
-      $result.dimensionExpression = dimensionExpression;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (dimensionExpression != null)
+      result.dimensionExpression = dimensionExpression;
+    return result;
   }
-  Dimension._() : super();
-  factory Dimension.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Dimension.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Dimension._();
+
+  factory Dimension.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Dimension.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Dimension',
@@ -162,73 +149,64 @@ class Dimension extends $pb.GeneratedMessage {
         subBuilder: DimensionExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Dimension clone() => Dimension()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Dimension clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Dimension copyWith(void Function(Dimension) updates) =>
       super.copyWith((message) => updates(message as Dimension)) as Dimension;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Dimension create() => Dimension._();
+  @$core.override
   Dimension createEmptyInstance() => create();
-  static $pb.PbList<Dimension> createRepeated() => $pb.PbList<Dimension>();
   @$core.pragma('dart2js:noInline')
   static Dimension getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Dimension>(create);
   static Dimension? _defaultInstance;
 
-  ///  The name of the dimension. See the [API
-  ///  Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#dimensions)
-  ///  for the list of dimension names supported by core reporting methods such
-  ///  as `runReport` and `batchRunReports`. See
-  ///  [Realtime
-  ///  Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-api-schema#dimensions)
-  ///  for the list of dimension names supported by the `runRealtimeReport`
-  ///  method. See
-  ///  [Funnel
-  ///  Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/exploration-api-schema#dimensions)
-  ///  for the list of dimension names supported by the `runFunnelReport`
-  ///  method.
+  /// The name of the dimension. See the [API
+  /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#dimensions)
+  /// for the list of dimension names supported by core reporting methods such
+  /// as `runReport` and `batchRunReports`. See
+  /// [Realtime
+  /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-api-schema#dimensions)
+  /// for the list of dimension names supported by the `runRealtimeReport`
+  /// method. See
+  /// [Funnel
+  /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/exploration-api-schema#dimensions)
+  /// for the list of dimension names supported by the `runFunnelReport`
+  /// method.
   ///
-  ///  If `dimensionExpression` is specified, `name` can be any string that you
-  ///  would like within the allowed character set. For example if a
-  ///  `dimensionExpression` concatenates `country` and `city`, you could call
-  ///  that dimension `countryAndCity`. Dimension names that you choose must match
-  ///  the regular expression `^[a-zA-Z0-9_]$`.
+  /// If `dimensionExpression` is specified, `name` can be any string that you
+  /// would like within the allowed character set. For example if a
+  /// `dimensionExpression` concatenates `country` and `city`, you could call
+  /// that dimension `countryAndCity`. Dimension names that you choose must match
+  /// the regular expression `^[a-zA-Z0-9_]$`.
   ///
-  ///  Dimensions are referenced by `name` in `dimensionFilter`, `orderBys`,
-  ///  `dimensionExpression`, and `pivots`.
+  /// Dimensions are referenced by `name` in `dimensionFilter`, `orderBys`,
+  /// `dimensionExpression`, and `pivots`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// One dimension can be the result of an expression of multiple dimensions.
   /// For example, dimension "country, city": concatenate(country, ", ", city).
   @$pb.TagNumber(2)
   DimensionExpression get dimensionExpression => $_getN(1);
   @$pb.TagNumber(2)
-  set dimensionExpression(DimensionExpression v) {
-    setField(2, v);
-  }
-
+  set dimensionExpression(DimensionExpression value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasDimensionExpression() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDimensionExpression() => clearField(2);
+  void clearDimensionExpression() => $_clearField(2);
   @$pb.TagNumber(2)
   DimensionExpression ensureDimensionExpression() => $_ensure(1);
 }
@@ -238,19 +216,20 @@ class DimensionExpression_CaseExpression extends $pb.GeneratedMessage {
   factory DimensionExpression_CaseExpression({
     $core.String? dimensionName,
   }) {
-    final $result = create();
-    if (dimensionName != null) {
-      $result.dimensionName = dimensionName;
-    }
-    return $result;
+    final result = create();
+    if (dimensionName != null) result.dimensionName = dimensionName;
+    return result;
   }
-  DimensionExpression_CaseExpression._() : super();
-  factory DimensionExpression_CaseExpression.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DimensionExpression_CaseExpression.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DimensionExpression_CaseExpression._();
+
+  factory DimensionExpression_CaseExpression.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DimensionExpression_CaseExpression.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DimensionExpression.CaseExpression',
@@ -260,28 +239,23 @@ class DimensionExpression_CaseExpression extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'dimensionName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DimensionExpression_CaseExpression clone() =>
-      DimensionExpression_CaseExpression()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DimensionExpression_CaseExpression clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DimensionExpression_CaseExpression copyWith(
           void Function(DimensionExpression_CaseExpression) updates) =>
       super.copyWith((message) =>
               updates(message as DimensionExpression_CaseExpression))
           as DimensionExpression_CaseExpression;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DimensionExpression_CaseExpression create() =>
       DimensionExpression_CaseExpression._();
+  @$core.override
   DimensionExpression_CaseExpression createEmptyInstance() => create();
-  static $pb.PbList<DimensionExpression_CaseExpression> createRepeated() =>
-      $pb.PbList<DimensionExpression_CaseExpression>();
   @$core.pragma('dart2js:noInline')
   static DimensionExpression_CaseExpression getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DimensionExpression_CaseExpression>(
@@ -293,14 +267,11 @@ class DimensionExpression_CaseExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get dimensionName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set dimensionName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set dimensionName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDimensionName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDimensionName() => clearField(1);
+  void clearDimensionName() => $_clearField(1);
 }
 
 /// Used to combine dimension values to a single dimension.
@@ -309,23 +280,21 @@ class DimensionExpression_ConcatenateExpression extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? dimensionNames,
     $core.String? delimiter,
   }) {
-    final $result = create();
-    if (dimensionNames != null) {
-      $result.dimensionNames.addAll(dimensionNames);
-    }
-    if (delimiter != null) {
-      $result.delimiter = delimiter;
-    }
-    return $result;
+    final result = create();
+    if (dimensionNames != null) result.dimensionNames.addAll(dimensionNames);
+    if (delimiter != null) result.delimiter = delimiter;
+    return result;
   }
-  DimensionExpression_ConcatenateExpression._() : super();
+
+  DimensionExpression_ConcatenateExpression._();
+
   factory DimensionExpression_ConcatenateExpression.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DimensionExpression_ConcatenateExpression.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DimensionExpression_ConcatenateExpression.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DimensionExpression.ConcatenateExpression',
@@ -336,29 +305,23 @@ class DimensionExpression_ConcatenateExpression extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'delimiter')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DimensionExpression_ConcatenateExpression clone() =>
-      DimensionExpression_ConcatenateExpression()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DimensionExpression_ConcatenateExpression clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DimensionExpression_ConcatenateExpression copyWith(
           void Function(DimensionExpression_ConcatenateExpression) updates) =>
       super.copyWith((message) =>
               updates(message as DimensionExpression_ConcatenateExpression))
           as DimensionExpression_ConcatenateExpression;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DimensionExpression_ConcatenateExpression create() =>
       DimensionExpression_ConcatenateExpression._();
+  @$core.override
   DimensionExpression_ConcatenateExpression createEmptyInstance() => create();
-  static $pb.PbList<DimensionExpression_ConcatenateExpression>
-      createRepeated() =>
-          $pb.PbList<DimensionExpression_ConcatenateExpression>();
   @$core.pragma('dart2js:noInline')
   static DimensionExpression_ConcatenateExpression getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -368,26 +331,23 @@ class DimensionExpression_ConcatenateExpression extends $pb.GeneratedMessage {
   /// Names of dimensions. The names must refer back to names in the dimensions
   /// field of the request.
   @$pb.TagNumber(1)
-  $core.List<$core.String> get dimensionNames => $_getList(0);
+  $pb.PbList<$core.String> get dimensionNames => $_getList(0);
 
-  ///  The delimiter placed between dimension names.
+  /// The delimiter placed between dimension names.
   ///
-  ///  Delimiters are often single characters such as "|" or "," but can be
-  ///  longer strings. If a dimension value contains the delimiter, both will be
-  ///  present in response with no distinction. For example if dimension 1 value
-  ///  = "US,FR", dimension 2 value = "JP", and delimiter = ",", then the
-  ///  response will contain "US,FR,JP".
+  /// Delimiters are often single characters such as "|" or "," but can be
+  /// longer strings. If a dimension value contains the delimiter, both will be
+  /// present in response with no distinction. For example if dimension 1 value
+  /// = "US,FR", dimension 2 value = "JP", and delimiter = ",", then the
+  /// response will contain "US,FR,JP".
   @$pb.TagNumber(2)
   $core.String get delimiter => $_getSZ(1);
   @$pb.TagNumber(2)
-  set delimiter($core.String v) {
-    $_setString(1, v);
-  }
-
+  set delimiter($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDelimiter() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDelimiter() => clearField(2);
+  void clearDelimiter() => $_clearField(2);
 }
 
 enum DimensionExpression_OneExpression {
@@ -407,25 +367,21 @@ class DimensionExpression extends $pb.GeneratedMessage {
     DimensionExpression_CaseExpression? upperCase,
     DimensionExpression_ConcatenateExpression? concatenate,
   }) {
-    final $result = create();
-    if (lowerCase != null) {
-      $result.lowerCase = lowerCase;
-    }
-    if (upperCase != null) {
-      $result.upperCase = upperCase;
-    }
-    if (concatenate != null) {
-      $result.concatenate = concatenate;
-    }
-    return $result;
+    final result = create();
+    if (lowerCase != null) result.lowerCase = lowerCase;
+    if (upperCase != null) result.upperCase = upperCase;
+    if (concatenate != null) result.concatenate = concatenate;
+    return result;
   }
-  DimensionExpression._() : super();
-  factory DimensionExpression.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DimensionExpression.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DimensionExpression._();
+
+  factory DimensionExpression.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DimensionExpression.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, DimensionExpression_OneExpression>
       _DimensionExpression_OneExpressionByTag = {
@@ -451,45 +407,45 @@ class DimensionExpression extends $pb.GeneratedMessage {
         subBuilder: DimensionExpression_ConcatenateExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DimensionExpression clone() => DimensionExpression()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DimensionExpression clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DimensionExpression copyWith(void Function(DimensionExpression) updates) =>
       super.copyWith((message) => updates(message as DimensionExpression))
           as DimensionExpression;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DimensionExpression create() => DimensionExpression._();
+  @$core.override
   DimensionExpression createEmptyInstance() => create();
-  static $pb.PbList<DimensionExpression> createRepeated() =>
-      $pb.PbList<DimensionExpression>();
   @$core.pragma('dart2js:noInline')
   static DimensionExpression getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DimensionExpression>(create);
   static DimensionExpression? _defaultInstance;
 
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
   DimensionExpression_OneExpression whichOneExpression() =>
       _DimensionExpression_OneExpressionByTag[$_whichOneof(0)]!;
-  void clearOneExpression() => clearField($_whichOneof(0));
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  void clearOneExpression() => $_clearField($_whichOneof(0));
 
   /// Used to convert a dimension value to lower case.
   @$pb.TagNumber(4)
   DimensionExpression_CaseExpression get lowerCase => $_getN(0);
   @$pb.TagNumber(4)
-  set lowerCase(DimensionExpression_CaseExpression v) {
-    setField(4, v);
-  }
-
+  set lowerCase(DimensionExpression_CaseExpression value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasLowerCase() => $_has(0);
   @$pb.TagNumber(4)
-  void clearLowerCase() => clearField(4);
+  void clearLowerCase() => $_clearField(4);
   @$pb.TagNumber(4)
   DimensionExpression_CaseExpression ensureLowerCase() => $_ensure(0);
 
@@ -497,14 +453,12 @@ class DimensionExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   DimensionExpression_CaseExpression get upperCase => $_getN(1);
   @$pb.TagNumber(5)
-  set upperCase(DimensionExpression_CaseExpression v) {
-    setField(5, v);
-  }
-
+  set upperCase(DimensionExpression_CaseExpression value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasUpperCase() => $_has(1);
   @$pb.TagNumber(5)
-  void clearUpperCase() => clearField(5);
+  void clearUpperCase() => $_clearField(5);
   @$pb.TagNumber(5)
   DimensionExpression_CaseExpression ensureUpperCase() => $_ensure(1);
 
@@ -513,14 +467,12 @@ class DimensionExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   DimensionExpression_ConcatenateExpression get concatenate => $_getN(2);
   @$pb.TagNumber(6)
-  set concatenate(DimensionExpression_ConcatenateExpression v) {
-    setField(6, v);
-  }
-
+  set concatenate(DimensionExpression_ConcatenateExpression value) =>
+      $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasConcatenate() => $_has(2);
   @$pb.TagNumber(6)
-  void clearConcatenate() => clearField(6);
+  void clearConcatenate() => $_clearField(6);
   @$pb.TagNumber(6)
   DimensionExpression_ConcatenateExpression ensureConcatenate() => $_ensure(2);
 }
@@ -534,25 +486,21 @@ class Metric extends $pb.GeneratedMessage {
     $core.String? expression,
     $core.bool? invisible,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (expression != null) {
-      $result.expression = expression;
-    }
-    if (invisible != null) {
-      $result.invisible = invisible;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (expression != null) result.expression = expression;
+    if (invisible != null) result.invisible = invisible;
+    return result;
   }
-  Metric._() : super();
-  factory Metric.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Metric.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Metric._();
+
+  factory Metric.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Metric.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Metric',
@@ -564,73 +512,64 @@ class Metric extends $pb.GeneratedMessage {
     ..aOB(3, _omitFieldNames ? '' : 'invisible')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Metric clone() => Metric()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Metric clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Metric copyWith(void Function(Metric) updates) =>
       super.copyWith((message) => updates(message as Metric)) as Metric;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Metric create() => Metric._();
+  @$core.override
   Metric createEmptyInstance() => create();
-  static $pb.PbList<Metric> createRepeated() => $pb.PbList<Metric>();
   @$core.pragma('dart2js:noInline')
   static Metric getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Metric>(create);
   static Metric? _defaultInstance;
 
-  ///  The name of the metric. See the [API
-  ///  Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#metrics)
-  ///  for the list of metric names supported by core reporting methods such
-  ///  as `runReport` and `batchRunReports`. See
-  ///  [Realtime
-  ///  Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-api-schema#metrics)
-  ///  for the list of metric names supported by the `runRealtimeReport`
-  ///  method. See
-  ///  [Funnel
-  ///  Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/exploration-api-schema#metrics)
-  ///  for the list of metric names supported by the `runFunnelReport`
-  ///  method.
+  /// The name of the metric. See the [API
+  /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#metrics)
+  /// for the list of metric names supported by core reporting methods such
+  /// as `runReport` and `batchRunReports`. See
+  /// [Realtime
+  /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-api-schema#metrics)
+  /// for the list of metric names supported by the `runRealtimeReport`
+  /// method. See
+  /// [Funnel
+  /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/exploration-api-schema#metrics)
+  /// for the list of metric names supported by the `runFunnelReport`
+  /// method.
   ///
-  ///  If `expression` is specified, `name` can be any string that you would like
-  ///  within the allowed character set. For example if `expression` is
-  ///  `screenPageViews/sessions`, you could call that metric's name =
-  ///  `viewsPerSession`. Metric names that you choose must match the regular
-  ///  expression `^[a-zA-Z0-9_]$`.
+  /// If `expression` is specified, `name` can be any string that you would like
+  /// within the allowed character set. For example if `expression` is
+  /// `screenPageViews/sessions`, you could call that metric's name =
+  /// `viewsPerSession`. Metric names that you choose must match the regular
+  /// expression `^[a-zA-Z0-9_]$`.
   ///
-  ///  Metrics are referenced by `name` in `metricFilter`, `orderBys`, and metric
-  ///  `expression`.
+  /// Metrics are referenced by `name` in `metricFilter`, `orderBys`, and metric
+  /// `expression`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// A mathematical expression for derived metrics. For example, the metric
   /// Event count per user is `eventCount/totalUsers`.
   @$pb.TagNumber(2)
   $core.String get expression => $_getSZ(1);
   @$pb.TagNumber(2)
-  set expression($core.String v) {
-    $_setString(1, v);
-  }
-
+  set expression($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasExpression() => $_has(1);
   @$pb.TagNumber(2)
-  void clearExpression() => clearField(2);
+  void clearExpression() => $_clearField(2);
 
   /// Indicates if a metric is invisible in the report response. If a metric is
   /// invisible, the metric will not produce a column in the response, but can be
@@ -638,14 +577,11 @@ class Metric extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get invisible => $_getBF(2);
   @$pb.TagNumber(3)
-  set invisible($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set invisible($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasInvisible() => $_has(2);
   @$pb.TagNumber(3)
-  void clearInvisible() => clearField(3);
+  void clearInvisible() => $_clearField(3);
 }
 
 enum FilterExpression_Expr { andGroup, orGroup, notExpression, filter, notSet }
@@ -659,28 +595,22 @@ class FilterExpression extends $pb.GeneratedMessage {
     FilterExpression? notExpression,
     Filter? filter,
   }) {
-    final $result = create();
-    if (andGroup != null) {
-      $result.andGroup = andGroup;
-    }
-    if (orGroup != null) {
-      $result.orGroup = orGroup;
-    }
-    if (notExpression != null) {
-      $result.notExpression = notExpression;
-    }
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    return $result;
+    final result = create();
+    if (andGroup != null) result.andGroup = andGroup;
+    if (orGroup != null) result.orGroup = orGroup;
+    if (notExpression != null) result.notExpression = notExpression;
+    if (filter != null) result.filter = filter;
+    return result;
   }
-  FilterExpression._() : super();
-  factory FilterExpression.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FilterExpression.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FilterExpression._();
+
+  factory FilterExpression.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FilterExpression.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, FilterExpression_Expr>
       _FilterExpression_ExprByTag = {
@@ -705,45 +635,46 @@ class FilterExpression extends $pb.GeneratedMessage {
     ..aOM<Filter>(4, _omitFieldNames ? '' : 'filter', subBuilder: Filter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FilterExpression clone() => FilterExpression()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FilterExpression clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FilterExpression copyWith(void Function(FilterExpression) updates) =>
       super.copyWith((message) => updates(message as FilterExpression))
           as FilterExpression;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FilterExpression create() => FilterExpression._();
+  @$core.override
   FilterExpression createEmptyInstance() => create();
-  static $pb.PbList<FilterExpression> createRepeated() =>
-      $pb.PbList<FilterExpression>();
   @$core.pragma('dart2js:noInline')
   static FilterExpression getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FilterExpression>(create);
   static FilterExpression? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
   FilterExpression_Expr whichExpr() =>
       _FilterExpression_ExprByTag[$_whichOneof(0)]!;
-  void clearExpr() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  void clearExpr() => $_clearField($_whichOneof(0));
 
   /// The FilterExpressions in and_group have an AND relationship.
   @$pb.TagNumber(1)
   FilterExpressionList get andGroup => $_getN(0);
   @$pb.TagNumber(1)
-  set andGroup(FilterExpressionList v) {
-    setField(1, v);
-  }
-
+  set andGroup(FilterExpressionList value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAndGroup() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAndGroup() => clearField(1);
+  void clearAndGroup() => $_clearField(1);
   @$pb.TagNumber(1)
   FilterExpressionList ensureAndGroup() => $_ensure(0);
 
@@ -751,14 +682,11 @@ class FilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   FilterExpressionList get orGroup => $_getN(1);
   @$pb.TagNumber(2)
-  set orGroup(FilterExpressionList v) {
-    setField(2, v);
-  }
-
+  set orGroup(FilterExpressionList value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOrGroup() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrGroup() => clearField(2);
+  void clearOrGroup() => $_clearField(2);
   @$pb.TagNumber(2)
   FilterExpressionList ensureOrGroup() => $_ensure(1);
 
@@ -766,14 +694,11 @@ class FilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   FilterExpression get notExpression => $_getN(2);
   @$pb.TagNumber(3)
-  set notExpression(FilterExpression v) {
-    setField(3, v);
-  }
-
+  set notExpression(FilterExpression value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasNotExpression() => $_has(2);
   @$pb.TagNumber(3)
-  void clearNotExpression() => clearField(3);
+  void clearNotExpression() => $_clearField(3);
   @$pb.TagNumber(3)
   FilterExpression ensureNotExpression() => $_ensure(2);
 
@@ -782,14 +707,11 @@ class FilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   Filter get filter => $_getN(3);
   @$pb.TagNumber(4)
-  set filter(Filter v) {
-    setField(4, v);
-  }
-
+  set filter(Filter value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFilter() => clearField(4);
+  void clearFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   Filter ensureFilter() => $_ensure(3);
 }
@@ -799,49 +721,43 @@ class FilterExpressionList extends $pb.GeneratedMessage {
   factory FilterExpressionList({
     $core.Iterable<FilterExpression>? expressions,
   }) {
-    final $result = create();
-    if (expressions != null) {
-      $result.expressions.addAll(expressions);
-    }
-    return $result;
+    final result = create();
+    if (expressions != null) result.expressions.addAll(expressions);
+    return result;
   }
-  FilterExpressionList._() : super();
-  factory FilterExpressionList.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FilterExpressionList.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FilterExpressionList._();
+
+  factory FilterExpressionList.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FilterExpressionList.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FilterExpressionList',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<FilterExpression>(
-        1, _omitFieldNames ? '' : 'expressions', $pb.PbFieldType.PM,
+    ..pPM<FilterExpression>(1, _omitFieldNames ? '' : 'expressions',
         subBuilder: FilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FilterExpressionList clone() =>
-      FilterExpressionList()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FilterExpressionList clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FilterExpressionList copyWith(void Function(FilterExpressionList) updates) =>
       super.copyWith((message) => updates(message as FilterExpressionList))
           as FilterExpressionList;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FilterExpressionList create() => FilterExpressionList._();
+  @$core.override
   FilterExpressionList createEmptyInstance() => create();
-  static $pb.PbList<FilterExpressionList> createRepeated() =>
-      $pb.PbList<FilterExpressionList>();
   @$core.pragma('dart2js:noInline')
   static FilterExpressionList getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FilterExpressionList>(create);
@@ -849,7 +765,7 @@ class FilterExpressionList extends $pb.GeneratedMessage {
 
   /// A list of filter expressions.
   @$pb.TagNumber(1)
-  $core.List<FilterExpression> get expressions => $_getList(0);
+  $pb.PbList<FilterExpression> get expressions => $_getList(0);
 }
 
 enum Filter_OneFilter {
@@ -871,34 +787,24 @@ class Filter extends $pb.GeneratedMessage {
     BetweenFilter? betweenFilter,
     EmptyFilter? emptyFilter,
   }) {
-    final $result = create();
-    if (fieldName != null) {
-      $result.fieldName = fieldName;
-    }
-    if (stringFilter != null) {
-      $result.stringFilter = stringFilter;
-    }
-    if (inListFilter != null) {
-      $result.inListFilter = inListFilter;
-    }
-    if (numericFilter != null) {
-      $result.numericFilter = numericFilter;
-    }
-    if (betweenFilter != null) {
-      $result.betweenFilter = betweenFilter;
-    }
-    if (emptyFilter != null) {
-      $result.emptyFilter = emptyFilter;
-    }
-    return $result;
+    final result = create();
+    if (fieldName != null) result.fieldName = fieldName;
+    if (stringFilter != null) result.stringFilter = stringFilter;
+    if (inListFilter != null) result.inListFilter = inListFilter;
+    if (numericFilter != null) result.numericFilter = numericFilter;
+    if (betweenFilter != null) result.betweenFilter = betweenFilter;
+    if (emptyFilter != null) result.emptyFilter = emptyFilter;
+    return result;
   }
-  Filter._() : super();
-  factory Filter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Filter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Filter._();
+
+  factory Filter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Filter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Filter_OneFilter> _Filter_OneFilterByTag = {
     2: Filter_OneFilter.stringFilter,
@@ -927,56 +833,57 @@ class Filter extends $pb.GeneratedMessage {
         subBuilder: EmptyFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Filter clone() => Filter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Filter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Filter copyWith(void Function(Filter) updates) =>
       super.copyWith((message) => updates(message as Filter)) as Filter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Filter create() => Filter._();
+  @$core.override
   Filter createEmptyInstance() => create();
-  static $pb.PbList<Filter> createRepeated() => $pb.PbList<Filter>();
   @$core.pragma('dart2js:noInline')
   static Filter getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Filter>(create);
   static Filter? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
   Filter_OneFilter whichOneFilter() => _Filter_OneFilterByTag[$_whichOneof(0)]!;
-  void clearOneFilter() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  void clearOneFilter() => $_clearField($_whichOneof(0));
 
   /// The dimension name or metric name. Must be a name defined in dimensions
   /// or metrics.
   @$pb.TagNumber(1)
   $core.String get fieldName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set fieldName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set fieldName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFieldName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFieldName() => clearField(1);
+  void clearFieldName() => $_clearField(1);
 
   /// Strings related filter.
   @$pb.TagNumber(2)
   StringFilter get stringFilter => $_getN(1);
   @$pb.TagNumber(2)
-  set stringFilter(StringFilter v) {
-    setField(2, v);
-  }
-
+  set stringFilter(StringFilter value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasStringFilter() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStringFilter() => clearField(2);
+  void clearStringFilter() => $_clearField(2);
   @$pb.TagNumber(2)
   StringFilter ensureStringFilter() => $_ensure(1);
 
@@ -984,14 +891,11 @@ class Filter extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   InListFilter get inListFilter => $_getN(2);
   @$pb.TagNumber(3)
-  set inListFilter(InListFilter v) {
-    setField(3, v);
-  }
-
+  set inListFilter(InListFilter value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasInListFilter() => $_has(2);
   @$pb.TagNumber(3)
-  void clearInListFilter() => clearField(3);
+  void clearInListFilter() => $_clearField(3);
   @$pb.TagNumber(3)
   InListFilter ensureInListFilter() => $_ensure(2);
 
@@ -999,14 +903,11 @@ class Filter extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   NumericFilter get numericFilter => $_getN(3);
   @$pb.TagNumber(4)
-  set numericFilter(NumericFilter v) {
-    setField(4, v);
-  }
-
+  set numericFilter(NumericFilter value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasNumericFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearNumericFilter() => clearField(4);
+  void clearNumericFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   NumericFilter ensureNumericFilter() => $_ensure(3);
 
@@ -1014,14 +915,11 @@ class Filter extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   BetweenFilter get betweenFilter => $_getN(4);
   @$pb.TagNumber(5)
-  set betweenFilter(BetweenFilter v) {
-    setField(5, v);
-  }
-
+  set betweenFilter(BetweenFilter value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasBetweenFilter() => $_has(4);
   @$pb.TagNumber(5)
-  void clearBetweenFilter() => clearField(5);
+  void clearBetweenFilter() => $_clearField(5);
   @$pb.TagNumber(5)
   BetweenFilter ensureBetweenFilter() => $_ensure(4);
 
@@ -1029,14 +927,11 @@ class Filter extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   EmptyFilter get emptyFilter => $_getN(5);
   @$pb.TagNumber(6)
-  set emptyFilter(EmptyFilter v) {
-    setField(6, v);
-  }
-
+  set emptyFilter(EmptyFilter value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasEmptyFilter() => $_has(5);
   @$pb.TagNumber(6)
-  void clearEmptyFilter() => clearField(6);
+  void clearEmptyFilter() => $_clearField(6);
   @$pb.TagNumber(6)
   EmptyFilter ensureEmptyFilter() => $_ensure(5);
 }
@@ -1048,58 +943,47 @@ class StringFilter extends $pb.GeneratedMessage {
     $core.String? value,
     $core.bool? caseSensitive,
   }) {
-    final $result = create();
-    if (matchType != null) {
-      $result.matchType = matchType;
-    }
-    if (value != null) {
-      $result.value = value;
-    }
-    if (caseSensitive != null) {
-      $result.caseSensitive = caseSensitive;
-    }
-    return $result;
+    final result = create();
+    if (matchType != null) result.matchType = matchType;
+    if (value != null) result.value = value;
+    if (caseSensitive != null) result.caseSensitive = caseSensitive;
+    return result;
   }
-  StringFilter._() : super();
-  factory StringFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory StringFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  StringFilter._();
+
+  factory StringFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StringFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'StringFilter',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..e<StringFilter_MatchType>(
-        1, _omitFieldNames ? '' : 'matchType', $pb.PbFieldType.OE,
-        defaultOrMaker: StringFilter_MatchType.MATCH_TYPE_UNSPECIFIED,
-        valueOf: StringFilter_MatchType.valueOf,
+    ..aE<StringFilter_MatchType>(1, _omitFieldNames ? '' : 'matchType',
         enumValues: StringFilter_MatchType.values)
     ..aOS(2, _omitFieldNames ? '' : 'value')
     ..aOB(3, _omitFieldNames ? '' : 'caseSensitive')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  StringFilter clone() => StringFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StringFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   StringFilter copyWith(void Function(StringFilter) updates) =>
       super.copyWith((message) => updates(message as StringFilter))
           as StringFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static StringFilter create() => StringFilter._();
+  @$core.override
   StringFilter createEmptyInstance() => create();
-  static $pb.PbList<StringFilter> createRepeated() =>
-      $pb.PbList<StringFilter>();
   @$core.pragma('dart2js:noInline')
   static StringFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<StringFilter>(create);
@@ -1109,40 +993,31 @@ class StringFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   StringFilter_MatchType get matchType => $_getN(0);
   @$pb.TagNumber(1)
-  set matchType(StringFilter_MatchType v) {
-    setField(1, v);
-  }
-
+  set matchType(StringFilter_MatchType value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasMatchType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMatchType() => clearField(1);
+  void clearMatchType() => $_clearField(1);
 
   /// The string value used for the matching.
   @$pb.TagNumber(2)
   $core.String get value => $_getSZ(1);
   @$pb.TagNumber(2)
-  set value($core.String v) {
-    $_setString(1, v);
-  }
-
+  set value($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValue() => clearField(2);
+  void clearValue() => $_clearField(2);
 
   /// If true, the string value is case sensitive.
   @$pb.TagNumber(3)
   $core.bool get caseSensitive => $_getBF(2);
   @$pb.TagNumber(3)
-  set caseSensitive($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set caseSensitive($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasCaseSensitive() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCaseSensitive() => clearField(3);
+  void clearCaseSensitive() => $_clearField(3);
 }
 
 /// The result needs to be in a list of string values.
@@ -1151,22 +1026,20 @@ class InListFilter extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? values,
     $core.bool? caseSensitive,
   }) {
-    final $result = create();
-    if (values != null) {
-      $result.values.addAll(values);
-    }
-    if (caseSensitive != null) {
-      $result.caseSensitive = caseSensitive;
-    }
-    return $result;
+    final result = create();
+    if (values != null) result.values.addAll(values);
+    if (caseSensitive != null) result.caseSensitive = caseSensitive;
+    return result;
   }
-  InListFilter._() : super();
-  factory InListFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory InListFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  InListFilter._();
+
+  factory InListFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory InListFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'InListFilter',
@@ -1177,24 +1050,20 @@ class InListFilter extends $pb.GeneratedMessage {
     ..aOB(2, _omitFieldNames ? '' : 'caseSensitive')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  InListFilter clone() => InListFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  InListFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   InListFilter copyWith(void Function(InListFilter) updates) =>
       super.copyWith((message) => updates(message as InListFilter))
           as InListFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static InListFilter create() => InListFilter._();
+  @$core.override
   InListFilter createEmptyInstance() => create();
-  static $pb.PbList<InListFilter> createRepeated() =>
-      $pb.PbList<InListFilter>();
   @$core.pragma('dart2js:noInline')
   static InListFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<InListFilter>(create);
@@ -1203,20 +1072,17 @@ class InListFilter extends $pb.GeneratedMessage {
   /// The list of string values.
   /// Must be non-empty.
   @$pb.TagNumber(1)
-  $core.List<$core.String> get values => $_getList(0);
+  $pb.PbList<$core.String> get values => $_getList(0);
 
   /// If true, the string value is case sensitive.
   @$pb.TagNumber(2)
   $core.bool get caseSensitive => $_getBF(1);
   @$pb.TagNumber(2)
-  set caseSensitive($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set caseSensitive($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCaseSensitive() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCaseSensitive() => clearField(2);
+  void clearCaseSensitive() => $_clearField(2);
 }
 
 /// Filters for numeric or date values.
@@ -1225,55 +1091,46 @@ class NumericFilter extends $pb.GeneratedMessage {
     NumericFilter_Operation? operation,
     NumericValue? value,
   }) {
-    final $result = create();
-    if (operation != null) {
-      $result.operation = operation;
-    }
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (operation != null) result.operation = operation;
+    if (value != null) result.value = value;
+    return result;
   }
-  NumericFilter._() : super();
-  factory NumericFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory NumericFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  NumericFilter._();
+
+  factory NumericFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory NumericFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'NumericFilter',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..e<NumericFilter_Operation>(
-        1, _omitFieldNames ? '' : 'operation', $pb.PbFieldType.OE,
-        defaultOrMaker: NumericFilter_Operation.OPERATION_UNSPECIFIED,
-        valueOf: NumericFilter_Operation.valueOf,
+    ..aE<NumericFilter_Operation>(1, _omitFieldNames ? '' : 'operation',
         enumValues: NumericFilter_Operation.values)
     ..aOM<NumericValue>(2, _omitFieldNames ? '' : 'value',
         subBuilder: NumericValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  NumericFilter clone() => NumericFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  NumericFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   NumericFilter copyWith(void Function(NumericFilter) updates) =>
       super.copyWith((message) => updates(message as NumericFilter))
           as NumericFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static NumericFilter create() => NumericFilter._();
+  @$core.override
   NumericFilter createEmptyInstance() => create();
-  static $pb.PbList<NumericFilter> createRepeated() =>
-      $pb.PbList<NumericFilter>();
   @$core.pragma('dart2js:noInline')
   static NumericFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<NumericFilter>(create);
@@ -1283,27 +1140,21 @@ class NumericFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   NumericFilter_Operation get operation => $_getN(0);
   @$pb.TagNumber(1)
-  set operation(NumericFilter_Operation v) {
-    setField(1, v);
-  }
-
+  set operation(NumericFilter_Operation value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOperation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOperation() => clearField(1);
+  void clearOperation() => $_clearField(1);
 
   /// A numeric value or a date value.
   @$pb.TagNumber(2)
   NumericValue get value => $_getN(1);
   @$pb.TagNumber(2)
-  set value(NumericValue v) {
-    setField(2, v);
-  }
-
+  set value(NumericValue value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValue() => clearField(2);
+  void clearValue() => $_clearField(2);
   @$pb.TagNumber(2)
   NumericValue ensureValue() => $_ensure(1);
 }
@@ -1313,19 +1164,19 @@ class OrderBy_MetricOrderBy extends $pb.GeneratedMessage {
   factory OrderBy_MetricOrderBy({
     $core.String? metricName,
   }) {
-    final $result = create();
-    if (metricName != null) {
-      $result.metricName = metricName;
-    }
-    return $result;
+    final result = create();
+    if (metricName != null) result.metricName = metricName;
+    return result;
   }
-  OrderBy_MetricOrderBy._() : super();
-  factory OrderBy_MetricOrderBy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory OrderBy_MetricOrderBy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  OrderBy_MetricOrderBy._();
+
+  factory OrderBy_MetricOrderBy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OrderBy_MetricOrderBy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'OrderBy.MetricOrderBy',
@@ -1335,26 +1186,21 @@ class OrderBy_MetricOrderBy extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'metricName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  OrderBy_MetricOrderBy clone() =>
-      OrderBy_MetricOrderBy()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OrderBy_MetricOrderBy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OrderBy_MetricOrderBy copyWith(
           void Function(OrderBy_MetricOrderBy) updates) =>
       super.copyWith((message) => updates(message as OrderBy_MetricOrderBy))
           as OrderBy_MetricOrderBy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static OrderBy_MetricOrderBy create() => OrderBy_MetricOrderBy._();
+  @$core.override
   OrderBy_MetricOrderBy createEmptyInstance() => create();
-  static $pb.PbList<OrderBy_MetricOrderBy> createRepeated() =>
-      $pb.PbList<OrderBy_MetricOrderBy>();
   @$core.pragma('dart2js:noInline')
   static OrderBy_MetricOrderBy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OrderBy_MetricOrderBy>(create);
@@ -1364,14 +1210,11 @@ class OrderBy_MetricOrderBy extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get metricName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set metricName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set metricName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMetricName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMetricName() => clearField(1);
+  void clearMetricName() => $_clearField(1);
 }
 
 /// Sorts by dimension values.
@@ -1380,22 +1223,20 @@ class OrderBy_DimensionOrderBy extends $pb.GeneratedMessage {
     $core.String? dimensionName,
     OrderBy_DimensionOrderBy_OrderType? orderType,
   }) {
-    final $result = create();
-    if (dimensionName != null) {
-      $result.dimensionName = dimensionName;
-    }
-    if (orderType != null) {
-      $result.orderType = orderType;
-    }
-    return $result;
+    final result = create();
+    if (dimensionName != null) result.dimensionName = dimensionName;
+    if (orderType != null) result.orderType = orderType;
+    return result;
   }
-  OrderBy_DimensionOrderBy._() : super();
-  factory OrderBy_DimensionOrderBy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory OrderBy_DimensionOrderBy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  OrderBy_DimensionOrderBy._();
+
+  factory OrderBy_DimensionOrderBy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OrderBy_DimensionOrderBy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'OrderBy.DimensionOrderBy',
@@ -1403,34 +1244,26 @@ class OrderBy_DimensionOrderBy extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'dimensionName')
-    ..e<OrderBy_DimensionOrderBy_OrderType>(
-        2, _omitFieldNames ? '' : 'orderType', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            OrderBy_DimensionOrderBy_OrderType.ORDER_TYPE_UNSPECIFIED,
-        valueOf: OrderBy_DimensionOrderBy_OrderType.valueOf,
+    ..aE<OrderBy_DimensionOrderBy_OrderType>(
+        2, _omitFieldNames ? '' : 'orderType',
         enumValues: OrderBy_DimensionOrderBy_OrderType.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  OrderBy_DimensionOrderBy clone() =>
-      OrderBy_DimensionOrderBy()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OrderBy_DimensionOrderBy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OrderBy_DimensionOrderBy copyWith(
           void Function(OrderBy_DimensionOrderBy) updates) =>
       super.copyWith((message) => updates(message as OrderBy_DimensionOrderBy))
           as OrderBy_DimensionOrderBy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static OrderBy_DimensionOrderBy create() => OrderBy_DimensionOrderBy._();
+  @$core.override
   OrderBy_DimensionOrderBy createEmptyInstance() => create();
-  static $pb.PbList<OrderBy_DimensionOrderBy> createRepeated() =>
-      $pb.PbList<OrderBy_DimensionOrderBy>();
   @$core.pragma('dart2js:noInline')
   static OrderBy_DimensionOrderBy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OrderBy_DimensionOrderBy>(create);
@@ -1440,27 +1273,22 @@ class OrderBy_DimensionOrderBy extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get dimensionName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set dimensionName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set dimensionName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDimensionName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDimensionName() => clearField(1);
+  void clearDimensionName() => $_clearField(1);
 
   /// Controls the rule for dimension value ordering.
   @$pb.TagNumber(2)
   OrderBy_DimensionOrderBy_OrderType get orderType => $_getN(1);
   @$pb.TagNumber(2)
-  set orderType(OrderBy_DimensionOrderBy_OrderType v) {
-    setField(2, v);
-  }
-
+  set orderType(OrderBy_DimensionOrderBy_OrderType value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOrderType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrderType() => clearField(2);
+  void clearOrderType() => $_clearField(2);
 }
 
 enum OrderBy_OneOrderBy { metric, dimension, notSet }
@@ -1474,25 +1302,21 @@ class OrderBy extends $pb.GeneratedMessage {
     OrderBy_DimensionOrderBy? dimension,
     $core.bool? desc,
   }) {
-    final $result = create();
-    if (metric != null) {
-      $result.metric = metric;
-    }
-    if (dimension != null) {
-      $result.dimension = dimension;
-    }
-    if (desc != null) {
-      $result.desc = desc;
-    }
-    return $result;
+    final result = create();
+    if (metric != null) result.metric = metric;
+    if (dimension != null) result.dimension = dimension;
+    if (desc != null) result.desc = desc;
+    return result;
   }
-  OrderBy._() : super();
-  factory OrderBy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory OrderBy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  OrderBy._();
+
+  factory OrderBy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OrderBy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, OrderBy_OneOrderBy>
       _OrderBy_OneOrderByByTag = {
@@ -1513,43 +1337,41 @@ class OrderBy extends $pb.GeneratedMessage {
     ..aOB(4, _omitFieldNames ? '' : 'desc')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  OrderBy clone() => OrderBy()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OrderBy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OrderBy copyWith(void Function(OrderBy) updates) =>
       super.copyWith((message) => updates(message as OrderBy)) as OrderBy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static OrderBy create() => OrderBy._();
+  @$core.override
   OrderBy createEmptyInstance() => create();
-  static $pb.PbList<OrderBy> createRepeated() => $pb.PbList<OrderBy>();
   @$core.pragma('dart2js:noInline')
   static OrderBy getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OrderBy>(create);
   static OrderBy? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   OrderBy_OneOrderBy whichOneOrderBy() =>
       _OrderBy_OneOrderByByTag[$_whichOneof(0)]!;
-  void clearOneOrderBy() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearOneOrderBy() => $_clearField($_whichOneof(0));
 
   /// Sorts results by a metric's values.
   @$pb.TagNumber(1)
   OrderBy_MetricOrderBy get metric => $_getN(0);
   @$pb.TagNumber(1)
-  set metric(OrderBy_MetricOrderBy v) {
-    setField(1, v);
-  }
-
+  set metric(OrderBy_MetricOrderBy value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasMetric() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMetric() => clearField(1);
+  void clearMetric() => $_clearField(1);
   @$pb.TagNumber(1)
   OrderBy_MetricOrderBy ensureMetric() => $_ensure(0);
 
@@ -1557,14 +1379,11 @@ class OrderBy extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   OrderBy_DimensionOrderBy get dimension => $_getN(1);
   @$pb.TagNumber(2)
-  set dimension(OrderBy_DimensionOrderBy v) {
-    setField(2, v);
-  }
-
+  set dimension(OrderBy_DimensionOrderBy value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasDimension() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDimension() => clearField(2);
+  void clearDimension() => $_clearField(2);
   @$pb.TagNumber(2)
   OrderBy_DimensionOrderBy ensureDimension() => $_ensure(1);
 
@@ -1572,14 +1391,11 @@ class OrderBy extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get desc => $_getBF(2);
   @$pb.TagNumber(4)
-  set desc($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set desc($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(4)
   $core.bool hasDesc() => $_has(2);
   @$pb.TagNumber(4)
-  void clearDesc() => clearField(4);
+  void clearDesc() => $_clearField(4);
 }
 
 /// To express that the result needs to be between two numbers (inclusive).
@@ -1588,22 +1404,20 @@ class BetweenFilter extends $pb.GeneratedMessage {
     NumericValue? fromValue,
     NumericValue? toValue,
   }) {
-    final $result = create();
-    if (fromValue != null) {
-      $result.fromValue = fromValue;
-    }
-    if (toValue != null) {
-      $result.toValue = toValue;
-    }
-    return $result;
+    final result = create();
+    if (fromValue != null) result.fromValue = fromValue;
+    if (toValue != null) result.toValue = toValue;
+    return result;
   }
-  BetweenFilter._() : super();
-  factory BetweenFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BetweenFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BetweenFilter._();
+
+  factory BetweenFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BetweenFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BetweenFilter',
@@ -1616,24 +1430,20 @@ class BetweenFilter extends $pb.GeneratedMessage {
         subBuilder: NumericValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BetweenFilter clone() => BetweenFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BetweenFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BetweenFilter copyWith(void Function(BetweenFilter) updates) =>
       super.copyWith((message) => updates(message as BetweenFilter))
           as BetweenFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BetweenFilter create() => BetweenFilter._();
+  @$core.override
   BetweenFilter createEmptyInstance() => create();
-  static $pb.PbList<BetweenFilter> createRepeated() =>
-      $pb.PbList<BetweenFilter>();
   @$core.pragma('dart2js:noInline')
   static BetweenFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BetweenFilter>(create);
@@ -1643,14 +1453,11 @@ class BetweenFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   NumericValue get fromValue => $_getN(0);
   @$pb.TagNumber(1)
-  set fromValue(NumericValue v) {
-    setField(1, v);
-  }
-
+  set fromValue(NumericValue value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasFromValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFromValue() => clearField(1);
+  void clearFromValue() => $_clearField(1);
   @$pb.TagNumber(1)
   NumericValue ensureFromValue() => $_ensure(0);
 
@@ -1658,14 +1465,11 @@ class BetweenFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   NumericValue get toValue => $_getN(1);
   @$pb.TagNumber(2)
-  set toValue(NumericValue v) {
-    setField(2, v);
-  }
-
+  set toValue(NumericValue value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasToValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearToValue() => clearField(2);
+  void clearToValue() => $_clearField(2);
   @$pb.TagNumber(2)
   NumericValue ensureToValue() => $_ensure(1);
 }
@@ -1673,13 +1477,15 @@ class BetweenFilter extends $pb.GeneratedMessage {
 /// Filter for empty values.
 class EmptyFilter extends $pb.GeneratedMessage {
   factory EmptyFilter() => create();
-  EmptyFilter._() : super();
-  factory EmptyFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EmptyFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EmptyFilter._();
+
+  factory EmptyFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EmptyFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EmptyFilter',
@@ -1688,23 +1494,20 @@ class EmptyFilter extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EmptyFilter clone() => EmptyFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EmptyFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EmptyFilter copyWith(void Function(EmptyFilter) updates) =>
       super.copyWith((message) => updates(message as EmptyFilter))
           as EmptyFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EmptyFilter create() => EmptyFilter._();
+  @$core.override
   EmptyFilter createEmptyInstance() => create();
-  static $pb.PbList<EmptyFilter> createRepeated() => $pb.PbList<EmptyFilter>();
   @$core.pragma('dart2js:noInline')
   static EmptyFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EmptyFilter>(create);
@@ -1719,22 +1522,20 @@ class NumericValue extends $pb.GeneratedMessage {
     $fixnum.Int64? int64Value,
     $core.double? doubleValue,
   }) {
-    final $result = create();
-    if (int64Value != null) {
-      $result.int64Value = int64Value;
-    }
-    if (doubleValue != null) {
-      $result.doubleValue = doubleValue;
-    }
-    return $result;
+    final result = create();
+    if (int64Value != null) result.int64Value = int64Value;
+    if (doubleValue != null) result.doubleValue = doubleValue;
+    return result;
   }
-  NumericValue._() : super();
-  factory NumericValue.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory NumericValue.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  NumericValue._();
+
+  factory NumericValue.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory NumericValue.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, NumericValue_OneValue>
       _NumericValue_OneValueByTag = {
@@ -1749,112 +1550,102 @@ class NumericValue extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..aInt64(1, _omitFieldNames ? '' : 'int64Value')
-    ..a<$core.double>(
-        2, _omitFieldNames ? '' : 'doubleValue', $pb.PbFieldType.OD)
+    ..aD(2, _omitFieldNames ? '' : 'doubleValue')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  NumericValue clone() => NumericValue()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  NumericValue clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   NumericValue copyWith(void Function(NumericValue) updates) =>
       super.copyWith((message) => updates(message as NumericValue))
           as NumericValue;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static NumericValue create() => NumericValue._();
+  @$core.override
   NumericValue createEmptyInstance() => create();
-  static $pb.PbList<NumericValue> createRepeated() =>
-      $pb.PbList<NumericValue>();
   @$core.pragma('dart2js:noInline')
   static NumericValue getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<NumericValue>(create);
   static NumericValue? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   NumericValue_OneValue whichOneValue() =>
       _NumericValue_OneValueByTag[$_whichOneof(0)]!;
-  void clearOneValue() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearOneValue() => $_clearField($_whichOneof(0));
 
   /// Integer value
   @$pb.TagNumber(1)
   $fixnum.Int64 get int64Value => $_getI64(0);
   @$pb.TagNumber(1)
-  set int64Value($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set int64Value($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasInt64Value() => $_has(0);
   @$pb.TagNumber(1)
-  void clearInt64Value() => clearField(1);
+  void clearInt64Value() => $_clearField(1);
 
   /// Double value
   @$pb.TagNumber(2)
   $core.double get doubleValue => $_getN(1);
   @$pb.TagNumber(2)
-  set doubleValue($core.double v) {
-    $_setDouble(1, v);
-  }
-
+  set doubleValue($core.double value) => $_setDouble(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDoubleValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDoubleValue() => clearField(2);
+  void clearDoubleValue() => $_clearField(2);
 }
 
-///  The specification of cohorts for a cohort report.
+/// The specification of cohorts for a cohort report.
 ///
-///  Cohort reports create a time series of user retention for the cohort. For
-///  example, you could select the cohort of users that were acquired in the first
-///  week of September and follow that cohort for the next six weeks. Selecting
-///  the users acquired in the first week of September cohort is specified in the
-///  `cohort` object. Following that cohort for the next six weeks is specified in
-///  the `cohortsRange` object.
+/// Cohort reports create a time series of user retention for the cohort. For
+/// example, you could select the cohort of users that were acquired in the first
+/// week of September and follow that cohort for the next six weeks. Selecting
+/// the users acquired in the first week of September cohort is specified in the
+/// `cohort` object. Following that cohort for the next six weeks is specified in
+/// the `cohortsRange` object.
 ///
-///  For examples, see [Cohort Report
-///  Examples](https://developers.google.com/analytics/devguides/reporting/data/v1/advanced#cohort_report_examples).
+/// For examples, see [Cohort Report
+/// Examples](https://developers.google.com/analytics/devguides/reporting/data/v1/advanced#cohort_report_examples).
 ///
-///  The report response could show a weekly time series where say your app has
-///  retained 60% of this cohort after three weeks and 25% of this cohort after
-///  six weeks. These two percentages can be calculated by the metric
-///  `cohortActiveUsers/cohortTotalUsers` and will be separate rows in the report.
+/// The report response could show a weekly time series where say your app has
+/// retained 60% of this cohort after three weeks and 25% of this cohort after
+/// six weeks. These two percentages can be calculated by the metric
+/// `cohortActiveUsers/cohortTotalUsers` and will be separate rows in the report.
 class CohortSpec extends $pb.GeneratedMessage {
   factory CohortSpec({
     $core.Iterable<Cohort>? cohorts,
     CohortsRange? cohortsRange,
     CohortReportSettings? cohortReportSettings,
   }) {
-    final $result = create();
-    if (cohorts != null) {
-      $result.cohorts.addAll(cohorts);
-    }
-    if (cohortsRange != null) {
-      $result.cohortsRange = cohortsRange;
-    }
-    if (cohortReportSettings != null) {
-      $result.cohortReportSettings = cohortReportSettings;
-    }
-    return $result;
+    final result = create();
+    if (cohorts != null) result.cohorts.addAll(cohorts);
+    if (cohortsRange != null) result.cohortsRange = cohortsRange;
+    if (cohortReportSettings != null)
+      result.cohortReportSettings = cohortReportSettings;
+    return result;
   }
-  CohortSpec._() : super();
-  factory CohortSpec.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CohortSpec.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CohortSpec._();
+
+  factory CohortSpec.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CohortSpec.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CohortSpec',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<Cohort>(1, _omitFieldNames ? '' : 'cohorts', $pb.PbFieldType.PM,
+    ..pPM<Cohort>(1, _omitFieldNames ? '' : 'cohorts',
         subBuilder: Cohort.create)
     ..aOM<CohortsRange>(2, _omitFieldNames ? '' : 'cohortsRange',
         subBuilder: CohortsRange.create)
@@ -1863,47 +1654,41 @@ class CohortSpec extends $pb.GeneratedMessage {
         subBuilder: CohortReportSettings.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CohortSpec clone() => CohortSpec()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CohortSpec clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CohortSpec copyWith(void Function(CohortSpec) updates) =>
       super.copyWith((message) => updates(message as CohortSpec)) as CohortSpec;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CohortSpec create() => CohortSpec._();
+  @$core.override
   CohortSpec createEmptyInstance() => create();
-  static $pb.PbList<CohortSpec> createRepeated() => $pb.PbList<CohortSpec>();
   @$core.pragma('dart2js:noInline')
   static CohortSpec getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CohortSpec>(create);
   static CohortSpec? _defaultInstance;
 
-  ///  Defines the selection criteria to group users into cohorts.
+  /// Defines the selection criteria to group users into cohorts.
   ///
-  ///  Most cohort reports define only a single cohort. If multiple cohorts are
-  ///  specified, each cohort can be recognized in the report by their name.
+  /// Most cohort reports define only a single cohort. If multiple cohorts are
+  /// specified, each cohort can be recognized in the report by their name.
   @$pb.TagNumber(1)
-  $core.List<Cohort> get cohorts => $_getList(0);
+  $pb.PbList<Cohort> get cohorts => $_getList(0);
 
   /// Cohort reports follow cohorts over an extended reporting date range. This
   /// range specifies an offset duration to follow the cohorts over.
   @$pb.TagNumber(2)
   CohortsRange get cohortsRange => $_getN(1);
   @$pb.TagNumber(2)
-  set cohortsRange(CohortsRange v) {
-    setField(2, v);
-  }
-
+  set cohortsRange(CohortsRange value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCohortsRange() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCohortsRange() => clearField(2);
+  void clearCohortsRange() => $_clearField(2);
   @$pb.TagNumber(2)
   CohortsRange ensureCohortsRange() => $_ensure(1);
 
@@ -1911,14 +1696,11 @@ class CohortSpec extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   CohortReportSettings get cohortReportSettings => $_getN(2);
   @$pb.TagNumber(3)
-  set cohortReportSettings(CohortReportSettings v) {
-    setField(3, v);
-  }
-
+  set cohortReportSettings(CohortReportSettings value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCohortReportSettings() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCohortReportSettings() => clearField(3);
+  void clearCohortReportSettings() => $_clearField(3);
   @$pb.TagNumber(3)
   CohortReportSettings ensureCohortReportSettings() => $_ensure(2);
 }
@@ -1932,25 +1714,21 @@ class Cohort extends $pb.GeneratedMessage {
     $core.String? dimension,
     DateRange? dateRange,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (dimension != null) {
-      $result.dimension = dimension;
-    }
-    if (dateRange != null) {
-      $result.dateRange = dateRange;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (dimension != null) result.dimension = dimension;
+    if (dateRange != null) result.dateRange = dateRange;
+    return result;
   }
-  Cohort._() : super();
-  factory Cohort.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Cohort.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Cohort._();
+
+  factory Cohort.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Cohort.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Cohort',
@@ -1963,22 +1741,19 @@ class Cohort extends $pb.GeneratedMessage {
         subBuilder: DateRange.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Cohort clone() => Cohort()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Cohort clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Cohort copyWith(void Function(Cohort) updates) =>
       super.copyWith((message) => updates(message as Cohort)) as Cohort;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Cohort create() => Cohort._();
+  @$core.override
   Cohort createEmptyInstance() => create();
-  static $pb.PbList<Cohort> createRepeated() => $pb.PbList<Cohort>();
   @$core.pragma('dart2js:noInline')
   static Cohort getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Cohort>(create);
@@ -1991,56 +1766,47 @@ class Cohort extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Dimension used by the cohort. Required and only supports
   /// `firstSessionDate`.
   @$pb.TagNumber(2)
   $core.String get dimension => $_getSZ(1);
   @$pb.TagNumber(2)
-  set dimension($core.String v) {
-    $_setString(1, v);
-  }
-
+  set dimension($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDimension() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDimension() => clearField(2);
+  void clearDimension() => $_clearField(2);
 
-  ///  The cohort selects users whose first touch date is between start date and
-  ///  end date defined in the `dateRange`. This `dateRange` does not specify the
-  ///  full date range of event data that is present in a cohort report. In a
-  ///  cohort report, this `dateRange` is extended by the granularity and offset
-  ///  present in the `cohortsRange`; event data for the extended reporting date
-  ///  range is present in a cohort report.
+  /// The cohort selects users whose first touch date is between start date and
+  /// end date defined in the `dateRange`. This `dateRange` does not specify the
+  /// full date range of event data that is present in a cohort report. In a
+  /// cohort report, this `dateRange` is extended by the granularity and offset
+  /// present in the `cohortsRange`; event data for the extended reporting date
+  /// range is present in a cohort report.
   ///
-  ///  In a cohort request, this `dateRange` is required and the `dateRanges` in
-  ///  the `RunReportRequest` or `RunPivotReportRequest` must be unspecified.
+  /// In a cohort request, this `dateRange` is required and the `dateRanges` in
+  /// the `RunReportRequest` or `RunPivotReportRequest` must be unspecified.
   ///
-  ///  This `dateRange` should generally be aligned with the cohort's granularity.
-  ///  If `CohortsRange` uses daily granularity, this `dateRange` can be a single
-  ///  day. If `CohortsRange` uses weekly granularity, this `dateRange` can be
-  ///  aligned to a week boundary, starting at Sunday and ending Saturday. If
-  ///  `CohortsRange` uses monthly granularity, this `dateRange` can be aligned to
-  ///  a month, starting at the first and ending on the last day of the month.
+  /// This `dateRange` should generally be aligned with the cohort's granularity.
+  /// If `CohortsRange` uses daily granularity, this `dateRange` can be a single
+  /// day. If `CohortsRange` uses weekly granularity, this `dateRange` can be
+  /// aligned to a week boundary, starting at Sunday and ending Saturday. If
+  /// `CohortsRange` uses monthly granularity, this `dateRange` can be aligned to
+  /// a month, starting at the first and ending on the last day of the month.
   @$pb.TagNumber(3)
   DateRange get dateRange => $_getN(2);
   @$pb.TagNumber(3)
-  set dateRange(DateRange v) {
-    setField(3, v);
-  }
-
+  set dateRange(DateRange value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasDateRange() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDateRange() => clearField(3);
+  void clearDateRange() => $_clearField(3);
   @$pb.TagNumber(3)
   DateRange ensureDateRange() => $_ensure(2);
 }
@@ -2053,58 +1819,47 @@ class CohortsRange extends $pb.GeneratedMessage {
     $core.int? startOffset,
     $core.int? endOffset,
   }) {
-    final $result = create();
-    if (granularity != null) {
-      $result.granularity = granularity;
-    }
-    if (startOffset != null) {
-      $result.startOffset = startOffset;
-    }
-    if (endOffset != null) {
-      $result.endOffset = endOffset;
-    }
-    return $result;
+    final result = create();
+    if (granularity != null) result.granularity = granularity;
+    if (startOffset != null) result.startOffset = startOffset;
+    if (endOffset != null) result.endOffset = endOffset;
+    return result;
   }
-  CohortsRange._() : super();
-  factory CohortsRange.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CohortsRange.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CohortsRange._();
+
+  factory CohortsRange.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CohortsRange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CohortsRange',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..e<CohortsRange_Granularity>(
-        1, _omitFieldNames ? '' : 'granularity', $pb.PbFieldType.OE,
-        defaultOrMaker: CohortsRange_Granularity.GRANULARITY_UNSPECIFIED,
-        valueOf: CohortsRange_Granularity.valueOf,
+    ..aE<CohortsRange_Granularity>(1, _omitFieldNames ? '' : 'granularity',
         enumValues: CohortsRange_Granularity.values)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'startOffset', $pb.PbFieldType.O3)
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'endOffset', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'startOffset')
+    ..aI(3, _omitFieldNames ? '' : 'endOffset')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CohortsRange clone() => CohortsRange()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CohortsRange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CohortsRange copyWith(void Function(CohortsRange) updates) =>
       super.copyWith((message) => updates(message as CohortsRange))
           as CohortsRange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CohortsRange create() => CohortsRange._();
+  @$core.override
   CohortsRange createEmptyInstance() => create();
-  static $pb.PbList<CohortsRange> createRepeated() =>
-      $pb.PbList<CohortsRange>();
   @$core.pragma('dart2js:noInline')
   static CohortsRange getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CohortsRange>(create);
@@ -2115,63 +1870,54 @@ class CohortsRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   CohortsRange_Granularity get granularity => $_getN(0);
   @$pb.TagNumber(1)
-  set granularity(CohortsRange_Granularity v) {
-    setField(1, v);
-  }
-
+  set granularity(CohortsRange_Granularity value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasGranularity() => $_has(0);
   @$pb.TagNumber(1)
-  void clearGranularity() => clearField(1);
+  void clearGranularity() => $_clearField(1);
 
-  ///  `startOffset` specifies the start date of the extended reporting date range
-  ///  for a cohort report. `startOffset` is commonly set to 0 so that reports
-  ///  contain data from the acquisition of the cohort forward.
+  /// `startOffset` specifies the start date of the extended reporting date range
+  /// for a cohort report. `startOffset` is commonly set to 0 so that reports
+  /// contain data from the acquisition of the cohort forward.
   ///
-  ///  If `granularity` is `DAILY`, the `startDate` of the extended reporting date
-  ///  range is `startDate` of the cohort plus `startOffset` days.
+  /// If `granularity` is `DAILY`, the `startDate` of the extended reporting date
+  /// range is `startDate` of the cohort plus `startOffset` days.
   ///
-  ///  If `granularity` is `WEEKLY`, the `startDate` of the extended reporting
-  ///  date range is `startDate` of the cohort plus `startOffset * 7` days.
+  /// If `granularity` is `WEEKLY`, the `startDate` of the extended reporting
+  /// date range is `startDate` of the cohort plus `startOffset * 7` days.
   ///
-  ///  If `granularity` is `MONTHLY`, the `startDate` of the extended reporting
-  ///  date range is `startDate` of the cohort plus `startOffset * 30` days.
+  /// If `granularity` is `MONTHLY`, the `startDate` of the extended reporting
+  /// date range is `startDate` of the cohort plus `startOffset * 30` days.
   @$pb.TagNumber(2)
   $core.int get startOffset => $_getIZ(1);
   @$pb.TagNumber(2)
-  set startOffset($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set startOffset($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasStartOffset() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStartOffset() => clearField(2);
+  void clearStartOffset() => $_clearField(2);
 
-  ///  Required. `endOffset` specifies the end date of the extended reporting date
-  ///  range for a cohort report. `endOffset` can be any positive integer but is
-  ///  commonly set to 5 to 10 so that reports contain data on the cohort for the
-  ///  next several granularity time periods.
+  /// Required. `endOffset` specifies the end date of the extended reporting date
+  /// range for a cohort report. `endOffset` can be any positive integer but is
+  /// commonly set to 5 to 10 so that reports contain data on the cohort for the
+  /// next several granularity time periods.
   ///
-  ///  If `granularity` is `DAILY`, the `endDate` of the extended reporting date
-  ///  range is `endDate` of the cohort plus `endOffset` days.
+  /// If `granularity` is `DAILY`, the `endDate` of the extended reporting date
+  /// range is `endDate` of the cohort plus `endOffset` days.
   ///
-  ///  If `granularity` is `WEEKLY`, the `endDate` of the extended reporting date
-  ///  range is `endDate` of the cohort plus `endOffset * 7` days.
+  /// If `granularity` is `WEEKLY`, the `endDate` of the extended reporting date
+  /// range is `endDate` of the cohort plus `endOffset * 7` days.
   ///
-  ///  If `granularity` is `MONTHLY`, the `endDate` of the extended reporting date
-  ///  range is `endDate` of the cohort plus `endOffset * 30` days.
+  /// If `granularity` is `MONTHLY`, the `endDate` of the extended reporting date
+  /// range is `endDate` of the cohort plus `endOffset * 30` days.
   @$pb.TagNumber(3)
   $core.int get endOffset => $_getIZ(2);
   @$pb.TagNumber(3)
-  set endOffset($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set endOffset($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
   $core.bool hasEndOffset() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEndOffset() => clearField(3);
+  void clearEndOffset() => $_clearField(3);
 }
 
 /// Optional settings of a cohort report.
@@ -2179,19 +1925,19 @@ class CohortReportSettings extends $pb.GeneratedMessage {
   factory CohortReportSettings({
     $core.bool? accumulate,
   }) {
-    final $result = create();
-    if (accumulate != null) {
-      $result.accumulate = accumulate;
-    }
-    return $result;
+    final result = create();
+    if (accumulate != null) result.accumulate = accumulate;
+    return result;
   }
-  CohortReportSettings._() : super();
-  factory CohortReportSettings.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CohortReportSettings.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CohortReportSettings._();
+
+  factory CohortReportSettings.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CohortReportSettings.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CohortReportSettings',
@@ -2201,25 +1947,20 @@ class CohortReportSettings extends $pb.GeneratedMessage {
     ..aOB(1, _omitFieldNames ? '' : 'accumulate')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CohortReportSettings clone() =>
-      CohortReportSettings()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CohortReportSettings clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CohortReportSettings copyWith(void Function(CohortReportSettings) updates) =>
       super.copyWith((message) => updates(message as CohortReportSettings))
           as CohortReportSettings;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CohortReportSettings create() => CohortReportSettings._();
+  @$core.override
   CohortReportSettings createEmptyInstance() => create();
-  static $pb.PbList<CohortReportSettings> createRepeated() =>
-      $pb.PbList<CohortReportSettings>();
   @$core.pragma('dart2js:noInline')
   static CohortReportSettings getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CohortReportSettings>(create);
@@ -2230,14 +1971,11 @@ class CohortReportSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get accumulate => $_getBF(0);
   @$pb.TagNumber(1)
-  set accumulate($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set accumulate($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAccumulate() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAccumulate() => clearField(1);
+  void clearAccumulate() => $_clearField(1);
 }
 
 /// A metric actively restricted in creating the report.
@@ -2247,25 +1985,23 @@ class ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
     $core.String? metricName,
     $core.Iterable<RestrictedMetricType>? restrictedMetricTypes,
   }) {
-    final $result = create();
-    if (metricName != null) {
-      $result.metricName = metricName;
-    }
-    if (restrictedMetricTypes != null) {
-      $result.restrictedMetricTypes.addAll(restrictedMetricTypes);
-    }
-    return $result;
+    final result = create();
+    if (metricName != null) result.metricName = metricName;
+    if (restrictedMetricTypes != null)
+      result.restrictedMetricTypes.addAll(restrictedMetricTypes);
+    return result;
   }
-  ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction._()
-      : super();
+
+  ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction._();
+
   factory ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2283,15 +2019,10 @@ class ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
             RestrictedMetricType.RESTRICTED_METRIC_TYPE_UNSPECIFIED)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction clone() =>
-      ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction copyWith(
           void Function(
                   ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction)
@@ -2300,6 +2031,7 @@ class ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
               as ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction))
           as ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
@@ -2307,12 +2039,9 @@ class ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
       create() =>
           ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
               ._();
+  @$core.override
   ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
       createEmptyInstance() => create();
-  static $pb.PbList<
-          ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>
-      createRepeated() => $pb.PbList<
-          ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>();
   @$core.pragma('dart2js:noInline')
   static ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2325,18 +2054,15 @@ class ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
   @$pb.TagNumber(1)
   $core.String get metricName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set metricName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set metricName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMetricName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMetricName() => clearField(1);
+  void clearMetricName() => $_clearField(1);
 
   /// The reason for this metric's restriction.
   @$pb.TagNumber(2)
-  $core.List<RestrictedMetricType> get restrictedMetricTypes => $_getList(1);
+  $pb.PbList<RestrictedMetricType> get restrictedMetricTypes => $_getList(1);
 }
 
 /// The schema restrictions actively enforced in creating this report. To learn
@@ -2348,56 +2074,51 @@ class ResponseMetaData_SchemaRestrictionResponse extends $pb.GeneratedMessage {
             ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>?
         activeMetricRestrictions,
   }) {
-    final $result = create();
-    if (activeMetricRestrictions != null) {
-      $result.activeMetricRestrictions.addAll(activeMetricRestrictions);
-    }
-    return $result;
+    final result = create();
+    if (activeMetricRestrictions != null)
+      result.activeMetricRestrictions.addAll(activeMetricRestrictions);
+    return result;
   }
-  ResponseMetaData_SchemaRestrictionResponse._() : super();
+
+  ResponseMetaData_SchemaRestrictionResponse._();
+
   factory ResponseMetaData_SchemaRestrictionResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ResponseMetaData_SchemaRestrictionResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ResponseMetaData_SchemaRestrictionResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ResponseMetaData.SchemaRestrictionResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>(1,
-        _omitFieldNames ? '' : 'activeMetricRestrictions', $pb.PbFieldType.PM,
+    ..pPM<ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>(
+        1, _omitFieldNames ? '' : 'activeMetricRestrictions',
         subBuilder:
             ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction
                 .create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ResponseMetaData_SchemaRestrictionResponse clone() =>
-      ResponseMetaData_SchemaRestrictionResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ResponseMetaData_SchemaRestrictionResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ResponseMetaData_SchemaRestrictionResponse copyWith(
           void Function(ResponseMetaData_SchemaRestrictionResponse) updates) =>
       super.copyWith((message) =>
               updates(message as ResponseMetaData_SchemaRestrictionResponse))
           as ResponseMetaData_SchemaRestrictionResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ResponseMetaData_SchemaRestrictionResponse create() =>
       ResponseMetaData_SchemaRestrictionResponse._();
+  @$core.override
   ResponseMetaData_SchemaRestrictionResponse createEmptyInstance() => create();
-  static $pb.PbList<ResponseMetaData_SchemaRestrictionResponse>
-      createRepeated() =>
-          $pb.PbList<ResponseMetaData_SchemaRestrictionResponse>();
   @$core.pragma('dart2js:noInline')
   static ResponseMetaData_SchemaRestrictionResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2409,7 +2130,7 @@ class ResponseMetaData_SchemaRestrictionResponse extends $pb.GeneratedMessage {
   /// However, this active response restriction is only populated if the user's
   /// custom role disallows access to `REVENUE_DATA`.
   @$pb.TagNumber(1)
-  $core.List<ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>
+  $pb.PbList<ResponseMetaData_SchemaRestrictionResponse_ActiveMetricRestriction>
       get activeMetricRestrictions => $_getList(0);
 }
 
@@ -2424,37 +2145,29 @@ class ResponseMetaData extends $pb.GeneratedMessage {
     $core.bool? subjectToThresholding,
     $core.Iterable<SamplingMetadata>? samplingMetadatas,
   }) {
-    final $result = create();
-    if (dataLossFromOtherRow != null) {
-      $result.dataLossFromOtherRow = dataLossFromOtherRow;
-    }
-    if (schemaRestrictionResponse != null) {
-      $result.schemaRestrictionResponse = schemaRestrictionResponse;
-    }
-    if (currencyCode != null) {
-      $result.currencyCode = currencyCode;
-    }
-    if (timeZone != null) {
-      $result.timeZone = timeZone;
-    }
-    if (emptyReason != null) {
-      $result.emptyReason = emptyReason;
-    }
-    if (subjectToThresholding != null) {
-      $result.subjectToThresholding = subjectToThresholding;
-    }
-    if (samplingMetadatas != null) {
-      $result.samplingMetadatas.addAll(samplingMetadatas);
-    }
-    return $result;
+    final result = create();
+    if (dataLossFromOtherRow != null)
+      result.dataLossFromOtherRow = dataLossFromOtherRow;
+    if (schemaRestrictionResponse != null)
+      result.schemaRestrictionResponse = schemaRestrictionResponse;
+    if (currencyCode != null) result.currencyCode = currencyCode;
+    if (timeZone != null) result.timeZone = timeZone;
+    if (emptyReason != null) result.emptyReason = emptyReason;
+    if (subjectToThresholding != null)
+      result.subjectToThresholding = subjectToThresholding;
+    if (samplingMetadatas != null)
+      result.samplingMetadatas.addAll(samplingMetadatas);
+    return result;
   }
-  ResponseMetaData._() : super();
-  factory ResponseMetaData.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ResponseMetaData.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ResponseMetaData._();
+
+  factory ResponseMetaData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ResponseMetaData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ResponseMetaData',
@@ -2469,59 +2182,51 @@ class ResponseMetaData extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'timeZone')
     ..aOS(7, _omitFieldNames ? '' : 'emptyReason')
     ..aOB(8, _omitFieldNames ? '' : 'subjectToThresholding')
-    ..pc<SamplingMetadata>(
-        9, _omitFieldNames ? '' : 'samplingMetadatas', $pb.PbFieldType.PM,
+    ..pPM<SamplingMetadata>(9, _omitFieldNames ? '' : 'samplingMetadatas',
         subBuilder: SamplingMetadata.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ResponseMetaData clone() => ResponseMetaData()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ResponseMetaData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ResponseMetaData copyWith(void Function(ResponseMetaData) updates) =>
       super.copyWith((message) => updates(message as ResponseMetaData))
           as ResponseMetaData;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ResponseMetaData create() => ResponseMetaData._();
+  @$core.override
   ResponseMetaData createEmptyInstance() => create();
-  static $pb.PbList<ResponseMetaData> createRepeated() =>
-      $pb.PbList<ResponseMetaData>();
   @$core.pragma('dart2js:noInline')
   static ResponseMetaData getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ResponseMetaData>(create);
   static ResponseMetaData? _defaultInstance;
 
-  ///  If true, indicates some buckets of dimension combinations are rolled into
-  ///  "(other)" row. This can happen for high cardinality reports.
+  /// If true, indicates some buckets of dimension combinations are rolled into
+  /// "(other)" row. This can happen for high cardinality reports.
   ///
-  ///  The metadata parameter dataLossFromOtherRow is populated based on the
-  ///  aggregated data table used in the report. The parameter will be accurately
-  ///  populated regardless of the filters and limits in the report.
+  /// The metadata parameter dataLossFromOtherRow is populated based on the
+  /// aggregated data table used in the report. The parameter will be accurately
+  /// populated regardless of the filters and limits in the report.
   ///
-  ///  For example, the (other) row could be dropped from the report because the
-  ///  request contains a filter on sessionSource = google. This parameter will
-  ///  still be populated if data loss from other row was present in the input
-  ///  aggregate data used to generate this report.
+  /// For example, the (other) row could be dropped from the report because the
+  /// request contains a filter on sessionSource = google. This parameter will
+  /// still be populated if data loss from other row was present in the input
+  /// aggregate data used to generate this report.
   ///
-  ///  To learn more, see [About the (other) row and data
-  ///  sampling](https://support.google.com/analytics/answer/13208658#reports).
+  /// To learn more, see [About the (other) row and data
+  /// sampling](https://support.google.com/analytics/answer/13208658#reports).
   @$pb.TagNumber(3)
   $core.bool get dataLossFromOtherRow => $_getBF(0);
   @$pb.TagNumber(3)
-  set dataLossFromOtherRow($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set dataLossFromOtherRow($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(3)
   $core.bool hasDataLossFromOtherRow() => $_has(0);
   @$pb.TagNumber(3)
-  void clearDataLossFromOtherRow() => clearField(3);
+  void clearDataLossFromOtherRow() => $_clearField(3);
 
   /// Describes the schema restrictions actively enforced in creating this
   /// report. To learn more, see [Access and data-restriction
@@ -2530,39 +2235,35 @@ class ResponseMetaData extends $pb.GeneratedMessage {
   ResponseMetaData_SchemaRestrictionResponse get schemaRestrictionResponse =>
       $_getN(1);
   @$pb.TagNumber(4)
-  set schemaRestrictionResponse(ResponseMetaData_SchemaRestrictionResponse v) {
-    setField(4, v);
-  }
-
+  set schemaRestrictionResponse(
+          ResponseMetaData_SchemaRestrictionResponse value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasSchemaRestrictionResponse() => $_has(1);
   @$pb.TagNumber(4)
-  void clearSchemaRestrictionResponse() => clearField(4);
+  void clearSchemaRestrictionResponse() => $_clearField(4);
   @$pb.TagNumber(4)
   ResponseMetaData_SchemaRestrictionResponse
       ensureSchemaRestrictionResponse() => $_ensure(1);
 
-  ///  The currency code used in this report. Intended to be used in formatting
-  ///  currency metrics like `purchaseRevenue` for visualization. If currency_code
-  ///  was specified in the request, this response parameter will echo the request
-  ///  parameter; otherwise, this response parameter is the property's current
-  ///  currency_code.
+  /// The currency code used in this report. Intended to be used in formatting
+  /// currency metrics like `purchaseRevenue` for visualization. If currency_code
+  /// was specified in the request, this response parameter will echo the request
+  /// parameter; otherwise, this response parameter is the property's current
+  /// currency_code.
   ///
-  ///  Currency codes are string encodings of currency types from the ISO 4217
-  ///  standard (https://en.wikipedia.org/wiki/ISO_4217); for example "USD",
-  ///  "EUR", "JPY". To learn more, see
-  ///  https://support.google.com/analytics/answer/9796179.
+  /// Currency codes are string encodings of currency types from the ISO 4217
+  /// standard (https://en.wikipedia.org/wiki/ISO_4217); for example "USD",
+  /// "EUR", "JPY". To learn more, see
+  /// https://support.google.com/analytics/answer/9796179.
   @$pb.TagNumber(5)
   $core.String get currencyCode => $_getSZ(2);
   @$pb.TagNumber(5)
-  set currencyCode($core.String v) {
-    $_setString(2, v);
-  }
-
+  set currencyCode($core.String value) => $_setString(2, value);
   @$pb.TagNumber(5)
   $core.bool hasCurrencyCode() => $_has(2);
   @$pb.TagNumber(5)
-  void clearCurrencyCode() => clearField(5);
+  void clearCurrencyCode() => $_clearField(5);
 
   /// The property's current timezone. Intended to be used to interpret
   /// time-based dimensions like `hour` and `minute`. Formatted as strings from
@@ -2571,27 +2272,21 @@ class ResponseMetaData extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get timeZone => $_getSZ(3);
   @$pb.TagNumber(6)
-  set timeZone($core.String v) {
-    $_setString(3, v);
-  }
-
+  set timeZone($core.String value) => $_setString(3, value);
   @$pb.TagNumber(6)
   $core.bool hasTimeZone() => $_has(3);
   @$pb.TagNumber(6)
-  void clearTimeZone() => clearField(6);
+  void clearTimeZone() => $_clearField(6);
 
   /// If empty reason is specified, the report is empty for this reason.
   @$pb.TagNumber(7)
   $core.String get emptyReason => $_getSZ(4);
   @$pb.TagNumber(7)
-  set emptyReason($core.String v) {
-    $_setString(4, v);
-  }
-
+  set emptyReason($core.String value) => $_setString(4, value);
   @$pb.TagNumber(7)
   $core.bool hasEmptyReason() => $_has(4);
   @$pb.TagNumber(7)
-  void clearEmptyReason() => clearField(7);
+  void clearEmptyReason() => $_clearField(7);
 
   /// If `subjectToThresholding` is true, this report is subject to thresholding
   /// and only returns data that meets the minimum aggregation thresholds. It is
@@ -2604,25 +2299,22 @@ class ResponseMetaData extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.bool get subjectToThresholding => $_getBF(5);
   @$pb.TagNumber(8)
-  set subjectToThresholding($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set subjectToThresholding($core.bool value) => $_setBool(5, value);
   @$pb.TagNumber(8)
   $core.bool hasSubjectToThresholding() => $_has(5);
   @$pb.TagNumber(8)
-  void clearSubjectToThresholding() => clearField(8);
+  void clearSubjectToThresholding() => $_clearField(8);
 
-  ///  If this report's results are
-  ///  [sampled](https://support.google.com/analytics/answer/13331292), this
-  ///  describes the percentage of events used in this report. One
-  ///  `samplingMetadatas` is populated for each date range. Each
-  ///  `samplingMetadatas` corresponds to a date range in the order that date
-  ///  ranges were specified in the request.
+  /// If this report's results are
+  /// [sampled](https://support.google.com/analytics/answer/13331292), this
+  /// describes the percentage of events used in this report. One
+  /// `samplingMetadatas` is populated for each date range. Each
+  /// `samplingMetadatas` corresponds to a date range in the order that date
+  /// ranges were specified in the request.
   ///
-  ///  However if the results are not sampled, this field will not be defined.
+  /// However if the results are not sampled, this field will not be defined.
   @$pb.TagNumber(9)
-  $core.List<SamplingMetadata> get samplingMetadatas => $_getList(6);
+  $pb.PbList<SamplingMetadata> get samplingMetadatas => $_getList(6);
 }
 
 /// Describes a dimension column in the report. Dimensions requested in a report
@@ -2633,19 +2325,19 @@ class DimensionHeader extends $pb.GeneratedMessage {
   factory DimensionHeader({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DimensionHeader._() : super();
-  factory DimensionHeader.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DimensionHeader.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DimensionHeader._();
+
+  factory DimensionHeader.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DimensionHeader.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DimensionHeader',
@@ -2655,24 +2347,20 @@ class DimensionHeader extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DimensionHeader clone() => DimensionHeader()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DimensionHeader clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DimensionHeader copyWith(void Function(DimensionHeader) updates) =>
       super.copyWith((message) => updates(message as DimensionHeader))
           as DimensionHeader;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DimensionHeader create() => DimensionHeader._();
+  @$core.override
   DimensionHeader createEmptyInstance() => create();
-  static $pb.PbList<DimensionHeader> createRepeated() =>
-      $pb.PbList<DimensionHeader>();
   @$core.pragma('dart2js:noInline')
   static DimensionHeader getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DimensionHeader>(create);
@@ -2682,14 +2370,11 @@ class DimensionHeader extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Describes a metric column in the report. Visible metrics requested in a
@@ -2701,22 +2386,20 @@ class MetricHeader extends $pb.GeneratedMessage {
     $core.String? name,
     MetricType? type,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (type != null) result.type = type;
+    return result;
   }
-  MetricHeader._() : super();
-  factory MetricHeader.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory MetricHeader.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  MetricHeader._();
+
+  factory MetricHeader.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory MetricHeader.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'MetricHeader',
@@ -2724,30 +2407,24 @@ class MetricHeader extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<MetricType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: MetricType.METRIC_TYPE_UNSPECIFIED,
-        valueOf: MetricType.valueOf,
+    ..aE<MetricType>(2, _omitFieldNames ? '' : 'type',
         enumValues: MetricType.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  MetricHeader clone() => MetricHeader()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MetricHeader clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   MetricHeader copyWith(void Function(MetricHeader) updates) =>
       super.copyWith((message) => updates(message as MetricHeader))
           as MetricHeader;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static MetricHeader create() => MetricHeader._();
+  @$core.override
   MetricHeader createEmptyInstance() => create();
-  static $pb.PbList<MetricHeader> createRepeated() =>
-      $pb.PbList<MetricHeader>();
   @$core.pragma('dart2js:noInline')
   static MetricHeader getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<MetricHeader>(create);
@@ -2757,117 +2434,104 @@ class MetricHeader extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The metric's data type.
   @$pb.TagNumber(2)
   MetricType get type => $_getN(1);
   @$pb.TagNumber(2)
-  set type(MetricType v) {
-    setField(2, v);
-  }
-
+  set type(MetricType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearType() => clearField(2);
+  void clearType() => $_clearField(2);
 }
 
-///  Report data for each row.
-///  For example if RunReportRequest contains:
+/// Report data for each row.
+/// For example if RunReportRequest contains:
 ///
-///  ```none
-///  "dimensions": [
-///    {
-///      "name": "eventName"
-///    },
-///    {
-///      "name": "countryId"
-///    }
-///  ],
-///  "metrics": [
-///    {
-///      "name": "eventCount"
-///    }
-///  ]
-///  ```
+/// ```none
+/// "dimensions": [
+///   {
+///     "name": "eventName"
+///   },
+///   {
+///     "name": "countryId"
+///   }
+/// ],
+/// "metrics": [
+///   {
+///     "name": "eventCount"
+///   }
+/// ]
+/// ```
 ///
-///  One row with 'in_app_purchase' as the eventName, 'JP' as the countryId, and
-///  15 as the eventCount, would be:
+/// One row with 'in_app_purchase' as the eventName, 'JP' as the countryId, and
+/// 15 as the eventCount, would be:
 ///
-///  ```none
-///  "dimensionValues": [
-///    {
-///      "value": "in_app_purchase"
-///    },
-///    {
-///      "value": "JP"
-///    }
-///  ],
-///  "metricValues": [
-///    {
-///      "value": "15"
-///    }
-///  ]
-///  ```
+/// ```none
+/// "dimensionValues": [
+///   {
+///     "value": "in_app_purchase"
+///   },
+///   {
+///     "value": "JP"
+///   }
+/// ],
+/// "metricValues": [
+///   {
+///     "value": "15"
+///   }
+/// ]
+/// ```
 class Row extends $pb.GeneratedMessage {
   factory Row({
     $core.Iterable<DimensionValue>? dimensionValues,
     $core.Iterable<MetricValue>? metricValues,
   }) {
-    final $result = create();
-    if (dimensionValues != null) {
-      $result.dimensionValues.addAll(dimensionValues);
-    }
-    if (metricValues != null) {
-      $result.metricValues.addAll(metricValues);
-    }
-    return $result;
+    final result = create();
+    if (dimensionValues != null) result.dimensionValues.addAll(dimensionValues);
+    if (metricValues != null) result.metricValues.addAll(metricValues);
+    return result;
   }
-  Row._() : super();
-  factory Row.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Row.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Row._();
+
+  factory Row.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Row.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Row',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<DimensionValue>(
-        1, _omitFieldNames ? '' : 'dimensionValues', $pb.PbFieldType.PM,
+    ..pPM<DimensionValue>(1, _omitFieldNames ? '' : 'dimensionValues',
         subBuilder: DimensionValue.create)
-    ..pc<MetricValue>(
-        2, _omitFieldNames ? '' : 'metricValues', $pb.PbFieldType.PM,
+    ..pPM<MetricValue>(2, _omitFieldNames ? '' : 'metricValues',
         subBuilder: MetricValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Row clone() => Row()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Row clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Row copyWith(void Function(Row) updates) =>
       super.copyWith((message) => updates(message as Row)) as Row;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Row create() => Row._();
+  @$core.override
   Row createEmptyInstance() => create();
-  static $pb.PbList<Row> createRepeated() => $pb.PbList<Row>();
   @$core.pragma('dart2js:noInline')
   static Row getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Row>(create);
@@ -2876,11 +2540,11 @@ class Row extends $pb.GeneratedMessage {
   /// List of requested dimension values. In a PivotReport, dimension_values
   /// are only listed for dimensions included in a pivot.
   @$pb.TagNumber(1)
-  $core.List<DimensionValue> get dimensionValues => $_getList(0);
+  $pb.PbList<DimensionValue> get dimensionValues => $_getList(0);
 
   /// List of requested visible metric values.
   @$pb.TagNumber(2)
-  $core.List<MetricValue> get metricValues => $_getList(1);
+  $pb.PbList<MetricValue> get metricValues => $_getList(1);
 }
 
 enum DimensionValue_OneValue { value, notSet }
@@ -2890,19 +2554,19 @@ class DimensionValue extends $pb.GeneratedMessage {
   factory DimensionValue({
     $core.String? value,
   }) {
-    final $result = create();
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (value != null) result.value = value;
+    return result;
   }
-  DimensionValue._() : super();
-  factory DimensionValue.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DimensionValue.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DimensionValue._();
+
+  factory DimensionValue.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DimensionValue.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, DimensionValue_OneValue>
       _DimensionValue_OneValueByTag = {
@@ -2918,45 +2582,40 @@ class DimensionValue extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'value')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DimensionValue clone() => DimensionValue()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DimensionValue clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DimensionValue copyWith(void Function(DimensionValue) updates) =>
       super.copyWith((message) => updates(message as DimensionValue))
           as DimensionValue;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DimensionValue create() => DimensionValue._();
+  @$core.override
   DimensionValue createEmptyInstance() => create();
-  static $pb.PbList<DimensionValue> createRepeated() =>
-      $pb.PbList<DimensionValue>();
   @$core.pragma('dart2js:noInline')
   static DimensionValue getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DimensionValue>(create);
   static DimensionValue? _defaultInstance;
 
+  @$pb.TagNumber(1)
   DimensionValue_OneValue whichOneValue() =>
       _DimensionValue_OneValueByTag[$_whichOneof(0)]!;
-  void clearOneValue() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  void clearOneValue() => $_clearField($_whichOneof(0));
 
   /// Value as a string if the dimension type is a string.
   @$pb.TagNumber(1)
   $core.String get value => $_getSZ(0);
   @$pb.TagNumber(1)
-  set value($core.String v) {
-    $_setString(0, v);
-  }
-
+  set value($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  void clearValue() => $_clearField(1);
 }
 
 enum MetricValue_OneValue { value, notSet }
@@ -2966,19 +2625,19 @@ class MetricValue extends $pb.GeneratedMessage {
   factory MetricValue({
     $core.String? value,
   }) {
-    final $result = create();
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (value != null) result.value = value;
+    return result;
   }
-  MetricValue._() : super();
-  factory MetricValue.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory MetricValue.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  MetricValue._();
+
+  factory MetricValue.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory MetricValue.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, MetricValue_OneValue>
       _MetricValue_OneValueByTag = {
@@ -2994,44 +2653,40 @@ class MetricValue extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'value')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  MetricValue clone() => MetricValue()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MetricValue clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   MetricValue copyWith(void Function(MetricValue) updates) =>
       super.copyWith((message) => updates(message as MetricValue))
           as MetricValue;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static MetricValue create() => MetricValue._();
+  @$core.override
   MetricValue createEmptyInstance() => create();
-  static $pb.PbList<MetricValue> createRepeated() => $pb.PbList<MetricValue>();
   @$core.pragma('dart2js:noInline')
   static MetricValue getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<MetricValue>(create);
   static MetricValue? _defaultInstance;
 
+  @$pb.TagNumber(4)
   MetricValue_OneValue whichOneValue() =>
       _MetricValue_OneValueByTag[$_whichOneof(0)]!;
-  void clearOneValue() => clearField($_whichOneof(0));
+  @$pb.TagNumber(4)
+  void clearOneValue() => $_clearField($_whichOneof(0));
 
   /// Measurement value. See MetricHeader for type.
   @$pb.TagNumber(4)
   $core.String get value => $_getSZ(0);
   @$pb.TagNumber(4)
-  set value($core.String v) {
-    $_setString(0, v);
-  }
-
+  set value($core.String value) => $_setString(0, value);
   @$pb.TagNumber(4)
   $core.bool hasValue() => $_has(0);
   @$pb.TagNumber(4)
-  void clearValue() => clearField(4);
+  void clearValue() => $_clearField(4);
 }
 
 /// Current state of all quotas for this Analytics Property. If any quota for a
@@ -3046,35 +2701,29 @@ class PropertyQuota extends $pb.GeneratedMessage {
     QuotaStatus? potentiallyThresholdedRequestsPerHour,
     QuotaStatus? tokensPerProjectPerHour,
   }) {
-    final $result = create();
-    if (tokensPerDay != null) {
-      $result.tokensPerDay = tokensPerDay;
-    }
-    if (tokensPerHour != null) {
-      $result.tokensPerHour = tokensPerHour;
-    }
-    if (concurrentRequests != null) {
-      $result.concurrentRequests = concurrentRequests;
-    }
-    if (serverErrorsPerProjectPerHour != null) {
-      $result.serverErrorsPerProjectPerHour = serverErrorsPerProjectPerHour;
-    }
-    if (potentiallyThresholdedRequestsPerHour != null) {
-      $result.potentiallyThresholdedRequestsPerHour =
+    final result = create();
+    if (tokensPerDay != null) result.tokensPerDay = tokensPerDay;
+    if (tokensPerHour != null) result.tokensPerHour = tokensPerHour;
+    if (concurrentRequests != null)
+      result.concurrentRequests = concurrentRequests;
+    if (serverErrorsPerProjectPerHour != null)
+      result.serverErrorsPerProjectPerHour = serverErrorsPerProjectPerHour;
+    if (potentiallyThresholdedRequestsPerHour != null)
+      result.potentiallyThresholdedRequestsPerHour =
           potentiallyThresholdedRequestsPerHour;
-    }
-    if (tokensPerProjectPerHour != null) {
-      $result.tokensPerProjectPerHour = tokensPerProjectPerHour;
-    }
-    return $result;
+    if (tokensPerProjectPerHour != null)
+      result.tokensPerProjectPerHour = tokensPerProjectPerHour;
+    return result;
   }
-  PropertyQuota._() : super();
-  factory PropertyQuota.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PropertyQuota.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PropertyQuota._();
+
+  factory PropertyQuota.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PropertyQuota.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PropertyQuota',
@@ -3097,24 +2746,20 @@ class PropertyQuota extends $pb.GeneratedMessage {
         subBuilder: QuotaStatus.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PropertyQuota clone() => PropertyQuota()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PropertyQuota clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PropertyQuota copyWith(void Function(PropertyQuota) updates) =>
       super.copyWith((message) => updates(message as PropertyQuota))
           as PropertyQuota;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PropertyQuota create() => PropertyQuota._();
+  @$core.override
   PropertyQuota createEmptyInstance() => create();
-  static $pb.PbList<PropertyQuota> createRepeated() =>
-      $pb.PbList<PropertyQuota>();
   @$core.pragma('dart2js:noInline')
   static PropertyQuota getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PropertyQuota>(create);
@@ -3126,14 +2771,11 @@ class PropertyQuota extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   QuotaStatus get tokensPerDay => $_getN(0);
   @$pb.TagNumber(1)
-  set tokensPerDay(QuotaStatus v) {
-    setField(1, v);
-  }
-
+  set tokensPerDay(QuotaStatus value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasTokensPerDay() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTokensPerDay() => clearField(1);
+  void clearTokensPerDay() => $_clearField(1);
   @$pb.TagNumber(1)
   QuotaStatus ensureTokensPerDay() => $_ensure(0);
 
@@ -3144,14 +2786,11 @@ class PropertyQuota extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   QuotaStatus get tokensPerHour => $_getN(1);
   @$pb.TagNumber(2)
-  set tokensPerHour(QuotaStatus v) {
-    setField(2, v);
-  }
-
+  set tokensPerHour(QuotaStatus value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasTokensPerHour() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTokensPerHour() => clearField(2);
+  void clearTokensPerHour() => $_clearField(2);
   @$pb.TagNumber(2)
   QuotaStatus ensureTokensPerHour() => $_ensure(1);
 
@@ -3160,14 +2799,11 @@ class PropertyQuota extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   QuotaStatus get concurrentRequests => $_getN(2);
   @$pb.TagNumber(3)
-  set concurrentRequests(QuotaStatus v) {
-    setField(3, v);
-  }
-
+  set concurrentRequests(QuotaStatus value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasConcurrentRequests() => $_has(2);
   @$pb.TagNumber(3)
-  void clearConcurrentRequests() => clearField(3);
+  void clearConcurrentRequests() => $_clearField(3);
   @$pb.TagNumber(3)
   QuotaStatus ensureConcurrentRequests() => $_ensure(2);
 
@@ -3177,14 +2813,11 @@ class PropertyQuota extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   QuotaStatus get serverErrorsPerProjectPerHour => $_getN(3);
   @$pb.TagNumber(4)
-  set serverErrorsPerProjectPerHour(QuotaStatus v) {
-    setField(4, v);
-  }
-
+  set serverErrorsPerProjectPerHour(QuotaStatus value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasServerErrorsPerProjectPerHour() => $_has(3);
   @$pb.TagNumber(4)
-  void clearServerErrorsPerProjectPerHour() => clearField(4);
+  void clearServerErrorsPerProjectPerHour() => $_clearField(4);
   @$pb.TagNumber(4)
   QuotaStatus ensureServerErrorsPerProjectPerHour() => $_ensure(3);
 
@@ -3195,14 +2828,12 @@ class PropertyQuota extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   QuotaStatus get potentiallyThresholdedRequestsPerHour => $_getN(4);
   @$pb.TagNumber(5)
-  set potentiallyThresholdedRequestsPerHour(QuotaStatus v) {
-    setField(5, v);
-  }
-
+  set potentiallyThresholdedRequestsPerHour(QuotaStatus value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasPotentiallyThresholdedRequestsPerHour() => $_has(4);
   @$pb.TagNumber(5)
-  void clearPotentiallyThresholdedRequestsPerHour() => clearField(5);
+  void clearPotentiallyThresholdedRequestsPerHour() => $_clearField(5);
   @$pb.TagNumber(5)
   QuotaStatus ensurePotentiallyThresholdedRequestsPerHour() => $_ensure(4);
 
@@ -3215,14 +2846,11 @@ class PropertyQuota extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   QuotaStatus get tokensPerProjectPerHour => $_getN(5);
   @$pb.TagNumber(6)
-  set tokensPerProjectPerHour(QuotaStatus v) {
-    setField(6, v);
-  }
-
+  set tokensPerProjectPerHour(QuotaStatus value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasTokensPerProjectPerHour() => $_has(5);
   @$pb.TagNumber(6)
-  void clearTokensPerProjectPerHour() => clearField(6);
+  void clearTokensPerProjectPerHour() => $_clearField(6);
   @$pb.TagNumber(6)
   QuotaStatus ensureTokensPerProjectPerHour() => $_ensure(5);
 }
@@ -3233,49 +2861,44 @@ class QuotaStatus extends $pb.GeneratedMessage {
     $core.int? consumed,
     $core.int? remaining,
   }) {
-    final $result = create();
-    if (consumed != null) {
-      $result.consumed = consumed;
-    }
-    if (remaining != null) {
-      $result.remaining = remaining;
-    }
-    return $result;
+    final result = create();
+    if (consumed != null) result.consumed = consumed;
+    if (remaining != null) result.remaining = remaining;
+    return result;
   }
-  QuotaStatus._() : super();
-  factory QuotaStatus.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory QuotaStatus.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  QuotaStatus._();
+
+  factory QuotaStatus.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QuotaStatus.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'QuotaStatus',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'consumed', $pb.PbFieldType.O3)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'remaining', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'consumed')
+    ..aI(2, _omitFieldNames ? '' : 'remaining')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  QuotaStatus clone() => QuotaStatus()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QuotaStatus clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   QuotaStatus copyWith(void Function(QuotaStatus) updates) =>
       super.copyWith((message) => updates(message as QuotaStatus))
           as QuotaStatus;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static QuotaStatus create() => QuotaStatus._();
+  @$core.override
   QuotaStatus createEmptyInstance() => create();
-  static $pb.PbList<QuotaStatus> createRepeated() => $pb.PbList<QuotaStatus>();
   @$core.pragma('dart2js:noInline')
   static QuotaStatus getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<QuotaStatus>(create);
@@ -3285,27 +2908,21 @@ class QuotaStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get consumed => $_getIZ(0);
   @$pb.TagNumber(1)
-  set consumed($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set consumed($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasConsumed() => $_has(0);
   @$pb.TagNumber(1)
-  void clearConsumed() => clearField(1);
+  void clearConsumed() => $_clearField(1);
 
   /// Quota remaining after this request.
   @$pb.TagNumber(2)
   $core.int get remaining => $_getIZ(1);
   @$pb.TagNumber(2)
-  set remaining($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set remaining($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasRemaining() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRemaining() => clearField(2);
+  void clearRemaining() => $_clearField(2);
 }
 
 /// Breakdowns add a dimension to the funnel table sub report response.
@@ -3314,22 +2931,21 @@ class FunnelBreakdown extends $pb.GeneratedMessage {
     Dimension? breakdownDimension,
     $fixnum.Int64? limit,
   }) {
-    final $result = create();
-    if (breakdownDimension != null) {
-      $result.breakdownDimension = breakdownDimension;
-    }
-    if (limit != null) {
-      $result.limit = limit;
-    }
-    return $result;
+    final result = create();
+    if (breakdownDimension != null)
+      result.breakdownDimension = breakdownDimension;
+    if (limit != null) result.limit = limit;
+    return result;
   }
-  FunnelBreakdown._() : super();
-  factory FunnelBreakdown.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelBreakdown.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FunnelBreakdown._();
+
+  factory FunnelBreakdown.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelBreakdown.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FunnelBreakdown',
@@ -3341,24 +2957,20 @@ class FunnelBreakdown extends $pb.GeneratedMessage {
     ..aInt64(2, _omitFieldNames ? '' : 'limit')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelBreakdown clone() => FunnelBreakdown()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelBreakdown clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelBreakdown copyWith(void Function(FunnelBreakdown) updates) =>
       super.copyWith((message) => updates(message as FunnelBreakdown))
           as FunnelBreakdown;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelBreakdown create() => FunnelBreakdown._();
+  @$core.override
   FunnelBreakdown createEmptyInstance() => create();
-  static $pb.PbList<FunnelBreakdown> createRepeated() =>
-      $pb.PbList<FunnelBreakdown>();
   @$core.pragma('dart2js:noInline')
   static FunnelBreakdown getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunnelBreakdown>(create);
@@ -3370,14 +2982,11 @@ class FunnelBreakdown extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Dimension get breakdownDimension => $_getN(0);
   @$pb.TagNumber(1)
-  set breakdownDimension(Dimension v) {
-    setField(1, v);
-  }
-
+  set breakdownDimension(Dimension value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasBreakdownDimension() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBreakdownDimension() => clearField(1);
+  void clearBreakdownDimension() => $_clearField(1);
   @$pb.TagNumber(1)
   Dimension ensureBreakdownDimension() => $_ensure(0);
 
@@ -3387,14 +2996,11 @@ class FunnelBreakdown extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $fixnum.Int64 get limit => $_getI64(1);
   @$pb.TagNumber(2)
-  set limit($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set limit($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasLimit() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLimit() => clearField(2);
+  void clearLimit() => $_clearField(2);
 }
 
 /// Next actions state the value for a dimension after the user has achieved
@@ -3408,22 +3014,21 @@ class FunnelNextAction extends $pb.GeneratedMessage {
     Dimension? nextActionDimension,
     $fixnum.Int64? limit,
   }) {
-    final $result = create();
-    if (nextActionDimension != null) {
-      $result.nextActionDimension = nextActionDimension;
-    }
-    if (limit != null) {
-      $result.limit = limit;
-    }
-    return $result;
+    final result = create();
+    if (nextActionDimension != null)
+      result.nextActionDimension = nextActionDimension;
+    if (limit != null) result.limit = limit;
+    return result;
   }
-  FunnelNextAction._() : super();
-  factory FunnelNextAction.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelNextAction.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FunnelNextAction._();
+
+  factory FunnelNextAction.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelNextAction.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FunnelNextAction',
@@ -3435,47 +3040,40 @@ class FunnelNextAction extends $pb.GeneratedMessage {
     ..aInt64(2, _omitFieldNames ? '' : 'limit')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelNextAction clone() => FunnelNextAction()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelNextAction clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelNextAction copyWith(void Function(FunnelNextAction) updates) =>
       super.copyWith((message) => updates(message as FunnelNextAction))
           as FunnelNextAction;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelNextAction create() => FunnelNextAction._();
+  @$core.override
   FunnelNextAction createEmptyInstance() => create();
-  static $pb.PbList<FunnelNextAction> createRepeated() =>
-      $pb.PbList<FunnelNextAction>();
   @$core.pragma('dart2js:noInline')
   static FunnelNextAction getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunnelNextAction>(create);
   static FunnelNextAction? _defaultInstance;
 
-  ///  The dimension column added to the funnel visualization sub report response.
-  ///  The next action dimension returns the next dimension value of this
-  ///  dimension after the user has attained the `i`th funnel step.
+  /// The dimension column added to the funnel visualization sub report response.
+  /// The next action dimension returns the next dimension value of this
+  /// dimension after the user has attained the `i`th funnel step.
   ///
-  ///  `nextActionDimension` currently only supports `eventName` and most Page /
-  ///  Screen dimensions like `pageTitle` and `pagePath`. `nextActionDimension`
-  ///  cannot be a dimension expression.
+  /// `nextActionDimension` currently only supports `eventName` and most Page /
+  /// Screen dimensions like `pageTitle` and `pagePath`. `nextActionDimension`
+  /// cannot be a dimension expression.
   @$pb.TagNumber(1)
   Dimension get nextActionDimension => $_getN(0);
   @$pb.TagNumber(1)
-  set nextActionDimension(Dimension v) {
-    setField(1, v);
-  }
-
+  set nextActionDimension(Dimension value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasNextActionDimension() => $_has(0);
   @$pb.TagNumber(1)
-  void clearNextActionDimension() => clearField(1);
+  void clearNextActionDimension() => $_clearField(1);
   @$pb.TagNumber(1)
   Dimension ensureNextActionDimension() => $_ensure(0);
 
@@ -3485,45 +3083,40 @@ class FunnelNextAction extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $fixnum.Int64 get limit => $_getI64(1);
   @$pb.TagNumber(2)
-  set limit($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set limit($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasLimit() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLimit() => clearField(2);
+  void clearLimit() => $_clearField(2);
 }
 
-///  Configures the funnel in a funnel report request. A funnel reports on users
-///  as they pass through a sequence of steps.
+/// Configures the funnel in a funnel report request. A funnel reports on users
+/// as they pass through a sequence of steps.
 ///
-///  Funnel exploration lets you visualize the steps your users take to complete a
-///  task and quickly see how well they are succeeding or failing at each step.
-///  For example, how do prospects become shoppers and then become buyers? How do
-///  one time buyers become repeat buyers? With this information, you can improve
-///  inefficient or abandoned customer journeys.
+/// Funnel exploration lets you visualize the steps your users take to complete a
+/// task and quickly see how well they are succeeding or failing at each step.
+/// For example, how do prospects become shoppers and then become buyers? How do
+/// one time buyers become repeat buyers? With this information, you can improve
+/// inefficient or abandoned customer journeys.
 class Funnel extends $pb.GeneratedMessage {
   factory Funnel({
     $core.bool? isOpenFunnel,
     $core.Iterable<FunnelStep>? steps,
   }) {
-    final $result = create();
-    if (isOpenFunnel != null) {
-      $result.isOpenFunnel = isOpenFunnel;
-    }
-    if (steps != null) {
-      $result.steps.addAll(steps);
-    }
-    return $result;
+    final result = create();
+    if (isOpenFunnel != null) result.isOpenFunnel = isOpenFunnel;
+    if (steps != null) result.steps.addAll(steps);
+    return result;
   }
-  Funnel._() : super();
-  factory Funnel.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Funnel.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Funnel._();
+
+  factory Funnel.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Funnel.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Funnel',
@@ -3531,26 +3124,23 @@ class Funnel extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'isOpenFunnel')
-    ..pc<FunnelStep>(2, _omitFieldNames ? '' : 'steps', $pb.PbFieldType.PM,
+    ..pPM<FunnelStep>(2, _omitFieldNames ? '' : 'steps',
         subBuilder: FunnelStep.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Funnel clone() => Funnel()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Funnel clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Funnel copyWith(void Function(Funnel) updates) =>
       super.copyWith((message) => updates(message as Funnel)) as Funnel;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Funnel create() => Funnel._();
+  @$core.override
   Funnel createEmptyInstance() => create();
-  static $pb.PbList<Funnel> createRepeated() => $pb.PbList<Funnel>();
   @$core.pragma('dart2js:noInline')
   static Funnel getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Funnel>(create);
@@ -3562,18 +3152,15 @@ class Funnel extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get isOpenFunnel => $_getBF(0);
   @$pb.TagNumber(1)
-  set isOpenFunnel($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set isOpenFunnel($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasIsOpenFunnel() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIsOpenFunnel() => clearField(1);
+  void clearIsOpenFunnel() => $_clearField(1);
 
   /// The sequential steps of this funnel.
   @$pb.TagNumber(2)
-  $core.List<FunnelStep> get steps => $_getList(1);
+  $pb.PbList<FunnelStep> get steps => $_getList(1);
 }
 
 /// Steps define the user journey you want to measure. Steps contain one or
@@ -3586,28 +3173,24 @@ class FunnelStep extends $pb.GeneratedMessage {
     $0.Duration? withinDurationFromPriorStep,
     FunnelFilterExpression? filterExpression,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (isDirectlyFollowedBy != null) {
-      $result.isDirectlyFollowedBy = isDirectlyFollowedBy;
-    }
-    if (withinDurationFromPriorStep != null) {
-      $result.withinDurationFromPriorStep = withinDurationFromPriorStep;
-    }
-    if (filterExpression != null) {
-      $result.filterExpression = filterExpression;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (isDirectlyFollowedBy != null)
+      result.isDirectlyFollowedBy = isDirectlyFollowedBy;
+    if (withinDurationFromPriorStep != null)
+      result.withinDurationFromPriorStep = withinDurationFromPriorStep;
+    if (filterExpression != null) result.filterExpression = filterExpression;
+    return result;
   }
-  FunnelStep._() : super();
-  factory FunnelStep.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelStep.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FunnelStep._();
+
+  factory FunnelStep.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelStep.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FunnelStep',
@@ -3622,22 +3205,19 @@ class FunnelStep extends $pb.GeneratedMessage {
         subBuilder: FunnelFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelStep clone() => FunnelStep()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelStep clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelStep copyWith(void Function(FunnelStep) updates) =>
       super.copyWith((message) => updates(message as FunnelStep)) as FunnelStep;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelStep create() => FunnelStep._();
+  @$core.override
   FunnelStep createEmptyInstance() => create();
-  static $pb.PbList<FunnelStep> createRepeated() => $pb.PbList<FunnelStep>();
   @$core.pragma('dart2js:noInline')
   static FunnelStep getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunnelStep>(create);
@@ -3651,14 +3231,11 @@ class FunnelStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// If true, this step must directly follow the previous step. If false,
   /// there can be events between the previous step and this step. If
@@ -3666,34 +3243,28 @@ class FunnelStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool get isDirectlyFollowedBy => $_getBF(1);
   @$pb.TagNumber(2)
-  set isDirectlyFollowedBy($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set isDirectlyFollowedBy($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasIsDirectlyFollowedBy() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIsDirectlyFollowedBy() => clearField(2);
+  void clearIsDirectlyFollowedBy() => $_clearField(2);
 
-  ///  If specified, this step must complete within this duration of the
-  ///  completion of the prior step. `withinDurationFromPriorStep` is inclusive
-  ///  of the endpoint at the microsecond granularity. For example a duration of
-  ///  5 seconds can be completed at 4.9 or 5.0 seconds, but not 5 seconds and 1
-  ///  microsecond.
+  /// If specified, this step must complete within this duration of the
+  /// completion of the prior step. `withinDurationFromPriorStep` is inclusive
+  /// of the endpoint at the microsecond granularity. For example a duration of
+  /// 5 seconds can be completed at 4.9 or 5.0 seconds, but not 5 seconds and 1
+  /// microsecond.
   ///
-  ///  `withinDurationFromPriorStep` is optional, and if unspecified, steps may
-  ///  be separated by any time duration.
+  /// `withinDurationFromPriorStep` is optional, and if unspecified, steps may
+  /// be separated by any time duration.
   @$pb.TagNumber(3)
   $0.Duration get withinDurationFromPriorStep => $_getN(2);
   @$pb.TagNumber(3)
-  set withinDurationFromPriorStep($0.Duration v) {
-    setField(3, v);
-  }
-
+  set withinDurationFromPriorStep($0.Duration value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasWithinDurationFromPriorStep() => $_has(2);
   @$pb.TagNumber(3)
-  void clearWithinDurationFromPriorStep() => clearField(3);
+  void clearWithinDurationFromPriorStep() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Duration ensureWithinDurationFromPriorStep() => $_ensure(2);
 
@@ -3702,14 +3273,11 @@ class FunnelStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   FunnelFilterExpression get filterExpression => $_getN(3);
   @$pb.TagNumber(4)
-  set filterExpression(FunnelFilterExpression v) {
-    setField(4, v);
-  }
-
+  set filterExpression(FunnelFilterExpression value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasFilterExpression() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFilterExpression() => clearField(4);
+  void clearFilterExpression() => $_clearField(4);
   @$pb.TagNumber(4)
   FunnelFilterExpression ensureFilterExpression() => $_ensure(3);
 }
@@ -3723,64 +3291,52 @@ class FunnelSubReport extends $pb.GeneratedMessage {
     $core.Iterable<Row>? rows,
     FunnelResponseMetadata? metadata,
   }) {
-    final $result = create();
-    if (dimensionHeaders != null) {
-      $result.dimensionHeaders.addAll(dimensionHeaders);
-    }
-    if (metricHeaders != null) {
-      $result.metricHeaders.addAll(metricHeaders);
-    }
-    if (rows != null) {
-      $result.rows.addAll(rows);
-    }
-    if (metadata != null) {
-      $result.metadata = metadata;
-    }
-    return $result;
+    final result = create();
+    if (dimensionHeaders != null)
+      result.dimensionHeaders.addAll(dimensionHeaders);
+    if (metricHeaders != null) result.metricHeaders.addAll(metricHeaders);
+    if (rows != null) result.rows.addAll(rows);
+    if (metadata != null) result.metadata = metadata;
+    return result;
   }
-  FunnelSubReport._() : super();
-  factory FunnelSubReport.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelSubReport.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FunnelSubReport._();
+
+  factory FunnelSubReport.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelSubReport.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FunnelSubReport',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<DimensionHeader>(
-        1, _omitFieldNames ? '' : 'dimensionHeaders', $pb.PbFieldType.PM,
+    ..pPM<DimensionHeader>(1, _omitFieldNames ? '' : 'dimensionHeaders',
         subBuilder: DimensionHeader.create)
-    ..pc<MetricHeader>(
-        2, _omitFieldNames ? '' : 'metricHeaders', $pb.PbFieldType.PM,
+    ..pPM<MetricHeader>(2, _omitFieldNames ? '' : 'metricHeaders',
         subBuilder: MetricHeader.create)
-    ..pc<Row>(3, _omitFieldNames ? '' : 'rows', $pb.PbFieldType.PM,
-        subBuilder: Row.create)
+    ..pPM<Row>(3, _omitFieldNames ? '' : 'rows', subBuilder: Row.create)
     ..aOM<FunnelResponseMetadata>(4, _omitFieldNames ? '' : 'metadata',
         subBuilder: FunnelResponseMetadata.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelSubReport clone() => FunnelSubReport()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelSubReport clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelSubReport copyWith(void Function(FunnelSubReport) updates) =>
       super.copyWith((message) => updates(message as FunnelSubReport))
           as FunnelSubReport;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelSubReport create() => FunnelSubReport._();
+  @$core.override
   FunnelSubReport createEmptyInstance() => create();
-  static $pb.PbList<FunnelSubReport> createRepeated() =>
-      $pb.PbList<FunnelSubReport>();
   @$core.pragma('dart2js:noInline')
   static FunnelSubReport getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunnelSubReport>(create);
@@ -3790,30 +3346,27 @@ class FunnelSubReport extends $pb.GeneratedMessage {
   /// dimension in sub report responses. Additional dimensions like breakdowns,
   /// dates, and next actions may be present in the response if requested.
   @$pb.TagNumber(1)
-  $core.List<DimensionHeader> get dimensionHeaders => $_getList(0);
+  $pb.PbList<DimensionHeader> get dimensionHeaders => $_getList(0);
 
   /// Describes metric columns. Funnel reports always include active users in sub
   /// report responses. The funnel table includes additional metrics like
   /// completion rate, abandonments, and abandonments rate.
   @$pb.TagNumber(2)
-  $core.List<MetricHeader> get metricHeaders => $_getList(1);
+  $pb.PbList<MetricHeader> get metricHeaders => $_getList(1);
 
   /// Rows of dimension value combinations and metric values in the report.
   @$pb.TagNumber(3)
-  $core.List<Row> get rows => $_getList(2);
+  $pb.PbList<Row> get rows => $_getList(2);
 
   /// Metadata for the funnel report.
   @$pb.TagNumber(4)
   FunnelResponseMetadata get metadata => $_getN(3);
   @$pb.TagNumber(4)
-  set metadata(FunnelResponseMetadata v) {
-    setField(4, v);
-  }
-
+  set metadata(FunnelResponseMetadata value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasMetadata() => $_has(3);
   @$pb.TagNumber(4)
-  void clearMetadata() => clearField(4);
+  void clearMetadata() => $_clearField(4);
   @$pb.TagNumber(4)
   FunnelResponseMetadata ensureMetadata() => $_ensure(3);
 }
@@ -3826,22 +3379,21 @@ class UserSegment extends $pb.GeneratedMessage {
     UserSegmentCriteria? userInclusionCriteria,
     UserSegmentExclusion? exclusion,
   }) {
-    final $result = create();
-    if (userInclusionCriteria != null) {
-      $result.userInclusionCriteria = userInclusionCriteria;
-    }
-    if (exclusion != null) {
-      $result.exclusion = exclusion;
-    }
-    return $result;
+    final result = create();
+    if (userInclusionCriteria != null)
+      result.userInclusionCriteria = userInclusionCriteria;
+    if (exclusion != null) result.exclusion = exclusion;
+    return result;
   }
-  UserSegment._() : super();
-  factory UserSegment.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UserSegment.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UserSegment._();
+
+  factory UserSegment.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserSegment.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UserSegment',
@@ -3855,23 +3407,20 @@ class UserSegment extends $pb.GeneratedMessage {
         subBuilder: UserSegmentExclusion.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UserSegment clone() => UserSegment()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserSegment clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UserSegment copyWith(void Function(UserSegment) updates) =>
       super.copyWith((message) => updates(message as UserSegment))
           as UserSegment;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UserSegment create() => UserSegment._();
+  @$core.override
   UserSegment createEmptyInstance() => create();
-  static $pb.PbList<UserSegment> createRepeated() => $pb.PbList<UserSegment>();
   @$core.pragma('dart2js:noInline')
   static UserSegment getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UserSegment>(create);
@@ -3881,14 +3430,11 @@ class UserSegment extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   UserSegmentCriteria get userInclusionCriteria => $_getN(0);
   @$pb.TagNumber(1)
-  set userInclusionCriteria(UserSegmentCriteria v) {
-    setField(1, v);
-  }
-
+  set userInclusionCriteria(UserSegmentCriteria value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUserInclusionCriteria() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUserInclusionCriteria() => clearField(1);
+  void clearUserInclusionCriteria() => $_clearField(1);
   @$pb.TagNumber(1)
   UserSegmentCriteria ensureUserInclusionCriteria() => $_ensure(0);
 
@@ -3896,14 +3442,11 @@ class UserSegment extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   UserSegmentExclusion get exclusion => $_getN(1);
   @$pb.TagNumber(2)
-  set exclusion(UserSegmentExclusion v) {
-    setField(2, v);
-  }
-
+  set exclusion(UserSegmentExclusion value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasExclusion() => $_has(1);
   @$pb.TagNumber(2)
-  void clearExclusion() => clearField(2);
+  void clearExclusion() => $_clearField(2);
   @$pb.TagNumber(2)
   UserSegmentExclusion ensureExclusion() => $_ensure(1);
 }
@@ -3915,54 +3458,50 @@ class UserSegmentCriteria extends $pb.GeneratedMessage {
     $core.Iterable<UserSegmentConditionGroup>? andConditionGroups,
     $core.Iterable<UserSegmentSequenceGroup>? andSequenceGroups,
   }) {
-    final $result = create();
-    if (andConditionGroups != null) {
-      $result.andConditionGroups.addAll(andConditionGroups);
-    }
-    if (andSequenceGroups != null) {
-      $result.andSequenceGroups.addAll(andSequenceGroups);
-    }
-    return $result;
+    final result = create();
+    if (andConditionGroups != null)
+      result.andConditionGroups.addAll(andConditionGroups);
+    if (andSequenceGroups != null)
+      result.andSequenceGroups.addAll(andSequenceGroups);
+    return result;
   }
-  UserSegmentCriteria._() : super();
-  factory UserSegmentCriteria.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UserSegmentCriteria.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UserSegmentCriteria._();
+
+  factory UserSegmentCriteria.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserSegmentCriteria.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UserSegmentCriteria',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<UserSegmentConditionGroup>(
-        1, _omitFieldNames ? '' : 'andConditionGroups', $pb.PbFieldType.PM,
+    ..pPM<UserSegmentConditionGroup>(
+        1, _omitFieldNames ? '' : 'andConditionGroups',
         subBuilder: UserSegmentConditionGroup.create)
-    ..pc<UserSegmentSequenceGroup>(
-        2, _omitFieldNames ? '' : 'andSequenceGroups', $pb.PbFieldType.PM,
+    ..pPM<UserSegmentSequenceGroup>(
+        2, _omitFieldNames ? '' : 'andSequenceGroups',
         subBuilder: UserSegmentSequenceGroup.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UserSegmentCriteria clone() => UserSegmentCriteria()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserSegmentCriteria clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UserSegmentCriteria copyWith(void Function(UserSegmentCriteria) updates) =>
       super.copyWith((message) => updates(message as UserSegmentCriteria))
           as UserSegmentCriteria;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UserSegmentCriteria create() => UserSegmentCriteria._();
+  @$core.override
   UserSegmentCriteria createEmptyInstance() => create();
-  static $pb.PbList<UserSegmentCriteria> createRepeated() =>
-      $pb.PbList<UserSegmentCriteria>();
   @$core.pragma('dart2js:noInline')
   static UserSegmentCriteria getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UserSegmentCriteria>(create);
@@ -3972,13 +3511,13 @@ class UserSegmentCriteria extends $pb.GeneratedMessage {
   /// `andConditionGroups` and each of the `andSequenceGroups`.
   /// `andConditionGroups` may be empty if `andSequenceGroups` are specified.
   @$pb.TagNumber(1)
-  $core.List<UserSegmentConditionGroup> get andConditionGroups => $_getList(0);
+  $pb.PbList<UserSegmentConditionGroup> get andConditionGroups => $_getList(0);
 
   /// A user matches this criteria if the user matches each of these
   /// `andSequenceGroups` and each of the `andConditionGroups`.
   /// `andSequenceGroups` may be empty if `andConditionGroups` are specified.
   @$pb.TagNumber(2)
-  $core.List<UserSegmentSequenceGroup> get andSequenceGroups => $_getList(1);
+  $pb.PbList<UserSegmentSequenceGroup> get andSequenceGroups => $_getList(1);
 }
 
 /// Conditions tell Analytics what data to include in or exclude from the
@@ -3988,87 +3527,75 @@ class UserSegmentConditionGroup extends $pb.GeneratedMessage {
     UserCriteriaScoping? conditionScoping,
     SegmentFilterExpression? segmentFilterExpression,
   }) {
-    final $result = create();
-    if (conditionScoping != null) {
-      $result.conditionScoping = conditionScoping;
-    }
-    if (segmentFilterExpression != null) {
-      $result.segmentFilterExpression = segmentFilterExpression;
-    }
-    return $result;
+    final result = create();
+    if (conditionScoping != null) result.conditionScoping = conditionScoping;
+    if (segmentFilterExpression != null)
+      result.segmentFilterExpression = segmentFilterExpression;
+    return result;
   }
-  UserSegmentConditionGroup._() : super();
-  factory UserSegmentConditionGroup.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UserSegmentConditionGroup.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UserSegmentConditionGroup._();
+
+  factory UserSegmentConditionGroup.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserSegmentConditionGroup.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UserSegmentConditionGroup',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..e<UserCriteriaScoping>(
-        1, _omitFieldNames ? '' : 'conditionScoping', $pb.PbFieldType.OE,
-        defaultOrMaker: UserCriteriaScoping.USER_CRITERIA_SCOPING_UNSPECIFIED,
-        valueOf: UserCriteriaScoping.valueOf,
+    ..aE<UserCriteriaScoping>(1, _omitFieldNames ? '' : 'conditionScoping',
         enumValues: UserCriteriaScoping.values)
     ..aOM<SegmentFilterExpression>(
         2, _omitFieldNames ? '' : 'segmentFilterExpression',
         subBuilder: SegmentFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UserSegmentConditionGroup clone() =>
-      UserSegmentConditionGroup()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserSegmentConditionGroup clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UserSegmentConditionGroup copyWith(
           void Function(UserSegmentConditionGroup) updates) =>
       super.copyWith((message) => updates(message as UserSegmentConditionGroup))
           as UserSegmentConditionGroup;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UserSegmentConditionGroup create() => UserSegmentConditionGroup._();
+  @$core.override
   UserSegmentConditionGroup createEmptyInstance() => create();
-  static $pb.PbList<UserSegmentConditionGroup> createRepeated() =>
-      $pb.PbList<UserSegmentConditionGroup>();
   @$core.pragma('dart2js:noInline')
   static UserSegmentConditionGroup getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UserSegmentConditionGroup>(create);
   static UserSegmentConditionGroup? _defaultInstance;
 
-  ///  Data is included or excluded from the segment based on if it matches
-  ///  the condition group. This scoping defines how many events the
-  ///  `segmentFilterExpression` is evaluated on before the condition group
-  ///  is determined to be matched or not. For example if `conditionScoping =
-  ///  USER_CRITERIA_WITHIN_SAME_SESSION`, the expression is evaluated on all
-  ///  events in a session, and then, the condition group is determined to be
-  ///  matched or not for this user. For example if `conditionScoping =
-  ///  USER_CRITERIA_WITHIN_SAME_EVENT`, the expression is evaluated on a single
-  ///  event, and then, the condition group is determined to be matched or not for
-  ///  this user.
+  /// Data is included or excluded from the segment based on if it matches
+  /// the condition group. This scoping defines how many events the
+  /// `segmentFilterExpression` is evaluated on before the condition group
+  /// is determined to be matched or not. For example if `conditionScoping =
+  /// USER_CRITERIA_WITHIN_SAME_SESSION`, the expression is evaluated on all
+  /// events in a session, and then, the condition group is determined to be
+  /// matched or not for this user. For example if `conditionScoping =
+  /// USER_CRITERIA_WITHIN_SAME_EVENT`, the expression is evaluated on a single
+  /// event, and then, the condition group is determined to be matched or not for
+  /// this user.
   ///
-  ///  Optional. If unspecified, `conditionScoping = ACROSS_ALL_SESSIONS` is
-  ///  used.
+  /// Optional. If unspecified, `conditionScoping = ACROSS_ALL_SESSIONS` is
+  /// used.
   @$pb.TagNumber(1)
   UserCriteriaScoping get conditionScoping => $_getN(0);
   @$pb.TagNumber(1)
-  set conditionScoping(UserCriteriaScoping v) {
-    setField(1, v);
-  }
-
+  set conditionScoping(UserCriteriaScoping value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasConditionScoping() => $_has(0);
   @$pb.TagNumber(1)
-  void clearConditionScoping() => clearField(1);
+  void clearConditionScoping() => $_clearField(1);
 
   /// Data is included or excluded from the segment based on if it matches
   /// this expression. Expressions express criteria on dimension, metrics,
@@ -4076,14 +3603,12 @@ class UserSegmentConditionGroup extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SegmentFilterExpression get segmentFilterExpression => $_getN(1);
   @$pb.TagNumber(2)
-  set segmentFilterExpression(SegmentFilterExpression v) {
-    setField(2, v);
-  }
-
+  set segmentFilterExpression(SegmentFilterExpression value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSegmentFilterExpression() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSegmentFilterExpression() => clearField(2);
+  void clearSegmentFilterExpression() => $_clearField(2);
   @$pb.TagNumber(2)
   SegmentFilterExpression ensureSegmentFilterExpression() => $_ensure(1);
 }
@@ -4096,107 +3621,90 @@ class UserSegmentSequenceGroup extends $pb.GeneratedMessage {
     $0.Duration? sequenceMaximumDuration,
     $core.Iterable<UserSequenceStep>? userSequenceSteps,
   }) {
-    final $result = create();
-    if (sequenceScoping != null) {
-      $result.sequenceScoping = sequenceScoping;
-    }
-    if (sequenceMaximumDuration != null) {
-      $result.sequenceMaximumDuration = sequenceMaximumDuration;
-    }
-    if (userSequenceSteps != null) {
-      $result.userSequenceSteps.addAll(userSequenceSteps);
-    }
-    return $result;
+    final result = create();
+    if (sequenceScoping != null) result.sequenceScoping = sequenceScoping;
+    if (sequenceMaximumDuration != null)
+      result.sequenceMaximumDuration = sequenceMaximumDuration;
+    if (userSequenceSteps != null)
+      result.userSequenceSteps.addAll(userSequenceSteps);
+    return result;
   }
-  UserSegmentSequenceGroup._() : super();
-  factory UserSegmentSequenceGroup.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UserSegmentSequenceGroup.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UserSegmentSequenceGroup._();
+
+  factory UserSegmentSequenceGroup.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserSegmentSequenceGroup.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UserSegmentSequenceGroup',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..e<UserCriteriaScoping>(
-        1, _omitFieldNames ? '' : 'sequenceScoping', $pb.PbFieldType.OE,
-        defaultOrMaker: UserCriteriaScoping.USER_CRITERIA_SCOPING_UNSPECIFIED,
-        valueOf: UserCriteriaScoping.valueOf,
+    ..aE<UserCriteriaScoping>(1, _omitFieldNames ? '' : 'sequenceScoping',
         enumValues: UserCriteriaScoping.values)
     ..aOM<$0.Duration>(2, _omitFieldNames ? '' : 'sequenceMaximumDuration',
         subBuilder: $0.Duration.create)
-    ..pc<UserSequenceStep>(
-        3, _omitFieldNames ? '' : 'userSequenceSteps', $pb.PbFieldType.PM,
+    ..pPM<UserSequenceStep>(3, _omitFieldNames ? '' : 'userSequenceSteps',
         subBuilder: UserSequenceStep.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UserSegmentSequenceGroup clone() =>
-      UserSegmentSequenceGroup()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserSegmentSequenceGroup clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UserSegmentSequenceGroup copyWith(
           void Function(UserSegmentSequenceGroup) updates) =>
       super.copyWith((message) => updates(message as UserSegmentSequenceGroup))
           as UserSegmentSequenceGroup;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UserSegmentSequenceGroup create() => UserSegmentSequenceGroup._();
+  @$core.override
   UserSegmentSequenceGroup createEmptyInstance() => create();
-  static $pb.PbList<UserSegmentSequenceGroup> createRepeated() =>
-      $pb.PbList<UserSegmentSequenceGroup>();
   @$core.pragma('dart2js:noInline')
   static UserSegmentSequenceGroup getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UserSegmentSequenceGroup>(create);
   static UserSegmentSequenceGroup? _defaultInstance;
 
-  ///  All sequence steps must be satisfied in the scoping for the user to
-  ///  match the sequence. For example if `sequenceScoping =
-  ///  USER_CRITERIA_WITHIN_SAME_SESSION`, all sequence steps must complete within
-  ///  one session for the user to match the sequence. `sequenceScoping =
-  ///  USER_CRITERIA_WITHIN_SAME_EVENT` is not supported.
+  /// All sequence steps must be satisfied in the scoping for the user to
+  /// match the sequence. For example if `sequenceScoping =
+  /// USER_CRITERIA_WITHIN_SAME_SESSION`, all sequence steps must complete within
+  /// one session for the user to match the sequence. `sequenceScoping =
+  /// USER_CRITERIA_WITHIN_SAME_EVENT` is not supported.
   ///
-  ///  Optional. If unspecified, `conditionScoping = ACROSS_ALL_SESSIONS` is
-  ///  used.
+  /// Optional. If unspecified, `conditionScoping = ACROSS_ALL_SESSIONS` is
+  /// used.
   @$pb.TagNumber(1)
   UserCriteriaScoping get sequenceScoping => $_getN(0);
   @$pb.TagNumber(1)
-  set sequenceScoping(UserCriteriaScoping v) {
-    setField(1, v);
-  }
-
+  set sequenceScoping(UserCriteriaScoping value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSequenceScoping() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSequenceScoping() => clearField(1);
+  void clearSequenceScoping() => $_clearField(1);
 
-  ///  Defines the time period in which the whole sequence must occur; for
-  ///  example, 30 Minutes. `sequenceMaximumDuration` is inclusive
-  ///  of the endpoint at the microsecond granularity. For example a sequence
-  ///  with a maximum duration of 5 seconds can be completed at 4.9 or 5.0
-  ///  seconds, but not 5 seconds and 1 microsecond.
+  /// Defines the time period in which the whole sequence must occur; for
+  /// example, 30 Minutes. `sequenceMaximumDuration` is inclusive
+  /// of the endpoint at the microsecond granularity. For example a sequence
+  /// with a maximum duration of 5 seconds can be completed at 4.9 or 5.0
+  /// seconds, but not 5 seconds and 1 microsecond.
   ///
-  ///  `sequenceMaximumDuration` is optional, and if unspecified, sequences can
-  ///  be completed in any time duration.
+  /// `sequenceMaximumDuration` is optional, and if unspecified, sequences can
+  /// be completed in any time duration.
   @$pb.TagNumber(2)
   $0.Duration get sequenceMaximumDuration => $_getN(1);
   @$pb.TagNumber(2)
-  set sequenceMaximumDuration($0.Duration v) {
-    setField(2, v);
-  }
-
+  set sequenceMaximumDuration($0.Duration value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSequenceMaximumDuration() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSequenceMaximumDuration() => clearField(2);
+  void clearSequenceMaximumDuration() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Duration ensureSequenceMaximumDuration() => $_ensure(1);
 
@@ -4204,7 +3712,7 @@ class UserSegmentSequenceGroup extends $pb.GeneratedMessage {
   /// each step in order for the user to match the
   /// `UserSegmentSequenceGroup`.
   @$pb.TagNumber(3)
-  $core.List<UserSequenceStep> get userSequenceSteps => $_getList(2);
+  $pb.PbList<UserSequenceStep> get userSequenceSteps => $_getList(2);
 }
 
 /// A condition that must occur in the specified step order for this user
@@ -4215,25 +3723,23 @@ class UserSequenceStep extends $pb.GeneratedMessage {
     UserCriteriaScoping? stepScoping,
     SegmentFilterExpression? segmentFilterExpression,
   }) {
-    final $result = create();
-    if (isDirectlyFollowedBy != null) {
-      $result.isDirectlyFollowedBy = isDirectlyFollowedBy;
-    }
-    if (stepScoping != null) {
-      $result.stepScoping = stepScoping;
-    }
-    if (segmentFilterExpression != null) {
-      $result.segmentFilterExpression = segmentFilterExpression;
-    }
-    return $result;
+    final result = create();
+    if (isDirectlyFollowedBy != null)
+      result.isDirectlyFollowedBy = isDirectlyFollowedBy;
+    if (stepScoping != null) result.stepScoping = stepScoping;
+    if (segmentFilterExpression != null)
+      result.segmentFilterExpression = segmentFilterExpression;
+    return result;
   }
-  UserSequenceStep._() : super();
-  factory UserSequenceStep.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UserSequenceStep.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UserSequenceStep._();
+
+  factory UserSequenceStep.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserSequenceStep.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UserSequenceStep',
@@ -4241,34 +3747,27 @@ class UserSequenceStep extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'isDirectlyFollowedBy')
-    ..e<UserCriteriaScoping>(
-        2, _omitFieldNames ? '' : 'stepScoping', $pb.PbFieldType.OE,
-        defaultOrMaker: UserCriteriaScoping.USER_CRITERIA_SCOPING_UNSPECIFIED,
-        valueOf: UserCriteriaScoping.valueOf,
+    ..aE<UserCriteriaScoping>(2, _omitFieldNames ? '' : 'stepScoping',
         enumValues: UserCriteriaScoping.values)
     ..aOM<SegmentFilterExpression>(
         3, _omitFieldNames ? '' : 'segmentFilterExpression',
         subBuilder: SegmentFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UserSequenceStep clone() => UserSequenceStep()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserSequenceStep clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UserSequenceStep copyWith(void Function(UserSequenceStep) updates) =>
       super.copyWith((message) => updates(message as UserSequenceStep))
           as UserSequenceStep;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UserSequenceStep create() => UserSequenceStep._();
+  @$core.override
   UserSequenceStep createEmptyInstance() => create();
-  static $pb.PbList<UserSequenceStep> createRepeated() =>
-      $pb.PbList<UserSequenceStep>();
   @$core.pragma('dart2js:noInline')
   static UserSequenceStep getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UserSequenceStep>(create);
@@ -4282,35 +3781,29 @@ class UserSequenceStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get isDirectlyFollowedBy => $_getBF(0);
   @$pb.TagNumber(1)
-  set isDirectlyFollowedBy($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set isDirectlyFollowedBy($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasIsDirectlyFollowedBy() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIsDirectlyFollowedBy() => clearField(1);
+  void clearIsDirectlyFollowedBy() => $_clearField(1);
 
-  ///  This sequence step must be satisfied in the scoping for the user to
-  ///  match the sequence. For example if `sequenceScoping =
-  ///  WITHIN_SAME_SESSION`, this sequence steps must complete within one
-  ///  session for the user to match the sequence. `stepScoping =
-  ///  ACROSS_ALL_SESSIONS` is only allowed if the `sequenceScoping =
-  ///  ACROSS_ALL_SESSIONS`.
+  /// This sequence step must be satisfied in the scoping for the user to
+  /// match the sequence. For example if `sequenceScoping =
+  /// WITHIN_SAME_SESSION`, this sequence steps must complete within one
+  /// session for the user to match the sequence. `stepScoping =
+  /// ACROSS_ALL_SESSIONS` is only allowed if the `sequenceScoping =
+  /// ACROSS_ALL_SESSIONS`.
   ///
-  ///  Optional. If unspecified, `stepScoping` uses the same
-  ///  `UserCriteriaScoping` as the `sequenceScoping`.
+  /// Optional. If unspecified, `stepScoping` uses the same
+  /// `UserCriteriaScoping` as the `sequenceScoping`.
   @$pb.TagNumber(2)
   UserCriteriaScoping get stepScoping => $_getN(1);
   @$pb.TagNumber(2)
-  set stepScoping(UserCriteriaScoping v) {
-    setField(2, v);
-  }
-
+  set stepScoping(UserCriteriaScoping value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasStepScoping() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStepScoping() => clearField(2);
+  void clearStepScoping() => $_clearField(2);
 
   /// A user matches this sequence step if their events match this
   /// expression. Expressions express criteria on dimension, metrics,
@@ -4318,14 +3811,12 @@ class UserSequenceStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   SegmentFilterExpression get segmentFilterExpression => $_getN(2);
   @$pb.TagNumber(3)
-  set segmentFilterExpression(SegmentFilterExpression v) {
-    setField(3, v);
-  }
-
+  set segmentFilterExpression(SegmentFilterExpression value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasSegmentFilterExpression() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSegmentFilterExpression() => clearField(3);
+  void clearSegmentFilterExpression() => $_clearField(3);
   @$pb.TagNumber(3)
   SegmentFilterExpression ensureSegmentFilterExpression() => $_ensure(2);
 }
@@ -4336,93 +3827,80 @@ class UserSegmentExclusion extends $pb.GeneratedMessage {
     UserExclusionDuration? userExclusionDuration,
     UserSegmentCriteria? userExclusionCriteria,
   }) {
-    final $result = create();
-    if (userExclusionDuration != null) {
-      $result.userExclusionDuration = userExclusionDuration;
-    }
-    if (userExclusionCriteria != null) {
-      $result.userExclusionCriteria = userExclusionCriteria;
-    }
-    return $result;
+    final result = create();
+    if (userExclusionDuration != null)
+      result.userExclusionDuration = userExclusionDuration;
+    if (userExclusionCriteria != null)
+      result.userExclusionCriteria = userExclusionCriteria;
+    return result;
   }
-  UserSegmentExclusion._() : super();
-  factory UserSegmentExclusion.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UserSegmentExclusion.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UserSegmentExclusion._();
+
+  factory UserSegmentExclusion.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserSegmentExclusion.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UserSegmentExclusion',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..e<UserExclusionDuration>(
-        1, _omitFieldNames ? '' : 'userExclusionDuration', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            UserExclusionDuration.USER_EXCLUSION_DURATION_UNSPECIFIED,
-        valueOf: UserExclusionDuration.valueOf,
+    ..aE<UserExclusionDuration>(
+        1, _omitFieldNames ? '' : 'userExclusionDuration',
         enumValues: UserExclusionDuration.values)
     ..aOM<UserSegmentCriteria>(
         2, _omitFieldNames ? '' : 'userExclusionCriteria',
         subBuilder: UserSegmentCriteria.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UserSegmentExclusion clone() =>
-      UserSegmentExclusion()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserSegmentExclusion clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UserSegmentExclusion copyWith(void Function(UserSegmentExclusion) updates) =>
       super.copyWith((message) => updates(message as UserSegmentExclusion))
           as UserSegmentExclusion;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UserSegmentExclusion create() => UserSegmentExclusion._();
+  @$core.override
   UserSegmentExclusion createEmptyInstance() => create();
-  static $pb.PbList<UserSegmentExclusion> createRepeated() =>
-      $pb.PbList<UserSegmentExclusion>();
   @$core.pragma('dart2js:noInline')
   static UserSegmentExclusion getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UserSegmentExclusion>(create);
   static UserSegmentExclusion? _defaultInstance;
 
-  ///  Specifies how long an exclusion will last if a user matches the
-  ///  `userExclusionCriteria`.
+  /// Specifies how long an exclusion will last if a user matches the
+  /// `userExclusionCriteria`.
   ///
-  ///  Optional. If unspecified, `userExclusionDuration` of
-  ///  `USER_EXCLUSION_TEMPORARY` is used.
+  /// Optional. If unspecified, `userExclusionDuration` of
+  /// `USER_EXCLUSION_TEMPORARY` is used.
   @$pb.TagNumber(1)
   UserExclusionDuration get userExclusionDuration => $_getN(0);
   @$pb.TagNumber(1)
-  set userExclusionDuration(UserExclusionDuration v) {
-    setField(1, v);
-  }
-
+  set userExclusionDuration(UserExclusionDuration value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUserExclusionDuration() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUserExclusionDuration() => clearField(1);
+  void clearUserExclusionDuration() => $_clearField(1);
 
   /// If a user meets this condition, the user is excluded from membership in
   /// the segment for the `userExclusionDuration`.
   @$pb.TagNumber(2)
   UserSegmentCriteria get userExclusionCriteria => $_getN(1);
   @$pb.TagNumber(2)
-  set userExclusionCriteria(UserSegmentCriteria v) {
-    setField(2, v);
-  }
-
+  set userExclusionCriteria(UserSegmentCriteria value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUserExclusionCriteria() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUserExclusionCriteria() => clearField(2);
+  void clearUserExclusionCriteria() => $_clearField(2);
   @$pb.TagNumber(2)
   UserSegmentCriteria ensureUserExclusionCriteria() => $_ensure(1);
 }
@@ -4435,22 +3913,21 @@ class SessionSegment extends $pb.GeneratedMessage {
     SessionSegmentCriteria? sessionInclusionCriteria,
     SessionSegmentExclusion? exclusion,
   }) {
-    final $result = create();
-    if (sessionInclusionCriteria != null) {
-      $result.sessionInclusionCriteria = sessionInclusionCriteria;
-    }
-    if (exclusion != null) {
-      $result.exclusion = exclusion;
-    }
-    return $result;
+    final result = create();
+    if (sessionInclusionCriteria != null)
+      result.sessionInclusionCriteria = sessionInclusionCriteria;
+    if (exclusion != null) result.exclusion = exclusion;
+    return result;
   }
-  SessionSegment._() : super();
-  factory SessionSegment.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SessionSegment.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SessionSegment._();
+
+  factory SessionSegment.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SessionSegment.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SessionSegment',
@@ -4464,24 +3941,20 @@ class SessionSegment extends $pb.GeneratedMessage {
         subBuilder: SessionSegmentExclusion.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SessionSegment clone() => SessionSegment()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SessionSegment clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SessionSegment copyWith(void Function(SessionSegment) updates) =>
       super.copyWith((message) => updates(message as SessionSegment))
           as SessionSegment;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SessionSegment create() => SessionSegment._();
+  @$core.override
   SessionSegment createEmptyInstance() => create();
-  static $pb.PbList<SessionSegment> createRepeated() =>
-      $pb.PbList<SessionSegment>();
   @$core.pragma('dart2js:noInline')
   static SessionSegment getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SessionSegment>(create);
@@ -4491,14 +3964,12 @@ class SessionSegment extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   SessionSegmentCriteria get sessionInclusionCriteria => $_getN(0);
   @$pb.TagNumber(1)
-  set sessionInclusionCriteria(SessionSegmentCriteria v) {
-    setField(1, v);
-  }
-
+  set sessionInclusionCriteria(SessionSegmentCriteria value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSessionInclusionCriteria() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSessionInclusionCriteria() => clearField(1);
+  void clearSessionInclusionCriteria() => $_clearField(1);
   @$pb.TagNumber(1)
   SessionSegmentCriteria ensureSessionInclusionCriteria() => $_ensure(0);
 
@@ -4506,14 +3977,11 @@ class SessionSegment extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SessionSegmentExclusion get exclusion => $_getN(1);
   @$pb.TagNumber(2)
-  set exclusion(SessionSegmentExclusion v) {
-    setField(2, v);
-  }
-
+  set exclusion(SessionSegmentExclusion value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasExclusion() => $_has(1);
   @$pb.TagNumber(2)
-  void clearExclusion() => clearField(2);
+  void clearExclusion() => $_clearField(2);
   @$pb.TagNumber(2)
   SessionSegmentExclusion ensureExclusion() => $_ensure(1);
 }
@@ -4524,50 +3992,46 @@ class SessionSegmentCriteria extends $pb.GeneratedMessage {
   factory SessionSegmentCriteria({
     $core.Iterable<SessionSegmentConditionGroup>? andConditionGroups,
   }) {
-    final $result = create();
-    if (andConditionGroups != null) {
-      $result.andConditionGroups.addAll(andConditionGroups);
-    }
-    return $result;
+    final result = create();
+    if (andConditionGroups != null)
+      result.andConditionGroups.addAll(andConditionGroups);
+    return result;
   }
-  SessionSegmentCriteria._() : super();
-  factory SessionSegmentCriteria.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SessionSegmentCriteria.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SessionSegmentCriteria._();
+
+  factory SessionSegmentCriteria.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SessionSegmentCriteria.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SessionSegmentCriteria',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<SessionSegmentConditionGroup>(
-        1, _omitFieldNames ? '' : 'andConditionGroups', $pb.PbFieldType.PM,
+    ..pPM<SessionSegmentConditionGroup>(
+        1, _omitFieldNames ? '' : 'andConditionGroups',
         subBuilder: SessionSegmentConditionGroup.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SessionSegmentCriteria clone() =>
-      SessionSegmentCriteria()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SessionSegmentCriteria clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SessionSegmentCriteria copyWith(
           void Function(SessionSegmentCriteria) updates) =>
       super.copyWith((message) => updates(message as SessionSegmentCriteria))
           as SessionSegmentCriteria;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SessionSegmentCriteria create() => SessionSegmentCriteria._();
+  @$core.override
   SessionSegmentCriteria createEmptyInstance() => create();
-  static $pb.PbList<SessionSegmentCriteria> createRepeated() =>
-      $pb.PbList<SessionSegmentCriteria>();
   @$core.pragma('dart2js:noInline')
   static SessionSegmentCriteria getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SessionSegmentCriteria>(create);
@@ -4576,7 +4040,7 @@ class SessionSegmentCriteria extends $pb.GeneratedMessage {
   /// A session matches this criteria if the session matches each of these
   /// `andConditionGroups`.
   @$pb.TagNumber(1)
-  $core.List<SessionSegmentConditionGroup> get andConditionGroups =>
+  $pb.PbList<SessionSegmentConditionGroup> get andConditionGroups =>
       $_getList(0);
 }
 
@@ -4587,90 +4051,77 @@ class SessionSegmentConditionGroup extends $pb.GeneratedMessage {
     SessionCriteriaScoping? conditionScoping,
     SegmentFilterExpression? segmentFilterExpression,
   }) {
-    final $result = create();
-    if (conditionScoping != null) {
-      $result.conditionScoping = conditionScoping;
-    }
-    if (segmentFilterExpression != null) {
-      $result.segmentFilterExpression = segmentFilterExpression;
-    }
-    return $result;
+    final result = create();
+    if (conditionScoping != null) result.conditionScoping = conditionScoping;
+    if (segmentFilterExpression != null)
+      result.segmentFilterExpression = segmentFilterExpression;
+    return result;
   }
-  SessionSegmentConditionGroup._() : super();
-  factory SessionSegmentConditionGroup.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SessionSegmentConditionGroup.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SessionSegmentConditionGroup._();
+
+  factory SessionSegmentConditionGroup.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SessionSegmentConditionGroup.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SessionSegmentConditionGroup',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..e<SessionCriteriaScoping>(
-        1, _omitFieldNames ? '' : 'conditionScoping', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            SessionCriteriaScoping.SESSION_CRITERIA_SCOPING_UNSPECIFIED,
-        valueOf: SessionCriteriaScoping.valueOf,
+    ..aE<SessionCriteriaScoping>(1, _omitFieldNames ? '' : 'conditionScoping',
         enumValues: SessionCriteriaScoping.values)
     ..aOM<SegmentFilterExpression>(
         2, _omitFieldNames ? '' : 'segmentFilterExpression',
         subBuilder: SegmentFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SessionSegmentConditionGroup clone() =>
-      SessionSegmentConditionGroup()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SessionSegmentConditionGroup clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SessionSegmentConditionGroup copyWith(
           void Function(SessionSegmentConditionGroup) updates) =>
       super.copyWith(
               (message) => updates(message as SessionSegmentConditionGroup))
           as SessionSegmentConditionGroup;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SessionSegmentConditionGroup create() =>
       SessionSegmentConditionGroup._();
+  @$core.override
   SessionSegmentConditionGroup createEmptyInstance() => create();
-  static $pb.PbList<SessionSegmentConditionGroup> createRepeated() =>
-      $pb.PbList<SessionSegmentConditionGroup>();
   @$core.pragma('dart2js:noInline')
   static SessionSegmentConditionGroup getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SessionSegmentConditionGroup>(create);
   static SessionSegmentConditionGroup? _defaultInstance;
 
-  ///  Data is included or excluded from the segment based on if it matches
-  ///  the condition group. This scoping defines how many events the
-  ///  `segmentFilterExpression` is evaluated on before the condition group
-  ///  is determined to be matched or not. For example if `conditionScoping =
-  ///  SESSION_CRITERIA_WITHIN_SAME_SESSION`, the expression is evaluated on all
-  ///  events in a session, and then, the condition group is determined to be
-  ///  matched or not for this session. For example if `conditionScoping =
-  ///  SESSION_CRITERIA_WITHIN_SAME_EVENT`, the expression is evaluated on a
-  ///  single event, and then, the condition group is determined to be matched or
-  ///  not for this session.
+  /// Data is included or excluded from the segment based on if it matches
+  /// the condition group. This scoping defines how many events the
+  /// `segmentFilterExpression` is evaluated on before the condition group
+  /// is determined to be matched or not. For example if `conditionScoping =
+  /// SESSION_CRITERIA_WITHIN_SAME_SESSION`, the expression is evaluated on all
+  /// events in a session, and then, the condition group is determined to be
+  /// matched or not for this session. For example if `conditionScoping =
+  /// SESSION_CRITERIA_WITHIN_SAME_EVENT`, the expression is evaluated on a
+  /// single event, and then, the condition group is determined to be matched or
+  /// not for this session.
   ///
-  ///  Optional. If unspecified, a `conditionScoping` of `WITHIN_SAME_SESSION`
-  ///  is used.
+  /// Optional. If unspecified, a `conditionScoping` of `WITHIN_SAME_SESSION`
+  /// is used.
   @$pb.TagNumber(1)
   SessionCriteriaScoping get conditionScoping => $_getN(0);
   @$pb.TagNumber(1)
-  set conditionScoping(SessionCriteriaScoping v) {
-    setField(1, v);
-  }
-
+  set conditionScoping(SessionCriteriaScoping value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasConditionScoping() => $_has(0);
   @$pb.TagNumber(1)
-  void clearConditionScoping() => clearField(1);
+  void clearConditionScoping() => $_clearField(1);
 
   /// Data is included or excluded from the segment based on if it matches
   /// this expression. Expressions express criteria on dimension, metrics,
@@ -4678,14 +4129,12 @@ class SessionSegmentConditionGroup extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SegmentFilterExpression get segmentFilterExpression => $_getN(1);
   @$pb.TagNumber(2)
-  set segmentFilterExpression(SegmentFilterExpression v) {
-    setField(2, v);
-  }
-
+  set segmentFilterExpression(SegmentFilterExpression value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSegmentFilterExpression() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSegmentFilterExpression() => clearField(2);
+  void clearSegmentFilterExpression() => $_clearField(2);
   @$pb.TagNumber(2)
   SegmentFilterExpression ensureSegmentFilterExpression() => $_ensure(1);
 }
@@ -4696,94 +4145,82 @@ class SessionSegmentExclusion extends $pb.GeneratedMessage {
     SessionExclusionDuration? sessionExclusionDuration,
     SessionSegmentCriteria? sessionExclusionCriteria,
   }) {
-    final $result = create();
-    if (sessionExclusionDuration != null) {
-      $result.sessionExclusionDuration = sessionExclusionDuration;
-    }
-    if (sessionExclusionCriteria != null) {
-      $result.sessionExclusionCriteria = sessionExclusionCriteria;
-    }
-    return $result;
+    final result = create();
+    if (sessionExclusionDuration != null)
+      result.sessionExclusionDuration = sessionExclusionDuration;
+    if (sessionExclusionCriteria != null)
+      result.sessionExclusionCriteria = sessionExclusionCriteria;
+    return result;
   }
-  SessionSegmentExclusion._() : super();
-  factory SessionSegmentExclusion.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SessionSegmentExclusion.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SessionSegmentExclusion._();
+
+  factory SessionSegmentExclusion.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SessionSegmentExclusion.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SessionSegmentExclusion',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..e<SessionExclusionDuration>(1,
-        _omitFieldNames ? '' : 'sessionExclusionDuration', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            SessionExclusionDuration.SESSION_EXCLUSION_DURATION_UNSPECIFIED,
-        valueOf: SessionExclusionDuration.valueOf,
+    ..aE<SessionExclusionDuration>(
+        1, _omitFieldNames ? '' : 'sessionExclusionDuration',
         enumValues: SessionExclusionDuration.values)
     ..aOM<SessionSegmentCriteria>(
         2, _omitFieldNames ? '' : 'sessionExclusionCriteria',
         subBuilder: SessionSegmentCriteria.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SessionSegmentExclusion clone() =>
-      SessionSegmentExclusion()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SessionSegmentExclusion clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SessionSegmentExclusion copyWith(
           void Function(SessionSegmentExclusion) updates) =>
       super.copyWith((message) => updates(message as SessionSegmentExclusion))
           as SessionSegmentExclusion;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SessionSegmentExclusion create() => SessionSegmentExclusion._();
+  @$core.override
   SessionSegmentExclusion createEmptyInstance() => create();
-  static $pb.PbList<SessionSegmentExclusion> createRepeated() =>
-      $pb.PbList<SessionSegmentExclusion>();
   @$core.pragma('dart2js:noInline')
   static SessionSegmentExclusion getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SessionSegmentExclusion>(create);
   static SessionSegmentExclusion? _defaultInstance;
 
-  ///  Specifies how long an exclusion will last if a session matches the
-  ///  `sessionExclusionCriteria`.
+  /// Specifies how long an exclusion will last if a session matches the
+  /// `sessionExclusionCriteria`.
   ///
-  ///  Optional. If unspecified, a `sessionExclusionDuration` of
-  ///  `SESSION_EXCLUSION_TEMPORARY` is used.
+  /// Optional. If unspecified, a `sessionExclusionDuration` of
+  /// `SESSION_EXCLUSION_TEMPORARY` is used.
   @$pb.TagNumber(1)
   SessionExclusionDuration get sessionExclusionDuration => $_getN(0);
   @$pb.TagNumber(1)
-  set sessionExclusionDuration(SessionExclusionDuration v) {
-    setField(1, v);
-  }
-
+  set sessionExclusionDuration(SessionExclusionDuration value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSessionExclusionDuration() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSessionExclusionDuration() => clearField(1);
+  void clearSessionExclusionDuration() => $_clearField(1);
 
   /// If a session meets this condition, the session is excluded from
   /// membership in the segment for the `sessionExclusionDuration`.
   @$pb.TagNumber(2)
   SessionSegmentCriteria get sessionExclusionCriteria => $_getN(1);
   @$pb.TagNumber(2)
-  set sessionExclusionCriteria(SessionSegmentCriteria v) {
-    setField(2, v);
-  }
-
+  set sessionExclusionCriteria(SessionSegmentCriteria value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSessionExclusionCriteria() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSessionExclusionCriteria() => clearField(2);
+  void clearSessionExclusionCriteria() => $_clearField(2);
   @$pb.TagNumber(2)
   SessionSegmentCriteria ensureSessionExclusionCriteria() => $_ensure(1);
 }
@@ -4796,22 +4233,21 @@ class EventSegment extends $pb.GeneratedMessage {
     EventSegmentCriteria? eventInclusionCriteria,
     EventSegmentExclusion? exclusion,
   }) {
-    final $result = create();
-    if (eventInclusionCriteria != null) {
-      $result.eventInclusionCriteria = eventInclusionCriteria;
-    }
-    if (exclusion != null) {
-      $result.exclusion = exclusion;
-    }
-    return $result;
+    final result = create();
+    if (eventInclusionCriteria != null)
+      result.eventInclusionCriteria = eventInclusionCriteria;
+    if (exclusion != null) result.exclusion = exclusion;
+    return result;
   }
-  EventSegment._() : super();
-  factory EventSegment.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EventSegment.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EventSegment._();
+
+  factory EventSegment.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EventSegment.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EventSegment',
@@ -4825,24 +4261,20 @@ class EventSegment extends $pb.GeneratedMessage {
         subBuilder: EventSegmentExclusion.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EventSegment clone() => EventSegment()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EventSegment clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EventSegment copyWith(void Function(EventSegment) updates) =>
       super.copyWith((message) => updates(message as EventSegment))
           as EventSegment;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EventSegment create() => EventSegment._();
+  @$core.override
   EventSegment createEmptyInstance() => create();
-  static $pb.PbList<EventSegment> createRepeated() =>
-      $pb.PbList<EventSegment>();
   @$core.pragma('dart2js:noInline')
   static EventSegment getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EventSegment>(create);
@@ -4852,14 +4284,12 @@ class EventSegment extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   EventSegmentCriteria get eventInclusionCriteria => $_getN(0);
   @$pb.TagNumber(1)
-  set eventInclusionCriteria(EventSegmentCriteria v) {
-    setField(1, v);
-  }
-
+  set eventInclusionCriteria(EventSegmentCriteria value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasEventInclusionCriteria() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEventInclusionCriteria() => clearField(1);
+  void clearEventInclusionCriteria() => $_clearField(1);
   @$pb.TagNumber(1)
   EventSegmentCriteria ensureEventInclusionCriteria() => $_ensure(0);
 
@@ -4867,14 +4297,11 @@ class EventSegment extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   EventSegmentExclusion get exclusion => $_getN(1);
   @$pb.TagNumber(2)
-  set exclusion(EventSegmentExclusion v) {
-    setField(2, v);
-  }
-
+  set exclusion(EventSegmentExclusion value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasExclusion() => $_has(1);
   @$pb.TagNumber(2)
-  void clearExclusion() => clearField(2);
+  void clearExclusion() => $_clearField(2);
   @$pb.TagNumber(2)
   EventSegmentExclusion ensureExclusion() => $_ensure(1);
 }
@@ -4885,49 +4312,45 @@ class EventSegmentCriteria extends $pb.GeneratedMessage {
   factory EventSegmentCriteria({
     $core.Iterable<EventSegmentConditionGroup>? andConditionGroups,
   }) {
-    final $result = create();
-    if (andConditionGroups != null) {
-      $result.andConditionGroups.addAll(andConditionGroups);
-    }
-    return $result;
+    final result = create();
+    if (andConditionGroups != null)
+      result.andConditionGroups.addAll(andConditionGroups);
+    return result;
   }
-  EventSegmentCriteria._() : super();
-  factory EventSegmentCriteria.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EventSegmentCriteria.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EventSegmentCriteria._();
+
+  factory EventSegmentCriteria.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EventSegmentCriteria.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EventSegmentCriteria',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<EventSegmentConditionGroup>(
-        1, _omitFieldNames ? '' : 'andConditionGroups', $pb.PbFieldType.PM,
+    ..pPM<EventSegmentConditionGroup>(
+        1, _omitFieldNames ? '' : 'andConditionGroups',
         subBuilder: EventSegmentConditionGroup.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EventSegmentCriteria clone() =>
-      EventSegmentCriteria()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EventSegmentCriteria clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EventSegmentCriteria copyWith(void Function(EventSegmentCriteria) updates) =>
       super.copyWith((message) => updates(message as EventSegmentCriteria))
           as EventSegmentCriteria;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EventSegmentCriteria create() => EventSegmentCriteria._();
+  @$core.override
   EventSegmentCriteria createEmptyInstance() => create();
-  static $pb.PbList<EventSegmentCriteria> createRepeated() =>
-      $pb.PbList<EventSegmentCriteria>();
   @$core.pragma('dart2js:noInline')
   static EventSegmentCriteria getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EventSegmentCriteria>(create);
@@ -4936,7 +4359,7 @@ class EventSegmentCriteria extends $pb.GeneratedMessage {
   /// An event matches this criteria if the event matches each of these
   /// `andConditionGroups`.
   @$pb.TagNumber(1)
-  $core.List<EventSegmentConditionGroup> get andConditionGroups => $_getList(0);
+  $pb.PbList<EventSegmentConditionGroup> get andConditionGroups => $_getList(0);
 }
 
 /// Conditions tell Analytics what data to include in or exclude from the
@@ -4946,79 +4369,67 @@ class EventSegmentConditionGroup extends $pb.GeneratedMessage {
     EventCriteriaScoping? conditionScoping,
     SegmentFilterExpression? segmentFilterExpression,
   }) {
-    final $result = create();
-    if (conditionScoping != null) {
-      $result.conditionScoping = conditionScoping;
-    }
-    if (segmentFilterExpression != null) {
-      $result.segmentFilterExpression = segmentFilterExpression;
-    }
-    return $result;
+    final result = create();
+    if (conditionScoping != null) result.conditionScoping = conditionScoping;
+    if (segmentFilterExpression != null)
+      result.segmentFilterExpression = segmentFilterExpression;
+    return result;
   }
-  EventSegmentConditionGroup._() : super();
-  factory EventSegmentConditionGroup.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EventSegmentConditionGroup.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EventSegmentConditionGroup._();
+
+  factory EventSegmentConditionGroup.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EventSegmentConditionGroup.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EventSegmentConditionGroup',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..e<EventCriteriaScoping>(
-        1, _omitFieldNames ? '' : 'conditionScoping', $pb.PbFieldType.OE,
-        defaultOrMaker: EventCriteriaScoping.EVENT_CRITERIA_SCOPING_UNSPECIFIED,
-        valueOf: EventCriteriaScoping.valueOf,
+    ..aE<EventCriteriaScoping>(1, _omitFieldNames ? '' : 'conditionScoping',
         enumValues: EventCriteriaScoping.values)
     ..aOM<SegmentFilterExpression>(
         2, _omitFieldNames ? '' : 'segmentFilterExpression',
         subBuilder: SegmentFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EventSegmentConditionGroup clone() =>
-      EventSegmentConditionGroup()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EventSegmentConditionGroup clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EventSegmentConditionGroup copyWith(
           void Function(EventSegmentConditionGroup) updates) =>
       super.copyWith(
               (message) => updates(message as EventSegmentConditionGroup))
           as EventSegmentConditionGroup;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EventSegmentConditionGroup create() => EventSegmentConditionGroup._();
+  @$core.override
   EventSegmentConditionGroup createEmptyInstance() => create();
-  static $pb.PbList<EventSegmentConditionGroup> createRepeated() =>
-      $pb.PbList<EventSegmentConditionGroup>();
   @$core.pragma('dart2js:noInline')
   static EventSegmentConditionGroup getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EventSegmentConditionGroup>(create);
   static EventSegmentConditionGroup? _defaultInstance;
 
-  ///  `conditionScoping` should always be `EVENT_CRITERIA_WITHIN_SAME_EVENT`.
+  /// `conditionScoping` should always be `EVENT_CRITERIA_WITHIN_SAME_EVENT`.
   ///
-  ///  Optional. If unspecified, a `conditionScoping` of
-  ///  `EVENT_CRITERIA_WITHIN_SAME_EVENT` is used.
+  /// Optional. If unspecified, a `conditionScoping` of
+  /// `EVENT_CRITERIA_WITHIN_SAME_EVENT` is used.
   @$pb.TagNumber(1)
   EventCriteriaScoping get conditionScoping => $_getN(0);
   @$pb.TagNumber(1)
-  set conditionScoping(EventCriteriaScoping v) {
-    setField(1, v);
-  }
-
+  set conditionScoping(EventCriteriaScoping value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasConditionScoping() => $_has(0);
   @$pb.TagNumber(1)
-  void clearConditionScoping() => clearField(1);
+  void clearConditionScoping() => $_clearField(1);
 
   /// Data is included or excluded from the segment based on if it matches
   /// this expression. Expressions express criteria on dimension, metrics,
@@ -5026,14 +4437,12 @@ class EventSegmentConditionGroup extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SegmentFilterExpression get segmentFilterExpression => $_getN(1);
   @$pb.TagNumber(2)
-  set segmentFilterExpression(SegmentFilterExpression v) {
-    setField(2, v);
-  }
-
+  set segmentFilterExpression(SegmentFilterExpression value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSegmentFilterExpression() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSegmentFilterExpression() => clearField(2);
+  void clearSegmentFilterExpression() => $_clearField(2);
   @$pb.TagNumber(2)
   SegmentFilterExpression ensureSegmentFilterExpression() => $_ensure(1);
 }
@@ -5044,93 +4453,81 @@ class EventSegmentExclusion extends $pb.GeneratedMessage {
     EventExclusionDuration? eventExclusionDuration,
     EventSegmentCriteria? eventExclusionCriteria,
   }) {
-    final $result = create();
-    if (eventExclusionDuration != null) {
-      $result.eventExclusionDuration = eventExclusionDuration;
-    }
-    if (eventExclusionCriteria != null) {
-      $result.eventExclusionCriteria = eventExclusionCriteria;
-    }
-    return $result;
+    final result = create();
+    if (eventExclusionDuration != null)
+      result.eventExclusionDuration = eventExclusionDuration;
+    if (eventExclusionCriteria != null)
+      result.eventExclusionCriteria = eventExclusionCriteria;
+    return result;
   }
-  EventSegmentExclusion._() : super();
-  factory EventSegmentExclusion.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EventSegmentExclusion.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EventSegmentExclusion._();
+
+  factory EventSegmentExclusion.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EventSegmentExclusion.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EventSegmentExclusion',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..e<EventExclusionDuration>(
-        1, _omitFieldNames ? '' : 'eventExclusionDuration', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            EventExclusionDuration.EVENT_EXCLUSION_DURATION_UNSPECIFIED,
-        valueOf: EventExclusionDuration.valueOf,
+    ..aE<EventExclusionDuration>(
+        1, _omitFieldNames ? '' : 'eventExclusionDuration',
         enumValues: EventExclusionDuration.values)
     ..aOM<EventSegmentCriteria>(
         2, _omitFieldNames ? '' : 'eventExclusionCriteria',
         subBuilder: EventSegmentCriteria.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EventSegmentExclusion clone() =>
-      EventSegmentExclusion()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EventSegmentExclusion clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EventSegmentExclusion copyWith(
           void Function(EventSegmentExclusion) updates) =>
       super.copyWith((message) => updates(message as EventSegmentExclusion))
           as EventSegmentExclusion;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EventSegmentExclusion create() => EventSegmentExclusion._();
+  @$core.override
   EventSegmentExclusion createEmptyInstance() => create();
-  static $pb.PbList<EventSegmentExclusion> createRepeated() =>
-      $pb.PbList<EventSegmentExclusion>();
   @$core.pragma('dart2js:noInline')
   static EventSegmentExclusion getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EventSegmentExclusion>(create);
   static EventSegmentExclusion? _defaultInstance;
 
-  ///  `eventExclusionDuration` should always be `PERMANENTLY_EXCLUDE`.
+  /// `eventExclusionDuration` should always be `PERMANENTLY_EXCLUDE`.
   ///
-  ///  Optional. If unspecified, an `eventExclusionDuration` of
-  ///  `EVENT_EXCLUSION_PERMANENT` is used.
+  /// Optional. If unspecified, an `eventExclusionDuration` of
+  /// `EVENT_EXCLUSION_PERMANENT` is used.
   @$pb.TagNumber(1)
   EventExclusionDuration get eventExclusionDuration => $_getN(0);
   @$pb.TagNumber(1)
-  set eventExclusionDuration(EventExclusionDuration v) {
-    setField(1, v);
-  }
-
+  set eventExclusionDuration(EventExclusionDuration value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasEventExclusionDuration() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEventExclusionDuration() => clearField(1);
+  void clearEventExclusionDuration() => $_clearField(1);
 
   /// If an event meets this condition, the event is excluded from membership
   /// in the segment for the `eventExclusionDuration`.
   @$pb.TagNumber(2)
   EventSegmentCriteria get eventExclusionCriteria => $_getN(1);
   @$pb.TagNumber(2)
-  set eventExclusionCriteria(EventSegmentCriteria v) {
-    setField(2, v);
-  }
-
+  set eventExclusionCriteria(EventSegmentCriteria value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasEventExclusionCriteria() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEventExclusionCriteria() => clearField(2);
+  void clearEventExclusionCriteria() => $_clearField(2);
   @$pb.TagNumber(2)
   EventSegmentCriteria ensureEventExclusionCriteria() => $_ensure(1);
 }
@@ -5142,13 +4539,13 @@ enum Segment_OneSegmentScope {
   notSet
 }
 
-///  A segment is a subset of your Analytics data. For example, of your entire set
-///  of users, one segment might be users from a particular country or city.
-///  Another segment might be users who purchase a particular line of products or
-///  who visit a specific part of your site or trigger certain events in your app.
+/// A segment is a subset of your Analytics data. For example, of your entire set
+/// of users, one segment might be users from a particular country or city.
+/// Another segment might be users who purchase a particular line of products or
+/// who visit a specific part of your site or trigger certain events in your app.
 ///
-///  To learn more, see [Segment
-///  Builder](https://support.google.com/analytics/answer/9304353).
+/// To learn more, see [Segment
+/// Builder](https://support.google.com/analytics/answer/9304353).
 class Segment extends $pb.GeneratedMessage {
   factory Segment({
     $core.String? name,
@@ -5156,28 +4553,22 @@ class Segment extends $pb.GeneratedMessage {
     SessionSegment? sessionSegment,
     EventSegment? eventSegment,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (userSegment != null) {
-      $result.userSegment = userSegment;
-    }
-    if (sessionSegment != null) {
-      $result.sessionSegment = sessionSegment;
-    }
-    if (eventSegment != null) {
-      $result.eventSegment = eventSegment;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (userSegment != null) result.userSegment = userSegment;
+    if (sessionSegment != null) result.sessionSegment = sessionSegment;
+    if (eventSegment != null) result.eventSegment = eventSegment;
+    return result;
   }
-  Segment._() : super();
-  factory Segment.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Segment.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Segment._();
+
+  factory Segment.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Segment.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Segment_OneSegmentScope>
       _Segment_OneSegmentScopeByTag = {
@@ -5201,30 +4592,33 @@ class Segment extends $pb.GeneratedMessage {
         subBuilder: EventSegment.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Segment clone() => Segment()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Segment clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Segment copyWith(void Function(Segment) updates) =>
       super.copyWith((message) => updates(message as Segment)) as Segment;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Segment create() => Segment._();
+  @$core.override
   Segment createEmptyInstance() => create();
-  static $pb.PbList<Segment> createRepeated() => $pb.PbList<Segment>();
   @$core.pragma('dart2js:noInline')
   static Segment getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Segment>(create);
   static Segment? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
   Segment_OneSegmentScope whichOneSegmentScope() =>
       _Segment_OneSegmentScopeByTag[$_whichOneof(0)]!;
-  void clearOneSegmentScope() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  void clearOneSegmentScope() => $_clearField($_whichOneof(0));
 
   /// The name for this segment. If unspecified, segments are named "Segment".
   /// This name defines string value returned by the `segment` dimension. The
@@ -5233,27 +4627,21 @@ class Segment extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// User segments are subsets of users who engaged with your site or app.
   @$pb.TagNumber(2)
   UserSegment get userSegment => $_getN(1);
   @$pb.TagNumber(2)
-  set userSegment(UserSegment v) {
-    setField(2, v);
-  }
-
+  set userSegment(UserSegment value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUserSegment() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUserSegment() => clearField(2);
+  void clearUserSegment() => $_clearField(2);
   @$pb.TagNumber(2)
   UserSegment ensureUserSegment() => $_ensure(1);
 
@@ -5262,14 +4650,11 @@ class Segment extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   SessionSegment get sessionSegment => $_getN(2);
   @$pb.TagNumber(3)
-  set sessionSegment(SessionSegment v) {
-    setField(3, v);
-  }
-
+  set sessionSegment(SessionSegment value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasSessionSegment() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSessionSegment() => clearField(3);
+  void clearSessionSegment() => $_clearField(3);
   @$pb.TagNumber(3)
   SessionSegment ensureSessionSegment() => $_ensure(2);
 
@@ -5278,14 +4663,11 @@ class Segment extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   EventSegment get eventSegment => $_getN(3);
   @$pb.TagNumber(4)
-  set eventSegment(EventSegment v) {
-    setField(4, v);
-  }
-
+  set eventSegment(EventSegment value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasEventSegment() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEventSegment() => clearField(4);
+  void clearEventSegment() => $_clearField(4);
   @$pb.TagNumber(4)
   EventSegment ensureEventSegment() => $_ensure(3);
 }
@@ -5308,31 +4690,24 @@ class SegmentFilterExpression extends $pb.GeneratedMessage {
     SegmentFilter? segmentFilter,
     SegmentEventFilter? segmentEventFilter,
   }) {
-    final $result = create();
-    if (andGroup != null) {
-      $result.andGroup = andGroup;
-    }
-    if (orGroup != null) {
-      $result.orGroup = orGroup;
-    }
-    if (notExpression != null) {
-      $result.notExpression = notExpression;
-    }
-    if (segmentFilter != null) {
-      $result.segmentFilter = segmentFilter;
-    }
-    if (segmentEventFilter != null) {
-      $result.segmentEventFilter = segmentEventFilter;
-    }
-    return $result;
+    final result = create();
+    if (andGroup != null) result.andGroup = andGroup;
+    if (orGroup != null) result.orGroup = orGroup;
+    if (notExpression != null) result.notExpression = notExpression;
+    if (segmentFilter != null) result.segmentFilter = segmentFilter;
+    if (segmentEventFilter != null)
+      result.segmentEventFilter = segmentEventFilter;
+    return result;
   }
-  SegmentFilterExpression._() : super();
-  factory SegmentFilterExpression.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SegmentFilterExpression.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SegmentFilterExpression._();
+
+  factory SegmentFilterExpression.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SegmentFilterExpression.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, SegmentFilterExpression_Expr>
       _SegmentFilterExpression_ExprByTag = {
@@ -5361,47 +4736,49 @@ class SegmentFilterExpression extends $pb.GeneratedMessage {
         subBuilder: SegmentEventFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SegmentFilterExpression clone() =>
-      SegmentFilterExpression()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SegmentFilterExpression clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SegmentFilterExpression copyWith(
           void Function(SegmentFilterExpression) updates) =>
       super.copyWith((message) => updates(message as SegmentFilterExpression))
           as SegmentFilterExpression;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SegmentFilterExpression create() => SegmentFilterExpression._();
+  @$core.override
   SegmentFilterExpression createEmptyInstance() => create();
-  static $pb.PbList<SegmentFilterExpression> createRepeated() =>
-      $pb.PbList<SegmentFilterExpression>();
   @$core.pragma('dart2js:noInline')
   static SegmentFilterExpression getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SegmentFilterExpression>(create);
   static SegmentFilterExpression? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
   SegmentFilterExpression_Expr whichExpr() =>
       _SegmentFilterExpression_ExprByTag[$_whichOneof(0)]!;
-  void clearExpr() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearExpr() => $_clearField($_whichOneof(0));
 
   /// The SegmentFilterExpression in `andGroup` have an AND relationship.
   @$pb.TagNumber(1)
   SegmentFilterExpressionList get andGroup => $_getN(0);
   @$pb.TagNumber(1)
-  set andGroup(SegmentFilterExpressionList v) {
-    setField(1, v);
-  }
-
+  set andGroup(SegmentFilterExpressionList value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAndGroup() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAndGroup() => clearField(1);
+  void clearAndGroup() => $_clearField(1);
   @$pb.TagNumber(1)
   SegmentFilterExpressionList ensureAndGroup() => $_ensure(0);
 
@@ -5409,14 +4786,11 @@ class SegmentFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SegmentFilterExpressionList get orGroup => $_getN(1);
   @$pb.TagNumber(2)
-  set orGroup(SegmentFilterExpressionList v) {
-    setField(2, v);
-  }
-
+  set orGroup(SegmentFilterExpressionList value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOrGroup() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrGroup() => clearField(2);
+  void clearOrGroup() => $_clearField(2);
   @$pb.TagNumber(2)
   SegmentFilterExpressionList ensureOrGroup() => $_ensure(1);
 
@@ -5424,14 +4798,11 @@ class SegmentFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   SegmentFilterExpression get notExpression => $_getN(2);
   @$pb.TagNumber(3)
-  set notExpression(SegmentFilterExpression v) {
-    setField(3, v);
-  }
-
+  set notExpression(SegmentFilterExpression value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasNotExpression() => $_has(2);
   @$pb.TagNumber(3)
-  void clearNotExpression() => clearField(3);
+  void clearNotExpression() => $_clearField(3);
   @$pb.TagNumber(3)
   SegmentFilterExpression ensureNotExpression() => $_ensure(2);
 
@@ -5439,14 +4810,11 @@ class SegmentFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   SegmentFilter get segmentFilter => $_getN(3);
   @$pb.TagNumber(4)
-  set segmentFilter(SegmentFilter v) {
-    setField(4, v);
-  }
-
+  set segmentFilter(SegmentFilter value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasSegmentFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearSegmentFilter() => clearField(4);
+  void clearSegmentFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   SegmentFilter ensureSegmentFilter() => $_ensure(3);
 
@@ -5457,14 +4825,11 @@ class SegmentFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   SegmentEventFilter get segmentEventFilter => $_getN(4);
   @$pb.TagNumber(5)
-  set segmentEventFilter(SegmentEventFilter v) {
-    setField(5, v);
-  }
-
+  set segmentEventFilter(SegmentEventFilter value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasSegmentEventFilter() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSegmentEventFilter() => clearField(5);
+  void clearSegmentEventFilter() => $_clearField(5);
   @$pb.TagNumber(5)
   SegmentEventFilter ensureSegmentEventFilter() => $_ensure(4);
 }
@@ -5474,52 +4839,46 @@ class SegmentFilterExpressionList extends $pb.GeneratedMessage {
   factory SegmentFilterExpressionList({
     $core.Iterable<SegmentFilterExpression>? expressions,
   }) {
-    final $result = create();
-    if (expressions != null) {
-      $result.expressions.addAll(expressions);
-    }
-    return $result;
+    final result = create();
+    if (expressions != null) result.expressions.addAll(expressions);
+    return result;
   }
-  SegmentFilterExpressionList._() : super();
-  factory SegmentFilterExpressionList.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SegmentFilterExpressionList.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SegmentFilterExpressionList._();
+
+  factory SegmentFilterExpressionList.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SegmentFilterExpressionList.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SegmentFilterExpressionList',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<SegmentFilterExpression>(
-        1, _omitFieldNames ? '' : 'expressions', $pb.PbFieldType.PM,
+    ..pPM<SegmentFilterExpression>(1, _omitFieldNames ? '' : 'expressions',
         subBuilder: SegmentFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SegmentFilterExpressionList clone() =>
-      SegmentFilterExpressionList()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SegmentFilterExpressionList clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SegmentFilterExpressionList copyWith(
           void Function(SegmentFilterExpressionList) updates) =>
       super.copyWith(
               (message) => updates(message as SegmentFilterExpressionList))
           as SegmentFilterExpressionList;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SegmentFilterExpressionList create() =>
       SegmentFilterExpressionList._();
+  @$core.override
   SegmentFilterExpressionList createEmptyInstance() => create();
-  static $pb.PbList<SegmentFilterExpressionList> createRepeated() =>
-      $pb.PbList<SegmentFilterExpressionList>();
   @$core.pragma('dart2js:noInline')
   static SegmentFilterExpressionList getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SegmentFilterExpressionList>(create);
@@ -5527,7 +4886,7 @@ class SegmentFilterExpressionList extends $pb.GeneratedMessage {
 
   /// The list of segment filter expressions
   @$pb.TagNumber(1)
-  $core.List<SegmentFilterExpression> get expressions => $_getList(0);
+  $pb.PbList<SegmentFilterExpression> get expressions => $_getList(0);
 }
 
 enum SegmentFilter_OneFilter {
@@ -5548,34 +4907,24 @@ class SegmentFilter extends $pb.GeneratedMessage {
     BetweenFilter? betweenFilter,
     SegmentFilterScoping? filterScoping,
   }) {
-    final $result = create();
-    if (fieldName != null) {
-      $result.fieldName = fieldName;
-    }
-    if (stringFilter != null) {
-      $result.stringFilter = stringFilter;
-    }
-    if (inListFilter != null) {
-      $result.inListFilter = inListFilter;
-    }
-    if (numericFilter != null) {
-      $result.numericFilter = numericFilter;
-    }
-    if (betweenFilter != null) {
-      $result.betweenFilter = betweenFilter;
-    }
-    if (filterScoping != null) {
-      $result.filterScoping = filterScoping;
-    }
-    return $result;
+    final result = create();
+    if (fieldName != null) result.fieldName = fieldName;
+    if (stringFilter != null) result.stringFilter = stringFilter;
+    if (inListFilter != null) result.inListFilter = inListFilter;
+    if (numericFilter != null) result.numericFilter = numericFilter;
+    if (betweenFilter != null) result.betweenFilter = betweenFilter;
+    if (filterScoping != null) result.filterScoping = filterScoping;
+    return result;
   }
-  SegmentFilter._() : super();
-  factory SegmentFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SegmentFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SegmentFilter._();
+
+  factory SegmentFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SegmentFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, SegmentFilter_OneFilter>
       _SegmentFilter_OneFilterByTag = {
@@ -5604,58 +4953,56 @@ class SegmentFilter extends $pb.GeneratedMessage {
         subBuilder: SegmentFilterScoping.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SegmentFilter clone() => SegmentFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SegmentFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SegmentFilter copyWith(void Function(SegmentFilter) updates) =>
       super.copyWith((message) => updates(message as SegmentFilter))
           as SegmentFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SegmentFilter create() => SegmentFilter._();
+  @$core.override
   SegmentFilter createEmptyInstance() => create();
-  static $pb.PbList<SegmentFilter> createRepeated() =>
-      $pb.PbList<SegmentFilter>();
   @$core.pragma('dart2js:noInline')
   static SegmentFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SegmentFilter>(create);
   static SegmentFilter? _defaultInstance;
 
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
   SegmentFilter_OneFilter whichOneFilter() =>
       _SegmentFilter_OneFilterByTag[$_whichOneof(0)]!;
-  void clearOneFilter() => clearField($_whichOneof(0));
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  void clearOneFilter() => $_clearField($_whichOneof(0));
 
   /// The dimension name or metric name.
   @$pb.TagNumber(1)
   $core.String get fieldName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set fieldName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set fieldName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFieldName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFieldName() => clearField(1);
+  void clearFieldName() => $_clearField(1);
 
   /// Strings related filter.
   @$pb.TagNumber(4)
   StringFilter get stringFilter => $_getN(1);
   @$pb.TagNumber(4)
-  set stringFilter(StringFilter v) {
-    setField(4, v);
-  }
-
+  set stringFilter(StringFilter value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasStringFilter() => $_has(1);
   @$pb.TagNumber(4)
-  void clearStringFilter() => clearField(4);
+  void clearStringFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   StringFilter ensureStringFilter() => $_ensure(1);
 
@@ -5663,14 +5010,11 @@ class SegmentFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   InListFilter get inListFilter => $_getN(2);
   @$pb.TagNumber(5)
-  set inListFilter(InListFilter v) {
-    setField(5, v);
-  }
-
+  set inListFilter(InListFilter value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasInListFilter() => $_has(2);
   @$pb.TagNumber(5)
-  void clearInListFilter() => clearField(5);
+  void clearInListFilter() => $_clearField(5);
   @$pb.TagNumber(5)
   InListFilter ensureInListFilter() => $_ensure(2);
 
@@ -5678,14 +5022,11 @@ class SegmentFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   NumericFilter get numericFilter => $_getN(3);
   @$pb.TagNumber(6)
-  set numericFilter(NumericFilter v) {
-    setField(6, v);
-  }
-
+  set numericFilter(NumericFilter value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasNumericFilter() => $_has(3);
   @$pb.TagNumber(6)
-  void clearNumericFilter() => clearField(6);
+  void clearNumericFilter() => $_clearField(6);
   @$pb.TagNumber(6)
   NumericFilter ensureNumericFilter() => $_ensure(3);
 
@@ -5693,14 +5034,11 @@ class SegmentFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   BetweenFilter get betweenFilter => $_getN(4);
   @$pb.TagNumber(7)
-  set betweenFilter(BetweenFilter v) {
-    setField(7, v);
-  }
-
+  set betweenFilter(BetweenFilter value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasBetweenFilter() => $_has(4);
   @$pb.TagNumber(7)
-  void clearBetweenFilter() => clearField(7);
+  void clearBetweenFilter() => $_clearField(7);
   @$pb.TagNumber(7)
   BetweenFilter ensureBetweenFilter() => $_ensure(4);
 
@@ -5708,14 +5046,11 @@ class SegmentFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   SegmentFilterScoping get filterScoping => $_getN(5);
   @$pb.TagNumber(8)
-  set filterScoping(SegmentFilterScoping v) {
-    setField(8, v);
-  }
-
+  set filterScoping(SegmentFilterScoping value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasFilterScoping() => $_has(5);
   @$pb.TagNumber(8)
-  void clearFilterScoping() => clearField(8);
+  void clearFilterScoping() => $_clearField(8);
   @$pb.TagNumber(8)
   SegmentFilterScoping ensureFilterScoping() => $_ensure(5);
 }
@@ -5726,19 +5061,19 @@ class SegmentFilterScoping extends $pb.GeneratedMessage {
   factory SegmentFilterScoping({
     $core.bool? atAnyPointInTime,
   }) {
-    final $result = create();
-    if (atAnyPointInTime != null) {
-      $result.atAnyPointInTime = atAnyPointInTime;
-    }
-    return $result;
+    final result = create();
+    if (atAnyPointInTime != null) result.atAnyPointInTime = atAnyPointInTime;
+    return result;
   }
-  SegmentFilterScoping._() : super();
-  factory SegmentFilterScoping.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SegmentFilterScoping.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SegmentFilterScoping._();
+
+  factory SegmentFilterScoping.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SegmentFilterScoping.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SegmentFilterScoping',
@@ -5748,55 +5083,47 @@ class SegmentFilterScoping extends $pb.GeneratedMessage {
     ..aOB(1, _omitFieldNames ? '' : 'atAnyPointInTime')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SegmentFilterScoping clone() =>
-      SegmentFilterScoping()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SegmentFilterScoping clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SegmentFilterScoping copyWith(void Function(SegmentFilterScoping) updates) =>
       super.copyWith((message) => updates(message as SegmentFilterScoping))
           as SegmentFilterScoping;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SegmentFilterScoping create() => SegmentFilterScoping._();
+  @$core.override
   SegmentFilterScoping createEmptyInstance() => create();
-  static $pb.PbList<SegmentFilterScoping> createRepeated() =>
-      $pb.PbList<SegmentFilterScoping>();
   @$core.pragma('dart2js:noInline')
   static SegmentFilterScoping getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SegmentFilterScoping>(create);
   static SegmentFilterScoping? _defaultInstance;
 
-  ///  If `atAnyPointInTime` is true, this filter evaluates to true for all
-  ///  events if it evaluates to true for any event in the date range of the
-  ///  request.
+  /// If `atAnyPointInTime` is true, this filter evaluates to true for all
+  /// events if it evaluates to true for any event in the date range of the
+  /// request.
   ///
-  ///  This `atAnyPointInTime` parameter does not extend the date range of
-  ///  events in the report. If `atAnyPointInTime` is true, only events within
-  ///  the report's date range are considered when evaluating this filter.
+  /// This `atAnyPointInTime` parameter does not extend the date range of
+  /// events in the report. If `atAnyPointInTime` is true, only events within
+  /// the report's date range are considered when evaluating this filter.
   ///
-  ///  This `atAnyPointInTime` is only able to be specified if the criteria
-  ///  scoping is `ACROSS_ALL_SESSIONS` and is not able to be specified in
-  ///  sequences.
+  /// This `atAnyPointInTime` is only able to be specified if the criteria
+  /// scoping is `ACROSS_ALL_SESSIONS` and is not able to be specified in
+  /// sequences.
   ///
-  ///  If the criteria scoping is `ACROSS_ALL_SESSIONS`, `atAnyPointInTime` =
-  ///  false is used if unspecified.
+  /// If the criteria scoping is `ACROSS_ALL_SESSIONS`, `atAnyPointInTime` =
+  /// false is used if unspecified.
   @$pb.TagNumber(1)
   $core.bool get atAnyPointInTime => $_getBF(0);
   @$pb.TagNumber(1)
-  set atAnyPointInTime($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set atAnyPointInTime($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAtAnyPointInTime() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAtAnyPointInTime() => clearField(1);
+  void clearAtAnyPointInTime() => $_clearField(1);
 }
 
 /// Creates a filter that matches events of a single event name. If a parameter
@@ -5808,23 +5135,22 @@ class SegmentEventFilter extends $pb.GeneratedMessage {
     $core.String? eventName,
     SegmentParameterFilterExpression? segmentParameterFilterExpression,
   }) {
-    final $result = create();
-    if (eventName != null) {
-      $result.eventName = eventName;
-    }
-    if (segmentParameterFilterExpression != null) {
-      $result.segmentParameterFilterExpression =
+    final result = create();
+    if (eventName != null) result.eventName = eventName;
+    if (segmentParameterFilterExpression != null)
+      result.segmentParameterFilterExpression =
           segmentParameterFilterExpression;
-    }
-    return $result;
+    return result;
   }
-  SegmentEventFilter._() : super();
-  factory SegmentEventFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SegmentEventFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SegmentEventFilter._();
+
+  factory SegmentEventFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SegmentEventFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SegmentEventFilter',
@@ -5837,24 +5163,20 @@ class SegmentEventFilter extends $pb.GeneratedMessage {
         subBuilder: SegmentParameterFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SegmentEventFilter clone() => SegmentEventFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SegmentEventFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SegmentEventFilter copyWith(void Function(SegmentEventFilter) updates) =>
       super.copyWith((message) => updates(message as SegmentEventFilter))
           as SegmentEventFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SegmentEventFilter create() => SegmentEventFilter._();
+  @$core.override
   SegmentEventFilter createEmptyInstance() => create();
-  static $pb.PbList<SegmentEventFilter> createRepeated() =>
-      $pb.PbList<SegmentEventFilter>();
   @$core.pragma('dart2js:noInline')
   static SegmentEventFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SegmentEventFilter>(create);
@@ -5865,32 +5187,28 @@ class SegmentEventFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get eventName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set eventName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set eventName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEventName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEventName() => clearField(1);
+  void clearEventName() => $_clearField(1);
 
-  ///  If specified, this filter matches events that match both the single event
-  ///  name and the parameter filter expressions.
+  /// If specified, this filter matches events that match both the single event
+  /// name and the parameter filter expressions.
   ///
-  ///  Inside the parameter filter expression, only parameter filters are
-  ///  available.
+  /// Inside the parameter filter expression, only parameter filters are
+  /// available.
   @$pb.TagNumber(2)
   SegmentParameterFilterExpression get segmentParameterFilterExpression =>
       $_getN(1);
   @$pb.TagNumber(2)
-  set segmentParameterFilterExpression(SegmentParameterFilterExpression v) {
-    setField(2, v);
-  }
-
+  set segmentParameterFilterExpression(
+          SegmentParameterFilterExpression value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSegmentParameterFilterExpression() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSegmentParameterFilterExpression() => clearField(2);
+  void clearSegmentParameterFilterExpression() => $_clearField(2);
   @$pb.TagNumber(2)
   SegmentParameterFilterExpression ensureSegmentParameterFilterExpression() =>
       $_ensure(1);
@@ -5912,28 +5230,24 @@ class SegmentParameterFilterExpression extends $pb.GeneratedMessage {
     SegmentParameterFilterExpression? notExpression,
     SegmentParameterFilter? segmentParameterFilter,
   }) {
-    final $result = create();
-    if (andGroup != null) {
-      $result.andGroup = andGroup;
-    }
-    if (orGroup != null) {
-      $result.orGroup = orGroup;
-    }
-    if (notExpression != null) {
-      $result.notExpression = notExpression;
-    }
-    if (segmentParameterFilter != null) {
-      $result.segmentParameterFilter = segmentParameterFilter;
-    }
-    return $result;
+    final result = create();
+    if (andGroup != null) result.andGroup = andGroup;
+    if (orGroup != null) result.orGroup = orGroup;
+    if (notExpression != null) result.notExpression = notExpression;
+    if (segmentParameterFilter != null)
+      result.segmentParameterFilter = segmentParameterFilter;
+    return result;
   }
-  SegmentParameterFilterExpression._() : super();
-  factory SegmentParameterFilterExpression.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SegmentParameterFilterExpression.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SegmentParameterFilterExpression._();
+
+  factory SegmentParameterFilterExpression.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SegmentParameterFilterExpression.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, SegmentParameterFilterExpression_Expr>
       _SegmentParameterFilterExpression_ExprByTag = {
@@ -5963,51 +5277,52 @@ class SegmentParameterFilterExpression extends $pb.GeneratedMessage {
         subBuilder: SegmentParameterFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SegmentParameterFilterExpression clone() =>
-      SegmentParameterFilterExpression()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SegmentParameterFilterExpression clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SegmentParameterFilterExpression copyWith(
           void Function(SegmentParameterFilterExpression) updates) =>
       super.copyWith(
               (message) => updates(message as SegmentParameterFilterExpression))
           as SegmentParameterFilterExpression;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SegmentParameterFilterExpression create() =>
       SegmentParameterFilterExpression._();
+  @$core.override
   SegmentParameterFilterExpression createEmptyInstance() => create();
-  static $pb.PbList<SegmentParameterFilterExpression> createRepeated() =>
-      $pb.PbList<SegmentParameterFilterExpression>();
   @$core.pragma('dart2js:noInline')
   static SegmentParameterFilterExpression getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SegmentParameterFilterExpression>(
           create);
   static SegmentParameterFilterExpression? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
   SegmentParameterFilterExpression_Expr whichExpr() =>
       _SegmentParameterFilterExpression_ExprByTag[$_whichOneof(0)]!;
-  void clearExpr() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  void clearExpr() => $_clearField($_whichOneof(0));
 
   /// The SegmentParameterFilterExpression in `andGroup` have an AND
   /// relationship.
   @$pb.TagNumber(1)
   SegmentParameterFilterExpressionList get andGroup => $_getN(0);
   @$pb.TagNumber(1)
-  set andGroup(SegmentParameterFilterExpressionList v) {
-    setField(1, v);
-  }
-
+  set andGroup(SegmentParameterFilterExpressionList value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAndGroup() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAndGroup() => clearField(1);
+  void clearAndGroup() => $_clearField(1);
   @$pb.TagNumber(1)
   SegmentParameterFilterExpressionList ensureAndGroup() => $_ensure(0);
 
@@ -6016,14 +5331,12 @@ class SegmentParameterFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SegmentParameterFilterExpressionList get orGroup => $_getN(1);
   @$pb.TagNumber(2)
-  set orGroup(SegmentParameterFilterExpressionList v) {
-    setField(2, v);
-  }
-
+  set orGroup(SegmentParameterFilterExpressionList value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOrGroup() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrGroup() => clearField(2);
+  void clearOrGroup() => $_clearField(2);
   @$pb.TagNumber(2)
   SegmentParameterFilterExpressionList ensureOrGroup() => $_ensure(1);
 
@@ -6031,14 +5344,12 @@ class SegmentParameterFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   SegmentParameterFilterExpression get notExpression => $_getN(2);
   @$pb.TagNumber(3)
-  set notExpression(SegmentParameterFilterExpression v) {
-    setField(3, v);
-  }
-
+  set notExpression(SegmentParameterFilterExpression value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasNotExpression() => $_has(2);
   @$pb.TagNumber(3)
-  void clearNotExpression() => clearField(3);
+  void clearNotExpression() => $_clearField(3);
   @$pb.TagNumber(3)
   SegmentParameterFilterExpression ensureNotExpression() => $_ensure(2);
 
@@ -6046,14 +5357,12 @@ class SegmentParameterFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   SegmentParameterFilter get segmentParameterFilter => $_getN(3);
   @$pb.TagNumber(4)
-  set segmentParameterFilter(SegmentParameterFilter v) {
-    setField(4, v);
-  }
-
+  set segmentParameterFilter(SegmentParameterFilter value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasSegmentParameterFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearSegmentParameterFilter() => clearField(4);
+  void clearSegmentParameterFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   SegmentParameterFilter ensureSegmentParameterFilter() => $_ensure(3);
 }
@@ -6063,53 +5372,48 @@ class SegmentParameterFilterExpressionList extends $pb.GeneratedMessage {
   factory SegmentParameterFilterExpressionList({
     $core.Iterable<SegmentParameterFilterExpression>? expressions,
   }) {
-    final $result = create();
-    if (expressions != null) {
-      $result.expressions.addAll(expressions);
-    }
-    return $result;
+    final result = create();
+    if (expressions != null) result.expressions.addAll(expressions);
+    return result;
   }
-  SegmentParameterFilterExpressionList._() : super();
+
+  SegmentParameterFilterExpressionList._();
+
   factory SegmentParameterFilterExpressionList.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SegmentParameterFilterExpressionList.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SegmentParameterFilterExpressionList.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SegmentParameterFilterExpressionList',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<SegmentParameterFilterExpression>(
-        1, _omitFieldNames ? '' : 'expressions', $pb.PbFieldType.PM,
+    ..pPM<SegmentParameterFilterExpression>(
+        1, _omitFieldNames ? '' : 'expressions',
         subBuilder: SegmentParameterFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SegmentParameterFilterExpressionList clone() =>
-      SegmentParameterFilterExpressionList()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SegmentParameterFilterExpressionList clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SegmentParameterFilterExpressionList copyWith(
           void Function(SegmentParameterFilterExpressionList) updates) =>
       super.copyWith((message) =>
               updates(message as SegmentParameterFilterExpressionList))
           as SegmentParameterFilterExpressionList;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SegmentParameterFilterExpressionList create() =>
       SegmentParameterFilterExpressionList._();
+  @$core.override
   SegmentParameterFilterExpressionList createEmptyInstance() => create();
-  static $pb.PbList<SegmentParameterFilterExpressionList> createRepeated() =>
-      $pb.PbList<SegmentParameterFilterExpressionList>();
   @$core.pragma('dart2js:noInline')
   static SegmentParameterFilterExpressionList getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -6118,7 +5422,7 @@ class SegmentParameterFilterExpressionList extends $pb.GeneratedMessage {
 
   /// The list of segment parameter filter expressions.
   @$pb.TagNumber(1)
-  $core.List<SegmentParameterFilterExpression> get expressions => $_getList(0);
+  $pb.PbList<SegmentParameterFilterExpression> get expressions => $_getList(0);
 }
 
 enum SegmentParameterFilter_OneParameter {
@@ -6146,37 +5450,26 @@ class SegmentParameterFilter extends $pb.GeneratedMessage {
     BetweenFilter? betweenFilter,
     SegmentParameterFilterScoping? filterScoping,
   }) {
-    final $result = create();
-    if (eventParameterName != null) {
-      $result.eventParameterName = eventParameterName;
-    }
-    if (itemParameterName != null) {
-      $result.itemParameterName = itemParameterName;
-    }
-    if (stringFilter != null) {
-      $result.stringFilter = stringFilter;
-    }
-    if (inListFilter != null) {
-      $result.inListFilter = inListFilter;
-    }
-    if (numericFilter != null) {
-      $result.numericFilter = numericFilter;
-    }
-    if (betweenFilter != null) {
-      $result.betweenFilter = betweenFilter;
-    }
-    if (filterScoping != null) {
-      $result.filterScoping = filterScoping;
-    }
-    return $result;
+    final result = create();
+    if (eventParameterName != null)
+      result.eventParameterName = eventParameterName;
+    if (itemParameterName != null) result.itemParameterName = itemParameterName;
+    if (stringFilter != null) result.stringFilter = stringFilter;
+    if (inListFilter != null) result.inListFilter = inListFilter;
+    if (numericFilter != null) result.numericFilter = numericFilter;
+    if (betweenFilter != null) result.betweenFilter = betweenFilter;
+    if (filterScoping != null) result.filterScoping = filterScoping;
+    return result;
   }
-  SegmentParameterFilter._() : super();
-  factory SegmentParameterFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SegmentParameterFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SegmentParameterFilter._();
+
+  factory SegmentParameterFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SegmentParameterFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, SegmentParameterFilter_OneParameter>
       _SegmentParameterFilter_OneParameterByTag = {
@@ -6214,94 +5507,92 @@ class SegmentParameterFilter extends $pb.GeneratedMessage {
         subBuilder: SegmentParameterFilterScoping.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SegmentParameterFilter clone() =>
-      SegmentParameterFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SegmentParameterFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SegmentParameterFilter copyWith(
           void Function(SegmentParameterFilter) updates) =>
       super.copyWith((message) => updates(message as SegmentParameterFilter))
           as SegmentParameterFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SegmentParameterFilter create() => SegmentParameterFilter._();
+  @$core.override
   SegmentParameterFilter createEmptyInstance() => create();
-  static $pb.PbList<SegmentParameterFilter> createRepeated() =>
-      $pb.PbList<SegmentParameterFilter>();
   @$core.pragma('dart2js:noInline')
   static SegmentParameterFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SegmentParameterFilter>(create);
   static SegmentParameterFilter? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   SegmentParameterFilter_OneParameter whichOneParameter() =>
       _SegmentParameterFilter_OneParameterByTag[$_whichOneof(0)]!;
-  void clearOneParameter() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearOneParameter() => $_clearField($_whichOneof(0));
 
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
   SegmentParameterFilter_OneFilter whichOneFilter() =>
       _SegmentParameterFilter_OneFilterByTag[$_whichOneof(1)]!;
-  void clearOneFilter() => clearField($_whichOneof(1));
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  void clearOneFilter() => $_clearField($_whichOneof(1));
 
-  ///  This filter will be evaluated on the specified event parameter. Event
-  ///  parameters are logged as parameters of the event. Event parameters
-  ///  include fields like "firebase_screen" & "currency".
+  /// This filter will be evaluated on the specified event parameter. Event
+  /// parameters are logged as parameters of the event. Event parameters
+  /// include fields like "firebase_screen" & "currency".
   ///
-  ///  Event parameters can only be used in segments & funnels and can only be
-  ///  used in a descendent filter from an EventFilter. In a descendent filter
-  ///  from an EventFilter either event or item parameters should be used.
+  /// Event parameters can only be used in segments & funnels and can only be
+  /// used in a descendent filter from an EventFilter. In a descendent filter
+  /// from an EventFilter either event or item parameters should be used.
   @$pb.TagNumber(1)
   $core.String get eventParameterName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set eventParameterName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set eventParameterName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEventParameterName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEventParameterName() => clearField(1);
+  void clearEventParameterName() => $_clearField(1);
 
-  ///  This filter will be evaluated on the specified item parameter. Item
-  ///  parameters are logged as parameters in the item array. Item parameters
-  ///  include fields like "item_name" & "item_category".
+  /// This filter will be evaluated on the specified item parameter. Item
+  /// parameters are logged as parameters in the item array. Item parameters
+  /// include fields like "item_name" & "item_category".
   ///
-  ///  Item parameters can only be used in segments & funnels and can only be
-  ///  used in a descendent filter from an EventFilter. In a descendent filter
-  ///  from an EventFilter either event or item parameters should be used.
+  /// Item parameters can only be used in segments & funnels and can only be
+  /// used in a descendent filter from an EventFilter. In a descendent filter
+  /// from an EventFilter either event or item parameters should be used.
   ///
-  ///  Item parameters are only available in ecommerce events. To learn more
-  ///  about ecommerce events, see the [Measure ecommerce]
-  ///  (https://developers.google.com/analytics/devguides/collection/ga4/ecommerce)
-  ///  guide.
+  /// Item parameters are only available in ecommerce events. To learn more
+  /// about ecommerce events, see the [Measure ecommerce]
+  /// (https://developers.google.com/analytics/devguides/collection/ga4/ecommerce)
+  /// guide.
   @$pb.TagNumber(2)
   $core.String get itemParameterName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set itemParameterName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set itemParameterName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasItemParameterName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearItemParameterName() => clearField(2);
+  void clearItemParameterName() => $_clearField(2);
 
   /// Strings related filter.
   @$pb.TagNumber(4)
   StringFilter get stringFilter => $_getN(2);
   @$pb.TagNumber(4)
-  set stringFilter(StringFilter v) {
-    setField(4, v);
-  }
-
+  set stringFilter(StringFilter value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasStringFilter() => $_has(2);
   @$pb.TagNumber(4)
-  void clearStringFilter() => clearField(4);
+  void clearStringFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   StringFilter ensureStringFilter() => $_ensure(2);
 
@@ -6309,14 +5600,11 @@ class SegmentParameterFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   InListFilter get inListFilter => $_getN(3);
   @$pb.TagNumber(5)
-  set inListFilter(InListFilter v) {
-    setField(5, v);
-  }
-
+  set inListFilter(InListFilter value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasInListFilter() => $_has(3);
   @$pb.TagNumber(5)
-  void clearInListFilter() => clearField(5);
+  void clearInListFilter() => $_clearField(5);
   @$pb.TagNumber(5)
   InListFilter ensureInListFilter() => $_ensure(3);
 
@@ -6324,14 +5612,11 @@ class SegmentParameterFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   NumericFilter get numericFilter => $_getN(4);
   @$pb.TagNumber(6)
-  set numericFilter(NumericFilter v) {
-    setField(6, v);
-  }
-
+  set numericFilter(NumericFilter value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasNumericFilter() => $_has(4);
   @$pb.TagNumber(6)
-  void clearNumericFilter() => clearField(6);
+  void clearNumericFilter() => $_clearField(6);
   @$pb.TagNumber(6)
   NumericFilter ensureNumericFilter() => $_ensure(4);
 
@@ -6339,14 +5624,11 @@ class SegmentParameterFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   BetweenFilter get betweenFilter => $_getN(5);
   @$pb.TagNumber(7)
-  set betweenFilter(BetweenFilter v) {
-    setField(7, v);
-  }
-
+  set betweenFilter(BetweenFilter value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasBetweenFilter() => $_has(5);
   @$pb.TagNumber(7)
-  void clearBetweenFilter() => clearField(7);
+  void clearBetweenFilter() => $_clearField(7);
   @$pb.TagNumber(7)
   BetweenFilter ensureBetweenFilter() => $_ensure(5);
 
@@ -6354,14 +5636,12 @@ class SegmentParameterFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   SegmentParameterFilterScoping get filterScoping => $_getN(6);
   @$pb.TagNumber(8)
-  set filterScoping(SegmentParameterFilterScoping v) {
-    setField(8, v);
-  }
-
+  set filterScoping(SegmentParameterFilterScoping value) =>
+      $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasFilterScoping() => $_has(6);
   @$pb.TagNumber(8)
-  void clearFilterScoping() => clearField(8);
+  void clearFilterScoping() => $_clearField(8);
   @$pb.TagNumber(8)
   SegmentParameterFilterScoping ensureFilterScoping() => $_ensure(6);
 }
@@ -6372,19 +5652,19 @@ class SegmentParameterFilterScoping extends $pb.GeneratedMessage {
   factory SegmentParameterFilterScoping({
     $fixnum.Int64? inAnyNDayPeriod,
   }) {
-    final $result = create();
-    if (inAnyNDayPeriod != null) {
-      $result.inAnyNDayPeriod = inAnyNDayPeriod;
-    }
-    return $result;
+    final result = create();
+    if (inAnyNDayPeriod != null) result.inAnyNDayPeriod = inAnyNDayPeriod;
+    return result;
   }
-  SegmentParameterFilterScoping._() : super();
-  factory SegmentParameterFilterScoping.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SegmentParameterFilterScoping.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SegmentParameterFilterScoping._();
+
+  factory SegmentParameterFilterScoping.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SegmentParameterFilterScoping.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SegmentParameterFilterScoping',
@@ -6394,68 +5674,60 @@ class SegmentParameterFilterScoping extends $pb.GeneratedMessage {
     ..aInt64(1, _omitFieldNames ? '' : 'inAnyNDayPeriod')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SegmentParameterFilterScoping clone() =>
-      SegmentParameterFilterScoping()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SegmentParameterFilterScoping clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SegmentParameterFilterScoping copyWith(
           void Function(SegmentParameterFilterScoping) updates) =>
       super.copyWith(
               (message) => updates(message as SegmentParameterFilterScoping))
           as SegmentParameterFilterScoping;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SegmentParameterFilterScoping create() =>
       SegmentParameterFilterScoping._();
+  @$core.override
   SegmentParameterFilterScoping createEmptyInstance() => create();
-  static $pb.PbList<SegmentParameterFilterScoping> createRepeated() =>
-      $pb.PbList<SegmentParameterFilterScoping>();
   @$core.pragma('dart2js:noInline')
   static SegmentParameterFilterScoping getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SegmentParameterFilterScoping>(create);
   static SegmentParameterFilterScoping? _defaultInstance;
 
-  ///  Accumulates the parameter over the specified period of days before
-  ///  applying the filter. Only supported if criteria scoping is
-  ///  `ACROSS_ALL_SESSIONS` or `WITHIN_SAME_SESSION`. Only supported if the
-  ///  parameter is `event_count`.
+  /// Accumulates the parameter over the specified period of days before
+  /// applying the filter. Only supported if criteria scoping is
+  /// `ACROSS_ALL_SESSIONS` or `WITHIN_SAME_SESSION`. Only supported if the
+  /// parameter is `event_count`.
   ///
-  ///  For example if `inAnyNDayPeriod` is 3, the event_name is "purchase",
-  ///  the event parameter is "event_count", and the Filter's criteria is
-  ///  greater than 5, this filter will accumulate the event count of purchase
-  ///  events over every 3 consecutive day period in the report's date range; a
-  ///  user will pass this Filter's criteria to be included in this segment if
-  ///  their count of purchase events exceeds 5 in any 3 consecutive day period.
-  ///  For example, the periods 2021-11-01 to 2021-11-03, 2021-11-02 to
-  ///  2021-11-04, 2021-11-03 to 2021-11-05, and etc. will be considered.
+  /// For example if `inAnyNDayPeriod` is 3, the event_name is "purchase",
+  /// the event parameter is "event_count", and the Filter's criteria is
+  /// greater than 5, this filter will accumulate the event count of purchase
+  /// events over every 3 consecutive day period in the report's date range; a
+  /// user will pass this Filter's criteria to be included in this segment if
+  /// their count of purchase events exceeds 5 in any 3 consecutive day period.
+  /// For example, the periods 2021-11-01 to 2021-11-03, 2021-11-02 to
+  /// 2021-11-04, 2021-11-03 to 2021-11-05, and etc. will be considered.
   ///
-  ///  The date range is not extended for the purpose of having a full N day
-  ///  window near the start of the date range. For example if a report is for
-  ///  2021-11-01 to 2021-11-10 and `inAnyNDayPeriod` = 3, the first two day
-  ///  period will be effectively shortened because no event data outside the
-  ///  report's date range will be read. For example, the first four periods
-  ///  will effectively be: 2021-11-01 to 2021-11-01, 2021-11-01 to 2021-11-02,
-  ///  2021-11-01 to 2021-11-03, and 2021-11-02 to 2021-11-04.
+  /// The date range is not extended for the purpose of having a full N day
+  /// window near the start of the date range. For example if a report is for
+  /// 2021-11-01 to 2021-11-10 and `inAnyNDayPeriod` = 3, the first two day
+  /// period will be effectively shortened because no event data outside the
+  /// report's date range will be read. For example, the first four periods
+  /// will effectively be: 2021-11-01 to 2021-11-01, 2021-11-01 to 2021-11-02,
+  /// 2021-11-01 to 2021-11-03, and 2021-11-02 to 2021-11-04.
   ///
-  ///  `inAnyNDayPeriod` is optional. If not specified, the
-  ///  `segmentParameterFilter` is applied to each event individually.
+  /// `inAnyNDayPeriod` is optional. If not specified, the
+  /// `segmentParameterFilter` is applied to each event individually.
   @$pb.TagNumber(1)
   $fixnum.Int64 get inAnyNDayPeriod => $_getI64(0);
   @$pb.TagNumber(1)
-  set inAnyNDayPeriod($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set inAnyNDayPeriod($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasInAnyNDayPeriod() => $_has(0);
   @$pb.TagNumber(1)
-  void clearInAnyNDayPeriod() => clearField(1);
+  void clearInAnyNDayPeriod() => $_clearField(1);
 }
 
 enum FunnelFilterExpression_Expr {
@@ -6476,31 +5748,23 @@ class FunnelFilterExpression extends $pb.GeneratedMessage {
     FunnelFieldFilter? funnelFieldFilter,
     FunnelEventFilter? funnelEventFilter,
   }) {
-    final $result = create();
-    if (andGroup != null) {
-      $result.andGroup = andGroup;
-    }
-    if (orGroup != null) {
-      $result.orGroup = orGroup;
-    }
-    if (notExpression != null) {
-      $result.notExpression = notExpression;
-    }
-    if (funnelFieldFilter != null) {
-      $result.funnelFieldFilter = funnelFieldFilter;
-    }
-    if (funnelEventFilter != null) {
-      $result.funnelEventFilter = funnelEventFilter;
-    }
-    return $result;
+    final result = create();
+    if (andGroup != null) result.andGroup = andGroup;
+    if (orGroup != null) result.orGroup = orGroup;
+    if (notExpression != null) result.notExpression = notExpression;
+    if (funnelFieldFilter != null) result.funnelFieldFilter = funnelFieldFilter;
+    if (funnelEventFilter != null) result.funnelEventFilter = funnelEventFilter;
+    return result;
   }
-  FunnelFilterExpression._() : super();
-  factory FunnelFilterExpression.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelFilterExpression.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FunnelFilterExpression._();
+
+  factory FunnelFilterExpression.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelFilterExpression.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, FunnelFilterExpression_Expr>
       _FunnelFilterExpression_ExprByTag = {
@@ -6529,47 +5793,49 @@ class FunnelFilterExpression extends $pb.GeneratedMessage {
         subBuilder: FunnelEventFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelFilterExpression clone() =>
-      FunnelFilterExpression()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelFilterExpression clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelFilterExpression copyWith(
           void Function(FunnelFilterExpression) updates) =>
       super.copyWith((message) => updates(message as FunnelFilterExpression))
           as FunnelFilterExpression;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelFilterExpression create() => FunnelFilterExpression._();
+  @$core.override
   FunnelFilterExpression createEmptyInstance() => create();
-  static $pb.PbList<FunnelFilterExpression> createRepeated() =>
-      $pb.PbList<FunnelFilterExpression>();
   @$core.pragma('dart2js:noInline')
   static FunnelFilterExpression getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunnelFilterExpression>(create);
   static FunnelFilterExpression? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
   FunnelFilterExpression_Expr whichExpr() =>
       _FunnelFilterExpression_ExprByTag[$_whichOneof(0)]!;
-  void clearExpr() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearExpr() => $_clearField($_whichOneof(0));
 
   /// The FunnelFilterExpression in `andGroup` have an AND relationship.
   @$pb.TagNumber(1)
   FunnelFilterExpressionList get andGroup => $_getN(0);
   @$pb.TagNumber(1)
-  set andGroup(FunnelFilterExpressionList v) {
-    setField(1, v);
-  }
-
+  set andGroup(FunnelFilterExpressionList value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAndGroup() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAndGroup() => clearField(1);
+  void clearAndGroup() => $_clearField(1);
   @$pb.TagNumber(1)
   FunnelFilterExpressionList ensureAndGroup() => $_ensure(0);
 
@@ -6577,14 +5843,11 @@ class FunnelFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   FunnelFilterExpressionList get orGroup => $_getN(1);
   @$pb.TagNumber(2)
-  set orGroup(FunnelFilterExpressionList v) {
-    setField(2, v);
-  }
-
+  set orGroup(FunnelFilterExpressionList value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOrGroup() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrGroup() => clearField(2);
+  void clearOrGroup() => $_clearField(2);
   @$pb.TagNumber(2)
   FunnelFilterExpressionList ensureOrGroup() => $_ensure(1);
 
@@ -6592,14 +5855,11 @@ class FunnelFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   FunnelFilterExpression get notExpression => $_getN(2);
   @$pb.TagNumber(3)
-  set notExpression(FunnelFilterExpression v) {
-    setField(3, v);
-  }
-
+  set notExpression(FunnelFilterExpression value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasNotExpression() => $_has(2);
   @$pb.TagNumber(3)
-  void clearNotExpression() => clearField(3);
+  void clearNotExpression() => $_clearField(3);
   @$pb.TagNumber(3)
   FunnelFilterExpression ensureNotExpression() => $_ensure(2);
 
@@ -6607,14 +5867,11 @@ class FunnelFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   FunnelFieldFilter get funnelFieldFilter => $_getN(3);
   @$pb.TagNumber(4)
-  set funnelFieldFilter(FunnelFieldFilter v) {
-    setField(4, v);
-  }
-
+  set funnelFieldFilter(FunnelFieldFilter value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasFunnelFieldFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFunnelFieldFilter() => clearField(4);
+  void clearFunnelFieldFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   FunnelFieldFilter ensureFunnelFieldFilter() => $_ensure(3);
 
@@ -6625,14 +5882,11 @@ class FunnelFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   FunnelEventFilter get funnelEventFilter => $_getN(4);
   @$pb.TagNumber(5)
-  set funnelEventFilter(FunnelEventFilter v) {
-    setField(5, v);
-  }
-
+  set funnelEventFilter(FunnelEventFilter value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasFunnelEventFilter() => $_has(4);
   @$pb.TagNumber(5)
-  void clearFunnelEventFilter() => clearField(5);
+  void clearFunnelEventFilter() => $_clearField(5);
   @$pb.TagNumber(5)
   FunnelEventFilter ensureFunnelEventFilter() => $_ensure(4);
 }
@@ -6642,51 +5896,45 @@ class FunnelFilterExpressionList extends $pb.GeneratedMessage {
   factory FunnelFilterExpressionList({
     $core.Iterable<FunnelFilterExpression>? expressions,
   }) {
-    final $result = create();
-    if (expressions != null) {
-      $result.expressions.addAll(expressions);
-    }
-    return $result;
+    final result = create();
+    if (expressions != null) result.expressions.addAll(expressions);
+    return result;
   }
-  FunnelFilterExpressionList._() : super();
-  factory FunnelFilterExpressionList.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelFilterExpressionList.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FunnelFilterExpressionList._();
+
+  factory FunnelFilterExpressionList.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelFilterExpressionList.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FunnelFilterExpressionList',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<FunnelFilterExpression>(
-        1, _omitFieldNames ? '' : 'expressions', $pb.PbFieldType.PM,
+    ..pPM<FunnelFilterExpression>(1, _omitFieldNames ? '' : 'expressions',
         subBuilder: FunnelFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelFilterExpressionList clone() =>
-      FunnelFilterExpressionList()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelFilterExpressionList clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelFilterExpressionList copyWith(
           void Function(FunnelFilterExpressionList) updates) =>
       super.copyWith(
               (message) => updates(message as FunnelFilterExpressionList))
           as FunnelFilterExpressionList;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelFilterExpressionList create() => FunnelFilterExpressionList._();
+  @$core.override
   FunnelFilterExpressionList createEmptyInstance() => create();
-  static $pb.PbList<FunnelFilterExpressionList> createRepeated() =>
-      $pb.PbList<FunnelFilterExpressionList>();
   @$core.pragma('dart2js:noInline')
   static FunnelFilterExpressionList getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunnelFilterExpressionList>(create);
@@ -6694,7 +5942,7 @@ class FunnelFilterExpressionList extends $pb.GeneratedMessage {
 
   /// The list of funnel filter expressions.
   @$pb.TagNumber(1)
-  $core.List<FunnelFilterExpression> get expressions => $_getList(0);
+  $pb.PbList<FunnelFilterExpression> get expressions => $_getList(0);
 }
 
 enum FunnelFieldFilter_OneFilter {
@@ -6714,31 +5962,23 @@ class FunnelFieldFilter extends $pb.GeneratedMessage {
     NumericFilter? numericFilter,
     BetweenFilter? betweenFilter,
   }) {
-    final $result = create();
-    if (fieldName != null) {
-      $result.fieldName = fieldName;
-    }
-    if (stringFilter != null) {
-      $result.stringFilter = stringFilter;
-    }
-    if (inListFilter != null) {
-      $result.inListFilter = inListFilter;
-    }
-    if (numericFilter != null) {
-      $result.numericFilter = numericFilter;
-    }
-    if (betweenFilter != null) {
-      $result.betweenFilter = betweenFilter;
-    }
-    return $result;
+    final result = create();
+    if (fieldName != null) result.fieldName = fieldName;
+    if (stringFilter != null) result.stringFilter = stringFilter;
+    if (inListFilter != null) result.inListFilter = inListFilter;
+    if (numericFilter != null) result.numericFilter = numericFilter;
+    if (betweenFilter != null) result.betweenFilter = betweenFilter;
+    return result;
   }
-  FunnelFieldFilter._() : super();
-  factory FunnelFieldFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelFieldFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FunnelFieldFilter._();
+
+  factory FunnelFieldFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelFieldFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, FunnelFieldFilter_OneFilter>
       _FunnelFieldFilter_OneFilterByTag = {
@@ -6765,58 +6005,56 @@ class FunnelFieldFilter extends $pb.GeneratedMessage {
         subBuilder: BetweenFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelFieldFilter clone() => FunnelFieldFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelFieldFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelFieldFilter copyWith(void Function(FunnelFieldFilter) updates) =>
       super.copyWith((message) => updates(message as FunnelFieldFilter))
           as FunnelFieldFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelFieldFilter create() => FunnelFieldFilter._();
+  @$core.override
   FunnelFieldFilter createEmptyInstance() => create();
-  static $pb.PbList<FunnelFieldFilter> createRepeated() =>
-      $pb.PbList<FunnelFieldFilter>();
   @$core.pragma('dart2js:noInline')
   static FunnelFieldFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunnelFieldFilter>(create);
   static FunnelFieldFilter? _defaultInstance;
 
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
   FunnelFieldFilter_OneFilter whichOneFilter() =>
       _FunnelFieldFilter_OneFilterByTag[$_whichOneof(0)]!;
-  void clearOneFilter() => clearField($_whichOneof(0));
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  void clearOneFilter() => $_clearField($_whichOneof(0));
 
   /// The dimension name or metric name.
   @$pb.TagNumber(1)
   $core.String get fieldName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set fieldName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set fieldName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFieldName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFieldName() => clearField(1);
+  void clearFieldName() => $_clearField(1);
 
   /// Strings related filter.
   @$pb.TagNumber(4)
   StringFilter get stringFilter => $_getN(1);
   @$pb.TagNumber(4)
-  set stringFilter(StringFilter v) {
-    setField(4, v);
-  }
-
+  set stringFilter(StringFilter value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasStringFilter() => $_has(1);
   @$pb.TagNumber(4)
-  void clearStringFilter() => clearField(4);
+  void clearStringFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   StringFilter ensureStringFilter() => $_ensure(1);
 
@@ -6824,14 +6062,11 @@ class FunnelFieldFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   InListFilter get inListFilter => $_getN(2);
   @$pb.TagNumber(5)
-  set inListFilter(InListFilter v) {
-    setField(5, v);
-  }
-
+  set inListFilter(InListFilter value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasInListFilter() => $_has(2);
   @$pb.TagNumber(5)
-  void clearInListFilter() => clearField(5);
+  void clearInListFilter() => $_clearField(5);
   @$pb.TagNumber(5)
   InListFilter ensureInListFilter() => $_ensure(2);
 
@@ -6839,14 +6074,11 @@ class FunnelFieldFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   NumericFilter get numericFilter => $_getN(3);
   @$pb.TagNumber(6)
-  set numericFilter(NumericFilter v) {
-    setField(6, v);
-  }
-
+  set numericFilter(NumericFilter value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasNumericFilter() => $_has(3);
   @$pb.TagNumber(6)
-  void clearNumericFilter() => clearField(6);
+  void clearNumericFilter() => $_clearField(6);
   @$pb.TagNumber(6)
   NumericFilter ensureNumericFilter() => $_ensure(3);
 
@@ -6854,14 +6086,11 @@ class FunnelFieldFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   BetweenFilter get betweenFilter => $_getN(4);
   @$pb.TagNumber(7)
-  set betweenFilter(BetweenFilter v) {
-    setField(7, v);
-  }
-
+  set betweenFilter(BetweenFilter value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasBetweenFilter() => $_has(4);
   @$pb.TagNumber(7)
-  void clearBetweenFilter() => clearField(7);
+  void clearBetweenFilter() => $_clearField(7);
   @$pb.TagNumber(7)
   BetweenFilter ensureBetweenFilter() => $_ensure(4);
 }
@@ -6875,22 +6104,21 @@ class FunnelEventFilter extends $pb.GeneratedMessage {
     $core.String? eventName,
     FunnelParameterFilterExpression? funnelParameterFilterExpression,
   }) {
-    final $result = create();
-    if (eventName != null) {
-      $result.eventName = eventName;
-    }
-    if (funnelParameterFilterExpression != null) {
-      $result.funnelParameterFilterExpression = funnelParameterFilterExpression;
-    }
-    return $result;
+    final result = create();
+    if (eventName != null) result.eventName = eventName;
+    if (funnelParameterFilterExpression != null)
+      result.funnelParameterFilterExpression = funnelParameterFilterExpression;
+    return result;
   }
-  FunnelEventFilter._() : super();
-  factory FunnelEventFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelEventFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FunnelEventFilter._();
+
+  factory FunnelEventFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelEventFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FunnelEventFilter',
@@ -6903,24 +6131,20 @@ class FunnelEventFilter extends $pb.GeneratedMessage {
         subBuilder: FunnelParameterFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelEventFilter clone() => FunnelEventFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelEventFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelEventFilter copyWith(void Function(FunnelEventFilter) updates) =>
       super.copyWith((message) => updates(message as FunnelEventFilter))
           as FunnelEventFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelEventFilter create() => FunnelEventFilter._();
+  @$core.override
   FunnelEventFilter createEmptyInstance() => create();
-  static $pb.PbList<FunnelEventFilter> createRepeated() =>
-      $pb.PbList<FunnelEventFilter>();
   @$core.pragma('dart2js:noInline')
   static FunnelEventFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunnelEventFilter>(create);
@@ -6931,32 +6155,27 @@ class FunnelEventFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get eventName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set eventName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set eventName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEventName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEventName() => clearField(1);
+  void clearEventName() => $_clearField(1);
 
-  ///  If specified, this filter matches events that match both the single event
-  ///  name and the parameter filter expressions.
+  /// If specified, this filter matches events that match both the single event
+  /// name and the parameter filter expressions.
   ///
-  ///  Inside the parameter filter expression, only parameter filters are
-  ///  available.
+  /// Inside the parameter filter expression, only parameter filters are
+  /// available.
   @$pb.TagNumber(2)
   FunnelParameterFilterExpression get funnelParameterFilterExpression =>
       $_getN(1);
   @$pb.TagNumber(2)
-  set funnelParameterFilterExpression(FunnelParameterFilterExpression v) {
-    setField(2, v);
-  }
-
+  set funnelParameterFilterExpression(FunnelParameterFilterExpression value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasFunnelParameterFilterExpression() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFunnelParameterFilterExpression() => clearField(2);
+  void clearFunnelParameterFilterExpression() => $_clearField(2);
   @$pb.TagNumber(2)
   FunnelParameterFilterExpression ensureFunnelParameterFilterExpression() =>
       $_ensure(1);
@@ -6978,28 +6197,23 @@ class FunnelParameterFilterExpression extends $pb.GeneratedMessage {
     FunnelParameterFilterExpression? notExpression,
     FunnelParameterFilter? funnelParameterFilter,
   }) {
-    final $result = create();
-    if (andGroup != null) {
-      $result.andGroup = andGroup;
-    }
-    if (orGroup != null) {
-      $result.orGroup = orGroup;
-    }
-    if (notExpression != null) {
-      $result.notExpression = notExpression;
-    }
-    if (funnelParameterFilter != null) {
-      $result.funnelParameterFilter = funnelParameterFilter;
-    }
-    return $result;
+    final result = create();
+    if (andGroup != null) result.andGroup = andGroup;
+    if (orGroup != null) result.orGroup = orGroup;
+    if (notExpression != null) result.notExpression = notExpression;
+    if (funnelParameterFilter != null)
+      result.funnelParameterFilter = funnelParameterFilter;
+    return result;
   }
-  FunnelParameterFilterExpression._() : super();
-  factory FunnelParameterFilterExpression.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelParameterFilterExpression.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FunnelParameterFilterExpression._();
+
+  factory FunnelParameterFilterExpression.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelParameterFilterExpression.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, FunnelParameterFilterExpression_Expr>
       _FunnelParameterFilterExpression_ExprByTag = {
@@ -7029,51 +6243,52 @@ class FunnelParameterFilterExpression extends $pb.GeneratedMessage {
         subBuilder: FunnelParameterFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelParameterFilterExpression clone() =>
-      FunnelParameterFilterExpression()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelParameterFilterExpression clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelParameterFilterExpression copyWith(
           void Function(FunnelParameterFilterExpression) updates) =>
       super.copyWith(
               (message) => updates(message as FunnelParameterFilterExpression))
           as FunnelParameterFilterExpression;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelParameterFilterExpression create() =>
       FunnelParameterFilterExpression._();
+  @$core.override
   FunnelParameterFilterExpression createEmptyInstance() => create();
-  static $pb.PbList<FunnelParameterFilterExpression> createRepeated() =>
-      $pb.PbList<FunnelParameterFilterExpression>();
   @$core.pragma('dart2js:noInline')
   static FunnelParameterFilterExpression getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunnelParameterFilterExpression>(
           create);
   static FunnelParameterFilterExpression? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
   FunnelParameterFilterExpression_Expr whichExpr() =>
       _FunnelParameterFilterExpression_ExprByTag[$_whichOneof(0)]!;
-  void clearExpr() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  void clearExpr() => $_clearField($_whichOneof(0));
 
   /// The FunnelParameterFilterExpression in `andGroup` have an AND
   /// relationship.
   @$pb.TagNumber(1)
   FunnelParameterFilterExpressionList get andGroup => $_getN(0);
   @$pb.TagNumber(1)
-  set andGroup(FunnelParameterFilterExpressionList v) {
-    setField(1, v);
-  }
-
+  set andGroup(FunnelParameterFilterExpressionList value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAndGroup() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAndGroup() => clearField(1);
+  void clearAndGroup() => $_clearField(1);
   @$pb.TagNumber(1)
   FunnelParameterFilterExpressionList ensureAndGroup() => $_ensure(0);
 
@@ -7082,14 +6297,12 @@ class FunnelParameterFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   FunnelParameterFilterExpressionList get orGroup => $_getN(1);
   @$pb.TagNumber(2)
-  set orGroup(FunnelParameterFilterExpressionList v) {
-    setField(2, v);
-  }
-
+  set orGroup(FunnelParameterFilterExpressionList value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOrGroup() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrGroup() => clearField(2);
+  void clearOrGroup() => $_clearField(2);
   @$pb.TagNumber(2)
   FunnelParameterFilterExpressionList ensureOrGroup() => $_ensure(1);
 
@@ -7097,14 +6310,12 @@ class FunnelParameterFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   FunnelParameterFilterExpression get notExpression => $_getN(2);
   @$pb.TagNumber(3)
-  set notExpression(FunnelParameterFilterExpression v) {
-    setField(3, v);
-  }
-
+  set notExpression(FunnelParameterFilterExpression value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasNotExpression() => $_has(2);
   @$pb.TagNumber(3)
-  void clearNotExpression() => clearField(3);
+  void clearNotExpression() => $_clearField(3);
   @$pb.TagNumber(3)
   FunnelParameterFilterExpression ensureNotExpression() => $_ensure(2);
 
@@ -7112,14 +6323,12 @@ class FunnelParameterFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   FunnelParameterFilter get funnelParameterFilter => $_getN(3);
   @$pb.TagNumber(4)
-  set funnelParameterFilter(FunnelParameterFilter v) {
-    setField(4, v);
-  }
-
+  set funnelParameterFilter(FunnelParameterFilter value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasFunnelParameterFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFunnelParameterFilter() => clearField(4);
+  void clearFunnelParameterFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   FunnelParameterFilter ensureFunnelParameterFilter() => $_ensure(3);
 }
@@ -7129,53 +6338,48 @@ class FunnelParameterFilterExpressionList extends $pb.GeneratedMessage {
   factory FunnelParameterFilterExpressionList({
     $core.Iterable<FunnelParameterFilterExpression>? expressions,
   }) {
-    final $result = create();
-    if (expressions != null) {
-      $result.expressions.addAll(expressions);
-    }
-    return $result;
+    final result = create();
+    if (expressions != null) result.expressions.addAll(expressions);
+    return result;
   }
-  FunnelParameterFilterExpressionList._() : super();
+
+  FunnelParameterFilterExpressionList._();
+
   factory FunnelParameterFilterExpressionList.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelParameterFilterExpressionList.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelParameterFilterExpressionList.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FunnelParameterFilterExpressionList',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<FunnelParameterFilterExpression>(
-        1, _omitFieldNames ? '' : 'expressions', $pb.PbFieldType.PM,
+    ..pPM<FunnelParameterFilterExpression>(
+        1, _omitFieldNames ? '' : 'expressions',
         subBuilder: FunnelParameterFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelParameterFilterExpressionList clone() =>
-      FunnelParameterFilterExpressionList()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelParameterFilterExpressionList clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelParameterFilterExpressionList copyWith(
           void Function(FunnelParameterFilterExpressionList) updates) =>
       super.copyWith((message) =>
               updates(message as FunnelParameterFilterExpressionList))
           as FunnelParameterFilterExpressionList;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelParameterFilterExpressionList create() =>
       FunnelParameterFilterExpressionList._();
+  @$core.override
   FunnelParameterFilterExpressionList createEmptyInstance() => create();
-  static $pb.PbList<FunnelParameterFilterExpressionList> createRepeated() =>
-      $pb.PbList<FunnelParameterFilterExpressionList>();
   @$core.pragma('dart2js:noInline')
   static FunnelParameterFilterExpressionList getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -7184,7 +6388,7 @@ class FunnelParameterFilterExpressionList extends $pb.GeneratedMessage {
 
   /// The list of funnel parameter filter expressions.
   @$pb.TagNumber(1)
-  $core.List<FunnelParameterFilterExpression> get expressions => $_getList(0);
+  $pb.PbList<FunnelParameterFilterExpression> get expressions => $_getList(0);
 }
 
 enum FunnelParameterFilter_OneParameter {
@@ -7211,34 +6415,25 @@ class FunnelParameterFilter extends $pb.GeneratedMessage {
     NumericFilter? numericFilter,
     BetweenFilter? betweenFilter,
   }) {
-    final $result = create();
-    if (eventParameterName != null) {
-      $result.eventParameterName = eventParameterName;
-    }
-    if (itemParameterName != null) {
-      $result.itemParameterName = itemParameterName;
-    }
-    if (stringFilter != null) {
-      $result.stringFilter = stringFilter;
-    }
-    if (inListFilter != null) {
-      $result.inListFilter = inListFilter;
-    }
-    if (numericFilter != null) {
-      $result.numericFilter = numericFilter;
-    }
-    if (betweenFilter != null) {
-      $result.betweenFilter = betweenFilter;
-    }
-    return $result;
+    final result = create();
+    if (eventParameterName != null)
+      result.eventParameterName = eventParameterName;
+    if (itemParameterName != null) result.itemParameterName = itemParameterName;
+    if (stringFilter != null) result.stringFilter = stringFilter;
+    if (inListFilter != null) result.inListFilter = inListFilter;
+    if (numericFilter != null) result.numericFilter = numericFilter;
+    if (betweenFilter != null) result.betweenFilter = betweenFilter;
+    return result;
   }
-  FunnelParameterFilter._() : super();
-  factory FunnelParameterFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelParameterFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FunnelParameterFilter._();
+
+  factory FunnelParameterFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelParameterFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, FunnelParameterFilter_OneParameter>
       _FunnelParameterFilter_OneParameterByTag = {
@@ -7273,94 +6468,92 @@ class FunnelParameterFilter extends $pb.GeneratedMessage {
         subBuilder: BetweenFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelParameterFilter clone() =>
-      FunnelParameterFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelParameterFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelParameterFilter copyWith(
           void Function(FunnelParameterFilter) updates) =>
       super.copyWith((message) => updates(message as FunnelParameterFilter))
           as FunnelParameterFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelParameterFilter create() => FunnelParameterFilter._();
+  @$core.override
   FunnelParameterFilter createEmptyInstance() => create();
-  static $pb.PbList<FunnelParameterFilter> createRepeated() =>
-      $pb.PbList<FunnelParameterFilter>();
   @$core.pragma('dart2js:noInline')
   static FunnelParameterFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunnelParameterFilter>(create);
   static FunnelParameterFilter? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   FunnelParameterFilter_OneParameter whichOneParameter() =>
       _FunnelParameterFilter_OneParameterByTag[$_whichOneof(0)]!;
-  void clearOneParameter() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearOneParameter() => $_clearField($_whichOneof(0));
 
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
   FunnelParameterFilter_OneFilter whichOneFilter() =>
       _FunnelParameterFilter_OneFilterByTag[$_whichOneof(1)]!;
-  void clearOneFilter() => clearField($_whichOneof(1));
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  void clearOneFilter() => $_clearField($_whichOneof(1));
 
-  ///  This filter will be evaluated on the specified event parameter. Event
-  ///  parameters are logged as parameters of the event. Event parameters
-  ///  include fields like "firebase_screen" & "currency".
+  /// This filter will be evaluated on the specified event parameter. Event
+  /// parameters are logged as parameters of the event. Event parameters
+  /// include fields like "firebase_screen" & "currency".
   ///
-  ///  Event parameters can only be used in segments & funnels and can only be
-  ///  used in a descendent filter from an EventFilter. In a descendent filter
-  ///  from an EventFilter either event or item parameters should be used.
+  /// Event parameters can only be used in segments & funnels and can only be
+  /// used in a descendent filter from an EventFilter. In a descendent filter
+  /// from an EventFilter either event or item parameters should be used.
   @$pb.TagNumber(1)
   $core.String get eventParameterName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set eventParameterName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set eventParameterName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEventParameterName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEventParameterName() => clearField(1);
+  void clearEventParameterName() => $_clearField(1);
 
-  ///  This filter will be evaluated on the specified item parameter. Item
-  ///  parameters are logged as parameters in the item array. Item parameters
-  ///  include fields like "item_name" & "item_category".
+  /// This filter will be evaluated on the specified item parameter. Item
+  /// parameters are logged as parameters in the item array. Item parameters
+  /// include fields like "item_name" & "item_category".
   ///
-  ///  Item parameters can only be used in segments & funnels and can only be
-  ///  used in a descendent filter from an EventFilter. In a descendent filter
-  ///  from an EventFilter either event or item parameters should be used.
+  /// Item parameters can only be used in segments & funnels and can only be
+  /// used in a descendent filter from an EventFilter. In a descendent filter
+  /// from an EventFilter either event or item parameters should be used.
   ///
-  ///  Item parameters are only available in ecommerce events. To learn more
-  ///  about ecommerce events, see the [Measure ecommerce]
-  ///  (https://developers.google.com/analytics/devguides/collection/ga4/ecommerce)
-  ///  guide.
+  /// Item parameters are only available in ecommerce events. To learn more
+  /// about ecommerce events, see the [Measure ecommerce]
+  /// (https://developers.google.com/analytics/devguides/collection/ga4/ecommerce)
+  /// guide.
   @$pb.TagNumber(2)
   $core.String get itemParameterName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set itemParameterName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set itemParameterName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasItemParameterName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearItemParameterName() => clearField(2);
+  void clearItemParameterName() => $_clearField(2);
 
   /// Strings related filter.
   @$pb.TagNumber(4)
   StringFilter get stringFilter => $_getN(2);
   @$pb.TagNumber(4)
-  set stringFilter(StringFilter v) {
-    setField(4, v);
-  }
-
+  set stringFilter(StringFilter value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasStringFilter() => $_has(2);
   @$pb.TagNumber(4)
-  void clearStringFilter() => clearField(4);
+  void clearStringFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   StringFilter ensureStringFilter() => $_ensure(2);
 
@@ -7368,14 +6561,11 @@ class FunnelParameterFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   InListFilter get inListFilter => $_getN(3);
   @$pb.TagNumber(5)
-  set inListFilter(InListFilter v) {
-    setField(5, v);
-  }
-
+  set inListFilter(InListFilter value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasInListFilter() => $_has(3);
   @$pb.TagNumber(5)
-  void clearInListFilter() => clearField(5);
+  void clearInListFilter() => $_clearField(5);
   @$pb.TagNumber(5)
   InListFilter ensureInListFilter() => $_ensure(3);
 
@@ -7383,14 +6573,11 @@ class FunnelParameterFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   NumericFilter get numericFilter => $_getN(4);
   @$pb.TagNumber(6)
-  set numericFilter(NumericFilter v) {
-    setField(6, v);
-  }
-
+  set numericFilter(NumericFilter value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasNumericFilter() => $_has(4);
   @$pb.TagNumber(6)
-  void clearNumericFilter() => clearField(6);
+  void clearNumericFilter() => $_clearField(6);
   @$pb.TagNumber(6)
   NumericFilter ensureNumericFilter() => $_ensure(4);
 
@@ -7398,14 +6585,11 @@ class FunnelParameterFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   BetweenFilter get betweenFilter => $_getN(5);
   @$pb.TagNumber(7)
-  set betweenFilter(BetweenFilter v) {
-    setField(7, v);
-  }
-
+  set betweenFilter(BetweenFilter value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasBetweenFilter() => $_has(5);
   @$pb.TagNumber(7)
-  void clearBetweenFilter() => clearField(7);
+  void clearBetweenFilter() => $_clearField(7);
   @$pb.TagNumber(7)
   BetweenFilter ensureBetweenFilter() => $_ensure(5);
 }
@@ -7416,65 +6600,60 @@ class FunnelResponseMetadata extends $pb.GeneratedMessage {
   factory FunnelResponseMetadata({
     $core.Iterable<SamplingMetadata>? samplingMetadatas,
   }) {
-    final $result = create();
-    if (samplingMetadatas != null) {
-      $result.samplingMetadatas.addAll(samplingMetadatas);
-    }
-    return $result;
+    final result = create();
+    if (samplingMetadatas != null)
+      result.samplingMetadatas.addAll(samplingMetadatas);
+    return result;
   }
-  FunnelResponseMetadata._() : super();
-  factory FunnelResponseMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FunnelResponseMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FunnelResponseMetadata._();
+
+  factory FunnelResponseMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FunnelResponseMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FunnelResponseMetadata',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.data.v1alpha'),
       createEmptyInstance: create)
-    ..pc<SamplingMetadata>(
-        1, _omitFieldNames ? '' : 'samplingMetadatas', $pb.PbFieldType.PM,
+    ..pPM<SamplingMetadata>(1, _omitFieldNames ? '' : 'samplingMetadatas',
         subBuilder: SamplingMetadata.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FunnelResponseMetadata clone() =>
-      FunnelResponseMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FunnelResponseMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FunnelResponseMetadata copyWith(
           void Function(FunnelResponseMetadata) updates) =>
       super.copyWith((message) => updates(message as FunnelResponseMetadata))
           as FunnelResponseMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FunnelResponseMetadata create() => FunnelResponseMetadata._();
+  @$core.override
   FunnelResponseMetadata createEmptyInstance() => create();
-  static $pb.PbList<FunnelResponseMetadata> createRepeated() =>
-      $pb.PbList<FunnelResponseMetadata>();
   @$core.pragma('dart2js:noInline')
   static FunnelResponseMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunnelResponseMetadata>(create);
   static FunnelResponseMetadata? _defaultInstance;
 
-  ///  If funnel report results are
-  ///  [sampled](https://support.google.com/analytics/answer/13331292), this
-  ///  describes what percentage of events were used in this funnel report. One
-  ///  `samplingMetadatas` is populated for each date range. Each
-  ///  `samplingMetadatas` corresponds to a date range in the order that date
-  ///  ranges were specified in the request.
+  /// If funnel report results are
+  /// [sampled](https://support.google.com/analytics/answer/13331292), this
+  /// describes what percentage of events were used in this funnel report. One
+  /// `samplingMetadatas` is populated for each date range. Each
+  /// `samplingMetadatas` corresponds to a date range in the order that date
+  /// ranges were specified in the request.
   ///
-  ///  However if the results are not sampled, this field will not be defined.
+  /// However if the results are not sampled, this field will not be defined.
   @$pb.TagNumber(1)
-  $core.List<SamplingMetadata> get samplingMetadatas => $_getList(0);
+  $pb.PbList<SamplingMetadata> get samplingMetadatas => $_getList(0);
 }
 
 /// If funnel report results are
@@ -7488,22 +6667,20 @@ class SamplingMetadata extends $pb.GeneratedMessage {
     $fixnum.Int64? samplesReadCount,
     $fixnum.Int64? samplingSpaceSize,
   }) {
-    final $result = create();
-    if (samplesReadCount != null) {
-      $result.samplesReadCount = samplesReadCount;
-    }
-    if (samplingSpaceSize != null) {
-      $result.samplingSpaceSize = samplingSpaceSize;
-    }
-    return $result;
+    final result = create();
+    if (samplesReadCount != null) result.samplesReadCount = samplesReadCount;
+    if (samplingSpaceSize != null) result.samplingSpaceSize = samplingSpaceSize;
+    return result;
   }
-  SamplingMetadata._() : super();
-  factory SamplingMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SamplingMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SamplingMetadata._();
+
+  factory SamplingMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SamplingMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SamplingMetadata',
@@ -7514,24 +6691,20 @@ class SamplingMetadata extends $pb.GeneratedMessage {
     ..aInt64(2, _omitFieldNames ? '' : 'samplingSpaceSize')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SamplingMetadata clone() => SamplingMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SamplingMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SamplingMetadata copyWith(void Function(SamplingMetadata) updates) =>
       super.copyWith((message) => updates(message as SamplingMetadata))
           as SamplingMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SamplingMetadata create() => SamplingMetadata._();
+  @$core.override
   SamplingMetadata createEmptyInstance() => create();
-  static $pb.PbList<SamplingMetadata> createRepeated() =>
-      $pb.PbList<SamplingMetadata>();
   @$core.pragma('dart2js:noInline')
   static SamplingMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SamplingMetadata>(create);
@@ -7543,35 +6716,30 @@ class SamplingMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $fixnum.Int64 get samplesReadCount => $_getI64(0);
   @$pb.TagNumber(1)
-  set samplesReadCount($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set samplesReadCount($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSamplesReadCount() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSamplesReadCount() => clearField(1);
+  void clearSamplesReadCount() => $_clearField(1);
 
-  ///  The total number of events present in this property's data that could
-  ///  have been analyzed in this funnel report for a date range. Sampling
-  ///  uncovers the meaningful information about the larger data set, and this
-  ///  is the size of the larger data set.
+  /// The total number of events present in this property's data that could
+  /// have been analyzed in this funnel report for a date range. Sampling
+  /// uncovers the meaningful information about the larger data set, and this
+  /// is the size of the larger data set.
   ///
-  ///  To calculate the percentage of available data that was used in this
-  ///  funnel report, compute `samplesReadCount/samplingSpaceSize`.
+  /// To calculate the percentage of available data that was used in this
+  /// funnel report, compute `samplesReadCount/samplingSpaceSize`.
   @$pb.TagNumber(2)
   $fixnum.Int64 get samplingSpaceSize => $_getI64(1);
   @$pb.TagNumber(2)
-  set samplingSpaceSize($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set samplingSpaceSize($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSamplingSpaceSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSamplingSpaceSize() => clearField(2);
+  void clearSamplingSpaceSize() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

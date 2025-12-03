@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/analytics/admin/v1beta/access_report.proto
-//
-// @dart = 2.12
+// Generated from google/analytics/admin/v1beta/access_report.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,6 +16,8 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'access_report.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'access_report.pbenum.dart';
 
@@ -25,19 +28,19 @@ class AccessDimension extends $pb.GeneratedMessage {
   factory AccessDimension({
     $core.String? dimensionName,
   }) {
-    final $result = create();
-    if (dimensionName != null) {
-      $result.dimensionName = dimensionName;
-    }
-    return $result;
+    final result = create();
+    if (dimensionName != null) result.dimensionName = dimensionName;
+    return result;
   }
-  AccessDimension._() : super();
-  factory AccessDimension.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessDimension.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessDimension._();
+
+  factory AccessDimension.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessDimension.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessDimension',
@@ -47,45 +50,38 @@ class AccessDimension extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'dimensionName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessDimension clone() => AccessDimension()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessDimension clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessDimension copyWith(void Function(AccessDimension) updates) =>
       super.copyWith((message) => updates(message as AccessDimension))
           as AccessDimension;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessDimension create() => AccessDimension._();
+  @$core.override
   AccessDimension createEmptyInstance() => create();
-  static $pb.PbList<AccessDimension> createRepeated() =>
-      $pb.PbList<AccessDimension>();
   @$core.pragma('dart2js:noInline')
   static AccessDimension getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessDimension>(create);
   static AccessDimension? _defaultInstance;
 
-  ///  The API name of the dimension. See [Data Access
-  ///  Schema](https://developers.google.com/analytics/devguides/config/admin/v1/access-api-schema)
-  ///  for the list of dimensions supported in this API.
+  /// The API name of the dimension. See [Data Access
+  /// Schema](https://developers.google.com/analytics/devguides/config/admin/v1/access-api-schema)
+  /// for the list of dimensions supported in this API.
   ///
-  ///  Dimensions are referenced by name in `dimensionFilter` and `orderBys`.
+  /// Dimensions are referenced by name in `dimensionFilter` and `orderBys`.
   @$pb.TagNumber(1)
   $core.String get dimensionName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set dimensionName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set dimensionName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDimensionName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDimensionName() => clearField(1);
+  void clearDimensionName() => $_clearField(1);
 }
 
 /// The quantitative measurements of a report. For example, the metric
@@ -94,19 +90,19 @@ class AccessMetric extends $pb.GeneratedMessage {
   factory AccessMetric({
     $core.String? metricName,
   }) {
-    final $result = create();
-    if (metricName != null) {
-      $result.metricName = metricName;
-    }
-    return $result;
+    final result = create();
+    if (metricName != null) result.metricName = metricName;
+    return result;
   }
-  AccessMetric._() : super();
-  factory AccessMetric.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessMetric.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessMetric._();
+
+  factory AccessMetric.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessMetric.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessMetric',
@@ -116,45 +112,38 @@ class AccessMetric extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'metricName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessMetric clone() => AccessMetric()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessMetric clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessMetric copyWith(void Function(AccessMetric) updates) =>
       super.copyWith((message) => updates(message as AccessMetric))
           as AccessMetric;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessMetric create() => AccessMetric._();
+  @$core.override
   AccessMetric createEmptyInstance() => create();
-  static $pb.PbList<AccessMetric> createRepeated() =>
-      $pb.PbList<AccessMetric>();
   @$core.pragma('dart2js:noInline')
   static AccessMetric getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessMetric>(create);
   static AccessMetric? _defaultInstance;
 
-  ///  The API name of the metric. See [Data Access
-  ///  Schema](https://developers.google.com/analytics/devguides/config/admin/v1/access-api-schema)
-  ///  for the list of metrics supported in this API.
+  /// The API name of the metric. See [Data Access
+  /// Schema](https://developers.google.com/analytics/devguides/config/admin/v1/access-api-schema)
+  /// for the list of metrics supported in this API.
   ///
-  ///  Metrics are referenced by name in `metricFilter` & `orderBys`.
+  /// Metrics are referenced by name in `metricFilter` & `orderBys`.
   @$pb.TagNumber(1)
   $core.String get metricName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set metricName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set metricName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMetricName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMetricName() => clearField(1);
+  void clearMetricName() => $_clearField(1);
 }
 
 /// A contiguous range of days: startDate, startDate + 1, ..., endDate.
@@ -163,22 +152,20 @@ class AccessDateRange extends $pb.GeneratedMessage {
     $core.String? startDate,
     $core.String? endDate,
   }) {
-    final $result = create();
-    if (startDate != null) {
-      $result.startDate = startDate;
-    }
-    if (endDate != null) {
-      $result.endDate = endDate;
-    }
-    return $result;
+    final result = create();
+    if (startDate != null) result.startDate = startDate;
+    if (endDate != null) result.endDate = endDate;
+    return result;
   }
-  AccessDateRange._() : super();
-  factory AccessDateRange.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessDateRange.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessDateRange._();
+
+  factory AccessDateRange.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessDateRange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessDateRange',
@@ -189,24 +176,20 @@ class AccessDateRange extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'endDate')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessDateRange clone() => AccessDateRange()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessDateRange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessDateRange copyWith(void Function(AccessDateRange) updates) =>
       super.copyWith((message) => updates(message as AccessDateRange))
           as AccessDateRange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessDateRange create() => AccessDateRange._();
+  @$core.override
   AccessDateRange createEmptyInstance() => create();
-  static $pb.PbList<AccessDateRange> createRepeated() =>
-      $pb.PbList<AccessDateRange>();
   @$core.pragma('dart2js:noInline')
   static AccessDateRange getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessDateRange>(create);
@@ -219,14 +202,11 @@ class AccessDateRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get startDate => $_getSZ(0);
   @$pb.TagNumber(1)
-  set startDate($core.String v) {
-    $_setString(0, v);
-  }
-
+  set startDate($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasStartDate() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStartDate() => clearField(1);
+  void clearStartDate() => $_clearField(1);
 
   /// The inclusive end date for the query in the format `YYYY-MM-DD`. Cannot
   /// be before `startDate`. The format `NdaysAgo`, `yesterday`, or `today` is
@@ -235,14 +215,11 @@ class AccessDateRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get endDate => $_getSZ(1);
   @$pb.TagNumber(2)
-  set endDate($core.String v) {
-    $_setString(1, v);
-  }
-
+  set endDate($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEndDate() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEndDate() => clearField(2);
+  void clearEndDate() => $_clearField(2);
 }
 
 enum AccessFilterExpression_OneExpression {
@@ -262,28 +239,22 @@ class AccessFilterExpression extends $pb.GeneratedMessage {
     AccessFilterExpression? notExpression,
     AccessFilter? accessFilter,
   }) {
-    final $result = create();
-    if (andGroup != null) {
-      $result.andGroup = andGroup;
-    }
-    if (orGroup != null) {
-      $result.orGroup = orGroup;
-    }
-    if (notExpression != null) {
-      $result.notExpression = notExpression;
-    }
-    if (accessFilter != null) {
-      $result.accessFilter = accessFilter;
-    }
-    return $result;
+    final result = create();
+    if (andGroup != null) result.andGroup = andGroup;
+    if (orGroup != null) result.orGroup = orGroup;
+    if (notExpression != null) result.notExpression = notExpression;
+    if (accessFilter != null) result.accessFilter = accessFilter;
+    return result;
   }
-  AccessFilterExpression._() : super();
-  factory AccessFilterExpression.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessFilterExpression.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessFilterExpression._();
+
+  factory AccessFilterExpression.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessFilterExpression.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, AccessFilterExpression_OneExpression>
       _AccessFilterExpression_OneExpressionByTag = {
@@ -309,47 +280,47 @@ class AccessFilterExpression extends $pb.GeneratedMessage {
         subBuilder: AccessFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessFilterExpression clone() =>
-      AccessFilterExpression()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessFilterExpression clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessFilterExpression copyWith(
           void Function(AccessFilterExpression) updates) =>
       super.copyWith((message) => updates(message as AccessFilterExpression))
           as AccessFilterExpression;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessFilterExpression create() => AccessFilterExpression._();
+  @$core.override
   AccessFilterExpression createEmptyInstance() => create();
-  static $pb.PbList<AccessFilterExpression> createRepeated() =>
-      $pb.PbList<AccessFilterExpression>();
   @$core.pragma('dart2js:noInline')
   static AccessFilterExpression getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessFilterExpression>(create);
   static AccessFilterExpression? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
   AccessFilterExpression_OneExpression whichOneExpression() =>
       _AccessFilterExpression_OneExpressionByTag[$_whichOneof(0)]!;
-  void clearOneExpression() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  void clearOneExpression() => $_clearField($_whichOneof(0));
 
   /// Each of the FilterExpressions in the and_group has an AND relationship.
   @$pb.TagNumber(1)
   AccessFilterExpressionList get andGroup => $_getN(0);
   @$pb.TagNumber(1)
-  set andGroup(AccessFilterExpressionList v) {
-    setField(1, v);
-  }
-
+  set andGroup(AccessFilterExpressionList value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAndGroup() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAndGroup() => clearField(1);
+  void clearAndGroup() => $_clearField(1);
   @$pb.TagNumber(1)
   AccessFilterExpressionList ensureAndGroup() => $_ensure(0);
 
@@ -357,14 +328,11 @@ class AccessFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   AccessFilterExpressionList get orGroup => $_getN(1);
   @$pb.TagNumber(2)
-  set orGroup(AccessFilterExpressionList v) {
-    setField(2, v);
-  }
-
+  set orGroup(AccessFilterExpressionList value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOrGroup() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrGroup() => clearField(2);
+  void clearOrGroup() => $_clearField(2);
   @$pb.TagNumber(2)
   AccessFilterExpressionList ensureOrGroup() => $_ensure(1);
 
@@ -372,14 +340,11 @@ class AccessFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   AccessFilterExpression get notExpression => $_getN(2);
   @$pb.TagNumber(3)
-  set notExpression(AccessFilterExpression v) {
-    setField(3, v);
-  }
-
+  set notExpression(AccessFilterExpression value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasNotExpression() => $_has(2);
   @$pb.TagNumber(3)
-  void clearNotExpression() => clearField(3);
+  void clearNotExpression() => $_clearField(3);
   @$pb.TagNumber(3)
   AccessFilterExpression ensureNotExpression() => $_ensure(2);
 
@@ -388,14 +353,11 @@ class AccessFilterExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   AccessFilter get accessFilter => $_getN(3);
   @$pb.TagNumber(4)
-  set accessFilter(AccessFilter v) {
-    setField(4, v);
-  }
-
+  set accessFilter(AccessFilter value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasAccessFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAccessFilter() => clearField(4);
+  void clearAccessFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   AccessFilter ensureAccessFilter() => $_ensure(3);
 }
@@ -405,51 +367,45 @@ class AccessFilterExpressionList extends $pb.GeneratedMessage {
   factory AccessFilterExpressionList({
     $core.Iterable<AccessFilterExpression>? expressions,
   }) {
-    final $result = create();
-    if (expressions != null) {
-      $result.expressions.addAll(expressions);
-    }
-    return $result;
+    final result = create();
+    if (expressions != null) result.expressions.addAll(expressions);
+    return result;
   }
-  AccessFilterExpressionList._() : super();
-  factory AccessFilterExpressionList.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessFilterExpressionList.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessFilterExpressionList._();
+
+  factory AccessFilterExpressionList.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessFilterExpressionList.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessFilterExpressionList',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
       createEmptyInstance: create)
-    ..pc<AccessFilterExpression>(
-        1, _omitFieldNames ? '' : 'expressions', $pb.PbFieldType.PM,
+    ..pPM<AccessFilterExpression>(1, _omitFieldNames ? '' : 'expressions',
         subBuilder: AccessFilterExpression.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessFilterExpressionList clone() =>
-      AccessFilterExpressionList()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessFilterExpressionList clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessFilterExpressionList copyWith(
           void Function(AccessFilterExpressionList) updates) =>
       super.copyWith(
               (message) => updates(message as AccessFilterExpressionList))
           as AccessFilterExpressionList;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessFilterExpressionList create() => AccessFilterExpressionList._();
+  @$core.override
   AccessFilterExpressionList createEmptyInstance() => create();
-  static $pb.PbList<AccessFilterExpressionList> createRepeated() =>
-      $pb.PbList<AccessFilterExpressionList>();
   @$core.pragma('dart2js:noInline')
   static AccessFilterExpressionList getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessFilterExpressionList>(create);
@@ -457,7 +413,7 @@ class AccessFilterExpressionList extends $pb.GeneratedMessage {
 
   /// A list of filter expressions.
   @$pb.TagNumber(1)
-  $core.List<AccessFilterExpression> get expressions => $_getList(0);
+  $pb.PbList<AccessFilterExpression> get expressions => $_getList(0);
 }
 
 enum AccessFilter_OneFilter {
@@ -477,31 +433,23 @@ class AccessFilter extends $pb.GeneratedMessage {
     AccessNumericFilter? numericFilter,
     AccessBetweenFilter? betweenFilter,
   }) {
-    final $result = create();
-    if (fieldName != null) {
-      $result.fieldName = fieldName;
-    }
-    if (stringFilter != null) {
-      $result.stringFilter = stringFilter;
-    }
-    if (inListFilter != null) {
-      $result.inListFilter = inListFilter;
-    }
-    if (numericFilter != null) {
-      $result.numericFilter = numericFilter;
-    }
-    if (betweenFilter != null) {
-      $result.betweenFilter = betweenFilter;
-    }
-    return $result;
+    final result = create();
+    if (fieldName != null) result.fieldName = fieldName;
+    if (stringFilter != null) result.stringFilter = stringFilter;
+    if (inListFilter != null) result.inListFilter = inListFilter;
+    if (numericFilter != null) result.numericFilter = numericFilter;
+    if (betweenFilter != null) result.betweenFilter = betweenFilter;
+    return result;
   }
-  AccessFilter._() : super();
-  factory AccessFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessFilter._();
+
+  factory AccessFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, AccessFilter_OneFilter>
       _AccessFilter_OneFilterByTag = {
@@ -528,58 +476,56 @@ class AccessFilter extends $pb.GeneratedMessage {
         subBuilder: AccessBetweenFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessFilter clone() => AccessFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessFilter copyWith(void Function(AccessFilter) updates) =>
       super.copyWith((message) => updates(message as AccessFilter))
           as AccessFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessFilter create() => AccessFilter._();
+  @$core.override
   AccessFilter createEmptyInstance() => create();
-  static $pb.PbList<AccessFilter> createRepeated() =>
-      $pb.PbList<AccessFilter>();
   @$core.pragma('dart2js:noInline')
   static AccessFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessFilter>(create);
   static AccessFilter? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
   AccessFilter_OneFilter whichOneFilter() =>
       _AccessFilter_OneFilterByTag[$_whichOneof(0)]!;
-  void clearOneFilter() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearOneFilter() => $_clearField($_whichOneof(0));
 
   /// The dimension name or metric name.
   @$pb.TagNumber(1)
   $core.String get fieldName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set fieldName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set fieldName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFieldName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFieldName() => clearField(1);
+  void clearFieldName() => $_clearField(1);
 
   /// Strings related filter.
   @$pb.TagNumber(2)
   AccessStringFilter get stringFilter => $_getN(1);
   @$pb.TagNumber(2)
-  set stringFilter(AccessStringFilter v) {
-    setField(2, v);
-  }
-
+  set stringFilter(AccessStringFilter value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasStringFilter() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStringFilter() => clearField(2);
+  void clearStringFilter() => $_clearField(2);
   @$pb.TagNumber(2)
   AccessStringFilter ensureStringFilter() => $_ensure(1);
 
@@ -587,14 +533,11 @@ class AccessFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   AccessInListFilter get inListFilter => $_getN(2);
   @$pb.TagNumber(3)
-  set inListFilter(AccessInListFilter v) {
-    setField(3, v);
-  }
-
+  set inListFilter(AccessInListFilter value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasInListFilter() => $_has(2);
   @$pb.TagNumber(3)
-  void clearInListFilter() => clearField(3);
+  void clearInListFilter() => $_clearField(3);
   @$pb.TagNumber(3)
   AccessInListFilter ensureInListFilter() => $_ensure(2);
 
@@ -602,14 +545,11 @@ class AccessFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   AccessNumericFilter get numericFilter => $_getN(3);
   @$pb.TagNumber(4)
-  set numericFilter(AccessNumericFilter v) {
-    setField(4, v);
-  }
-
+  set numericFilter(AccessNumericFilter value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasNumericFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearNumericFilter() => clearField(4);
+  void clearNumericFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   AccessNumericFilter ensureNumericFilter() => $_ensure(3);
 
@@ -617,14 +557,11 @@ class AccessFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   AccessBetweenFilter get betweenFilter => $_getN(4);
   @$pb.TagNumber(5)
-  set betweenFilter(AccessBetweenFilter v) {
-    setField(5, v);
-  }
-
+  set betweenFilter(AccessBetweenFilter value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasBetweenFilter() => $_has(4);
   @$pb.TagNumber(5)
-  void clearBetweenFilter() => clearField(5);
+  void clearBetweenFilter() => $_clearField(5);
   @$pb.TagNumber(5)
   AccessBetweenFilter ensureBetweenFilter() => $_ensure(4);
 }
@@ -636,58 +573,47 @@ class AccessStringFilter extends $pb.GeneratedMessage {
     $core.String? value,
     $core.bool? caseSensitive,
   }) {
-    final $result = create();
-    if (matchType != null) {
-      $result.matchType = matchType;
-    }
-    if (value != null) {
-      $result.value = value;
-    }
-    if (caseSensitive != null) {
-      $result.caseSensitive = caseSensitive;
-    }
-    return $result;
+    final result = create();
+    if (matchType != null) result.matchType = matchType;
+    if (value != null) result.value = value;
+    if (caseSensitive != null) result.caseSensitive = caseSensitive;
+    return result;
   }
-  AccessStringFilter._() : super();
-  factory AccessStringFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessStringFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessStringFilter._();
+
+  factory AccessStringFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessStringFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessStringFilter',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
       createEmptyInstance: create)
-    ..e<AccessStringFilter_MatchType>(
-        1, _omitFieldNames ? '' : 'matchType', $pb.PbFieldType.OE,
-        defaultOrMaker: AccessStringFilter_MatchType.MATCH_TYPE_UNSPECIFIED,
-        valueOf: AccessStringFilter_MatchType.valueOf,
+    ..aE<AccessStringFilter_MatchType>(1, _omitFieldNames ? '' : 'matchType',
         enumValues: AccessStringFilter_MatchType.values)
     ..aOS(2, _omitFieldNames ? '' : 'value')
     ..aOB(3, _omitFieldNames ? '' : 'caseSensitive')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessStringFilter clone() => AccessStringFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessStringFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessStringFilter copyWith(void Function(AccessStringFilter) updates) =>
       super.copyWith((message) => updates(message as AccessStringFilter))
           as AccessStringFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessStringFilter create() => AccessStringFilter._();
+  @$core.override
   AccessStringFilter createEmptyInstance() => create();
-  static $pb.PbList<AccessStringFilter> createRepeated() =>
-      $pb.PbList<AccessStringFilter>();
   @$core.pragma('dart2js:noInline')
   static AccessStringFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessStringFilter>(create);
@@ -697,40 +623,31 @@ class AccessStringFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AccessStringFilter_MatchType get matchType => $_getN(0);
   @$pb.TagNumber(1)
-  set matchType(AccessStringFilter_MatchType v) {
-    setField(1, v);
-  }
-
+  set matchType(AccessStringFilter_MatchType value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasMatchType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMatchType() => clearField(1);
+  void clearMatchType() => $_clearField(1);
 
   /// The string value used for the matching.
   @$pb.TagNumber(2)
   $core.String get value => $_getSZ(1);
   @$pb.TagNumber(2)
-  set value($core.String v) {
-    $_setString(1, v);
-  }
-
+  set value($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValue() => clearField(2);
+  void clearValue() => $_clearField(2);
 
   /// If true, the string value is case sensitive.
   @$pb.TagNumber(3)
   $core.bool get caseSensitive => $_getBF(2);
   @$pb.TagNumber(3)
-  set caseSensitive($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set caseSensitive($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasCaseSensitive() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCaseSensitive() => clearField(3);
+  void clearCaseSensitive() => $_clearField(3);
 }
 
 /// The result needs to be in a list of string values.
@@ -739,22 +656,20 @@ class AccessInListFilter extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? values,
     $core.bool? caseSensitive,
   }) {
-    final $result = create();
-    if (values != null) {
-      $result.values.addAll(values);
-    }
-    if (caseSensitive != null) {
-      $result.caseSensitive = caseSensitive;
-    }
-    return $result;
+    final result = create();
+    if (values != null) result.values.addAll(values);
+    if (caseSensitive != null) result.caseSensitive = caseSensitive;
+    return result;
   }
-  AccessInListFilter._() : super();
-  factory AccessInListFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessInListFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessInListFilter._();
+
+  factory AccessInListFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessInListFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessInListFilter',
@@ -765,24 +680,20 @@ class AccessInListFilter extends $pb.GeneratedMessage {
     ..aOB(2, _omitFieldNames ? '' : 'caseSensitive')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessInListFilter clone() => AccessInListFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessInListFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessInListFilter copyWith(void Function(AccessInListFilter) updates) =>
       super.copyWith((message) => updates(message as AccessInListFilter))
           as AccessInListFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessInListFilter create() => AccessInListFilter._();
+  @$core.override
   AccessInListFilter createEmptyInstance() => create();
-  static $pb.PbList<AccessInListFilter> createRepeated() =>
-      $pb.PbList<AccessInListFilter>();
   @$core.pragma('dart2js:noInline')
   static AccessInListFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessInListFilter>(create);
@@ -790,20 +701,17 @@ class AccessInListFilter extends $pb.GeneratedMessage {
 
   /// The list of string values. Must be non-empty.
   @$pb.TagNumber(1)
-  $core.List<$core.String> get values => $_getList(0);
+  $pb.PbList<$core.String> get values => $_getList(0);
 
   /// If true, the string value is case sensitive.
   @$pb.TagNumber(2)
   $core.bool get caseSensitive => $_getBF(1);
   @$pb.TagNumber(2)
-  set caseSensitive($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set caseSensitive($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCaseSensitive() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCaseSensitive() => clearField(2);
+  void clearCaseSensitive() => $_clearField(2);
 }
 
 /// Filters for numeric or date values.
@@ -812,55 +720,46 @@ class AccessNumericFilter extends $pb.GeneratedMessage {
     AccessNumericFilter_Operation? operation,
     NumericValue? value,
   }) {
-    final $result = create();
-    if (operation != null) {
-      $result.operation = operation;
-    }
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (operation != null) result.operation = operation;
+    if (value != null) result.value = value;
+    return result;
   }
-  AccessNumericFilter._() : super();
-  factory AccessNumericFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessNumericFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessNumericFilter._();
+
+  factory AccessNumericFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessNumericFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessNumericFilter',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
       createEmptyInstance: create)
-    ..e<AccessNumericFilter_Operation>(
-        1, _omitFieldNames ? '' : 'operation', $pb.PbFieldType.OE,
-        defaultOrMaker: AccessNumericFilter_Operation.OPERATION_UNSPECIFIED,
-        valueOf: AccessNumericFilter_Operation.valueOf,
+    ..aE<AccessNumericFilter_Operation>(1, _omitFieldNames ? '' : 'operation',
         enumValues: AccessNumericFilter_Operation.values)
     ..aOM<NumericValue>(2, _omitFieldNames ? '' : 'value',
         subBuilder: NumericValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessNumericFilter clone() => AccessNumericFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessNumericFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessNumericFilter copyWith(void Function(AccessNumericFilter) updates) =>
       super.copyWith((message) => updates(message as AccessNumericFilter))
           as AccessNumericFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessNumericFilter create() => AccessNumericFilter._();
+  @$core.override
   AccessNumericFilter createEmptyInstance() => create();
-  static $pb.PbList<AccessNumericFilter> createRepeated() =>
-      $pb.PbList<AccessNumericFilter>();
   @$core.pragma('dart2js:noInline')
   static AccessNumericFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessNumericFilter>(create);
@@ -870,27 +769,21 @@ class AccessNumericFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AccessNumericFilter_Operation get operation => $_getN(0);
   @$pb.TagNumber(1)
-  set operation(AccessNumericFilter_Operation v) {
-    setField(1, v);
-  }
-
+  set operation(AccessNumericFilter_Operation value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOperation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOperation() => clearField(1);
+  void clearOperation() => $_clearField(1);
 
   /// A numeric value or a date value.
   @$pb.TagNumber(2)
   NumericValue get value => $_getN(1);
   @$pb.TagNumber(2)
-  set value(NumericValue v) {
-    setField(2, v);
-  }
-
+  set value(NumericValue value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValue() => clearField(2);
+  void clearValue() => $_clearField(2);
   @$pb.TagNumber(2)
   NumericValue ensureValue() => $_ensure(1);
 }
@@ -901,22 +794,20 @@ class AccessBetweenFilter extends $pb.GeneratedMessage {
     NumericValue? fromValue,
     NumericValue? toValue,
   }) {
-    final $result = create();
-    if (fromValue != null) {
-      $result.fromValue = fromValue;
-    }
-    if (toValue != null) {
-      $result.toValue = toValue;
-    }
-    return $result;
+    final result = create();
+    if (fromValue != null) result.fromValue = fromValue;
+    if (toValue != null) result.toValue = toValue;
+    return result;
   }
-  AccessBetweenFilter._() : super();
-  factory AccessBetweenFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessBetweenFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessBetweenFilter._();
+
+  factory AccessBetweenFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessBetweenFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessBetweenFilter',
@@ -929,24 +820,20 @@ class AccessBetweenFilter extends $pb.GeneratedMessage {
         subBuilder: NumericValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessBetweenFilter clone() => AccessBetweenFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessBetweenFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessBetweenFilter copyWith(void Function(AccessBetweenFilter) updates) =>
       super.copyWith((message) => updates(message as AccessBetweenFilter))
           as AccessBetweenFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessBetweenFilter create() => AccessBetweenFilter._();
+  @$core.override
   AccessBetweenFilter createEmptyInstance() => create();
-  static $pb.PbList<AccessBetweenFilter> createRepeated() =>
-      $pb.PbList<AccessBetweenFilter>();
   @$core.pragma('dart2js:noInline')
   static AccessBetweenFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessBetweenFilter>(create);
@@ -956,14 +843,11 @@ class AccessBetweenFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   NumericValue get fromValue => $_getN(0);
   @$pb.TagNumber(1)
-  set fromValue(NumericValue v) {
-    setField(1, v);
-  }
-
+  set fromValue(NumericValue value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasFromValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFromValue() => clearField(1);
+  void clearFromValue() => $_clearField(1);
   @$pb.TagNumber(1)
   NumericValue ensureFromValue() => $_ensure(0);
 
@@ -971,14 +855,11 @@ class AccessBetweenFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   NumericValue get toValue => $_getN(1);
   @$pb.TagNumber(2)
-  set toValue(NumericValue v) {
-    setField(2, v);
-  }
-
+  set toValue(NumericValue value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasToValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearToValue() => clearField(2);
+  void clearToValue() => $_clearField(2);
   @$pb.TagNumber(2)
   NumericValue ensureToValue() => $_ensure(1);
 }
@@ -991,22 +872,20 @@ class NumericValue extends $pb.GeneratedMessage {
     $fixnum.Int64? int64Value,
     $core.double? doubleValue,
   }) {
-    final $result = create();
-    if (int64Value != null) {
-      $result.int64Value = int64Value;
-    }
-    if (doubleValue != null) {
-      $result.doubleValue = doubleValue;
-    }
-    return $result;
+    final result = create();
+    if (int64Value != null) result.int64Value = int64Value;
+    if (doubleValue != null) result.doubleValue = doubleValue;
+    return result;
   }
-  NumericValue._() : super();
-  factory NumericValue.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory NumericValue.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  NumericValue._();
+
+  factory NumericValue.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory NumericValue.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, NumericValue_OneValue>
       _NumericValue_OneValueByTag = {
@@ -1021,62 +900,55 @@ class NumericValue extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..aInt64(1, _omitFieldNames ? '' : 'int64Value')
-    ..a<$core.double>(
-        2, _omitFieldNames ? '' : 'doubleValue', $pb.PbFieldType.OD)
+    ..aD(2, _omitFieldNames ? '' : 'doubleValue')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  NumericValue clone() => NumericValue()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  NumericValue clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   NumericValue copyWith(void Function(NumericValue) updates) =>
       super.copyWith((message) => updates(message as NumericValue))
           as NumericValue;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static NumericValue create() => NumericValue._();
+  @$core.override
   NumericValue createEmptyInstance() => create();
-  static $pb.PbList<NumericValue> createRepeated() =>
-      $pb.PbList<NumericValue>();
   @$core.pragma('dart2js:noInline')
   static NumericValue getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<NumericValue>(create);
   static NumericValue? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   NumericValue_OneValue whichOneValue() =>
       _NumericValue_OneValueByTag[$_whichOneof(0)]!;
-  void clearOneValue() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearOneValue() => $_clearField($_whichOneof(0));
 
   /// Integer value
   @$pb.TagNumber(1)
   $fixnum.Int64 get int64Value => $_getI64(0);
   @$pb.TagNumber(1)
-  set int64Value($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set int64Value($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasInt64Value() => $_has(0);
   @$pb.TagNumber(1)
-  void clearInt64Value() => clearField(1);
+  void clearInt64Value() => $_clearField(1);
 
   /// Double value
   @$pb.TagNumber(2)
   $core.double get doubleValue => $_getN(1);
   @$pb.TagNumber(2)
-  set doubleValue($core.double v) {
-    $_setDouble(1, v);
-  }
-
+  set doubleValue($core.double value) => $_setDouble(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDoubleValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDoubleValue() => clearField(2);
+  void clearDoubleValue() => $_clearField(2);
 }
 
 /// Sorts by metric values.
@@ -1084,19 +956,19 @@ class AccessOrderBy_MetricOrderBy extends $pb.GeneratedMessage {
   factory AccessOrderBy_MetricOrderBy({
     $core.String? metricName,
   }) {
-    final $result = create();
-    if (metricName != null) {
-      $result.metricName = metricName;
-    }
-    return $result;
+    final result = create();
+    if (metricName != null) result.metricName = metricName;
+    return result;
   }
-  AccessOrderBy_MetricOrderBy._() : super();
-  factory AccessOrderBy_MetricOrderBy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessOrderBy_MetricOrderBy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessOrderBy_MetricOrderBy._();
+
+  factory AccessOrderBy_MetricOrderBy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessOrderBy_MetricOrderBy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessOrderBy.MetricOrderBy',
@@ -1106,28 +978,23 @@ class AccessOrderBy_MetricOrderBy extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'metricName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessOrderBy_MetricOrderBy clone() =>
-      AccessOrderBy_MetricOrderBy()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessOrderBy_MetricOrderBy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessOrderBy_MetricOrderBy copyWith(
           void Function(AccessOrderBy_MetricOrderBy) updates) =>
       super.copyWith(
               (message) => updates(message as AccessOrderBy_MetricOrderBy))
           as AccessOrderBy_MetricOrderBy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessOrderBy_MetricOrderBy create() =>
       AccessOrderBy_MetricOrderBy._();
+  @$core.override
   AccessOrderBy_MetricOrderBy createEmptyInstance() => create();
-  static $pb.PbList<AccessOrderBy_MetricOrderBy> createRepeated() =>
-      $pb.PbList<AccessOrderBy_MetricOrderBy>();
   @$core.pragma('dart2js:noInline')
   static AccessOrderBy_MetricOrderBy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessOrderBy_MetricOrderBy>(create);
@@ -1137,14 +1004,11 @@ class AccessOrderBy_MetricOrderBy extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get metricName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set metricName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set metricName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMetricName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMetricName() => clearField(1);
+  void clearMetricName() => $_clearField(1);
 }
 
 /// Sorts by dimension values.
@@ -1153,22 +1017,20 @@ class AccessOrderBy_DimensionOrderBy extends $pb.GeneratedMessage {
     $core.String? dimensionName,
     AccessOrderBy_DimensionOrderBy_OrderType? orderType,
   }) {
-    final $result = create();
-    if (dimensionName != null) {
-      $result.dimensionName = dimensionName;
-    }
-    if (orderType != null) {
-      $result.orderType = orderType;
-    }
-    return $result;
+    final result = create();
+    if (dimensionName != null) result.dimensionName = dimensionName;
+    if (orderType != null) result.orderType = orderType;
+    return result;
   }
-  AccessOrderBy_DimensionOrderBy._() : super();
-  factory AccessOrderBy_DimensionOrderBy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessOrderBy_DimensionOrderBy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessOrderBy_DimensionOrderBy._();
+
+  factory AccessOrderBy_DimensionOrderBy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessOrderBy_DimensionOrderBy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessOrderBy.DimensionOrderBy',
@@ -1176,36 +1038,28 @@ class AccessOrderBy_DimensionOrderBy extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'dimensionName')
-    ..e<AccessOrderBy_DimensionOrderBy_OrderType>(
-        2, _omitFieldNames ? '' : 'orderType', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            AccessOrderBy_DimensionOrderBy_OrderType.ORDER_TYPE_UNSPECIFIED,
-        valueOf: AccessOrderBy_DimensionOrderBy_OrderType.valueOf,
+    ..aE<AccessOrderBy_DimensionOrderBy_OrderType>(
+        2, _omitFieldNames ? '' : 'orderType',
         enumValues: AccessOrderBy_DimensionOrderBy_OrderType.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessOrderBy_DimensionOrderBy clone() =>
-      AccessOrderBy_DimensionOrderBy()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessOrderBy_DimensionOrderBy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessOrderBy_DimensionOrderBy copyWith(
           void Function(AccessOrderBy_DimensionOrderBy) updates) =>
       super.copyWith(
               (message) => updates(message as AccessOrderBy_DimensionOrderBy))
           as AccessOrderBy_DimensionOrderBy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessOrderBy_DimensionOrderBy create() =>
       AccessOrderBy_DimensionOrderBy._();
+  @$core.override
   AccessOrderBy_DimensionOrderBy createEmptyInstance() => create();
-  static $pb.PbList<AccessOrderBy_DimensionOrderBy> createRepeated() =>
-      $pb.PbList<AccessOrderBy_DimensionOrderBy>();
   @$core.pragma('dart2js:noInline')
   static AccessOrderBy_DimensionOrderBy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessOrderBy_DimensionOrderBy>(create);
@@ -1215,27 +1069,22 @@ class AccessOrderBy_DimensionOrderBy extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get dimensionName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set dimensionName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set dimensionName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDimensionName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDimensionName() => clearField(1);
+  void clearDimensionName() => $_clearField(1);
 
   /// Controls the rule for dimension value ordering.
   @$pb.TagNumber(2)
   AccessOrderBy_DimensionOrderBy_OrderType get orderType => $_getN(1);
   @$pb.TagNumber(2)
-  set orderType(AccessOrderBy_DimensionOrderBy_OrderType v) {
-    setField(2, v);
-  }
-
+  set orderType(AccessOrderBy_DimensionOrderBy_OrderType value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOrderType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrderType() => clearField(2);
+  void clearOrderType() => $_clearField(2);
 }
 
 enum AccessOrderBy_OneOrderBy { metric, dimension, notSet }
@@ -1249,25 +1098,21 @@ class AccessOrderBy extends $pb.GeneratedMessage {
     AccessOrderBy_DimensionOrderBy? dimension,
     $core.bool? desc,
   }) {
-    final $result = create();
-    if (metric != null) {
-      $result.metric = metric;
-    }
-    if (dimension != null) {
-      $result.dimension = dimension;
-    }
-    if (desc != null) {
-      $result.desc = desc;
-    }
-    return $result;
+    final result = create();
+    if (metric != null) result.metric = metric;
+    if (dimension != null) result.dimension = dimension;
+    if (desc != null) result.desc = desc;
+    return result;
   }
-  AccessOrderBy._() : super();
-  factory AccessOrderBy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessOrderBy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessOrderBy._();
+
+  factory AccessOrderBy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessOrderBy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, AccessOrderBy_OneOrderBy>
       _AccessOrderBy_OneOrderByByTag = {
@@ -1288,45 +1133,42 @@ class AccessOrderBy extends $pb.GeneratedMessage {
     ..aOB(3, _omitFieldNames ? '' : 'desc')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessOrderBy clone() => AccessOrderBy()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessOrderBy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessOrderBy copyWith(void Function(AccessOrderBy) updates) =>
       super.copyWith((message) => updates(message as AccessOrderBy))
           as AccessOrderBy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessOrderBy create() => AccessOrderBy._();
+  @$core.override
   AccessOrderBy createEmptyInstance() => create();
-  static $pb.PbList<AccessOrderBy> createRepeated() =>
-      $pb.PbList<AccessOrderBy>();
   @$core.pragma('dart2js:noInline')
   static AccessOrderBy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessOrderBy>(create);
   static AccessOrderBy? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   AccessOrderBy_OneOrderBy whichOneOrderBy() =>
       _AccessOrderBy_OneOrderByByTag[$_whichOneof(0)]!;
-  void clearOneOrderBy() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearOneOrderBy() => $_clearField($_whichOneof(0));
 
   /// Sorts results by a metric's values.
   @$pb.TagNumber(1)
   AccessOrderBy_MetricOrderBy get metric => $_getN(0);
   @$pb.TagNumber(1)
-  set metric(AccessOrderBy_MetricOrderBy v) {
-    setField(1, v);
-  }
-
+  set metric(AccessOrderBy_MetricOrderBy value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasMetric() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMetric() => clearField(1);
+  void clearMetric() => $_clearField(1);
   @$pb.TagNumber(1)
   AccessOrderBy_MetricOrderBy ensureMetric() => $_ensure(0);
 
@@ -1334,14 +1176,11 @@ class AccessOrderBy extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   AccessOrderBy_DimensionOrderBy get dimension => $_getN(1);
   @$pb.TagNumber(2)
-  set dimension(AccessOrderBy_DimensionOrderBy v) {
-    setField(2, v);
-  }
-
+  set dimension(AccessOrderBy_DimensionOrderBy value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasDimension() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDimension() => clearField(2);
+  void clearDimension() => $_clearField(2);
   @$pb.TagNumber(2)
   AccessOrderBy_DimensionOrderBy ensureDimension() => $_ensure(1);
 
@@ -1350,14 +1189,11 @@ class AccessOrderBy extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get desc => $_getBF(2);
   @$pb.TagNumber(3)
-  set desc($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set desc($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDesc() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDesc() => clearField(3);
+  void clearDesc() => $_clearField(3);
 }
 
 /// Describes a dimension column in the report. Dimensions requested in a report
@@ -1368,19 +1204,19 @@ class AccessDimensionHeader extends $pb.GeneratedMessage {
   factory AccessDimensionHeader({
     $core.String? dimensionName,
   }) {
-    final $result = create();
-    if (dimensionName != null) {
-      $result.dimensionName = dimensionName;
-    }
-    return $result;
+    final result = create();
+    if (dimensionName != null) result.dimensionName = dimensionName;
+    return result;
   }
-  AccessDimensionHeader._() : super();
-  factory AccessDimensionHeader.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessDimensionHeader.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessDimensionHeader._();
+
+  factory AccessDimensionHeader.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessDimensionHeader.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessDimensionHeader',
@@ -1390,26 +1226,21 @@ class AccessDimensionHeader extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'dimensionName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessDimensionHeader clone() =>
-      AccessDimensionHeader()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessDimensionHeader clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessDimensionHeader copyWith(
           void Function(AccessDimensionHeader) updates) =>
       super.copyWith((message) => updates(message as AccessDimensionHeader))
           as AccessDimensionHeader;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessDimensionHeader create() => AccessDimensionHeader._();
+  @$core.override
   AccessDimensionHeader createEmptyInstance() => create();
-  static $pb.PbList<AccessDimensionHeader> createRepeated() =>
-      $pb.PbList<AccessDimensionHeader>();
   @$core.pragma('dart2js:noInline')
   static AccessDimensionHeader getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessDimensionHeader>(create);
@@ -1419,14 +1250,11 @@ class AccessDimensionHeader extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get dimensionName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set dimensionName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set dimensionName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDimensionName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDimensionName() => clearField(1);
+  void clearDimensionName() => $_clearField(1);
 }
 
 /// Describes a metric column in the report. Visible metrics requested in a
@@ -1437,19 +1265,19 @@ class AccessMetricHeader extends $pb.GeneratedMessage {
   factory AccessMetricHeader({
     $core.String? metricName,
   }) {
-    final $result = create();
-    if (metricName != null) {
-      $result.metricName = metricName;
-    }
-    return $result;
+    final result = create();
+    if (metricName != null) result.metricName = metricName;
+    return result;
   }
-  AccessMetricHeader._() : super();
-  factory AccessMetricHeader.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessMetricHeader.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessMetricHeader._();
+
+  factory AccessMetricHeader.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessMetricHeader.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessMetricHeader',
@@ -1459,24 +1287,20 @@ class AccessMetricHeader extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'metricName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessMetricHeader clone() => AccessMetricHeader()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessMetricHeader clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessMetricHeader copyWith(void Function(AccessMetricHeader) updates) =>
       super.copyWith((message) => updates(message as AccessMetricHeader))
           as AccessMetricHeader;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessMetricHeader create() => AccessMetricHeader._();
+  @$core.override
   AccessMetricHeader createEmptyInstance() => create();
-  static $pb.PbList<AccessMetricHeader> createRepeated() =>
-      $pb.PbList<AccessMetricHeader>();
   @$core.pragma('dart2js:noInline')
   static AccessMetricHeader getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessMetricHeader>(create);
@@ -1486,14 +1310,11 @@ class AccessMetricHeader extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get metricName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set metricName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set metricName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMetricName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMetricName() => clearField(1);
+  void clearMetricName() => $_clearField(1);
 }
 
 /// Access report data for each row.
@@ -1502,52 +1323,45 @@ class AccessRow extends $pb.GeneratedMessage {
     $core.Iterable<AccessDimensionValue>? dimensionValues,
     $core.Iterable<AccessMetricValue>? metricValues,
   }) {
-    final $result = create();
-    if (dimensionValues != null) {
-      $result.dimensionValues.addAll(dimensionValues);
-    }
-    if (metricValues != null) {
-      $result.metricValues.addAll(metricValues);
-    }
-    return $result;
+    final result = create();
+    if (dimensionValues != null) result.dimensionValues.addAll(dimensionValues);
+    if (metricValues != null) result.metricValues.addAll(metricValues);
+    return result;
   }
-  AccessRow._() : super();
-  factory AccessRow.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessRow.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessRow._();
+
+  factory AccessRow.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessRow.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessRow',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
       createEmptyInstance: create)
-    ..pc<AccessDimensionValue>(
-        1, _omitFieldNames ? '' : 'dimensionValues', $pb.PbFieldType.PM,
+    ..pPM<AccessDimensionValue>(1, _omitFieldNames ? '' : 'dimensionValues',
         subBuilder: AccessDimensionValue.create)
-    ..pc<AccessMetricValue>(
-        2, _omitFieldNames ? '' : 'metricValues', $pb.PbFieldType.PM,
+    ..pPM<AccessMetricValue>(2, _omitFieldNames ? '' : 'metricValues',
         subBuilder: AccessMetricValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessRow clone() => AccessRow()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessRow clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessRow copyWith(void Function(AccessRow) updates) =>
       super.copyWith((message) => updates(message as AccessRow)) as AccessRow;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessRow create() => AccessRow._();
+  @$core.override
   AccessRow createEmptyInstance() => create();
-  static $pb.PbList<AccessRow> createRepeated() => $pb.PbList<AccessRow>();
   @$core.pragma('dart2js:noInline')
   static AccessRow getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AccessRow>(create);
@@ -1556,12 +1370,12 @@ class AccessRow extends $pb.GeneratedMessage {
   /// List of dimension values. These values are in the same order as specified
   /// in the request.
   @$pb.TagNumber(1)
-  $core.List<AccessDimensionValue> get dimensionValues => $_getList(0);
+  $pb.PbList<AccessDimensionValue> get dimensionValues => $_getList(0);
 
   /// List of metric values. These values are in the same order as specified
   /// in the request.
   @$pb.TagNumber(2)
-  $core.List<AccessMetricValue> get metricValues => $_getList(1);
+  $pb.PbList<AccessMetricValue> get metricValues => $_getList(1);
 }
 
 /// The value of a dimension.
@@ -1569,19 +1383,19 @@ class AccessDimensionValue extends $pb.GeneratedMessage {
   factory AccessDimensionValue({
     $core.String? value,
   }) {
-    final $result = create();
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (value != null) result.value = value;
+    return result;
   }
-  AccessDimensionValue._() : super();
-  factory AccessDimensionValue.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessDimensionValue.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessDimensionValue._();
+
+  factory AccessDimensionValue.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessDimensionValue.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessDimensionValue',
@@ -1591,25 +1405,20 @@ class AccessDimensionValue extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'value')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessDimensionValue clone() =>
-      AccessDimensionValue()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessDimensionValue clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessDimensionValue copyWith(void Function(AccessDimensionValue) updates) =>
       super.copyWith((message) => updates(message as AccessDimensionValue))
           as AccessDimensionValue;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessDimensionValue create() => AccessDimensionValue._();
+  @$core.override
   AccessDimensionValue createEmptyInstance() => create();
-  static $pb.PbList<AccessDimensionValue> createRepeated() =>
-      $pb.PbList<AccessDimensionValue>();
   @$core.pragma('dart2js:noInline')
   static AccessDimensionValue getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessDimensionValue>(create);
@@ -1620,14 +1429,11 @@ class AccessDimensionValue extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get value => $_getSZ(0);
   @$pb.TagNumber(1)
-  set value($core.String v) {
-    $_setString(0, v);
-  }
-
+  set value($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  void clearValue() => $_clearField(1);
 }
 
 /// The value of a metric.
@@ -1635,19 +1441,19 @@ class AccessMetricValue extends $pb.GeneratedMessage {
   factory AccessMetricValue({
     $core.String? value,
   }) {
-    final $result = create();
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (value != null) result.value = value;
+    return result;
   }
-  AccessMetricValue._() : super();
-  factory AccessMetricValue.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessMetricValue.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessMetricValue._();
+
+  factory AccessMetricValue.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessMetricValue.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessMetricValue',
@@ -1657,24 +1463,20 @@ class AccessMetricValue extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'value')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessMetricValue clone() => AccessMetricValue()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessMetricValue clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessMetricValue copyWith(void Function(AccessMetricValue) updates) =>
       super.copyWith((message) => updates(message as AccessMetricValue))
           as AccessMetricValue;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessMetricValue create() => AccessMetricValue._();
+  @$core.override
   AccessMetricValue createEmptyInstance() => create();
-  static $pb.PbList<AccessMetricValue> createRepeated() =>
-      $pb.PbList<AccessMetricValue>();
   @$core.pragma('dart2js:noInline')
   static AccessMetricValue getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessMetricValue>(create);
@@ -1684,14 +1486,11 @@ class AccessMetricValue extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get value => $_getSZ(0);
   @$pb.TagNumber(1)
-  set value($core.String v) {
-    $_setString(0, v);
-  }
-
+  set value($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  void clearValue() => $_clearField(1);
 }
 
 /// Current state of all quotas for this Analytics property. If any quota for a
@@ -1705,31 +1504,26 @@ class AccessQuota extends $pb.GeneratedMessage {
     AccessQuotaStatus? serverErrorsPerProjectPerHour,
     AccessQuotaStatus? tokensPerProjectPerHour,
   }) {
-    final $result = create();
-    if (tokensPerDay != null) {
-      $result.tokensPerDay = tokensPerDay;
-    }
-    if (tokensPerHour != null) {
-      $result.tokensPerHour = tokensPerHour;
-    }
-    if (concurrentRequests != null) {
-      $result.concurrentRequests = concurrentRequests;
-    }
-    if (serverErrorsPerProjectPerHour != null) {
-      $result.serverErrorsPerProjectPerHour = serverErrorsPerProjectPerHour;
-    }
-    if (tokensPerProjectPerHour != null) {
-      $result.tokensPerProjectPerHour = tokensPerProjectPerHour;
-    }
-    return $result;
+    final result = create();
+    if (tokensPerDay != null) result.tokensPerDay = tokensPerDay;
+    if (tokensPerHour != null) result.tokensPerHour = tokensPerHour;
+    if (concurrentRequests != null)
+      result.concurrentRequests = concurrentRequests;
+    if (serverErrorsPerProjectPerHour != null)
+      result.serverErrorsPerProjectPerHour = serverErrorsPerProjectPerHour;
+    if (tokensPerProjectPerHour != null)
+      result.tokensPerProjectPerHour = tokensPerProjectPerHour;
+    return result;
   }
-  AccessQuota._() : super();
-  factory AccessQuota.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessQuota.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessQuota._();
+
+  factory AccessQuota.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessQuota.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessQuota',
@@ -1750,23 +1544,20 @@ class AccessQuota extends $pb.GeneratedMessage {
         subBuilder: AccessQuotaStatus.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessQuota clone() => AccessQuota()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessQuota clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessQuota copyWith(void Function(AccessQuota) updates) =>
       super.copyWith((message) => updates(message as AccessQuota))
           as AccessQuota;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessQuota create() => AccessQuota._();
+  @$core.override
   AccessQuota createEmptyInstance() => create();
-  static $pb.PbList<AccessQuota> createRepeated() => $pb.PbList<AccessQuota>();
   @$core.pragma('dart2js:noInline')
   static AccessQuota getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessQuota>(create);
@@ -1777,14 +1568,11 @@ class AccessQuota extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AccessQuotaStatus get tokensPerDay => $_getN(0);
   @$pb.TagNumber(1)
-  set tokensPerDay(AccessQuotaStatus v) {
-    setField(1, v);
-  }
-
+  set tokensPerDay(AccessQuotaStatus value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasTokensPerDay() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTokensPerDay() => clearField(1);
+  void clearTokensPerDay() => $_clearField(1);
   @$pb.TagNumber(1)
   AccessQuotaStatus ensureTokensPerDay() => $_ensure(0);
 
@@ -1794,14 +1582,11 @@ class AccessQuota extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   AccessQuotaStatus get tokensPerHour => $_getN(1);
   @$pb.TagNumber(2)
-  set tokensPerHour(AccessQuotaStatus v) {
-    setField(2, v);
-  }
-
+  set tokensPerHour(AccessQuotaStatus value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasTokensPerHour() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTokensPerHour() => clearField(2);
+  void clearTokensPerHour() => $_clearField(2);
   @$pb.TagNumber(2)
   AccessQuotaStatus ensureTokensPerHour() => $_ensure(1);
 
@@ -1809,14 +1594,11 @@ class AccessQuota extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   AccessQuotaStatus get concurrentRequests => $_getN(2);
   @$pb.TagNumber(3)
-  set concurrentRequests(AccessQuotaStatus v) {
-    setField(3, v);
-  }
-
+  set concurrentRequests(AccessQuotaStatus value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasConcurrentRequests() => $_has(2);
   @$pb.TagNumber(3)
-  void clearConcurrentRequests() => clearField(3);
+  void clearConcurrentRequests() => $_clearField(3);
   @$pb.TagNumber(3)
   AccessQuotaStatus ensureConcurrentRequests() => $_ensure(2);
 
@@ -1825,14 +1607,12 @@ class AccessQuota extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   AccessQuotaStatus get serverErrorsPerProjectPerHour => $_getN(3);
   @$pb.TagNumber(4)
-  set serverErrorsPerProjectPerHour(AccessQuotaStatus v) {
-    setField(4, v);
-  }
-
+  set serverErrorsPerProjectPerHour(AccessQuotaStatus value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasServerErrorsPerProjectPerHour() => $_has(3);
   @$pb.TagNumber(4)
-  void clearServerErrorsPerProjectPerHour() => clearField(4);
+  void clearServerErrorsPerProjectPerHour() => $_clearField(4);
   @$pb.TagNumber(4)
   AccessQuotaStatus ensureServerErrorsPerProjectPerHour() => $_ensure(3);
 
@@ -1843,14 +1623,11 @@ class AccessQuota extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   AccessQuotaStatus get tokensPerProjectPerHour => $_getN(4);
   @$pb.TagNumber(5)
-  set tokensPerProjectPerHour(AccessQuotaStatus v) {
-    setField(5, v);
-  }
-
+  set tokensPerProjectPerHour(AccessQuotaStatus value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasTokensPerProjectPerHour() => $_has(4);
   @$pb.TagNumber(5)
-  void clearTokensPerProjectPerHour() => clearField(5);
+  void clearTokensPerProjectPerHour() => $_clearField(5);
   @$pb.TagNumber(5)
   AccessQuotaStatus ensureTokensPerProjectPerHour() => $_ensure(4);
 }
@@ -1861,50 +1638,44 @@ class AccessQuotaStatus extends $pb.GeneratedMessage {
     $core.int? consumed,
     $core.int? remaining,
   }) {
-    final $result = create();
-    if (consumed != null) {
-      $result.consumed = consumed;
-    }
-    if (remaining != null) {
-      $result.remaining = remaining;
-    }
-    return $result;
+    final result = create();
+    if (consumed != null) result.consumed = consumed;
+    if (remaining != null) result.remaining = remaining;
+    return result;
   }
-  AccessQuotaStatus._() : super();
-  factory AccessQuotaStatus.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccessQuotaStatus.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccessQuotaStatus._();
+
+  factory AccessQuotaStatus.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccessQuotaStatus.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccessQuotaStatus',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.analytics.admin.v1beta'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'consumed', $pb.PbFieldType.O3)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'remaining', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'consumed')
+    ..aI(2, _omitFieldNames ? '' : 'remaining')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccessQuotaStatus clone() => AccessQuotaStatus()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccessQuotaStatus clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccessQuotaStatus copyWith(void Function(AccessQuotaStatus) updates) =>
       super.copyWith((message) => updates(message as AccessQuotaStatus))
           as AccessQuotaStatus;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccessQuotaStatus create() => AccessQuotaStatus._();
+  @$core.override
   AccessQuotaStatus createEmptyInstance() => create();
-  static $pb.PbList<AccessQuotaStatus> createRepeated() =>
-      $pb.PbList<AccessQuotaStatus>();
   @$core.pragma('dart2js:noInline')
   static AccessQuotaStatus getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccessQuotaStatus>(create);
@@ -1914,29 +1685,24 @@ class AccessQuotaStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get consumed => $_getIZ(0);
   @$pb.TagNumber(1)
-  set consumed($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set consumed($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasConsumed() => $_has(0);
   @$pb.TagNumber(1)
-  void clearConsumed() => clearField(1);
+  void clearConsumed() => $_clearField(1);
 
   /// Quota remaining after this request.
   @$pb.TagNumber(2)
   $core.int get remaining => $_getIZ(1);
   @$pb.TagNumber(2)
-  set remaining($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set remaining($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasRemaining() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRemaining() => clearField(2);
+  void clearRemaining() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

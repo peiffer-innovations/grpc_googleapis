@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/api/servicecontrol/v2/service_controller.proto
-//
-// @dart = 2.12
+// Generated from google/api/servicecontrol/v2/service_controller.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,6 +16,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../rpc/context/attribute_context.pb.dart' as $1;
 import '../../../rpc/status.pb.dart' as $2;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Request message for the Check method.
 class CheckRequest extends $pb.GeneratedMessage {
@@ -25,31 +28,23 @@ class CheckRequest extends $pb.GeneratedMessage {
     $core.Iterable<ResourceInfo>? resources,
     $core.String? flags,
   }) {
-    final $result = create();
-    if (serviceName != null) {
-      $result.serviceName = serviceName;
-    }
-    if (serviceConfigId != null) {
-      $result.serviceConfigId = serviceConfigId;
-    }
-    if (attributes != null) {
-      $result.attributes = attributes;
-    }
-    if (resources != null) {
-      $result.resources.addAll(resources);
-    }
-    if (flags != null) {
-      $result.flags = flags;
-    }
-    return $result;
+    final result = create();
+    if (serviceName != null) result.serviceName = serviceName;
+    if (serviceConfigId != null) result.serviceConfigId = serviceConfigId;
+    if (attributes != null) result.attributes = attributes;
+    if (resources != null) result.resources.addAll(resources);
+    if (flags != null) result.flags = flags;
+    return result;
   }
-  CheckRequest._() : super();
-  factory CheckRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CheckRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CheckRequest._();
+
+  factory CheckRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CheckRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CheckRequest',
@@ -60,52 +55,44 @@ class CheckRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'serviceConfigId')
     ..aOM<$1.AttributeContext>(3, _omitFieldNames ? '' : 'attributes',
         subBuilder: $1.AttributeContext.create)
-    ..pc<ResourceInfo>(
-        4, _omitFieldNames ? '' : 'resources', $pb.PbFieldType.PM,
+    ..pPM<ResourceInfo>(4, _omitFieldNames ? '' : 'resources',
         subBuilder: ResourceInfo.create)
     ..aOS(5, _omitFieldNames ? '' : 'flags')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CheckRequest clone() => CheckRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CheckRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CheckRequest copyWith(void Function(CheckRequest) updates) =>
       super.copyWith((message) => updates(message as CheckRequest))
           as CheckRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CheckRequest create() => CheckRequest._();
+  @$core.override
   CheckRequest createEmptyInstance() => create();
-  static $pb.PbList<CheckRequest> createRepeated() =>
-      $pb.PbList<CheckRequest>();
   @$core.pragma('dart2js:noInline')
   static CheckRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CheckRequest>(create);
   static CheckRequest? _defaultInstance;
 
-  ///  The service name as specified in its service configuration. For example,
-  ///  `"pubsub.googleapis.com"`.
+  /// The service name as specified in its service configuration. For example,
+  /// `"pubsub.googleapis.com"`.
   ///
-  ///  See
-  ///  [google.api.Service](https://cloud.google.com/service-management/reference/rpc/google.api#google.api.Service)
-  ///  for the definition of a service name.
+  /// See
+  /// [google.api.Service](https://cloud.google.com/service-management/reference/rpc/google.api#google.api.Service)
+  /// for the definition of a service name.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set serviceName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set serviceName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearServiceName() => clearField(1);
+  void clearServiceName() => $_clearField(1);
 
   /// Specifies the version of the service configuration that should be used to
   /// process the request. Must not be empty. Set this field to 'latest' to
@@ -113,46 +100,37 @@ class CheckRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get serviceConfigId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set serviceConfigId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set serviceConfigId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasServiceConfigId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearServiceConfigId() => clearField(2);
+  void clearServiceConfigId() => $_clearField(2);
 
   /// Describes attributes about the operation being executed by the service.
   @$pb.TagNumber(3)
   $1.AttributeContext get attributes => $_getN(2);
   @$pb.TagNumber(3)
-  set attributes($1.AttributeContext v) {
-    setField(3, v);
-  }
-
+  set attributes($1.AttributeContext value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasAttributes() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAttributes() => clearField(3);
+  void clearAttributes() => $_clearField(3);
   @$pb.TagNumber(3)
   $1.AttributeContext ensureAttributes() => $_ensure(2);
 
   /// Describes the resources and the policies applied to each resource.
   @$pb.TagNumber(4)
-  $core.List<ResourceInfo> get resources => $_getList(3);
+  $pb.PbList<ResourceInfo> get resources => $_getList(3);
 
   /// Optional. Contains a comma-separated list of flags.
   @$pb.TagNumber(5)
   $core.String get flags => $_getSZ(4);
   @$pb.TagNumber(5)
-  set flags($core.String v) {
-    $_setString(4, v);
-  }
-
+  set flags($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasFlags() => $_has(4);
   @$pb.TagNumber(5)
-  void clearFlags() => clearField(5);
+  void clearFlags() => $_clearField(5);
 }
 
 /// Describes a resource referenced in the request.
@@ -164,31 +142,23 @@ class ResourceInfo extends $pb.GeneratedMessage {
     $core.String? container,
     $core.String? location,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    if (permission != null) {
-      $result.permission = permission;
-    }
-    if (container != null) {
-      $result.container = container;
-    }
-    if (location != null) {
-      $result.location = location;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (type != null) result.type = type;
+    if (permission != null) result.permission = permission;
+    if (container != null) result.container = container;
+    if (location != null) result.location = location;
+    return result;
   }
-  ResourceInfo._() : super();
-  factory ResourceInfo.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ResourceInfo.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ResourceInfo._();
+
+  factory ResourceInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ResourceInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ResourceInfo',
@@ -202,24 +172,20 @@ class ResourceInfo extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'location')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ResourceInfo clone() => ResourceInfo()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ResourceInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ResourceInfo copyWith(void Function(ResourceInfo) updates) =>
       super.copyWith((message) => updates(message as ResourceInfo))
           as ResourceInfo;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ResourceInfo create() => ResourceInfo._();
+  @$core.override
   ResourceInfo createEmptyInstance() => create();
-  static $pb.PbList<ResourceInfo> createRepeated() =>
-      $pb.PbList<ResourceInfo>();
   @$core.pragma('dart2js:noInline')
   static ResourceInfo getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ResourceInfo>(create);
@@ -229,100 +195,82 @@ class ResourceInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The resource type in the format of "{service}/{kind}".
   @$pb.TagNumber(2)
   $core.String get type => $_getSZ(1);
   @$pb.TagNumber(2)
-  set type($core.String v) {
-    $_setString(1, v);
-  }
-
+  set type($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearType() => clearField(2);
+  void clearType() => $_clearField(2);
 
   /// The resource permission needed for this request.
   /// The format must be "{service}/{plural}.{verb}".
   @$pb.TagNumber(3)
   $core.String get permission => $_getSZ(2);
   @$pb.TagNumber(3)
-  set permission($core.String v) {
-    $_setString(2, v);
-  }
-
+  set permission($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPermission() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPermission() => clearField(3);
+  void clearPermission() => $_clearField(3);
 
   /// Optional. The identifier of the container of this resource. For Google
   /// Cloud APIs, the resource container must be one of the following formats:
   ///     - `projects/<project-id or project-number>`
-  ///     - `folders/<folder-id>`
-  ///     - `organizations/<organization-id>`
-  /// For the policy enforcement on the container level (VPCSC and Location
-  /// Policy check), this field takes precedence on the container extracted from
-  /// name when presents.
+  ///     - `folders/<folder-number>`
+  ///     - `organizations/<organization-number>`
+  /// Required for the policy enforcement on the container level (e.g. VPCSC,
+  /// Location Policy check, Org Policy check).
   @$pb.TagNumber(4)
   $core.String get container => $_getSZ(3);
   @$pb.TagNumber(4)
-  set container($core.String v) {
-    $_setString(3, v);
-  }
-
+  set container($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasContainer() => $_has(3);
   @$pb.TagNumber(4)
-  void clearContainer() => clearField(4);
+  void clearContainer() => $_clearField(4);
 
-  /// Optional. The location of the resource. The value must be a valid zone,
-  /// region or multiregion. For example: "europe-west4" or
-  /// "northamerica-northeast1-a"
+  /// Optional. The location of the resource, it must be a valid zone, region or
+  /// multiregion, for example: "europe-west4", "northamerica-northeast1-a".
+  /// Required for location policy check.
   @$pb.TagNumber(5)
   $core.String get location => $_getSZ(4);
   @$pb.TagNumber(5)
-  set location($core.String v) {
-    $_setString(4, v);
-  }
-
+  set location($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasLocation() => $_has(4);
   @$pb.TagNumber(5)
-  void clearLocation() => clearField(5);
+  void clearLocation() => $_clearField(5);
 }
 
 /// Response message for the Check method.
 class CheckResponse extends $pb.GeneratedMessage {
   factory CheckResponse({
     $2.Status? status,
-    $core.Map<$core.String, $core.String>? headers,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? headers,
   }) {
-    final $result = create();
-    if (status != null) {
-      $result.status = status;
-    }
-    if (headers != null) {
-      $result.headers.addAll(headers);
-    }
-    return $result;
+    final result = create();
+    if (status != null) result.status = status;
+    if (headers != null) result.headers.addEntries(headers);
+    return result;
   }
-  CheckResponse._() : super();
-  factory CheckResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CheckResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CheckResponse._();
+
+  factory CheckResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CheckResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CheckResponse',
@@ -338,24 +286,20 @@ class CheckResponse extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.api.servicecontrol.v2'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CheckResponse clone() => CheckResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CheckResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CheckResponse copyWith(void Function(CheckResponse) updates) =>
       super.copyWith((message) => updates(message as CheckResponse))
           as CheckResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CheckResponse create() => CheckResponse._();
+  @$core.override
   CheckResponse createEmptyInstance() => create();
-  static $pb.PbList<CheckResponse> createRepeated() =>
-      $pb.PbList<CheckResponse>();
   @$core.pragma('dart2js:noInline')
   static CheckResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CheckResponse>(create);
@@ -367,20 +311,17 @@ class CheckResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.Status get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status($2.Status v) {
-    setField(1, v);
-  }
-
+  set status($2.Status value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStatus() => clearField(1);
+  void clearStatus() => $_clearField(1);
   @$pb.TagNumber(1)
   $2.Status ensureStatus() => $_ensure(0);
 
   /// Returns a set of request contexts generated from the `CheckRequest`.
   @$pb.TagNumber(2)
-  $core.Map<$core.String, $core.String> get headers => $_getMap(1);
+  $pb.PbMap<$core.String, $core.String> get headers => $_getMap(1);
 }
 
 /// Request message for the Report method.
@@ -390,25 +331,21 @@ class ReportRequest extends $pb.GeneratedMessage {
     $core.String? serviceConfigId,
     $core.Iterable<$1.AttributeContext>? operations,
   }) {
-    final $result = create();
-    if (serviceName != null) {
-      $result.serviceName = serviceName;
-    }
-    if (serviceConfigId != null) {
-      $result.serviceConfigId = serviceConfigId;
-    }
-    if (operations != null) {
-      $result.operations.addAll(operations);
-    }
-    return $result;
+    final result = create();
+    if (serviceName != null) result.serviceName = serviceName;
+    if (serviceConfigId != null) result.serviceConfigId = serviceConfigId;
+    if (operations != null) result.operations.addAll(operations);
+    return result;
   }
-  ReportRequest._() : super();
-  factory ReportRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ReportRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ReportRequest._();
+
+  factory ReportRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReportRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ReportRequest',
@@ -417,51 +354,43 @@ class ReportRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'serviceName')
     ..aOS(2, _omitFieldNames ? '' : 'serviceConfigId')
-    ..pc<$1.AttributeContext>(
-        3, _omitFieldNames ? '' : 'operations', $pb.PbFieldType.PM,
+    ..pPM<$1.AttributeContext>(3, _omitFieldNames ? '' : 'operations',
         subBuilder: $1.AttributeContext.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ReportRequest clone() => ReportRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ReportRequest copyWith(void Function(ReportRequest) updates) =>
       super.copyWith((message) => updates(message as ReportRequest))
           as ReportRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ReportRequest create() => ReportRequest._();
+  @$core.override
   ReportRequest createEmptyInstance() => create();
-  static $pb.PbList<ReportRequest> createRepeated() =>
-      $pb.PbList<ReportRequest>();
   @$core.pragma('dart2js:noInline')
   static ReportRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReportRequest>(create);
   static ReportRequest? _defaultInstance;
 
-  ///  The service name as specified in its service configuration. For example,
-  ///  `"pubsub.googleapis.com"`.
+  /// The service name as specified in its service configuration. For example,
+  /// `"pubsub.googleapis.com"`.
   ///
-  ///  See
-  ///  [google.api.Service](https://cloud.google.com/service-management/reference/rpc/google.api#google.api.Service)
-  ///  for the definition of a service name.
+  /// See
+  /// [google.api.Service](https://cloud.google.com/service-management/reference/rpc/google.api#google.api.Service)
+  /// for the definition of a service name.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set serviceName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set serviceName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearServiceName() => clearField(1);
+  void clearServiceName() => $_clearField(1);
 
   /// Specifies the version of the service configuration that should be used to
   /// process the request. Must not be empty. Set this field to 'latest' to
@@ -469,33 +398,32 @@ class ReportRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get serviceConfigId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set serviceConfigId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set serviceConfigId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasServiceConfigId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearServiceConfigId() => clearField(2);
+  void clearServiceConfigId() => $_clearField(2);
 
   /// Describes the list of operations to be reported. Each operation is
   /// represented as an AttributeContext, and contains all attributes around an
   /// API access.
   @$pb.TagNumber(3)
-  $core.List<$1.AttributeContext> get operations => $_getList(2);
+  $pb.PbList<$1.AttributeContext> get operations => $_getList(2);
 }
 
 /// Response message for the Report method.
 /// If the request contains any invalid data, the server returns an RPC error.
 class ReportResponse extends $pb.GeneratedMessage {
   factory ReportResponse() => create();
-  ReportResponse._() : super();
-  factory ReportResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ReportResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ReportResponse._();
+
+  factory ReportResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReportResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ReportResponse',
@@ -504,24 +432,20 @@ class ReportResponse extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ReportResponse clone() => ReportResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReportResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ReportResponse copyWith(void Function(ReportResponse) updates) =>
       super.copyWith((message) => updates(message as ReportResponse))
           as ReportResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ReportResponse create() => ReportResponse._();
+  @$core.override
   ReportResponse createEmptyInstance() => create();
-  static $pb.PbList<ReportResponse> createRepeated() =>
-      $pb.PbList<ReportResponse>();
   @$core.pragma('dart2js:noInline')
   static ReportResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReportResponse>(create);
@@ -533,48 +457,43 @@ class ResourceInfoList extends $pb.GeneratedMessage {
   factory ResourceInfoList({
     $core.Iterable<ResourceInfo>? resources,
   }) {
-    final $result = create();
-    if (resources != null) {
-      $result.resources.addAll(resources);
-    }
-    return $result;
+    final result = create();
+    if (resources != null) result.resources.addAll(resources);
+    return result;
   }
-  ResourceInfoList._() : super();
-  factory ResourceInfoList.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ResourceInfoList.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ResourceInfoList._();
+
+  factory ResourceInfoList.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ResourceInfoList.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ResourceInfoList',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.api.servicecontrol.v2'),
       createEmptyInstance: create)
-    ..pc<ResourceInfo>(
-        1, _omitFieldNames ? '' : 'resources', $pb.PbFieldType.PM,
+    ..pPM<ResourceInfo>(1, _omitFieldNames ? '' : 'resources',
         subBuilder: ResourceInfo.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ResourceInfoList clone() => ResourceInfoList()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ResourceInfoList clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ResourceInfoList copyWith(void Function(ResourceInfoList) updates) =>
       super.copyWith((message) => updates(message as ResourceInfoList))
           as ResourceInfoList;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ResourceInfoList create() => ResourceInfoList._();
+  @$core.override
   ResourceInfoList createEmptyInstance() => create();
-  static $pb.PbList<ResourceInfoList> createRepeated() =>
-      $pb.PbList<ResourceInfoList>();
   @$core.pragma('dart2js:noInline')
   static ResourceInfoList getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ResourceInfoList>(create);
@@ -582,9 +501,10 @@ class ResourceInfoList extends $pb.GeneratedMessage {
 
   /// The resource details.
   @$pb.TagNumber(1)
-  $core.List<ResourceInfo> get resources => $_getList(0);
+  $pb.PbList<ResourceInfo> get resources => $_getList(0);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

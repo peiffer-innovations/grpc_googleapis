@@ -1,24 +1,30 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/genomics/v1/annotations.proto
-//
-// @dart = 2.12
+// Generated from google/genomics/v1/annotations.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/field_mask.pb.dart'
+    as $4;
+import 'package:grpc_googleapis/src/generated/google/protobuf/struct.pb.dart'
+    as $2;
+import 'package:grpc_googleapis/src/generated/google/protobuf/wrappers.pb.dart'
+    as $3;
 
-import '../../protobuf/field_mask.pb.dart' as $4;
-import '../../protobuf/struct.pb.dart' as $2;
-import '../../protobuf/wrappers.pb.dart' as $3;
 import '../../rpc/status.pb.dart' as $5;
 import 'annotations.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'annotations.pbenum.dart';
 
@@ -33,39 +39,27 @@ class AnnotationSet extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? sourceUri,
     AnnotationType? type,
-    $core.Map<$core.String, $2.ListValue>? info,
+    $core.Iterable<$core.MapEntry<$core.String, $2.ListValue>>? info,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    if (datasetId != null) {
-      $result.datasetId = datasetId;
-    }
-    if (referenceSetId != null) {
-      $result.referenceSetId = referenceSetId;
-    }
-    if (name != null) {
-      $result.name = name;
-    }
-    if (sourceUri != null) {
-      $result.sourceUri = sourceUri;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    if (info != null) {
-      $result.info.addAll(info);
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    if (datasetId != null) result.datasetId = datasetId;
+    if (referenceSetId != null) result.referenceSetId = referenceSetId;
+    if (name != null) result.name = name;
+    if (sourceUri != null) result.sourceUri = sourceUri;
+    if (type != null) result.type = type;
+    if (info != null) result.info.addEntries(info);
+    return result;
   }
-  AnnotationSet._() : super();
-  factory AnnotationSet.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AnnotationSet.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AnnotationSet._();
+
+  factory AnnotationSet.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AnnotationSet.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AnnotationSet',
@@ -77,9 +71,7 @@ class AnnotationSet extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'referenceSetId')
     ..aOS(4, _omitFieldNames ? '' : 'name')
     ..aOS(5, _omitFieldNames ? '' : 'sourceUri')
-    ..e<AnnotationType>(6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: AnnotationType.ANNOTATION_TYPE_UNSPECIFIED,
-        valueOf: AnnotationType.valueOf,
+    ..aE<AnnotationType>(6, _omitFieldNames ? '' : 'type',
         enumValues: AnnotationType.values)
     ..m<$core.String, $2.ListValue>(17, _omitFieldNames ? '' : 'info',
         entryClassName: 'AnnotationSet.InfoEntry',
@@ -90,24 +82,20 @@ class AnnotationSet extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AnnotationSet clone() => AnnotationSet()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AnnotationSet clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AnnotationSet copyWith(void Function(AnnotationSet) updates) =>
       super.copyWith((message) => updates(message as AnnotationSet))
           as AnnotationSet;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AnnotationSet create() => AnnotationSet._();
+  @$core.override
   AnnotationSet createEmptyInstance() => create();
-  static $pb.PbList<AnnotationSet> createRepeated() =>
-      $pb.PbList<AnnotationSet>();
   @$core.pragma('dart2js:noInline')
   static AnnotationSet getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AnnotationSet>(create);
@@ -117,86 +105,68 @@ class AnnotationSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// The dataset to which this annotation set belongs.
   @$pb.TagNumber(2)
   $core.String get datasetId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set datasetId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set datasetId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDatasetId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDatasetId() => clearField(2);
+  void clearDatasetId() => $_clearField(2);
 
   /// The ID of the reference set that defines the coordinate space for this
   /// set's annotations.
   @$pb.TagNumber(3)
   $core.String get referenceSetId => $_getSZ(2);
   @$pb.TagNumber(3)
-  set referenceSetId($core.String v) {
-    $_setString(2, v);
-  }
-
+  set referenceSetId($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasReferenceSetId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearReferenceSetId() => clearField(3);
+  void clearReferenceSetId() => $_clearField(3);
 
   /// The display name for this annotation set.
   @$pb.TagNumber(4)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(4)
-  set name($core.String v) {
-    $_setString(3, v);
-  }
-
+  set name($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearName() => clearField(4);
+  void clearName() => $_clearField(4);
 
   /// The source URI describing the file from which this annotation set was
   /// generated, if any.
   @$pb.TagNumber(5)
   $core.String get sourceUri => $_getSZ(4);
   @$pb.TagNumber(5)
-  set sourceUri($core.String v) {
-    $_setString(4, v);
-  }
-
+  set sourceUri($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasSourceUri() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSourceUri() => clearField(5);
+  void clearSourceUri() => $_clearField(5);
 
   /// The type of annotations contained within this set.
   @$pb.TagNumber(6)
   AnnotationType get type => $_getN(5);
   @$pb.TagNumber(6)
-  set type(AnnotationType v) {
-    setField(6, v);
-  }
-
+  set type(AnnotationType value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasType() => $_has(5);
   @$pb.TagNumber(6)
-  void clearType() => clearField(6);
+  void clearType() => $_clearField(6);
 
   /// A map of additional read alignment information. This must be of the form
   /// map<string, string[]> (string key mapping to a list of string values).
   @$pb.TagNumber(17)
-  $core.Map<$core.String, $2.ListValue> get info => $_getMap(6);
+  $pb.PbMap<$core.String, $2.ListValue> get info => $_getMap(6);
 }
 
 enum Annotation_Value { variant, transcript, notSet }
@@ -220,54 +190,32 @@ class Annotation extends $pb.GeneratedMessage {
     AnnotationType? type,
     VariantAnnotation? variant,
     Transcript? transcript,
-    $core.Map<$core.String, $2.ListValue>? info,
+    $core.Iterable<$core.MapEntry<$core.String, $2.ListValue>>? info,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    if (annotationSetId != null) {
-      $result.annotationSetId = annotationSetId;
-    }
-    if (name != null) {
-      $result.name = name;
-    }
-    if (referenceId != null) {
-      $result.referenceId = referenceId;
-    }
-    if (referenceName != null) {
-      $result.referenceName = referenceName;
-    }
-    if (start != null) {
-      $result.start = start;
-    }
-    if (end != null) {
-      $result.end = end;
-    }
-    if (reverseStrand != null) {
-      $result.reverseStrand = reverseStrand;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    if (variant != null) {
-      $result.variant = variant;
-    }
-    if (transcript != null) {
-      $result.transcript = transcript;
-    }
-    if (info != null) {
-      $result.info.addAll(info);
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    if (annotationSetId != null) result.annotationSetId = annotationSetId;
+    if (name != null) result.name = name;
+    if (referenceId != null) result.referenceId = referenceId;
+    if (referenceName != null) result.referenceName = referenceName;
+    if (start != null) result.start = start;
+    if (end != null) result.end = end;
+    if (reverseStrand != null) result.reverseStrand = reverseStrand;
+    if (type != null) result.type = type;
+    if (variant != null) result.variant = variant;
+    if (transcript != null) result.transcript = transcript;
+    if (info != null) result.info.addEntries(info);
+    return result;
   }
-  Annotation._() : super();
-  factory Annotation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Annotation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Annotation._();
+
+  factory Annotation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Annotation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Annotation_Value> _Annotation_ValueByTag = {
     10: Annotation_Value.variant,
@@ -288,9 +236,7 @@ class Annotation extends $pb.GeneratedMessage {
     ..aInt64(6, _omitFieldNames ? '' : 'start')
     ..aInt64(7, _omitFieldNames ? '' : 'end')
     ..aOB(8, _omitFieldNames ? '' : 'reverseStrand')
-    ..e<AnnotationType>(9, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: AnnotationType.ANNOTATION_TYPE_UNSPECIFIED,
-        valueOf: AnnotationType.valueOf,
+    ..aE<AnnotationType>(9, _omitFieldNames ? '' : 'type',
         enumValues: AnnotationType.values)
     ..aOM<VariantAnnotation>(10, _omitFieldNames ? '' : 'variant',
         subBuilder: VariantAnnotation.create)
@@ -305,121 +251,101 @@ class Annotation extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Annotation clone() => Annotation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Annotation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Annotation copyWith(void Function(Annotation) updates) =>
       super.copyWith((message) => updates(message as Annotation)) as Annotation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Annotation create() => Annotation._();
+  @$core.override
   Annotation createEmptyInstance() => create();
-  static $pb.PbList<Annotation> createRepeated() => $pb.PbList<Annotation>();
   @$core.pragma('dart2js:noInline')
   static Annotation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Annotation>(create);
   static Annotation? _defaultInstance;
 
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
   Annotation_Value whichValue() => _Annotation_ValueByTag[$_whichOneof(0)]!;
-  void clearValue() => clearField($_whichOneof(0));
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  void clearValue() => $_clearField($_whichOneof(0));
 
   /// The server-generated annotation ID, unique across all annotations.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// The annotation set to which this annotation belongs.
   @$pb.TagNumber(2)
   $core.String get annotationSetId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set annotationSetId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set annotationSetId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAnnotationSetId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAnnotationSetId() => clearField(2);
+  void clearAnnotationSetId() => $_clearField(2);
 
   /// The display name of this annotation.
   @$pb.TagNumber(3)
   $core.String get name => $_getSZ(2);
   @$pb.TagNumber(3)
-  set name($core.String v) {
-    $_setString(2, v);
-  }
-
+  set name($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearName() => clearField(3);
+  void clearName() => $_clearField(3);
 
   /// The ID of the Google Genomics reference associated with this range.
   @$pb.TagNumber(4)
   $core.String get referenceId => $_getSZ(3);
   @$pb.TagNumber(4)
-  set referenceId($core.String v) {
-    $_setString(3, v);
-  }
-
+  set referenceId($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasReferenceId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearReferenceId() => clearField(4);
+  void clearReferenceId() => $_clearField(4);
 
   /// The display name corresponding to the reference specified by
   /// `referenceId`, for example `chr1`, `1`, or `chrX`.
   @$pb.TagNumber(5)
   $core.String get referenceName => $_getSZ(4);
   @$pb.TagNumber(5)
-  set referenceName($core.String v) {
-    $_setString(4, v);
-  }
-
+  set referenceName($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasReferenceName() => $_has(4);
   @$pb.TagNumber(5)
-  void clearReferenceName() => clearField(5);
+  void clearReferenceName() => $_clearField(5);
 
   /// The start position of the range on the reference, 0-based inclusive.
   @$pb.TagNumber(6)
   $fixnum.Int64 get start => $_getI64(5);
   @$pb.TagNumber(6)
-  set start($fixnum.Int64 v) {
-    $_setInt64(5, v);
-  }
-
+  set start($fixnum.Int64 value) => $_setInt64(5, value);
   @$pb.TagNumber(6)
   $core.bool hasStart() => $_has(5);
   @$pb.TagNumber(6)
-  void clearStart() => clearField(6);
+  void clearStart() => $_clearField(6);
 
   /// The end position of the range on the reference, 0-based exclusive.
   @$pb.TagNumber(7)
   $fixnum.Int64 get end => $_getI64(6);
   @$pb.TagNumber(7)
-  set end($fixnum.Int64 v) {
-    $_setInt64(6, v);
-  }
-
+  set end($fixnum.Int64 value) => $_setInt64(6, value);
   @$pb.TagNumber(7)
   $core.bool hasEnd() => $_has(6);
   @$pb.TagNumber(7)
-  void clearEnd() => clearField(7);
+  void clearEnd() => $_clearField(7);
 
   /// Whether this range refers to the reverse strand, as opposed to the forward
   /// strand. Note that regardless of this field, the start/end position of the
@@ -427,28 +353,22 @@ class Annotation extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.bool get reverseStrand => $_getBF(7);
   @$pb.TagNumber(8)
-  set reverseStrand($core.bool v) {
-    $_setBool(7, v);
-  }
-
+  set reverseStrand($core.bool value) => $_setBool(7, value);
   @$pb.TagNumber(8)
   $core.bool hasReverseStrand() => $_has(7);
   @$pb.TagNumber(8)
-  void clearReverseStrand() => clearField(8);
+  void clearReverseStrand() => $_clearField(8);
 
   /// The data type for this annotation. Must match the containing annotation
   /// set's type.
   @$pb.TagNumber(9)
   AnnotationType get type => $_getN(8);
   @$pb.TagNumber(9)
-  set type(AnnotationType v) {
-    setField(9, v);
-  }
-
+  set type(AnnotationType value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasType() => $_has(8);
   @$pb.TagNumber(9)
-  void clearType() => clearField(9);
+  void clearType() => $_clearField(9);
 
   /// A variant annotation, which describes the effect of a variant on the
   /// genome, the coding sequence, and/or higher level consequences at the
@@ -457,14 +377,11 @@ class Annotation extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   VariantAnnotation get variant => $_getN(9);
   @$pb.TagNumber(10)
-  set variant(VariantAnnotation v) {
-    setField(10, v);
-  }
-
+  set variant(VariantAnnotation value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasVariant() => $_has(9);
   @$pb.TagNumber(10)
-  void clearVariant() => clearField(10);
+  void clearVariant() => $_clearField(10);
   @$pb.TagNumber(10)
   VariantAnnotation ensureVariant() => $_ensure(9);
 
@@ -475,21 +392,18 @@ class Annotation extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   Transcript get transcript => $_getN(10);
   @$pb.TagNumber(11)
-  set transcript(Transcript v) {
-    setField(11, v);
-  }
-
+  set transcript(Transcript value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasTranscript() => $_has(10);
   @$pb.TagNumber(11)
-  void clearTranscript() => clearField(11);
+  void clearTranscript() => $_clearField(11);
   @$pb.TagNumber(11)
   Transcript ensureTranscript() => $_ensure(10);
 
   /// A map of additional read alignment information. This must be of the form
   /// map<string, string[]> (string key mapping to a list of string values).
   @$pb.TagNumber(12)
-  $core.Map<$core.String, $2.ListValue> get info => $_getMap(11);
+  $pb.PbMap<$core.String, $2.ListValue> get info => $_getMap(11);
 }
 
 class VariantAnnotation_ClinicalCondition extends $pb.GeneratedMessage {
@@ -499,29 +413,23 @@ class VariantAnnotation_ClinicalCondition extends $pb.GeneratedMessage {
     $core.String? conceptId,
     $core.String? omimId,
   }) {
-    final $result = create();
-    if (names != null) {
-      $result.names.addAll(names);
-    }
-    if (externalIds != null) {
-      $result.externalIds.addAll(externalIds);
-    }
-    if (conceptId != null) {
-      $result.conceptId = conceptId;
-    }
-    if (omimId != null) {
-      $result.omimId = omimId;
-    }
-    return $result;
+    final result = create();
+    if (names != null) result.names.addAll(names);
+    if (externalIds != null) result.externalIds.addAll(externalIds);
+    if (conceptId != null) result.conceptId = conceptId;
+    if (omimId != null) result.omimId = omimId;
+    return result;
   }
-  VariantAnnotation_ClinicalCondition._() : super();
+
+  VariantAnnotation_ClinicalCondition._();
+
   factory VariantAnnotation_ClinicalCondition.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory VariantAnnotation_ClinicalCondition.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory VariantAnnotation_ClinicalCondition.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'VariantAnnotation.ClinicalCondition',
@@ -529,35 +437,29 @@ class VariantAnnotation_ClinicalCondition extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
       createEmptyInstance: create)
     ..pPS(1, _omitFieldNames ? '' : 'names')
-    ..pc<ExternalId>(
-        2, _omitFieldNames ? '' : 'externalIds', $pb.PbFieldType.PM,
+    ..pPM<ExternalId>(2, _omitFieldNames ? '' : 'externalIds',
         subBuilder: ExternalId.create)
     ..aOS(3, _omitFieldNames ? '' : 'conceptId')
     ..aOS(4, _omitFieldNames ? '' : 'omimId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  VariantAnnotation_ClinicalCondition clone() =>
-      VariantAnnotation_ClinicalCondition()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  VariantAnnotation_ClinicalCondition clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   VariantAnnotation_ClinicalCondition copyWith(
           void Function(VariantAnnotation_ClinicalCondition) updates) =>
       super.copyWith((message) =>
               updates(message as VariantAnnotation_ClinicalCondition))
           as VariantAnnotation_ClinicalCondition;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static VariantAnnotation_ClinicalCondition create() =>
       VariantAnnotation_ClinicalCondition._();
+  @$core.override
   VariantAnnotation_ClinicalCondition createEmptyInstance() => create();
-  static $pb.PbList<VariantAnnotation_ClinicalCondition> createRepeated() =>
-      $pb.PbList<VariantAnnotation_ClinicalCondition>();
   @$core.pragma('dart2js:noInline')
   static VariantAnnotation_ClinicalCondition getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -566,39 +468,33 @@ class VariantAnnotation_ClinicalCondition extends $pb.GeneratedMessage {
 
   /// A set of names for the condition.
   @$pb.TagNumber(1)
-  $core.List<$core.String> get names => $_getList(0);
+  $pb.PbList<$core.String> get names => $_getList(0);
 
   /// The set of external IDs for this condition.
   @$pb.TagNumber(2)
-  $core.List<ExternalId> get externalIds => $_getList(1);
+  $pb.PbList<ExternalId> get externalIds => $_getList(1);
 
   /// The MedGen concept id associated with this gene.
   /// Search for these IDs at http://www.ncbi.nlm.nih.gov/medgen/
   @$pb.TagNumber(3)
   $core.String get conceptId => $_getSZ(2);
   @$pb.TagNumber(3)
-  set conceptId($core.String v) {
-    $_setString(2, v);
-  }
-
+  set conceptId($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasConceptId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearConceptId() => clearField(3);
+  void clearConceptId() => $_clearField(3);
 
   /// The OMIM id for this condition.
   /// Search for these IDs at http://omim.org/
   @$pb.TagNumber(4)
   $core.String get omimId => $_getSZ(3);
   @$pb.TagNumber(4)
-  set omimId($core.String v) {
-    $_setString(3, v);
-  }
-
+  set omimId($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasOmimId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearOmimId() => clearField(4);
+  void clearOmimId() => $_clearField(4);
 }
 
 class VariantAnnotation extends $pb.GeneratedMessage {
@@ -611,85 +507,61 @@ class VariantAnnotation extends $pb.GeneratedMessage {
     $core.Iterable<VariantAnnotation_ClinicalCondition>? conditions,
     VariantAnnotation_ClinicalSignificance? clinicalSignificance,
   }) {
-    final $result = create();
-    if (type != null) {
-      $result.type = type;
-    }
-    if (effect != null) {
-      $result.effect = effect;
-    }
-    if (alternateBases != null) {
-      $result.alternateBases = alternateBases;
-    }
-    if (geneId != null) {
-      $result.geneId = geneId;
-    }
-    if (transcriptIds != null) {
-      $result.transcriptIds.addAll(transcriptIds);
-    }
-    if (conditions != null) {
-      $result.conditions.addAll(conditions);
-    }
-    if (clinicalSignificance != null) {
-      $result.clinicalSignificance = clinicalSignificance;
-    }
-    return $result;
+    final result = create();
+    if (type != null) result.type = type;
+    if (effect != null) result.effect = effect;
+    if (alternateBases != null) result.alternateBases = alternateBases;
+    if (geneId != null) result.geneId = geneId;
+    if (transcriptIds != null) result.transcriptIds.addAll(transcriptIds);
+    if (conditions != null) result.conditions.addAll(conditions);
+    if (clinicalSignificance != null)
+      result.clinicalSignificance = clinicalSignificance;
+    return result;
   }
-  VariantAnnotation._() : super();
-  factory VariantAnnotation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory VariantAnnotation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  VariantAnnotation._();
+
+  factory VariantAnnotation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory VariantAnnotation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'VariantAnnotation',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
       createEmptyInstance: create)
-    ..e<VariantAnnotation_Type>(
-        1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: VariantAnnotation_Type.TYPE_UNSPECIFIED,
-        valueOf: VariantAnnotation_Type.valueOf,
+    ..aE<VariantAnnotation_Type>(1, _omitFieldNames ? '' : 'type',
         enumValues: VariantAnnotation_Type.values)
-    ..e<VariantAnnotation_Effect>(
-        2, _omitFieldNames ? '' : 'effect', $pb.PbFieldType.OE,
-        defaultOrMaker: VariantAnnotation_Effect.EFFECT_UNSPECIFIED,
-        valueOf: VariantAnnotation_Effect.valueOf,
+    ..aE<VariantAnnotation_Effect>(2, _omitFieldNames ? '' : 'effect',
         enumValues: VariantAnnotation_Effect.values)
     ..aOS(3, _omitFieldNames ? '' : 'alternateBases')
     ..aOS(4, _omitFieldNames ? '' : 'geneId')
     ..pPS(5, _omitFieldNames ? '' : 'transcriptIds')
-    ..pc<VariantAnnotation_ClinicalCondition>(
-        6, _omitFieldNames ? '' : 'conditions', $pb.PbFieldType.PM,
+    ..pPM<VariantAnnotation_ClinicalCondition>(
+        6, _omitFieldNames ? '' : 'conditions',
         subBuilder: VariantAnnotation_ClinicalCondition.create)
-    ..e<VariantAnnotation_ClinicalSignificance>(
-        7, _omitFieldNames ? '' : 'clinicalSignificance', $pb.PbFieldType.OE,
-        defaultOrMaker: VariantAnnotation_ClinicalSignificance
-            .CLINICAL_SIGNIFICANCE_UNSPECIFIED,
-        valueOf: VariantAnnotation_ClinicalSignificance.valueOf,
+    ..aE<VariantAnnotation_ClinicalSignificance>(
+        7, _omitFieldNames ? '' : 'clinicalSignificance',
         enumValues: VariantAnnotation_ClinicalSignificance.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  VariantAnnotation clone() => VariantAnnotation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  VariantAnnotation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   VariantAnnotation copyWith(void Function(VariantAnnotation) updates) =>
       super.copyWith((message) => updates(message as VariantAnnotation))
           as VariantAnnotation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static VariantAnnotation create() => VariantAnnotation._();
+  @$core.override
   VariantAnnotation createEmptyInstance() => create();
-  static $pb.PbList<VariantAnnotation> createRepeated() =>
-      $pb.PbList<VariantAnnotation>();
   @$core.pragma('dart2js:noInline')
   static VariantAnnotation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<VariantAnnotation>(create);
@@ -699,27 +571,21 @@ class VariantAnnotation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   VariantAnnotation_Type get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(VariantAnnotation_Type v) {
-    setField(1, v);
-  }
-
+  set type(VariantAnnotation_Type value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearType() => $_clearField(1);
 
   /// Effect of the variant on the coding sequence.
   @$pb.TagNumber(2)
   VariantAnnotation_Effect get effect => $_getN(1);
   @$pb.TagNumber(2)
-  set effect(VariantAnnotation_Effect v) {
-    setField(2, v);
-  }
-
+  set effect(VariantAnnotation_Effect value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasEffect() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEffect() => clearField(2);
+  void clearEffect() => $_clearField(2);
 
   /// The alternate allele for this variant. If multiple alternate alleles
   /// exist at this location, create a separate variant for each one, as they
@@ -727,38 +593,32 @@ class VariantAnnotation extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get alternateBases => $_getSZ(2);
   @$pb.TagNumber(3)
-  set alternateBases($core.String v) {
-    $_setString(2, v);
-  }
-
+  set alternateBases($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasAlternateBases() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAlternateBases() => clearField(3);
+  void clearAlternateBases() => $_clearField(3);
 
   /// Google annotation ID of the gene affected by this variant. This should
   /// be provided when the variant is created.
   @$pb.TagNumber(4)
   $core.String get geneId => $_getSZ(3);
   @$pb.TagNumber(4)
-  set geneId($core.String v) {
-    $_setString(3, v);
-  }
-
+  set geneId($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasGeneId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearGeneId() => clearField(4);
+  void clearGeneId() => $_clearField(4);
 
   /// Google annotation IDs of the transcripts affected by this variant. These
   /// should be provided when the variant is created.
   @$pb.TagNumber(5)
-  $core.List<$core.String> get transcriptIds => $_getList(4);
+  $pb.PbList<$core.String> get transcriptIds => $_getList(4);
 
   /// The set of conditions associated with this variant.
   /// A condition describes the way a variant influences human health.
   @$pb.TagNumber(6)
-  $core.List<VariantAnnotation_ClinicalCondition> get conditions =>
+  $pb.PbList<VariantAnnotation_ClinicalCondition> get conditions =>
       $_getList(5);
 
   /// Describes the clinical significance of a variant.
@@ -768,14 +628,12 @@ class VariantAnnotation extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   VariantAnnotation_ClinicalSignificance get clinicalSignificance => $_getN(6);
   @$pb.TagNumber(7)
-  set clinicalSignificance(VariantAnnotation_ClinicalSignificance v) {
-    setField(7, v);
-  }
-
+  set clinicalSignificance(VariantAnnotation_ClinicalSignificance value) =>
+      $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasClinicalSignificance() => $_has(6);
   @$pb.TagNumber(7)
-  void clearClinicalSignificance() => clearField(7);
+  void clearClinicalSignificance() => $_clearField(7);
 }
 
 class Transcript_Exon extends $pb.GeneratedMessage {
@@ -784,25 +642,21 @@ class Transcript_Exon extends $pb.GeneratedMessage {
     $fixnum.Int64? end,
     $3.Int32Value? frame,
   }) {
-    final $result = create();
-    if (start != null) {
-      $result.start = start;
-    }
-    if (end != null) {
-      $result.end = end;
-    }
-    if (frame != null) {
-      $result.frame = frame;
-    }
-    return $result;
+    final result = create();
+    if (start != null) result.start = start;
+    if (end != null) result.end = end;
+    if (frame != null) result.frame = frame;
+    return result;
   }
-  Transcript_Exon._() : super();
-  factory Transcript_Exon.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Transcript_Exon.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Transcript_Exon._();
+
+  factory Transcript_Exon.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Transcript_Exon.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Transcript.Exon',
@@ -815,24 +669,20 @@ class Transcript_Exon extends $pb.GeneratedMessage {
         subBuilder: $3.Int32Value.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Transcript_Exon clone() => Transcript_Exon()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Transcript_Exon clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Transcript_Exon copyWith(void Function(Transcript_Exon) updates) =>
       super.copyWith((message) => updates(message as Transcript_Exon))
           as Transcript_Exon;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Transcript_Exon create() => Transcript_Exon._();
+  @$core.override
   Transcript_Exon createEmptyInstance() => create();
-  static $pb.PbList<Transcript_Exon> createRepeated() =>
-      $pb.PbList<Transcript_Exon>();
   @$core.pragma('dart2js:noInline')
   static Transcript_Exon getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Transcript_Exon>(create);
@@ -844,14 +694,11 @@ class Transcript_Exon extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $fixnum.Int64 get start => $_getI64(0);
   @$pb.TagNumber(1)
-  set start($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set start($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasStart() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStart() => clearField(1);
+  void clearStart() => $_clearField(1);
 
   /// The end position of the exon on this annotation's reference sequence,
   /// 0-based exclusive. Note that this is relative to the reference start, and
@@ -859,39 +706,33 @@ class Transcript_Exon extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $fixnum.Int64 get end => $_getI64(1);
   @$pb.TagNumber(2)
-  set end($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set end($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEnd() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEnd() => clearField(2);
+  void clearEnd() => $_clearField(2);
 
-  ///  The frame of this exon. Contains a value of 0, 1, or 2, which indicates
-  ///  the offset of the first coding base of the exon within the reading frame
-  ///  of the coding DNA sequence, if any. This field is dependent on the
-  ///  strandedness of this annotation (see
-  ///  [Annotation.reverse_strand][google.genomics.v1.Annotation.reverse_strand]).
-  ///  For forward stranded annotations, this offset is relative to the
-  ///  [exon.start][google.genomics.v1.Transcript.Exon.start]. For reverse
-  ///  strand annotations, this offset is relative to the
-  ///  [exon.end][google.genomics.v1.Transcript.Exon.end] `- 1`.
+  /// The frame of this exon. Contains a value of 0, 1, or 2, which indicates
+  /// the offset of the first coding base of the exon within the reading frame
+  /// of the coding DNA sequence, if any. This field is dependent on the
+  /// strandedness of this annotation (see
+  /// [Annotation.reverse_strand][google.genomics.v1.Annotation.reverse_strand]).
+  /// For forward stranded annotations, this offset is relative to the
+  /// [exon.start][google.genomics.v1.Transcript.Exon.start]. For reverse
+  /// strand annotations, this offset is relative to the
+  /// [exon.end][google.genomics.v1.Transcript.Exon.end] `- 1`.
   ///
-  ///  Unset if this exon does not intersect the coding sequence. Upon creation
-  ///  of a transcript, the frame must be populated for all or none of the
-  ///  coding exons.
+  /// Unset if this exon does not intersect the coding sequence. Upon creation
+  /// of a transcript, the frame must be populated for all or none of the
+  /// coding exons.
   @$pb.TagNumber(3)
   $3.Int32Value get frame => $_getN(2);
   @$pb.TagNumber(3)
-  set frame($3.Int32Value v) {
-    setField(3, v);
-  }
-
+  set frame($3.Int32Value value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasFrame() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFrame() => clearField(3);
+  void clearFrame() => $_clearField(3);
   @$pb.TagNumber(3)
   $3.Int32Value ensureFrame() => $_ensure(2);
 }
@@ -901,22 +742,20 @@ class Transcript_CodingSequence extends $pb.GeneratedMessage {
     $fixnum.Int64? start,
     $fixnum.Int64? end,
   }) {
-    final $result = create();
-    if (start != null) {
-      $result.start = start;
-    }
-    if (end != null) {
-      $result.end = end;
-    }
-    return $result;
+    final result = create();
+    if (start != null) result.start = start;
+    if (end != null) result.end = end;
+    return result;
   }
-  Transcript_CodingSequence._() : super();
-  factory Transcript_CodingSequence.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Transcript_CodingSequence.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Transcript_CodingSequence._();
+
+  factory Transcript_CodingSequence.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Transcript_CodingSequence.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Transcript.CodingSequence',
@@ -927,26 +766,21 @@ class Transcript_CodingSequence extends $pb.GeneratedMessage {
     ..aInt64(2, _omitFieldNames ? '' : 'end')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Transcript_CodingSequence clone() =>
-      Transcript_CodingSequence()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Transcript_CodingSequence clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Transcript_CodingSequence copyWith(
           void Function(Transcript_CodingSequence) updates) =>
       super.copyWith((message) => updates(message as Transcript_CodingSequence))
           as Transcript_CodingSequence;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Transcript_CodingSequence create() => Transcript_CodingSequence._();
+  @$core.override
   Transcript_CodingSequence createEmptyInstance() => create();
-  static $pb.PbList<Transcript_CodingSequence> createRepeated() =>
-      $pb.PbList<Transcript_CodingSequence>();
   @$core.pragma('dart2js:noInline')
   static Transcript_CodingSequence getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Transcript_CodingSequence>(create);
@@ -958,14 +792,11 @@ class Transcript_CodingSequence extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $fixnum.Int64 get start => $_getI64(0);
   @$pb.TagNumber(1)
-  set start($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set start($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasStart() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStart() => clearField(1);
+  void clearStart() => $_clearField(1);
 
   /// The end of the coding sequence on this annotation's reference sequence,
   /// 0-based exclusive. Note that this position is relative to the reference
@@ -973,14 +804,11 @@ class Transcript_CodingSequence extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $fixnum.Int64 get end => $_getI64(1);
   @$pb.TagNumber(2)
-  set end($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set end($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEnd() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEnd() => clearField(2);
+  void clearEnd() => $_clearField(2);
 }
 
 /// A transcript represents the assertion that a particular region of the
@@ -991,25 +819,21 @@ class Transcript extends $pb.GeneratedMessage {
     $core.Iterable<Transcript_Exon>? exons,
     Transcript_CodingSequence? codingSequence,
   }) {
-    final $result = create();
-    if (geneId != null) {
-      $result.geneId = geneId;
-    }
-    if (exons != null) {
-      $result.exons.addAll(exons);
-    }
-    if (codingSequence != null) {
-      $result.codingSequence = codingSequence;
-    }
-    return $result;
+    final result = create();
+    if (geneId != null) result.geneId = geneId;
+    if (exons != null) result.exons.addAll(exons);
+    if (codingSequence != null) result.codingSequence = codingSequence;
+    return result;
   }
-  Transcript._() : super();
-  factory Transcript.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Transcript.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Transcript._();
+
+  factory Transcript.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Transcript.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Transcript',
@@ -1017,28 +841,25 @@ class Transcript extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'geneId')
-    ..pc<Transcript_Exon>(2, _omitFieldNames ? '' : 'exons', $pb.PbFieldType.PM,
+    ..pPM<Transcript_Exon>(2, _omitFieldNames ? '' : 'exons',
         subBuilder: Transcript_Exon.create)
     ..aOM<Transcript_CodingSequence>(3, _omitFieldNames ? '' : 'codingSequence',
         subBuilder: Transcript_CodingSequence.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Transcript clone() => Transcript()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Transcript clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Transcript copyWith(void Function(Transcript) updates) =>
       super.copyWith((message) => updates(message as Transcript)) as Transcript;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Transcript create() => Transcript._();
+  @$core.override
   Transcript createEmptyInstance() => create();
-  static $pb.PbList<Transcript> createRepeated() => $pb.PbList<Transcript>();
   @$core.pragma('dart2js:noInline')
   static Transcript getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Transcript>(create);
@@ -1048,56 +869,50 @@ class Transcript extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get geneId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set geneId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set geneId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasGeneId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearGeneId() => clearField(1);
+  void clearGeneId() => $_clearField(1);
 
-  ///  The <a href="http://en.wikipedia.org/wiki/Exon">exons</a> that compose
-  ///  this transcript. This field should be unset for genomes where transcript
-  ///  splicing does not occur, for example prokaryotes.
+  /// The <a href="http://en.wikipedia.org/wiki/Exon">exons</a> that compose
+  /// this transcript. This field should be unset for genomes where transcript
+  /// splicing does not occur, for example prokaryotes.
   ///
-  ///  Introns are regions of the transcript that are not included in the
-  ///  spliced RNA product. Though not explicitly modeled here, intron ranges can
-  ///  be deduced; all regions of this transcript that are not exons are introns.
+  /// Introns are regions of the transcript that are not included in the
+  /// spliced RNA product. Though not explicitly modeled here, intron ranges can
+  /// be deduced; all regions of this transcript that are not exons are introns.
   ///
-  ///  Exonic sequences do not necessarily code for a translational product
-  ///  (amino acids). Only the regions of exons bounded by the
-  ///  [codingSequence][google.genomics.v1.Transcript.coding_sequence] correspond
-  ///  to coding DNA sequence.
+  /// Exonic sequences do not necessarily code for a translational product
+  /// (amino acids). Only the regions of exons bounded by the
+  /// [codingSequence][google.genomics.v1.Transcript.coding_sequence] correspond
+  /// to coding DNA sequence.
   ///
-  ///  Exons are ordered by start position and may not overlap.
+  /// Exons are ordered by start position and may not overlap.
   @$pb.TagNumber(2)
-  $core.List<Transcript_Exon> get exons => $_getList(1);
+  $pb.PbList<Transcript_Exon> get exons => $_getList(1);
 
-  ///  The range of the coding sequence for this transcript, if any. To determine
-  ///  the exact ranges of coding sequence, intersect this range with those of the
-  ///  [exons][google.genomics.v1.Transcript.exons], if any. If there are any
-  ///  [exons][google.genomics.v1.Transcript.exons], the
-  ///  [codingSequence][google.genomics.v1.Transcript.coding_sequence] must start
-  ///  and end within them.
+  /// The range of the coding sequence for this transcript, if any. To determine
+  /// the exact ranges of coding sequence, intersect this range with those of the
+  /// [exons][google.genomics.v1.Transcript.exons], if any. If there are any
+  /// [exons][google.genomics.v1.Transcript.exons], the
+  /// [codingSequence][google.genomics.v1.Transcript.coding_sequence] must start
+  /// and end within them.
   ///
-  ///  Note that in some cases, the reference genome will not exactly match the
-  ///  observed mRNA transcript e.g. due to variance in the source genome from
-  ///  reference. In these cases,
-  ///  [exon.frame][google.genomics.v1.Transcript.Exon.frame] will not necessarily
-  ///  match the expected reference reading frame and coding exon reference bases
-  ///  cannot necessarily be concatenated to produce the original transcript mRNA.
+  /// Note that in some cases, the reference genome will not exactly match the
+  /// observed mRNA transcript e.g. due to variance in the source genome from
+  /// reference. In these cases,
+  /// [exon.frame][google.genomics.v1.Transcript.Exon.frame] will not necessarily
+  /// match the expected reference reading frame and coding exon reference bases
+  /// cannot necessarily be concatenated to produce the original transcript mRNA.
   @$pb.TagNumber(3)
   Transcript_CodingSequence get codingSequence => $_getN(2);
   @$pb.TagNumber(3)
-  set codingSequence(Transcript_CodingSequence v) {
-    setField(3, v);
-  }
-
+  set codingSequence(Transcript_CodingSequence value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasCodingSequence() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCodingSequence() => clearField(3);
+  void clearCodingSequence() => $_clearField(3);
   @$pb.TagNumber(3)
   Transcript_CodingSequence ensureCodingSequence() => $_ensure(2);
 }
@@ -1107,22 +922,20 @@ class ExternalId extends $pb.GeneratedMessage {
     $core.String? sourceName,
     $core.String? id,
   }) {
-    final $result = create();
-    if (sourceName != null) {
-      $result.sourceName = sourceName;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    return $result;
+    final result = create();
+    if (sourceName != null) result.sourceName = sourceName;
+    if (id != null) result.id = id;
+    return result;
   }
-  ExternalId._() : super();
-  factory ExternalId.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExternalId.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ExternalId._();
+
+  factory ExternalId.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ExternalId.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ExternalId',
@@ -1133,22 +946,19 @@ class ExternalId extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ExternalId clone() => ExternalId()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ExternalId clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ExternalId copyWith(void Function(ExternalId) updates) =>
       super.copyWith((message) => updates(message as ExternalId)) as ExternalId;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ExternalId create() => ExternalId._();
+  @$core.override
   ExternalId createEmptyInstance() => create();
-  static $pb.PbList<ExternalId> createRepeated() => $pb.PbList<ExternalId>();
   @$core.pragma('dart2js:noInline')
   static ExternalId getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ExternalId>(create);
@@ -1158,46 +968,40 @@ class ExternalId extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get sourceName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set sourceName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set sourceName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSourceName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSourceName() => clearField(1);
+  void clearSourceName() => $_clearField(1);
 
   /// The id used by the source of this data.
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) {
-    $_setString(1, v);
-  }
-
+  set id($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
+  void clearId() => $_clearField(2);
 }
 
 class CreateAnnotationSetRequest extends $pb.GeneratedMessage {
   factory CreateAnnotationSetRequest({
     AnnotationSet? annotationSet,
   }) {
-    final $result = create();
-    if (annotationSet != null) {
-      $result.annotationSet = annotationSet;
-    }
-    return $result;
+    final result = create();
+    if (annotationSet != null) result.annotationSet = annotationSet;
+    return result;
   }
-  CreateAnnotationSetRequest._() : super();
-  factory CreateAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateAnnotationSetRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateAnnotationSetRequest._();
+
+  factory CreateAnnotationSetRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateAnnotationSetRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateAnnotationSetRequest',
@@ -1208,27 +1012,22 @@ class CreateAnnotationSetRequest extends $pb.GeneratedMessage {
         subBuilder: AnnotationSet.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateAnnotationSetRequest clone() =>
-      CreateAnnotationSetRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateAnnotationSetRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateAnnotationSetRequest copyWith(
           void Function(CreateAnnotationSetRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateAnnotationSetRequest))
           as CreateAnnotationSetRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateAnnotationSetRequest create() => CreateAnnotationSetRequest._();
+  @$core.override
   CreateAnnotationSetRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateAnnotationSetRequest> createRepeated() =>
-      $pb.PbList<CreateAnnotationSetRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateAnnotationSetRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateAnnotationSetRequest>(create);
@@ -1238,14 +1037,11 @@ class CreateAnnotationSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AnnotationSet get annotationSet => $_getN(0);
   @$pb.TagNumber(1)
-  set annotationSet(AnnotationSet v) {
-    setField(1, v);
-  }
-
+  set annotationSet(AnnotationSet value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAnnotationSet() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAnnotationSet() => clearField(1);
+  void clearAnnotationSet() => $_clearField(1);
   @$pb.TagNumber(1)
   AnnotationSet ensureAnnotationSet() => $_ensure(0);
 }
@@ -1254,19 +1050,19 @@ class GetAnnotationSetRequest extends $pb.GeneratedMessage {
   factory GetAnnotationSetRequest({
     $core.String? annotationSetId,
   }) {
-    final $result = create();
-    if (annotationSetId != null) {
-      $result.annotationSetId = annotationSetId;
-    }
-    return $result;
+    final result = create();
+    if (annotationSetId != null) result.annotationSetId = annotationSetId;
+    return result;
   }
-  GetAnnotationSetRequest._() : super();
-  factory GetAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetAnnotationSetRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetAnnotationSetRequest._();
+
+  factory GetAnnotationSetRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetAnnotationSetRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetAnnotationSetRequest',
@@ -1276,26 +1072,21 @@ class GetAnnotationSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'annotationSetId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetAnnotationSetRequest clone() =>
-      GetAnnotationSetRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAnnotationSetRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetAnnotationSetRequest copyWith(
           void Function(GetAnnotationSetRequest) updates) =>
       super.copyWith((message) => updates(message as GetAnnotationSetRequest))
           as GetAnnotationSetRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetAnnotationSetRequest create() => GetAnnotationSetRequest._();
+  @$core.override
   GetAnnotationSetRequest createEmptyInstance() => create();
-  static $pb.PbList<GetAnnotationSetRequest> createRepeated() =>
-      $pb.PbList<GetAnnotationSetRequest>();
   @$core.pragma('dart2js:noInline')
   static GetAnnotationSetRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetAnnotationSetRequest>(create);
@@ -1305,14 +1096,11 @@ class GetAnnotationSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get annotationSetId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set annotationSetId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set annotationSetId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAnnotationSetId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAnnotationSetId() => clearField(1);
+  void clearAnnotationSetId() => $_clearField(1);
 }
 
 class UpdateAnnotationSetRequest extends $pb.GeneratedMessage {
@@ -1321,25 +1109,21 @@ class UpdateAnnotationSetRequest extends $pb.GeneratedMessage {
     AnnotationSet? annotationSet,
     $4.FieldMask? updateMask,
   }) {
-    final $result = create();
-    if (annotationSetId != null) {
-      $result.annotationSetId = annotationSetId;
-    }
-    if (annotationSet != null) {
-      $result.annotationSet = annotationSet;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    return $result;
+    final result = create();
+    if (annotationSetId != null) result.annotationSetId = annotationSetId;
+    if (annotationSet != null) result.annotationSet = annotationSet;
+    if (updateMask != null) result.updateMask = updateMask;
+    return result;
   }
-  UpdateAnnotationSetRequest._() : super();
-  factory UpdateAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateAnnotationSetRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateAnnotationSetRequest._();
+
+  factory UpdateAnnotationSetRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateAnnotationSetRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateAnnotationSetRequest',
@@ -1353,27 +1137,22 @@ class UpdateAnnotationSetRequest extends $pb.GeneratedMessage {
         subBuilder: $4.FieldMask.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateAnnotationSetRequest clone() =>
-      UpdateAnnotationSetRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateAnnotationSetRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateAnnotationSetRequest copyWith(
           void Function(UpdateAnnotationSetRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateAnnotationSetRequest))
           as UpdateAnnotationSetRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateAnnotationSetRequest create() => UpdateAnnotationSetRequest._();
+  @$core.override
   UpdateAnnotationSetRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateAnnotationSetRequest> createRepeated() =>
-      $pb.PbList<UpdateAnnotationSetRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateAnnotationSetRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateAnnotationSetRequest>(create);
@@ -1383,27 +1162,21 @@ class UpdateAnnotationSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get annotationSetId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set annotationSetId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set annotationSetId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAnnotationSetId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAnnotationSetId() => clearField(1);
+  void clearAnnotationSetId() => $_clearField(1);
 
   /// The new annotation set.
   @$pb.TagNumber(2)
   AnnotationSet get annotationSet => $_getN(1);
   @$pb.TagNumber(2)
-  set annotationSet(AnnotationSet v) {
-    setField(2, v);
-  }
-
+  set annotationSet(AnnotationSet value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasAnnotationSet() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAnnotationSet() => clearField(2);
+  void clearAnnotationSet() => $_clearField(2);
   @$pb.TagNumber(2)
   AnnotationSet ensureAnnotationSet() => $_ensure(1);
 
@@ -1415,14 +1188,11 @@ class UpdateAnnotationSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $4.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($4.FieldMask v) {
-    setField(3, v);
-  }
-
+  set updateMask($4.FieldMask value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUpdateMask() => clearField(3);
+  void clearUpdateMask() => $_clearField(3);
   @$pb.TagNumber(3)
   $4.FieldMask ensureUpdateMask() => $_ensure(2);
 }
@@ -1431,19 +1201,19 @@ class DeleteAnnotationSetRequest extends $pb.GeneratedMessage {
   factory DeleteAnnotationSetRequest({
     $core.String? annotationSetId,
   }) {
-    final $result = create();
-    if (annotationSetId != null) {
-      $result.annotationSetId = annotationSetId;
-    }
-    return $result;
+    final result = create();
+    if (annotationSetId != null) result.annotationSetId = annotationSetId;
+    return result;
   }
-  DeleteAnnotationSetRequest._() : super();
-  factory DeleteAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteAnnotationSetRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteAnnotationSetRequest._();
+
+  factory DeleteAnnotationSetRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteAnnotationSetRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteAnnotationSetRequest',
@@ -1453,27 +1223,22 @@ class DeleteAnnotationSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'annotationSetId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteAnnotationSetRequest clone() =>
-      DeleteAnnotationSetRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteAnnotationSetRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteAnnotationSetRequest copyWith(
           void Function(DeleteAnnotationSetRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeleteAnnotationSetRequest))
           as DeleteAnnotationSetRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteAnnotationSetRequest create() => DeleteAnnotationSetRequest._();
+  @$core.override
   DeleteAnnotationSetRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteAnnotationSetRequest> createRepeated() =>
-      $pb.PbList<DeleteAnnotationSetRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteAnnotationSetRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteAnnotationSetRequest>(create);
@@ -1483,14 +1248,11 @@ class DeleteAnnotationSetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get annotationSetId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set annotationSetId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set annotationSetId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAnnotationSetId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAnnotationSetId() => clearField(1);
+  void clearAnnotationSetId() => $_clearField(1);
 }
 
 class SearchAnnotationSetsRequest extends $pb.GeneratedMessage {
@@ -1502,34 +1264,24 @@ class SearchAnnotationSetsRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.int? pageSize,
   }) {
-    final $result = create();
-    if (datasetIds != null) {
-      $result.datasetIds.addAll(datasetIds);
-    }
-    if (referenceSetId != null) {
-      $result.referenceSetId = referenceSetId;
-    }
-    if (name != null) {
-      $result.name = name;
-    }
-    if (types != null) {
-      $result.types.addAll(types);
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    return $result;
+    final result = create();
+    if (datasetIds != null) result.datasetIds.addAll(datasetIds);
+    if (referenceSetId != null) result.referenceSetId = referenceSetId;
+    if (name != null) result.name = name;
+    if (types != null) result.types.addAll(types);
+    if (pageToken != null) result.pageToken = pageToken;
+    if (pageSize != null) result.pageSize = pageSize;
+    return result;
   }
-  SearchAnnotationSetsRequest._() : super();
-  factory SearchAnnotationSetsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SearchAnnotationSetsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SearchAnnotationSetsRequest._();
+
+  factory SearchAnnotationSetsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SearchAnnotationSetsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SearchAnnotationSetsRequest',
@@ -1544,31 +1296,26 @@ class SearchAnnotationSetsRequest extends $pb.GeneratedMessage {
         enumValues: AnnotationType.values,
         defaultEnumValue: AnnotationType.ANNOTATION_TYPE_UNSPECIFIED)
     ..aOS(5, _omitFieldNames ? '' : 'pageToken')
-    ..a<$core.int>(6, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(6, _omitFieldNames ? '' : 'pageSize')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SearchAnnotationSetsRequest clone() =>
-      SearchAnnotationSetsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SearchAnnotationSetsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SearchAnnotationSetsRequest copyWith(
           void Function(SearchAnnotationSetsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as SearchAnnotationSetsRequest))
           as SearchAnnotationSetsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SearchAnnotationSetsRequest create() =>
       SearchAnnotationSetsRequest._();
+  @$core.override
   SearchAnnotationSetsRequest createEmptyInstance() => create();
-  static $pb.PbList<SearchAnnotationSetsRequest> createRepeated() =>
-      $pb.PbList<SearchAnnotationSetsRequest>();
   @$core.pragma('dart2js:noInline')
   static SearchAnnotationSetsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SearchAnnotationSetsRequest>(create);
@@ -1577,40 +1324,34 @@ class SearchAnnotationSetsRequest extends $pb.GeneratedMessage {
   /// Required. The dataset IDs to search within. Caller must have `READ` access
   /// to these datasets.
   @$pb.TagNumber(1)
-  $core.List<$core.String> get datasetIds => $_getList(0);
+  $pb.PbList<$core.String> get datasetIds => $_getList(0);
 
   /// If specified, only annotation sets associated with the given reference set
   /// are returned.
   @$pb.TagNumber(2)
   $core.String get referenceSetId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set referenceSetId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set referenceSetId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasReferenceSetId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearReferenceSetId() => clearField(2);
+  void clearReferenceSetId() => $_clearField(2);
 
   /// Only return annotations sets for which a substring of the name matches this
   /// string (case insensitive).
   @$pb.TagNumber(3)
   $core.String get name => $_getSZ(2);
   @$pb.TagNumber(3)
-  set name($core.String v) {
-    $_setString(2, v);
-  }
-
+  set name($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearName() => clearField(3);
+  void clearName() => $_clearField(3);
 
   /// If specified, only annotation sets that have any of these types are
   /// returned.
   @$pb.TagNumber(4)
-  $core.List<AnnotationType> get types => $_getList(3);
+  $pb.PbList<AnnotationType> get types => $_getList(3);
 
   /// The continuation token, which is used to page through large result sets.
   /// To get the next page of results, set this parameter to the value of
@@ -1618,28 +1359,22 @@ class SearchAnnotationSetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get pageToken => $_getSZ(4);
   @$pb.TagNumber(5)
-  set pageToken($core.String v) {
-    $_setString(4, v);
-  }
-
+  set pageToken($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasPageToken() => $_has(4);
   @$pb.TagNumber(5)
-  void clearPageToken() => clearField(5);
+  void clearPageToken() => $_clearField(5);
 
   /// The maximum number of results to return in a single page. If unspecified,
   /// defaults to 128. The maximum value is 1024.
   @$pb.TagNumber(6)
   $core.int get pageSize => $_getIZ(5);
   @$pb.TagNumber(6)
-  set pageSize($core.int v) {
-    $_setSignedInt32(5, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(5, value);
   @$pb.TagNumber(6)
   $core.bool hasPageSize() => $_has(5);
   @$pb.TagNumber(6)
-  void clearPageSize() => clearField(6);
+  void clearPageSize() => $_clearField(6);
 }
 
 class SearchAnnotationSetsResponse extends $pb.GeneratedMessage {
@@ -1647,56 +1382,48 @@ class SearchAnnotationSetsResponse extends $pb.GeneratedMessage {
     $core.Iterable<AnnotationSet>? annotationSets,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (annotationSets != null) {
-      $result.annotationSets.addAll(annotationSets);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (annotationSets != null) result.annotationSets.addAll(annotationSets);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  SearchAnnotationSetsResponse._() : super();
-  factory SearchAnnotationSetsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SearchAnnotationSetsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SearchAnnotationSetsResponse._();
+
+  factory SearchAnnotationSetsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SearchAnnotationSetsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SearchAnnotationSetsResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
       createEmptyInstance: create)
-    ..pc<AnnotationSet>(
-        1, _omitFieldNames ? '' : 'annotationSets', $pb.PbFieldType.PM,
+    ..pPM<AnnotationSet>(1, _omitFieldNames ? '' : 'annotationSets',
         subBuilder: AnnotationSet.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SearchAnnotationSetsResponse clone() =>
-      SearchAnnotationSetsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SearchAnnotationSetsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SearchAnnotationSetsResponse copyWith(
           void Function(SearchAnnotationSetsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as SearchAnnotationSetsResponse))
           as SearchAnnotationSetsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SearchAnnotationSetsResponse create() =>
       SearchAnnotationSetsResponse._();
+  @$core.override
   SearchAnnotationSetsResponse createEmptyInstance() => create();
-  static $pb.PbList<SearchAnnotationSetsResponse> createRepeated() =>
-      $pb.PbList<SearchAnnotationSetsResponse>();
   @$core.pragma('dart2js:noInline')
   static SearchAnnotationSetsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SearchAnnotationSetsResponse>(create);
@@ -1704,7 +1431,7 @@ class SearchAnnotationSetsResponse extends $pb.GeneratedMessage {
 
   /// The matching annotation sets.
   @$pb.TagNumber(1)
-  $core.List<AnnotationSet> get annotationSets => $_getList(0);
+  $pb.PbList<AnnotationSet> get annotationSets => $_getList(0);
 
   /// The continuation token, which is used to page through large result sets.
   /// Provide this value in a subsequent request to return the next page of
@@ -1712,33 +1439,30 @@ class SearchAnnotationSetsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 class CreateAnnotationRequest extends $pb.GeneratedMessage {
   factory CreateAnnotationRequest({
     Annotation? annotation,
   }) {
-    final $result = create();
-    if (annotation != null) {
-      $result.annotation = annotation;
-    }
-    return $result;
+    final result = create();
+    if (annotation != null) result.annotation = annotation;
+    return result;
   }
-  CreateAnnotationRequest._() : super();
-  factory CreateAnnotationRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateAnnotationRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateAnnotationRequest._();
+
+  factory CreateAnnotationRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateAnnotationRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateAnnotationRequest',
@@ -1749,26 +1473,21 @@ class CreateAnnotationRequest extends $pb.GeneratedMessage {
         subBuilder: Annotation.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateAnnotationRequest clone() =>
-      CreateAnnotationRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateAnnotationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateAnnotationRequest copyWith(
           void Function(CreateAnnotationRequest) updates) =>
       super.copyWith((message) => updates(message as CreateAnnotationRequest))
           as CreateAnnotationRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateAnnotationRequest create() => CreateAnnotationRequest._();
+  @$core.override
   CreateAnnotationRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateAnnotationRequest> createRepeated() =>
-      $pb.PbList<CreateAnnotationRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateAnnotationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateAnnotationRequest>(create);
@@ -1778,14 +1497,11 @@ class CreateAnnotationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Annotation get annotation => $_getN(0);
   @$pb.TagNumber(1)
-  set annotation(Annotation v) {
-    setField(1, v);
-  }
-
+  set annotation(Annotation value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAnnotation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAnnotation() => clearField(1);
+  void clearAnnotation() => $_clearField(1);
   @$pb.TagNumber(1)
   Annotation ensureAnnotation() => $_ensure(0);
 }
@@ -1795,56 +1511,48 @@ class BatchCreateAnnotationsRequest extends $pb.GeneratedMessage {
     $core.Iterable<Annotation>? annotations,
     $core.String? requestId,
   }) {
-    final $result = create();
-    if (annotations != null) {
-      $result.annotations.addAll(annotations);
-    }
-    if (requestId != null) {
-      $result.requestId = requestId;
-    }
-    return $result;
+    final result = create();
+    if (annotations != null) result.annotations.addAll(annotations);
+    if (requestId != null) result.requestId = requestId;
+    return result;
   }
-  BatchCreateAnnotationsRequest._() : super();
-  factory BatchCreateAnnotationsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchCreateAnnotationsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchCreateAnnotationsRequest._();
+
+  factory BatchCreateAnnotationsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchCreateAnnotationsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchCreateAnnotationsRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
       createEmptyInstance: create)
-    ..pc<Annotation>(
-        1, _omitFieldNames ? '' : 'annotations', $pb.PbFieldType.PM,
+    ..pPM<Annotation>(1, _omitFieldNames ? '' : 'annotations',
         subBuilder: Annotation.create)
     ..aOS(2, _omitFieldNames ? '' : 'requestId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchCreateAnnotationsRequest clone() =>
-      BatchCreateAnnotationsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchCreateAnnotationsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchCreateAnnotationsRequest copyWith(
           void Function(BatchCreateAnnotationsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as BatchCreateAnnotationsRequest))
           as BatchCreateAnnotationsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchCreateAnnotationsRequest create() =>
       BatchCreateAnnotationsRequest._();
+  @$core.override
   BatchCreateAnnotationsRequest createEmptyInstance() => create();
-  static $pb.PbList<BatchCreateAnnotationsRequest> createRepeated() =>
-      $pb.PbList<BatchCreateAnnotationsRequest>();
   @$core.pragma('dart2js:noInline')
   static BatchCreateAnnotationsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchCreateAnnotationsRequest>(create);
@@ -1853,7 +1561,7 @@ class BatchCreateAnnotationsRequest extends $pb.GeneratedMessage {
   /// The annotations to be created. At most 4096 can be specified in a single
   /// request.
   @$pb.TagNumber(1)
-  $core.List<Annotation> get annotations => $_getList(0);
+  $pb.PbList<Annotation> get annotations => $_getList(0);
 
   /// A unique request ID which enables the server to detect duplicated requests.
   /// If provided, duplicated requests will result in the same response; if not
@@ -1865,14 +1573,11 @@ class BatchCreateAnnotationsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get requestId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set requestId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set requestId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasRequestId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRequestId() => clearField(2);
+  void clearRequestId() => $_clearField(2);
 }
 
 class BatchCreateAnnotationsResponse_Entry extends $pb.GeneratedMessage {
@@ -1880,23 +1585,21 @@ class BatchCreateAnnotationsResponse_Entry extends $pb.GeneratedMessage {
     $5.Status? status,
     Annotation? annotation,
   }) {
-    final $result = create();
-    if (status != null) {
-      $result.status = status;
-    }
-    if (annotation != null) {
-      $result.annotation = annotation;
-    }
-    return $result;
+    final result = create();
+    if (status != null) result.status = status;
+    if (annotation != null) result.annotation = annotation;
+    return result;
   }
-  BatchCreateAnnotationsResponse_Entry._() : super();
+
+  BatchCreateAnnotationsResponse_Entry._();
+
   factory BatchCreateAnnotationsResponse_Entry.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchCreateAnnotationsResponse_Entry.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchCreateAnnotationsResponse_Entry.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchCreateAnnotationsResponse.Entry',
@@ -1909,28 +1612,23 @@ class BatchCreateAnnotationsResponse_Entry extends $pb.GeneratedMessage {
         subBuilder: Annotation.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchCreateAnnotationsResponse_Entry clone() =>
-      BatchCreateAnnotationsResponse_Entry()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchCreateAnnotationsResponse_Entry clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchCreateAnnotationsResponse_Entry copyWith(
           void Function(BatchCreateAnnotationsResponse_Entry) updates) =>
       super.copyWith((message) =>
               updates(message as BatchCreateAnnotationsResponse_Entry))
           as BatchCreateAnnotationsResponse_Entry;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchCreateAnnotationsResponse_Entry create() =>
       BatchCreateAnnotationsResponse_Entry._();
+  @$core.override
   BatchCreateAnnotationsResponse_Entry createEmptyInstance() => create();
-  static $pb.PbList<BatchCreateAnnotationsResponse_Entry> createRepeated() =>
-      $pb.PbList<BatchCreateAnnotationsResponse_Entry>();
   @$core.pragma('dart2js:noInline')
   static BatchCreateAnnotationsResponse_Entry getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1941,14 +1639,11 @@ class BatchCreateAnnotationsResponse_Entry extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $5.Status get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status($5.Status v) {
-    setField(1, v);
-  }
-
+  set status($5.Status value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStatus() => clearField(1);
+  void clearStatus() => $_clearField(1);
   @$pb.TagNumber(1)
   $5.Status ensureStatus() => $_ensure(0);
 
@@ -1956,14 +1651,11 @@ class BatchCreateAnnotationsResponse_Entry extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Annotation get annotation => $_getN(1);
   @$pb.TagNumber(2)
-  set annotation(Annotation v) {
-    setField(2, v);
-  }
-
+  set annotation(Annotation value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasAnnotation() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAnnotation() => clearField(2);
+  void clearAnnotation() => $_clearField(2);
   @$pb.TagNumber(2)
   Annotation ensureAnnotation() => $_ensure(1);
 }
@@ -1972,52 +1664,47 @@ class BatchCreateAnnotationsResponse extends $pb.GeneratedMessage {
   factory BatchCreateAnnotationsResponse({
     $core.Iterable<BatchCreateAnnotationsResponse_Entry>? entries,
   }) {
-    final $result = create();
-    if (entries != null) {
-      $result.entries.addAll(entries);
-    }
-    return $result;
+    final result = create();
+    if (entries != null) result.entries.addAll(entries);
+    return result;
   }
-  BatchCreateAnnotationsResponse._() : super();
-  factory BatchCreateAnnotationsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchCreateAnnotationsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchCreateAnnotationsResponse._();
+
+  factory BatchCreateAnnotationsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchCreateAnnotationsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchCreateAnnotationsResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
       createEmptyInstance: create)
-    ..pc<BatchCreateAnnotationsResponse_Entry>(
-        1, _omitFieldNames ? '' : 'entries', $pb.PbFieldType.PM,
+    ..pPM<BatchCreateAnnotationsResponse_Entry>(
+        1, _omitFieldNames ? '' : 'entries',
         subBuilder: BatchCreateAnnotationsResponse_Entry.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchCreateAnnotationsResponse clone() =>
-      BatchCreateAnnotationsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchCreateAnnotationsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchCreateAnnotationsResponse copyWith(
           void Function(BatchCreateAnnotationsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as BatchCreateAnnotationsResponse))
           as BatchCreateAnnotationsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchCreateAnnotationsResponse create() =>
       BatchCreateAnnotationsResponse._();
+  @$core.override
   BatchCreateAnnotationsResponse createEmptyInstance() => create();
-  static $pb.PbList<BatchCreateAnnotationsResponse> createRepeated() =>
-      $pb.PbList<BatchCreateAnnotationsResponse>();
   @$core.pragma('dart2js:noInline')
   static BatchCreateAnnotationsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchCreateAnnotationsResponse>(create);
@@ -2026,26 +1713,26 @@ class BatchCreateAnnotationsResponse extends $pb.GeneratedMessage {
   /// The resulting per-annotation entries, ordered consistently with the
   /// original request.
   @$pb.TagNumber(1)
-  $core.List<BatchCreateAnnotationsResponse_Entry> get entries => $_getList(0);
+  $pb.PbList<BatchCreateAnnotationsResponse_Entry> get entries => $_getList(0);
 }
 
 class GetAnnotationRequest extends $pb.GeneratedMessage {
   factory GetAnnotationRequest({
     $core.String? annotationId,
   }) {
-    final $result = create();
-    if (annotationId != null) {
-      $result.annotationId = annotationId;
-    }
-    return $result;
+    final result = create();
+    if (annotationId != null) result.annotationId = annotationId;
+    return result;
   }
-  GetAnnotationRequest._() : super();
-  factory GetAnnotationRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetAnnotationRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetAnnotationRequest._();
+
+  factory GetAnnotationRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetAnnotationRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetAnnotationRequest',
@@ -2055,25 +1742,20 @@ class GetAnnotationRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'annotationId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetAnnotationRequest clone() =>
-      GetAnnotationRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAnnotationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetAnnotationRequest copyWith(void Function(GetAnnotationRequest) updates) =>
       super.copyWith((message) => updates(message as GetAnnotationRequest))
           as GetAnnotationRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetAnnotationRequest create() => GetAnnotationRequest._();
+  @$core.override
   GetAnnotationRequest createEmptyInstance() => create();
-  static $pb.PbList<GetAnnotationRequest> createRepeated() =>
-      $pb.PbList<GetAnnotationRequest>();
   @$core.pragma('dart2js:noInline')
   static GetAnnotationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetAnnotationRequest>(create);
@@ -2083,14 +1765,11 @@ class GetAnnotationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get annotationId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set annotationId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set annotationId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAnnotationId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAnnotationId() => clearField(1);
+  void clearAnnotationId() => $_clearField(1);
 }
 
 class UpdateAnnotationRequest extends $pb.GeneratedMessage {
@@ -2099,25 +1778,21 @@ class UpdateAnnotationRequest extends $pb.GeneratedMessage {
     Annotation? annotation,
     $4.FieldMask? updateMask,
   }) {
-    final $result = create();
-    if (annotationId != null) {
-      $result.annotationId = annotationId;
-    }
-    if (annotation != null) {
-      $result.annotation = annotation;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    return $result;
+    final result = create();
+    if (annotationId != null) result.annotationId = annotationId;
+    if (annotation != null) result.annotation = annotation;
+    if (updateMask != null) result.updateMask = updateMask;
+    return result;
   }
-  UpdateAnnotationRequest._() : super();
-  factory UpdateAnnotationRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateAnnotationRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateAnnotationRequest._();
+
+  factory UpdateAnnotationRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateAnnotationRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateAnnotationRequest',
@@ -2131,26 +1806,21 @@ class UpdateAnnotationRequest extends $pb.GeneratedMessage {
         subBuilder: $4.FieldMask.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateAnnotationRequest clone() =>
-      UpdateAnnotationRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateAnnotationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateAnnotationRequest copyWith(
           void Function(UpdateAnnotationRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateAnnotationRequest))
           as UpdateAnnotationRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateAnnotationRequest create() => UpdateAnnotationRequest._();
+  @$core.override
   UpdateAnnotationRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateAnnotationRequest> createRepeated() =>
-      $pb.PbList<UpdateAnnotationRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateAnnotationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateAnnotationRequest>(create);
@@ -2160,27 +1830,21 @@ class UpdateAnnotationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get annotationId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set annotationId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set annotationId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAnnotationId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAnnotationId() => clearField(1);
+  void clearAnnotationId() => $_clearField(1);
 
   /// The new annotation.
   @$pb.TagNumber(2)
   Annotation get annotation => $_getN(1);
   @$pb.TagNumber(2)
-  set annotation(Annotation v) {
-    setField(2, v);
-  }
-
+  set annotation(Annotation value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasAnnotation() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAnnotation() => clearField(2);
+  void clearAnnotation() => $_clearField(2);
   @$pb.TagNumber(2)
   Annotation ensureAnnotation() => $_ensure(1);
 
@@ -2193,14 +1857,11 @@ class UpdateAnnotationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $4.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($4.FieldMask v) {
-    setField(3, v);
-  }
-
+  set updateMask($4.FieldMask value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUpdateMask() => clearField(3);
+  void clearUpdateMask() => $_clearField(3);
   @$pb.TagNumber(3)
   $4.FieldMask ensureUpdateMask() => $_ensure(2);
 }
@@ -2209,19 +1870,19 @@ class DeleteAnnotationRequest extends $pb.GeneratedMessage {
   factory DeleteAnnotationRequest({
     $core.String? annotationId,
   }) {
-    final $result = create();
-    if (annotationId != null) {
-      $result.annotationId = annotationId;
-    }
-    return $result;
+    final result = create();
+    if (annotationId != null) result.annotationId = annotationId;
+    return result;
   }
-  DeleteAnnotationRequest._() : super();
-  factory DeleteAnnotationRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteAnnotationRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteAnnotationRequest._();
+
+  factory DeleteAnnotationRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteAnnotationRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteAnnotationRequest',
@@ -2231,26 +1892,21 @@ class DeleteAnnotationRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'annotationId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteAnnotationRequest clone() =>
-      DeleteAnnotationRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteAnnotationRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteAnnotationRequest copyWith(
           void Function(DeleteAnnotationRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteAnnotationRequest))
           as DeleteAnnotationRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteAnnotationRequest create() => DeleteAnnotationRequest._();
+  @$core.override
   DeleteAnnotationRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteAnnotationRequest> createRepeated() =>
-      $pb.PbList<DeleteAnnotationRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteAnnotationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteAnnotationRequest>(create);
@@ -2260,14 +1916,11 @@ class DeleteAnnotationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get annotationId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set annotationId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set annotationId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAnnotationId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAnnotationId() => clearField(1);
+  void clearAnnotationId() => $_clearField(1);
 }
 
 enum SearchAnnotationsRequest_Reference { referenceId, referenceName, notSet }
@@ -2282,37 +1935,26 @@ class SearchAnnotationsRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.int? pageSize,
   }) {
-    final $result = create();
-    if (annotationSetIds != null) {
-      $result.annotationSetIds.addAll(annotationSetIds);
-    }
-    if (referenceId != null) {
-      $result.referenceId = referenceId;
-    }
-    if (referenceName != null) {
-      $result.referenceName = referenceName;
-    }
-    if (start != null) {
-      $result.start = start;
-    }
-    if (end != null) {
-      $result.end = end;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    return $result;
+    final result = create();
+    if (annotationSetIds != null)
+      result.annotationSetIds.addAll(annotationSetIds);
+    if (referenceId != null) result.referenceId = referenceId;
+    if (referenceName != null) result.referenceName = referenceName;
+    if (start != null) result.start = start;
+    if (end != null) result.end = end;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (pageSize != null) result.pageSize = pageSize;
+    return result;
   }
-  SearchAnnotationsRequest._() : super();
-  factory SearchAnnotationsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SearchAnnotationsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SearchAnnotationsRequest._();
+
+  factory SearchAnnotationsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SearchAnnotationsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, SearchAnnotationsRequest_Reference>
       _SearchAnnotationsRequest_ReferenceByTag = {
@@ -2332,70 +1974,63 @@ class SearchAnnotationsRequest extends $pb.GeneratedMessage {
     ..aInt64(4, _omitFieldNames ? '' : 'start')
     ..aInt64(5, _omitFieldNames ? '' : 'end')
     ..aOS(6, _omitFieldNames ? '' : 'pageToken')
-    ..a<$core.int>(7, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(7, _omitFieldNames ? '' : 'pageSize')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SearchAnnotationsRequest clone() =>
-      SearchAnnotationsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SearchAnnotationsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SearchAnnotationsRequest copyWith(
           void Function(SearchAnnotationsRequest) updates) =>
       super.copyWith((message) => updates(message as SearchAnnotationsRequest))
           as SearchAnnotationsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SearchAnnotationsRequest create() => SearchAnnotationsRequest._();
+  @$core.override
   SearchAnnotationsRequest createEmptyInstance() => create();
-  static $pb.PbList<SearchAnnotationsRequest> createRepeated() =>
-      $pb.PbList<SearchAnnotationsRequest>();
   @$core.pragma('dart2js:noInline')
   static SearchAnnotationsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SearchAnnotationsRequest>(create);
   static SearchAnnotationsRequest? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   SearchAnnotationsRequest_Reference whichReference() =>
       _SearchAnnotationsRequest_ReferenceByTag[$_whichOneof(0)]!;
-  void clearReference() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearReference() => $_clearField($_whichOneof(0));
 
   /// Required. The annotation sets to search within. The caller must have
   /// `READ` access to these annotation sets.
   /// All queried annotation sets must have the same type.
   @$pb.TagNumber(1)
-  $core.List<$core.String> get annotationSetIds => $_getList(0);
+  $pb.PbList<$core.String> get annotationSetIds => $_getList(0);
 
   /// The ID of the reference to query.
   @$pb.TagNumber(2)
   $core.String get referenceId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set referenceId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set referenceId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasReferenceId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearReferenceId() => clearField(2);
+  void clearReferenceId() => $_clearField(2);
 
   /// The name of the reference to query, within the reference set associated
   /// with this query.
   @$pb.TagNumber(3)
   $core.String get referenceName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set referenceName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set referenceName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasReferenceName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearReferenceName() => clearField(3);
+  void clearReferenceName() => $_clearField(3);
 
   /// The start position of the range on the reference, 0-based inclusive. If
   /// specified,
@@ -2405,14 +2040,11 @@ class SearchAnnotationsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $fixnum.Int64 get start => $_getI64(3);
   @$pb.TagNumber(4)
-  set start($fixnum.Int64 v) {
-    $_setInt64(3, v);
-  }
-
+  set start($fixnum.Int64 value) => $_setInt64(3, value);
   @$pb.TagNumber(4)
   $core.bool hasStart() => $_has(3);
   @$pb.TagNumber(4)
-  void clearStart() => clearField(4);
+  void clearStart() => $_clearField(4);
 
   /// The end position of the range on the reference, 0-based exclusive. If
   /// [referenceId][google.genomics.v1.SearchAnnotationsRequest.reference_id] or
@@ -2421,14 +2053,11 @@ class SearchAnnotationsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $fixnum.Int64 get end => $_getI64(4);
   @$pb.TagNumber(5)
-  set end($fixnum.Int64 v) {
-    $_setInt64(4, v);
-  }
-
+  set end($fixnum.Int64 value) => $_setInt64(4, value);
   @$pb.TagNumber(5)
   $core.bool hasEnd() => $_has(4);
   @$pb.TagNumber(5)
-  void clearEnd() => clearField(5);
+  void clearEnd() => $_clearField(5);
 
   /// The continuation token, which is used to page through large result sets.
   /// To get the next page of results, set this parameter to the value of
@@ -2436,28 +2065,22 @@ class SearchAnnotationsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get pageToken => $_getSZ(5);
   @$pb.TagNumber(6)
-  set pageToken($core.String v) {
-    $_setString(5, v);
-  }
-
+  set pageToken($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasPageToken() => $_has(5);
   @$pb.TagNumber(6)
-  void clearPageToken() => clearField(6);
+  void clearPageToken() => $_clearField(6);
 
   /// The maximum number of results to return in a single page. If unspecified,
   /// defaults to 256. The maximum value is 2048.
   @$pb.TagNumber(7)
   $core.int get pageSize => $_getIZ(6);
   @$pb.TagNumber(7)
-  set pageSize($core.int v) {
-    $_setSignedInt32(6, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(6, value);
   @$pb.TagNumber(7)
   $core.bool hasPageSize() => $_has(6);
   @$pb.TagNumber(7)
-  void clearPageSize() => clearField(7);
+  void clearPageSize() => $_clearField(7);
 }
 
 class SearchAnnotationsResponse extends $pb.GeneratedMessage {
@@ -2465,54 +2088,46 @@ class SearchAnnotationsResponse extends $pb.GeneratedMessage {
     $core.Iterable<Annotation>? annotations,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (annotations != null) {
-      $result.annotations.addAll(annotations);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (annotations != null) result.annotations.addAll(annotations);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  SearchAnnotationsResponse._() : super();
-  factory SearchAnnotationsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SearchAnnotationsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SearchAnnotationsResponse._();
+
+  factory SearchAnnotationsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SearchAnnotationsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SearchAnnotationsResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.genomics.v1'),
       createEmptyInstance: create)
-    ..pc<Annotation>(
-        1, _omitFieldNames ? '' : 'annotations', $pb.PbFieldType.PM,
+    ..pPM<Annotation>(1, _omitFieldNames ? '' : 'annotations',
         subBuilder: Annotation.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SearchAnnotationsResponse clone() =>
-      SearchAnnotationsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SearchAnnotationsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SearchAnnotationsResponse copyWith(
           void Function(SearchAnnotationsResponse) updates) =>
       super.copyWith((message) => updates(message as SearchAnnotationsResponse))
           as SearchAnnotationsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SearchAnnotationsResponse create() => SearchAnnotationsResponse._();
+  @$core.override
   SearchAnnotationsResponse createEmptyInstance() => create();
-  static $pb.PbList<SearchAnnotationsResponse> createRepeated() =>
-      $pb.PbList<SearchAnnotationsResponse>();
   @$core.pragma('dart2js:noInline')
   static SearchAnnotationsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SearchAnnotationsResponse>(create);
@@ -2520,7 +2135,7 @@ class SearchAnnotationsResponse extends $pb.GeneratedMessage {
 
   /// The matching annotations.
   @$pb.TagNumber(1)
-  $core.List<Annotation> get annotations => $_getList(0);
+  $pb.PbList<Annotation> get annotations => $_getList(0);
 
   /// The continuation token, which is used to page through large result sets.
   /// Provide this value in a subsequent request to return the next page of
@@ -2528,16 +2143,14 @@ class SearchAnnotationsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

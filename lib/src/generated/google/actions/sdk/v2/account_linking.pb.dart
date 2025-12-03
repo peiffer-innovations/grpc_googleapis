@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/account_linking.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/account_linking.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,21 +16,23 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'account_linking.pbenum.dart';
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 export 'account_linking.pbenum.dart';
 
-///  AccountLinking allows Google to guide the user to sign-in to the App's web
-///  services.
+/// AccountLinking allows Google to guide the user to sign-in to the App's web
+/// services.
 ///
-///  For Google Sign In and OAuth + Google Sign In linking types, Google generates
-///  a client ID identifying your App to Google ("Client ID issued by Google to
-///  your Actions" on Console UI). This field is read-only and can be checked by
-///  navigating to the Console UI's Account Linking page.
-///  See: https://developers.google.com/assistant/identity/google-sign-in
+/// For Google Sign In and OAuth + Google Sign In linking types, Google generates
+/// a client ID identifying your App to Google ("Client ID issued by Google to
+/// your Actions" on Console UI). This field is read-only and can be checked by
+/// navigating to the Console UI's Account Linking page.
+/// See: https://developers.google.com/assistant/identity/google-sign-in
 ///
-///  Note: For all account linking setting types (except for Google Sign In), you
-///  must provide a username and password for a test account in
-///  Settings.testing_instructions for the review team to review the app (they
-///  will not be visible to users).
+/// Note: For all account linking setting types (except for Google Sign In), you
+/// must provide a username and password for a test account in
+/// Settings.testing_instructions for the review team to review the app (they
+/// will not be visible to users).
 class AccountLinking extends $pb.GeneratedMessage {
   factory AccountLinking({
     $core.bool? enableAccountCreation,
@@ -42,43 +45,29 @@ class AccountLinking extends $pb.GeneratedMessage {
     $core.String? learnMoreUrl,
     $core.bool? useBasicAuthHeader,
   }) {
-    final $result = create();
-    if (enableAccountCreation != null) {
-      $result.enableAccountCreation = enableAccountCreation;
-    }
-    if (linkingType != null) {
-      $result.linkingType = linkingType;
-    }
-    if (authGrantType != null) {
-      $result.authGrantType = authGrantType;
-    }
-    if (appClientId != null) {
-      $result.appClientId = appClientId;
-    }
-    if (authorizationUrl != null) {
-      $result.authorizationUrl = authorizationUrl;
-    }
-    if (tokenUrl != null) {
-      $result.tokenUrl = tokenUrl;
-    }
-    if (scopes != null) {
-      $result.scopes.addAll(scopes);
-    }
-    if (learnMoreUrl != null) {
-      $result.learnMoreUrl = learnMoreUrl;
-    }
-    if (useBasicAuthHeader != null) {
-      $result.useBasicAuthHeader = useBasicAuthHeader;
-    }
-    return $result;
+    final result = create();
+    if (enableAccountCreation != null)
+      result.enableAccountCreation = enableAccountCreation;
+    if (linkingType != null) result.linkingType = linkingType;
+    if (authGrantType != null) result.authGrantType = authGrantType;
+    if (appClientId != null) result.appClientId = appClientId;
+    if (authorizationUrl != null) result.authorizationUrl = authorizationUrl;
+    if (tokenUrl != null) result.tokenUrl = tokenUrl;
+    if (scopes != null) result.scopes.addAll(scopes);
+    if (learnMoreUrl != null) result.learnMoreUrl = learnMoreUrl;
+    if (useBasicAuthHeader != null)
+      result.useBasicAuthHeader = useBasicAuthHeader;
+    return result;
   }
-  AccountLinking._() : super();
-  factory AccountLinking.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AccountLinking.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AccountLinking._();
+
+  factory AccountLinking.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AccountLinking.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AccountLinking',
@@ -86,16 +75,10 @@ class AccountLinking extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.actions.sdk.v2'),
       createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'enableAccountCreation')
-    ..e<AccountLinking_LinkingType>(
-        2, _omitFieldNames ? '' : 'linkingType', $pb.PbFieldType.OE,
-        defaultOrMaker: AccountLinking_LinkingType.LINKING_TYPE_UNSPECIFIED,
-        valueOf: AccountLinking_LinkingType.valueOf,
+    ..aE<AccountLinking_LinkingType>(2, _omitFieldNames ? '' : 'linkingType',
         enumValues: AccountLinking_LinkingType.values)
-    ..e<AccountLinking_AuthGrantType>(
-        3, _omitFieldNames ? '' : 'authGrantType', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            AccountLinking_AuthGrantType.AUTH_GRANT_TYPE_UNSPECIFIED,
-        valueOf: AccountLinking_AuthGrantType.valueOf,
+    ..aE<AccountLinking_AuthGrantType>(
+        3, _omitFieldNames ? '' : 'authGrantType',
         enumValues: AccountLinking_AuthGrantType.values)
     ..aOS(4, _omitFieldNames ? '' : 'appClientId')
     ..aOS(5, _omitFieldNames ? '' : 'authorizationUrl')
@@ -105,24 +88,20 @@ class AccountLinking extends $pb.GeneratedMessage {
     ..aOB(9, _omitFieldNames ? '' : 'useBasicAuthHeader')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AccountLinking clone() => AccountLinking()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AccountLinking clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AccountLinking copyWith(void Function(AccountLinking) updates) =>
       super.copyWith((message) => updates(message as AccountLinking))
           as AccountLinking;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccountLinking create() => AccountLinking._();
+  @$core.override
   AccountLinking createEmptyInstance() => create();
-  static $pb.PbList<AccountLinking> createRepeated() =>
-      $pb.PbList<AccountLinking>();
   @$core.pragma('dart2js:noInline')
   static AccountLinking getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AccountLinking>(create);
@@ -137,14 +116,11 @@ class AccountLinking extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get enableAccountCreation => $_getBF(0);
   @$pb.TagNumber(1)
-  set enableAccountCreation($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set enableAccountCreation($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEnableAccountCreation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEnableAccountCreation() => clearField(1);
+  void clearEnableAccountCreation() => $_clearField(1);
 
   /// Required. The linking type to use.
   /// See https://developers.google.com/assistant/identity for further details on
@@ -152,27 +128,21 @@ class AccountLinking extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   AccountLinking_LinkingType get linkingType => $_getN(1);
   @$pb.TagNumber(2)
-  set linkingType(AccountLinking_LinkingType v) {
-    setField(2, v);
-  }
-
+  set linkingType(AccountLinking_LinkingType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasLinkingType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLinkingType() => clearField(2);
+  void clearLinkingType() => $_clearField(2);
 
   /// Optional. Indicates the type of authentication for OAUTH linking_type.
   @$pb.TagNumber(3)
   AccountLinking_AuthGrantType get authGrantType => $_getN(2);
   @$pb.TagNumber(3)
-  set authGrantType(AccountLinking_AuthGrantType v) {
-    setField(3, v);
-  }
-
+  set authGrantType(AccountLinking_AuthGrantType value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasAuthGrantType() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAuthGrantType() => clearField(3);
+  void clearAuthGrantType() => $_clearField(3);
 
   /// Optional. Client ID issued by your App to Google.
   /// This is the OAuth2 Client ID identifying Google to your service.
@@ -180,14 +150,11 @@ class AccountLinking extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get appClientId => $_getSZ(3);
   @$pb.TagNumber(4)
-  set appClientId($core.String v) {
-    $_setString(3, v);
-  }
-
+  set appClientId($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasAppClientId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAppClientId() => clearField(4);
+  void clearAppClientId() => $_clearField(4);
 
   /// Optional. Endpoint for your sign-in web page that supports OAuth2 code or
   /// implicit flows.
@@ -196,14 +163,11 @@ class AccountLinking extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get authorizationUrl => $_getSZ(4);
   @$pb.TagNumber(5)
-  set authorizationUrl($core.String v) {
-    $_setString(4, v);
-  }
-
+  set authorizationUrl($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasAuthorizationUrl() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAuthorizationUrl() => clearField(5);
+  void clearAuthorizationUrl() => $_clearField(5);
 
   /// Optional. OAuth2 endpoint for token exchange.
   /// URL must use HTTPS.
@@ -213,14 +177,11 @@ class AccountLinking extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get tokenUrl => $_getSZ(5);
   @$pb.TagNumber(6)
-  set tokenUrl($core.String v) {
-    $_setString(5, v);
-  }
-
+  set tokenUrl($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasTokenUrl() => $_has(5);
   @$pb.TagNumber(6)
-  void clearTokenUrl() => clearField(6);
+  void clearTokenUrl() => $_clearField(6);
 
   /// Optional. List of permissions the user must consent to in order to use
   /// your service.
@@ -228,7 +189,7 @@ class AccountLinking extends $pb.GeneratedMessage {
   /// Make sure to provide a Terms of Service in the directory information in
   /// LocalizedSettings.terms_of_service_url section if specifying this field.
   @$pb.TagNumber(7)
-  $core.List<$core.String> get scopes => $_getList(6);
+  $pb.PbList<$core.String> get scopes => $_getList(6);
 
   /// Optional. This is the web page on your service which describes the
   /// permissions the user is granting to Google.
@@ -238,14 +199,11 @@ class AccountLinking extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.String get learnMoreUrl => $_getSZ(7);
   @$pb.TagNumber(8)
-  set learnMoreUrl($core.String v) {
-    $_setString(7, v);
-  }
-
+  set learnMoreUrl($core.String value) => $_setString(7, value);
   @$pb.TagNumber(8)
   $core.bool hasLearnMoreUrl() => $_has(7);
   @$pb.TagNumber(8)
-  void clearLearnMoreUrl() => clearField(8);
+  void clearLearnMoreUrl() => $_clearField(8);
 
   /// Optional. If true, allow Google to transmit client ID and secret via HTTP
   /// basic auth header. Otherwise, Google uses the client ID and secret inside
@@ -256,16 +214,14 @@ class AccountLinking extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.bool get useBasicAuthHeader => $_getBF(8);
   @$pb.TagNumber(9)
-  set useBasicAuthHeader($core.bool v) {
-    $_setBool(8, v);
-  }
-
+  set useBasicAuthHeader($core.bool value) => $_setBool(8, value);
   @$pb.TagNumber(9)
   $core.bool hasUseBasicAuthHeader() => $_has(8);
   @$pb.TagNumber(9)
-  void clearUseBasicAuthHeader() => clearField(9);
+  void clearUseBasicAuthHeader() => $_clearField(9);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

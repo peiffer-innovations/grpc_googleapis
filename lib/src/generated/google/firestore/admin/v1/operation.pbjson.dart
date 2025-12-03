@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/firestore/admin/v1/operation.proto
-//
-// @dart = 2.12
+// Generated from google/firestore/admin/v1/operation.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -515,6 +517,66 @@ final $typed_data.Uint8List restoreDatabaseMetadataDescriptor = $convert.base64D
     'Jhc2VSCGRhdGFiYXNlEjwKBmJhY2t1cBgFIAEoCUIk+kEhCh9maXJlc3RvcmUuZ29vZ2xlYXBp'
     'cy5jb20vQmFja3VwUgZiYWNrdXASVAoTcHJvZ3Jlc3NfcGVyY2VudGFnZRgIIAEoCzIjLmdvb2'
     'dsZS5maXJlc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3NSEnByb2dyZXNzUGVyY2VudGFnZQ==');
+
+@$core.Deprecated('Use cloneDatabaseMetadataDescriptor instead')
+const CloneDatabaseMetadata$json = {
+  '1': 'CloneDatabaseMetadata',
+  '2': [
+    {
+      '1': 'start_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    {
+      '1': 'end_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+    {
+      '1': 'operation_state',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.firestore.admin.v1.OperationState',
+      '10': 'operationState'
+    },
+    {'1': 'database', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'database'},
+    {
+      '1': 'pitr_snapshot',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.firestore.admin.v1.PitrSnapshot',
+      '10': 'pitrSnapshot'
+    },
+    {
+      '1': 'progress_percentage',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.firestore.admin.v1.Progress',
+      '10': 'progressPercentage'
+    },
+  ],
+};
+
+/// Descriptor for `CloneDatabaseMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cloneDatabaseMetadataDescriptor = $convert.base64Decode(
+    'ChVDbG9uZURhdGFiYXNlTWV0YWRhdGESOQoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm'
+    '90b2J1Zi5UaW1lc3RhbXBSCXN0YXJ0VGltZRI1CghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5w'
+    'cm90b2J1Zi5UaW1lc3RhbXBSB2VuZFRpbWUSUgoPb3BlcmF0aW9uX3N0YXRlGAMgASgOMikuZ2'
+    '9vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5PcGVyYXRpb25TdGF0ZVIOb3BlcmF0aW9uU3RhdGUS'
+    'QgoIZGF0YWJhc2UYBCABKAlCJvpBIwohZmlyZXN0b3JlLmdvb2dsZWFwaXMuY29tL0RhdGFiYX'
+    'NlUghkYXRhYmFzZRJMCg1waXRyX3NuYXBzaG90GAcgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS5h'
+    'ZG1pbi52MS5QaXRyU25hcHNob3RSDHBpdHJTbmFwc2hvdBJUChNwcm9ncmVzc19wZXJjZW50YW'
+    'dlGAYgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5Qcm9ncmVzc1IScHJvZ3Jlc3NQ'
+    'ZXJjZW50YWdl');
 
 @$core.Deprecated('Use progressDescriptor instead')
 const Progress$json = {

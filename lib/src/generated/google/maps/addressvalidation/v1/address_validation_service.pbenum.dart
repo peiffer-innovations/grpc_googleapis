@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/addressvalidation/v1/address_validation_service.proto
-//
-// @dart = 2.12
+// Generated from google/maps/addressvalidation/v1/address_validation_service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -17,22 +18,37 @@ import 'package:protobuf/protobuf.dart' as $pb;
 /// needed to validate an address.
 class ProvideValidationFeedbackRequest_ValidationConclusion
     extends $pb.ProtobufEnum {
+  /// This value is unused.
+  /// If the `ProvideValidationFeedbackRequest.conclusion` field is set to
+  /// `VALIDATION_CONCLUSION_UNSPECIFIED`, an `INVALID_ARGUMENT` error will be
+  /// returned.
   static const ProvideValidationFeedbackRequest_ValidationConclusion
       VALIDATION_CONCLUSION_UNSPECIFIED =
       ProvideValidationFeedbackRequest_ValidationConclusion._(
           0, _omitEnumNames ? '' : 'VALIDATION_CONCLUSION_UNSPECIFIED');
+
+  /// The version of the address returned by the Address Validation API was
+  /// used for the transaction.
   static const ProvideValidationFeedbackRequest_ValidationConclusion
       VALIDATED_VERSION_USED =
       ProvideValidationFeedbackRequest_ValidationConclusion._(
           1, _omitEnumNames ? '' : 'VALIDATED_VERSION_USED');
+
+  /// The version of the address provided by the user was used for the
+  /// transaction
   static const ProvideValidationFeedbackRequest_ValidationConclusion
       USER_VERSION_USED =
       ProvideValidationFeedbackRequest_ValidationConclusion._(
           2, _omitEnumNames ? '' : 'USER_VERSION_USED');
+
+  /// A version of the address that was entered after the last validation
+  /// attempt but that was not re-validated was used for the transaction.
   static const ProvideValidationFeedbackRequest_ValidationConclusion
       UNVALIDATED_VERSION_USED =
       ProvideValidationFeedbackRequest_ValidationConclusion._(
           3, _omitEnumNames ? '' : 'UNVALIDATED_VERSION_USED');
+
+  /// The transaction was abandoned and the address was not used.
   static const ProvideValidationFeedbackRequest_ValidationConclusion UNUSED =
       ProvideValidationFeedbackRequest_ValidationConclusion._(
           4, _omitEnumNames ? '' : 'UNUSED');
@@ -47,15 +63,14 @@ class ProvideValidationFeedbackRequest_ValidationConclusion
   ];
 
   static final $core
-      .Map<$core.int, ProvideValidationFeedbackRequest_ValidationConclusion>
-      _byValue = $pb.ProtobufEnum.initByValue(values);
+      .List<ProvideValidationFeedbackRequest_ValidationConclusion?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 4);
   static ProvideValidationFeedbackRequest_ValidationConclusion? valueOf(
           $core.int value) =>
-      _byValue[value];
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const ProvideValidationFeedbackRequest_ValidationConclusion._(
-      $core.int v, $core.String n)
-      : super(v, n);
+      super.value, super.name);
 }
 
 /// The various granularities that an address or a geocode can have.
@@ -67,18 +82,34 @@ class ProvideValidationFeedbackRequest_ValidationConclusion
 /// "123 Main Street" in Redwood City, the geocode returned might be of
 /// `LOCALITY` granularity even though the address is more granular.
 class Verdict_Granularity extends $pb.ProtobufEnum {
+  /// Default value. This value is unused.
   static const Verdict_Granularity GRANULARITY_UNSPECIFIED =
       Verdict_Granularity._(0, _omitEnumNames ? '' : 'GRANULARITY_UNSPECIFIED');
+
+  /// Below-building level result, such as an apartment.
   static const Verdict_Granularity SUB_PREMISE =
       Verdict_Granularity._(1, _omitEnumNames ? '' : 'SUB_PREMISE');
+
+  /// Building-level result.
   static const Verdict_Granularity PREMISE =
       Verdict_Granularity._(2, _omitEnumNames ? '' : 'PREMISE');
+
+  /// A geocode that approximates the building-level location of the address.
   static const Verdict_Granularity PREMISE_PROXIMITY =
       Verdict_Granularity._(3, _omitEnumNames ? '' : 'PREMISE_PROXIMITY');
+
+  /// The address or geocode indicates a block. Only used in regions which
+  /// have block-level addressing, such as Japan.
   static const Verdict_Granularity BLOCK =
       Verdict_Granularity._(4, _omitEnumNames ? '' : 'BLOCK');
+
+  /// The geocode or address is granular to route, such as a street, road, or
+  /// highway.
   static const Verdict_Granularity ROUTE =
       Verdict_Granularity._(5, _omitEnumNames ? '' : 'ROUTE');
+
+  /// All other granularities, which are bucketed together since they are not
+  /// deliverable.
   static const Verdict_Granularity OTHER =
       Verdict_Granularity._(6, _omitEnumNames ? '' : 'OTHER');
 
@@ -92,11 +123,13 @@ class Verdict_Granularity extends $pb.ProtobufEnum {
     OTHER,
   ];
 
-  static final $core.Map<$core.int, Verdict_Granularity> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static Verdict_Granularity? valueOf($core.int value) => _byValue[value];
+  static final $core.List<Verdict_Granularity?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 6);
+  static Verdict_Granularity? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const Verdict_Granularity._($core.int v, $core.String n) : super(v, n);
+  const Verdict_Granularity._(super.value, super.name);
 }
 
-const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');
+const $core.bool _omitEnumNames =
+    $core.bool.fromEnvironment('protobuf.omit_enum_names');

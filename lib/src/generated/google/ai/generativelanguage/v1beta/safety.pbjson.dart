@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/ai/generativelanguage/v1beta/safety.proto
-//
-// @dart = 2.12
+// Generated from google/ai/generativelanguage/v1beta/safety.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -28,7 +30,11 @@ const HarmCategory$json = {
     {'1': 'HARM_CATEGORY_HATE_SPEECH', '2': 8},
     {'1': 'HARM_CATEGORY_SEXUALLY_EXPLICIT', '2': 9},
     {'1': 'HARM_CATEGORY_DANGEROUS_CONTENT', '2': 10},
-    {'1': 'HARM_CATEGORY_CIVIC_INTEGRITY', '2': 11},
+    {
+      '1': 'HARM_CATEGORY_CIVIC_INTEGRITY',
+      '2': 11,
+      '3': {'1': true},
+    },
   ],
 };
 
@@ -40,7 +46,7 @@ final $typed_data.Uint8List harmCategoryDescriptor = $convert.base64Decode(
     'NBVEVHT1JZX01FRElDQUwQBRIbChdIQVJNX0NBVEVHT1JZX0RBTkdFUk9VUxAGEhwKGEhBUk1f'
     'Q0FURUdPUllfSEFSQVNTTUVOVBAHEh0KGUhBUk1fQ0FURUdPUllfSEFURV9TUEVFQ0gQCBIjCh'
     '9IQVJNX0NBVEVHT1JZX1NFWFVBTExZX0VYUExJQ0lUEAkSIwofSEFSTV9DQVRFR09SWV9EQU5H'
-    'RVJPVVNfQ09OVEVOVBAKEiEKHUhBUk1fQ0FURUdPUllfQ0lWSUNfSU5URUdSSVRZEAs=');
+    'RVJPVVNfQ09OVEVOVBAKEiUKHUhBUk1fQ0FURUdPUllfQ0lWSUNfSU5URUdSSVRZEAsaAggB');
 
 @$core.Deprecated('Use contentFilterDescriptor instead')
 const ContentFilter$json = {

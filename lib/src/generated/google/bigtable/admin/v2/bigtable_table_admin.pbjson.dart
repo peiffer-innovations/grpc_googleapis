@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/bigtable/admin/v2/bigtable_table_admin.proto
-//
-// @dart = 2.12
+// Generated from google/bigtable/admin/v2/bigtable_table_admin.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -1229,3 +1231,205 @@ final $typed_data.Uint8List deleteAuthorizedViewRequestDescriptor =
         'ChtEZWxldGVBdXRob3JpemVkVmlld1JlcXVlc3QSRwoEbmFtZRgBIAEoCUIz4EEC+kEtCitiaW'
         'd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0F1dGhvcml6ZWRWaWV3UgRuYW1lEhcKBGV0YWcY'
         'AiABKAlCA+BBAVIEZXRhZw==');
+
+@$core.Deprecated('Use createSchemaBundleRequestDescriptor instead')
+const CreateSchemaBundleRequest$json = {
+  '1': 'CreateSchemaBundleRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {
+      '1': 'schema_bundle_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'schemaBundleId'
+    },
+    {
+      '1': 'schema_bundle',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.admin.v2.SchemaBundle',
+      '8': {},
+      '10': 'schemaBundle'
+    },
+  ],
+};
+
+/// Descriptor for `CreateSchemaBundleRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSchemaBundleRequestDescriptor = $convert.base64Decode(
+    'ChlDcmVhdGVTY2hlbWFCdW5kbGVSZXF1ZXN0EkIKBnBhcmVudBgBIAEoCUIq4EEC+kEkCiJiaW'
+    'd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlUgZwYXJlbnQSLQoQc2NoZW1hX2J1bmRs'
+    'ZV9pZBgCIAEoCUID4EECUg5zY2hlbWFCdW5kbGVJZBJQCg1zY2hlbWFfYnVuZGxlGAMgASgLMi'
+    'YuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlNjaGVtYUJ1bmRsZUID4EECUgxzY2hlbWFCdW5k'
+    'bGU=');
+
+@$core.Deprecated('Use createSchemaBundleMetadataDescriptor instead')
+const CreateSchemaBundleMetadata$json = {
+  '1': 'CreateSchemaBundleMetadata',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'start_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    {
+      '1': 'end_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+  ],
+};
+
+/// Descriptor for `CreateSchemaBundleMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSchemaBundleMetadataDescriptor =
+    $convert.base64Decode(
+        'ChpDcmVhdGVTY2hlbWFCdW5kbGVNZXRhZGF0YRISCgRuYW1lGAEgASgJUgRuYW1lEjkKCnN0YX'
+        'J0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUSNQoI'
+        'ZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgdlbmRUaW1l');
+
+@$core.Deprecated('Use updateSchemaBundleRequestDescriptor instead')
+const UpdateSchemaBundleRequest$json = {
+  '1': 'UpdateSchemaBundleRequest',
+  '2': [
+    {
+      '1': 'schema_bundle',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.bigtable.admin.v2.SchemaBundle',
+      '8': {},
+      '10': 'schemaBundle'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': {},
+      '10': 'updateMask'
+    },
+    {
+      '1': 'ignore_warnings',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'ignoreWarnings'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateSchemaBundleRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSchemaBundleRequestDescriptor = $convert.base64Decode(
+    'ChlVcGRhdGVTY2hlbWFCdW5kbGVSZXF1ZXN0ElAKDXNjaGVtYV9idW5kbGUYASABKAsyJi5nb2'
+    '9nbGUuYmlndGFibGUuYWRtaW4udjIuU2NoZW1hQnVuZGxlQgPgQQJSDHNjaGVtYUJ1bmRsZRJA'
+    'Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAVIKdX'
+    'BkYXRlTWFzaxIsCg9pZ25vcmVfd2FybmluZ3MYAyABKAhCA+BBAVIOaWdub3JlV2FybmluZ3M=');
+
+@$core.Deprecated('Use updateSchemaBundleMetadataDescriptor instead')
+const UpdateSchemaBundleMetadata$json = {
+  '1': 'UpdateSchemaBundleMetadata',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'start_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    {
+      '1': 'end_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateSchemaBundleMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSchemaBundleMetadataDescriptor =
+    $convert.base64Decode(
+        'ChpVcGRhdGVTY2hlbWFCdW5kbGVNZXRhZGF0YRISCgRuYW1lGAEgASgJUgRuYW1lEjkKCnN0YX'
+        'J0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUSNQoI'
+        'ZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgdlbmRUaW1l');
+
+@$core.Deprecated('Use getSchemaBundleRequestDescriptor instead')
+const GetSchemaBundleRequest$json = {
+  '1': 'GetSchemaBundleRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetSchemaBundleRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSchemaBundleRequestDescriptor =
+    $convert.base64Decode(
+        'ChZHZXRTY2hlbWFCdW5kbGVSZXF1ZXN0EkUKBG5hbWUYASABKAlCMeBBAvpBKwopYmlndGFibG'
+        'VhZG1pbi5nb29nbGVhcGlzLmNvbS9TY2hlbWFCdW5kbGVSBG5hbWU=');
+
+@$core.Deprecated('Use listSchemaBundlesRequestDescriptor instead')
+const ListSchemaBundlesRequest$json = {
+  '1': 'ListSchemaBundlesRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListSchemaBundlesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSchemaBundlesRequestDescriptor = $convert.base64Decode(
+    'ChhMaXN0U2NoZW1hQnVuZGxlc1JlcXVlc3QSSQoGcGFyZW50GAEgASgJQjHgQQL6QSsSKWJpZ3'
+    'RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vU2NoZW1hQnVuZGxlUgZwYXJlbnQSGwoJcGFnZV9z'
+    'aXplGAIgASgFUghwYWdlU2l6ZRIdCgpwYWdlX3Rva2VuGAMgASgJUglwYWdlVG9rZW4=');
+
+@$core.Deprecated('Use listSchemaBundlesResponseDescriptor instead')
+const ListSchemaBundlesResponse$json = {
+  '1': 'ListSchemaBundlesResponse',
+  '2': [
+    {
+      '1': 'schema_bundles',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.bigtable.admin.v2.SchemaBundle',
+      '10': 'schemaBundles'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+/// Descriptor for `ListSchemaBundlesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSchemaBundlesResponseDescriptor = $convert.base64Decode(
+    'ChlMaXN0U2NoZW1hQnVuZGxlc1Jlc3BvbnNlEk0KDnNjaGVtYV9idW5kbGVzGAEgAygLMiYuZ2'
+    '9vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlNjaGVtYUJ1bmRsZVINc2NoZW1hQnVuZGxlcxImCg9u'
+    'ZXh0X3BhZ2VfdG9rZW4YAiABKAlSDW5leHRQYWdlVG9rZW4=');
+
+@$core.Deprecated('Use deleteSchemaBundleRequestDescriptor instead')
+const DeleteSchemaBundleRequest$json = {
+  '1': 'DeleteSchemaBundleRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'etag', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'etag'},
+  ],
+};
+
+/// Descriptor for `DeleteSchemaBundleRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteSchemaBundleRequestDescriptor = $convert.base64Decode(
+    'ChlEZWxldGVTY2hlbWFCdW5kbGVSZXF1ZXN0EkUKBG5hbWUYASABKAlCMeBBAvpBKwopYmlndG'
+    'FibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9TY2hlbWFCdW5kbGVSBG5hbWUSFwoEZXRhZxgCIAEo'
+    'CUID4EEBUgRldGFn');

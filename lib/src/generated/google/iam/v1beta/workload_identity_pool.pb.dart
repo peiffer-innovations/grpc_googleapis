@@ -1,20 +1,24 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/iam/v1beta/workload_identity_pool.proto
-//
-// @dart = 2.12
+// Generated from google/iam/v1beta/workload_identity_pool.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/field_mask.pb.dart'
+    as $2;
 
-import '../../protobuf/field_mask.pb.dart' as $3;
 import 'workload_identity_pool.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'workload_identity_pool.pbenum.dart';
 
@@ -28,31 +32,23 @@ class WorkloadIdentityPool extends $pb.GeneratedMessage {
     WorkloadIdentityPool_State? state,
     $core.bool? disabled,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    if (state != null) {
-      $result.state = state;
-    }
-    if (disabled != null) {
-      $result.disabled = disabled;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (displayName != null) result.displayName = displayName;
+    if (description != null) result.description = description;
+    if (state != null) result.state = state;
+    if (disabled != null) result.disabled = disabled;
+    return result;
   }
-  WorkloadIdentityPool._() : super();
-  factory WorkloadIdentityPool.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WorkloadIdentityPool.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WorkloadIdentityPool._();
+
+  factory WorkloadIdentityPool.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WorkloadIdentityPool.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WorkloadIdentityPool',
@@ -62,33 +58,25 @@ class WorkloadIdentityPool extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'displayName')
     ..aOS(3, _omitFieldNames ? '' : 'description')
-    ..e<WorkloadIdentityPool_State>(
-        4, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
-        defaultOrMaker: WorkloadIdentityPool_State.STATE_UNSPECIFIED,
-        valueOf: WorkloadIdentityPool_State.valueOf,
+    ..aE<WorkloadIdentityPool_State>(4, _omitFieldNames ? '' : 'state',
         enumValues: WorkloadIdentityPool_State.values)
     ..aOB(5, _omitFieldNames ? '' : 'disabled')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WorkloadIdentityPool clone() =>
-      WorkloadIdentityPool()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WorkloadIdentityPool clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WorkloadIdentityPool copyWith(void Function(WorkloadIdentityPool) updates) =>
       super.copyWith((message) => updates(message as WorkloadIdentityPool))
           as WorkloadIdentityPool;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPool create() => WorkloadIdentityPool._();
+  @$core.override
   WorkloadIdentityPool createEmptyInstance() => create();
-  static $pb.PbList<WorkloadIdentityPool> createRepeated() =>
-      $pb.PbList<WorkloadIdentityPool>();
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPool getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WorkloadIdentityPool>(create);
@@ -98,53 +86,41 @@ class WorkloadIdentityPool extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// A display name for the pool. Cannot exceed 32 characters.
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set displayName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisplayName() => clearField(2);
+  void clearDisplayName() => $_clearField(2);
 
   /// A description of the pool. Cannot exceed 256 characters.
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(3)
-  set description($core.String v) {
-    $_setString(2, v);
-  }
-
+  set description($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDescription() => clearField(3);
+  void clearDescription() => $_clearField(3);
 
   /// Output only. The state of the pool.
   @$pb.TagNumber(4)
   WorkloadIdentityPool_State get state => $_getN(3);
   @$pb.TagNumber(4)
-  set state(WorkloadIdentityPool_State v) {
-    setField(4, v);
-  }
-
+  set state(WorkloadIdentityPool_State value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasState() => $_has(3);
   @$pb.TagNumber(4)
-  void clearState() => clearField(4);
+  void clearState() => $_clearField(4);
 
   /// Whether the pool is disabled. You cannot use a disabled pool to exchange
   /// tokens, or use existing tokens to access resources. If
@@ -152,14 +128,11 @@ class WorkloadIdentityPool extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool get disabled => $_getBF(4);
   @$pb.TagNumber(5)
-  set disabled($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set disabled($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasDisabled() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDisabled() => clearField(5);
+  void clearDisabled() => $_clearField(5);
 }
 
 /// Represents an Amazon Web Services identity provider.
@@ -167,19 +140,20 @@ class WorkloadIdentityPoolProvider_Aws extends $pb.GeneratedMessage {
   factory WorkloadIdentityPoolProvider_Aws({
     $core.String? accountId,
   }) {
-    final $result = create();
-    if (accountId != null) {
-      $result.accountId = accountId;
-    }
-    return $result;
+    final result = create();
+    if (accountId != null) result.accountId = accountId;
+    return result;
   }
-  WorkloadIdentityPoolProvider_Aws._() : super();
-  factory WorkloadIdentityPoolProvider_Aws.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WorkloadIdentityPoolProvider_Aws.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WorkloadIdentityPoolProvider_Aws._();
+
+  factory WorkloadIdentityPoolProvider_Aws.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WorkloadIdentityPoolProvider_Aws.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WorkloadIdentityPoolProvider.Aws',
@@ -189,28 +163,23 @@ class WorkloadIdentityPoolProvider_Aws extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'accountId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WorkloadIdentityPoolProvider_Aws clone() =>
-      WorkloadIdentityPoolProvider_Aws()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WorkloadIdentityPoolProvider_Aws clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WorkloadIdentityPoolProvider_Aws copyWith(
           void Function(WorkloadIdentityPoolProvider_Aws) updates) =>
       super.copyWith(
               (message) => updates(message as WorkloadIdentityPoolProvider_Aws))
           as WorkloadIdentityPoolProvider_Aws;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPoolProvider_Aws create() =>
       WorkloadIdentityPoolProvider_Aws._();
+  @$core.override
   WorkloadIdentityPoolProvider_Aws createEmptyInstance() => create();
-  static $pb.PbList<WorkloadIdentityPoolProvider_Aws> createRepeated() =>
-      $pb.PbList<WorkloadIdentityPoolProvider_Aws>();
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPoolProvider_Aws getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WorkloadIdentityPoolProvider_Aws>(
@@ -221,14 +190,11 @@ class WorkloadIdentityPoolProvider_Aws extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get accountId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set accountId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set accountId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAccountId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAccountId() => clearField(1);
+  void clearAccountId() => $_clearField(1);
 }
 
 /// Represents an OpenId Connect 1.0 identity provider.
@@ -237,22 +203,22 @@ class WorkloadIdentityPoolProvider_Oidc extends $pb.GeneratedMessage {
     $core.String? issuerUri,
     $core.Iterable<$core.String>? allowedAudiences,
   }) {
-    final $result = create();
-    if (issuerUri != null) {
-      $result.issuerUri = issuerUri;
-    }
-    if (allowedAudiences != null) {
-      $result.allowedAudiences.addAll(allowedAudiences);
-    }
-    return $result;
+    final result = create();
+    if (issuerUri != null) result.issuerUri = issuerUri;
+    if (allowedAudiences != null)
+      result.allowedAudiences.addAll(allowedAudiences);
+    return result;
   }
-  WorkloadIdentityPoolProvider_Oidc._() : super();
-  factory WorkloadIdentityPoolProvider_Oidc.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WorkloadIdentityPoolProvider_Oidc.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WorkloadIdentityPoolProvider_Oidc._();
+
+  factory WorkloadIdentityPoolProvider_Oidc.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WorkloadIdentityPoolProvider_Oidc.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WorkloadIdentityPoolProvider.Oidc',
@@ -263,28 +229,23 @@ class WorkloadIdentityPoolProvider_Oidc extends $pb.GeneratedMessage {
     ..pPS(2, _omitFieldNames ? '' : 'allowedAudiences')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WorkloadIdentityPoolProvider_Oidc clone() =>
-      WorkloadIdentityPoolProvider_Oidc()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WorkloadIdentityPoolProvider_Oidc clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WorkloadIdentityPoolProvider_Oidc copyWith(
           void Function(WorkloadIdentityPoolProvider_Oidc) updates) =>
       super.copyWith((message) =>
               updates(message as WorkloadIdentityPoolProvider_Oidc))
           as WorkloadIdentityPoolProvider_Oidc;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPoolProvider_Oidc create() =>
       WorkloadIdentityPoolProvider_Oidc._();
+  @$core.override
   WorkloadIdentityPoolProvider_Oidc createEmptyInstance() => create();
-  static $pb.PbList<WorkloadIdentityPoolProvider_Oidc> createRepeated() =>
-      $pb.PbList<WorkloadIdentityPoolProvider_Oidc>();
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPoolProvider_Oidc getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WorkloadIdentityPoolProvider_Oidc>(
@@ -295,30 +256,27 @@ class WorkloadIdentityPoolProvider_Oidc extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get issuerUri => $_getSZ(0);
   @$pb.TagNumber(1)
-  set issuerUri($core.String v) {
-    $_setString(0, v);
-  }
-
+  set issuerUri($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasIssuerUri() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIssuerUri() => clearField(1);
+  void clearIssuerUri() => $_clearField(1);
 
-  ///  Acceptable values for the `aud` field (audience) in the OIDC token. Token
-  ///  exchange requests are rejected if the token audience does not match one
-  ///  of the configured values. Each audience may be at most 256 characters. A
-  ///  maximum of 10 audiences may be configured.
+  /// Acceptable values for the `aud` field (audience) in the OIDC token. Token
+  /// exchange requests are rejected if the token audience does not match one
+  /// of the configured values. Each audience may be at most 256 characters. A
+  /// maximum of 10 audiences may be configured.
   ///
-  ///  If this list is empty, the OIDC token audience must be equal to
-  ///  the full canonical resource name of the WorkloadIdentityPoolProvider,
-  ///  with or without the HTTPS prefix. For example:
+  /// If this list is empty, the OIDC token audience must be equal to
+  /// the full canonical resource name of the WorkloadIdentityPoolProvider,
+  /// with or without the HTTPS prefix. For example:
   ///
-  ///  ```
-  ///  //iam.googleapis.com/projects/<project-number>/locations/<location>/workloadIdentityPools/<pool-id>/providers/<provider-id>
-  ///  https://iam.googleapis.com/projects/<project-number>/locations/<location>/workloadIdentityPools/<pool-id>/providers/<provider-id>
-  ///  ```
+  /// ```
+  /// //iam.googleapis.com/projects/<project-number>/locations/<location>/workloadIdentityPools/<pool-id>/providers/<provider-id>
+  /// https://iam.googleapis.com/projects/<project-number>/locations/<location>/workloadIdentityPools/<pool-id>/providers/<provider-id>
+  /// ```
   @$pb.TagNumber(2)
-  $core.List<$core.String> get allowedAudiences => $_getList(1);
+  $pb.PbList<$core.String> get allowedAudiences => $_getList(1);
 }
 
 enum WorkloadIdentityPoolProvider_ProviderConfig { aws, oidc, notSet }
@@ -331,48 +289,35 @@ class WorkloadIdentityPoolProvider extends $pb.GeneratedMessage {
     $core.String? description,
     WorkloadIdentityPoolProvider_State? state,
     $core.bool? disabled,
-    $core.Map<$core.String, $core.String>? attributeMapping,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>?
+        attributeMapping,
     $core.String? attributeCondition,
     WorkloadIdentityPoolProvider_Aws? aws,
     WorkloadIdentityPoolProvider_Oidc? oidc,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    if (state != null) {
-      $result.state = state;
-    }
-    if (disabled != null) {
-      $result.disabled = disabled;
-    }
-    if (attributeMapping != null) {
-      $result.attributeMapping.addAll(attributeMapping);
-    }
-    if (attributeCondition != null) {
-      $result.attributeCondition = attributeCondition;
-    }
-    if (aws != null) {
-      $result.aws = aws;
-    }
-    if (oidc != null) {
-      $result.oidc = oidc;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (displayName != null) result.displayName = displayName;
+    if (description != null) result.description = description;
+    if (state != null) result.state = state;
+    if (disabled != null) result.disabled = disabled;
+    if (attributeMapping != null)
+      result.attributeMapping.addEntries(attributeMapping);
+    if (attributeCondition != null)
+      result.attributeCondition = attributeCondition;
+    if (aws != null) result.aws = aws;
+    if (oidc != null) result.oidc = oidc;
+    return result;
   }
-  WorkloadIdentityPoolProvider._() : super();
-  factory WorkloadIdentityPoolProvider.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WorkloadIdentityPoolProvider.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WorkloadIdentityPoolProvider._();
+
+  factory WorkloadIdentityPoolProvider.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WorkloadIdentityPoolProvider.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, WorkloadIdentityPoolProvider_ProviderConfig>
       _WorkloadIdentityPoolProvider_ProviderConfigByTag = {
@@ -389,10 +334,7 @@ class WorkloadIdentityPoolProvider extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'displayName')
     ..aOS(3, _omitFieldNames ? '' : 'description')
-    ..e<WorkloadIdentityPoolProvider_State>(
-        4, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
-        defaultOrMaker: WorkloadIdentityPoolProvider_State.STATE_UNSPECIFIED,
-        valueOf: WorkloadIdentityPoolProvider_State.valueOf,
+    ..aE<WorkloadIdentityPoolProvider_State>(4, _omitFieldNames ? '' : 'state',
         enumValues: WorkloadIdentityPoolProvider_State.values)
     ..aOB(5, _omitFieldNames ? '' : 'disabled')
     ..m<$core.String, $core.String>(
@@ -408,235 +350,213 @@ class WorkloadIdentityPoolProvider extends $pb.GeneratedMessage {
         subBuilder: WorkloadIdentityPoolProvider_Oidc.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WorkloadIdentityPoolProvider clone() =>
-      WorkloadIdentityPoolProvider()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WorkloadIdentityPoolProvider clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WorkloadIdentityPoolProvider copyWith(
           void Function(WorkloadIdentityPoolProvider) updates) =>
       super.copyWith(
               (message) => updates(message as WorkloadIdentityPoolProvider))
           as WorkloadIdentityPoolProvider;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPoolProvider create() =>
       WorkloadIdentityPoolProvider._();
+  @$core.override
   WorkloadIdentityPoolProvider createEmptyInstance() => create();
-  static $pb.PbList<WorkloadIdentityPoolProvider> createRepeated() =>
-      $pb.PbList<WorkloadIdentityPoolProvider>();
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPoolProvider getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WorkloadIdentityPoolProvider>(create);
   static WorkloadIdentityPoolProvider? _defaultInstance;
 
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
   WorkloadIdentityPoolProvider_ProviderConfig whichProviderConfig() =>
       _WorkloadIdentityPoolProvider_ProviderConfigByTag[$_whichOneof(0)]!;
-  void clearProviderConfig() => clearField($_whichOneof(0));
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  void clearProviderConfig() => $_clearField($_whichOneof(0));
 
   /// Output only. The resource name of the provider.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// A display name for the provider. Cannot exceed 32 characters.
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set displayName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisplayName() => clearField(2);
+  void clearDisplayName() => $_clearField(2);
 
   /// A description for the provider. Cannot exceed 256 characters.
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(3)
-  set description($core.String v) {
-    $_setString(2, v);
-  }
-
+  set description($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDescription() => clearField(3);
+  void clearDescription() => $_clearField(3);
 
   /// Output only. The state of the provider.
   @$pb.TagNumber(4)
   WorkloadIdentityPoolProvider_State get state => $_getN(3);
   @$pb.TagNumber(4)
-  set state(WorkloadIdentityPoolProvider_State v) {
-    setField(4, v);
-  }
-
+  set state(WorkloadIdentityPoolProvider_State value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasState() => $_has(3);
   @$pb.TagNumber(4)
-  void clearState() => clearField(4);
+  void clearState() => $_clearField(4);
 
   /// Whether the provider is disabled. You cannot use a disabled provider to
   /// exchange tokens. However, existing tokens still grant access.
   @$pb.TagNumber(5)
   $core.bool get disabled => $_getBF(4);
   @$pb.TagNumber(5)
-  set disabled($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set disabled($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasDisabled() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDisabled() => clearField(5);
+  void clearDisabled() => $_clearField(5);
 
-  ///  Maps attributes from authentication credentials issued by an external
-  ///  identity provider to Google Cloud attributes, such as `subject` and
-  ///  `segment`.
+  /// Maps attributes from authentication credentials issued by an external
+  /// identity provider to Google Cloud attributes, such as `subject` and
+  /// `segment`.
   ///
-  ///  Each key must be a string specifying the Google Cloud IAM attribute to
-  ///  map to.
+  /// Each key must be a string specifying the Google Cloud IAM attribute to
+  /// map to.
   ///
-  ///  The following keys are supported:
+  /// The following keys are supported:
   ///
-  ///  * `google.subject`: The principal IAM is authenticating. You can reference
-  ///                      this value in IAM bindings. This is also the
-  ///                      subject that appears in Cloud Logging logs.
-  ///                      Cannot exceed 127 characters.
+  /// * `google.subject`: The principal IAM is authenticating. You can reference
+  ///                     this value in IAM bindings. This is also the
+  ///                     subject that appears in Cloud Logging logs.
+  ///                     Cannot exceed 127 characters.
   ///
-  ///  * `google.groups`: Groups the external identity belongs to. You can grant
-  ///                     groups access to resources using an IAM `principalSet`
-  ///                     binding; access applies to all members of the group.
+  /// * `google.groups`: Groups the external identity belongs to. You can grant
+  ///                    groups access to resources using an IAM `principalSet`
+  ///                    binding; access applies to all members of the group.
   ///
-  ///  You can also provide custom attributes by specifying
-  ///  `attribute.{custom_attribute}`, where `{custom_attribute}` is the name of
-  ///  the custom attribute to be mapped. You can define a maximum of 50 custom
-  ///  attributes. The maximum length of a mapped attribute key is
-  ///  100 characters, and the key may only contain the characters [a-z0-9_].
+  /// You can also provide custom attributes by specifying
+  /// `attribute.{custom_attribute}`, where `{custom_attribute}` is the name of
+  /// the custom attribute to be mapped. You can define a maximum of 50 custom
+  /// attributes. The maximum length of a mapped attribute key is
+  /// 100 characters, and the key may only contain the characters [a-z0-9_].
   ///
-  ///  You can reference these attributes in IAM policies to define fine-grained
-  ///  access for a workload to Google Cloud resources. For example:
+  /// You can reference these attributes in IAM policies to define fine-grained
+  /// access for a workload to Google Cloud resources. For example:
   ///
-  ///  * `google.subject`:
-  ///  `principal://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/subject/{value}`
+  /// * `google.subject`:
+  /// `principal://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/subject/{value}`
   ///
-  ///  * `google.groups`:
-  ///  `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/group/{value}`
+  /// * `google.groups`:
+  /// `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/group/{value}`
   ///
-  ///  * `attribute.{custom_attribute}`:
-  ///  `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/attribute.{custom_attribute}/{value}`
+  /// * `attribute.{custom_attribute}`:
+  /// `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/attribute.{custom_attribute}/{value}`
   ///
-  ///  Each value must be a [Common Expression Language]
-  ///  (https://opensource.google/projects/cel) function that maps an
-  ///  identity provider credential to the normalized attribute specified by the
-  ///  corresponding map key.
+  /// Each value must be a [Common Expression Language]
+  /// (https://opensource.google/projects/cel) function that maps an
+  /// identity provider credential to the normalized attribute specified by the
+  /// corresponding map key.
   ///
-  ///  You can use the `assertion` keyword in the expression to access a JSON
-  ///  representation of the authentication credential issued by the provider.
+  /// You can use the `assertion` keyword in the expression to access a JSON
+  /// representation of the authentication credential issued by the provider.
   ///
-  ///  The maximum length of an attribute mapping expression is 2048 characters.
-  ///  When evaluated, the total size of all mapped attributes must not exceed
-  ///  8KB.
+  /// The maximum length of an attribute mapping expression is 2048 characters.
+  /// When evaluated, the total size of all mapped attributes must not exceed
+  /// 8KB.
   ///
-  ///  For AWS providers, the following rules apply:
+  /// For AWS providers, the following rules apply:
   ///
-  ///  - If no attribute mapping is defined, the following default mapping
-  ///    applies:
+  /// - If no attribute mapping is defined, the following default mapping
+  ///   applies:
   ///
-  ///    ```
-  ///    {
-  ///      "google.subject":"assertion.arn",
-  ///      "attribute.aws_role":
-  ///          "assertion.arn.contains('assumed-role')"
-  ///          " ? assertion.arn.extract('{account_arn}assumed-role/')"
-  ///          "   + 'assumed-role/'"
-  ///          "   + assertion.arn.extract('assumed-role/{role_name}/')"
-  ///          " : assertion.arn",
-  ///    }
-  ///    ```
+  ///   ```
+  ///   {
+  ///     "google.subject":"assertion.arn",
+  ///     "attribute.aws_role":
+  ///         "assertion.arn.contains('assumed-role')"
+  ///         " ? assertion.arn.extract('{account_arn}assumed-role/')"
+  ///         "   + 'assumed-role/'"
+  ///         "   + assertion.arn.extract('assumed-role/{role_name}/')"
+  ///         " : assertion.arn",
+  ///   }
+  ///   ```
   ///
-  ///  - If any custom attribute mappings are defined, they must include a mapping
-  ///    to the `google.subject` attribute.
+  /// - If any custom attribute mappings are defined, they must include a mapping
+  ///   to the `google.subject` attribute.
   ///
   ///
-  ///  For OIDC providers, the following rules apply:
+  /// For OIDC providers, the following rules apply:
   ///
-  ///  - Custom attribute mappings must be defined, and must include a mapping to
-  ///    the `google.subject` attribute. For example, the following maps the
-  ///    `sub` claim of the incoming credential to the `subject` attribute on
-  ///    a Google token.
+  /// - Custom attribute mappings must be defined, and must include a mapping to
+  ///   the `google.subject` attribute. For example, the following maps the
+  ///   `sub` claim of the incoming credential to the `subject` attribute on
+  ///   a Google token.
   ///
-  ///    ```
-  ///    {"google.subject": "assertion.sub"}
-  ///    ```
+  ///   ```
+  ///   {"google.subject": "assertion.sub"}
+  ///   ```
   @$pb.TagNumber(6)
-  $core.Map<$core.String, $core.String> get attributeMapping => $_getMap(5);
+  $pb.PbMap<$core.String, $core.String> get attributeMapping => $_getMap(5);
 
-  ///  [A Common Expression Language](https://opensource.google/projects/cel)
-  ///  expression, in plain text, to restrict what otherwise valid authentication
-  ///  credentials issued by the provider should not be accepted.
+  /// [A Common Expression Language](https://opensource.google/projects/cel)
+  /// expression, in plain text, to restrict what otherwise valid authentication
+  /// credentials issued by the provider should not be accepted.
   ///
-  ///  The expression must output a boolean representing whether to allow the
-  ///  federation.
+  /// The expression must output a boolean representing whether to allow the
+  /// federation.
   ///
-  ///  The following keywords may be referenced in the expressions:
+  /// The following keywords may be referenced in the expressions:
   ///
-  ///  * `assertion`: JSON representing the authentication credential issued by
-  ///                 the provider.
-  ///  * `google`: The Google attributes mapped from the assertion in the
-  ///              `attribute_mappings`.
-  ///  * `attribute`: The custom attributes mapped from the assertion in the
-  ///                 `attribute_mappings`.
+  /// * `assertion`: JSON representing the authentication credential issued by
+  ///                the provider.
+  /// * `google`: The Google attributes mapped from the assertion in the
+  ///             `attribute_mappings`.
+  /// * `attribute`: The custom attributes mapped from the assertion in the
+  ///                `attribute_mappings`.
   ///
-  ///  The maximum length of the attribute condition expression is 4096
-  ///  characters. If unspecified, all valid authentication credential are
-  ///  accepted.
+  /// The maximum length of the attribute condition expression is 4096
+  /// characters. If unspecified, all valid authentication credential are
+  /// accepted.
   ///
-  ///  The following example shows how to only allow credentials with a mapped
-  ///  `google.groups` value of `admins`:
+  /// The following example shows how to only allow credentials with a mapped
+  /// `google.groups` value of `admins`:
   ///
-  ///  ```
-  ///  "'admins' in google.groups"
-  ///  ```
+  /// ```
+  /// "'admins' in google.groups"
+  /// ```
   @$pb.TagNumber(7)
   $core.String get attributeCondition => $_getSZ(6);
   @$pb.TagNumber(7)
-  set attributeCondition($core.String v) {
-    $_setString(6, v);
-  }
-
+  set attributeCondition($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
   $core.bool hasAttributeCondition() => $_has(6);
   @$pb.TagNumber(7)
-  void clearAttributeCondition() => clearField(7);
+  void clearAttributeCondition() => $_clearField(7);
 
   /// An Amazon Web Services identity provider.
   @$pb.TagNumber(8)
   WorkloadIdentityPoolProvider_Aws get aws => $_getN(7);
   @$pb.TagNumber(8)
-  set aws(WorkloadIdentityPoolProvider_Aws v) {
-    setField(8, v);
-  }
-
+  set aws(WorkloadIdentityPoolProvider_Aws value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasAws() => $_has(7);
   @$pb.TagNumber(8)
-  void clearAws() => clearField(8);
+  void clearAws() => $_clearField(8);
   @$pb.TagNumber(8)
   WorkloadIdentityPoolProvider_Aws ensureAws() => $_ensure(7);
 
@@ -644,14 +564,11 @@ class WorkloadIdentityPoolProvider extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   WorkloadIdentityPoolProvider_Oidc get oidc => $_getN(8);
   @$pb.TagNumber(9)
-  set oidc(WorkloadIdentityPoolProvider_Oidc v) {
-    setField(9, v);
-  }
-
+  set oidc(WorkloadIdentityPoolProvider_Oidc value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasOidc() => $_has(8);
   @$pb.TagNumber(9)
-  void clearOidc() => clearField(9);
+  void clearOidc() => $_clearField(9);
   @$pb.TagNumber(9)
   WorkloadIdentityPoolProvider_Oidc ensureOidc() => $_ensure(8);
 }
@@ -664,28 +581,23 @@ class ListWorkloadIdentityPoolsRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.bool? showDeleted,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (showDeleted != null) {
-      $result.showDeleted = showDeleted;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (showDeleted != null) result.showDeleted = showDeleted;
+    return result;
   }
-  ListWorkloadIdentityPoolsRequest._() : super();
-  factory ListWorkloadIdentityPoolsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListWorkloadIdentityPoolsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListWorkloadIdentityPoolsRequest._();
+
+  factory ListWorkloadIdentityPoolsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListWorkloadIdentityPoolsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListWorkloadIdentityPoolsRequest',
@@ -693,33 +605,28 @@ class ListWorkloadIdentityPoolsRequest extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.v1beta'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..aOB(4, _omitFieldNames ? '' : 'showDeleted')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListWorkloadIdentityPoolsRequest clone() =>
-      ListWorkloadIdentityPoolsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListWorkloadIdentityPoolsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListWorkloadIdentityPoolsRequest copyWith(
           void Function(ListWorkloadIdentityPoolsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListWorkloadIdentityPoolsRequest))
           as ListWorkloadIdentityPoolsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListWorkloadIdentityPoolsRequest create() =>
       ListWorkloadIdentityPoolsRequest._();
+  @$core.override
   ListWorkloadIdentityPoolsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListWorkloadIdentityPoolsRequest> createRepeated() =>
-      $pb.PbList<ListWorkloadIdentityPoolsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListWorkloadIdentityPoolsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListWorkloadIdentityPoolsRequest>(
@@ -730,14 +637,11 @@ class ListWorkloadIdentityPoolsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// The maximum number of pools to return.
   /// If unspecified, at most 50 pools are returned.
@@ -745,41 +649,32 @@ class ListWorkloadIdentityPoolsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// A page token, received from a previous `ListWorkloadIdentityPools`
   /// call. Provide this to retrieve the subsequent page.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 
   /// Whether to return soft-deleted pools.
   @$pb.TagNumber(4)
   $core.bool get showDeleted => $_getBF(3);
   @$pb.TagNumber(4)
-  set showDeleted($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set showDeleted($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasShowDeleted() => $_has(3);
   @$pb.TagNumber(4)
-  void clearShowDeleted() => clearField(4);
+  void clearShowDeleted() => $_clearField(4);
 }
 
 /// Response message for ListWorkloadIdentityPools.
@@ -788,56 +683,51 @@ class ListWorkloadIdentityPoolsResponse extends $pb.GeneratedMessage {
     $core.Iterable<WorkloadIdentityPool>? workloadIdentityPools,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (workloadIdentityPools != null) {
-      $result.workloadIdentityPools.addAll(workloadIdentityPools);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (workloadIdentityPools != null)
+      result.workloadIdentityPools.addAll(workloadIdentityPools);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListWorkloadIdentityPoolsResponse._() : super();
-  factory ListWorkloadIdentityPoolsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListWorkloadIdentityPoolsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListWorkloadIdentityPoolsResponse._();
+
+  factory ListWorkloadIdentityPoolsResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListWorkloadIdentityPoolsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListWorkloadIdentityPoolsResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.v1beta'),
       createEmptyInstance: create)
-    ..pc<WorkloadIdentityPool>(
-        1, _omitFieldNames ? '' : 'workloadIdentityPools', $pb.PbFieldType.PM,
+    ..pPM<WorkloadIdentityPool>(
+        1, _omitFieldNames ? '' : 'workloadIdentityPools',
         subBuilder: WorkloadIdentityPool.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListWorkloadIdentityPoolsResponse clone() =>
-      ListWorkloadIdentityPoolsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListWorkloadIdentityPoolsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListWorkloadIdentityPoolsResponse copyWith(
           void Function(ListWorkloadIdentityPoolsResponse) updates) =>
       super.copyWith((message) =>
               updates(message as ListWorkloadIdentityPoolsResponse))
           as ListWorkloadIdentityPoolsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListWorkloadIdentityPoolsResponse create() =>
       ListWorkloadIdentityPoolsResponse._();
+  @$core.override
   ListWorkloadIdentityPoolsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListWorkloadIdentityPoolsResponse> createRepeated() =>
-      $pb.PbList<ListWorkloadIdentityPoolsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListWorkloadIdentityPoolsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListWorkloadIdentityPoolsResponse>(
@@ -846,21 +736,18 @@ class ListWorkloadIdentityPoolsResponse extends $pb.GeneratedMessage {
 
   /// A list of pools.
   @$pb.TagNumber(1)
-  $core.List<WorkloadIdentityPool> get workloadIdentityPools => $_getList(0);
+  $pb.PbList<WorkloadIdentityPool> get workloadIdentityPools => $_getList(0);
 
   /// A token, which can be sent as `page_token` to retrieve the next page.
   /// If this field is omitted, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request message for GetWorkloadIdentityPool.
@@ -868,19 +755,19 @@ class GetWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
   factory GetWorkloadIdentityPoolRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetWorkloadIdentityPoolRequest._() : super();
-  factory GetWorkloadIdentityPoolRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetWorkloadIdentityPoolRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetWorkloadIdentityPoolRequest._();
+
+  factory GetWorkloadIdentityPoolRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetWorkloadIdentityPoolRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetWorkloadIdentityPoolRequest',
@@ -890,28 +777,23 @@ class GetWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetWorkloadIdentityPoolRequest clone() =>
-      GetWorkloadIdentityPoolRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetWorkloadIdentityPoolRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetWorkloadIdentityPoolRequest copyWith(
           void Function(GetWorkloadIdentityPoolRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetWorkloadIdentityPoolRequest))
           as GetWorkloadIdentityPoolRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetWorkloadIdentityPoolRequest create() =>
       GetWorkloadIdentityPoolRequest._();
+  @$core.override
   GetWorkloadIdentityPoolRequest createEmptyInstance() => create();
-  static $pb.PbList<GetWorkloadIdentityPoolRequest> createRepeated() =>
-      $pb.PbList<GetWorkloadIdentityPoolRequest>();
   @$core.pragma('dart2js:noInline')
   static GetWorkloadIdentityPoolRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetWorkloadIdentityPoolRequest>(create);
@@ -921,14 +803,11 @@ class GetWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request message for CreateWorkloadIdentityPool.
@@ -938,25 +817,24 @@ class CreateWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
     WorkloadIdentityPool? workloadIdentityPool,
     $core.String? workloadIdentityPoolId,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (workloadIdentityPool != null) {
-      $result.workloadIdentityPool = workloadIdentityPool;
-    }
-    if (workloadIdentityPoolId != null) {
-      $result.workloadIdentityPoolId = workloadIdentityPoolId;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (workloadIdentityPool != null)
+      result.workloadIdentityPool = workloadIdentityPool;
+    if (workloadIdentityPoolId != null)
+      result.workloadIdentityPoolId = workloadIdentityPoolId;
+    return result;
   }
-  CreateWorkloadIdentityPoolRequest._() : super();
-  factory CreateWorkloadIdentityPoolRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateWorkloadIdentityPoolRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateWorkloadIdentityPoolRequest._();
+
+  factory CreateWorkloadIdentityPoolRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateWorkloadIdentityPoolRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateWorkloadIdentityPoolRequest',
@@ -970,28 +848,23 @@ class CreateWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'workloadIdentityPoolId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateWorkloadIdentityPoolRequest clone() =>
-      CreateWorkloadIdentityPoolRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateWorkloadIdentityPoolRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateWorkloadIdentityPoolRequest copyWith(
           void Function(CreateWorkloadIdentityPoolRequest) updates) =>
       super.copyWith((message) =>
               updates(message as CreateWorkloadIdentityPoolRequest))
           as CreateWorkloadIdentityPoolRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateWorkloadIdentityPoolRequest create() =>
       CreateWorkloadIdentityPoolRequest._();
+  @$core.override
   CreateWorkloadIdentityPoolRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateWorkloadIdentityPoolRequest> createRepeated() =>
-      $pb.PbList<CreateWorkloadIdentityPoolRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateWorkloadIdentityPoolRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateWorkloadIdentityPoolRequest>(
@@ -1003,27 +876,21 @@ class CreateWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The pool to create.
   @$pb.TagNumber(2)
   WorkloadIdentityPool get workloadIdentityPool => $_getN(1);
   @$pb.TagNumber(2)
-  set workloadIdentityPool(WorkloadIdentityPool v) {
-    setField(2, v);
-  }
-
+  set workloadIdentityPool(WorkloadIdentityPool value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasWorkloadIdentityPool() => $_has(1);
   @$pb.TagNumber(2)
-  void clearWorkloadIdentityPool() => clearField(2);
+  void clearWorkloadIdentityPool() => $_clearField(2);
   @$pb.TagNumber(2)
   WorkloadIdentityPool ensureWorkloadIdentityPool() => $_ensure(1);
 
@@ -1034,38 +901,35 @@ class CreateWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get workloadIdentityPoolId => $_getSZ(2);
   @$pb.TagNumber(3)
-  set workloadIdentityPoolId($core.String v) {
-    $_setString(2, v);
-  }
-
+  set workloadIdentityPoolId($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasWorkloadIdentityPoolId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearWorkloadIdentityPoolId() => clearField(3);
+  void clearWorkloadIdentityPoolId() => $_clearField(3);
 }
 
 /// Request message for UpdateWorkloadIdentityPool.
 class UpdateWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
   factory UpdateWorkloadIdentityPoolRequest({
     WorkloadIdentityPool? workloadIdentityPool,
-    $3.FieldMask? updateMask,
+    $2.FieldMask? updateMask,
   }) {
-    final $result = create();
-    if (workloadIdentityPool != null) {
-      $result.workloadIdentityPool = workloadIdentityPool;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    return $result;
+    final result = create();
+    if (workloadIdentityPool != null)
+      result.workloadIdentityPool = workloadIdentityPool;
+    if (updateMask != null) result.updateMask = updateMask;
+    return result;
   }
-  UpdateWorkloadIdentityPoolRequest._() : super();
-  factory UpdateWorkloadIdentityPoolRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateWorkloadIdentityPoolRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateWorkloadIdentityPoolRequest._();
+
+  factory UpdateWorkloadIdentityPoolRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateWorkloadIdentityPoolRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateWorkloadIdentityPoolRequest',
@@ -1075,32 +939,27 @@ class UpdateWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
     ..aOM<WorkloadIdentityPool>(
         1, _omitFieldNames ? '' : 'workloadIdentityPool',
         subBuilder: WorkloadIdentityPool.create)
-    ..aOM<$3.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+    ..aOM<$2.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateWorkloadIdentityPoolRequest clone() =>
-      UpdateWorkloadIdentityPoolRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateWorkloadIdentityPoolRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateWorkloadIdentityPoolRequest copyWith(
           void Function(UpdateWorkloadIdentityPoolRequest) updates) =>
       super.copyWith((message) =>
               updates(message as UpdateWorkloadIdentityPoolRequest))
           as UpdateWorkloadIdentityPoolRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateWorkloadIdentityPoolRequest create() =>
       UpdateWorkloadIdentityPoolRequest._();
+  @$core.override
   UpdateWorkloadIdentityPoolRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateWorkloadIdentityPoolRequest> createRepeated() =>
-      $pb.PbList<UpdateWorkloadIdentityPoolRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateWorkloadIdentityPoolRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateWorkloadIdentityPoolRequest>(
@@ -1111,31 +970,25 @@ class UpdateWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   WorkloadIdentityPool get workloadIdentityPool => $_getN(0);
   @$pb.TagNumber(1)
-  set workloadIdentityPool(WorkloadIdentityPool v) {
-    setField(1, v);
-  }
-
+  set workloadIdentityPool(WorkloadIdentityPool value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasWorkloadIdentityPool() => $_has(0);
   @$pb.TagNumber(1)
-  void clearWorkloadIdentityPool() => clearField(1);
+  void clearWorkloadIdentityPool() => $_clearField(1);
   @$pb.TagNumber(1)
   WorkloadIdentityPool ensureWorkloadIdentityPool() => $_ensure(0);
 
   /// Required. The list of fields update.
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $2.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
-    setField(2, v);
-  }
-
+  set updateMask($2.FieldMask value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $2.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 /// Request message for DeleteWorkloadIdentityPool.
@@ -1143,19 +996,20 @@ class DeleteWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
   factory DeleteWorkloadIdentityPoolRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteWorkloadIdentityPoolRequest._() : super();
-  factory DeleteWorkloadIdentityPoolRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteWorkloadIdentityPoolRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteWorkloadIdentityPoolRequest._();
+
+  factory DeleteWorkloadIdentityPoolRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteWorkloadIdentityPoolRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteWorkloadIdentityPoolRequest',
@@ -1165,28 +1019,23 @@ class DeleteWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteWorkloadIdentityPoolRequest clone() =>
-      DeleteWorkloadIdentityPoolRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteWorkloadIdentityPoolRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteWorkloadIdentityPoolRequest copyWith(
           void Function(DeleteWorkloadIdentityPoolRequest) updates) =>
       super.copyWith((message) =>
               updates(message as DeleteWorkloadIdentityPoolRequest))
           as DeleteWorkloadIdentityPoolRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteWorkloadIdentityPoolRequest create() =>
       DeleteWorkloadIdentityPoolRequest._();
+  @$core.override
   DeleteWorkloadIdentityPoolRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteWorkloadIdentityPoolRequest> createRepeated() =>
-      $pb.PbList<DeleteWorkloadIdentityPoolRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteWorkloadIdentityPoolRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteWorkloadIdentityPoolRequest>(
@@ -1197,14 +1046,11 @@ class DeleteWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request message for UndeleteWorkloadIdentityPool.
@@ -1212,20 +1058,20 @@ class UndeleteWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
   factory UndeleteWorkloadIdentityPoolRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  UndeleteWorkloadIdentityPoolRequest._() : super();
+
+  UndeleteWorkloadIdentityPoolRequest._();
+
   factory UndeleteWorkloadIdentityPoolRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UndeleteWorkloadIdentityPoolRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UndeleteWorkloadIdentityPoolRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UndeleteWorkloadIdentityPoolRequest',
@@ -1235,28 +1081,23 @@ class UndeleteWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UndeleteWorkloadIdentityPoolRequest clone() =>
-      UndeleteWorkloadIdentityPoolRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UndeleteWorkloadIdentityPoolRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UndeleteWorkloadIdentityPoolRequest copyWith(
           void Function(UndeleteWorkloadIdentityPoolRequest) updates) =>
       super.copyWith((message) =>
               updates(message as UndeleteWorkloadIdentityPoolRequest))
           as UndeleteWorkloadIdentityPoolRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UndeleteWorkloadIdentityPoolRequest create() =>
       UndeleteWorkloadIdentityPoolRequest._();
+  @$core.override
   UndeleteWorkloadIdentityPoolRequest createEmptyInstance() => create();
-  static $pb.PbList<UndeleteWorkloadIdentityPoolRequest> createRepeated() =>
-      $pb.PbList<UndeleteWorkloadIdentityPoolRequest>();
   @$core.pragma('dart2js:noInline')
   static UndeleteWorkloadIdentityPoolRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1267,14 +1108,11 @@ class UndeleteWorkloadIdentityPoolRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request message for ListWorkloadIdentityPoolProviders.
@@ -1285,29 +1123,23 @@ class ListWorkloadIdentityPoolProvidersRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.bool? showDeleted,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (showDeleted != null) {
-      $result.showDeleted = showDeleted;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (showDeleted != null) result.showDeleted = showDeleted;
+    return result;
   }
-  ListWorkloadIdentityPoolProvidersRequest._() : super();
+
+  ListWorkloadIdentityPoolProvidersRequest._();
+
   factory ListWorkloadIdentityPoolProvidersRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListWorkloadIdentityPoolProvidersRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListWorkloadIdentityPoolProvidersRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListWorkloadIdentityPoolProvidersRequest',
@@ -1315,34 +1147,28 @@ class ListWorkloadIdentityPoolProvidersRequest extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.v1beta'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..aOB(4, _omitFieldNames ? '' : 'showDeleted')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListWorkloadIdentityPoolProvidersRequest clone() =>
-      ListWorkloadIdentityPoolProvidersRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListWorkloadIdentityPoolProvidersRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListWorkloadIdentityPoolProvidersRequest copyWith(
           void Function(ListWorkloadIdentityPoolProvidersRequest) updates) =>
       super.copyWith((message) =>
               updates(message as ListWorkloadIdentityPoolProvidersRequest))
           as ListWorkloadIdentityPoolProvidersRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListWorkloadIdentityPoolProvidersRequest create() =>
       ListWorkloadIdentityPoolProvidersRequest._();
+  @$core.override
   ListWorkloadIdentityPoolProvidersRequest createEmptyInstance() => create();
-  static $pb.PbList<ListWorkloadIdentityPoolProvidersRequest>
-      createRepeated() =>
-          $pb.PbList<ListWorkloadIdentityPoolProvidersRequest>();
   @$core.pragma('dart2js:noInline')
   static ListWorkloadIdentityPoolProvidersRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1353,14 +1179,11 @@ class ListWorkloadIdentityPoolProvidersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// The maximum number of providers to return.
   /// If unspecified, at most 50 providers are returned.
@@ -1368,14 +1191,11 @@ class ListWorkloadIdentityPoolProvidersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// A page token, received from a previous
   /// `ListWorkloadIdentityPoolProviders` call. Provide this to retrieve the
@@ -1383,27 +1203,21 @@ class ListWorkloadIdentityPoolProvidersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 
   /// Whether to return soft-deleted providers.
   @$pb.TagNumber(4)
   $core.bool get showDeleted => $_getBF(3);
   @$pb.TagNumber(4)
-  set showDeleted($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set showDeleted($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasShowDeleted() => $_has(3);
   @$pb.TagNumber(4)
-  void clearShowDeleted() => clearField(4);
+  void clearShowDeleted() => $_clearField(4);
 }
 
 /// Response message for ListWorkloadIdentityPoolProviders.
@@ -1412,61 +1226,52 @@ class ListWorkloadIdentityPoolProvidersResponse extends $pb.GeneratedMessage {
     $core.Iterable<WorkloadIdentityPoolProvider>? workloadIdentityPoolProviders,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (workloadIdentityPoolProviders != null) {
-      $result.workloadIdentityPoolProviders
+    final result = create();
+    if (workloadIdentityPoolProviders != null)
+      result.workloadIdentityPoolProviders
           .addAll(workloadIdentityPoolProviders);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListWorkloadIdentityPoolProvidersResponse._() : super();
+
+  ListWorkloadIdentityPoolProvidersResponse._();
+
   factory ListWorkloadIdentityPoolProvidersResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListWorkloadIdentityPoolProvidersResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListWorkloadIdentityPoolProvidersResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListWorkloadIdentityPoolProvidersResponse',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.v1beta'),
       createEmptyInstance: create)
-    ..pc<WorkloadIdentityPoolProvider>(
-        1,
-        _omitFieldNames ? '' : 'workloadIdentityPoolProviders',
-        $pb.PbFieldType.PM,
+    ..pPM<WorkloadIdentityPoolProvider>(
+        1, _omitFieldNames ? '' : 'workloadIdentityPoolProviders',
         subBuilder: WorkloadIdentityPoolProvider.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListWorkloadIdentityPoolProvidersResponse clone() =>
-      ListWorkloadIdentityPoolProvidersResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListWorkloadIdentityPoolProvidersResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListWorkloadIdentityPoolProvidersResponse copyWith(
           void Function(ListWorkloadIdentityPoolProvidersResponse) updates) =>
       super.copyWith((message) =>
               updates(message as ListWorkloadIdentityPoolProvidersResponse))
           as ListWorkloadIdentityPoolProvidersResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListWorkloadIdentityPoolProvidersResponse create() =>
       ListWorkloadIdentityPoolProvidersResponse._();
+  @$core.override
   ListWorkloadIdentityPoolProvidersResponse createEmptyInstance() => create();
-  static $pb.PbList<ListWorkloadIdentityPoolProvidersResponse>
-      createRepeated() =>
-          $pb.PbList<ListWorkloadIdentityPoolProvidersResponse>();
   @$core.pragma('dart2js:noInline')
   static ListWorkloadIdentityPoolProvidersResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1475,7 +1280,7 @@ class ListWorkloadIdentityPoolProvidersResponse extends $pb.GeneratedMessage {
 
   /// A list of providers.
   @$pb.TagNumber(1)
-  $core.List<WorkloadIdentityPoolProvider> get workloadIdentityPoolProviders =>
+  $pb.PbList<WorkloadIdentityPoolProvider> get workloadIdentityPoolProviders =>
       $_getList(0);
 
   /// A token, which can be sent as `page_token` to retrieve the next page.
@@ -1483,14 +1288,11 @@ class ListWorkloadIdentityPoolProvidersResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request message for GetWorkloadIdentityPoolProvider.
@@ -1498,20 +1300,20 @@ class GetWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
   factory GetWorkloadIdentityPoolProviderRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetWorkloadIdentityPoolProviderRequest._() : super();
+
+  GetWorkloadIdentityPoolProviderRequest._();
+
   factory GetWorkloadIdentityPoolProviderRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetWorkloadIdentityPoolProviderRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetWorkloadIdentityPoolProviderRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetWorkloadIdentityPoolProviderRequest',
@@ -1521,28 +1323,23 @@ class GetWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetWorkloadIdentityPoolProviderRequest clone() =>
-      GetWorkloadIdentityPoolProviderRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetWorkloadIdentityPoolProviderRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetWorkloadIdentityPoolProviderRequest copyWith(
           void Function(GetWorkloadIdentityPoolProviderRequest) updates) =>
       super.copyWith((message) =>
               updates(message as GetWorkloadIdentityPoolProviderRequest))
           as GetWorkloadIdentityPoolProviderRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetWorkloadIdentityPoolProviderRequest create() =>
       GetWorkloadIdentityPoolProviderRequest._();
+  @$core.override
   GetWorkloadIdentityPoolProviderRequest createEmptyInstance() => create();
-  static $pb.PbList<GetWorkloadIdentityPoolProviderRequest> createRepeated() =>
-      $pb.PbList<GetWorkloadIdentityPoolProviderRequest>();
   @$core.pragma('dart2js:noInline')
   static GetWorkloadIdentityPoolProviderRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1553,14 +1350,11 @@ class GetWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request message for CreateWorkloadIdentityPoolProvider.
@@ -1570,26 +1364,24 @@ class CreateWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
     WorkloadIdentityPoolProvider? workloadIdentityPoolProvider,
     $core.String? workloadIdentityPoolProviderId,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (workloadIdentityPoolProvider != null) {
-      $result.workloadIdentityPoolProvider = workloadIdentityPoolProvider;
-    }
-    if (workloadIdentityPoolProviderId != null) {
-      $result.workloadIdentityPoolProviderId = workloadIdentityPoolProviderId;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (workloadIdentityPoolProvider != null)
+      result.workloadIdentityPoolProvider = workloadIdentityPoolProvider;
+    if (workloadIdentityPoolProviderId != null)
+      result.workloadIdentityPoolProviderId = workloadIdentityPoolProviderId;
+    return result;
   }
-  CreateWorkloadIdentityPoolProviderRequest._() : super();
+
+  CreateWorkloadIdentityPoolProviderRequest._();
+
   factory CreateWorkloadIdentityPoolProviderRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateWorkloadIdentityPoolProviderRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateWorkloadIdentityPoolProviderRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateWorkloadIdentityPoolProviderRequest',
@@ -1603,29 +1395,23 @@ class CreateWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'workloadIdentityPoolProviderId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateWorkloadIdentityPoolProviderRequest clone() =>
-      CreateWorkloadIdentityPoolProviderRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateWorkloadIdentityPoolProviderRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateWorkloadIdentityPoolProviderRequest copyWith(
           void Function(CreateWorkloadIdentityPoolProviderRequest) updates) =>
       super.copyWith((message) =>
               updates(message as CreateWorkloadIdentityPoolProviderRequest))
           as CreateWorkloadIdentityPoolProviderRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateWorkloadIdentityPoolProviderRequest create() =>
       CreateWorkloadIdentityPoolProviderRequest._();
+  @$core.override
   CreateWorkloadIdentityPoolProviderRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateWorkloadIdentityPoolProviderRequest>
-      createRepeated() =>
-          $pb.PbList<CreateWorkloadIdentityPoolProviderRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateWorkloadIdentityPoolProviderRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1636,27 +1422,22 @@ class CreateWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The provider to create.
   @$pb.TagNumber(2)
   WorkloadIdentityPoolProvider get workloadIdentityPoolProvider => $_getN(1);
   @$pb.TagNumber(2)
-  set workloadIdentityPoolProvider(WorkloadIdentityPoolProvider v) {
-    setField(2, v);
-  }
-
+  set workloadIdentityPoolProvider(WorkloadIdentityPoolProvider value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasWorkloadIdentityPoolProvider() => $_has(1);
   @$pb.TagNumber(2)
-  void clearWorkloadIdentityPoolProvider() => clearField(2);
+  void clearWorkloadIdentityPoolProvider() => $_clearField(2);
   @$pb.TagNumber(2)
   WorkloadIdentityPoolProvider ensureWorkloadIdentityPoolProvider() =>
       $_ensure(1);
@@ -1668,39 +1449,36 @@ class CreateWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get workloadIdentityPoolProviderId => $_getSZ(2);
   @$pb.TagNumber(3)
-  set workloadIdentityPoolProviderId($core.String v) {
-    $_setString(2, v);
-  }
-
+  set workloadIdentityPoolProviderId($core.String value) =>
+      $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasWorkloadIdentityPoolProviderId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearWorkloadIdentityPoolProviderId() => clearField(3);
+  void clearWorkloadIdentityPoolProviderId() => $_clearField(3);
 }
 
 /// Request message for UpdateWorkloadIdentityPoolProvider.
 class UpdateWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
   factory UpdateWorkloadIdentityPoolProviderRequest({
     WorkloadIdentityPoolProvider? workloadIdentityPoolProvider,
-    $3.FieldMask? updateMask,
+    $2.FieldMask? updateMask,
   }) {
-    final $result = create();
-    if (workloadIdentityPoolProvider != null) {
-      $result.workloadIdentityPoolProvider = workloadIdentityPoolProvider;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    return $result;
+    final result = create();
+    if (workloadIdentityPoolProvider != null)
+      result.workloadIdentityPoolProvider = workloadIdentityPoolProvider;
+    if (updateMask != null) result.updateMask = updateMask;
+    return result;
   }
-  UpdateWorkloadIdentityPoolProviderRequest._() : super();
+
+  UpdateWorkloadIdentityPoolProviderRequest._();
+
   factory UpdateWorkloadIdentityPoolProviderRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateWorkloadIdentityPoolProviderRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateWorkloadIdentityPoolProviderRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateWorkloadIdentityPoolProviderRequest',
@@ -1710,33 +1488,27 @@ class UpdateWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
     ..aOM<WorkloadIdentityPoolProvider>(
         1, _omitFieldNames ? '' : 'workloadIdentityPoolProvider',
         subBuilder: WorkloadIdentityPoolProvider.create)
-    ..aOM<$3.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
-        subBuilder: $3.FieldMask.create)
+    ..aOM<$2.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateWorkloadIdentityPoolProviderRequest clone() =>
-      UpdateWorkloadIdentityPoolProviderRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateWorkloadIdentityPoolProviderRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateWorkloadIdentityPoolProviderRequest copyWith(
           void Function(UpdateWorkloadIdentityPoolProviderRequest) updates) =>
       super.copyWith((message) =>
               updates(message as UpdateWorkloadIdentityPoolProviderRequest))
           as UpdateWorkloadIdentityPoolProviderRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateWorkloadIdentityPoolProviderRequest create() =>
       UpdateWorkloadIdentityPoolProviderRequest._();
+  @$core.override
   UpdateWorkloadIdentityPoolProviderRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateWorkloadIdentityPoolProviderRequest>
-      createRepeated() =>
-          $pb.PbList<UpdateWorkloadIdentityPoolProviderRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateWorkloadIdentityPoolProviderRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1747,32 +1519,27 @@ class UpdateWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   WorkloadIdentityPoolProvider get workloadIdentityPoolProvider => $_getN(0);
   @$pb.TagNumber(1)
-  set workloadIdentityPoolProvider(WorkloadIdentityPoolProvider v) {
-    setField(1, v);
-  }
-
+  set workloadIdentityPoolProvider(WorkloadIdentityPoolProvider value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasWorkloadIdentityPoolProvider() => $_has(0);
   @$pb.TagNumber(1)
-  void clearWorkloadIdentityPoolProvider() => clearField(1);
+  void clearWorkloadIdentityPoolProvider() => $_clearField(1);
   @$pb.TagNumber(1)
   WorkloadIdentityPoolProvider ensureWorkloadIdentityPoolProvider() =>
       $_ensure(0);
 
   /// Required. The list of fields to update.
   @$pb.TagNumber(2)
-  $3.FieldMask get updateMask => $_getN(1);
+  $2.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
-    setField(2, v);
-  }
-
+  set updateMask($2.FieldMask value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
-  $3.FieldMask ensureUpdateMask() => $_ensure(1);
+  $2.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 /// Request message for DeleteWorkloadIdentityPoolProvider.
@@ -1780,20 +1547,20 @@ class DeleteWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
   factory DeleteWorkloadIdentityPoolProviderRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteWorkloadIdentityPoolProviderRequest._() : super();
+
+  DeleteWorkloadIdentityPoolProviderRequest._();
+
   factory DeleteWorkloadIdentityPoolProviderRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteWorkloadIdentityPoolProviderRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteWorkloadIdentityPoolProviderRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteWorkloadIdentityPoolProviderRequest',
@@ -1803,29 +1570,23 @@ class DeleteWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteWorkloadIdentityPoolProviderRequest clone() =>
-      DeleteWorkloadIdentityPoolProviderRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteWorkloadIdentityPoolProviderRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteWorkloadIdentityPoolProviderRequest copyWith(
           void Function(DeleteWorkloadIdentityPoolProviderRequest) updates) =>
       super.copyWith((message) =>
               updates(message as DeleteWorkloadIdentityPoolProviderRequest))
           as DeleteWorkloadIdentityPoolProviderRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteWorkloadIdentityPoolProviderRequest create() =>
       DeleteWorkloadIdentityPoolProviderRequest._();
+  @$core.override
   DeleteWorkloadIdentityPoolProviderRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteWorkloadIdentityPoolProviderRequest>
-      createRepeated() =>
-          $pb.PbList<DeleteWorkloadIdentityPoolProviderRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteWorkloadIdentityPoolProviderRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1836,14 +1597,11 @@ class DeleteWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request message for UndeleteWorkloadIdentityPoolProvider.
@@ -1851,20 +1609,21 @@ class UndeleteWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
   factory UndeleteWorkloadIdentityPoolProviderRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  UndeleteWorkloadIdentityPoolProviderRequest._() : super();
+
+  UndeleteWorkloadIdentityPoolProviderRequest._();
+
   factory UndeleteWorkloadIdentityPoolProviderRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UndeleteWorkloadIdentityPoolProviderRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UndeleteWorkloadIdentityPoolProviderRequest.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UndeleteWorkloadIdentityPoolProviderRequest',
@@ -1874,29 +1633,23 @@ class UndeleteWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UndeleteWorkloadIdentityPoolProviderRequest clone() =>
-      UndeleteWorkloadIdentityPoolProviderRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UndeleteWorkloadIdentityPoolProviderRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UndeleteWorkloadIdentityPoolProviderRequest copyWith(
           void Function(UndeleteWorkloadIdentityPoolProviderRequest) updates) =>
       super.copyWith((message) =>
               updates(message as UndeleteWorkloadIdentityPoolProviderRequest))
           as UndeleteWorkloadIdentityPoolProviderRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UndeleteWorkloadIdentityPoolProviderRequest create() =>
       UndeleteWorkloadIdentityPoolProviderRequest._();
+  @$core.override
   UndeleteWorkloadIdentityPoolProviderRequest createEmptyInstance() => create();
-  static $pb.PbList<UndeleteWorkloadIdentityPoolProviderRequest>
-      createRepeated() =>
-          $pb.PbList<UndeleteWorkloadIdentityPoolProviderRequest>();
   @$core.pragma('dart2js:noInline')
   static UndeleteWorkloadIdentityPoolProviderRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1907,27 +1660,26 @@ class UndeleteWorkloadIdentityPoolProviderRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Metadata for long-running WorkloadIdentityPool operations.
 class WorkloadIdentityPoolOperationMetadata extends $pb.GeneratedMessage {
   factory WorkloadIdentityPoolOperationMetadata() => create();
-  WorkloadIdentityPoolOperationMetadata._() : super();
+
+  WorkloadIdentityPoolOperationMetadata._();
+
   factory WorkloadIdentityPoolOperationMetadata.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WorkloadIdentityPoolOperationMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WorkloadIdentityPoolOperationMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WorkloadIdentityPoolOperationMetadata',
@@ -1936,28 +1688,23 @@ class WorkloadIdentityPoolOperationMetadata extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WorkloadIdentityPoolOperationMetadata clone() =>
-      WorkloadIdentityPoolOperationMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WorkloadIdentityPoolOperationMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WorkloadIdentityPoolOperationMetadata copyWith(
           void Function(WorkloadIdentityPoolOperationMetadata) updates) =>
       super.copyWith((message) =>
               updates(message as WorkloadIdentityPoolOperationMetadata))
           as WorkloadIdentityPoolOperationMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPoolOperationMetadata create() =>
       WorkloadIdentityPoolOperationMetadata._();
+  @$core.override
   WorkloadIdentityPoolOperationMetadata createEmptyInstance() => create();
-  static $pb.PbList<WorkloadIdentityPoolOperationMetadata> createRepeated() =>
-      $pb.PbList<WorkloadIdentityPoolOperationMetadata>();
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPoolOperationMetadata getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1969,14 +1716,17 @@ class WorkloadIdentityPoolOperationMetadata extends $pb.GeneratedMessage {
 class WorkloadIdentityPoolProviderOperationMetadata
     extends $pb.GeneratedMessage {
   factory WorkloadIdentityPoolProviderOperationMetadata() => create();
-  WorkloadIdentityPoolProviderOperationMetadata._() : super();
+
+  WorkloadIdentityPoolProviderOperationMetadata._();
+
   factory WorkloadIdentityPoolProviderOperationMetadata.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WorkloadIdentityPoolProviderOperationMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WorkloadIdentityPoolProviderOperationMetadata.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WorkloadIdentityPoolProviderOperationMetadata',
@@ -1985,14 +1735,9 @@ class WorkloadIdentityPoolProviderOperationMetadata
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WorkloadIdentityPoolProviderOperationMetadata clone() =>
-      WorkloadIdentityPoolProviderOperationMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WorkloadIdentityPoolProviderOperationMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WorkloadIdentityPoolProviderOperationMetadata copyWith(
           void Function(WorkloadIdentityPoolProviderOperationMetadata)
               updates) =>
@@ -2000,16 +1745,15 @@ class WorkloadIdentityPoolProviderOperationMetadata
               updates(message as WorkloadIdentityPoolProviderOperationMetadata))
           as WorkloadIdentityPoolProviderOperationMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPoolProviderOperationMetadata create() =>
       WorkloadIdentityPoolProviderOperationMetadata._();
+  @$core.override
   WorkloadIdentityPoolProviderOperationMetadata createEmptyInstance() =>
       create();
-  static $pb.PbList<WorkloadIdentityPoolProviderOperationMetadata>
-      createRepeated() =>
-          $pb.PbList<WorkloadIdentityPoolProviderOperationMetadata>();
   @$core.pragma('dart2js:noInline')
   static WorkloadIdentityPoolProviderOperationMetadata getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2017,6 +1761,7 @@ class WorkloadIdentityPoolProviderOperationMetadata
   static WorkloadIdentityPoolProviderOperationMetadata? _defaultInstance;
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

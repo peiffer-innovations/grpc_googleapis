@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/longrunning/operations.proto
-//
-// @dart = 2.12
+// Generated from google/longrunning/operations.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -78,6 +80,13 @@ const ListOperationsRequest$json = {
     {'1': 'filter', '3': 1, '4': 1, '5': 9, '10': 'filter'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+    {
+      '1': 'return_partial_success',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '10': 'returnPartialSuccess'
+    },
   ],
 };
 
@@ -85,7 +94,8 @@ const ListOperationsRequest$json = {
 final $typed_data.Uint8List listOperationsRequestDescriptor = $convert.base64Decode(
     'ChVMaXN0T3BlcmF0aW9uc1JlcXVlc3QSEgoEbmFtZRgEIAEoCVIEbmFtZRIWCgZmaWx0ZXIYAS'
     'ABKAlSBmZpbHRlchIbCglwYWdlX3NpemUYAiABKAVSCHBhZ2VTaXplEh0KCnBhZ2VfdG9rZW4Y'
-    'AyABKAlSCXBhZ2VUb2tlbg==');
+    'AyABKAlSCXBhZ2VUb2tlbhI0ChZyZXR1cm5fcGFydGlhbF9zdWNjZXNzGAUgASgIUhRyZXR1cm'
+    '5QYXJ0aWFsU3VjY2Vzcw==');
 
 @$core.Deprecated('Use listOperationsResponseDescriptor instead')
 const ListOperationsResponse$json = {
@@ -100,6 +110,7 @@ const ListOperationsResponse$json = {
       '10': 'operations'
     },
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {'1': 'unreachable', '3': 3, '4': 3, '5': 9, '8': {}, '10': 'unreachable'},
   ],
 };
 
@@ -107,7 +118,8 @@ const ListOperationsResponse$json = {
 final $typed_data.Uint8List listOperationsResponseDescriptor = $convert.base64Decode(
     'ChZMaXN0T3BlcmF0aW9uc1Jlc3BvbnNlEj0KCm9wZXJhdGlvbnMYASADKAsyHS5nb29nbGUubG'
     '9uZ3J1bm5pbmcuT3BlcmF0aW9uUgpvcGVyYXRpb25zEiYKD25leHRfcGFnZV90b2tlbhgCIAEo'
-    'CVINbmV4dFBhZ2VUb2tlbg==');
+    'CVINbmV4dFBhZ2VUb2tlbhIlCgt1bnJlYWNoYWJsZRgDIAMoCUID4EEGUgt1bnJlYWNoYWJsZQ'
+    '==');
 
 @$core.Deprecated('Use cancelOperationRequestDescriptor instead')
 const CancelOperationRequest$json = {

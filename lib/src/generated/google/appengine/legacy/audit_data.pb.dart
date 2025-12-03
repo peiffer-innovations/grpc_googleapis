@@ -1,40 +1,41 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/appengine/legacy/audit_data.proto
-//
-// @dart = 2.12
+// Generated from google/appengine/legacy/audit_data.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 /// Admin Console legacy audit log.
 class AuditData extends $pb.GeneratedMessage {
   factory AuditData({
     $core.String? eventMessage,
-    $core.Map<$core.String, $core.String>? eventData,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? eventData,
   }) {
-    final $result = create();
-    if (eventMessage != null) {
-      $result.eventMessage = eventMessage;
-    }
-    if (eventData != null) {
-      $result.eventData.addAll(eventData);
-    }
-    return $result;
+    final result = create();
+    if (eventMessage != null) result.eventMessage = eventMessage;
+    if (eventData != null) result.eventData.addEntries(eventData);
+    return result;
   }
-  AuditData._() : super();
-  factory AuditData.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AuditData.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AuditData._();
+
+  factory AuditData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AuditData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AuditData',
@@ -49,22 +50,19 @@ class AuditData extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.appengine.legacy'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AuditData clone() => AuditData()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AuditData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AuditData copyWith(void Function(AuditData) updates) =>
       super.copyWith((message) => updates(message as AuditData)) as AuditData;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AuditData create() => AuditData._();
+  @$core.override
   AuditData createEmptyInstance() => create();
-  static $pb.PbList<AuditData> createRepeated() => $pb.PbList<AuditData>();
   @$core.pragma('dart2js:noInline')
   static AuditData getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AuditData>(create);
@@ -75,21 +73,19 @@ class AuditData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get eventMessage => $_getSZ(0);
   @$pb.TagNumber(1)
-  set eventMessage($core.String v) {
-    $_setString(0, v);
-  }
-
+  set eventMessage($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEventMessage() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEventMessage() => clearField(1);
+  void clearEventMessage() => $_clearField(1);
 
   /// Arbitrary event data.
   /// This is the "Result" column in Admin Console's Admin Logs.
   @$pb.TagNumber(2)
-  $core.Map<$core.String, $core.String> get eventData => $_getMap(1);
+  $pb.PbMap<$core.String, $core.String> get eventData => $_getMap(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

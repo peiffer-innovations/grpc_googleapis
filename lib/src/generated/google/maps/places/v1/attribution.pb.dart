@@ -1,17 +1,20 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/places/v1/attribution.proto
-//
-// @dart = 2.12
+// Generated from google/maps/places/v1/attribution.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Information about the author of the UGC data. Used in
 /// [Photo][google.maps.places.v1.Photo], and
@@ -22,25 +25,21 @@ class AuthorAttribution extends $pb.GeneratedMessage {
     $core.String? uri,
     $core.String? photoUri,
   }) {
-    final $result = create();
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (uri != null) {
-      $result.uri = uri;
-    }
-    if (photoUri != null) {
-      $result.photoUri = photoUri;
-    }
-    return $result;
+    final result = create();
+    if (displayName != null) result.displayName = displayName;
+    if (uri != null) result.uri = uri;
+    if (photoUri != null) result.photoUri = photoUri;
+    return result;
   }
-  AuthorAttribution._() : super();
-  factory AuthorAttribution.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AuthorAttribution.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AuthorAttribution._();
+
+  factory AuthorAttribution.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AuthorAttribution.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AuthorAttribution',
@@ -52,24 +51,20 @@ class AuthorAttribution extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'photoUri')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AuthorAttribution clone() => AuthorAttribution()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AuthorAttribution clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AuthorAttribution copyWith(void Function(AuthorAttribution) updates) =>
       super.copyWith((message) => updates(message as AuthorAttribution))
           as AuthorAttribution;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AuthorAttribution create() => AuthorAttribution._();
+  @$core.override
   AuthorAttribution createEmptyInstance() => create();
-  static $pb.PbList<AuthorAttribution> createRepeated() =>
-      $pb.PbList<AuthorAttribution>();
   @$core.pragma('dart2js:noInline')
   static AuthorAttribution getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AuthorAttribution>(create);
@@ -80,28 +75,22 @@ class AuthorAttribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get displayName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set displayName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set displayName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDisplayName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDisplayName() => clearField(1);
+  void clearDisplayName() => $_clearField(1);
 
   /// URI of the author of the [Photo][google.maps.places.v1.Photo] or
   /// [Review][google.maps.places.v1.Review].
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(2)
-  set uri($core.String v) {
-    $_setString(1, v);
-  }
-
+  set uri($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUri() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUri() => clearField(2);
+  void clearUri() => $_clearField(2);
 
   /// Profile photo URI of the author of the
   /// [Photo][google.maps.places.v1.Photo] or
@@ -109,16 +98,14 @@ class AuthorAttribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get photoUri => $_getSZ(2);
   @$pb.TagNumber(3)
-  set photoUri($core.String v) {
-    $_setString(2, v);
-  }
-
+  set photoUri($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPhotoUri() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPhotoUri() => clearField(3);
+  void clearPhotoUri() => $_clearField(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

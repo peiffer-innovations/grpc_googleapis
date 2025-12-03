@@ -1,21 +1,26 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/area120/tables/v1alpha1/tables.proto
-//
-// @dart = 2.12
+// Generated from google/area120/tables/v1alpha1/tables.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/field_mask.pb.dart'
+    as $2;
+import 'package:grpc_googleapis/src/generated/google/protobuf/struct.pb.dart'
+    as $3;
 
-import '../../../protobuf/field_mask.pb.dart' as $2;
-import '../../../protobuf/struct.pb.dart' as $3;
 import 'tables.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'tables.pbenum.dart';
 
@@ -24,19 +29,19 @@ class GetTableRequest extends $pb.GeneratedMessage {
   factory GetTableRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetTableRequest._() : super();
-  factory GetTableRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetTableRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetTableRequest._();
+
+  factory GetTableRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetTableRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetTableRequest',
@@ -46,24 +51,20 @@ class GetTableRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetTableRequest clone() => GetTableRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetTableRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetTableRequest copyWith(void Function(GetTableRequest) updates) =>
       super.copyWith((message) => updates(message as GetTableRequest))
           as GetTableRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetTableRequest create() => GetTableRequest._();
+  @$core.override
   GetTableRequest createEmptyInstance() => create();
-  static $pb.PbList<GetTableRequest> createRepeated() =>
-      $pb.PbList<GetTableRequest>();
   @$core.pragma('dart2js:noInline')
   static GetTableRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetTableRequest>(create);
@@ -74,14 +75,11 @@ class GetTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request message for TablesService.ListTables.
@@ -90,88 +88,76 @@ class ListTablesRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListTablesRequest._() : super();
-  factory ListTablesRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListTablesRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListTablesRequest._();
+
+  factory ListTablesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTablesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListTablesRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.area120.tables.v1alpha1'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'pageSize')
     ..aOS(2, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListTablesRequest clone() => ListTablesRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTablesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListTablesRequest copyWith(void Function(ListTablesRequest) updates) =>
       super.copyWith((message) => updates(message as ListTablesRequest))
           as ListTablesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListTablesRequest create() => ListTablesRequest._();
+  @$core.override
   ListTablesRequest createEmptyInstance() => create();
-  static $pb.PbList<ListTablesRequest> createRepeated() =>
-      $pb.PbList<ListTablesRequest>();
   @$core.pragma('dart2js:noInline')
   static ListTablesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListTablesRequest>(create);
   static ListTablesRequest? _defaultInstance;
 
-  ///  The maximum number of tables to return. The service may return fewer than
-  ///  this value.
+  /// The maximum number of tables to return. The service may return fewer than
+  /// this value.
   ///
-  ///  If unspecified, at most 20 tables are returned. The maximum value is 100;
-  ///  values above 100 are coerced to 100.
+  /// If unspecified, at most 20 tables are returned. The maximum value is 100;
+  /// values above 100 are coerced to 100.
   @$pb.TagNumber(1)
   $core.int get pageSize => $_getIZ(0);
   @$pb.TagNumber(1)
-  set pageSize($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPageSize() => clearField(1);
+  void clearPageSize() => $_clearField(1);
 
-  ///  A page token, received from a previous `ListTables` call.
-  ///  Provide this to retrieve the subsequent page.
+  /// A page token, received from a previous `ListTables` call.
+  /// Provide this to retrieve the subsequent page.
   ///
-  ///  When paginating, all other parameters provided to `ListTables` must match
-  ///  the call that provided the page token.
+  /// When paginating, all other parameters provided to `ListTables` must match
+  /// the call that provided the page token.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set pageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set pageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageToken() => clearField(2);
+  void clearPageToken() => $_clearField(2);
 }
 
 /// Response message for TablesService.ListTables.
@@ -180,51 +166,44 @@ class ListTablesResponse extends $pb.GeneratedMessage {
     $core.Iterable<Table>? tables,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (tables != null) {
-      $result.tables.addAll(tables);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (tables != null) result.tables.addAll(tables);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListTablesResponse._() : super();
-  factory ListTablesResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListTablesResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListTablesResponse._();
+
+  factory ListTablesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTablesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListTablesResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.area120.tables.v1alpha1'),
       createEmptyInstance: create)
-    ..pc<Table>(1, _omitFieldNames ? '' : 'tables', $pb.PbFieldType.PM,
-        subBuilder: Table.create)
+    ..pPM<Table>(1, _omitFieldNames ? '' : 'tables', subBuilder: Table.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListTablesResponse clone() => ListTablesResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTablesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListTablesResponse copyWith(void Function(ListTablesResponse) updates) =>
       super.copyWith((message) => updates(message as ListTablesResponse))
           as ListTablesResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListTablesResponse create() => ListTablesResponse._();
+  @$core.override
   ListTablesResponse createEmptyInstance() => create();
-  static $pb.PbList<ListTablesResponse> createRepeated() =>
-      $pb.PbList<ListTablesResponse>();
   @$core.pragma('dart2js:noInline')
   static ListTablesResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListTablesResponse>(create);
@@ -232,21 +211,18 @@ class ListTablesResponse extends $pb.GeneratedMessage {
 
   /// The list of tables.
   @$pb.TagNumber(1)
-  $core.List<Table> get tables => $_getList(0);
+  $pb.PbList<Table> get tables => $_getList(0);
 
   /// A token, which can be sent as `page_token` to retrieve the next page.
   /// If this field is empty, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request message for TablesService.GetWorkspace.
@@ -254,19 +230,19 @@ class GetWorkspaceRequest extends $pb.GeneratedMessage {
   factory GetWorkspaceRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetWorkspaceRequest._() : super();
-  factory GetWorkspaceRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetWorkspaceRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetWorkspaceRequest._();
+
+  factory GetWorkspaceRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetWorkspaceRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetWorkspaceRequest',
@@ -276,24 +252,20 @@ class GetWorkspaceRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetWorkspaceRequest clone() => GetWorkspaceRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetWorkspaceRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetWorkspaceRequest copyWith(void Function(GetWorkspaceRequest) updates) =>
       super.copyWith((message) => updates(message as GetWorkspaceRequest))
           as GetWorkspaceRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetWorkspaceRequest create() => GetWorkspaceRequest._();
+  @$core.override
   GetWorkspaceRequest createEmptyInstance() => create();
-  static $pb.PbList<GetWorkspaceRequest> createRepeated() =>
-      $pb.PbList<GetWorkspaceRequest>();
   @$core.pragma('dart2js:noInline')
   static GetWorkspaceRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetWorkspaceRequest>(create);
@@ -304,14 +276,11 @@ class GetWorkspaceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request message for TablesService.ListWorkspaces.
@@ -320,90 +289,77 @@ class ListWorkspacesRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListWorkspacesRequest._() : super();
-  factory ListWorkspacesRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListWorkspacesRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListWorkspacesRequest._();
+
+  factory ListWorkspacesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListWorkspacesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListWorkspacesRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.area120.tables.v1alpha1'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'pageSize')
     ..aOS(2, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListWorkspacesRequest clone() =>
-      ListWorkspacesRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListWorkspacesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListWorkspacesRequest copyWith(
           void Function(ListWorkspacesRequest) updates) =>
       super.copyWith((message) => updates(message as ListWorkspacesRequest))
           as ListWorkspacesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListWorkspacesRequest create() => ListWorkspacesRequest._();
+  @$core.override
   ListWorkspacesRequest createEmptyInstance() => create();
-  static $pb.PbList<ListWorkspacesRequest> createRepeated() =>
-      $pb.PbList<ListWorkspacesRequest>();
   @$core.pragma('dart2js:noInline')
   static ListWorkspacesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListWorkspacesRequest>(create);
   static ListWorkspacesRequest? _defaultInstance;
 
-  ///  The maximum number of workspaces to return. The service may return fewer
-  ///  than this value.
+  /// The maximum number of workspaces to return. The service may return fewer
+  /// than this value.
   ///
-  ///  If unspecified, at most 10 workspaces are returned. The maximum value is
-  ///  25; values above 25 are coerced to 25.
+  /// If unspecified, at most 10 workspaces are returned. The maximum value is
+  /// 25; values above 25 are coerced to 25.
   @$pb.TagNumber(1)
   $core.int get pageSize => $_getIZ(0);
   @$pb.TagNumber(1)
-  set pageSize($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPageSize() => clearField(1);
+  void clearPageSize() => $_clearField(1);
 
-  ///  A page token, received from a previous `ListWorkspaces` call.
-  ///  Provide this to retrieve the subsequent page.
+  /// A page token, received from a previous `ListWorkspaces` call.
+  /// Provide this to retrieve the subsequent page.
   ///
-  ///  When paginating, all other parameters provided to `ListWorkspaces` must
-  ///  match the call that provided the page token.
+  /// When paginating, all other parameters provided to `ListWorkspaces` must
+  /// match the call that provided the page token.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set pageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set pageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageToken() => clearField(2);
+  void clearPageToken() => $_clearField(2);
 }
 
 /// Response message for TablesService.ListWorkspaces.
@@ -412,53 +368,46 @@ class ListWorkspacesResponse extends $pb.GeneratedMessage {
     $core.Iterable<Workspace>? workspaces,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (workspaces != null) {
-      $result.workspaces.addAll(workspaces);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (workspaces != null) result.workspaces.addAll(workspaces);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListWorkspacesResponse._() : super();
-  factory ListWorkspacesResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListWorkspacesResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListWorkspacesResponse._();
+
+  factory ListWorkspacesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListWorkspacesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListWorkspacesResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.area120.tables.v1alpha1'),
       createEmptyInstance: create)
-    ..pc<Workspace>(1, _omitFieldNames ? '' : 'workspaces', $pb.PbFieldType.PM,
+    ..pPM<Workspace>(1, _omitFieldNames ? '' : 'workspaces',
         subBuilder: Workspace.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListWorkspacesResponse clone() =>
-      ListWorkspacesResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListWorkspacesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListWorkspacesResponse copyWith(
           void Function(ListWorkspacesResponse) updates) =>
       super.copyWith((message) => updates(message as ListWorkspacesResponse))
           as ListWorkspacesResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListWorkspacesResponse create() => ListWorkspacesResponse._();
+  @$core.override
   ListWorkspacesResponse createEmptyInstance() => create();
-  static $pb.PbList<ListWorkspacesResponse> createRepeated() =>
-      $pb.PbList<ListWorkspacesResponse>();
   @$core.pragma('dart2js:noInline')
   static ListWorkspacesResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListWorkspacesResponse>(create);
@@ -466,21 +415,18 @@ class ListWorkspacesResponse extends $pb.GeneratedMessage {
 
   /// The list of workspaces.
   @$pb.TagNumber(1)
-  $core.List<Workspace> get workspaces => $_getList(0);
+  $pb.PbList<Workspace> get workspaces => $_getList(0);
 
   /// A token, which can be sent as `page_token` to retrieve the next page.
   /// If this field is empty, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request message for TablesService.GetRow.
@@ -489,22 +435,20 @@ class GetRowRequest extends $pb.GeneratedMessage {
     $core.String? name,
     View? view,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (view != null) result.view = view;
+    return result;
   }
-  GetRowRequest._() : super();
-  factory GetRowRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetRowRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetRowRequest._();
+
+  factory GetRowRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetRowRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetRowRequest',
@@ -512,30 +456,23 @@ class GetRowRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.area120.tables.v1alpha1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<View>(2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: View.VIEW_UNSPECIFIED,
-        valueOf: View.valueOf,
-        enumValues: View.values)
+    ..aE<View>(2, _omitFieldNames ? '' : 'view', enumValues: View.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetRowRequest clone() => GetRowRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetRowRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetRowRequest copyWith(void Function(GetRowRequest) updates) =>
       super.copyWith((message) => updates(message as GetRowRequest))
           as GetRowRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetRowRequest create() => GetRowRequest._();
+  @$core.override
   GetRowRequest createEmptyInstance() => create();
-  static $pb.PbList<GetRowRequest> createRepeated() =>
-      $pb.PbList<GetRowRequest>();
   @$core.pragma('dart2js:noInline')
   static GetRowRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetRowRequest>(create);
@@ -546,28 +483,22 @@ class GetRowRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Optional. Column key to use for values in the row.
   /// Defaults to user entered name.
   @$pb.TagNumber(2)
   View get view => $_getN(1);
   @$pb.TagNumber(2)
-  set view(View v) {
-    setField(2, v);
-  }
-
+  set view(View value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasView() => $_has(1);
   @$pb.TagNumber(2)
-  void clearView() => clearField(2);
+  void clearView() => $_clearField(2);
 }
 
 /// Request message for TablesService.ListRows.
@@ -579,31 +510,23 @@ class ListRowsRequest extends $pb.GeneratedMessage {
     View? view,
     $core.String? filter,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (view != null) result.view = view;
+    if (filter != null) result.filter = filter;
+    return result;
   }
-  ListRowsRequest._() : super();
-  factory ListRowsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListRowsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListRowsRequest._();
+
+  factory ListRowsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListRowsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListRowsRequest',
@@ -611,33 +534,26 @@ class ListRowsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.area120.tables.v1alpha1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
-    ..e<View>(4, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: View.VIEW_UNSPECIFIED,
-        valueOf: View.valueOf,
-        enumValues: View.values)
+    ..aE<View>(4, _omitFieldNames ? '' : 'view', enumValues: View.values)
     ..aOS(5, _omitFieldNames ? '' : 'filter')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListRowsRequest clone() => ListRowsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListRowsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListRowsRequest copyWith(void Function(ListRowsRequest) updates) =>
       super.copyWith((message) => updates(message as ListRowsRequest))
           as ListRowsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListRowsRequest create() => ListRowsRequest._();
+  @$core.override
   ListRowsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListRowsRequest> createRepeated() =>
-      $pb.PbList<ListRowsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListRowsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListRowsRequest>(create);
@@ -648,62 +564,50 @@ class ListRowsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
-  ///  The maximum number of rows to return. The service may return fewer than
-  ///  this value.
+  /// The maximum number of rows to return. The service may return fewer than
+  /// this value.
   ///
-  ///  If unspecified, at most 50 rows are returned. The maximum value is 1,000;
-  ///  values above 1,000 are coerced to 1,000.
+  /// If unspecified, at most 50 rows are returned. The maximum value is 1,000;
+  /// values above 1,000 are coerced to 1,000.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
-  ///  A page token, received from a previous `ListRows` call.
-  ///  Provide this to retrieve the subsequent page.
+  /// A page token, received from a previous `ListRows` call.
+  /// Provide this to retrieve the subsequent page.
   ///
-  ///  When paginating, all other parameters provided to `ListRows` must match
-  ///  the call that provided the page token.
+  /// When paginating, all other parameters provided to `ListRows` must match
+  /// the call that provided the page token.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 
   /// Optional. Column key to use for values in the row.
   /// Defaults to user entered name.
   @$pb.TagNumber(4)
   View get view => $_getN(3);
   @$pb.TagNumber(4)
-  set view(View v) {
-    setField(4, v);
-  }
-
+  set view(View value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasView() => $_has(3);
   @$pb.TagNumber(4)
-  void clearView() => clearField(4);
+  void clearView() => $_clearField(4);
 
   /// Optional. Raw text query to search for in rows of the table.
   /// Special characters must be escaped. Logical operators and field specific
@@ -711,14 +615,11 @@ class ListRowsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get filter => $_getSZ(4);
   @$pb.TagNumber(5)
-  set filter($core.String v) {
-    $_setString(4, v);
-  }
-
+  set filter($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasFilter() => $_has(4);
   @$pb.TagNumber(5)
-  void clearFilter() => clearField(5);
+  void clearFilter() => $_clearField(5);
 }
 
 /// Response message for TablesService.ListRows.
@@ -727,51 +628,44 @@ class ListRowsResponse extends $pb.GeneratedMessage {
     $core.Iterable<Row>? rows,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (rows != null) {
-      $result.rows.addAll(rows);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (rows != null) result.rows.addAll(rows);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListRowsResponse._() : super();
-  factory ListRowsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListRowsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListRowsResponse._();
+
+  factory ListRowsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListRowsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListRowsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.area120.tables.v1alpha1'),
       createEmptyInstance: create)
-    ..pc<Row>(1, _omitFieldNames ? '' : 'rows', $pb.PbFieldType.PM,
-        subBuilder: Row.create)
+    ..pPM<Row>(1, _omitFieldNames ? '' : 'rows', subBuilder: Row.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListRowsResponse clone() => ListRowsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListRowsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListRowsResponse copyWith(void Function(ListRowsResponse) updates) =>
       super.copyWith((message) => updates(message as ListRowsResponse))
           as ListRowsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListRowsResponse create() => ListRowsResponse._();
+  @$core.override
   ListRowsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListRowsResponse> createRepeated() =>
-      $pb.PbList<ListRowsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListRowsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListRowsResponse>(create);
@@ -779,21 +673,18 @@ class ListRowsResponse extends $pb.GeneratedMessage {
 
   /// The rows from the specified table.
   @$pb.TagNumber(1)
-  $core.List<Row> get rows => $_getList(0);
+  $pb.PbList<Row> get rows => $_getList(0);
 
   /// A token, which can be sent as `page_token` to retrieve the next page.
   /// If this field is empty, there are no subsequent pages.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request message for TablesService.CreateRow.
@@ -803,25 +694,21 @@ class CreateRowRequest extends $pb.GeneratedMessage {
     Row? row,
     View? view,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (row != null) {
-      $result.row = row;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (row != null) result.row = row;
+    if (view != null) result.view = view;
+    return result;
   }
-  CreateRowRequest._() : super();
-  factory CreateRowRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateRowRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateRowRequest._();
+
+  factory CreateRowRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateRowRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateRowRequest',
@@ -830,30 +717,23 @@ class CreateRowRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOM<Row>(2, _omitFieldNames ? '' : 'row', subBuilder: Row.create)
-    ..e<View>(3, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: View.VIEW_UNSPECIFIED,
-        valueOf: View.valueOf,
-        enumValues: View.values)
+    ..aE<View>(3, _omitFieldNames ? '' : 'view', enumValues: View.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateRowRequest clone() => CreateRowRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateRowRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateRowRequest copyWith(void Function(CreateRowRequest) updates) =>
       super.copyWith((message) => updates(message as CreateRowRequest))
           as CreateRowRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateRowRequest create() => CreateRowRequest._();
+  @$core.override
   CreateRowRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateRowRequest> createRepeated() =>
-      $pb.PbList<CreateRowRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateRowRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateRowRequest>(create);
@@ -864,27 +744,21 @@ class CreateRowRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The row to create.
   @$pb.TagNumber(2)
   Row get row => $_getN(1);
   @$pb.TagNumber(2)
-  set row(Row v) {
-    setField(2, v);
-  }
-
+  set row(Row value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasRow() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRow() => clearField(2);
+  void clearRow() => $_clearField(2);
   @$pb.TagNumber(2)
   Row ensureRow() => $_ensure(1);
 
@@ -893,14 +767,11 @@ class CreateRowRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   View get view => $_getN(2);
   @$pb.TagNumber(3)
-  set view(View v) {
-    setField(3, v);
-  }
-
+  set view(View value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasView() => $_has(2);
   @$pb.TagNumber(3)
-  void clearView() => clearField(3);
+  void clearView() => $_clearField(3);
 }
 
 /// Request message for TablesService.BatchCreateRows.
@@ -909,22 +780,20 @@ class BatchCreateRowsRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.Iterable<CreateRowRequest>? requests,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (requests != null) {
-      $result.requests.addAll(requests);
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (requests != null) result.requests.addAll(requests);
+    return result;
   }
-  BatchCreateRowsRequest._() : super();
-  factory BatchCreateRowsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchCreateRowsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchCreateRowsRequest._();
+
+  factory BatchCreateRowsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchCreateRowsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchCreateRowsRequest',
@@ -932,31 +801,25 @@ class BatchCreateRowsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.area120.tables.v1alpha1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..pc<CreateRowRequest>(
-        2, _omitFieldNames ? '' : 'requests', $pb.PbFieldType.PM,
+    ..pPM<CreateRowRequest>(2, _omitFieldNames ? '' : 'requests',
         subBuilder: CreateRowRequest.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchCreateRowsRequest clone() =>
-      BatchCreateRowsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchCreateRowsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchCreateRowsRequest copyWith(
           void Function(BatchCreateRowsRequest) updates) =>
       super.copyWith((message) => updates(message as BatchCreateRowsRequest))
           as BatchCreateRowsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchCreateRowsRequest create() => BatchCreateRowsRequest._();
+  @$core.override
   BatchCreateRowsRequest createEmptyInstance() => create();
-  static $pb.PbList<BatchCreateRowsRequest> createRepeated() =>
-      $pb.PbList<BatchCreateRowsRequest>();
   @$core.pragma('dart2js:noInline')
   static BatchCreateRowsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchCreateRowsRequest>(create);
@@ -967,20 +830,17 @@ class BatchCreateRowsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
-  ///  Required. The request message specifying the rows to create.
+  /// Required. The request message specifying the rows to create.
   ///
-  ///  A maximum of 500 rows can be created in a single batch.
+  /// A maximum of 500 rows can be created in a single batch.
   @$pb.TagNumber(2)
-  $core.List<CreateRowRequest> get requests => $_getList(1);
+  $pb.PbList<CreateRowRequest> get requests => $_getList(1);
 }
 
 /// Response message for TablesService.BatchCreateRows.
@@ -988,49 +848,43 @@ class BatchCreateRowsResponse extends $pb.GeneratedMessage {
   factory BatchCreateRowsResponse({
     $core.Iterable<Row>? rows,
   }) {
-    final $result = create();
-    if (rows != null) {
-      $result.rows.addAll(rows);
-    }
-    return $result;
+    final result = create();
+    if (rows != null) result.rows.addAll(rows);
+    return result;
   }
-  BatchCreateRowsResponse._() : super();
-  factory BatchCreateRowsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchCreateRowsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchCreateRowsResponse._();
+
+  factory BatchCreateRowsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchCreateRowsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchCreateRowsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.area120.tables.v1alpha1'),
       createEmptyInstance: create)
-    ..pc<Row>(1, _omitFieldNames ? '' : 'rows', $pb.PbFieldType.PM,
-        subBuilder: Row.create)
+    ..pPM<Row>(1, _omitFieldNames ? '' : 'rows', subBuilder: Row.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchCreateRowsResponse clone() =>
-      BatchCreateRowsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchCreateRowsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchCreateRowsResponse copyWith(
           void Function(BatchCreateRowsResponse) updates) =>
       super.copyWith((message) => updates(message as BatchCreateRowsResponse))
           as BatchCreateRowsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchCreateRowsResponse create() => BatchCreateRowsResponse._();
+  @$core.override
   BatchCreateRowsResponse createEmptyInstance() => create();
-  static $pb.PbList<BatchCreateRowsResponse> createRepeated() =>
-      $pb.PbList<BatchCreateRowsResponse>();
   @$core.pragma('dart2js:noInline')
   static BatchCreateRowsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchCreateRowsResponse>(create);
@@ -1038,7 +892,7 @@ class BatchCreateRowsResponse extends $pb.GeneratedMessage {
 
   /// The created rows.
   @$pb.TagNumber(1)
-  $core.List<Row> get rows => $_getList(0);
+  $pb.PbList<Row> get rows => $_getList(0);
 }
 
 /// Request message for TablesService.UpdateRow.
@@ -1048,25 +902,21 @@ class UpdateRowRequest extends $pb.GeneratedMessage {
     $2.FieldMask? updateMask,
     View? view,
   }) {
-    final $result = create();
-    if (row != null) {
-      $result.row = row;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    return $result;
+    final result = create();
+    if (row != null) result.row = row;
+    if (updateMask != null) result.updateMask = updateMask;
+    if (view != null) result.view = view;
+    return result;
   }
-  UpdateRowRequest._() : super();
-  factory UpdateRowRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateRowRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateRowRequest._();
+
+  factory UpdateRowRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateRowRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateRowRequest',
@@ -1076,30 +926,23 @@ class UpdateRowRequest extends $pb.GeneratedMessage {
     ..aOM<Row>(1, _omitFieldNames ? '' : 'row', subBuilder: Row.create)
     ..aOM<$2.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
         subBuilder: $2.FieldMask.create)
-    ..e<View>(3, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: View.VIEW_UNSPECIFIED,
-        valueOf: View.valueOf,
-        enumValues: View.values)
+    ..aE<View>(3, _omitFieldNames ? '' : 'view', enumValues: View.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateRowRequest clone() => UpdateRowRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateRowRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateRowRequest copyWith(void Function(UpdateRowRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateRowRequest))
           as UpdateRowRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateRowRequest create() => UpdateRowRequest._();
+  @$core.override
   UpdateRowRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateRowRequest> createRepeated() =>
-      $pb.PbList<UpdateRowRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateRowRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateRowRequest>(create);
@@ -1109,14 +952,11 @@ class UpdateRowRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Row get row => $_getN(0);
   @$pb.TagNumber(1)
-  set row(Row v) {
-    setField(1, v);
-  }
-
+  set row(Row value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasRow() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRow() => clearField(1);
+  void clearRow() => $_clearField(1);
   @$pb.TagNumber(1)
   Row ensureRow() => $_ensure(0);
 
@@ -1124,14 +964,11 @@ class UpdateRowRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $2.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($2.FieldMask v) {
-    setField(2, v);
-  }
-
+  set updateMask($2.FieldMask value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $2.FieldMask ensureUpdateMask() => $_ensure(1);
 
@@ -1140,14 +977,11 @@ class UpdateRowRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   View get view => $_getN(2);
   @$pb.TagNumber(3)
-  set view(View v) {
-    setField(3, v);
-  }
-
+  set view(View value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasView() => $_has(2);
   @$pb.TagNumber(3)
-  void clearView() => clearField(3);
+  void clearView() => $_clearField(3);
 }
 
 /// Request message for TablesService.BatchUpdateRows.
@@ -1156,22 +990,20 @@ class BatchUpdateRowsRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.Iterable<UpdateRowRequest>? requests,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (requests != null) {
-      $result.requests.addAll(requests);
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (requests != null) result.requests.addAll(requests);
+    return result;
   }
-  BatchUpdateRowsRequest._() : super();
-  factory BatchUpdateRowsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchUpdateRowsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchUpdateRowsRequest._();
+
+  factory BatchUpdateRowsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchUpdateRowsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchUpdateRowsRequest',
@@ -1179,31 +1011,25 @@ class BatchUpdateRowsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.area120.tables.v1alpha1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..pc<UpdateRowRequest>(
-        2, _omitFieldNames ? '' : 'requests', $pb.PbFieldType.PM,
+    ..pPM<UpdateRowRequest>(2, _omitFieldNames ? '' : 'requests',
         subBuilder: UpdateRowRequest.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchUpdateRowsRequest clone() =>
-      BatchUpdateRowsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchUpdateRowsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchUpdateRowsRequest copyWith(
           void Function(BatchUpdateRowsRequest) updates) =>
       super.copyWith((message) => updates(message as BatchUpdateRowsRequest))
           as BatchUpdateRowsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchUpdateRowsRequest create() => BatchUpdateRowsRequest._();
+  @$core.override
   BatchUpdateRowsRequest createEmptyInstance() => create();
-  static $pb.PbList<BatchUpdateRowsRequest> createRepeated() =>
-      $pb.PbList<BatchUpdateRowsRequest>();
   @$core.pragma('dart2js:noInline')
   static BatchUpdateRowsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchUpdateRowsRequest>(create);
@@ -1214,20 +1040,17 @@ class BatchUpdateRowsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
-  ///  Required. The request messages specifying the rows to update.
+  /// Required. The request messages specifying the rows to update.
   ///
-  ///  A maximum of 500 rows can be modified in a single batch.
+  /// A maximum of 500 rows can be modified in a single batch.
   @$pb.TagNumber(2)
-  $core.List<UpdateRowRequest> get requests => $_getList(1);
+  $pb.PbList<UpdateRowRequest> get requests => $_getList(1);
 }
 
 /// Response message for TablesService.BatchUpdateRows.
@@ -1235,49 +1058,43 @@ class BatchUpdateRowsResponse extends $pb.GeneratedMessage {
   factory BatchUpdateRowsResponse({
     $core.Iterable<Row>? rows,
   }) {
-    final $result = create();
-    if (rows != null) {
-      $result.rows.addAll(rows);
-    }
-    return $result;
+    final result = create();
+    if (rows != null) result.rows.addAll(rows);
+    return result;
   }
-  BatchUpdateRowsResponse._() : super();
-  factory BatchUpdateRowsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchUpdateRowsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchUpdateRowsResponse._();
+
+  factory BatchUpdateRowsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchUpdateRowsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchUpdateRowsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.area120.tables.v1alpha1'),
       createEmptyInstance: create)
-    ..pc<Row>(1, _omitFieldNames ? '' : 'rows', $pb.PbFieldType.PM,
-        subBuilder: Row.create)
+    ..pPM<Row>(1, _omitFieldNames ? '' : 'rows', subBuilder: Row.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchUpdateRowsResponse clone() =>
-      BatchUpdateRowsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchUpdateRowsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchUpdateRowsResponse copyWith(
           void Function(BatchUpdateRowsResponse) updates) =>
       super.copyWith((message) => updates(message as BatchUpdateRowsResponse))
           as BatchUpdateRowsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchUpdateRowsResponse create() => BatchUpdateRowsResponse._();
+  @$core.override
   BatchUpdateRowsResponse createEmptyInstance() => create();
-  static $pb.PbList<BatchUpdateRowsResponse> createRepeated() =>
-      $pb.PbList<BatchUpdateRowsResponse>();
   @$core.pragma('dart2js:noInline')
   static BatchUpdateRowsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchUpdateRowsResponse>(create);
@@ -1285,7 +1102,7 @@ class BatchUpdateRowsResponse extends $pb.GeneratedMessage {
 
   /// The updated rows.
   @$pb.TagNumber(1)
-  $core.List<Row> get rows => $_getList(0);
+  $pb.PbList<Row> get rows => $_getList(0);
 }
 
 /// Request message for TablesService.DeleteRow
@@ -1293,19 +1110,19 @@ class DeleteRowRequest extends $pb.GeneratedMessage {
   factory DeleteRowRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteRowRequest._() : super();
-  factory DeleteRowRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteRowRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteRowRequest._();
+
+  factory DeleteRowRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteRowRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteRowRequest',
@@ -1315,24 +1132,20 @@ class DeleteRowRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteRowRequest clone() => DeleteRowRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteRowRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteRowRequest copyWith(void Function(DeleteRowRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteRowRequest))
           as DeleteRowRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteRowRequest create() => DeleteRowRequest._();
+  @$core.override
   DeleteRowRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteRowRequest> createRepeated() =>
-      $pb.PbList<DeleteRowRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteRowRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteRowRequest>(create);
@@ -1343,14 +1156,11 @@ class DeleteRowRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request message for TablesService.BatchDeleteRows
@@ -1359,22 +1169,20 @@ class BatchDeleteRowsRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.Iterable<$core.String>? names,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (names != null) {
-      $result.names.addAll(names);
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (names != null) result.names.addAll(names);
+    return result;
   }
-  BatchDeleteRowsRequest._() : super();
-  factory BatchDeleteRowsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchDeleteRowsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchDeleteRowsRequest._();
+
+  factory BatchDeleteRowsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchDeleteRowsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchDeleteRowsRequest',
@@ -1385,26 +1193,21 @@ class BatchDeleteRowsRequest extends $pb.GeneratedMessage {
     ..pPS(2, _omitFieldNames ? '' : 'names')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchDeleteRowsRequest clone() =>
-      BatchDeleteRowsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchDeleteRowsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchDeleteRowsRequest copyWith(
           void Function(BatchDeleteRowsRequest) updates) =>
       super.copyWith((message) => updates(message as BatchDeleteRowsRequest))
           as BatchDeleteRowsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchDeleteRowsRequest create() => BatchDeleteRowsRequest._();
+  @$core.override
   BatchDeleteRowsRequest createEmptyInstance() => create();
-  static $pb.PbList<BatchDeleteRowsRequest> createRepeated() =>
-      $pb.PbList<BatchDeleteRowsRequest>();
   @$core.pragma('dart2js:noInline')
   static BatchDeleteRowsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchDeleteRowsRequest>(create);
@@ -1415,21 +1218,18 @@ class BatchDeleteRowsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The names of the rows to delete. All rows must belong to the parent table
   /// or else the entire batch will fail. A maximum of 500 rows can be deleted
   /// in a batch.
   /// Format: tables/{table}/rows/{row}
   @$pb.TagNumber(2)
-  $core.List<$core.String> get names => $_getList(1);
+  $pb.PbList<$core.String> get names => $_getList(1);
 }
 
 /// A single table.
@@ -1439,25 +1239,21 @@ class Table extends $pb.GeneratedMessage {
     $core.String? displayName,
     $core.Iterable<ColumnDescription>? columns,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (columns != null) {
-      $result.columns.addAll(columns);
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (displayName != null) result.displayName = displayName;
+    if (columns != null) result.columns.addAll(columns);
+    return result;
   }
-  Table._() : super();
-  factory Table.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Table.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Table._();
+
+  factory Table.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Table.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Table',
@@ -1466,27 +1262,23 @@ class Table extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'displayName')
-    ..pc<ColumnDescription>(
-        3, _omitFieldNames ? '' : 'columns', $pb.PbFieldType.PM,
+    ..pPM<ColumnDescription>(3, _omitFieldNames ? '' : 'columns',
         subBuilder: ColumnDescription.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Table clone() => Table()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Table clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Table copyWith(void Function(Table) updates) =>
       super.copyWith((message) => updates(message as Table)) as Table;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Table create() => Table._();
+  @$core.override
   Table createEmptyInstance() => create();
-  static $pb.PbList<Table> createRepeated() => $pb.PbList<Table>();
   @$core.pragma('dart2js:noInline')
   static Table getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Table>(create);
@@ -1497,32 +1289,26 @@ class Table extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The human readable title of the table.
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set displayName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisplayName() => clearField(2);
+  void clearDisplayName() => $_clearField(2);
 
   /// List of columns in this table.
   /// Order of columns matches the display order.
   @$pb.TagNumber(3)
-  $core.List<ColumnDescription> get columns => $_getList(2);
+  $pb.PbList<ColumnDescription> get columns => $_getList(2);
 }
 
 /// Details on a column in the table.
@@ -1535,34 +1321,25 @@ class ColumnDescription extends $pb.GeneratedMessage {
     RelationshipDetails? relationshipDetails,
     LookupDetails? lookupDetails,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (dataType != null) {
-      $result.dataType = dataType;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    if (labels != null) {
-      $result.labels.addAll(labels);
-    }
-    if (relationshipDetails != null) {
-      $result.relationshipDetails = relationshipDetails;
-    }
-    if (lookupDetails != null) {
-      $result.lookupDetails = lookupDetails;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (dataType != null) result.dataType = dataType;
+    if (id != null) result.id = id;
+    if (labels != null) result.labels.addAll(labels);
+    if (relationshipDetails != null)
+      result.relationshipDetails = relationshipDetails;
+    if (lookupDetails != null) result.lookupDetails = lookupDetails;
+    return result;
   }
-  ColumnDescription._() : super();
-  factory ColumnDescription.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ColumnDescription.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ColumnDescription._();
+
+  factory ColumnDescription.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ColumnDescription.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ColumnDescription',
@@ -1572,7 +1349,7 @@ class ColumnDescription extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'dataType')
     ..aOS(3, _omitFieldNames ? '' : 'id')
-    ..pc<LabeledItem>(4, _omitFieldNames ? '' : 'labels', $pb.PbFieldType.PM,
+    ..pPM<LabeledItem>(4, _omitFieldNames ? '' : 'labels',
         subBuilder: LabeledItem.create)
     ..aOM<RelationshipDetails>(5, _omitFieldNames ? '' : 'relationshipDetails',
         subBuilder: RelationshipDetails.create)
@@ -1580,24 +1357,20 @@ class ColumnDescription extends $pb.GeneratedMessage {
         subBuilder: LookupDetails.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ColumnDescription clone() => ColumnDescription()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ColumnDescription clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ColumnDescription copyWith(void Function(ColumnDescription) updates) =>
       super.copyWith((message) => updates(message as ColumnDescription))
           as ColumnDescription;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ColumnDescription create() => ColumnDescription._();
+  @$core.override
   ColumnDescription createEmptyInstance() => create();
-  static $pb.PbList<ColumnDescription> createRepeated() =>
-      $pb.PbList<ColumnDescription>();
   @$core.pragma('dart2js:noInline')
   static ColumnDescription getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ColumnDescription>(create);
@@ -1607,14 +1380,11 @@ class ColumnDescription extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Data type of the column
   /// Supported types are auto_id, boolean, boolean_list, creator,
@@ -1626,48 +1396,39 @@ class ColumnDescription extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get dataType => $_getSZ(1);
   @$pb.TagNumber(2)
-  set dataType($core.String v) {
-    $_setString(1, v);
-  }
-
+  set dataType($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDataType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDataType() => clearField(2);
+  void clearDataType() => $_clearField(2);
 
   /// Internal id for a column.
   @$pb.TagNumber(3)
   $core.String get id => $_getSZ(2);
   @$pb.TagNumber(3)
-  set id($core.String v) {
-    $_setString(2, v);
-  }
-
+  set id($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearId() => clearField(3);
+  void clearId() => $_clearField(3);
 
   /// Optional. Range of labeled values for the column.
   /// Some columns like tags and drop-downs limit the values to a set of
   /// possible values. We return the range of values in such cases to help
   /// clients implement better user data validation.
   @$pb.TagNumber(4)
-  $core.List<LabeledItem> get labels => $_getList(3);
+  $pb.PbList<LabeledItem> get labels => $_getList(3);
 
   /// Optional. Additional details about a relationship column. Specified when data_type
   /// is relationship.
   @$pb.TagNumber(5)
   RelationshipDetails get relationshipDetails => $_getN(4);
   @$pb.TagNumber(5)
-  set relationshipDetails(RelationshipDetails v) {
-    setField(5, v);
-  }
-
+  set relationshipDetails(RelationshipDetails value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasRelationshipDetails() => $_has(4);
   @$pb.TagNumber(5)
-  void clearRelationshipDetails() => clearField(5);
+  void clearRelationshipDetails() => $_clearField(5);
   @$pb.TagNumber(5)
   RelationshipDetails ensureRelationshipDetails() => $_ensure(4);
 
@@ -1678,14 +1439,11 @@ class ColumnDescription extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   LookupDetails get lookupDetails => $_getN(5);
   @$pb.TagNumber(6)
-  set lookupDetails(LookupDetails v) {
-    setField(6, v);
-  }
-
+  set lookupDetails(LookupDetails value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasLookupDetails() => $_has(5);
   @$pb.TagNumber(6)
-  void clearLookupDetails() => clearField(6);
+  void clearLookupDetails() => $_clearField(6);
   @$pb.TagNumber(6)
   LookupDetails ensureLookupDetails() => $_ensure(5);
 }
@@ -1696,22 +1454,20 @@ class LabeledItem extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? id,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (id != null) result.id = id;
+    return result;
   }
-  LabeledItem._() : super();
-  factory LabeledItem.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory LabeledItem.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  LabeledItem._();
+
+  factory LabeledItem.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LabeledItem.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'LabeledItem',
@@ -1722,23 +1478,20 @@ class LabeledItem extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  LabeledItem clone() => LabeledItem()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LabeledItem clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   LabeledItem copyWith(void Function(LabeledItem) updates) =>
       super.copyWith((message) => updates(message as LabeledItem))
           as LabeledItem;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static LabeledItem create() => LabeledItem._();
+  @$core.override
   LabeledItem createEmptyInstance() => create();
-  static $pb.PbList<LabeledItem> createRepeated() => $pb.PbList<LabeledItem>();
   @$core.pragma('dart2js:noInline')
   static LabeledItem getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LabeledItem>(create);
@@ -1748,27 +1501,21 @@ class LabeledItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Internal id associated with the item.
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) {
-    $_setString(1, v);
-  }
-
+  set id($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
+  void clearId() => $_clearField(2);
 }
 
 /// Details about a relationship column.
@@ -1776,19 +1523,19 @@ class RelationshipDetails extends $pb.GeneratedMessage {
   factory RelationshipDetails({
     $core.String? linkedTable,
   }) {
-    final $result = create();
-    if (linkedTable != null) {
-      $result.linkedTable = linkedTable;
-    }
-    return $result;
+    final result = create();
+    if (linkedTable != null) result.linkedTable = linkedTable;
+    return result;
   }
-  RelationshipDetails._() : super();
-  factory RelationshipDetails.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RelationshipDetails.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RelationshipDetails._();
+
+  factory RelationshipDetails.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RelationshipDetails.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RelationshipDetails',
@@ -1798,24 +1545,20 @@ class RelationshipDetails extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'linkedTable')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RelationshipDetails clone() => RelationshipDetails()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RelationshipDetails clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RelationshipDetails copyWith(void Function(RelationshipDetails) updates) =>
       super.copyWith((message) => updates(message as RelationshipDetails))
           as RelationshipDetails;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RelationshipDetails create() => RelationshipDetails._();
+  @$core.override
   RelationshipDetails createEmptyInstance() => create();
-  static $pb.PbList<RelationshipDetails> createRepeated() =>
-      $pb.PbList<RelationshipDetails>();
   @$core.pragma('dart2js:noInline')
   static RelationshipDetails getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RelationshipDetails>(create);
@@ -1825,14 +1568,11 @@ class RelationshipDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get linkedTable => $_getSZ(0);
   @$pb.TagNumber(1)
-  set linkedTable($core.String v) {
-    $_setString(0, v);
-  }
-
+  set linkedTable($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasLinkedTable() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLinkedTable() => clearField(1);
+  void clearLinkedTable() => $_clearField(1);
 }
 
 /// Details about a lookup column whose value comes from the associated
@@ -1842,22 +1582,22 @@ class LookupDetails extends $pb.GeneratedMessage {
     $core.String? relationshipColumn,
     $core.String? relationshipColumnId,
   }) {
-    final $result = create();
-    if (relationshipColumn != null) {
-      $result.relationshipColumn = relationshipColumn;
-    }
-    if (relationshipColumnId != null) {
-      $result.relationshipColumnId = relationshipColumnId;
-    }
-    return $result;
+    final result = create();
+    if (relationshipColumn != null)
+      result.relationshipColumn = relationshipColumn;
+    if (relationshipColumnId != null)
+      result.relationshipColumnId = relationshipColumnId;
+    return result;
   }
-  LookupDetails._() : super();
-  factory LookupDetails.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory LookupDetails.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  LookupDetails._();
+
+  factory LookupDetails.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LookupDetails.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'LookupDetails',
@@ -1868,24 +1608,20 @@ class LookupDetails extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'relationshipColumnId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  LookupDetails clone() => LookupDetails()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LookupDetails clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   LookupDetails copyWith(void Function(LookupDetails) updates) =>
       super.copyWith((message) => updates(message as LookupDetails))
           as LookupDetails;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static LookupDetails create() => LookupDetails._();
+  @$core.override
   LookupDetails createEmptyInstance() => create();
-  static $pb.PbList<LookupDetails> createRepeated() =>
-      $pb.PbList<LookupDetails>();
   @$core.pragma('dart2js:noInline')
   static LookupDetails getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LookupDetails>(create);
@@ -1895,51 +1631,43 @@ class LookupDetails extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get relationshipColumn => $_getSZ(0);
   @$pb.TagNumber(1)
-  set relationshipColumn($core.String v) {
-    $_setString(0, v);
-  }
-
+  set relationshipColumn($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRelationshipColumn() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRelationshipColumn() => clearField(1);
+  void clearRelationshipColumn() => $_clearField(1);
 
   /// The id of the relationship column.
   @$pb.TagNumber(2)
   $core.String get relationshipColumnId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set relationshipColumnId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set relationshipColumnId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasRelationshipColumnId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRelationshipColumnId() => clearField(2);
+  void clearRelationshipColumnId() => $_clearField(2);
 }
 
 /// A single row in a table.
 class Row extends $pb.GeneratedMessage {
   factory Row({
     $core.String? name,
-    $core.Map<$core.String, $3.Value>? values,
+    $core.Iterable<$core.MapEntry<$core.String, $3.Value>>? values,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (values != null) {
-      $result.values.addAll(values);
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (values != null) result.values.addEntries(values);
+    return result;
   }
-  Row._() : super();
-  factory Row.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Row.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Row._();
+
+  factory Row.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Row.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Row',
@@ -1956,22 +1684,19 @@ class Row extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.area120.tables.v1alpha1'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Row clone() => Row()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Row clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Row copyWith(void Function(Row) updates) =>
       super.copyWith((message) => updates(message as Row)) as Row;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Row create() => Row._();
+  @$core.override
   Row createEmptyInstance() => create();
-  static $pb.PbList<Row> createRepeated() => $pb.PbList<Row>();
   @$core.pragma('dart2js:noInline')
   static Row getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Row>(create);
@@ -1983,20 +1708,17 @@ class Row extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The values of the row. This is a map of column key to value.
   /// Key is user entered name(default) or the internal column id based on
   /// the view in the request.
   @$pb.TagNumber(2)
-  $core.Map<$core.String, $3.Value> get values => $_getMap(1);
+  $pb.PbMap<$core.String, $3.Value> get values => $_getMap(1);
 }
 
 /// A single workspace.
@@ -2006,25 +1728,21 @@ class Workspace extends $pb.GeneratedMessage {
     $core.String? displayName,
     $core.Iterable<Table>? tables,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (tables != null) {
-      $result.tables.addAll(tables);
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (displayName != null) result.displayName = displayName;
+    if (tables != null) result.tables.addAll(tables);
+    return result;
   }
-  Workspace._() : super();
-  factory Workspace.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Workspace.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Workspace._();
+
+  factory Workspace.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Workspace.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Workspace',
@@ -2033,26 +1751,22 @@ class Workspace extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'displayName')
-    ..pc<Table>(3, _omitFieldNames ? '' : 'tables', $pb.PbFieldType.PM,
-        subBuilder: Table.create)
+    ..pPM<Table>(3, _omitFieldNames ? '' : 'tables', subBuilder: Table.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Workspace clone() => Workspace()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Workspace clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Workspace copyWith(void Function(Workspace) updates) =>
       super.copyWith((message) => updates(message as Workspace)) as Workspace;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Workspace create() => Workspace._();
+  @$core.override
   Workspace createEmptyInstance() => create();
-  static $pb.PbList<Workspace> createRepeated() => $pb.PbList<Workspace>();
   @$core.pragma('dart2js:noInline')
   static Workspace getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Workspace>(create);
@@ -2063,33 +1777,28 @@ class Workspace extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The human readable title of the workspace.
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set displayName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisplayName() => clearField(2);
+  void clearDisplayName() => $_clearField(2);
 
   /// The list of tables in the workspace.
   @$pb.TagNumber(3)
-  $core.List<Table> get tables => $_getList(2);
+  $pb.PbList<Table> get tables => $_getList(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,19 +1,21 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/monitoring/dashboard/v1/widget.proto
-//
-// @dart = 2.12
+// Generated from google/monitoring/dashboard/v1/widget.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/empty.pb.dart'
+    as $3;
 
-import '../../../protobuf/empty.pb.dart' as $3;
 import 'alertchart.pb.dart' as $4;
 import 'collapsible_group.pb.dart' as $6;
 import 'error_reporting_panel.pb.dart' as $10;
@@ -26,6 +28,8 @@ import 'single_view_group.pb.dart' as $12;
 import 'table.pb.dart' as $5;
 import 'text.pb.dart' as $2;
 import 'xychart.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum Widget_Content {
   xyChart,
@@ -64,61 +68,34 @@ class Widget extends $pb.GeneratedMessage {
     $11.SectionHeader? sectionHeader,
     $12.SingleViewGroup? singleViewGroup,
   }) {
-    final $result = create();
-    if (title != null) {
-      $result.title = title;
-    }
-    if (xyChart != null) {
-      $result.xyChart = xyChart;
-    }
-    if (scorecard != null) {
-      $result.scorecard = scorecard;
-    }
-    if (text != null) {
-      $result.text = text;
-    }
-    if (blank != null) {
-      $result.blank = blank;
-    }
-    if (alertChart != null) {
-      $result.alertChart = alertChart;
-    }
-    if (timeSeriesTable != null) {
-      $result.timeSeriesTable = timeSeriesTable;
-    }
-    if (collapsibleGroup != null) {
-      $result.collapsibleGroup = collapsibleGroup;
-    }
-    if (logsPanel != null) {
-      $result.logsPanel = logsPanel;
-    }
-    if (incidentList != null) {
-      $result.incidentList = incidentList;
-    }
-    if (pieChart != null) {
-      $result.pieChart = pieChart;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    if (errorReportingPanel != null) {
-      $result.errorReportingPanel = errorReportingPanel;
-    }
-    if (sectionHeader != null) {
-      $result.sectionHeader = sectionHeader;
-    }
-    if (singleViewGroup != null) {
-      $result.singleViewGroup = singleViewGroup;
-    }
-    return $result;
+    final result = create();
+    if (title != null) result.title = title;
+    if (xyChart != null) result.xyChart = xyChart;
+    if (scorecard != null) result.scorecard = scorecard;
+    if (text != null) result.text = text;
+    if (blank != null) result.blank = blank;
+    if (alertChart != null) result.alertChart = alertChart;
+    if (timeSeriesTable != null) result.timeSeriesTable = timeSeriesTable;
+    if (collapsibleGroup != null) result.collapsibleGroup = collapsibleGroup;
+    if (logsPanel != null) result.logsPanel = logsPanel;
+    if (incidentList != null) result.incidentList = incidentList;
+    if (pieChart != null) result.pieChart = pieChart;
+    if (id != null) result.id = id;
+    if (errorReportingPanel != null)
+      result.errorReportingPanel = errorReportingPanel;
+    if (sectionHeader != null) result.sectionHeader = sectionHeader;
+    if (singleViewGroup != null) result.singleViewGroup = singleViewGroup;
+    return result;
   }
-  Widget._() : super();
-  factory Widget.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Widget.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Widget._();
+
+  factory Widget.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Widget.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Widget_Content> _Widget_ContentByTag = {
     2: Widget_Content.xyChart,
@@ -172,55 +149,72 @@ class Widget extends $pb.GeneratedMessage {
         subBuilder: $12.SingleViewGroup.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Widget clone() => Widget()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Widget clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Widget copyWith(void Function(Widget) updates) =>
       super.copyWith((message) => updates(message as Widget)) as Widget;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Widget create() => Widget._();
+  @$core.override
   Widget createEmptyInstance() => create();
-  static $pb.PbList<Widget> createRepeated() => $pb.PbList<Widget>();
   @$core.pragma('dart2js:noInline')
   static Widget getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Widget>(create);
   static Widget? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(12)
+  @$pb.TagNumber(14)
+  @$pb.TagNumber(19)
+  @$pb.TagNumber(21)
+  @$pb.TagNumber(22)
   Widget_Content whichContent() => _Widget_ContentByTag[$_whichOneof(0)]!;
-  void clearContent() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(12)
+  @$pb.TagNumber(14)
+  @$pb.TagNumber(19)
+  @$pb.TagNumber(21)
+  @$pb.TagNumber(22)
+  void clearContent() => $_clearField($_whichOneof(0));
 
   /// Optional. The title of the widget.
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
-  set title($core.String v) {
-    $_setString(0, v);
-  }
-
+  set title($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasTitle() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTitle() => clearField(1);
+  void clearTitle() => $_clearField(1);
 
   /// A chart of time series data.
   @$pb.TagNumber(2)
   $0.XyChart get xyChart => $_getN(1);
   @$pb.TagNumber(2)
-  set xyChart($0.XyChart v) {
-    setField(2, v);
-  }
-
+  set xyChart($0.XyChart value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasXyChart() => $_has(1);
   @$pb.TagNumber(2)
-  void clearXyChart() => clearField(2);
+  void clearXyChart() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.XyChart ensureXyChart() => $_ensure(1);
 
@@ -228,14 +222,11 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.Scorecard get scorecard => $_getN(2);
   @$pb.TagNumber(3)
-  set scorecard($1.Scorecard v) {
-    setField(3, v);
-  }
-
+  set scorecard($1.Scorecard value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasScorecard() => $_has(2);
   @$pb.TagNumber(3)
-  void clearScorecard() => clearField(3);
+  void clearScorecard() => $_clearField(3);
   @$pb.TagNumber(3)
   $1.Scorecard ensureScorecard() => $_ensure(2);
 
@@ -243,14 +234,11 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $2.Text get text => $_getN(3);
   @$pb.TagNumber(4)
-  set text($2.Text v) {
-    setField(4, v);
-  }
-
+  set text($2.Text value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasText() => $_has(3);
   @$pb.TagNumber(4)
-  void clearText() => clearField(4);
+  void clearText() => $_clearField(4);
   @$pb.TagNumber(4)
   $2.Text ensureText() => $_ensure(3);
 
@@ -258,14 +246,11 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $3.Empty get blank => $_getN(4);
   @$pb.TagNumber(5)
-  set blank($3.Empty v) {
-    setField(5, v);
-  }
-
+  set blank($3.Empty value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasBlank() => $_has(4);
   @$pb.TagNumber(5)
-  void clearBlank() => clearField(5);
+  void clearBlank() => $_clearField(5);
   @$pb.TagNumber(5)
   $3.Empty ensureBlank() => $_ensure(4);
 
@@ -273,14 +258,11 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $4.AlertChart get alertChart => $_getN(5);
   @$pb.TagNumber(7)
-  set alertChart($4.AlertChart v) {
-    setField(7, v);
-  }
-
+  set alertChart($4.AlertChart value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasAlertChart() => $_has(5);
   @$pb.TagNumber(7)
-  void clearAlertChart() => clearField(7);
+  void clearAlertChart() => $_clearField(7);
   @$pb.TagNumber(7)
   $4.AlertChart ensureAlertChart() => $_ensure(5);
 
@@ -288,14 +270,11 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $5.TimeSeriesTable get timeSeriesTable => $_getN(6);
   @$pb.TagNumber(8)
-  set timeSeriesTable($5.TimeSeriesTable v) {
-    setField(8, v);
-  }
-
+  set timeSeriesTable($5.TimeSeriesTable value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasTimeSeriesTable() => $_has(6);
   @$pb.TagNumber(8)
-  void clearTimeSeriesTable() => clearField(8);
+  void clearTimeSeriesTable() => $_clearField(8);
   @$pb.TagNumber(8)
   $5.TimeSeriesTable ensureTimeSeriesTable() => $_ensure(6);
 
@@ -304,14 +283,11 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $6.CollapsibleGroup get collapsibleGroup => $_getN(7);
   @$pb.TagNumber(9)
-  set collapsibleGroup($6.CollapsibleGroup v) {
-    setField(9, v);
-  }
-
+  set collapsibleGroup($6.CollapsibleGroup value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasCollapsibleGroup() => $_has(7);
   @$pb.TagNumber(9)
-  void clearCollapsibleGroup() => clearField(9);
+  void clearCollapsibleGroup() => $_clearField(9);
   @$pb.TagNumber(9)
   $6.CollapsibleGroup ensureCollapsibleGroup() => $_ensure(7);
 
@@ -319,14 +295,11 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $7.LogsPanel get logsPanel => $_getN(8);
   @$pb.TagNumber(10)
-  set logsPanel($7.LogsPanel v) {
-    setField(10, v);
-  }
-
+  set logsPanel($7.LogsPanel value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasLogsPanel() => $_has(8);
   @$pb.TagNumber(10)
-  void clearLogsPanel() => clearField(10);
+  void clearLogsPanel() => $_clearField(10);
   @$pb.TagNumber(10)
   $7.LogsPanel ensureLogsPanel() => $_ensure(8);
 
@@ -334,14 +307,11 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $8.IncidentList get incidentList => $_getN(9);
   @$pb.TagNumber(12)
-  set incidentList($8.IncidentList v) {
-    setField(12, v);
-  }
-
+  set incidentList($8.IncidentList value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasIncidentList() => $_has(9);
   @$pb.TagNumber(12)
-  void clearIncidentList() => clearField(12);
+  void clearIncidentList() => $_clearField(12);
   @$pb.TagNumber(12)
   $8.IncidentList ensureIncidentList() => $_ensure(9);
 
@@ -349,14 +319,11 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $9.PieChart get pieChart => $_getN(10);
   @$pb.TagNumber(14)
-  set pieChart($9.PieChart v) {
-    setField(14, v);
-  }
-
+  set pieChart($9.PieChart value) => $_setField(14, value);
   @$pb.TagNumber(14)
   $core.bool hasPieChart() => $_has(10);
   @$pb.TagNumber(14)
-  void clearPieChart() => clearField(14);
+  void clearPieChart() => $_clearField(14);
   @$pb.TagNumber(14)
   $9.PieChart ensurePieChart() => $_ensure(10);
 
@@ -365,27 +332,22 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   $core.String get id => $_getSZ(11);
   @$pb.TagNumber(17)
-  set id($core.String v) {
-    $_setString(11, v);
-  }
-
+  set id($core.String value) => $_setString(11, value);
   @$pb.TagNumber(17)
   $core.bool hasId() => $_has(11);
   @$pb.TagNumber(17)
-  void clearId() => clearField(17);
+  void clearId() => $_clearField(17);
 
   /// A widget that displays a list of error groups.
   @$pb.TagNumber(19)
   $10.ErrorReportingPanel get errorReportingPanel => $_getN(12);
   @$pb.TagNumber(19)
-  set errorReportingPanel($10.ErrorReportingPanel v) {
-    setField(19, v);
-  }
-
+  set errorReportingPanel($10.ErrorReportingPanel value) =>
+      $_setField(19, value);
   @$pb.TagNumber(19)
   $core.bool hasErrorReportingPanel() => $_has(12);
   @$pb.TagNumber(19)
-  void clearErrorReportingPanel() => clearField(19);
+  void clearErrorReportingPanel() => $_clearField(19);
   @$pb.TagNumber(19)
   $10.ErrorReportingPanel ensureErrorReportingPanel() => $_ensure(12);
 
@@ -394,14 +356,11 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(21)
   $11.SectionHeader get sectionHeader => $_getN(13);
   @$pb.TagNumber(21)
-  set sectionHeader($11.SectionHeader v) {
-    setField(21, v);
-  }
-
+  set sectionHeader($11.SectionHeader value) => $_setField(21, value);
   @$pb.TagNumber(21)
   $core.bool hasSectionHeader() => $_has(13);
   @$pb.TagNumber(21)
-  void clearSectionHeader() => clearField(21);
+  void clearSectionHeader() => $_clearField(21);
   @$pb.TagNumber(21)
   $11.SectionHeader ensureSectionHeader() => $_ensure(13);
 
@@ -409,18 +368,16 @@ class Widget extends $pb.GeneratedMessage {
   @$pb.TagNumber(22)
   $12.SingleViewGroup get singleViewGroup => $_getN(14);
   @$pb.TagNumber(22)
-  set singleViewGroup($12.SingleViewGroup v) {
-    setField(22, v);
-  }
-
+  set singleViewGroup($12.SingleViewGroup value) => $_setField(22, value);
   @$pb.TagNumber(22)
   $core.bool hasSingleViewGroup() => $_has(14);
   @$pb.TagNumber(22)
-  void clearSingleViewGroup() => clearField(22);
+  void clearSingleViewGroup() => $_clearField(22);
   @$pb.TagNumber(22)
   $12.SingleViewGroup ensureSingleViewGroup() => $_ensure(14);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

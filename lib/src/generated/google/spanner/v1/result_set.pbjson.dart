@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/spanner/v1/result_set.proto
-//
-// @dart = 2.12
+// Generated from google/spanner/v1/result_set.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -102,6 +104,15 @@ const PartialResultSet$json = {
       '10': 'precommitToken'
     },
     {'1': 'last', '3': 9, '4': 1, '5': 8, '8': {}, '10': 'last'},
+    {
+      '1': 'cache_update',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.v1.CacheUpdate',
+      '8': {},
+      '10': 'cacheUpdate'
+    },
   ],
 };
 
@@ -113,7 +124,9 @@ final $typed_data.Uint8List partialResultSetDescriptor = $convert.base64Decode(
     'x1ZRIhCgxyZXN1bWVfdG9rZW4YBCABKAxSC3Jlc3VtZVRva2VuEjcKBXN0YXRzGAUgASgLMiEu'
     'Z29vZ2xlLnNwYW5uZXIudjEuUmVzdWx0U2V0U3RhdHNSBXN0YXRzEmEKD3ByZWNvbW1pdF90b2'
     'tlbhgIIAEoCzIzLmdvb2dsZS5zcGFubmVyLnYxLk11bHRpcGxleGVkU2Vzc2lvblByZWNvbW1p'
-    'dFRva2VuQgPgQQFSDnByZWNvbW1pdFRva2VuEhcKBGxhc3QYCSABKAhCA+BBAVIEbGFzdA==');
+    'dFRva2VuQgPgQQFSDnByZWNvbW1pdFRva2VuEhcKBGxhc3QYCSABKAhCA+BBAVIEbGFzdBJGCg'
+    'xjYWNoZV91cGRhdGUYCiABKAsyHi5nb29nbGUuc3Bhbm5lci52MS5DYWNoZVVwZGF0ZUID4EEB'
+    'UgtjYWNoZVVwZGF0ZQ==');
 
 @$core.Deprecated('Use resultSetMetadataDescriptor instead')
 const ResultSetMetadata$json = {

@@ -1,40 +1,44 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/spanner/v1/commit_response.proto
-//
-// @dart = 2.12
+// Generated from google/spanner/v1/commit_response.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $0;
 
-import '../../protobuf/timestamp.pb.dart' as $0;
 import 'transaction.pb.dart' as $1;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Additional statistics about a commit.
 class CommitResponse_CommitStats extends $pb.GeneratedMessage {
   factory CommitResponse_CommitStats({
     $fixnum.Int64? mutationCount,
   }) {
-    final $result = create();
-    if (mutationCount != null) {
-      $result.mutationCount = mutationCount;
-    }
-    return $result;
+    final result = create();
+    if (mutationCount != null) result.mutationCount = mutationCount;
+    return result;
   }
-  CommitResponse_CommitStats._() : super();
-  factory CommitResponse_CommitStats.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CommitResponse_CommitStats.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CommitResponse_CommitStats._();
+
+  factory CommitResponse_CommitStats.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CommitResponse_CommitStats.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CommitResponse.CommitStats',
@@ -44,27 +48,22 @@ class CommitResponse_CommitStats extends $pb.GeneratedMessage {
     ..aInt64(1, _omitFieldNames ? '' : 'mutationCount')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CommitResponse_CommitStats clone() =>
-      CommitResponse_CommitStats()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CommitResponse_CommitStats clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CommitResponse_CommitStats copyWith(
           void Function(CommitResponse_CommitStats) updates) =>
       super.copyWith(
               (message) => updates(message as CommitResponse_CommitStats))
           as CommitResponse_CommitStats;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CommitResponse_CommitStats create() => CommitResponse_CommitStats._();
+  @$core.override
   CommitResponse_CommitStats createEmptyInstance() => create();
-  static $pb.PbList<CommitResponse_CommitStats> createRepeated() =>
-      $pb.PbList<CommitResponse_CommitStats>();
   @$core.pragma('dart2js:noInline')
   static CommitResponse_CommitStats getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CommitResponse_CommitStats>(create);
@@ -80,14 +79,11 @@ class CommitResponse_CommitStats extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $fixnum.Int64 get mutationCount => $_getI64(0);
   @$pb.TagNumber(1)
-  set mutationCount($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set mutationCount($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMutationCount() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMutationCount() => clearField(1);
+  void clearMutationCount() => $_clearField(1);
 }
 
 enum CommitResponse_MultiplexedSessionRetry { precommitToken, notSet }
@@ -98,26 +94,24 @@ class CommitResponse extends $pb.GeneratedMessage {
     $0.Timestamp? commitTimestamp,
     CommitResponse_CommitStats? commitStats,
     $1.MultiplexedSessionPrecommitToken? precommitToken,
+    $0.Timestamp? snapshotTimestamp,
   }) {
-    final $result = create();
-    if (commitTimestamp != null) {
-      $result.commitTimestamp = commitTimestamp;
-    }
-    if (commitStats != null) {
-      $result.commitStats = commitStats;
-    }
-    if (precommitToken != null) {
-      $result.precommitToken = precommitToken;
-    }
-    return $result;
+    final result = create();
+    if (commitTimestamp != null) result.commitTimestamp = commitTimestamp;
+    if (commitStats != null) result.commitStats = commitStats;
+    if (precommitToken != null) result.precommitToken = precommitToken;
+    if (snapshotTimestamp != null) result.snapshotTimestamp = snapshotTimestamp;
+    return result;
   }
-  CommitResponse._() : super();
-  factory CommitResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CommitResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CommitResponse._();
+
+  factory CommitResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CommitResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, CommitResponse_MultiplexedSessionRetry>
       _CommitResponse_MultiplexedSessionRetryByTag = {
@@ -137,84 +131,92 @@ class CommitResponse extends $pb.GeneratedMessage {
     ..aOM<$1.MultiplexedSessionPrecommitToken>(
         4, _omitFieldNames ? '' : 'precommitToken',
         subBuilder: $1.MultiplexedSessionPrecommitToken.create)
+    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'snapshotTimestamp',
+        subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CommitResponse clone() => CommitResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CommitResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CommitResponse copyWith(void Function(CommitResponse) updates) =>
       super.copyWith((message) => updates(message as CommitResponse))
           as CommitResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CommitResponse create() => CommitResponse._();
+  @$core.override
   CommitResponse createEmptyInstance() => create();
-  static $pb.PbList<CommitResponse> createRepeated() =>
-      $pb.PbList<CommitResponse>();
   @$core.pragma('dart2js:noInline')
   static CommitResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CommitResponse>(create);
   static CommitResponse? _defaultInstance;
 
+  @$pb.TagNumber(4)
   CommitResponse_MultiplexedSessionRetry whichMultiplexedSessionRetry() =>
       _CommitResponse_MultiplexedSessionRetryByTag[$_whichOneof(0)]!;
-  void clearMultiplexedSessionRetry() => clearField($_whichOneof(0));
+  @$pb.TagNumber(4)
+  void clearMultiplexedSessionRetry() => $_clearField($_whichOneof(0));
 
   /// The Cloud Spanner timestamp at which the transaction committed.
   @$pb.TagNumber(1)
   $0.Timestamp get commitTimestamp => $_getN(0);
   @$pb.TagNumber(1)
-  set commitTimestamp($0.Timestamp v) {
-    setField(1, v);
-  }
-
+  set commitTimestamp($0.Timestamp value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasCommitTimestamp() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCommitTimestamp() => clearField(1);
+  void clearCommitTimestamp() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Timestamp ensureCommitTimestamp() => $_ensure(0);
 
-  /// The statistics about this Commit. Not returned by default.
+  /// The statistics about this `Commit`. Not returned by default.
   /// For more information, see
   /// [CommitRequest.return_commit_stats][google.spanner.v1.CommitRequest.return_commit_stats].
   @$pb.TagNumber(2)
   CommitResponse_CommitStats get commitStats => $_getN(1);
   @$pb.TagNumber(2)
-  set commitStats(CommitResponse_CommitStats v) {
-    setField(2, v);
-  }
-
+  set commitStats(CommitResponse_CommitStats value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCommitStats() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCommitStats() => clearField(2);
+  void clearCommitStats() => $_clearField(2);
   @$pb.TagNumber(2)
   CommitResponse_CommitStats ensureCommitStats() => $_ensure(1);
 
   /// If specified, transaction has not committed yet.
-  /// Clients must retry the commit with the new precommit token.
+  /// You must retry the commit with the new precommit token.
   @$pb.TagNumber(4)
   $1.MultiplexedSessionPrecommitToken get precommitToken => $_getN(2);
   @$pb.TagNumber(4)
-  set precommitToken($1.MultiplexedSessionPrecommitToken v) {
-    setField(4, v);
-  }
-
+  set precommitToken($1.MultiplexedSessionPrecommitToken value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasPrecommitToken() => $_has(2);
   @$pb.TagNumber(4)
-  void clearPrecommitToken() => clearField(4);
+  void clearPrecommitToken() => $_clearField(4);
   @$pb.TagNumber(4)
   $1.MultiplexedSessionPrecommitToken ensurePrecommitToken() => $_ensure(2);
+
+  /// If `TransactionOptions.isolation_level` is set to
+  /// `IsolationLevel.REPEATABLE_READ`, then the snapshot timestamp is the
+  /// timestamp at which all reads in the transaction ran. This timestamp is
+  /// never returned.
+  @$pb.TagNumber(5)
+  $0.Timestamp get snapshotTimestamp => $_getN(3);
+  @$pb.TagNumber(5)
+  set snapshotTimestamp($0.Timestamp value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasSnapshotTimestamp() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearSnapshotTimestamp() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $0.Timestamp ensureSnapshotTimestamp() => $_ensure(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

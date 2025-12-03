@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/api/cloudquotas/v1beta/quota_adjuster_settings.proto
-//
-// @dart = 2.12
+// Generated from google/api/cloudquotas/v1beta/quota_adjuster_settings.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -93,6 +95,15 @@ const QuotaAdjusterSettings$json = {
       '10': 'updateTime'
     },
     {'1': 'etag', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'etag'},
+    {'1': 'inherited', '3': 7, '4': 1, '5': 8, '8': {}, '10': 'inherited'},
+    {
+      '1': 'inherited_from',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'inheritedFrom'
+    },
   ],
   '4': [QuotaAdjusterSettings_Enablement$json],
   '7': {},
@@ -112,10 +123,14 @@ const QuotaAdjusterSettings_Enablement$json = {
 final $typed_data.Uint8List quotaAdjusterSettingsDescriptor = $convert.base64Decode(
     'ChVRdW90YUFkanVzdGVyU2V0dGluZ3MSFwoEbmFtZRgBIAEoCUID4EEIUgRuYW1lEmQKCmVuYW'
     'JsZW1lbnQYAiABKA4yPy5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYxYmV0YS5RdW90YUFkanVz'
-    'dGVyU2V0dGluZ3MuRW5hYmxlbWVudEID4EECUgplbmFibGVtZW50EkAKC3VwZGF0ZV90aW1lGA'
+    'dGVyU2V0dGluZ3MuRW5hYmxlbWVudEID4EEBUgplbmFibGVtZW50EkAKC3VwZGF0ZV90aW1lGA'
     'UgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgp1cGRhdGVUaW1lEhcKBGV0'
-    'YWcYBiABKAlCA+BBAVIEZXRhZyJDCgpFbmFibGVtZW50EhoKFkVOQUJMRU1FTlRfVU5TUEVDSU'
-    'ZJRUQQABILCgdFTkFCTEVEEAISDAoIRElTQUJMRUQQAzqmAepBogEKMGNsb3VkcXVvdGFzLmdv'
-    'b2dsZWFwaXMuY29tL1F1b3RhQWRqdXN0ZXJTZXR0aW5ncxI9cHJvamVjdHMve3Byb2plY3R9L2'
-    'xvY2F0aW9ucy97bG9jYXRpb259L3F1b3RhQWRqdXN0ZXJTZXR0aW5ncyoVcXVvdGFBZGp1c3Rl'
-    'clNldHRpbmdzMhVxdW90YUFkanVzdGVyU2V0dGluZ3NSAQE=');
+    'YWcYBiABKAlCA+BBAVIEZXRhZxIhCglpbmhlcml0ZWQYByABKAhCA+BBAVIJaW5oZXJpdGVkEi'
+    'oKDmluaGVyaXRlZF9mcm9tGAggASgJQgPgQQNSDWluaGVyaXRlZEZyb20iQwoKRW5hYmxlbWVu'
+    'dBIaChZFTkFCTEVNRU5UX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBACEgwKCERJU0FCTEVEEA'
+    'M6rALqQagCCjBjbG91ZHF1b3Rhcy5nb29nbGVhcGlzLmNvbS9RdW90YUFkanVzdGVyU2V0dGlu'
+    'Z3MSPXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9xdW90YUFkanVzdG'
+    'VyU2V0dGluZ3MSR29yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2Nh'
+    'dGlvbn0vcXVvdGFBZGp1c3RlclNldHRpbmdzEjtmb2xkZXJzL3tmb2xkZXJ9L2xvY2F0aW9ucy'
+    '97bG9jYXRpb259L3F1b3RhQWRqdXN0ZXJTZXR0aW5ncyoVcXVvdGFBZGp1c3RlclNldHRpbmdz'
+    'MhVxdW90YUFkanVzdGVyU2V0dGluZ3NSAQE=');

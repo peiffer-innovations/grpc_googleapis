@@ -1,20 +1,23 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/routing/v2/routes_service.proto
-//
-// @dart = 2.12
+// Generated from google/maps/routing/v2/routes_service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/duration.pb.dart'
+    as $9;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $2;
 
-import '../../../protobuf/duration.pb.dart' as $9;
-import '../../../protobuf/timestamp.pb.dart' as $2;
 import '../../../rpc/status.pb.dart' as $8;
 import '../../../type/localized_text.pb.dart' as $10;
 import 'fallback_info.pb.dart' as $6;
@@ -29,6 +32,8 @@ import 'traffic_model.pbenum.dart' as $15;
 import 'transit_preferences.pb.dart' as $4;
 import 'units.pbenum.dart' as $14;
 import 'waypoint.pb.dart' as $1;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'routes_service.pbenum.dart';
 
@@ -56,73 +61,42 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
     $2.Timestamp? arrivalTime,
     $4.TransitPreferences? transitPreferences,
   }) {
-    final $result = create();
-    if (origin != null) {
-      $result.origin = origin;
-    }
-    if (destination != null) {
-      $result.destination = destination;
-    }
-    if (intermediates != null) {
-      $result.intermediates.addAll(intermediates);
-    }
-    if (travelMode != null) {
-      $result.travelMode = travelMode;
-    }
-    if (routingPreference != null) {
-      $result.routingPreference = routingPreference;
-    }
-    if (polylineQuality != null) {
-      $result.polylineQuality = polylineQuality;
-    }
-    if (departureTime != null) {
-      $result.departureTime = departureTime;
-    }
-    if (computeAlternativeRoutes != null) {
-      $result.computeAlternativeRoutes = computeAlternativeRoutes;
-    }
-    if (routeModifiers != null) {
-      $result.routeModifiers = routeModifiers;
-    }
-    if (languageCode != null) {
-      $result.languageCode = languageCode;
-    }
-    if (units != null) {
-      $result.units = units;
-    }
-    if (polylineEncoding != null) {
-      $result.polylineEncoding = polylineEncoding;
-    }
-    if (optimizeWaypointOrder != null) {
-      $result.optimizeWaypointOrder = optimizeWaypointOrder;
-    }
-    if (requestedReferenceRoutes != null) {
-      $result.requestedReferenceRoutes.addAll(requestedReferenceRoutes);
-    }
-    if (extraComputations != null) {
-      $result.extraComputations.addAll(extraComputations);
-    }
-    if (regionCode != null) {
-      $result.regionCode = regionCode;
-    }
-    if (trafficModel != null) {
-      $result.trafficModel = trafficModel;
-    }
-    if (arrivalTime != null) {
-      $result.arrivalTime = arrivalTime;
-    }
-    if (transitPreferences != null) {
-      $result.transitPreferences = transitPreferences;
-    }
-    return $result;
+    final result = create();
+    if (origin != null) result.origin = origin;
+    if (destination != null) result.destination = destination;
+    if (intermediates != null) result.intermediates.addAll(intermediates);
+    if (travelMode != null) result.travelMode = travelMode;
+    if (routingPreference != null) result.routingPreference = routingPreference;
+    if (polylineQuality != null) result.polylineQuality = polylineQuality;
+    if (departureTime != null) result.departureTime = departureTime;
+    if (computeAlternativeRoutes != null)
+      result.computeAlternativeRoutes = computeAlternativeRoutes;
+    if (routeModifiers != null) result.routeModifiers = routeModifiers;
+    if (languageCode != null) result.languageCode = languageCode;
+    if (units != null) result.units = units;
+    if (polylineEncoding != null) result.polylineEncoding = polylineEncoding;
+    if (optimizeWaypointOrder != null)
+      result.optimizeWaypointOrder = optimizeWaypointOrder;
+    if (requestedReferenceRoutes != null)
+      result.requestedReferenceRoutes.addAll(requestedReferenceRoutes);
+    if (extraComputations != null)
+      result.extraComputations.addAll(extraComputations);
+    if (regionCode != null) result.regionCode = regionCode;
+    if (trafficModel != null) result.trafficModel = trafficModel;
+    if (arrivalTime != null) result.arrivalTime = arrivalTime;
+    if (transitPreferences != null)
+      result.transitPreferences = transitPreferences;
+    return result;
   }
-  ComputeRoutesRequest._() : super();
-  factory ComputeRoutesRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ComputeRoutesRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ComputeRoutesRequest._();
+
+  factory ComputeRoutesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ComputeRoutesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ComputeRoutesRequest',
@@ -133,23 +107,13 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
         subBuilder: $1.Waypoint.create)
     ..aOM<$1.Waypoint>(2, _omitFieldNames ? '' : 'destination',
         subBuilder: $1.Waypoint.create)
-    ..pc<$1.Waypoint>(
-        3, _omitFieldNames ? '' : 'intermediates', $pb.PbFieldType.PM,
+    ..pPM<$1.Waypoint>(3, _omitFieldNames ? '' : 'intermediates',
         subBuilder: $1.Waypoint.create)
-    ..e<$11.RouteTravelMode>(
-        4, _omitFieldNames ? '' : 'travelMode', $pb.PbFieldType.OE,
-        defaultOrMaker: $11.RouteTravelMode.TRAVEL_MODE_UNSPECIFIED,
-        valueOf: $11.RouteTravelMode.valueOf,
+    ..aE<$11.RouteTravelMode>(4, _omitFieldNames ? '' : 'travelMode',
         enumValues: $11.RouteTravelMode.values)
-    ..e<$12.RoutingPreference>(
-        5, _omitFieldNames ? '' : 'routingPreference', $pb.PbFieldType.OE,
-        defaultOrMaker: $12.RoutingPreference.ROUTING_PREFERENCE_UNSPECIFIED,
-        valueOf: $12.RoutingPreference.valueOf,
+    ..aE<$12.RoutingPreference>(5, _omitFieldNames ? '' : 'routingPreference',
         enumValues: $12.RoutingPreference.values)
-    ..e<$13.PolylineQuality>(
-        6, _omitFieldNames ? '' : 'polylineQuality', $pb.PbFieldType.OE,
-        defaultOrMaker: $13.PolylineQuality.POLYLINE_QUALITY_UNSPECIFIED,
-        valueOf: $13.PolylineQuality.valueOf,
+    ..aE<$13.PolylineQuality>(6, _omitFieldNames ? '' : 'polylineQuality',
         enumValues: $13.PolylineQuality.values)
     ..aOM<$2.Timestamp>(7, _omitFieldNames ? '' : 'departureTime',
         subBuilder: $2.Timestamp.create)
@@ -157,14 +121,9 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
     ..aOM<$3.RouteModifiers>(9, _omitFieldNames ? '' : 'routeModifiers',
         subBuilder: $3.RouteModifiers.create)
     ..aOS(10, _omitFieldNames ? '' : 'languageCode')
-    ..e<$14.Units>(11, _omitFieldNames ? '' : 'units', $pb.PbFieldType.OE,
-        defaultOrMaker: $14.Units.UNITS_UNSPECIFIED,
-        valueOf: $14.Units.valueOf,
+    ..aE<$14.Units>(11, _omitFieldNames ? '' : 'units',
         enumValues: $14.Units.values)
-    ..e<$13.PolylineEncoding>(
-        12, _omitFieldNames ? '' : 'polylineEncoding', $pb.PbFieldType.OE,
-        defaultOrMaker: $13.PolylineEncoding.POLYLINE_ENCODING_UNSPECIFIED,
-        valueOf: $13.PolylineEncoding.valueOf,
+    ..aE<$13.PolylineEncoding>(12, _omitFieldNames ? '' : 'polylineEncoding',
         enumValues: $13.PolylineEncoding.values)
     ..aOB(13, _omitFieldNames ? '' : 'optimizeWaypointOrder')
     ..pc<ComputeRoutesRequest_ReferenceRoute>(14,
@@ -180,10 +139,7 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
         defaultEnumValue:
             ComputeRoutesRequest_ExtraComputation.EXTRA_COMPUTATION_UNSPECIFIED)
     ..aOS(16, _omitFieldNames ? '' : 'regionCode')
-    ..e<$15.TrafficModel>(
-        18, _omitFieldNames ? '' : 'trafficModel', $pb.PbFieldType.OE,
-        defaultOrMaker: $15.TrafficModel.TRAFFIC_MODEL_UNSPECIFIED,
-        valueOf: $15.TrafficModel.valueOf,
+    ..aE<$15.TrafficModel>(18, _omitFieldNames ? '' : 'trafficModel',
         enumValues: $15.TrafficModel.values)
     ..aOM<$2.Timestamp>(19, _omitFieldNames ? '' : 'arrivalTime',
         subBuilder: $2.Timestamp.create)
@@ -192,25 +148,20 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
         subBuilder: $4.TransitPreferences.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ComputeRoutesRequest clone() =>
-      ComputeRoutesRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ComputeRoutesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ComputeRoutesRequest copyWith(void Function(ComputeRoutesRequest) updates) =>
       super.copyWith((message) => updates(message as ComputeRoutesRequest))
           as ComputeRoutesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ComputeRoutesRequest create() => ComputeRoutesRequest._();
+  @$core.override
   ComputeRoutesRequest createEmptyInstance() => create();
-  static $pb.PbList<ComputeRoutesRequest> createRepeated() =>
-      $pb.PbList<ComputeRoutesRequest>();
   @$core.pragma('dart2js:noInline')
   static ComputeRoutesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ComputeRoutesRequest>(create);
@@ -220,14 +171,11 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.Waypoint get origin => $_getN(0);
   @$pb.TagNumber(1)
-  set origin($1.Waypoint v) {
-    setField(1, v);
-  }
-
+  set origin($1.Waypoint value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOrigin() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOrigin() => clearField(1);
+  void clearOrigin() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.Waypoint ensureOrigin() => $_ensure(0);
 
@@ -235,14 +183,11 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.Waypoint get destination => $_getN(1);
   @$pb.TagNumber(2)
-  set destination($1.Waypoint v) {
-    setField(2, v);
-  }
-
+  set destination($1.Waypoint value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasDestination() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDestination() => clearField(2);
+  void clearDestination() => $_clearField(2);
   @$pb.TagNumber(2)
   $1.Waypoint ensureDestination() => $_ensure(1);
 
@@ -250,20 +195,17 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   /// for either stopping at or passing by. Up to 25 intermediate waypoints are
   /// supported.
   @$pb.TagNumber(3)
-  $core.List<$1.Waypoint> get intermediates => $_getList(2);
+  $pb.PbList<$1.Waypoint> get intermediates => $_getList(2);
 
   /// Optional. Specifies the mode of transportation.
   @$pb.TagNumber(4)
   $11.RouteTravelMode get travelMode => $_getN(3);
   @$pb.TagNumber(4)
-  set travelMode($11.RouteTravelMode v) {
-    setField(4, v);
-  }
-
+  set travelMode($11.RouteTravelMode value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasTravelMode() => $_has(3);
   @$pb.TagNumber(4)
-  void clearTravelMode() => clearField(4);
+  void clearTravelMode() => $_clearField(4);
 
   /// Optional. Specifies how to compute the route. The server
   /// attempts to use the selected routing preference to compute the route. If
@@ -273,27 +215,21 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $12.RoutingPreference get routingPreference => $_getN(4);
   @$pb.TagNumber(5)
-  set routingPreference($12.RoutingPreference v) {
-    setField(5, v);
-  }
-
+  set routingPreference($12.RoutingPreference value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasRoutingPreference() => $_has(4);
   @$pb.TagNumber(5)
-  void clearRoutingPreference() => clearField(5);
+  void clearRoutingPreference() => $_clearField(5);
 
   /// Optional. Specifies your preference for the quality of the polyline.
   @$pb.TagNumber(6)
   $13.PolylineQuality get polylineQuality => $_getN(5);
   @$pb.TagNumber(6)
-  set polylineQuality($13.PolylineQuality v) {
-    setField(6, v);
-  }
-
+  set polylineQuality($13.PolylineQuality value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasPolylineQuality() => $_has(5);
   @$pb.TagNumber(6)
-  void clearPolylineQuality() => clearField(6);
+  void clearPolylineQuality() => $_clearField(6);
 
   /// Optional. The departure time. If you don't set this value, then this value
   /// defaults to the time that you made the request.
@@ -304,14 +240,11 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $2.Timestamp get departureTime => $_getN(6);
   @$pb.TagNumber(7)
-  set departureTime($2.Timestamp v) {
-    setField(7, v);
-  }
-
+  set departureTime($2.Timestamp value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasDepartureTime() => $_has(6);
   @$pb.TagNumber(7)
-  void clearDepartureTime() => clearField(7);
+  void clearDepartureTime() => $_clearField(7);
   @$pb.TagNumber(7)
   $2.Timestamp ensureDepartureTime() => $_ensure(6);
 
@@ -321,28 +254,22 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.bool get computeAlternativeRoutes => $_getBF(7);
   @$pb.TagNumber(8)
-  set computeAlternativeRoutes($core.bool v) {
-    $_setBool(7, v);
-  }
-
+  set computeAlternativeRoutes($core.bool value) => $_setBool(7, value);
   @$pb.TagNumber(8)
   $core.bool hasComputeAlternativeRoutes() => $_has(7);
   @$pb.TagNumber(8)
-  void clearComputeAlternativeRoutes() => clearField(8);
+  void clearComputeAlternativeRoutes() => $_clearField(8);
 
   /// Optional. A set of conditions to satisfy that affect the way routes are
   /// calculated.
   @$pb.TagNumber(9)
   $3.RouteModifiers get routeModifiers => $_getN(8);
   @$pb.TagNumber(9)
-  set routeModifiers($3.RouteModifiers v) {
-    setField(9, v);
-  }
-
+  set routeModifiers($3.RouteModifiers value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasRouteModifiers() => $_has(8);
   @$pb.TagNumber(9)
-  void clearRouteModifiers() => clearField(9);
+  void clearRouteModifiers() => $_clearField(9);
   @$pb.TagNumber(9)
   $3.RouteModifiers ensureRouteModifiers() => $_ensure(8);
 
@@ -356,14 +283,11 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $core.String get languageCode => $_getSZ(9);
   @$pb.TagNumber(10)
-  set languageCode($core.String v) {
-    $_setString(9, v);
-  }
-
+  set languageCode($core.String value) => $_setString(9, value);
   @$pb.TagNumber(10)
   $core.bool hasLanguageCode() => $_has(9);
   @$pb.TagNumber(10)
-  void clearLanguageCode() => clearField(10);
+  void clearLanguageCode() => $_clearField(10);
 
   /// Optional. Specifies the units of measure for the display fields. These
   /// fields include the `instruction` field in
@@ -374,27 +298,21 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $14.Units get units => $_getN(10);
   @$pb.TagNumber(11)
-  set units($14.Units v) {
-    setField(11, v);
-  }
-
+  set units($14.Units value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasUnits() => $_has(10);
   @$pb.TagNumber(11)
-  void clearUnits() => clearField(11);
+  void clearUnits() => $_clearField(11);
 
   /// Optional. Specifies the preferred encoding for the polyline.
   @$pb.TagNumber(12)
   $13.PolylineEncoding get polylineEncoding => $_getN(11);
   @$pb.TagNumber(12)
-  set polylineEncoding($13.PolylineEncoding v) {
-    setField(12, v);
-  }
-
+  set polylineEncoding($13.PolylineEncoding value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasPolylineEncoding() => $_has(11);
   @$pb.TagNumber(12)
-  void clearPolylineEncoding() => clearField(12);
+  void clearPolylineEncoding() => $_clearField(12);
 
   /// Optional. If set to true, the service attempts to minimize the overall cost
   /// of the route by re-ordering the specified intermediate waypoints. The
@@ -409,14 +327,11 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $core.bool get optimizeWaypointOrder => $_getBF(12);
   @$pb.TagNumber(13)
-  set optimizeWaypointOrder($core.bool v) {
-    $_setBool(12, v);
-  }
-
+  set optimizeWaypointOrder($core.bool value) => $_setBool(12, value);
   @$pb.TagNumber(13)
   $core.bool hasOptimizeWaypointOrder() => $_has(12);
   @$pb.TagNumber(13)
-  void clearOptimizeWaypointOrder() => clearField(13);
+  void clearOptimizeWaypointOrder() => $_clearField(13);
 
   /// Optional. Specifies what reference routes to calculate as part of the
   /// request in addition to the default route. A reference route is a route with
@@ -427,7 +342,7 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   /// [`route_labels`][google.maps.routing.v2.Route.route_labels] on the
   /// resulting routes.
   @$pb.TagNumber(14)
-  $core.List<ComputeRoutesRequest_ReferenceRoute>
+  $pb.PbList<ComputeRoutesRequest_ReferenceRoute>
       get requestedReferenceRoutes => $_getList(13);
 
   /// Optional. A list of extra computations which may be used to complete the
@@ -435,7 +350,7 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   /// response. These extra fields must also be specified in the field mask to be
   /// returned in the response.
   @$pb.TagNumber(15)
-  $core.List<ComputeRoutesRequest_ExtraComputation> get extraComputations =>
+  $pb.PbList<ComputeRoutesRequest_ExtraComputation> get extraComputations =>
       $_getList(14);
 
   /// Optional. The region code, specified as a ccTLD ("top-level domain")
@@ -444,14 +359,11 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   $core.String get regionCode => $_getSZ(15);
   @$pb.TagNumber(16)
-  set regionCode($core.String v) {
-    $_setString(15, v);
-  }
-
+  set regionCode($core.String value) => $_setString(15, value);
   @$pb.TagNumber(16)
   $core.bool hasRegionCode() => $_has(15);
   @$pb.TagNumber(16)
-  void clearRegionCode() => clearField(16);
+  void clearRegionCode() => $_clearField(16);
 
   /// Optional. Specifies the assumptions to use when calculating time in
   /// traffic. This setting affects the value returned in the duration field in
@@ -468,14 +380,11 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   $15.TrafficModel get trafficModel => $_getN(16);
   @$pb.TagNumber(18)
-  set trafficModel($15.TrafficModel v) {
-    setField(18, v);
-  }
-
+  set trafficModel($15.TrafficModel value) => $_setField(18, value);
   @$pb.TagNumber(18)
   $core.bool hasTrafficModel() => $_has(16);
   @$pb.TagNumber(18)
-  void clearTrafficModel() => clearField(18);
+  void clearTrafficModel() => $_clearField(18);
 
   /// Optional. The arrival time.
   /// NOTE: Can only be set when
@@ -486,14 +395,11 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   $2.Timestamp get arrivalTime => $_getN(17);
   @$pb.TagNumber(19)
-  set arrivalTime($2.Timestamp v) {
-    setField(19, v);
-  }
-
+  set arrivalTime($2.Timestamp value) => $_setField(19, value);
   @$pb.TagNumber(19)
   $core.bool hasArrivalTime() => $_has(17);
   @$pb.TagNumber(19)
-  void clearArrivalTime() => clearField(19);
+  void clearArrivalTime() => $_clearField(19);
   @$pb.TagNumber(19)
   $2.Timestamp ensureArrivalTime() => $_ensure(17);
 
@@ -504,14 +410,11 @@ class ComputeRoutesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   $4.TransitPreferences get transitPreferences => $_getN(18);
   @$pb.TagNumber(20)
-  set transitPreferences($4.TransitPreferences v) {
-    setField(20, v);
-  }
-
+  set transitPreferences($4.TransitPreferences value) => $_setField(20, value);
   @$pb.TagNumber(20)
   $core.bool hasTransitPreferences() => $_has(18);
   @$pb.TagNumber(20)
-  void clearTransitPreferences() => clearField(20);
+  void clearTransitPreferences() => $_clearField(20);
   @$pb.TagNumber(20)
   $4.TransitPreferences ensureTransitPreferences() => $_ensure(18);
 }
@@ -523,32 +426,28 @@ class ComputeRoutesResponse extends $pb.GeneratedMessage {
     $6.FallbackInfo? fallbackInfo,
     $7.GeocodingResults? geocodingResults,
   }) {
-    final $result = create();
-    if (routes != null) {
-      $result.routes.addAll(routes);
-    }
-    if (fallbackInfo != null) {
-      $result.fallbackInfo = fallbackInfo;
-    }
-    if (geocodingResults != null) {
-      $result.geocodingResults = geocodingResults;
-    }
-    return $result;
+    final result = create();
+    if (routes != null) result.routes.addAll(routes);
+    if (fallbackInfo != null) result.fallbackInfo = fallbackInfo;
+    if (geocodingResults != null) result.geocodingResults = geocodingResults;
+    return result;
   }
-  ComputeRoutesResponse._() : super();
-  factory ComputeRoutesResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ComputeRoutesResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ComputeRoutesResponse._();
+
+  factory ComputeRoutesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ComputeRoutesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ComputeRoutesResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.maps.routing.v2'),
       createEmptyInstance: create)
-    ..pc<$5.Route>(1, _omitFieldNames ? '' : 'routes', $pb.PbFieldType.PM,
+    ..pPM<$5.Route>(1, _omitFieldNames ? '' : 'routes',
         subBuilder: $5.Route.create)
     ..aOM<$6.FallbackInfo>(2, _omitFieldNames ? '' : 'fallbackInfo',
         subBuilder: $6.FallbackInfo.create)
@@ -556,26 +455,21 @@ class ComputeRoutesResponse extends $pb.GeneratedMessage {
         subBuilder: $7.GeocodingResults.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ComputeRoutesResponse clone() =>
-      ComputeRoutesResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ComputeRoutesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ComputeRoutesResponse copyWith(
           void Function(ComputeRoutesResponse) updates) =>
       super.copyWith((message) => updates(message as ComputeRoutesResponse))
           as ComputeRoutesResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ComputeRoutesResponse create() => ComputeRoutesResponse._();
+  @$core.override
   ComputeRoutesResponse createEmptyInstance() => create();
-  static $pb.PbList<ComputeRoutesResponse> createRepeated() =>
-      $pb.PbList<ComputeRoutesResponse>();
   @$core.pragma('dart2js:noInline')
   static ComputeRoutesResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ComputeRoutesResponse>(create);
@@ -587,7 +481,7 @@ class ComputeRoutesResponse extends $pb.GeneratedMessage {
   /// recommended route. If the array is empty, then it means no route could be
   /// found.
   @$pb.TagNumber(1)
-  $core.List<$5.Route> get routes => $_getList(0);
+  $pb.PbList<$5.Route> get routes => $_getList(0);
 
   /// In some cases when the server is not able to compute the route results with
   /// all of the input preferences, it may fallback to using a different way of
@@ -596,14 +490,11 @@ class ComputeRoutesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $6.FallbackInfo get fallbackInfo => $_getN(1);
   @$pb.TagNumber(2)
-  set fallbackInfo($6.FallbackInfo v) {
-    setField(2, v);
-  }
-
+  set fallbackInfo($6.FallbackInfo value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasFallbackInfo() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFallbackInfo() => clearField(2);
+  void clearFallbackInfo() => $_clearField(2);
   @$pb.TagNumber(2)
   $6.FallbackInfo ensureFallbackInfo() => $_ensure(1);
 
@@ -611,14 +502,11 @@ class ComputeRoutesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $7.GeocodingResults get geocodingResults => $_getN(2);
   @$pb.TagNumber(3)
-  set geocodingResults($7.GeocodingResults v) {
-    setField(3, v);
-  }
-
+  set geocodingResults($7.GeocodingResults value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasGeocodingResults() => $_has(2);
   @$pb.TagNumber(3)
-  void clearGeocodingResults() => clearField(3);
+  void clearGeocodingResults() => $_clearField(3);
   @$pb.TagNumber(3)
   $7.GeocodingResults ensureGeocodingResults() => $_ensure(2);
 }
@@ -640,80 +528,50 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
     $2.Timestamp? arrivalTime,
     $4.TransitPreferences? transitPreferences,
   }) {
-    final $result = create();
-    if (origins != null) {
-      $result.origins.addAll(origins);
-    }
-    if (destinations != null) {
-      $result.destinations.addAll(destinations);
-    }
-    if (travelMode != null) {
-      $result.travelMode = travelMode;
-    }
-    if (routingPreference != null) {
-      $result.routingPreference = routingPreference;
-    }
-    if (departureTime != null) {
-      $result.departureTime = departureTime;
-    }
-    if (languageCode != null) {
-      $result.languageCode = languageCode;
-    }
-    if (units != null) {
-      $result.units = units;
-    }
-    if (extraComputations != null) {
-      $result.extraComputations.addAll(extraComputations);
-    }
-    if (regionCode != null) {
-      $result.regionCode = regionCode;
-    }
-    if (trafficModel != null) {
-      $result.trafficModel = trafficModel;
-    }
-    if (arrivalTime != null) {
-      $result.arrivalTime = arrivalTime;
-    }
-    if (transitPreferences != null) {
-      $result.transitPreferences = transitPreferences;
-    }
-    return $result;
+    final result = create();
+    if (origins != null) result.origins.addAll(origins);
+    if (destinations != null) result.destinations.addAll(destinations);
+    if (travelMode != null) result.travelMode = travelMode;
+    if (routingPreference != null) result.routingPreference = routingPreference;
+    if (departureTime != null) result.departureTime = departureTime;
+    if (languageCode != null) result.languageCode = languageCode;
+    if (units != null) result.units = units;
+    if (extraComputations != null)
+      result.extraComputations.addAll(extraComputations);
+    if (regionCode != null) result.regionCode = regionCode;
+    if (trafficModel != null) result.trafficModel = trafficModel;
+    if (arrivalTime != null) result.arrivalTime = arrivalTime;
+    if (transitPreferences != null)
+      result.transitPreferences = transitPreferences;
+    return result;
   }
-  ComputeRouteMatrixRequest._() : super();
-  factory ComputeRouteMatrixRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ComputeRouteMatrixRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ComputeRouteMatrixRequest._();
+
+  factory ComputeRouteMatrixRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ComputeRouteMatrixRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ComputeRouteMatrixRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.maps.routing.v2'),
       createEmptyInstance: create)
-    ..pc<RouteMatrixOrigin>(
-        1, _omitFieldNames ? '' : 'origins', $pb.PbFieldType.PM,
+    ..pPM<RouteMatrixOrigin>(1, _omitFieldNames ? '' : 'origins',
         subBuilder: RouteMatrixOrigin.create)
-    ..pc<RouteMatrixDestination>(
-        2, _omitFieldNames ? '' : 'destinations', $pb.PbFieldType.PM,
+    ..pPM<RouteMatrixDestination>(2, _omitFieldNames ? '' : 'destinations',
         subBuilder: RouteMatrixDestination.create)
-    ..e<$11.RouteTravelMode>(
-        3, _omitFieldNames ? '' : 'travelMode', $pb.PbFieldType.OE,
-        defaultOrMaker: $11.RouteTravelMode.TRAVEL_MODE_UNSPECIFIED,
-        valueOf: $11.RouteTravelMode.valueOf,
+    ..aE<$11.RouteTravelMode>(3, _omitFieldNames ? '' : 'travelMode',
         enumValues: $11.RouteTravelMode.values)
-    ..e<$12.RoutingPreference>(
-        4, _omitFieldNames ? '' : 'routingPreference', $pb.PbFieldType.OE,
-        defaultOrMaker: $12.RoutingPreference.ROUTING_PREFERENCE_UNSPECIFIED,
-        valueOf: $12.RoutingPreference.valueOf,
+    ..aE<$12.RoutingPreference>(4, _omitFieldNames ? '' : 'routingPreference',
         enumValues: $12.RoutingPreference.values)
     ..aOM<$2.Timestamp>(5, _omitFieldNames ? '' : 'departureTime',
         subBuilder: $2.Timestamp.create)
     ..aOS(6, _omitFieldNames ? '' : 'languageCode')
-    ..e<$14.Units>(7, _omitFieldNames ? '' : 'units', $pb.PbFieldType.OE,
-        defaultOrMaker: $14.Units.UNITS_UNSPECIFIED,
-        valueOf: $14.Units.valueOf,
+    ..aE<$14.Units>(7, _omitFieldNames ? '' : 'units',
         enumValues: $14.Units.values)
     ..pc<ComputeRouteMatrixRequest_ExtraComputation>(
         8, _omitFieldNames ? '' : 'extraComputations', $pb.PbFieldType.KE,
@@ -722,10 +580,7 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
         defaultEnumValue: ComputeRouteMatrixRequest_ExtraComputation
             .EXTRA_COMPUTATION_UNSPECIFIED)
     ..aOS(9, _omitFieldNames ? '' : 'regionCode')
-    ..e<$15.TrafficModel>(
-        10, _omitFieldNames ? '' : 'trafficModel', $pb.PbFieldType.OE,
-        defaultOrMaker: $15.TrafficModel.TRAFFIC_MODEL_UNSPECIFIED,
-        valueOf: $15.TrafficModel.valueOf,
+    ..aE<$15.TrafficModel>(10, _omitFieldNames ? '' : 'trafficModel',
         enumValues: $15.TrafficModel.values)
     ..aOM<$2.Timestamp>(11, _omitFieldNames ? '' : 'arrivalTime',
         subBuilder: $2.Timestamp.create)
@@ -734,63 +589,55 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
         subBuilder: $4.TransitPreferences.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ComputeRouteMatrixRequest clone() =>
-      ComputeRouteMatrixRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ComputeRouteMatrixRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ComputeRouteMatrixRequest copyWith(
           void Function(ComputeRouteMatrixRequest) updates) =>
       super.copyWith((message) => updates(message as ComputeRouteMatrixRequest))
           as ComputeRouteMatrixRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ComputeRouteMatrixRequest create() => ComputeRouteMatrixRequest._();
+  @$core.override
   ComputeRouteMatrixRequest createEmptyInstance() => create();
-  static $pb.PbList<ComputeRouteMatrixRequest> createRepeated() =>
-      $pb.PbList<ComputeRouteMatrixRequest>();
   @$core.pragma('dart2js:noInline')
   static ComputeRouteMatrixRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ComputeRouteMatrixRequest>(create);
   static ComputeRouteMatrixRequest? _defaultInstance;
 
-  ///  Required. Array of origins, which determines the rows of the response
-  ///  matrix. Several size restrictions apply to the cardinality of origins and
-  ///  destinations:
+  /// Required. Array of origins, which determines the rows of the response
+  /// matrix. Several size restrictions apply to the cardinality of origins and
+  /// destinations:
   ///
-  ///  * The sum of the number of origins + the number of destinations specified
-  ///  as either `place_id` or `address` must be no greater than 50.
-  ///  * The product of number of origins × number of destinations must be no
-  ///  greater than 625 in any case.
-  ///  * The product of the number of origins × number of destinations must be no
-  ///  greater than 100 if routing_preference is set to `TRAFFIC_AWARE_OPTIMAL`.
-  ///  * The product of the number of origins × number of destinations must be no
-  ///  greater than 100 if travel_mode is set to `TRANSIT`.
+  /// * The sum of the number of origins + the number of destinations specified
+  /// as either `place_id` or `address` must be no greater than 50.
+  /// * The product of number of origins × number of destinations must be no
+  /// greater than 625 in any case.
+  /// * The product of the number of origins × number of destinations must be no
+  /// greater than 100 if routing_preference is set to `TRAFFIC_AWARE_OPTIMAL`.
+  /// * The product of the number of origins × number of destinations must be no
+  /// greater than 100 if travel_mode is set to `TRANSIT`.
   @$pb.TagNumber(1)
-  $core.List<RouteMatrixOrigin> get origins => $_getList(0);
+  $pb.PbList<RouteMatrixOrigin> get origins => $_getList(0);
 
   /// Required. Array of destinations, which determines the columns of the
   /// response matrix.
   @$pb.TagNumber(2)
-  $core.List<RouteMatrixDestination> get destinations => $_getList(1);
+  $pb.PbList<RouteMatrixDestination> get destinations => $_getList(1);
 
   /// Optional. Specifies the mode of transportation.
   @$pb.TagNumber(3)
   $11.RouteTravelMode get travelMode => $_getN(2);
   @$pb.TagNumber(3)
-  set travelMode($11.RouteTravelMode v) {
-    setField(3, v);
-  }
-
+  set travelMode($11.RouteTravelMode value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasTravelMode() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTravelMode() => clearField(3);
+  void clearTravelMode() => $_clearField(3);
 
   /// Optional. Specifies how to compute the route. The server attempts to use
   /// the selected routing preference to compute the route. If the routing
@@ -800,14 +647,11 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $12.RoutingPreference get routingPreference => $_getN(3);
   @$pb.TagNumber(4)
-  set routingPreference($12.RoutingPreference v) {
-    setField(4, v);
-  }
-
+  set routingPreference($12.RoutingPreference value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasRoutingPreference() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRoutingPreference() => clearField(4);
+  void clearRoutingPreference() => $_clearField(4);
 
   /// Optional. The departure time. If you don't set this value, then this value
   /// defaults to the time that you made the request.
@@ -817,14 +661,11 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Timestamp get departureTime => $_getN(4);
   @$pb.TagNumber(5)
-  set departureTime($2.Timestamp v) {
-    setField(5, v);
-  }
-
+  set departureTime($2.Timestamp value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasDepartureTime() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDepartureTime() => clearField(5);
+  void clearDepartureTime() => $_clearField(5);
   @$pb.TagNumber(5)
   $2.Timestamp ensureDepartureTime() => $_ensure(4);
 
@@ -838,34 +679,28 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get languageCode => $_getSZ(5);
   @$pb.TagNumber(6)
-  set languageCode($core.String v) {
-    $_setString(5, v);
-  }
-
+  set languageCode($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasLanguageCode() => $_has(5);
   @$pb.TagNumber(6)
-  void clearLanguageCode() => clearField(6);
+  void clearLanguageCode() => $_clearField(6);
 
   /// Optional. Specifies the units of measure for the display fields.
   @$pb.TagNumber(7)
   $14.Units get units => $_getN(6);
   @$pb.TagNumber(7)
-  set units($14.Units v) {
-    setField(7, v);
-  }
-
+  set units($14.Units value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasUnits() => $_has(6);
   @$pb.TagNumber(7)
-  void clearUnits() => clearField(7);
+  void clearUnits() => $_clearField(7);
 
   /// Optional. A list of extra computations which may be used to complete the
   /// request. Note: These extra computations may return extra fields on the
   /// response. These extra fields must also be specified in the field mask to be
   /// returned in the response.
   @$pb.TagNumber(8)
-  $core.List<ComputeRouteMatrixRequest_ExtraComputation>
+  $pb.PbList<ComputeRouteMatrixRequest_ExtraComputation>
       get extraComputations => $_getList(7);
 
   /// Optional. The region code, specified as a ccTLD ("top-level domain")
@@ -874,14 +709,11 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.String get regionCode => $_getSZ(8);
   @$pb.TagNumber(9)
-  set regionCode($core.String v) {
-    $_setString(8, v);
-  }
-
+  set regionCode($core.String value) => $_setString(8, value);
   @$pb.TagNumber(9)
   $core.bool hasRegionCode() => $_has(8);
   @$pb.TagNumber(9)
-  void clearRegionCode() => clearField(9);
+  void clearRegionCode() => $_clearField(9);
 
   /// Optional. Specifies the assumptions to use when calculating time in
   /// traffic. This setting affects the value returned in the duration field in
@@ -895,14 +727,11 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $15.TrafficModel get trafficModel => $_getN(9);
   @$pb.TagNumber(10)
-  set trafficModel($15.TrafficModel v) {
-    setField(10, v);
-  }
-
+  set trafficModel($15.TrafficModel value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasTrafficModel() => $_has(9);
   @$pb.TagNumber(10)
-  void clearTrafficModel() => clearField(10);
+  void clearTrafficModel() => $_clearField(10);
 
   /// Optional. The arrival time.
   /// NOTE: Can only be set when
@@ -912,14 +741,11 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $2.Timestamp get arrivalTime => $_getN(10);
   @$pb.TagNumber(11)
-  set arrivalTime($2.Timestamp v) {
-    setField(11, v);
-  }
-
+  set arrivalTime($2.Timestamp value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasArrivalTime() => $_has(10);
   @$pb.TagNumber(11)
-  void clearArrivalTime() => clearField(11);
+  void clearArrivalTime() => $_clearField(11);
   @$pb.TagNumber(11)
   $2.Timestamp ensureArrivalTime() => $_ensure(10);
 
@@ -930,14 +756,11 @@ class ComputeRouteMatrixRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $4.TransitPreferences get transitPreferences => $_getN(11);
   @$pb.TagNumber(12)
-  set transitPreferences($4.TransitPreferences v) {
-    setField(12, v);
-  }
-
+  set transitPreferences($4.TransitPreferences value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasTransitPreferences() => $_has(11);
   @$pb.TagNumber(12)
-  void clearTransitPreferences() => clearField(12);
+  void clearTransitPreferences() => $_clearField(12);
   @$pb.TagNumber(12)
   $4.TransitPreferences ensureTransitPreferences() => $_ensure(11);
 }
@@ -948,22 +771,20 @@ class RouteMatrixOrigin extends $pb.GeneratedMessage {
     $1.Waypoint? waypoint,
     $3.RouteModifiers? routeModifiers,
   }) {
-    final $result = create();
-    if (waypoint != null) {
-      $result.waypoint = waypoint;
-    }
-    if (routeModifiers != null) {
-      $result.routeModifiers = routeModifiers;
-    }
-    return $result;
+    final result = create();
+    if (waypoint != null) result.waypoint = waypoint;
+    if (routeModifiers != null) result.routeModifiers = routeModifiers;
+    return result;
   }
-  RouteMatrixOrigin._() : super();
-  factory RouteMatrixOrigin.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RouteMatrixOrigin.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RouteMatrixOrigin._();
+
+  factory RouteMatrixOrigin.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RouteMatrixOrigin.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RouteMatrixOrigin',
@@ -976,24 +797,20 @@ class RouteMatrixOrigin extends $pb.GeneratedMessage {
         subBuilder: $3.RouteModifiers.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RouteMatrixOrigin clone() => RouteMatrixOrigin()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RouteMatrixOrigin clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RouteMatrixOrigin copyWith(void Function(RouteMatrixOrigin) updates) =>
       super.copyWith((message) => updates(message as RouteMatrixOrigin))
           as RouteMatrixOrigin;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RouteMatrixOrigin create() => RouteMatrixOrigin._();
+  @$core.override
   RouteMatrixOrigin createEmptyInstance() => create();
-  static $pb.PbList<RouteMatrixOrigin> createRepeated() =>
-      $pb.PbList<RouteMatrixOrigin>();
   @$core.pragma('dart2js:noInline')
   static RouteMatrixOrigin getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RouteMatrixOrigin>(create);
@@ -1003,14 +820,11 @@ class RouteMatrixOrigin extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.Waypoint get waypoint => $_getN(0);
   @$pb.TagNumber(1)
-  set waypoint($1.Waypoint v) {
-    setField(1, v);
-  }
-
+  set waypoint($1.Waypoint value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasWaypoint() => $_has(0);
   @$pb.TagNumber(1)
-  void clearWaypoint() => clearField(1);
+  void clearWaypoint() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.Waypoint ensureWaypoint() => $_ensure(0);
 
@@ -1018,14 +832,11 @@ class RouteMatrixOrigin extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $3.RouteModifiers get routeModifiers => $_getN(1);
   @$pb.TagNumber(2)
-  set routeModifiers($3.RouteModifiers v) {
-    setField(2, v);
-  }
-
+  set routeModifiers($3.RouteModifiers value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasRouteModifiers() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRouteModifiers() => clearField(2);
+  void clearRouteModifiers() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.RouteModifiers ensureRouteModifiers() => $_ensure(1);
 }
@@ -1035,19 +846,19 @@ class RouteMatrixDestination extends $pb.GeneratedMessage {
   factory RouteMatrixDestination({
     $1.Waypoint? waypoint,
   }) {
-    final $result = create();
-    if (waypoint != null) {
-      $result.waypoint = waypoint;
-    }
-    return $result;
+    final result = create();
+    if (waypoint != null) result.waypoint = waypoint;
+    return result;
   }
-  RouteMatrixDestination._() : super();
-  factory RouteMatrixDestination.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RouteMatrixDestination.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RouteMatrixDestination._();
+
+  factory RouteMatrixDestination.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RouteMatrixDestination.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RouteMatrixDestination',
@@ -1058,26 +869,21 @@ class RouteMatrixDestination extends $pb.GeneratedMessage {
         subBuilder: $1.Waypoint.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RouteMatrixDestination clone() =>
-      RouteMatrixDestination()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RouteMatrixDestination clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RouteMatrixDestination copyWith(
           void Function(RouteMatrixDestination) updates) =>
       super.copyWith((message) => updates(message as RouteMatrixDestination))
           as RouteMatrixDestination;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RouteMatrixDestination create() => RouteMatrixDestination._();
+  @$core.override
   RouteMatrixDestination createEmptyInstance() => create();
-  static $pb.PbList<RouteMatrixDestination> createRepeated() =>
-      $pb.PbList<RouteMatrixDestination>();
   @$core.pragma('dart2js:noInline')
   static RouteMatrixDestination getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RouteMatrixDestination>(create);
@@ -1087,14 +893,11 @@ class RouteMatrixDestination extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.Waypoint get waypoint => $_getN(0);
   @$pb.TagNumber(1)
-  set waypoint($1.Waypoint v) {
-    setField(1, v);
-  }
-
+  set waypoint($1.Waypoint value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasWaypoint() => $_has(0);
   @$pb.TagNumber(1)
-  void clearWaypoint() => clearField(1);
+  void clearWaypoint() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.Waypoint ensureWaypoint() => $_ensure(0);
 }
@@ -1107,28 +910,23 @@ class RouteMatrixElement_LocalizedValues extends $pb.GeneratedMessage {
     $10.LocalizedText? staticDuration,
     $10.LocalizedText? transitFare,
   }) {
-    final $result = create();
-    if (distance != null) {
-      $result.distance = distance;
-    }
-    if (duration != null) {
-      $result.duration = duration;
-    }
-    if (staticDuration != null) {
-      $result.staticDuration = staticDuration;
-    }
-    if (transitFare != null) {
-      $result.transitFare = transitFare;
-    }
-    return $result;
+    final result = create();
+    if (distance != null) result.distance = distance;
+    if (duration != null) result.duration = duration;
+    if (staticDuration != null) result.staticDuration = staticDuration;
+    if (transitFare != null) result.transitFare = transitFare;
+    return result;
   }
-  RouteMatrixElement_LocalizedValues._() : super();
-  factory RouteMatrixElement_LocalizedValues.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RouteMatrixElement_LocalizedValues.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RouteMatrixElement_LocalizedValues._();
+
+  factory RouteMatrixElement_LocalizedValues.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RouteMatrixElement_LocalizedValues.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RouteMatrixElement.LocalizedValues',
@@ -1145,28 +943,23 @@ class RouteMatrixElement_LocalizedValues extends $pb.GeneratedMessage {
         subBuilder: $10.LocalizedText.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RouteMatrixElement_LocalizedValues clone() =>
-      RouteMatrixElement_LocalizedValues()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RouteMatrixElement_LocalizedValues clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RouteMatrixElement_LocalizedValues copyWith(
           void Function(RouteMatrixElement_LocalizedValues) updates) =>
       super.copyWith((message) =>
               updates(message as RouteMatrixElement_LocalizedValues))
           as RouteMatrixElement_LocalizedValues;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RouteMatrixElement_LocalizedValues create() =>
       RouteMatrixElement_LocalizedValues._();
+  @$core.override
   RouteMatrixElement_LocalizedValues createEmptyInstance() => create();
-  static $pb.PbList<RouteMatrixElement_LocalizedValues> createRepeated() =>
-      $pb.PbList<RouteMatrixElement_LocalizedValues>();
   @$core.pragma('dart2js:noInline')
   static RouteMatrixElement_LocalizedValues getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RouteMatrixElement_LocalizedValues>(
@@ -1177,14 +970,11 @@ class RouteMatrixElement_LocalizedValues extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $10.LocalizedText get distance => $_getN(0);
   @$pb.TagNumber(1)
-  set distance($10.LocalizedText v) {
-    setField(1, v);
-  }
-
+  set distance($10.LocalizedText value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasDistance() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDistance() => clearField(1);
+  void clearDistance() => $_clearField(1);
   @$pb.TagNumber(1)
   $10.LocalizedText ensureDistance() => $_ensure(0);
 
@@ -1194,14 +984,11 @@ class RouteMatrixElement_LocalizedValues extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $10.LocalizedText get duration => $_getN(1);
   @$pb.TagNumber(2)
-  set duration($10.LocalizedText v) {
-    setField(2, v);
-  }
-
+  set duration($10.LocalizedText value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasDuration() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDuration() => clearField(2);
+  void clearDuration() => $_clearField(2);
   @$pb.TagNumber(2)
   $10.LocalizedText ensureDuration() => $_ensure(1);
 
@@ -1210,14 +997,11 @@ class RouteMatrixElement_LocalizedValues extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $10.LocalizedText get staticDuration => $_getN(2);
   @$pb.TagNumber(3)
-  set staticDuration($10.LocalizedText v) {
-    setField(3, v);
-  }
-
+  set staticDuration($10.LocalizedText value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasStaticDuration() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStaticDuration() => clearField(3);
+  void clearStaticDuration() => $_clearField(3);
   @$pb.TagNumber(3)
   $10.LocalizedText ensureStaticDuration() => $_ensure(2);
 
@@ -1225,14 +1009,11 @@ class RouteMatrixElement_LocalizedValues extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $10.LocalizedText get transitFare => $_getN(3);
   @$pb.TagNumber(4)
-  set transitFare($10.LocalizedText v) {
-    setField(4, v);
-  }
-
+  set transitFare($10.LocalizedText value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasTransitFare() => $_has(3);
   @$pb.TagNumber(4)
-  void clearTransitFare() => clearField(4);
+  void clearTransitFare() => $_clearField(4);
   @$pb.TagNumber(4)
   $10.LocalizedText ensureTransitFare() => $_ensure(3);
 }
@@ -1252,59 +1033,39 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
     RouteMatrixElementCondition? condition,
     RouteMatrixElement_LocalizedValues? localizedValues,
   }) {
-    final $result = create();
-    if (originIndex != null) {
-      $result.originIndex = originIndex;
-    }
-    if (destinationIndex != null) {
-      $result.destinationIndex = destinationIndex;
-    }
-    if (status != null) {
-      $result.status = status;
-    }
-    if (distanceMeters != null) {
-      $result.distanceMeters = distanceMeters;
-    }
-    if (duration != null) {
-      $result.duration = duration;
-    }
-    if (staticDuration != null) {
-      $result.staticDuration = staticDuration;
-    }
-    if (travelAdvisory != null) {
-      $result.travelAdvisory = travelAdvisory;
-    }
-    if (fallbackInfo != null) {
-      $result.fallbackInfo = fallbackInfo;
-    }
-    if (condition != null) {
-      $result.condition = condition;
-    }
-    if (localizedValues != null) {
-      $result.localizedValues = localizedValues;
-    }
-    return $result;
+    final result = create();
+    if (originIndex != null) result.originIndex = originIndex;
+    if (destinationIndex != null) result.destinationIndex = destinationIndex;
+    if (status != null) result.status = status;
+    if (distanceMeters != null) result.distanceMeters = distanceMeters;
+    if (duration != null) result.duration = duration;
+    if (staticDuration != null) result.staticDuration = staticDuration;
+    if (travelAdvisory != null) result.travelAdvisory = travelAdvisory;
+    if (fallbackInfo != null) result.fallbackInfo = fallbackInfo;
+    if (condition != null) result.condition = condition;
+    if (localizedValues != null) result.localizedValues = localizedValues;
+    return result;
   }
-  RouteMatrixElement._() : super();
-  factory RouteMatrixElement.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RouteMatrixElement.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RouteMatrixElement._();
+
+  factory RouteMatrixElement.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RouteMatrixElement.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RouteMatrixElement',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.maps.routing.v2'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'originIndex', $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        2, _omitFieldNames ? '' : 'destinationIndex', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'originIndex')
+    ..aI(2, _omitFieldNames ? '' : 'destinationIndex')
     ..aOM<$8.Status>(3, _omitFieldNames ? '' : 'status',
         subBuilder: $8.Status.create)
-    ..a<$core.int>(
-        4, _omitFieldNames ? '' : 'distanceMeters', $pb.PbFieldType.O3)
+    ..aI(4, _omitFieldNames ? '' : 'distanceMeters')
     ..aOM<$9.Duration>(5, _omitFieldNames ? '' : 'duration',
         subBuilder: $9.Duration.create)
     ..aOM<$9.Duration>(6, _omitFieldNames ? '' : 'staticDuration',
@@ -1313,35 +1074,27 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
         subBuilder: $5.RouteTravelAdvisory.create)
     ..aOM<$6.FallbackInfo>(8, _omitFieldNames ? '' : 'fallbackInfo',
         subBuilder: $6.FallbackInfo.create)
-    ..e<RouteMatrixElementCondition>(
-        9, _omitFieldNames ? '' : 'condition', $pb.PbFieldType.OE,
-        defaultOrMaker: RouteMatrixElementCondition
-            .ROUTE_MATRIX_ELEMENT_CONDITION_UNSPECIFIED,
-        valueOf: RouteMatrixElementCondition.valueOf,
+    ..aE<RouteMatrixElementCondition>(9, _omitFieldNames ? '' : 'condition',
         enumValues: RouteMatrixElementCondition.values)
     ..aOM<RouteMatrixElement_LocalizedValues>(
         10, _omitFieldNames ? '' : 'localizedValues',
         subBuilder: RouteMatrixElement_LocalizedValues.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RouteMatrixElement clone() => RouteMatrixElement()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RouteMatrixElement clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RouteMatrixElement copyWith(void Function(RouteMatrixElement) updates) =>
       super.copyWith((message) => updates(message as RouteMatrixElement))
           as RouteMatrixElement;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RouteMatrixElement create() => RouteMatrixElement._();
+  @$core.override
   RouteMatrixElement createEmptyInstance() => create();
-  static $pb.PbList<RouteMatrixElement> createRepeated() =>
-      $pb.PbList<RouteMatrixElement>();
   @$core.pragma('dart2js:noInline')
   static RouteMatrixElement getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RouteMatrixElement>(create);
@@ -1351,40 +1104,31 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get originIndex => $_getIZ(0);
   @$pb.TagNumber(1)
-  set originIndex($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set originIndex($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasOriginIndex() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOriginIndex() => clearField(1);
+  void clearOriginIndex() => $_clearField(1);
 
   /// Zero-based index of the destination in the request.
   @$pb.TagNumber(2)
   $core.int get destinationIndex => $_getIZ(1);
   @$pb.TagNumber(2)
-  set destinationIndex($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set destinationIndex($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDestinationIndex() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDestinationIndex() => clearField(2);
+  void clearDestinationIndex() => $_clearField(2);
 
   /// Error status code for this element.
   @$pb.TagNumber(3)
   $8.Status get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status($8.Status v) {
-    setField(3, v);
-  }
-
+  set status($8.Status value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => clearField(3);
+  void clearStatus() => $_clearField(3);
   @$pb.TagNumber(3)
   $8.Status ensureStatus() => $_ensure(2);
 
@@ -1392,14 +1136,11 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.int get distanceMeters => $_getIZ(3);
   @$pb.TagNumber(4)
-  set distanceMeters($core.int v) {
-    $_setSignedInt32(3, v);
-  }
-
+  set distanceMeters($core.int value) => $_setSignedInt32(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDistanceMeters() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDistanceMeters() => clearField(4);
+  void clearDistanceMeters() => $_clearField(4);
 
   /// The length of time needed to navigate the route. If you set the
   /// [routing_preference][google.maps.routing.v2.ComputeRouteMatrixRequest.routing_preference]
@@ -1410,14 +1151,11 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $9.Duration get duration => $_getN(4);
   @$pb.TagNumber(5)
-  set duration($9.Duration v) {
-    setField(5, v);
-  }
-
+  set duration($9.Duration value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasDuration() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDuration() => clearField(5);
+  void clearDuration() => $_clearField(5);
   @$pb.TagNumber(5)
   $9.Duration ensureDuration() => $_ensure(4);
 
@@ -1426,14 +1164,11 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $9.Duration get staticDuration => $_getN(5);
   @$pb.TagNumber(6)
-  set staticDuration($9.Duration v) {
-    setField(6, v);
-  }
-
+  set staticDuration($9.Duration value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasStaticDuration() => $_has(5);
   @$pb.TagNumber(6)
-  void clearStaticDuration() => clearField(6);
+  void clearStaticDuration() => $_clearField(6);
   @$pb.TagNumber(6)
   $9.Duration ensureStaticDuration() => $_ensure(5);
 
@@ -1442,14 +1177,11 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $5.RouteTravelAdvisory get travelAdvisory => $_getN(6);
   @$pb.TagNumber(7)
-  set travelAdvisory($5.RouteTravelAdvisory v) {
-    setField(7, v);
-  }
-
+  set travelAdvisory($5.RouteTravelAdvisory value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasTravelAdvisory() => $_has(6);
   @$pb.TagNumber(7)
-  void clearTravelAdvisory() => clearField(7);
+  void clearTravelAdvisory() => $_clearField(7);
   @$pb.TagNumber(7)
   $5.RouteTravelAdvisory ensureTravelAdvisory() => $_ensure(6);
 
@@ -1461,14 +1193,11 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $6.FallbackInfo get fallbackInfo => $_getN(7);
   @$pb.TagNumber(8)
-  set fallbackInfo($6.FallbackInfo v) {
-    setField(8, v);
-  }
-
+  set fallbackInfo($6.FallbackInfo value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasFallbackInfo() => $_has(7);
   @$pb.TagNumber(8)
-  void clearFallbackInfo() => clearField(8);
+  void clearFallbackInfo() => $_clearField(8);
   @$pb.TagNumber(8)
   $6.FallbackInfo ensureFallbackInfo() => $_ensure(7);
 
@@ -1476,31 +1205,27 @@ class RouteMatrixElement extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   RouteMatrixElementCondition get condition => $_getN(8);
   @$pb.TagNumber(9)
-  set condition(RouteMatrixElementCondition v) {
-    setField(9, v);
-  }
-
+  set condition(RouteMatrixElementCondition value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasCondition() => $_has(8);
   @$pb.TagNumber(9)
-  void clearCondition() => clearField(9);
+  void clearCondition() => $_clearField(9);
 
   /// Text representations of properties of the `RouteMatrixElement`.
   @$pb.TagNumber(10)
   RouteMatrixElement_LocalizedValues get localizedValues => $_getN(9);
   @$pb.TagNumber(10)
-  set localizedValues(RouteMatrixElement_LocalizedValues v) {
-    setField(10, v);
-  }
-
+  set localizedValues(RouteMatrixElement_LocalizedValues value) =>
+      $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasLocalizedValues() => $_has(9);
   @$pb.TagNumber(10)
-  void clearLocalizedValues() => clearField(10);
+  void clearLocalizedValues() => $_clearField(10);
   @$pb.TagNumber(10)
   RouteMatrixElement_LocalizedValues ensureLocalizedValues() => $_ensure(9);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

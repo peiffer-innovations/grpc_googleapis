@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/apps/script/type/sheets/sheets_addon_manifest.proto
-//
-// @dart = 2.12
+// Generated from google/apps/script/type/sheets/sheets_addon_manifest.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,28 +16,29 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../extension_point.pb.dart' as $0;
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 /// Sheets add-on manifest.
 class SheetsAddOnManifest extends $pb.GeneratedMessage {
   factory SheetsAddOnManifest({
     $0.HomepageExtensionPoint? homepageTrigger,
     SheetsExtensionPoint? onFileScopeGrantedTrigger,
   }) {
-    final $result = create();
-    if (homepageTrigger != null) {
-      $result.homepageTrigger = homepageTrigger;
-    }
-    if (onFileScopeGrantedTrigger != null) {
-      $result.onFileScopeGrantedTrigger = onFileScopeGrantedTrigger;
-    }
-    return $result;
+    final result = create();
+    if (homepageTrigger != null) result.homepageTrigger = homepageTrigger;
+    if (onFileScopeGrantedTrigger != null)
+      result.onFileScopeGrantedTrigger = onFileScopeGrantedTrigger;
+    return result;
   }
-  SheetsAddOnManifest._() : super();
-  factory SheetsAddOnManifest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SheetsAddOnManifest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SheetsAddOnManifest._();
+
+  factory SheetsAddOnManifest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SheetsAddOnManifest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SheetsAddOnManifest',
@@ -51,24 +53,20 @@ class SheetsAddOnManifest extends $pb.GeneratedMessage {
         subBuilder: SheetsExtensionPoint.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SheetsAddOnManifest clone() => SheetsAddOnManifest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SheetsAddOnManifest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SheetsAddOnManifest copyWith(void Function(SheetsAddOnManifest) updates) =>
       super.copyWith((message) => updates(message as SheetsAddOnManifest))
           as SheetsAddOnManifest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SheetsAddOnManifest create() => SheetsAddOnManifest._();
+  @$core.override
   SheetsAddOnManifest createEmptyInstance() => create();
-  static $pb.PbList<SheetsAddOnManifest> createRepeated() =>
-      $pb.PbList<SheetsAddOnManifest>();
   @$core.pragma('dart2js:noInline')
   static SheetsAddOnManifest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SheetsAddOnManifest>(create);
@@ -79,14 +77,11 @@ class SheetsAddOnManifest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.HomepageExtensionPoint get homepageTrigger => $_getN(0);
   @$pb.TagNumber(3)
-  set homepageTrigger($0.HomepageExtensionPoint v) {
-    setField(3, v);
-  }
-
+  set homepageTrigger($0.HomepageExtensionPoint value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasHomepageTrigger() => $_has(0);
   @$pb.TagNumber(3)
-  void clearHomepageTrigger() => clearField(3);
+  void clearHomepageTrigger() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.HomepageExtensionPoint ensureHomepageTrigger() => $_ensure(0);
 
@@ -95,14 +90,12 @@ class SheetsAddOnManifest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   SheetsExtensionPoint get onFileScopeGrantedTrigger => $_getN(1);
   @$pb.TagNumber(5)
-  set onFileScopeGrantedTrigger(SheetsExtensionPoint v) {
-    setField(5, v);
-  }
-
+  set onFileScopeGrantedTrigger(SheetsExtensionPoint value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasOnFileScopeGrantedTrigger() => $_has(1);
   @$pb.TagNumber(5)
-  void clearOnFileScopeGrantedTrigger() => clearField(5);
+  void clearOnFileScopeGrantedTrigger() => $_clearField(5);
   @$pb.TagNumber(5)
   SheetsExtensionPoint ensureOnFileScopeGrantedTrigger() => $_ensure(1);
 }
@@ -112,19 +105,19 @@ class SheetsExtensionPoint extends $pb.GeneratedMessage {
   factory SheetsExtensionPoint({
     $core.String? runFunction,
   }) {
-    final $result = create();
-    if (runFunction != null) {
-      $result.runFunction = runFunction;
-    }
-    return $result;
+    final result = create();
+    if (runFunction != null) result.runFunction = runFunction;
+    return result;
   }
-  SheetsExtensionPoint._() : super();
-  factory SheetsExtensionPoint.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SheetsExtensionPoint.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SheetsExtensionPoint._();
+
+  factory SheetsExtensionPoint.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SheetsExtensionPoint.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SheetsExtensionPoint',
@@ -134,25 +127,20 @@ class SheetsExtensionPoint extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'runFunction')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SheetsExtensionPoint clone() =>
-      SheetsExtensionPoint()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SheetsExtensionPoint clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SheetsExtensionPoint copyWith(void Function(SheetsExtensionPoint) updates) =>
       super.copyWith((message) => updates(message as SheetsExtensionPoint))
           as SheetsExtensionPoint;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SheetsExtensionPoint create() => SheetsExtensionPoint._();
+  @$core.override
   SheetsExtensionPoint createEmptyInstance() => create();
-  static $pb.PbList<SheetsExtensionPoint> createRepeated() =>
-      $pb.PbList<SheetsExtensionPoint>();
   @$core.pragma('dart2js:noInline')
   static SheetsExtensionPoint getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SheetsExtensionPoint>(create);
@@ -162,16 +150,14 @@ class SheetsExtensionPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get runFunction => $_getSZ(0);
   @$pb.TagNumber(1)
-  set runFunction($core.String v) {
-    $_setString(0, v);
-  }
-
+  set runFunction($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRunFunction() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRunFunction() => clearField(1);
+  void clearRunFunction() => $_clearField(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

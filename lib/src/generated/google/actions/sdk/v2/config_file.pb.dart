@@ -1,19 +1,21 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/config_file.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/config_file.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/struct.pb.dart'
+    as $9;
 
-import '../../../protobuf/struct.pb.dart' as $9;
 import 'account_linking_secret.pb.dart' as $10;
 import 'action.pb.dart' as $1;
 import 'interactionmodel/entity_set.pb.dart' as $11;
@@ -26,52 +28,50 @@ import 'manifest.pb.dart' as $0;
 import 'settings.pb.dart' as $2;
 import 'webhook.pb.dart' as $3;
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 /// Wrapper for repeated config files. Repeated fields cannot exist in a oneof.
 class ConfigFiles extends $pb.GeneratedMessage {
   factory ConfigFiles({
     $core.Iterable<ConfigFile>? configFiles,
   }) {
-    final $result = create();
-    if (configFiles != null) {
-      $result.configFiles.addAll(configFiles);
-    }
-    return $result;
+    final result = create();
+    if (configFiles != null) result.configFiles.addAll(configFiles);
+    return result;
   }
-  ConfigFiles._() : super();
-  factory ConfigFiles.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ConfigFiles.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ConfigFiles._();
+
+  factory ConfigFiles.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ConfigFiles.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ConfigFiles',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.actions.sdk.v2'),
       createEmptyInstance: create)
-    ..pc<ConfigFile>(
-        1, _omitFieldNames ? '' : 'configFiles', $pb.PbFieldType.PM,
+    ..pPM<ConfigFile>(1, _omitFieldNames ? '' : 'configFiles',
         subBuilder: ConfigFile.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ConfigFiles clone() => ConfigFiles()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConfigFiles clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ConfigFiles copyWith(void Function(ConfigFiles) updates) =>
       super.copyWith((message) => updates(message as ConfigFiles))
           as ConfigFiles;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ConfigFiles create() => ConfigFiles._();
+  @$core.override
   ConfigFiles createEmptyInstance() => create();
-  static $pb.PbList<ConfigFiles> createRepeated() => $pb.PbList<ConfigFiles>();
   @$core.pragma('dart2js:noInline')
   static ConfigFiles getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConfigFiles>(create);
@@ -79,7 +79,7 @@ class ConfigFiles extends $pb.GeneratedMessage {
 
   /// Multiple config files.
   @$pb.TagNumber(1)
-  $core.List<ConfigFile> get configFiles => $_getList(0);
+  $pb.PbList<ConfigFile> get configFiles => $_getList(0);
 }
 
 enum ConfigFile_File {
@@ -117,55 +117,32 @@ class ConfigFile extends $pb.GeneratedMessage {
     $10.AccountLinkingSecret? accountLinkingSecret,
     $11.EntitySet? entitySet,
   }) {
-    final $result = create();
-    if (filePath != null) {
-      $result.filePath = filePath;
-    }
-    if (manifest != null) {
-      $result.manifest = manifest;
-    }
-    if (actions != null) {
-      $result.actions = actions;
-    }
-    if (settings != null) {
-      $result.settings = settings;
-    }
-    if (webhook != null) {
-      $result.webhook = webhook;
-    }
-    if (intent != null) {
-      $result.intent = intent;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    if (globalIntentEvent != null) {
-      $result.globalIntentEvent = globalIntentEvent;
-    }
-    if (scene != null) {
-      $result.scene = scene;
-    }
-    if (staticPrompt != null) {
-      $result.staticPrompt = staticPrompt;
-    }
-    if (resourceBundle != null) {
-      $result.resourceBundle = resourceBundle;
-    }
-    if (accountLinkingSecret != null) {
-      $result.accountLinkingSecret = accountLinkingSecret;
-    }
-    if (entitySet != null) {
-      $result.entitySet = entitySet;
-    }
-    return $result;
+    final result = create();
+    if (filePath != null) result.filePath = filePath;
+    if (manifest != null) result.manifest = manifest;
+    if (actions != null) result.actions = actions;
+    if (settings != null) result.settings = settings;
+    if (webhook != null) result.webhook = webhook;
+    if (intent != null) result.intent = intent;
+    if (type != null) result.type = type;
+    if (globalIntentEvent != null) result.globalIntentEvent = globalIntentEvent;
+    if (scene != null) result.scene = scene;
+    if (staticPrompt != null) result.staticPrompt = staticPrompt;
+    if (resourceBundle != null) result.resourceBundle = resourceBundle;
+    if (accountLinkingSecret != null)
+      result.accountLinkingSecret = accountLinkingSecret;
+    if (entitySet != null) result.entitySet = entitySet;
+    return result;
   }
-  ConfigFile._() : super();
-  factory ConfigFile.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ConfigFile.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ConfigFile._();
+
+  factory ConfigFile.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ConfigFile.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, ConfigFile_File> _ConfigFile_FileByTag = {
     2: ConfigFile_File.manifest,
@@ -215,29 +192,50 @@ class ConfigFile extends $pb.GeneratedMessage {
         subBuilder: $11.EntitySet.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ConfigFile clone() => ConfigFile()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConfigFile clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ConfigFile copyWith(void Function(ConfigFile) updates) =>
       super.copyWith((message) => updates(message as ConfigFile)) as ConfigFile;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ConfigFile create() => ConfigFile._();
+  @$core.override
   ConfigFile createEmptyInstance() => create();
-  static $pb.PbList<ConfigFile> createRepeated() => $pb.PbList<ConfigFile>();
   @$core.pragma('dart2js:noInline')
   static ConfigFile getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConfigFile>(create);
   static ConfigFile? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
+  @$pb.TagNumber(13)
+  @$pb.TagNumber(15)
   ConfigFile_File whichFile() => _ConfigFile_FileByTag[$_whichOneof(0)]!;
-  void clearFile() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
+  @$pb.TagNumber(13)
+  @$pb.TagNumber(15)
+  void clearFile() => $_clearField($_whichOneof(0));
 
   /// Relative path of the config file from the project root in the SDK file
   /// structure. Each file types below have an allowed file path.
@@ -245,28 +243,22 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get filePath => $_getSZ(0);
   @$pb.TagNumber(1)
-  set filePath($core.String v) {
-    $_setString(0, v);
-  }
-
+  set filePath($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFilePath() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFilePath() => clearField(1);
+  void clearFilePath() => $_clearField(1);
 
   /// Single manifest file.
   /// Allowed file path: `manifest.yaml`
   @$pb.TagNumber(2)
   $0.Manifest get manifest => $_getN(1);
   @$pb.TagNumber(2)
-  set manifest($0.Manifest v) {
-    setField(2, v);
-  }
-
+  set manifest($0.Manifest value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasManifest() => $_has(1);
   @$pb.TagNumber(2)
-  void clearManifest() => clearField(2);
+  void clearManifest() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Manifest ensureManifest() => $_ensure(1);
 
@@ -275,14 +267,11 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.Actions get actions => $_getN(2);
   @$pb.TagNumber(3)
-  set actions($1.Actions v) {
-    setField(3, v);
-  }
-
+  set actions($1.Actions value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasActions() => $_has(2);
   @$pb.TagNumber(3)
-  void clearActions() => clearField(3);
+  void clearActions() => $_clearField(3);
   @$pb.TagNumber(3)
   $1.Actions ensureActions() => $_ensure(2);
 
@@ -296,14 +285,11 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $2.Settings get settings => $_getN(3);
   @$pb.TagNumber(4)
-  set settings($2.Settings v) {
-    setField(4, v);
-  }
-
+  set settings($2.Settings value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasSettings() => $_has(3);
   @$pb.TagNumber(4)
-  void clearSettings() => clearField(4);
+  void clearSettings() => $_clearField(4);
   @$pb.TagNumber(4)
   $2.Settings ensureSettings() => $_ensure(3);
 
@@ -312,14 +298,11 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $3.Webhook get webhook => $_getN(4);
   @$pb.TagNumber(6)
-  set webhook($3.Webhook v) {
-    setField(6, v);
-  }
-
+  set webhook($3.Webhook value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasWebhook() => $_has(4);
   @$pb.TagNumber(6)
-  void clearWebhook() => clearField(6);
+  void clearWebhook() => $_clearField(6);
   @$pb.TagNumber(6)
   $3.Webhook ensureWebhook() => $_ensure(4);
 
@@ -328,14 +311,11 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $4.Intent get intent => $_getN(5);
   @$pb.TagNumber(7)
-  set intent($4.Intent v) {
-    setField(7, v);
-  }
-
+  set intent($4.Intent value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasIntent() => $_has(5);
   @$pb.TagNumber(7)
-  void clearIntent() => clearField(7);
+  void clearIntent() => $_clearField(7);
   @$pb.TagNumber(7)
   $4.Intent ensureIntent() => $_ensure(5);
 
@@ -344,14 +324,11 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $5.Type get type => $_getN(6);
   @$pb.TagNumber(8)
-  set type($5.Type v) {
-    setField(8, v);
-  }
-
+  set type($5.Type value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasType() => $_has(6);
   @$pb.TagNumber(8)
-  void clearType() => clearField(8);
+  void clearType() => $_clearField(8);
   @$pb.TagNumber(8)
   $5.Type ensureType() => $_ensure(6);
 
@@ -362,14 +339,11 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $6.GlobalIntentEvent get globalIntentEvent => $_getN(7);
   @$pb.TagNumber(9)
-  set globalIntentEvent($6.GlobalIntentEvent v) {
-    setField(9, v);
-  }
-
+  set globalIntentEvent($6.GlobalIntentEvent value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasGlobalIntentEvent() => $_has(7);
   @$pb.TagNumber(9)
-  void clearGlobalIntentEvent() => clearField(9);
+  void clearGlobalIntentEvent() => $_clearField(9);
   @$pb.TagNumber(9)
   $6.GlobalIntentEvent ensureGlobalIntentEvent() => $_ensure(7);
 
@@ -378,14 +352,11 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $7.Scene get scene => $_getN(8);
   @$pb.TagNumber(10)
-  set scene($7.Scene v) {
-    setField(10, v);
-  }
-
+  set scene($7.Scene value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasScene() => $_has(8);
   @$pb.TagNumber(10)
-  void clearScene() => clearField(10);
+  void clearScene() => $_clearField(10);
   @$pb.TagNumber(10)
   $7.Scene ensureScene() => $_ensure(8);
 
@@ -394,14 +365,11 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $8.StaticPrompt get staticPrompt => $_getN(9);
   @$pb.TagNumber(11)
-  set staticPrompt($8.StaticPrompt v) {
-    setField(11, v);
-  }
-
+  set staticPrompt($8.StaticPrompt value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasStaticPrompt() => $_has(9);
   @$pb.TagNumber(11)
-  void clearStaticPrompt() => clearField(11);
+  void clearStaticPrompt() => $_clearField(11);
   @$pb.TagNumber(11)
   $8.StaticPrompt ensureStaticPrompt() => $_ensure(9);
 
@@ -413,14 +381,11 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $9.Struct get resourceBundle => $_getN(10);
   @$pb.TagNumber(12)
-  set resourceBundle($9.Struct v) {
-    setField(12, v);
-  }
-
+  set resourceBundle($9.Struct value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasResourceBundle() => $_has(10);
   @$pb.TagNumber(12)
-  void clearResourceBundle() => clearField(12);
+  void clearResourceBundle() => $_clearField(12);
   @$pb.TagNumber(12)
   $9.Struct ensureResourceBundle() => $_ensure(10);
 
@@ -429,14 +394,12 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $10.AccountLinkingSecret get accountLinkingSecret => $_getN(11);
   @$pb.TagNumber(13)
-  set accountLinkingSecret($10.AccountLinkingSecret v) {
-    setField(13, v);
-  }
-
+  set accountLinkingSecret($10.AccountLinkingSecret value) =>
+      $_setField(13, value);
   @$pb.TagNumber(13)
   $core.bool hasAccountLinkingSecret() => $_has(11);
   @$pb.TagNumber(13)
-  void clearAccountLinkingSecret() => clearField(13);
+  void clearAccountLinkingSecret() => $_clearField(13);
   @$pb.TagNumber(13)
   $10.AccountLinkingSecret ensureAccountLinkingSecret() => $_ensure(11);
 
@@ -445,18 +408,16 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $11.EntitySet get entitySet => $_getN(12);
   @$pb.TagNumber(15)
-  set entitySet($11.EntitySet v) {
-    setField(15, v);
-  }
-
+  set entitySet($11.EntitySet value) => $_setField(15, value);
   @$pb.TagNumber(15)
   $core.bool hasEntitySet() => $_has(12);
   @$pb.TagNumber(15)
-  void clearEntitySet() => clearField(15);
+  void clearEntitySet() => $_clearField(15);
   @$pb.TagNumber(15)
   $11.EntitySet ensureEntitySet() => $_ensure(12);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/spanner/v1/commit_response.proto
-//
-// @dart = 2.12
+// Generated from google/spanner/v1/commit_response.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -42,6 +44,14 @@ const CommitResponse$json = {
       '9': 0,
       '10': 'precommitToken'
     },
+    {
+      '1': 'snapshot_timestamp',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'snapshotTimestamp'
+    },
   ],
   '3': [CommitResponse_CommitStats$json],
   '8': [
@@ -63,6 +73,7 @@ final $typed_data.Uint8List commitResponseDescriptor = $convert.base64Decode(
     'RvYnVmLlRpbWVzdGFtcFIPY29tbWl0VGltZXN0YW1wElAKDGNvbW1pdF9zdGF0cxgCIAEoCzIt'
     'Lmdvb2dsZS5zcGFubmVyLnYxLkNvbW1pdFJlc3BvbnNlLkNvbW1pdFN0YXRzUgtjb21taXRTdG'
     'F0cxJeCg9wcmVjb21taXRfdG9rZW4YBCABKAsyMy5nb29nbGUuc3Bhbm5lci52MS5NdWx0aXBs'
-    'ZXhlZFNlc3Npb25QcmVjb21taXRUb2tlbkgAUg5wcmVjb21taXRUb2tlbho0CgtDb21taXRTdG'
-    'F0cxIlCg5tdXRhdGlvbl9jb3VudBgBIAEoA1INbXV0YXRpb25Db3VudEIZChdNdWx0aXBsZXhl'
-    'ZFNlc3Npb25SZXRyeQ==');
+    'ZXhlZFNlc3Npb25QcmVjb21taXRUb2tlbkgAUg5wcmVjb21taXRUb2tlbhJJChJzbmFwc2hvdF'
+    '90aW1lc3RhbXAYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhFzbmFwc2hvdFRp'
+    'bWVzdGFtcBo0CgtDb21taXRTdGF0cxIlCg5tdXRhdGlvbl9jb3VudBgBIAEoA1INbXV0YXRpb2'
+    '5Db3VudEIZChdNdWx0aXBsZXhlZFNlc3Npb25SZXRyeQ==');

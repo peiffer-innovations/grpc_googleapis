@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/spanner/admin/instance/v1/spanner_instance_admin.proto
-//
-// @dart = 2.12
+// Generated from google/spanner/admin/instance/v1/spanner_instance_admin.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -1227,6 +1229,15 @@ const InstancePartition$json = {
       '10': 'processingUnits'
     },
     {
+      '1': 'autoscaling_config',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.admin.instance.v1.AutoscalingConfig',
+      '8': {},
+      '10': 'autoscalingConfig'
+    },
+    {
       '1': 'state',
       '3': 7,
       '4': 1,
@@ -1294,17 +1305,19 @@ final $typed_data.Uint8List instancePartitionDescriptor = $convert.base64Decode(
     'IgASgJQi3gQQL6QScKJXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2VDb25maWdSBmNv'
     'bmZpZxImCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAlILZGlzcGxheU5hbWUSHwoKbm9kZV9jb3'
     'VudBgFIAEoBUgAUglub2RlQ291bnQSKwoQcHJvY2Vzc2luZ191bml0cxgGIAEoBUgAUg9wcm9j'
-    'ZXNzaW5nVW5pdHMSVAoFc3RhdGUYByABKA4yOS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW'
-    '5jZS52MS5JbnN0YW5jZVBhcnRpdGlvbi5TdGF0ZUID4EEDUgVzdGF0ZRJACgtjcmVhdGVfdGlt'
-    'ZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACg'
-    't1cGRhdGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKdXBk'
-    'YXRlVGltZRI4ChVyZWZlcmVuY2luZ19kYXRhYmFzZXMYCiADKAlCA+BBA1IUcmVmZXJlbmNpbm'
-    'dEYXRhYmFzZXMSNgoTcmVmZXJlbmNpbmdfYmFja3VwcxgLIAMoCUIFGAHgQQNSEnJlZmVyZW5j'
-    'aW5nQmFja3VwcxISCgRldGFnGAwgASgJUgRldGFnIjcKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0'
-    'lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACOqYB6kGiAQooc3Bhbm5lci5nb29nbGVh'
-    'cGlzLmNvbS9JbnN0YW5jZVBhcnRpdGlvbhJPcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy'
-    '97aW5zdGFuY2V9L2luc3RhbmNlUGFydGl0aW9ucy97aW5zdGFuY2VfcGFydGl0aW9ufSoSaW5z'
-    'dGFuY2VQYXJ0aXRpb25zMhFpbnN0YW5jZVBhcnRpdGlvbkISChBjb21wdXRlX2NhcGFjaXR5');
+    'ZXNzaW5nVW5pdHMSZwoSYXV0b3NjYWxpbmdfY29uZmlnGA0gASgLMjMuZ29vZ2xlLnNwYW5uZX'
+    'IuYWRtaW4uaW5zdGFuY2UudjEuQXV0b3NjYWxpbmdDb25maWdCA+BBAVIRYXV0b3NjYWxpbmdD'
+    'b25maWcSVAoFc3RhdGUYByABKA4yOS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS'
+    '5JbnN0YW5jZVBhcnRpdGlvbi5TdGF0ZUID4EEDUgVzdGF0ZRJACgtjcmVhdGVfdGltZRgIIAEo'
+    'CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACgt1cGRhdG'
+    'VfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKdXBkYXRlVGlt'
+    'ZRI4ChVyZWZlcmVuY2luZ19kYXRhYmFzZXMYCiADKAlCA+BBA1IUcmVmZXJlbmNpbmdEYXRhYm'
+    'FzZXMSNgoTcmVmZXJlbmNpbmdfYmFja3VwcxgLIAMoCUIFGAHgQQNSEnJlZmVyZW5jaW5nQmFj'
+    'a3VwcxISCgRldGFnGAwgASgJUgRldGFnIjcKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEA'
+    'ASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACOqYB6kGiAQooc3Bhbm5lci5nb29nbGVhcGlzLmNv'
+    'bS9JbnN0YW5jZVBhcnRpdGlvbhJPcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdG'
+    'FuY2V9L2luc3RhbmNlUGFydGl0aW9ucy97aW5zdGFuY2VfcGFydGl0aW9ufSoSaW5zdGFuY2VQ'
+    'YXJ0aXRpb25zMhFpbnN0YW5jZVBhcnRpdGlvbkISChBjb21wdXRlX2NhcGFjaXR5');
 
 @$core.Deprecated('Use createInstancePartitionMetadataDescriptor instead')
 const CreateInstancePartitionMetadata$json = {

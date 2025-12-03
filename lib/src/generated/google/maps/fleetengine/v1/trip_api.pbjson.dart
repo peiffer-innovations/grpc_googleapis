@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/fleetengine/v1/trip_api.proto
-//
-// @dart = 2.12
+// Generated from google/maps/fleetengine/v1/trip_api.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -82,7 +84,8 @@ const GetTripRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
-      '10': 'remainingWaypointsVersion'
+      '8': {'3': true},
+      '10': 'remainingWaypointsVersion',
     },
     {
       '1': 'route_format_type',
@@ -118,14 +121,14 @@ final $typed_data.Uint8List getTripRequestDescriptor = $convert.base64Decode(
     'Lmdvb2dsZWFwaXMuY29tL1RyaXBSBG5hbWUSMQoEdmlldxgLIAEoDjIdLm1hcHMuZmxlZXRlbm'
     'dpbmUudjEuVHJpcFZpZXdSBHZpZXcSXQodY3VycmVudF9yb3V0ZV9zZWdtZW50X3ZlcnNpb24Y'
     'BiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhpjdXJyZW50Um91dGVTZWdtZW50Vm'
-    'Vyc2lvbhJaChtyZW1haW5pbmdfd2F5cG9pbnRzX3ZlcnNpb24YByABKAsyGi5nb29nbGUucHJv'
-    'dG9idWYuVGltZXN0YW1wUhlyZW1haW5pbmdXYXlwb2ludHNWZXJzaW9uElMKEXJvdXRlX2Zvcm'
-    '1hdF90eXBlGAggASgOMicubWFwcy5mbGVldGVuZ2luZS52MS5Qb2x5bGluZUZvcm1hdFR5cGVS'
-    'D3JvdXRlRm9ybWF0VHlwZRJsCiVjdXJyZW50X3JvdXRlX3NlZ21lbnRfdHJhZmZpY192ZXJzaW'
-    '9uGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIhY3VycmVudFJvdXRlU2VnbWVu'
-    'dFRyYWZmaWNWZXJzaW9uEmUKIXJlbWFpbmluZ193YXlwb2ludHNfcm91dGVfdmVyc2lvbhgKIA'
-    'EoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSHnJlbWFpbmluZ1dheXBvaW50c1JvdXRl'
-    'VmVyc2lvbg==');
+    'Vyc2lvbhJeChtyZW1haW5pbmdfd2F5cG9pbnRzX3ZlcnNpb24YByABKAsyGi5nb29nbGUucHJv'
+    'dG9idWYuVGltZXN0YW1wQgIYAVIZcmVtYWluaW5nV2F5cG9pbnRzVmVyc2lvbhJTChFyb3V0ZV'
+    '9mb3JtYXRfdHlwZRgIIAEoDjInLm1hcHMuZmxlZXRlbmdpbmUudjEuUG9seWxpbmVGb3JtYXRU'
+    'eXBlUg9yb3V0ZUZvcm1hdFR5cGUSbAolY3VycmVudF9yb3V0ZV9zZWdtZW50X3RyYWZmaWNfdm'
+    'Vyc2lvbhgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSIWN1cnJlbnRSb3V0ZVNl'
+    'Z21lbnRUcmFmZmljVmVyc2lvbhJlCiFyZW1haW5pbmdfd2F5cG9pbnRzX3JvdXRlX3ZlcnNpb2'
+    '4YCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUh5yZW1haW5pbmdXYXlwb2ludHNS'
+    'b3V0ZVZlcnNpb24=');
 
 @$core.Deprecated('Use deleteTripRequestDescriptor instead')
 const DeleteTripRequest$json = {

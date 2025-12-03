@@ -1,20 +1,24 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/spanner/v1/query_plan.proto
-//
-// @dart = 2.12
+// Generated from google/spanner/v1/query_plan.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/struct.pb.dart'
+    as $0;
 
-import '../../protobuf/struct.pb.dart' as $0;
 import 'query_plan.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'query_plan.pbenum.dart';
 
@@ -26,54 +30,46 @@ class PlanNode_ChildLink extends $pb.GeneratedMessage {
     $core.String? type,
     $core.String? variable,
   }) {
-    final $result = create();
-    if (childIndex != null) {
-      $result.childIndex = childIndex;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    if (variable != null) {
-      $result.variable = variable;
-    }
-    return $result;
+    final result = create();
+    if (childIndex != null) result.childIndex = childIndex;
+    if (type != null) result.type = type;
+    if (variable != null) result.variable = variable;
+    return result;
   }
-  PlanNode_ChildLink._() : super();
-  factory PlanNode_ChildLink.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PlanNode_ChildLink.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PlanNode_ChildLink._();
+
+  factory PlanNode_ChildLink.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PlanNode_ChildLink.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PlanNode.ChildLink',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'childIndex', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'childIndex')
     ..aOS(2, _omitFieldNames ? '' : 'type')
     ..aOS(3, _omitFieldNames ? '' : 'variable')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PlanNode_ChildLink clone() => PlanNode_ChildLink()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PlanNode_ChildLink clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PlanNode_ChildLink copyWith(void Function(PlanNode_ChildLink) updates) =>
       super.copyWith((message) => updates(message as PlanNode_ChildLink))
           as PlanNode_ChildLink;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PlanNode_ChildLink create() => PlanNode_ChildLink._();
+  @$core.override
   PlanNode_ChildLink createEmptyInstance() => create();
-  static $pb.PbList<PlanNode_ChildLink> createRepeated() =>
-      $pb.PbList<PlanNode_ChildLink>();
   @$core.pragma('dart2js:noInline')
   static PlanNode_ChildLink getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PlanNode_ChildLink>(create);
@@ -83,14 +79,11 @@ class PlanNode_ChildLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get childIndex => $_getIZ(0);
   @$pb.TagNumber(1)
-  set childIndex($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set childIndex($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasChildIndex() => $_has(0);
   @$pb.TagNumber(1)
-  void clearChildIndex() => clearField(1);
+  void clearChildIndex() => $_clearField(1);
 
   /// The type of the link. For example, in Hash Joins this could be used to
   /// distinguish between the build child and the probe child, or in the case
@@ -99,34 +92,28 @@ class PlanNode_ChildLink extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get type => $_getSZ(1);
   @$pb.TagNumber(2)
-  set type($core.String v) {
-    $_setString(1, v);
-  }
-
+  set type($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearType() => clearField(2);
+  void clearType() => $_clearField(2);
 
-  /// Only present if the child node is [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] and corresponds
-  /// to an output variable of the parent node. The field carries the name of
-  /// the output variable.
-  /// For example, a `TableScan` operator that reads rows from a table will
-  /// have child links to the `SCALAR` nodes representing the output variables
-  /// created for each column that is read by the operator. The corresponding
-  /// `variable` fields will be set to the variable names assigned to the
-  /// columns.
+  /// Only present if the child node is
+  /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] and corresponds to an
+  /// output variable of the parent node. The field carries the name of the
+  /// output variable. For example, a `TableScan` operator that reads rows from
+  /// a table will have child links to the `SCALAR` nodes representing the
+  /// output variables created for each column that is read by the operator.
+  /// The corresponding `variable` fields will be set to the variable names
+  /// assigned to the columns.
   @$pb.TagNumber(3)
   $core.String get variable => $_getSZ(2);
   @$pb.TagNumber(3)
-  set variable($core.String v) {
-    $_setString(2, v);
-  }
-
+  set variable($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasVariable() => $_has(2);
   @$pb.TagNumber(3)
-  void clearVariable() => clearField(3);
+  void clearVariable() => $_clearField(3);
 }
 
 /// Condensed representation of a node and its subtree. Only present for
@@ -134,24 +121,22 @@ class PlanNode_ChildLink extends $pb.GeneratedMessage {
 class PlanNode_ShortRepresentation extends $pb.GeneratedMessage {
   factory PlanNode_ShortRepresentation({
     $core.String? description,
-    $core.Map<$core.String, $core.int>? subqueries,
+    $core.Iterable<$core.MapEntry<$core.String, $core.int>>? subqueries,
   }) {
-    final $result = create();
-    if (description != null) {
-      $result.description = description;
-    }
-    if (subqueries != null) {
-      $result.subqueries.addAll(subqueries);
-    }
-    return $result;
+    final result = create();
+    if (description != null) result.description = description;
+    if (subqueries != null) result.subqueries.addEntries(subqueries);
+    return result;
   }
-  PlanNode_ShortRepresentation._() : super();
-  factory PlanNode_ShortRepresentation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PlanNode_ShortRepresentation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PlanNode_ShortRepresentation._();
+
+  factory PlanNode_ShortRepresentation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PlanNode_ShortRepresentation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PlanNode.ShortRepresentation',
@@ -166,28 +151,23 @@ class PlanNode_ShortRepresentation extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.spanner.v1'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PlanNode_ShortRepresentation clone() =>
-      PlanNode_ShortRepresentation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PlanNode_ShortRepresentation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PlanNode_ShortRepresentation copyWith(
           void Function(PlanNode_ShortRepresentation) updates) =>
       super.copyWith(
               (message) => updates(message as PlanNode_ShortRepresentation))
           as PlanNode_ShortRepresentation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PlanNode_ShortRepresentation create() =>
       PlanNode_ShortRepresentation._();
+  @$core.override
   PlanNode_ShortRepresentation createEmptyInstance() => create();
-  static $pb.PbList<PlanNode_ShortRepresentation> createRepeated() =>
-      $pb.PbList<PlanNode_ShortRepresentation>();
   @$core.pragma('dart2js:noInline')
   static PlanNode_ShortRepresentation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PlanNode_ShortRepresentation>(create);
@@ -197,14 +177,11 @@ class PlanNode_ShortRepresentation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get description => $_getSZ(0);
   @$pb.TagNumber(1)
-  set description($core.String v) {
-    $_setString(0, v);
-  }
-
+  set description($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDescription() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDescription() => clearField(1);
+  void clearDescription() => $_clearField(1);
 
   /// A mapping of (subquery variable name) -> (subquery node id) for cases
   /// where the `description` string of this node references a `SCALAR`
@@ -212,10 +189,11 @@ class PlanNode_ShortRepresentation extends $pb.GeneratedMessage {
   /// referenced `SCALAR` subquery may not necessarily be a direct child of
   /// this node.
   @$pb.TagNumber(2)
-  $core.Map<$core.String, $core.int> get subqueries => $_getMap(1);
+  $pb.PbMap<$core.String, $core.int> get subqueries => $_getMap(1);
 }
 
-/// Node information for nodes appearing in a [QueryPlan.plan_nodes][google.spanner.v1.QueryPlan.plan_nodes].
+/// Node information for nodes appearing in a
+/// [QueryPlan.plan_nodes][google.spanner.v1.QueryPlan.plan_nodes].
 class PlanNode extends $pb.GeneratedMessage {
   factory PlanNode({
     $core.int? index,
@@ -226,51 +204,37 @@ class PlanNode extends $pb.GeneratedMessage {
     $0.Struct? metadata,
     $0.Struct? executionStats,
   }) {
-    final $result = create();
-    if (index != null) {
-      $result.index = index;
-    }
-    if (kind != null) {
-      $result.kind = kind;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (childLinks != null) {
-      $result.childLinks.addAll(childLinks);
-    }
-    if (shortRepresentation != null) {
-      $result.shortRepresentation = shortRepresentation;
-    }
-    if (metadata != null) {
-      $result.metadata = metadata;
-    }
-    if (executionStats != null) {
-      $result.executionStats = executionStats;
-    }
-    return $result;
+    final result = create();
+    if (index != null) result.index = index;
+    if (kind != null) result.kind = kind;
+    if (displayName != null) result.displayName = displayName;
+    if (childLinks != null) result.childLinks.addAll(childLinks);
+    if (shortRepresentation != null)
+      result.shortRepresentation = shortRepresentation;
+    if (metadata != null) result.metadata = metadata;
+    if (executionStats != null) result.executionStats = executionStats;
+    return result;
   }
-  PlanNode._() : super();
-  factory PlanNode.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PlanNode.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PlanNode._();
+
+  factory PlanNode.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PlanNode.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PlanNode',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'index', $pb.PbFieldType.O3)
-    ..e<PlanNode_Kind>(2, _omitFieldNames ? '' : 'kind', $pb.PbFieldType.OE,
-        defaultOrMaker: PlanNode_Kind.KIND_UNSPECIFIED,
-        valueOf: PlanNode_Kind.valueOf,
+    ..aI(1, _omitFieldNames ? '' : 'index')
+    ..aE<PlanNode_Kind>(2, _omitFieldNames ? '' : 'kind',
         enumValues: PlanNode_Kind.values)
     ..aOS(3, _omitFieldNames ? '' : 'displayName')
-    ..pc<PlanNode_ChildLink>(
-        4, _omitFieldNames ? '' : 'childLinks', $pb.PbFieldType.PM,
+    ..pPM<PlanNode_ChildLink>(4, _omitFieldNames ? '' : 'childLinks',
         subBuilder: PlanNode_ChildLink.create)
     ..aOM<PlanNode_ShortRepresentation>(
         5, _omitFieldNames ? '' : 'shortRepresentation',
@@ -281,108 +245,93 @@ class PlanNode extends $pb.GeneratedMessage {
         subBuilder: $0.Struct.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PlanNode clone() => PlanNode()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PlanNode clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PlanNode copyWith(void Function(PlanNode) updates) =>
       super.copyWith((message) => updates(message as PlanNode)) as PlanNode;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PlanNode create() => PlanNode._();
+  @$core.override
   PlanNode createEmptyInstance() => create();
-  static $pb.PbList<PlanNode> createRepeated() => $pb.PbList<PlanNode>();
   @$core.pragma('dart2js:noInline')
   static PlanNode getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PlanNode>(create);
   static PlanNode? _defaultInstance;
 
-  /// The `PlanNode`'s index in [node list][google.spanner.v1.QueryPlan.plan_nodes].
+  /// The `PlanNode`'s index in [node
+  /// list][google.spanner.v1.QueryPlan.plan_nodes].
   @$pb.TagNumber(1)
   $core.int get index => $_getIZ(0);
   @$pb.TagNumber(1)
-  set index($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set index($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasIndex() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIndex() => clearField(1);
+  void clearIndex() => $_clearField(1);
 
   /// Used to determine the type of node. May be needed for visualizing
   /// different kinds of nodes differently. For example, If the node is a
-  /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] node, it will have a condensed representation
-  /// which can be used to directly embed a description of the node in its
-  /// parent.
+  /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] node, it will have a
+  /// condensed representation which can be used to directly embed a description
+  /// of the node in its parent.
   @$pb.TagNumber(2)
   PlanNode_Kind get kind => $_getN(1);
   @$pb.TagNumber(2)
-  set kind(PlanNode_Kind v) {
-    setField(2, v);
-  }
-
+  set kind(PlanNode_Kind value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasKind() => $_has(1);
   @$pb.TagNumber(2)
-  void clearKind() => clearField(2);
+  void clearKind() => $_clearField(2);
 
   /// The display name for the node.
   @$pb.TagNumber(3)
   $core.String get displayName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set displayName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set displayName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDisplayName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDisplayName() => clearField(3);
+  void clearDisplayName() => $_clearField(3);
 
   /// List of child node `index`es and their relationship to this parent.
   @$pb.TagNumber(4)
-  $core.List<PlanNode_ChildLink> get childLinks => $_getList(3);
+  $pb.PbList<PlanNode_ChildLink> get childLinks => $_getList(3);
 
-  /// Condensed representation for [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] nodes.
+  /// Condensed representation for
+  /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] nodes.
   @$pb.TagNumber(5)
   PlanNode_ShortRepresentation get shortRepresentation => $_getN(4);
   @$pb.TagNumber(5)
-  set shortRepresentation(PlanNode_ShortRepresentation v) {
-    setField(5, v);
-  }
-
+  set shortRepresentation(PlanNode_ShortRepresentation value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasShortRepresentation() => $_has(4);
   @$pb.TagNumber(5)
-  void clearShortRepresentation() => clearField(5);
+  void clearShortRepresentation() => $_clearField(5);
   @$pb.TagNumber(5)
   PlanNode_ShortRepresentation ensureShortRepresentation() => $_ensure(4);
 
-  ///  Attributes relevant to the node contained in a group of key-value pairs.
-  ///  For example, a Parameter Reference node could have the following
-  ///  information in its metadata:
+  /// Attributes relevant to the node contained in a group of key-value pairs.
+  /// For example, a Parameter Reference node could have the following
+  /// information in its metadata:
   ///
-  ///      {
-  ///        "parameter_reference": "param1",
-  ///        "parameter_type": "array"
-  ///      }
+  ///     {
+  ///       "parameter_reference": "param1",
+  ///       "parameter_type": "array"
+  ///     }
   @$pb.TagNumber(6)
   $0.Struct get metadata => $_getN(5);
   @$pb.TagNumber(6)
-  set metadata($0.Struct v) {
-    setField(6, v);
-  }
-
+  set metadata($0.Struct value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasMetadata() => $_has(5);
   @$pb.TagNumber(6)
-  void clearMetadata() => clearField(6);
+  void clearMetadata() => $_clearField(6);
   @$pb.TagNumber(6)
   $0.Struct ensureMetadata() => $_ensure(5);
 
@@ -393,74 +342,210 @@ class PlanNode extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $0.Struct get executionStats => $_getN(6);
   @$pb.TagNumber(7)
-  set executionStats($0.Struct v) {
-    setField(7, v);
-  }
-
+  set executionStats($0.Struct value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasExecutionStats() => $_has(6);
   @$pb.TagNumber(7)
-  void clearExecutionStats() => clearField(7);
+  void clearExecutionStats() => $_clearField(7);
   @$pb.TagNumber(7)
   $0.Struct ensureExecutionStats() => $_ensure(6);
+}
+
+/// Recommendation to add new indexes to run queries more efficiently.
+class QueryAdvisorResult_IndexAdvice extends $pb.GeneratedMessage {
+  factory QueryAdvisorResult_IndexAdvice({
+    $core.Iterable<$core.String>? ddl,
+    $core.double? improvementFactor,
+  }) {
+    final result = create();
+    if (ddl != null) result.ddl.addAll(ddl);
+    if (improvementFactor != null) result.improvementFactor = improvementFactor;
+    return result;
+  }
+
+  QueryAdvisorResult_IndexAdvice._();
+
+  factory QueryAdvisorResult_IndexAdvice.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QueryAdvisorResult_IndexAdvice.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'QueryAdvisorResult.IndexAdvice',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'ddl')
+    ..aD(2, _omitFieldNames ? '' : 'improvementFactor')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryAdvisorResult_IndexAdvice clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryAdvisorResult_IndexAdvice copyWith(
+          void Function(QueryAdvisorResult_IndexAdvice) updates) =>
+      super.copyWith(
+              (message) => updates(message as QueryAdvisorResult_IndexAdvice))
+          as QueryAdvisorResult_IndexAdvice;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static QueryAdvisorResult_IndexAdvice create() =>
+      QueryAdvisorResult_IndexAdvice._();
+  @$core.override
+  QueryAdvisorResult_IndexAdvice createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static QueryAdvisorResult_IndexAdvice getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QueryAdvisorResult_IndexAdvice>(create);
+  static QueryAdvisorResult_IndexAdvice? _defaultInstance;
+
+  /// Optional. DDL statements to add new indexes that will improve the query.
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get ddl => $_getList(0);
+
+  /// Optional. Estimated latency improvement factor. For example if the query
+  /// currently takes 500 ms to run and the estimated latency with new indexes
+  /// is 100 ms this field will be 5.
+  @$pb.TagNumber(2)
+  $core.double get improvementFactor => $_getN(1);
+  @$pb.TagNumber(2)
+  set improvementFactor($core.double value) => $_setDouble(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasImprovementFactor() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearImprovementFactor() => $_clearField(2);
+}
+
+/// Output of query advisor analysis.
+class QueryAdvisorResult extends $pb.GeneratedMessage {
+  factory QueryAdvisorResult({
+    $core.Iterable<QueryAdvisorResult_IndexAdvice>? indexAdvice,
+  }) {
+    final result = create();
+    if (indexAdvice != null) result.indexAdvice.addAll(indexAdvice);
+    return result;
+  }
+
+  QueryAdvisorResult._();
+
+  factory QueryAdvisorResult.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QueryAdvisorResult.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'QueryAdvisorResult',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
+      createEmptyInstance: create)
+    ..pPM<QueryAdvisorResult_IndexAdvice>(
+        1, _omitFieldNames ? '' : 'indexAdvice',
+        subBuilder: QueryAdvisorResult_IndexAdvice.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryAdvisorResult clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryAdvisorResult copyWith(void Function(QueryAdvisorResult) updates) =>
+      super.copyWith((message) => updates(message as QueryAdvisorResult))
+          as QueryAdvisorResult;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static QueryAdvisorResult create() => QueryAdvisorResult._();
+  @$core.override
+  QueryAdvisorResult createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static QueryAdvisorResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QueryAdvisorResult>(create);
+  static QueryAdvisorResult? _defaultInstance;
+
+  /// Optional. Index Recommendation for a query. This is an optional field and
+  /// the recommendation will only be available when the recommendation
+  /// guarantees significant improvement in query performance.
+  @$pb.TagNumber(1)
+  $pb.PbList<QueryAdvisorResult_IndexAdvice> get indexAdvice => $_getList(0);
 }
 
 /// Contains an ordered list of nodes appearing in the query plan.
 class QueryPlan extends $pb.GeneratedMessage {
   factory QueryPlan({
     $core.Iterable<PlanNode>? planNodes,
+    QueryAdvisorResult? queryAdvice,
   }) {
-    final $result = create();
-    if (planNodes != null) {
-      $result.planNodes.addAll(planNodes);
-    }
-    return $result;
+    final result = create();
+    if (planNodes != null) result.planNodes.addAll(planNodes);
+    if (queryAdvice != null) result.queryAdvice = queryAdvice;
+    return result;
   }
-  QueryPlan._() : super();
-  factory QueryPlan.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory QueryPlan.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  QueryPlan._();
+
+  factory QueryPlan.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QueryPlan.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'QueryPlan',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.spanner.v1'),
       createEmptyInstance: create)
-    ..pc<PlanNode>(1, _omitFieldNames ? '' : 'planNodes', $pb.PbFieldType.PM,
+    ..pPM<PlanNode>(1, _omitFieldNames ? '' : 'planNodes',
         subBuilder: PlanNode.create)
+    ..aOM<QueryAdvisorResult>(2, _omitFieldNames ? '' : 'queryAdvice',
+        subBuilder: QueryAdvisorResult.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  QueryPlan clone() => QueryPlan()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryPlan clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   QueryPlan copyWith(void Function(QueryPlan) updates) =>
       super.copyWith((message) => updates(message as QueryPlan)) as QueryPlan;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static QueryPlan create() => QueryPlan._();
+  @$core.override
   QueryPlan createEmptyInstance() => create();
-  static $pb.PbList<QueryPlan> createRepeated() => $pb.PbList<QueryPlan>();
   @$core.pragma('dart2js:noInline')
   static QueryPlan getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QueryPlan>(create);
   static QueryPlan? _defaultInstance;
 
   /// The nodes in the query plan. Plan nodes are returned in pre-order starting
-  /// with the plan root. Each [PlanNode][google.spanner.v1.PlanNode]'s `id` corresponds to its index in
-  /// `plan_nodes`.
+  /// with the plan root. Each [PlanNode][google.spanner.v1.PlanNode]'s `id`
+  /// corresponds to its index in `plan_nodes`.
   @$pb.TagNumber(1)
-  $core.List<PlanNode> get planNodes => $_getList(0);
+  $pb.PbList<PlanNode> get planNodes => $_getList(0);
+
+  /// Optional. The advise/recommendations for a query. Currently this field will
+  /// be serving index recommendations for a query.
+  @$pb.TagNumber(2)
+  QueryAdvisorResult get queryAdvice => $_getN(1);
+  @$pb.TagNumber(2)
+  set queryAdvice(QueryAdvisorResult value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasQueryAdvice() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearQueryAdvice() => $_clearField(2);
+  @$pb.TagNumber(2)
+  QueryAdvisorResult ensureQueryAdvice() => $_ensure(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

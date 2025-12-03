@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/appengine/v1beta/service.proto
-//
-// @dart = 2.12
+// Generated from google/appengine/v1beta/service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,6 +16,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'network_settings.pb.dart' as $0;
 import 'service.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'service.pbenum.dart';
 
@@ -32,28 +35,22 @@ class Service extends $pb.GeneratedMessage {
     TrafficSplit? split,
     $0.NetworkSettings? networkSettings,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    if (split != null) {
-      $result.split = split;
-    }
-    if (networkSettings != null) {
-      $result.networkSettings = networkSettings;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (id != null) result.id = id;
+    if (split != null) result.split = split;
+    if (networkSettings != null) result.networkSettings = networkSettings;
+    return result;
   }
-  Service._() : super();
-  factory Service.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service._();
+
+  factory Service.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service',
@@ -68,72 +65,60 @@ class Service extends $pb.GeneratedMessage {
         subBuilder: $0.NetworkSettings.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service clone() => Service()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service copyWith(void Function(Service) updates) =>
       super.copyWith((message) => updates(message as Service)) as Service;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service create() => Service._();
+  @$core.override
   Service createEmptyInstance() => create();
-  static $pb.PbList<Service> createRepeated() => $pb.PbList<Service>();
   @$core.pragma('dart2js:noInline')
   static Service getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Service>(create);
   static Service? _defaultInstance;
 
-  ///  Full path to the Service resource in the API.
-  ///  Example: `apps/myapp/services/default`.
+  /// Full path to the Service resource in the API.
+  /// Example: `apps/myapp/services/default`.
   ///
-  ///  @OutputOnly
+  /// @OutputOnly
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  ///  Relative name of the service within the application.
-  ///  Example: `default`.
+  /// Relative name of the service within the application.
+  /// Example: `default`.
   ///
-  ///  @OutputOnly
+  /// @OutputOnly
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) {
-    $_setString(1, v);
-  }
-
+  set id($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
+  void clearId() => $_clearField(2);
 
   /// Mapping that defines fractional HTTP traffic diversion to
   /// different versions within the service.
   @$pb.TagNumber(3)
   TrafficSplit get split => $_getN(2);
   @$pb.TagNumber(3)
-  set split(TrafficSplit v) {
-    setField(3, v);
-  }
-
+  set split(TrafficSplit value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasSplit() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSplit() => clearField(3);
+  void clearSplit() => $_clearField(3);
   @$pb.TagNumber(3)
   TrafficSplit ensureSplit() => $_ensure(2);
 
@@ -141,14 +126,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $0.NetworkSettings get networkSettings => $_getN(3);
   @$pb.TagNumber(6)
-  set networkSettings($0.NetworkSettings v) {
-    setField(6, v);
-  }
-
+  set networkSettings($0.NetworkSettings value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasNetworkSettings() => $_has(3);
   @$pb.TagNumber(6)
-  void clearNetworkSettings() => clearField(6);
+  void clearNetworkSettings() => $_clearField(6);
   @$pb.TagNumber(6)
   $0.NetworkSettings ensureNetworkSettings() => $_ensure(3);
 }
@@ -158,34 +140,29 @@ class Service extends $pb.GeneratedMessage {
 class TrafficSplit extends $pb.GeneratedMessage {
   factory TrafficSplit({
     TrafficSplit_ShardBy? shardBy,
-    $core.Map<$core.String, $core.double>? allocations,
+    $core.Iterable<$core.MapEntry<$core.String, $core.double>>? allocations,
   }) {
-    final $result = create();
-    if (shardBy != null) {
-      $result.shardBy = shardBy;
-    }
-    if (allocations != null) {
-      $result.allocations.addAll(allocations);
-    }
-    return $result;
+    final result = create();
+    if (shardBy != null) result.shardBy = shardBy;
+    if (allocations != null) result.allocations.addEntries(allocations);
+    return result;
   }
-  TrafficSplit._() : super();
-  factory TrafficSplit.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TrafficSplit.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TrafficSplit._();
+
+  factory TrafficSplit.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TrafficSplit.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TrafficSplit',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.appengine.v1beta'),
       createEmptyInstance: create)
-    ..e<TrafficSplit_ShardBy>(
-        1, _omitFieldNames ? '' : 'shardBy', $pb.PbFieldType.OE,
-        defaultOrMaker: TrafficSplit_ShardBy.UNSPECIFIED,
-        valueOf: TrafficSplit_ShardBy.valueOf,
+    ..aE<TrafficSplit_ShardBy>(1, _omitFieldNames ? '' : 'shardBy',
         enumValues: TrafficSplit_ShardBy.values)
     ..m<$core.String, $core.double>(2, _omitFieldNames ? '' : 'allocations',
         entryClassName: 'TrafficSplit.AllocationsEntry',
@@ -194,24 +171,20 @@ class TrafficSplit extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.appengine.v1beta'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TrafficSplit clone() => TrafficSplit()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TrafficSplit clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TrafficSplit copyWith(void Function(TrafficSplit) updates) =>
       super.copyWith((message) => updates(message as TrafficSplit))
           as TrafficSplit;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TrafficSplit create() => TrafficSplit._();
+  @$core.override
   TrafficSplit createEmptyInstance() => create();
-  static $pb.PbList<TrafficSplit> createRepeated() =>
-      $pb.PbList<TrafficSplit>();
   @$core.pragma('dart2js:noInline')
   static TrafficSplit getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TrafficSplit>(create);
@@ -223,14 +196,11 @@ class TrafficSplit extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   TrafficSplit_ShardBy get shardBy => $_getN(0);
   @$pb.TagNumber(1)
-  set shardBy(TrafficSplit_ShardBy v) {
-    setField(1, v);
-  }
-
+  set shardBy(TrafficSplit_ShardBy value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasShardBy() => $_has(0);
   @$pb.TagNumber(1)
-  void clearShardBy() => clearField(1);
+  void clearShardBy() => $_clearField(1);
 
   /// Mapping from version IDs within the service to fractional
   /// (0.000, 1] allocations of traffic for that version. Each version can
@@ -241,9 +211,10 @@ class TrafficSplit extends $pb.GeneratedMessage {
   /// Up to two decimal place precision is supported for IP-based splits and
   /// up to three decimal places is supported for cookie-based splits.
   @$pb.TagNumber(2)
-  $core.Map<$core.String, $core.double> get allocations => $_getMap(1);
+  $pb.PbMap<$core.String, $core.double> get allocations => $_getMap(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

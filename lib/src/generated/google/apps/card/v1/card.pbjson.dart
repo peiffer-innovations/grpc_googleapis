@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/apps/card/v1/card.proto
-//
-// @dart = 2.12
+// Generated from google/apps/card/v1/card.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -79,6 +81,7 @@ const Card$json = {
     Card_CardHeader$json,
     Card_Section$json,
     Card_CardAction$json,
+    Card_NestedWidget$json,
     Card_CardFixedFooter$json
   ],
   '4': [Card_DividerStyle$json, Card_DisplayStyle$json],
@@ -124,6 +127,14 @@ const Card_Section$json = {
       '5': 5,
       '10': 'uncollapsibleWidgetsCount'
     },
+    {
+      '1': 'collapse_control',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.CollapseControl',
+      '10': 'collapseControl'
+    },
   ],
 };
 
@@ -140,6 +151,43 @@ const Card_CardAction$json = {
       '6': '.google.apps.card.v1.OnClick',
       '10': 'onClick'
     },
+  ],
+};
+
+@$core.Deprecated('Use cardDescriptor instead')
+const Card_NestedWidget$json = {
+  '1': 'NestedWidget',
+  '2': [
+    {
+      '1': 'text_paragraph',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.TextParagraph',
+      '9': 0,
+      '10': 'textParagraph'
+    },
+    {
+      '1': 'button_list',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.ButtonList',
+      '9': 0,
+      '10': 'buttonList'
+    },
+    {
+      '1': 'image',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.Image',
+      '9': 0,
+      '10': 'image'
+    },
+  ],
+  '8': [
+    {'1': 'data'},
   ],
 };
 
@@ -201,18 +249,23 @@ final $typed_data.Uint8List cardDescriptor = $convert.base64Decode(
     'CkNhcmRIZWFkZXISFAoFdGl0bGUYASABKAlSBXRpdGxlEhoKCHN1YnRpdGxlGAIgASgJUghzdW'
     'J0aXRsZRJECgppbWFnZV90eXBlGAMgASgOMiUuZ29vZ2xlLmFwcHMuY2FyZC52MS5XaWRnZXQu'
     'SW1hZ2VUeXBlUglpbWFnZVR5cGUSGwoJaW1hZ2VfdXJsGAQgASgJUghpbWFnZVVybBIkCg5pbW'
-    'FnZV9hbHRfdGV4dBgFIAEoCVIMaW1hZ2VBbHRUZXh0GroBCgdTZWN0aW9uEhYKBmhlYWRlchgB'
+    'FnZV9hbHRfdGV4dBgFIAEoCVIMaW1hZ2VBbHRUZXh0GosCCgdTZWN0aW9uEhYKBmhlYWRlchgB'
     'IAEoCVIGaGVhZGVyEjUKB3dpZGdldHMYAiADKAsyGy5nb29nbGUuYXBwcy5jYXJkLnYxLldpZG'
     'dldFIHd2lkZ2V0cxIgCgtjb2xsYXBzaWJsZRgFIAEoCFILY29sbGFwc2libGUSPgobdW5jb2xs'
-    'YXBzaWJsZV93aWRnZXRzX2NvdW50GAYgASgFUhl1bmNvbGxhcHNpYmxlV2lkZ2V0c0NvdW50Gm'
-    'gKCkNhcmRBY3Rpb24SIQoMYWN0aW9uX2xhYmVsGAEgASgJUgthY3Rpb25MYWJlbBI3Cghvbl9j'
-    'bGljaxgCIAEoCzIcLmdvb2dsZS5hcHBzLmNhcmQudjEuT25DbGlja1IHb25DbGljaxqdAQoPQ2'
-    'FyZEZpeGVkRm9vdGVyEkIKDnByaW1hcnlfYnV0dG9uGAEgASgLMhsuZ29vZ2xlLmFwcHMuY2Fy'
-    'ZC52MS5CdXR0b25SDXByaW1hcnlCdXR0b24SRgoQc2Vjb25kYXJ5X2J1dHRvbhgCIAEoCzIbLm'
-    'dvb2dsZS5hcHBzLmNhcmQudjEuQnV0dG9uUg9zZWNvbmRhcnlCdXR0b24iUAoMRGl2aWRlclN0'
-    'eWxlEh0KGURJVklERVJfU1RZTEVfVU5TUEVDSUZJRUQQABIRCg1TT0xJRF9ESVZJREVSEAESDg'
-    'oKTk9fRElWSURFUhACIkQKDERpc3BsYXlTdHlsZRIdChlESVNQTEFZX1NUWUxFX1VOU1BFQ0lG'
-    'SUVEEAASCAoEUEVFSxABEgsKB1JFUExBQ0UQAg==');
+    'YXBzaWJsZV93aWRnZXRzX2NvdW50GAYgASgFUhl1bmNvbGxhcHNpYmxlV2lkZ2V0c0NvdW50Ek'
+    '8KEGNvbGxhcHNlX2NvbnRyb2wYCCABKAsyJC5nb29nbGUuYXBwcy5jYXJkLnYxLkNvbGxhcHNl'
+    'Q29udHJvbFIPY29sbGFwc2VDb250cm9sGmgKCkNhcmRBY3Rpb24SIQoMYWN0aW9uX2xhYmVsGA'
+    'EgASgJUgthY3Rpb25MYWJlbBI3Cghvbl9jbGljaxgCIAEoCzIcLmdvb2dsZS5hcHBzLmNhcmQu'
+    'djEuT25DbGlja1IHb25DbGljaxrbAQoMTmVzdGVkV2lkZ2V0EksKDnRleHRfcGFyYWdyYXBoGA'
+    'EgASgLMiIuZ29vZ2xlLmFwcHMuY2FyZC52MS5UZXh0UGFyYWdyYXBoSABSDXRleHRQYXJhZ3Jh'
+    'cGgSQgoLYnV0dG9uX2xpc3QYAyABKAsyHy5nb29nbGUuYXBwcy5jYXJkLnYxLkJ1dHRvbkxpc3'
+    'RIAFIKYnV0dG9uTGlzdBIyCgVpbWFnZRgKIAEoCzIaLmdvb2dsZS5hcHBzLmNhcmQudjEuSW1h'
+    'Z2VIAFIFaW1hZ2VCBgoEZGF0YRqdAQoPQ2FyZEZpeGVkRm9vdGVyEkIKDnByaW1hcnlfYnV0dG'
+    '9uGAEgASgLMhsuZ29vZ2xlLmFwcHMuY2FyZC52MS5CdXR0b25SDXByaW1hcnlCdXR0b24SRgoQ'
+    'c2Vjb25kYXJ5X2J1dHRvbhgCIAEoCzIbLmdvb2dsZS5hcHBzLmNhcmQudjEuQnV0dG9uUg9zZW'
+    'NvbmRhcnlCdXR0b24iUAoMRGl2aWRlclN0eWxlEh0KGURJVklERVJfU1RZTEVfVU5TUEVDSUZJ'
+    'RUQQABIRCg1TT0xJRF9ESVZJREVSEAESDgoKTk9fRElWSURFUhACIkQKDERpc3BsYXlTdHlsZR'
+    'IdChlESVNQTEFZX1NUWUxFX1VOU1BFQ0lGSUVEEAASCAoEUEVFSxABEgsKB1JFUExBQ0UQAg==');
 
 @$core.Deprecated('Use widgetDescriptor instead')
 const Widget$json = {
@@ -309,6 +362,24 @@ const Widget$json = {
       '10': 'columns'
     },
     {
+      '1': 'carousel',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.Carousel',
+      '9': 0,
+      '10': 'carousel'
+    },
+    {
+      '1': 'chip_list',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.ChipList',
+      '9': 0,
+      '10': 'chipList'
+    },
+    {
       '1': 'horizontal_alignment',
       '3': 8,
       '4': 1,
@@ -317,7 +388,11 @@ const Widget$json = {
       '10': 'horizontalAlignment'
     },
   ],
-  '4': [Widget_ImageType$json, Widget_HorizontalAlignment$json],
+  '4': [
+    Widget_ImageType$json,
+    Widget_HorizontalAlignment$json,
+    Widget_VerticalAlignment$json
+  ],
   '8': [
     {'1': 'data'},
   ],
@@ -343,6 +418,17 @@ const Widget_HorizontalAlignment$json = {
   ],
 };
 
+@$core.Deprecated('Use widgetDescriptor instead')
+const Widget_VerticalAlignment$json = {
+  '1': 'VerticalAlignment',
+  '2': [
+    {'1': 'VERTICAL_ALIGNMENT_UNSPECIFIED', '2': 0},
+    {'1': 'TOP', '2': 1},
+    {'1': 'MIDDLE', '2': 2},
+    {'1': 'BOTTOM', '2': 3},
+  ],
+};
+
 /// Descriptor for `Widget`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List widgetDescriptor = $convert.base64Decode(
     'CgZXaWRnZXQSSwoOdGV4dF9wYXJhZ3JhcGgYASABKAsyIi5nb29nbGUuYXBwcy5jYXJkLnYxLl'
@@ -357,23 +443,50 @@ final $typed_data.Uint8List widgetDescriptor = $convert.base64Decode(
     'ltZVBpY2tlchI4CgdkaXZpZGVyGAkgASgLMhwuZ29vZ2xlLmFwcHMuY2FyZC52MS5EaXZpZGVy'
     'SABSB2RpdmlkZXISLwoEZ3JpZBgKIAEoCzIZLmdvb2dsZS5hcHBzLmNhcmQudjEuR3JpZEgAUg'
     'RncmlkEjgKB2NvbHVtbnMYCyABKAsyHC5nb29nbGUuYXBwcy5jYXJkLnYxLkNvbHVtbnNIAFIH'
-    'Y29sdW1ucxJiChRob3Jpem9udGFsX2FsaWdubWVudBgIIAEoDjIvLmdvb2dsZS5hcHBzLmNhcm'
-    'QudjEuV2lkZ2V0Lkhvcml6b250YWxBbGlnbm1lbnRSE2hvcml6b250YWxBbGlnbm1lbnQiIwoJ'
-    'SW1hZ2VUeXBlEgoKBlNRVUFSRRAAEgoKBkNJUkNMRRABIlsKE0hvcml6b250YWxBbGlnbm1lbn'
-    'QSJAogSE9SSVpPTlRBTF9BTElHTk1FTlRfVU5TUEVDSUZJRUQQABIJCgVTVEFSVBABEgoKBkNF'
-    'TlRFUhACEgcKA0VORBADQgYKBGRhdGE=');
+    'Y29sdW1ucxI7CghjYXJvdXNlbBgNIAEoCzIdLmdvb2dsZS5hcHBzLmNhcmQudjEuQ2Fyb3VzZW'
+    'xIAFIIY2Fyb3VzZWwSPAoJY2hpcF9saXN0GA4gASgLMh0uZ29vZ2xlLmFwcHMuY2FyZC52MS5D'
+    'aGlwTGlzdEgAUghjaGlwTGlzdBJiChRob3Jpem9udGFsX2FsaWdubWVudBgIIAEoDjIvLmdvb2'
+    'dsZS5hcHBzLmNhcmQudjEuV2lkZ2V0Lkhvcml6b250YWxBbGlnbm1lbnRSE2hvcml6b250YWxB'
+    'bGlnbm1lbnQiIwoJSW1hZ2VUeXBlEgoKBlNRVUFSRRAAEgoKBkNJUkNMRRABIlsKE0hvcml6b2'
+    '50YWxBbGlnbm1lbnQSJAogSE9SSVpPTlRBTF9BTElHTk1FTlRfVU5TUEVDSUZJRUQQABIJCgVT'
+    'VEFSVBABEgoKBkNFTlRFUhACEgcKA0VORBADIlgKEVZlcnRpY2FsQWxpZ25tZW50EiIKHlZFUl'
+    'RJQ0FMX0FMSUdOTUVOVF9VTlNQRUNJRklFRBAAEgcKA1RPUBABEgoKBk1JRERMRRACEgoKBkJP'
+    'VFRPTRADQgYKBGRhdGE=');
 
 @$core.Deprecated('Use textParagraphDescriptor instead')
 const TextParagraph$json = {
   '1': 'TextParagraph',
   '2': [
     {'1': 'text', '3': 1, '4': 1, '5': 9, '10': 'text'},
+    {'1': 'max_lines', '3': 2, '4': 1, '5': 5, '10': 'maxLines'},
+    {
+      '1': 'text_syntax',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.google.apps.card.v1.TextParagraph.TextSyntax',
+      '10': 'textSyntax'
+    },
+  ],
+  '4': [TextParagraph_TextSyntax$json],
+};
+
+@$core.Deprecated('Use textParagraphDescriptor instead')
+const TextParagraph_TextSyntax$json = {
+  '1': 'TextSyntax',
+  '2': [
+    {'1': 'TEXT_SYNTAX_UNSPECIFIED', '2': 0},
+    {'1': 'HTML', '2': 1},
+    {'1': 'MARKDOWN', '2': 2},
   ],
 };
 
 /// Descriptor for `TextParagraph`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List textParagraphDescriptor =
-    $convert.base64Decode('Cg1UZXh0UGFyYWdyYXBoEhIKBHRleHQYASABKAlSBHRleHQ=');
+final $typed_data.Uint8List textParagraphDescriptor = $convert.base64Decode(
+    'Cg1UZXh0UGFyYWdyYXBoEhIKBHRleHQYASABKAlSBHRleHQSGwoJbWF4X2xpbmVzGAIgASgFUg'
+    'htYXhMaW5lcxJOCgt0ZXh0X3N5bnRheBgEIAEoDjItLmdvb2dsZS5hcHBzLmNhcmQudjEuVGV4'
+    'dFBhcmFncmFwaC5UZXh0U3ludGF4Ugp0ZXh0U3ludGF4IkEKClRleHRTeW50YXgSGwoXVEVYVF'
+    '9TWU5UQVhfVU5TUEVDSUZJRUQQABIICgRIVE1MEAESDAoITUFSS0RPV04QAg==');
 
 @$core.Deprecated('Use imageDescriptor instead')
 const Image$json = {
@@ -428,10 +541,42 @@ const DecoratedText$json = {
       '6': '.google.apps.card.v1.Icon',
       '10': 'startIcon'
     },
+    {
+      '1': 'start_icon_vertical_alignment',
+      '3': 13,
+      '4': 1,
+      '5': 14,
+      '6': '.google.apps.card.v1.Widget.VerticalAlignment',
+      '10': 'startIconVerticalAlignment'
+    },
     {'1': 'top_label', '3': 3, '4': 1, '5': 9, '10': 'topLabel'},
+    {
+      '1': 'top_label_text',
+      '3': 17,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.TextParagraph',
+      '10': 'topLabelText'
+    },
     {'1': 'text', '3': 4, '4': 1, '5': 9, '10': 'text'},
+    {
+      '1': 'content_text',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.TextParagraph',
+      '10': 'contentText'
+    },
     {'1': 'wrap_text', '3': 5, '4': 1, '5': 8, '10': 'wrapText'},
     {'1': 'bottom_label', '3': 6, '4': 1, '5': 9, '10': 'bottomLabel'},
+    {
+      '1': 'bottom_label_text',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.TextParagraph',
+      '10': 'bottomLabelText'
+    },
     {
       '1': 'on_click',
       '3': 7,
@@ -515,19 +660,25 @@ const DecoratedText_SwitchControl_ControlType$json = {
 final $typed_data.Uint8List decoratedTextDescriptor = $convert.base64Decode(
     'Cg1EZWNvcmF0ZWRUZXh0EjEKBGljb24YASABKAsyGS5nb29nbGUuYXBwcy5jYXJkLnYxLkljb2'
     '5CAhgBUgRpY29uEjgKCnN0YXJ0X2ljb24YDCABKAsyGS5nb29nbGUuYXBwcy5jYXJkLnYxLklj'
-    'b25SCXN0YXJ0SWNvbhIbCgl0b3BfbGFiZWwYAyABKAlSCHRvcExhYmVsEhIKBHRleHQYBCABKA'
-    'lSBHRleHQSGwoJd3JhcF90ZXh0GAUgASgIUgh3cmFwVGV4dBIhCgxib3R0b21fbGFiZWwYBiAB'
-    'KAlSC2JvdHRvbUxhYmVsEjcKCG9uX2NsaWNrGAcgASgLMhwuZ29vZ2xlLmFwcHMuY2FyZC52MS'
-    '5PbkNsaWNrUgdvbkNsaWNrEjUKBmJ1dHRvbhgIIAEoCzIbLmdvb2dsZS5hcHBzLmNhcmQudjEu'
-    'QnV0dG9uSABSBmJ1dHRvbhJZCg5zd2l0Y2hfY29udHJvbBgJIAEoCzIwLmdvb2dsZS5hcHBzLm'
-    'NhcmQudjEuRGVjb3JhdGVkVGV4dC5Td2l0Y2hDb250cm9sSABSDXN3aXRjaENvbnRyb2wSNgoI'
-    'ZW5kX2ljb24YCyABKAsyGS5nb29nbGUuYXBwcy5jYXJkLnYxLkljb25IAFIHZW5kSWNvbhq1Ag'
-    'oNU3dpdGNoQ29udHJvbBISCgRuYW1lGAEgASgJUgRuYW1lEhQKBXZhbHVlGAIgASgJUgV2YWx1'
-    'ZRIaCghzZWxlY3RlZBgDIAEoCFIIc2VsZWN0ZWQSRQoQb25fY2hhbmdlX2FjdGlvbhgEIAEoCz'
-    'IbLmdvb2dsZS5hcHBzLmNhcmQudjEuQWN0aW9uUg5vbkNoYW5nZUFjdGlvbhJfCgxjb250cm9s'
-    'X3R5cGUYBSABKA4yPC5nb29nbGUuYXBwcy5jYXJkLnYxLkRlY29yYXRlZFRleHQuU3dpdGNoQ2'
-    '9udHJvbC5Db250cm9sVHlwZVILY29udHJvbFR5cGUiNgoLQ29udHJvbFR5cGUSCgoGU1dJVENI'
-    'EAASDAoIQ0hFQ0tCT1gQARINCglDSEVDS19CT1gQAkIJCgdjb250cm9s');
+    'b25SCXN0YXJ0SWNvbhJwCh1zdGFydF9pY29uX3ZlcnRpY2FsX2FsaWdubWVudBgNIAEoDjItLm'
+    'dvb2dsZS5hcHBzLmNhcmQudjEuV2lkZ2V0LlZlcnRpY2FsQWxpZ25tZW50UhpzdGFydEljb25W'
+    'ZXJ0aWNhbEFsaWdubWVudBIbCgl0b3BfbGFiZWwYAyABKAlSCHRvcExhYmVsEkgKDnRvcF9sYW'
+    'JlbF90ZXh0GBEgASgLMiIuZ29vZ2xlLmFwcHMuY2FyZC52MS5UZXh0UGFyYWdyYXBoUgx0b3BM'
+    'YWJlbFRleHQSEgoEdGV4dBgEIAEoCVIEdGV4dBJFCgxjb250ZW50X3RleHQYEiABKAsyIi5nb2'
+    '9nbGUuYXBwcy5jYXJkLnYxLlRleHRQYXJhZ3JhcGhSC2NvbnRlbnRUZXh0EhsKCXdyYXBfdGV4'
+    'dBgFIAEoCFIId3JhcFRleHQSIQoMYm90dG9tX2xhYmVsGAYgASgJUgtib3R0b21MYWJlbBJOCh'
+    'Fib3R0b21fbGFiZWxfdGV4dBgTIAEoCzIiLmdvb2dsZS5hcHBzLmNhcmQudjEuVGV4dFBhcmFn'
+    'cmFwaFIPYm90dG9tTGFiZWxUZXh0EjcKCG9uX2NsaWNrGAcgASgLMhwuZ29vZ2xlLmFwcHMuY2'
+    'FyZC52MS5PbkNsaWNrUgdvbkNsaWNrEjUKBmJ1dHRvbhgIIAEoCzIbLmdvb2dsZS5hcHBzLmNh'
+    'cmQudjEuQnV0dG9uSABSBmJ1dHRvbhJZCg5zd2l0Y2hfY29udHJvbBgJIAEoCzIwLmdvb2dsZS'
+    '5hcHBzLmNhcmQudjEuRGVjb3JhdGVkVGV4dC5Td2l0Y2hDb250cm9sSABSDXN3aXRjaENvbnRy'
+    'b2wSNgoIZW5kX2ljb24YCyABKAsyGS5nb29nbGUuYXBwcy5jYXJkLnYxLkljb25IAFIHZW5kSW'
+    'Nvbhq1AgoNU3dpdGNoQ29udHJvbBISCgRuYW1lGAEgASgJUgRuYW1lEhQKBXZhbHVlGAIgASgJ'
+    'UgV2YWx1ZRIaCghzZWxlY3RlZBgDIAEoCFIIc2VsZWN0ZWQSRQoQb25fY2hhbmdlX2FjdGlvbh'
+    'gEIAEoCzIbLmdvb2dsZS5hcHBzLmNhcmQudjEuQWN0aW9uUg5vbkNoYW5nZUFjdGlvbhJfCgxj'
+    'b250cm9sX3R5cGUYBSABKA4yPC5nb29nbGUuYXBwcy5jYXJkLnYxLkRlY29yYXRlZFRleHQuU3'
+    'dpdGNoQ29udHJvbC5Db250cm9sVHlwZVILY29udHJvbFR5cGUiNgoLQ29udHJvbFR5cGUSCgoG'
+    'U1dJVENIEAASDAoIQ0hFQ0tCT1gQARINCglDSEVDS19CT1gQAkIJCgdjb250cm9s');
 
 @$core.Deprecated('Use textInputDescriptor instead')
 const TextInput$json = {
@@ -569,6 +720,14 @@ const TextInput$json = {
       '6': '.google.apps.card.v1.Action',
       '10': 'autoCompleteAction'
     },
+    {
+      '1': 'validation',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.Validation',
+      '10': 'validation'
+    },
     {'1': 'placeholder_text', '3': 12, '4': 1, '5': 9, '10': 'placeholderText'},
   ],
   '4': [TextInput_Type$json],
@@ -592,8 +751,9 @@ final $typed_data.Uint8List textInputDescriptor = $convert.base64Decode(
     'YW5nZUFjdGlvbhJRChNpbml0aWFsX3N1Z2dlc3Rpb25zGAcgASgLMiAuZ29vZ2xlLmFwcHMuY2'
     'FyZC52MS5TdWdnZXN0aW9uc1ISaW5pdGlhbFN1Z2dlc3Rpb25zEk0KFGF1dG9fY29tcGxldGVf'
     'YWN0aW9uGAggASgLMhsuZ29vZ2xlLmFwcHMuY2FyZC52MS5BY3Rpb25SEmF1dG9Db21wbGV0ZU'
-    'FjdGlvbhIpChBwbGFjZWhvbGRlcl90ZXh0GAwgASgJUg9wbGFjZWhvbGRlclRleHQiKgoEVHlw'
-    'ZRIPCgtTSU5HTEVfTElORRAAEhEKDU1VTFRJUExFX0xJTkUQAQ==');
+    'FjdGlvbhI/Cgp2YWxpZGF0aW9uGAsgASgLMh8uZ29vZ2xlLmFwcHMuY2FyZC52MS5WYWxpZGF0'
+    'aW9uUgp2YWxpZGF0aW9uEikKEHBsYWNlaG9sZGVyX3RleHQYDCABKAlSD3BsYWNlaG9sZGVyVG'
+    'V4dCIqCgRUeXBlEg8KC1NJTkdMRV9MSU5FEAASEQoNTVVMVElQTEVfTElORRAB');
 
 @$core.Deprecated('Use suggestionsDescriptor instead')
 const Suggestions$json = {
@@ -683,7 +843,9 @@ const SelectionInput$json = {
       '3': 6,
       '4': 1,
       '5': 5,
-      '10': 'multiSelectMaxSelectedItems'
+      '9': 1,
+      '10': 'multiSelectMaxSelectedItems',
+      '17': true
     },
     {
       '1': 'multi_select_min_query_length',
@@ -718,6 +880,7 @@ const SelectionInput$json = {
   '4': [SelectionInput_SelectionType$json],
   '8': [
     {'1': 'multi_select_data_source'},
+    {'1': '_multi_select_max_selected_items'},
   ],
 };
 
@@ -728,8 +891,18 @@ const SelectionInput_SelectionItem$json = {
     {'1': 'text', '3': 1, '4': 1, '5': 9, '10': 'text'},
     {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
     {'1': 'selected', '3': 3, '4': 1, '5': 8, '10': 'selected'},
-    {'1': 'start_icon_uri', '3': 4, '4': 1, '5': 9, '10': 'startIconUri'},
+    {
+      '1': 'start_icon_uri',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'startIconUri'
+    },
     {'1': 'bottom_text', '3': 5, '4': 1, '5': 9, '10': 'bottomText'},
+  ],
+  '8': [
+    {'1': 'start_icon'},
   ],
 };
 
@@ -781,22 +954,23 @@ final $typed_data.Uint8List selectionInputDescriptor = $convert.base64Decode(
     'JlbBJFCgR0eXBlGAMgASgOMjEuZ29vZ2xlLmFwcHMuY2FyZC52MS5TZWxlY3Rpb25JbnB1dC5T'
     'ZWxlY3Rpb25UeXBlUgR0eXBlEkcKBWl0ZW1zGAQgAygLMjEuZ29vZ2xlLmFwcHMuY2FyZC52MS'
     '5TZWxlY3Rpb25JbnB1dC5TZWxlY3Rpb25JdGVtUgVpdGVtcxJFChBvbl9jaGFuZ2VfYWN0aW9u'
-    'GAUgASgLMhsuZ29vZ2xlLmFwcHMuY2FyZC52MS5BY3Rpb25SDm9uQ2hhbmdlQWN0aW9uEkQKH2'
-    '11bHRpX3NlbGVjdF9tYXhfc2VsZWN0ZWRfaXRlbXMYBiABKAVSG211bHRpU2VsZWN0TWF4U2Vs'
-    'ZWN0ZWRJdGVtcxJACh1tdWx0aV9zZWxlY3RfbWluX3F1ZXJ5X2xlbmd0aBgHIAEoBVIZbXVsdG'
-    'lTZWxlY3RNaW5RdWVyeUxlbmd0aBJPChRleHRlcm5hbF9kYXRhX3NvdXJjZRgIIAEoCzIbLmdv'
-    'b2dsZS5hcHBzLmNhcmQudjEuQWN0aW9uSABSEmV4dGVybmFsRGF0YVNvdXJjZRJqChRwbGF0Zm'
-    '9ybV9kYXRhX3NvdXJjZRgJIAEoCzI2Lmdvb2dsZS5hcHBzLmNhcmQudjEuU2VsZWN0aW9uSW5w'
-    'dXQuUGxhdGZvcm1EYXRhU291cmNlSABSEnBsYXRmb3JtRGF0YVNvdXJjZRqcAQoNU2VsZWN0aW'
-    '9uSXRlbRISCgR0ZXh0GAEgASgJUgR0ZXh0EhQKBXZhbHVlGAIgASgJUgV2YWx1ZRIaCghzZWxl'
-    'Y3RlZBgDIAEoCFIIc2VsZWN0ZWQSJAoOc3RhcnRfaWNvbl91cmkYBCABKAlSDHN0YXJ0SWNvbl'
-    'VyaRIfCgtib3R0b21fdGV4dBgFIAEoCVIKYm90dG9tVGV4dBrHAQoSUGxhdGZvcm1EYXRhU291'
-    'cmNlEncKEmNvbW1vbl9kYXRhX3NvdXJjZRgBIAEoDjJHLmdvb2dsZS5hcHBzLmNhcmQudjEuU2'
-    'VsZWN0aW9uSW5wdXQuUGxhdGZvcm1EYXRhU291cmNlLkNvbW1vbkRhdGFTb3VyY2VIAFIQY29t'
-    'bW9uRGF0YVNvdXJjZSIpChBDb21tb25EYXRhU291cmNlEgsKB1VOS05PV04QABIICgRVU0VSEA'
-    'FCDQoLZGF0YV9zb3VyY2UiXAoNU2VsZWN0aW9uVHlwZRINCglDSEVDS19CT1gQABIQCgxSQURJ'
-    'T19CVVRUT04QARIKCgZTV0lUQ0gQAhIMCghEUk9QRE9XThADEhAKDE1VTFRJX1NFTEVDVBAEQh'
-    'oKGG11bHRpX3NlbGVjdF9kYXRhX3NvdXJjZQ==');
+    'GAUgASgLMhsuZ29vZ2xlLmFwcHMuY2FyZC52MS5BY3Rpb25SDm9uQ2hhbmdlQWN0aW9uEkkKH2'
+    '11bHRpX3NlbGVjdF9tYXhfc2VsZWN0ZWRfaXRlbXMYBiABKAVIAVIbbXVsdGlTZWxlY3RNYXhT'
+    'ZWxlY3RlZEl0ZW1ziAEBEkAKHW11bHRpX3NlbGVjdF9taW5fcXVlcnlfbGVuZ3RoGAcgASgFUh'
+    'ltdWx0aVNlbGVjdE1pblF1ZXJ5TGVuZ3RoEk8KFGV4dGVybmFsX2RhdGFfc291cmNlGAggASgL'
+    'MhsuZ29vZ2xlLmFwcHMuY2FyZC52MS5BY3Rpb25IAFISZXh0ZXJuYWxEYXRhU291cmNlEmoKFH'
+    'BsYXRmb3JtX2RhdGFfc291cmNlGAkgASgLMjYuZ29vZ2xlLmFwcHMuY2FyZC52MS5TZWxlY3Rp'
+    'b25JbnB1dC5QbGF0Zm9ybURhdGFTb3VyY2VIAFIScGxhdGZvcm1EYXRhU291cmNlGqwBCg1TZW'
+    'xlY3Rpb25JdGVtEhIKBHRleHQYASABKAlSBHRleHQSFAoFdmFsdWUYAiABKAlSBXZhbHVlEhoK'
+    'CHNlbGVjdGVkGAMgASgIUghzZWxlY3RlZBImCg5zdGFydF9pY29uX3VyaRgEIAEoCUgAUgxzdG'
+    'FydEljb25VcmkSHwoLYm90dG9tX3RleHQYBSABKAlSCmJvdHRvbVRleHRCDAoKc3RhcnRfaWNv'
+    'bhrHAQoSUGxhdGZvcm1EYXRhU291cmNlEncKEmNvbW1vbl9kYXRhX3NvdXJjZRgBIAEoDjJHLm'
+    'dvb2dsZS5hcHBzLmNhcmQudjEuU2VsZWN0aW9uSW5wdXQuUGxhdGZvcm1EYXRhU291cmNlLkNv'
+    'bW1vbkRhdGFTb3VyY2VIAFIQY29tbW9uRGF0YVNvdXJjZSIpChBDb21tb25EYXRhU291cmNlEg'
+    'sKB1VOS05PV04QABIICgRVU0VSEAFCDQoLZGF0YV9zb3VyY2UiXAoNU2VsZWN0aW9uVHlwZRIN'
+    'CglDSEVDS19CT1gQABIQCgxSQURJT19CVVRUT04QARIKCgZTV0lUQ0gQAhIMCghEUk9QRE9XTh'
+    'ADEhAKDE1VTFRJX1NFTEVDVBAEQhoKGG11bHRpX3NlbGVjdF9kYXRhX3NvdXJjZUIiCiBfbXVs'
+    'dGlfc2VsZWN0X21heF9zZWxlY3RlZF9pdGVtcw==');
 
 @$core.Deprecated('Use dateTimePickerDescriptor instead')
 const DateTimePicker$json = {
@@ -812,7 +986,15 @@ const DateTimePicker$json = {
       '6': '.google.apps.card.v1.DateTimePicker.DateTimePickerType',
       '10': 'type'
     },
-    {'1': 'value_ms_epoch', '3': 4, '4': 1, '5': 3, '10': 'valueMsEpoch'},
+    {
+      '1': 'value_ms_epoch',
+      '3': 4,
+      '4': 1,
+      '5': 3,
+      '9': 0,
+      '10': 'valueMsEpoch',
+      '17': true
+    },
     {
       '1': 'timezone_offset_date',
       '3': 5,
@@ -830,6 +1012,9 @@ const DateTimePicker$json = {
     },
   ],
   '4': [DateTimePicker_DateTimePickerType$json],
+  '8': [
+    {'1': '_value_ms_epoch'},
+  ],
 };
 
 @$core.Deprecated('Use dateTimePickerDescriptor instead')
@@ -846,11 +1031,61 @@ const DateTimePicker_DateTimePickerType$json = {
 final $typed_data.Uint8List dateTimePickerDescriptor = $convert.base64Decode(
     'Cg5EYXRlVGltZVBpY2tlchISCgRuYW1lGAEgASgJUgRuYW1lEhQKBWxhYmVsGAIgASgJUgVsYW'
     'JlbBJKCgR0eXBlGAMgASgOMjYuZ29vZ2xlLmFwcHMuY2FyZC52MS5EYXRlVGltZVBpY2tlci5E'
-    'YXRlVGltZVBpY2tlclR5cGVSBHR5cGUSJAoOdmFsdWVfbXNfZXBvY2gYBCABKANSDHZhbHVlTX'
-    'NFcG9jaBIwChR0aW1lem9uZV9vZmZzZXRfZGF0ZRgFIAEoBVISdGltZXpvbmVPZmZzZXREYXRl'
-    'EkUKEG9uX2NoYW5nZV9hY3Rpb24YBiABKAsyGy5nb29nbGUuYXBwcy5jYXJkLnYxLkFjdGlvbl'
-    'IOb25DaGFuZ2VBY3Rpb24iRQoSRGF0ZVRpbWVQaWNrZXJUeXBlEhEKDURBVEVfQU5EX1RJTUUQ'
-    'ABINCglEQVRFX09OTFkQARINCglUSU1FX09OTFkQAg==');
+    'YXRlVGltZVBpY2tlclR5cGVSBHR5cGUSKQoOdmFsdWVfbXNfZXBvY2gYBCABKANIAFIMdmFsdW'
+    'VNc0Vwb2NoiAEBEjAKFHRpbWV6b25lX29mZnNldF9kYXRlGAUgASgFUhJ0aW1lem9uZU9mZnNl'
+    'dERhdGUSRQoQb25fY2hhbmdlX2FjdGlvbhgGIAEoCzIbLmdvb2dsZS5hcHBzLmNhcmQudjEuQW'
+    'N0aW9uUg5vbkNoYW5nZUFjdGlvbiJFChJEYXRlVGltZVBpY2tlclR5cGUSEQoNREFURV9BTkRf'
+    'VElNRRAAEg0KCURBVEVfT05MWRABEg0KCVRJTUVfT05MWRACQhEKD192YWx1ZV9tc19lcG9jaA'
+    '==');
+
+@$core.Deprecated('Use overflowMenuDescriptor instead')
+const OverflowMenu$json = {
+  '1': 'OverflowMenu',
+  '2': [
+    {
+      '1': 'items',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.apps.card.v1.OverflowMenu.OverflowMenuItem',
+      '10': 'items'
+    },
+  ],
+  '3': [OverflowMenu_OverflowMenuItem$json],
+};
+
+@$core.Deprecated('Use overflowMenuDescriptor instead')
+const OverflowMenu_OverflowMenuItem$json = {
+  '1': 'OverflowMenuItem',
+  '2': [
+    {
+      '1': 'start_icon',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.Icon',
+      '10': 'startIcon'
+    },
+    {'1': 'text', '3': 2, '4': 1, '5': 9, '10': 'text'},
+    {
+      '1': 'on_click',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.OnClick',
+      '10': 'onClick'
+    },
+    {'1': 'disabled', '3': 4, '4': 1, '5': 8, '10': 'disabled'},
+  ],
+};
+
+/// Descriptor for `OverflowMenu`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List overflowMenuDescriptor = $convert.base64Decode(
+    'CgxPdmVyZmxvd01lbnUSSAoFaXRlbXMYASADKAsyMi5nb29nbGUuYXBwcy5jYXJkLnYxLk92ZX'
+    'JmbG93TWVudS5PdmVyZmxvd01lbnVJdGVtUgVpdGVtcxq1AQoQT3ZlcmZsb3dNZW51SXRlbRI4'
+    'CgpzdGFydF9pY29uGAEgASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5JY29uUglzdGFydEljb2'
+    '4SEgoEdGV4dBgCIAEoCVIEdGV4dBI3Cghvbl9jbGljaxgDIAEoCzIcLmdvb2dsZS5hcHBzLmNh'
+    'cmQudjEuT25DbGlja1IHb25DbGljaxIaCghkaXNhYmxlZBgEIAEoCFIIZGlzYWJsZWQ=');
 
 @$core.Deprecated('Use buttonDescriptor instead')
 const Button$json = {
@@ -883,6 +1118,27 @@ const Button$json = {
     },
     {'1': 'disabled', '3': 5, '4': 1, '5': 8, '10': 'disabled'},
     {'1': 'alt_text', '3': 6, '4': 1, '5': 9, '10': 'altText'},
+    {
+      '1': 'type',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.google.apps.card.v1.Button.Type',
+      '10': 'type'
+    },
+  ],
+  '4': [Button_Type$json],
+};
+
+@$core.Deprecated('Use buttonDescriptor instead')
+const Button_Type$json = {
+  '1': 'Type',
+  '2': [
+    {'1': 'TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'OUTLINED', '2': 1},
+    {'1': 'FILLED', '2': 2},
+    {'1': 'FILLED_TONAL', '2': 3},
+    {'1': 'BORDERLESS', '2': 4},
   ],
 };
 
@@ -892,7 +1148,9 @@ final $typed_data.Uint8List buttonDescriptor = $convert.base64Decode(
     'MuY2FyZC52MS5JY29uUgRpY29uEigKBWNvbG9yGAMgASgLMhIuZ29vZ2xlLnR5cGUuQ29sb3JS'
     'BWNvbG9yEjcKCG9uX2NsaWNrGAQgASgLMhwuZ29vZ2xlLmFwcHMuY2FyZC52MS5PbkNsaWNrUg'
     'dvbkNsaWNrEhoKCGRpc2FibGVkGAUgASgIUghkaXNhYmxlZBIZCghhbHRfdGV4dBgGIAEoCVIH'
-    'YWx0VGV4dA==');
+    'YWx0VGV4dBI0CgR0eXBlGAcgASgOMiAuZ29vZ2xlLmFwcHMuY2FyZC52MS5CdXR0b24uVHlwZV'
+    'IEdHlwZSJYCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIMCghPVVRMSU5FRBABEgoKBkZJ'
+    'TExFRBACEhAKDEZJTExFRF9UT05BTBADEg4KCkJPUkRFUkxFU1MQBA==');
 
 @$core.Deprecated('Use iconDescriptor instead')
 const Icon$json = {
@@ -1271,6 +1529,15 @@ const Columns_Column_Widgets$json = {
       '9': 0,
       '10': 'dateTimePicker'
     },
+    {
+      '1': 'chip_list',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.ChipList',
+      '9': 0,
+      '10': 'chipList'
+    },
   ],
   '8': [
     {'1': 'data'},
@@ -1301,14 +1568,14 @@ const Columns_Column_VerticalAlignment$json = {
 /// Descriptor for `Columns`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List columnsDescriptor = $convert.base64Decode(
     'CgdDb2x1bW5zEkYKDGNvbHVtbl9pdGVtcxgCIAMoCzIjLmdvb2dsZS5hcHBzLmNhcmQudjEuQ2'
-    '9sdW1ucy5Db2x1bW5SC2NvbHVtbkl0ZW1zGtgICgZDb2x1bW4SawoVaG9yaXpvbnRhbF9zaXpl'
+    '9sdW1ucy5Db2x1bW5SC2NvbHVtbkl0ZW1zGpYJCgZDb2x1bW4SawoVaG9yaXpvbnRhbF9zaXpl'
     'X3N0eWxlGAEgASgOMjcuZ29vZ2xlLmFwcHMuY2FyZC52MS5Db2x1bW5zLkNvbHVtbi5Ib3Jpem'
     '9udGFsU2l6ZVN0eWxlUhNob3Jpem9udGFsU2l6ZVN0eWxlEmIKFGhvcml6b250YWxfYWxpZ25t'
     'ZW50GAIgASgOMi8uZ29vZ2xlLmFwcHMuY2FyZC52MS5XaWRnZXQuSG9yaXpvbnRhbEFsaWdubW'
     'VudFITaG9yaXpvbnRhbEFsaWdubWVudBJkChJ2ZXJ0aWNhbF9hbGlnbm1lbnQYAyABKA4yNS5n'
     'b29nbGUuYXBwcy5jYXJkLnYxLkNvbHVtbnMuQ29sdW1uLlZlcnRpY2FsQWxpZ25tZW50UhF2ZX'
     'J0aWNhbEFsaWdubWVudBJFCgd3aWRnZXRzGAQgAygLMisuZ29vZ2xlLmFwcHMuY2FyZC52MS5D'
-    'b2x1bW5zLkNvbHVtbi5XaWRnZXRzUgd3aWRnZXRzGoUECgdXaWRnZXRzEksKDnRleHRfcGFyYW'
+    'b2x1bW5zLkNvbHVtbi5XaWRnZXRzUgd3aWRnZXRzGsMECgdXaWRnZXRzEksKDnRleHRfcGFyYW'
     'dyYXBoGAEgASgLMiIuZ29vZ2xlLmFwcHMuY2FyZC52MS5UZXh0UGFyYWdyYXBoSABSDXRleHRQ'
     'YXJhZ3JhcGgSMgoFaW1hZ2UYAiABKAsyGi5nb29nbGUuYXBwcy5jYXJkLnYxLkltYWdlSABSBW'
     'ltYWdlEksKDmRlY29yYXRlZF90ZXh0GAMgASgLMiIuZ29vZ2xlLmFwcHMuY2FyZC52MS5EZWNv'
@@ -1317,11 +1584,98 @@ final $typed_data.Uint8List columnsDescriptor = $convert.base64Decode(
     'ASgLMh4uZ29vZ2xlLmFwcHMuY2FyZC52MS5UZXh0SW5wdXRIAFIJdGV4dElucHV0Ek4KD3NlbG'
     'VjdGlvbl9pbnB1dBgGIAEoCzIjLmdvb2dsZS5hcHBzLmNhcmQudjEuU2VsZWN0aW9uSW5wdXRI'
     'AFIOc2VsZWN0aW9uSW5wdXQSTwoQZGF0ZV90aW1lX3BpY2tlchgHIAEoCzIjLmdvb2dsZS5hcH'
-    'BzLmNhcmQudjEuRGF0ZVRpbWVQaWNrZXJIAFIOZGF0ZVRpbWVQaWNrZXJCBgoEZGF0YSJuChNI'
-    'b3Jpem9udGFsU2l6ZVN0eWxlEiUKIUhPUklaT05UQUxfU0laRV9TVFlMRV9VTlNQRUNJRklFRB'
-    'AAEhgKFEZJTExfQVZBSUxBQkxFX1NQQUNFEAESFgoSRklMTF9NSU5JTVVNX1NQQUNFEAIiWAoR'
-    'VmVydGljYWxBbGlnbm1lbnQSIgoeVkVSVElDQUxfQUxJR05NRU5UX1VOU1BFQ0lGSUVEEAASCg'
-    'oGQ0VOVEVSEAESBwoDVE9QEAISCgoGQk9UVE9NEAM=');
+    'BzLmNhcmQudjEuRGF0ZVRpbWVQaWNrZXJIAFIOZGF0ZVRpbWVQaWNrZXISPAoJY2hpcF9saXN0'
+    'GAggASgLMh0uZ29vZ2xlLmFwcHMuY2FyZC52MS5DaGlwTGlzdEgAUghjaGlwTGlzdEIGCgRkYX'
+    'RhIm4KE0hvcml6b250YWxTaXplU3R5bGUSJQohSE9SSVpPTlRBTF9TSVpFX1NUWUxFX1VOU1BF'
+    'Q0lGSUVEEAASGAoURklMTF9BVkFJTEFCTEVfU1BBQ0UQARIWChJGSUxMX01JTklNVU1fU1BBQ0'
+    'UQAiJYChFWZXJ0aWNhbEFsaWdubWVudBIiCh5WRVJUSUNBTF9BTElHTk1FTlRfVU5TUEVDSUZJ'
+    'RUQQABIKCgZDRU5URVIQARIHCgNUT1AQAhIKCgZCT1RUT00QAw==');
+
+@$core.Deprecated('Use carouselDescriptor instead')
+const Carousel$json = {
+  '1': 'Carousel',
+  '2': [
+    {
+      '1': 'carousel_cards',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.apps.card.v1.Carousel.CarouselCard',
+      '10': 'carouselCards'
+    },
+  ],
+  '3': [Carousel_CarouselCard$json],
+};
+
+@$core.Deprecated('Use carouselDescriptor instead')
+const Carousel_CarouselCard$json = {
+  '1': 'CarouselCard',
+  '2': [
+    {
+      '1': 'widgets',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.apps.card.v1.Card.NestedWidget',
+      '10': 'widgets'
+    },
+    {
+      '1': 'footer_widgets',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.apps.card.v1.Card.NestedWidget',
+      '10': 'footerWidgets'
+    },
+  ],
+};
+
+/// Descriptor for `Carousel`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List carouselDescriptor = $convert.base64Decode(
+    'CghDYXJvdXNlbBJRCg5jYXJvdXNlbF9jYXJkcxgEIAMoCzIqLmdvb2dsZS5hcHBzLmNhcmQudj'
+    'EuQ2Fyb3VzZWwuQ2Fyb3VzZWxDYXJkUg1jYXJvdXNlbENhcmRzGp8BCgxDYXJvdXNlbENhcmQS'
+    'QAoHd2lkZ2V0cxgBIAMoCzImLmdvb2dsZS5hcHBzLmNhcmQudjEuQ2FyZC5OZXN0ZWRXaWRnZX'
+    'RSB3dpZGdldHMSTQoOZm9vdGVyX3dpZGdldHMYAiADKAsyJi5nb29nbGUuYXBwcy5jYXJkLnYx'
+    'LkNhcmQuTmVzdGVkV2lkZ2V0Ug1mb290ZXJXaWRnZXRz');
+
+@$core.Deprecated('Use collapseControlDescriptor instead')
+const CollapseControl$json = {
+  '1': 'CollapseControl',
+  '2': [
+    {
+      '1': 'horizontal_alignment',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.apps.card.v1.Widget.HorizontalAlignment',
+      '10': 'horizontalAlignment'
+    },
+    {
+      '1': 'expand_button',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.Button',
+      '10': 'expandButton'
+    },
+    {
+      '1': 'collapse_button',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.Button',
+      '10': 'collapseButton'
+    },
+  ],
+};
+
+/// Descriptor for `CollapseControl`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List collapseControlDescriptor = $convert.base64Decode(
+    'Cg9Db2xsYXBzZUNvbnRyb2wSYgoUaG9yaXpvbnRhbF9hbGlnbm1lbnQYASABKA4yLy5nb29nbG'
+    'UuYXBwcy5jYXJkLnYxLldpZGdldC5Ib3Jpem9udGFsQWxpZ25tZW50UhNob3Jpem9udGFsQWxp'
+    'Z25tZW50EkAKDWV4cGFuZF9idXR0b24YAiABKAsyGy5nb29nbGUuYXBwcy5jYXJkLnYxLkJ1dH'
+    'RvblIMZXhwYW5kQnV0dG9uEkQKD2NvbGxhcHNlX2J1dHRvbhgDIAEoCzIbLmdvb2dsZS5hcHBz'
+    'LmNhcmQudjEuQnV0dG9uUg5jb2xsYXBzZUJ1dHRvbg==');
 
 @$core.Deprecated('Use onClickDescriptor instead')
 const OnClick$json = {
@@ -1363,6 +1717,15 @@ const OnClick$json = {
       '9': 0,
       '10': 'card'
     },
+    {
+      '1': 'overflow_menu',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.OverflowMenu',
+      '9': 0,
+      '10': 'overflowMenu'
+    },
   ],
   '8': [
     {'1': 'data'},
@@ -1375,7 +1738,9 @@ final $typed_data.Uint8List onClickDescriptor = $convert.base64Decode(
     'BSBmFjdGlvbhI8CglvcGVuX2xpbmsYAiABKAsyHS5nb29nbGUuYXBwcy5jYXJkLnYxLk9wZW5M'
     'aW5rSABSCG9wZW5MaW5rElYKGG9wZW5fZHluYW1pY19saW5rX2FjdGlvbhgDIAEoCzIbLmdvb2'
     'dsZS5hcHBzLmNhcmQudjEuQWN0aW9uSABSFW9wZW5EeW5hbWljTGlua0FjdGlvbhIvCgRjYXJk'
-    'GAQgASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5DYXJkSABSBGNhcmRCBgoEZGF0YQ==');
+    'GAQgASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5DYXJkSABSBGNhcmQSSAoNb3ZlcmZsb3dfbW'
+    'VudRgIIAEoCzIhLmdvb2dsZS5hcHBzLmNhcmQudjEuT3ZlcmZsb3dNZW51SABSDG92ZXJmbG93'
+    'TWVudUIGCgRkYXRh');
 
 @$core.Deprecated('Use openLinkDescriptor instead')
 const OpenLink$json = {
@@ -1458,6 +1823,14 @@ const Action$json = {
       '6': '.google.apps.card.v1.Action.Interaction',
       '10': 'interaction'
     },
+    {'1': 'required_widgets', '3': 6, '4': 3, '5': 9, '10': 'requiredWidgets'},
+    {
+      '1': 'all_widgets_are_required',
+      '3': 7,
+      '4': 1,
+      '5': 8,
+      '10': 'allWidgetsAreRequired'
+    },
   ],
   '3': [Action_ActionParameter$json],
   '4': [Action_LoadIndicator$json, Action_Interaction$json],
@@ -1497,7 +1870,129 @@ final $typed_data.Uint8List actionDescriptor = $convert.base64Decode(
     'cnMSUAoObG9hZF9pbmRpY2F0b3IYAyABKA4yKS5nb29nbGUuYXBwcy5jYXJkLnYxLkFjdGlvbi'
     '5Mb2FkSW5kaWNhdG9yUg1sb2FkSW5kaWNhdG9yEiUKDnBlcnNpc3RfdmFsdWVzGAQgASgIUg1w'
     'ZXJzaXN0VmFsdWVzEkkKC2ludGVyYWN0aW9uGAUgASgOMicuZ29vZ2xlLmFwcHMuY2FyZC52MS'
-    '5BY3Rpb24uSW50ZXJhY3Rpb25SC2ludGVyYWN0aW9uGjkKD0FjdGlvblBhcmFtZXRlchIQCgNr'
-    'ZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWUiJgoNTG9hZEluZGljYXRvchILCg'
-    'dTUElOTkVSEAASCAoETk9ORRABIjsKC0ludGVyYWN0aW9uEhsKF0lOVEVSQUNUSU9OX1VOU1BF'
-    'Q0lGSUVEEAASDwoLT1BFTl9ESUFMT0cQAQ==');
+    '5BY3Rpb24uSW50ZXJhY3Rpb25SC2ludGVyYWN0aW9uEikKEHJlcXVpcmVkX3dpZGdldHMYBiAD'
+    'KAlSD3JlcXVpcmVkV2lkZ2V0cxI3ChhhbGxfd2lkZ2V0c19hcmVfcmVxdWlyZWQYByABKAhSFW'
+    'FsbFdpZGdldHNBcmVSZXF1aXJlZBo5Cg9BY3Rpb25QYXJhbWV0ZXISEAoDa2V5GAEgASgJUgNr'
+    'ZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlIiYKDUxvYWRJbmRpY2F0b3ISCwoHU1BJTk5FUhAAEg'
+    'gKBE5PTkUQASI7CgtJbnRlcmFjdGlvbhIbChdJTlRFUkFDVElPTl9VTlNQRUNJRklFRBAAEg8K'
+    'C09QRU5fRElBTE9HEAE=');
+
+@$core.Deprecated('Use validationDescriptor instead')
+const Validation$json = {
+  '1': 'Validation',
+  '2': [
+    {'1': 'character_limit', '3': 1, '4': 1, '5': 5, '10': 'characterLimit'},
+    {
+      '1': 'input_type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.apps.card.v1.Validation.InputType',
+      '10': 'inputType'
+    },
+  ],
+  '4': [Validation_InputType$json],
+};
+
+@$core.Deprecated('Use validationDescriptor instead')
+const Validation_InputType$json = {
+  '1': 'InputType',
+  '2': [
+    {'1': 'INPUT_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'TEXT', '2': 1},
+    {'1': 'INTEGER', '2': 2},
+    {'1': 'FLOAT', '2': 3},
+    {'1': 'EMAIL', '2': 4},
+    {'1': 'EMOJI_PICKER', '2': 5},
+  ],
+};
+
+/// Descriptor for `Validation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List validationDescriptor = $convert.base64Decode(
+    'CgpWYWxpZGF0aW9uEicKD2NoYXJhY3Rlcl9saW1pdBgBIAEoBVIOY2hhcmFjdGVyTGltaXQSSA'
+    'oKaW5wdXRfdHlwZRgCIAEoDjIpLmdvb2dsZS5hcHBzLmNhcmQudjEuVmFsaWRhdGlvbi5JbnB1'
+    'dFR5cGVSCWlucHV0VHlwZSJmCglJbnB1dFR5cGUSGgoWSU5QVVRfVFlQRV9VTlNQRUNJRklFRB'
+    'AAEggKBFRFWFQQARILCgdJTlRFR0VSEAISCQoFRkxPQVQQAxIJCgVFTUFJTBAEEhAKDEVNT0pJ'
+    'X1BJQ0tFUhAF');
+
+@$core.Deprecated('Use chipListDescriptor instead')
+const ChipList$json = {
+  '1': 'ChipList',
+  '2': [
+    {
+      '1': 'layout',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.apps.card.v1.ChipList.Layout',
+      '10': 'layout'
+    },
+    {
+      '1': 'chips',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.apps.card.v1.Chip',
+      '10': 'chips'
+    },
+  ],
+  '4': [ChipList_Layout$json],
+};
+
+@$core.Deprecated('Use chipListDescriptor instead')
+const ChipList_Layout$json = {
+  '1': 'Layout',
+  '2': [
+    {'1': 'LAYOUT_UNSPECIFIED', '2': 0},
+    {'1': 'WRAPPED', '2': 1},
+    {'1': 'HORIZONTAL_SCROLLABLE', '2': 2},
+  ],
+};
+
+/// Descriptor for `ChipList`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List chipListDescriptor = $convert.base64Decode(
+    'CghDaGlwTGlzdBI8CgZsYXlvdXQYASABKA4yJC5nb29nbGUuYXBwcy5jYXJkLnYxLkNoaXBMaX'
+    'N0LkxheW91dFIGbGF5b3V0Ei8KBWNoaXBzGAIgAygLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5D'
+    'aGlwUgVjaGlwcyJICgZMYXlvdXQSFgoSTEFZT1VUX1VOU1BFQ0lGSUVEEAASCwoHV1JBUFBFRB'
+    'ABEhkKFUhPUklaT05UQUxfU0NST0xMQUJMRRAC');
+
+@$core.Deprecated('Use chipDescriptor instead')
+const Chip$json = {
+  '1': 'Chip',
+  '2': [
+    {
+      '1': 'icon',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.Icon',
+      '10': 'icon'
+    },
+    {'1': 'label', '3': 2, '4': 1, '5': 9, '10': 'label'},
+    {
+      '1': 'on_click',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.apps.card.v1.OnClick',
+      '10': 'onClick'
+    },
+    {
+      '1': 'enabled',
+      '3': 4,
+      '4': 1,
+      '5': 8,
+      '8': {'3': true},
+      '10': 'enabled',
+    },
+    {'1': 'disabled', '3': 6, '4': 1, '5': 8, '10': 'disabled'},
+    {'1': 'alt_text', '3': 5, '4': 1, '5': 9, '10': 'altText'},
+  ],
+};
+
+/// Descriptor for `Chip`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List chipDescriptor = $convert.base64Decode(
+    'CgRDaGlwEi0KBGljb24YASABKAsyGS5nb29nbGUuYXBwcy5jYXJkLnYxLkljb25SBGljb24SFA'
+    'oFbGFiZWwYAiABKAlSBWxhYmVsEjcKCG9uX2NsaWNrGAMgASgLMhwuZ29vZ2xlLmFwcHMuY2Fy'
+    'ZC52MS5PbkNsaWNrUgdvbkNsaWNrEhwKB2VuYWJsZWQYBCABKAhCAhgBUgdlbmFibGVkEhoKCG'
+    'Rpc2FibGVkGAYgASgIUghkaXNhYmxlZBIZCghhbHRfdGV4dBgFIAEoCVIHYWx0VGV4dA==');

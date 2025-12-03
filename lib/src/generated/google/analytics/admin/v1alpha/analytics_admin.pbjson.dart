@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/analytics/admin/v1alpha/analytics_admin.proto
-//
-// @dart = 2.12
+// Generated from google/analytics/admin/v1alpha/analytics_admin.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -3016,66 +3018,6 @@ final $typed_data.Uint8List listChannelGroupsResponseDescriptor = $convert.base6
     '9vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNoYW5uZWxHcm91cFINY2hhbm5lbEdyb3Vw'
     'cxImCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlSDW5leHRQYWdlVG9rZW4=');
 
-@$core.Deprecated(
-    'Use setAutomatedGa4ConfigurationOptOutRequestDescriptor instead')
-const SetAutomatedGa4ConfigurationOptOutRequest$json = {
-  '1': 'SetAutomatedGa4ConfigurationOptOutRequest',
-  '2': [
-    {'1': 'property', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'property'},
-    {'1': 'opt_out', '3': 2, '4': 1, '5': 8, '10': 'optOut'},
-  ],
-};
-
-/// Descriptor for `SetAutomatedGa4ConfigurationOptOutRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List
-    setAutomatedGa4ConfigurationOptOutRequestDescriptor = $convert.base64Decode(
-        'CilTZXRBdXRvbWF0ZWRHYTRDb25maWd1cmF0aW9uT3B0T3V0UmVxdWVzdBIfCghwcm9wZXJ0eR'
-        'gBIAEoCUID4EECUghwcm9wZXJ0eRIXCgdvcHRfb3V0GAIgASgIUgZvcHRPdXQ=');
-
-@$core.Deprecated(
-    'Use setAutomatedGa4ConfigurationOptOutResponseDescriptor instead')
-const SetAutomatedGa4ConfigurationOptOutResponse$json = {
-  '1': 'SetAutomatedGa4ConfigurationOptOutResponse',
-};
-
-/// Descriptor for `SetAutomatedGa4ConfigurationOptOutResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List
-    setAutomatedGa4ConfigurationOptOutResponseDescriptor =
-    $convert.base64Decode(
-        'CipTZXRBdXRvbWF0ZWRHYTRDb25maWd1cmF0aW9uT3B0T3V0UmVzcG9uc2U=');
-
-@$core.Deprecated(
-    'Use fetchAutomatedGa4ConfigurationOptOutRequestDescriptor instead')
-const FetchAutomatedGa4ConfigurationOptOutRequest$json = {
-  '1': 'FetchAutomatedGa4ConfigurationOptOutRequest',
-  '2': [
-    {'1': 'property', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'property'},
-  ],
-};
-
-/// Descriptor for `FetchAutomatedGa4ConfigurationOptOutRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List
-    fetchAutomatedGa4ConfigurationOptOutRequestDescriptor =
-    $convert.base64Decode(
-        'CitGZXRjaEF1dG9tYXRlZEdhNENvbmZpZ3VyYXRpb25PcHRPdXRSZXF1ZXN0Eh8KCHByb3Blcn'
-        'R5GAEgASgJQgPgQQJSCHByb3BlcnR5');
-
-@$core.Deprecated(
-    'Use fetchAutomatedGa4ConfigurationOptOutResponseDescriptor instead')
-const FetchAutomatedGa4ConfigurationOptOutResponse$json = {
-  '1': 'FetchAutomatedGa4ConfigurationOptOutResponse',
-  '2': [
-    {'1': 'opt_out', '3': 1, '4': 1, '5': 8, '10': 'optOut'},
-  ],
-};
-
-/// Descriptor for `FetchAutomatedGa4ConfigurationOptOutResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List
-    fetchAutomatedGa4ConfigurationOptOutResponseDescriptor =
-    $convert.base64Decode(
-        'CixGZXRjaEF1dG9tYXRlZEdhNENvbmZpZ3VyYXRpb25PcHRPdXRSZXNwb25zZRIXCgdvcHRfb3'
-        'V0GAEgASgIUgZvcHRPdXQ=');
-
 @$core.Deprecated('Use createBigQueryLinkRequestDescriptor instead')
 const CreateBigQueryLinkRequest$json = {
   '1': 'CreateBigQueryLinkRequest',
@@ -3296,90 +3238,6 @@ final $typed_data.Uint8List updateDataRedactionSettingsRequestDescriptor =
         'Y3Rpb25TZXR0aW5nc0ID4EECUhVkYXRhUmVkYWN0aW9uU2V0dGluZ3MSQAoLdXBkYXRlX21hc2'
         'sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQJSCnVwZGF0ZU1hc2s=');
 
-@$core.Deprecated('Use createConnectedSiteTagRequestDescriptor instead')
-const CreateConnectedSiteTagRequest$json = {
-  '1': 'CreateConnectedSiteTagRequest',
-  '2': [
-    {'1': 'property', '3': 1, '4': 1, '5': 9, '10': 'property'},
-    {
-      '1': 'connected_site_tag',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.analytics.admin.v1alpha.ConnectedSiteTag',
-      '8': {},
-      '10': 'connectedSiteTag'
-    },
-  ],
-};
-
-/// Descriptor for `CreateConnectedSiteTagRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List createConnectedSiteTagRequestDescriptor =
-    $convert.base64Decode(
-        'Ch1DcmVhdGVDb25uZWN0ZWRTaXRlVGFnUmVxdWVzdBIaCghwcm9wZXJ0eRgBIAEoCVIIcHJvcG'
-        'VydHkSYwoSY29ubmVjdGVkX3NpdGVfdGFnGAIgASgLMjAuZ29vZ2xlLmFuYWx5dGljcy5hZG1p'
-        'bi52MWFscGhhLkNvbm5lY3RlZFNpdGVUYWdCA+BBAlIQY29ubmVjdGVkU2l0ZVRhZw==');
-
-@$core.Deprecated('Use createConnectedSiteTagResponseDescriptor instead')
-const CreateConnectedSiteTagResponse$json = {
-  '1': 'CreateConnectedSiteTagResponse',
-};
-
-/// Descriptor for `CreateConnectedSiteTagResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List createConnectedSiteTagResponseDescriptor =
-    $convert.base64Decode('Ch5DcmVhdGVDb25uZWN0ZWRTaXRlVGFnUmVzcG9uc2U=');
-
-@$core.Deprecated('Use deleteConnectedSiteTagRequestDescriptor instead')
-const DeleteConnectedSiteTagRequest$json = {
-  '1': 'DeleteConnectedSiteTagRequest',
-  '2': [
-    {'1': 'property', '3': 1, '4': 1, '5': 9, '10': 'property'},
-    {'1': 'tag_id', '3': 2, '4': 1, '5': 9, '10': 'tagId'},
-  ],
-};
-
-/// Descriptor for `DeleteConnectedSiteTagRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List deleteConnectedSiteTagRequestDescriptor =
-    $convert.base64Decode(
-        'Ch1EZWxldGVDb25uZWN0ZWRTaXRlVGFnUmVxdWVzdBIaCghwcm9wZXJ0eRgBIAEoCVIIcHJvcG'
-        'VydHkSFQoGdGFnX2lkGAIgASgJUgV0YWdJZA==');
-
-@$core.Deprecated('Use listConnectedSiteTagsRequestDescriptor instead')
-const ListConnectedSiteTagsRequest$json = {
-  '1': 'ListConnectedSiteTagsRequest',
-  '2': [
-    {'1': 'property', '3': 1, '4': 1, '5': 9, '10': 'property'},
-  ],
-};
-
-/// Descriptor for `ListConnectedSiteTagsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List listConnectedSiteTagsRequestDescriptor =
-    $convert.base64Decode(
-        'ChxMaXN0Q29ubmVjdGVkU2l0ZVRhZ3NSZXF1ZXN0EhoKCHByb3BlcnR5GAEgASgJUghwcm9wZX'
-        'J0eQ==');
-
-@$core.Deprecated('Use listConnectedSiteTagsResponseDescriptor instead')
-const ListConnectedSiteTagsResponse$json = {
-  '1': 'ListConnectedSiteTagsResponse',
-  '2': [
-    {
-      '1': 'connected_site_tags',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.google.analytics.admin.v1alpha.ConnectedSiteTag',
-      '10': 'connectedSiteTags'
-    },
-  ],
-};
-
-/// Descriptor for `ListConnectedSiteTagsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List listConnectedSiteTagsResponseDescriptor =
-    $convert.base64Decode(
-        'Ch1MaXN0Q29ubmVjdGVkU2l0ZVRhZ3NSZXNwb25zZRJgChNjb25uZWN0ZWRfc2l0ZV90YWdzGA'
-        'EgAygLMjAuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNvbm5lY3RlZFNpdGVUYWdS'
-        'EWNvbm5lY3RlZFNpdGVUYWdz');
-
 @$core.Deprecated('Use createAdSenseLinkRequestDescriptor instead')
 const CreateAdSenseLinkRequest$json = {
   '1': 'CreateAdSenseLinkRequest',
@@ -3468,34 +3326,6 @@ final $typed_data.Uint8List listAdSenseLinksResponseDescriptor = $convert.base64
     'ChhMaXN0QWRTZW5zZUxpbmtzUmVzcG9uc2USUAoNYWRzZW5zZV9saW5rcxgBIAMoCzIrLmdvb2'
     'dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BZFNlbnNlTGlua1IMYWRzZW5zZUxpbmtzEiYK'
     'D25leHRfcGFnZV90b2tlbhgCIAEoCVINbmV4dFBhZ2VUb2tlbg==');
-
-@$core.Deprecated('Use fetchConnectedGa4PropertyRequestDescriptor instead')
-const FetchConnectedGa4PropertyRequest$json = {
-  '1': 'FetchConnectedGa4PropertyRequest',
-  '2': [
-    {'1': 'property', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'property'},
-  ],
-};
-
-/// Descriptor for `FetchConnectedGa4PropertyRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List fetchConnectedGa4PropertyRequestDescriptor =
-    $convert.base64Decode(
-        'CiBGZXRjaENvbm5lY3RlZEdhNFByb3BlcnR5UmVxdWVzdBJKCghwcm9wZXJ0eRgBIAEoCUIu4E'
-        'EC+kEoCiZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Qcm9wZXJ0eVIIcHJvcGVydHk=');
-
-@$core.Deprecated('Use fetchConnectedGa4PropertyResponseDescriptor instead')
-const FetchConnectedGa4PropertyResponse$json = {
-  '1': 'FetchConnectedGa4PropertyResponse',
-  '2': [
-    {'1': 'property', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'property'},
-  ],
-};
-
-/// Descriptor for `FetchConnectedGa4PropertyResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List fetchConnectedGa4PropertyResponseDescriptor =
-    $convert.base64Decode(
-        'CiFGZXRjaENvbm5lY3RlZEdhNFByb3BlcnR5UmVzcG9uc2USRwoIcHJvcGVydHkYASABKAlCK/'
-        'pBKAomYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUHJvcGVydHlSCHByb3BlcnR5');
 
 @$core.Deprecated('Use createEventCreateRuleRequestDescriptor instead')
 const CreateEventCreateRuleRequest$json = {
@@ -3949,6 +3779,16 @@ const ProvisionSubpropertyRequest$json = {
       '8': {},
       '10': 'subpropertyEventFilter'
     },
+    {
+      '1': 'custom_dimension_and_metric_synchronization_mode',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.analytics.admin.v1alpha.SubpropertySyncConfig.SynchronizationMode',
+      '8': {},
+      '10': 'customDimensionAndMetricSynchronizationMode'
+    },
   ],
 };
 
@@ -3958,7 +3798,10 @@ final $typed_data.Uint8List provisionSubpropertyRequestDescriptor = $convert.bas
     '9nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUHJvcGVydHlCA+BBAlILc3VicHJvcGVydHkS'
     'dQoYc3VicHJvcGVydHlfZXZlbnRfZmlsdGVyGAMgASgLMjYuZ29vZ2xlLmFuYWx5dGljcy5hZG'
     '1pbi52MWFscGhhLlN1YnByb3BlcnR5RXZlbnRGaWx0ZXJCA+BBAVIWc3VicHJvcGVydHlFdmVu'
-    'dEZpbHRlcg==');
+    'dEZpbHRlchK1AQowY3VzdG9tX2RpbWVuc2lvbl9hbmRfbWV0cmljX3N5bmNocm9uaXphdGlvbl'
+    '9tb2RlGAQgASgOMkkuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlN1YnByb3BlcnR5'
+    'U3luY0NvbmZpZy5TeW5jaHJvbml6YXRpb25Nb2RlQgPgQQFSK2N1c3RvbURpbWVuc2lvbkFuZE'
+    '1ldHJpY1N5bmNocm9uaXphdGlvbk1vZGU=');
 
 @$core.Deprecated('Use provisionSubpropertyResponseDescriptor instead')
 const ProvisionSubpropertyResponse$json = {
@@ -4120,3 +3963,300 @@ final $typed_data.Uint8List deleteSubpropertyEventFilterRequestDescriptor =
         'CiNEZWxldGVTdWJwcm9wZXJ0eUV2ZW50RmlsdGVyUmVxdWVzdBJQCgRuYW1lGAEgASgJQjzgQQ'
         'L6QTYKNGFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1N1YnByb3BlcnR5RXZlbnRGaWx0'
         'ZXJSBG5hbWU=');
+
+@$core.Deprecated('Use createReportingDataAnnotationRequestDescriptor instead')
+const CreateReportingDataAnnotationRequest$json = {
+  '1': 'CreateReportingDataAnnotationRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {
+      '1': 'reporting_data_annotation',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ReportingDataAnnotation',
+      '8': {},
+      '10': 'reportingDataAnnotation'
+    },
+  ],
+};
+
+/// Descriptor for `CreateReportingDataAnnotationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createReportingDataAnnotationRequestDescriptor =
+    $convert.base64Decode(
+        'CiRDcmVhdGVSZXBvcnRpbmdEYXRhQW5ub3RhdGlvblJlcXVlc3QSVQoGcGFyZW50GAEgASgJQj'
+        '3gQQL6QTcSNWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1JlcG9ydGluZ0RhdGFBbm5v'
+        'dGF0aW9uUgZwYXJlbnQSeAoZcmVwb3J0aW5nX2RhdGFfYW5ub3RhdGlvbhgCIAEoCzI3Lmdvb2'
+        'dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5SZXBvcnRpbmdEYXRhQW5ub3RhdGlvbkID4EEC'
+        'UhdyZXBvcnRpbmdEYXRhQW5ub3RhdGlvbg==');
+
+@$core.Deprecated('Use getReportingDataAnnotationRequestDescriptor instead')
+const GetReportingDataAnnotationRequest$json = {
+  '1': 'GetReportingDataAnnotationRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetReportingDataAnnotationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getReportingDataAnnotationRequestDescriptor =
+    $convert.base64Decode(
+        'CiFHZXRSZXBvcnRpbmdEYXRhQW5ub3RhdGlvblJlcXVlc3QSUQoEbmFtZRgBIAEoCUI94EEC+k'
+        'E3CjVhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9SZXBvcnRpbmdEYXRhQW5ub3RhdGlv'
+        'blIEbmFtZQ==');
+
+@$core.Deprecated('Use listReportingDataAnnotationsRequestDescriptor instead')
+const ListReportingDataAnnotationsRequest$json = {
+  '1': 'ListReportingDataAnnotationsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'filter', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'filter'},
+    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListReportingDataAnnotationsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listReportingDataAnnotationsRequestDescriptor =
+    $convert.base64Decode(
+        'CiNMaXN0UmVwb3J0aW5nRGF0YUFubm90YXRpb25zUmVxdWVzdBJVCgZwYXJlbnQYASABKAlCPe'
+        'BBAvpBNxI1YW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUmVwb3J0aW5nRGF0YUFubm90'
+        'YXRpb25SBnBhcmVudBIbCgZmaWx0ZXIYAiABKAlCA+BBAVIGZmlsdGVyEiAKCXBhZ2Vfc2l6ZR'
+        'gDIAEoBUID4EEBUghwYWdlU2l6ZRIiCgpwYWdlX3Rva2VuGAQgASgJQgPgQQFSCXBhZ2VUb2tl'
+        'bg==');
+
+@$core.Deprecated('Use listReportingDataAnnotationsResponseDescriptor instead')
+const ListReportingDataAnnotationsResponse$json = {
+  '1': 'ListReportingDataAnnotationsResponse',
+  '2': [
+    {
+      '1': 'reporting_data_annotations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ReportingDataAnnotation',
+      '10': 'reportingDataAnnotations'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+/// Descriptor for `ListReportingDataAnnotationsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listReportingDataAnnotationsResponseDescriptor =
+    $convert.base64Decode(
+        'CiRMaXN0UmVwb3J0aW5nRGF0YUFubm90YXRpb25zUmVzcG9uc2USdQoacmVwb3J0aW5nX2RhdG'
+        'FfYW5ub3RhdGlvbnMYASADKAsyNy5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUmVw'
+        'b3J0aW5nRGF0YUFubm90YXRpb25SGHJlcG9ydGluZ0RhdGFBbm5vdGF0aW9ucxImCg9uZXh0X3'
+        'BhZ2VfdG9rZW4YAiABKAlSDW5leHRQYWdlVG9rZW4=');
+
+@$core.Deprecated('Use updateReportingDataAnnotationRequestDescriptor instead')
+const UpdateReportingDataAnnotationRequest$json = {
+  '1': 'UpdateReportingDataAnnotationRequest',
+  '2': [
+    {
+      '1': 'reporting_data_annotation',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.ReportingDataAnnotation',
+      '8': {},
+      '10': 'reportingDataAnnotation'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateReportingDataAnnotationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateReportingDataAnnotationRequestDescriptor =
+    $convert.base64Decode(
+        'CiRVcGRhdGVSZXBvcnRpbmdEYXRhQW5ub3RhdGlvblJlcXVlc3QSeAoZcmVwb3J0aW5nX2RhdG'
+        'FfYW5ub3RhdGlvbhgBIAEoCzI3Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5SZXBv'
+        'cnRpbmdEYXRhQW5ub3RhdGlvbkID4EECUhdyZXBvcnRpbmdEYXRhQW5ub3RhdGlvbhJACgt1cG'
+        'RhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAVIKdXBkYXRl'
+        'TWFzaw==');
+
+@$core.Deprecated('Use deleteReportingDataAnnotationRequestDescriptor instead')
+const DeleteReportingDataAnnotationRequest$json = {
+  '1': 'DeleteReportingDataAnnotationRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DeleteReportingDataAnnotationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteReportingDataAnnotationRequestDescriptor =
+    $convert.base64Decode(
+        'CiREZWxldGVSZXBvcnRpbmdEYXRhQW5ub3RhdGlvblJlcXVlc3QSUQoEbmFtZRgBIAEoCUI94E'
+        'EC+kE3CjVhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9SZXBvcnRpbmdEYXRhQW5ub3Rh'
+        'dGlvblIEbmFtZQ==');
+
+@$core.Deprecated('Use submitUserDeletionRequestDescriptor instead')
+const SubmitUserDeletionRequest$json = {
+  '1': 'SubmitUserDeletionRequest',
+  '2': [
+    {'1': 'user_id', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'userId'},
+    {'1': 'client_id', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'clientId'},
+    {
+      '1': 'app_instance_id',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'appInstanceId'
+    },
+    {
+      '1': 'user_provided_data',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'userProvidedData'
+    },
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+  '8': [
+    {'1': 'user'},
+  ],
+};
+
+/// Descriptor for `SubmitUserDeletionRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List submitUserDeletionRequestDescriptor = $convert.base64Decode(
+    'ChlTdWJtaXRVc2VyRGVsZXRpb25SZXF1ZXN0EhkKB3VzZXJfaWQYAiABKAlIAFIGdXNlcklkEh'
+    '0KCWNsaWVudF9pZBgDIAEoCUgAUghjbGllbnRJZBIoCg9hcHBfaW5zdGFuY2VfaWQYBCABKAlI'
+    'AFINYXBwSW5zdGFuY2VJZBIuChJ1c2VyX3Byb3ZpZGVkX2RhdGEYBSABKAlIAFIQdXNlclByb3'
+    'ZpZGVkRGF0YRJCCgRuYW1lGAEgASgJQi7gQQL6QSgKJmFuYWx5dGljc2FkbWluLmdvb2dsZWFw'
+    'aXMuY29tL1Byb3BlcnR5UgRuYW1lQgYKBHVzZXI=');
+
+@$core.Deprecated('Use submitUserDeletionResponseDescriptor instead')
+const SubmitUserDeletionResponse$json = {
+  '1': 'SubmitUserDeletionResponse',
+  '2': [
+    {
+      '1': 'deletion_request_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'deletionRequestTime'
+    },
+  ],
+};
+
+/// Descriptor for `SubmitUserDeletionResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List submitUserDeletionResponseDescriptor =
+    $convert.base64Decode(
+        'ChpTdWJtaXRVc2VyRGVsZXRpb25SZXNwb25zZRJOChVkZWxldGlvbl9yZXF1ZXN0X3RpbWUYAS'
+        'ABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUhNkZWxldGlvblJlcXVlc3RUaW1l');
+
+@$core.Deprecated('Use getSubpropertySyncConfigRequestDescriptor instead')
+const GetSubpropertySyncConfigRequest$json = {
+  '1': 'GetSubpropertySyncConfigRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetSubpropertySyncConfigRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSubpropertySyncConfigRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9HZXRTdWJwcm9wZXJ0eVN5bmNDb25maWdSZXF1ZXN0Ek8KBG5hbWUYASABKAlCO+BBAvpBNQ'
+        'ozYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vU3VicHJvcGVydHlTeW5jQ29uZmlnUgRu'
+        'YW1l');
+
+@$core.Deprecated('Use listSubpropertySyncConfigsRequestDescriptor instead')
+const ListSubpropertySyncConfigsRequest$json = {
+  '1': 'ListSubpropertySyncConfigsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'pageToken'},
+  ],
+};
+
+/// Descriptor for `ListSubpropertySyncConfigsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSubpropertySyncConfigsRequestDescriptor =
+    $convert.base64Decode(
+        'CiFMaXN0U3VicHJvcGVydHlTeW5jQ29uZmlnc1JlcXVlc3QSUwoGcGFyZW50GAEgASgJQjvgQQ'
+        'L6QTUSM2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1N1YnByb3BlcnR5U3luY0NvbmZp'
+        'Z1IGcGFyZW50EiAKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBUghwYWdlU2l6ZRIiCgpwYWdlX3Rva2'
+        'VuGAMgASgJQgPgQQFSCXBhZ2VUb2tlbg==');
+
+@$core.Deprecated('Use listSubpropertySyncConfigsResponseDescriptor instead')
+const ListSubpropertySyncConfigsResponse$json = {
+  '1': 'ListSubpropertySyncConfigsResponse',
+  '2': [
+    {
+      '1': 'subproperty_sync_configs',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.SubpropertySyncConfig',
+      '10': 'subpropertySyncConfigs'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+/// Descriptor for `ListSubpropertySyncConfigsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSubpropertySyncConfigsResponseDescriptor =
+    $convert.base64Decode(
+        'CiJMaXN0U3VicHJvcGVydHlTeW5jQ29uZmlnc1Jlc3BvbnNlEm8KGHN1YnByb3BlcnR5X3N5bm'
+        'NfY29uZmlncxgBIAMoCzI1Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5TdWJwcm9w'
+        'ZXJ0eVN5bmNDb25maWdSFnN1YnByb3BlcnR5U3luY0NvbmZpZ3MSJgoPbmV4dF9wYWdlX3Rva2'
+        'VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');
+
+@$core.Deprecated('Use updateSubpropertySyncConfigRequestDescriptor instead')
+const UpdateSubpropertySyncConfigRequest$json = {
+  '1': 'UpdateSubpropertySyncConfigRequest',
+  '2': [
+    {
+      '1': 'subproperty_sync_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.analytics.admin.v1alpha.SubpropertySyncConfig',
+      '8': {},
+      '10': 'subpropertySyncConfig'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '8': {},
+      '10': 'updateMask'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateSubpropertySyncConfigRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSubpropertySyncConfigRequestDescriptor =
+    $convert.base64Decode(
+        'CiJVcGRhdGVTdWJwcm9wZXJ0eVN5bmNDb25maWdSZXF1ZXN0EnIKF3N1YnByb3BlcnR5X3N5bm'
+        'NfY29uZmlnGAEgASgLMjUuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlN1YnByb3Bl'
+        'cnR5U3luY0NvbmZpZ0ID4EECUhVzdWJwcm9wZXJ0eVN5bmNDb25maWcSQAoLdXBkYXRlX21hc2'
+        'sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQFSCnVwZGF0ZU1hc2s=');
+
+@$core.Deprecated('Use getReportingIdentitySettingsRequestDescriptor instead')
+const GetReportingIdentitySettingsRequest$json = {
+  '1': 'GetReportingIdentitySettingsRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `GetReportingIdentitySettingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getReportingIdentitySettingsRequestDescriptor =
+    $convert.base64Decode(
+        'CiNHZXRSZXBvcnRpbmdJZGVudGl0eVNldHRpbmdzUmVxdWVzdBJTCgRuYW1lGAEgASgJQj/gQQ'
+        'L6QTkKN2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1JlcG9ydGluZ0lkZW50aXR5U2V0'
+        'dGluZ3NSBG5hbWU=');

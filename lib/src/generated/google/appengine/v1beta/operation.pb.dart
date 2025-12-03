@@ -1,19 +1,22 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/appengine/v1beta/operation.proto
-//
-// @dart = 2.12
+// Generated from google/appengine/v1beta/operation.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $0;
 
-import '../../protobuf/timestamp.pb.dart' as $0;
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum OperationMetadataV1Beta_MethodMetadata { createVersionMetadata, notSet }
 
@@ -29,40 +32,27 @@ class OperationMetadataV1Beta extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? warning,
     CreateVersionMetadataV1Beta? createVersionMetadata,
   }) {
-    final $result = create();
-    if (method != null) {
-      $result.method = method;
-    }
-    if (insertTime != null) {
-      $result.insertTime = insertTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    if (user != null) {
-      $result.user = user;
-    }
-    if (target != null) {
-      $result.target = target;
-    }
-    if (ephemeralMessage != null) {
-      $result.ephemeralMessage = ephemeralMessage;
-    }
-    if (warning != null) {
-      $result.warning.addAll(warning);
-    }
-    if (createVersionMetadata != null) {
-      $result.createVersionMetadata = createVersionMetadata;
-    }
-    return $result;
+    final result = create();
+    if (method != null) result.method = method;
+    if (insertTime != null) result.insertTime = insertTime;
+    if (endTime != null) result.endTime = endTime;
+    if (user != null) result.user = user;
+    if (target != null) result.target = target;
+    if (ephemeralMessage != null) result.ephemeralMessage = ephemeralMessage;
+    if (warning != null) result.warning.addAll(warning);
+    if (createVersionMetadata != null)
+      result.createVersionMetadata = createVersionMetadata;
+    return result;
   }
-  OperationMetadataV1Beta._() : super();
-  factory OperationMetadataV1Beta.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory OperationMetadataV1Beta.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  OperationMetadataV1Beta._();
+
+  factory OperationMetadataV1Beta.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OperationMetadataV1Beta.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, OperationMetadataV1Beta_MethodMetadata>
       _OperationMetadataV1Beta_MethodMetadataByTag = {
@@ -89,146 +79,123 @@ class OperationMetadataV1Beta extends $pb.GeneratedMessage {
         subBuilder: CreateVersionMetadataV1Beta.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  OperationMetadataV1Beta clone() =>
-      OperationMetadataV1Beta()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OperationMetadataV1Beta clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OperationMetadataV1Beta copyWith(
           void Function(OperationMetadataV1Beta) updates) =>
       super.copyWith((message) => updates(message as OperationMetadataV1Beta))
           as OperationMetadataV1Beta;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static OperationMetadataV1Beta create() => OperationMetadataV1Beta._();
+  @$core.override
   OperationMetadataV1Beta createEmptyInstance() => create();
-  static $pb.PbList<OperationMetadataV1Beta> createRepeated() =>
-      $pb.PbList<OperationMetadataV1Beta>();
   @$core.pragma('dart2js:noInline')
   static OperationMetadataV1Beta getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OperationMetadataV1Beta>(create);
   static OperationMetadataV1Beta? _defaultInstance;
 
+  @$pb.TagNumber(8)
   OperationMetadataV1Beta_MethodMetadata whichMethodMetadata() =>
       _OperationMetadataV1Beta_MethodMetadataByTag[$_whichOneof(0)]!;
-  void clearMethodMetadata() => clearField($_whichOneof(0));
+  @$pb.TagNumber(8)
+  void clearMethodMetadata() => $_clearField($_whichOneof(0));
 
-  ///  API method that initiated this operation. Example:
-  ///  `google.appengine.v1beta.Versions.CreateVersion`.
+  /// API method that initiated this operation. Example:
+  /// `google.appengine.v1beta.Versions.CreateVersion`.
   ///
-  ///  @OutputOnly
+  /// @OutputOnly
   @$pb.TagNumber(1)
   $core.String get method => $_getSZ(0);
   @$pb.TagNumber(1)
-  set method($core.String v) {
-    $_setString(0, v);
-  }
-
+  set method($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMethod() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMethod() => clearField(1);
+  void clearMethod() => $_clearField(1);
 
-  ///  Time that this operation was created.
+  /// Time that this operation was created.
   ///
-  ///  @OutputOnly
+  /// @OutputOnly
   @$pb.TagNumber(2)
   $0.Timestamp get insertTime => $_getN(1);
   @$pb.TagNumber(2)
-  set insertTime($0.Timestamp v) {
-    setField(2, v);
-  }
-
+  set insertTime($0.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasInsertTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearInsertTime() => clearField(2);
+  void clearInsertTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Timestamp ensureInsertTime() => $_ensure(1);
 
-  ///  Time that this operation completed.
+  /// Time that this operation completed.
   ///
-  ///  @OutputOnly
+  /// @OutputOnly
   @$pb.TagNumber(3)
   $0.Timestamp get endTime => $_getN(2);
   @$pb.TagNumber(3)
-  set endTime($0.Timestamp v) {
-    setField(3, v);
-  }
-
+  set endTime($0.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasEndTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEndTime() => clearField(3);
+  void clearEndTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Timestamp ensureEndTime() => $_ensure(2);
 
-  ///  User who requested this operation.
+  /// User who requested this operation.
   ///
-  ///  @OutputOnly
+  /// @OutputOnly
   @$pb.TagNumber(4)
   $core.String get user => $_getSZ(3);
   @$pb.TagNumber(4)
-  set user($core.String v) {
-    $_setString(3, v);
-  }
-
+  set user($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasUser() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUser() => clearField(4);
+  void clearUser() => $_clearField(4);
 
-  ///  Name of the resource that this operation is acting on. Example:
-  ///  `apps/myapp/services/default`.
+  /// Name of the resource that this operation is acting on. Example:
+  /// `apps/myapp/services/default`.
   ///
-  ///  @OutputOnly
+  /// @OutputOnly
   @$pb.TagNumber(5)
   $core.String get target => $_getSZ(4);
   @$pb.TagNumber(5)
-  set target($core.String v) {
-    $_setString(4, v);
-  }
-
+  set target($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasTarget() => $_has(4);
   @$pb.TagNumber(5)
-  void clearTarget() => clearField(5);
+  void clearTarget() => $_clearField(5);
 
   /// Ephemeral message that may change every time the operation is polled.
   /// @OutputOnly
   @$pb.TagNumber(6)
   $core.String get ephemeralMessage => $_getSZ(5);
   @$pb.TagNumber(6)
-  set ephemeralMessage($core.String v) {
-    $_setString(5, v);
-  }
-
+  set ephemeralMessage($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasEphemeralMessage() => $_has(5);
   @$pb.TagNumber(6)
-  void clearEphemeralMessage() => clearField(6);
+  void clearEphemeralMessage() => $_clearField(6);
 
   /// Durable messages that persist on every operation poll.
   /// @OutputOnly
   @$pb.TagNumber(7)
-  $core.List<$core.String> get warning => $_getList(6);
+  $pb.PbList<$core.String> get warning => $_getList(6);
 
   @$pb.TagNumber(8)
   CreateVersionMetadataV1Beta get createVersionMetadata => $_getN(7);
   @$pb.TagNumber(8)
-  set createVersionMetadata(CreateVersionMetadataV1Beta v) {
-    setField(8, v);
-  }
-
+  set createVersionMetadata(CreateVersionMetadataV1Beta value) =>
+      $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasCreateVersionMetadata() => $_has(7);
   @$pb.TagNumber(8)
-  void clearCreateVersionMetadata() => clearField(8);
+  void clearCreateVersionMetadata() => $_clearField(8);
   @$pb.TagNumber(8)
   CreateVersionMetadataV1Beta ensureCreateVersionMetadata() => $_ensure(7);
 }
@@ -239,19 +206,19 @@ class CreateVersionMetadataV1Beta extends $pb.GeneratedMessage {
   factory CreateVersionMetadataV1Beta({
     $core.String? cloudBuildId,
   }) {
-    final $result = create();
-    if (cloudBuildId != null) {
-      $result.cloudBuildId = cloudBuildId;
-    }
-    return $result;
+    final result = create();
+    if (cloudBuildId != null) result.cloudBuildId = cloudBuildId;
+    return result;
   }
-  CreateVersionMetadataV1Beta._() : super();
-  factory CreateVersionMetadataV1Beta.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateVersionMetadataV1Beta.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateVersionMetadataV1Beta._();
+
+  factory CreateVersionMetadataV1Beta.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateVersionMetadataV1Beta.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateVersionMetadataV1Beta',
@@ -261,28 +228,23 @@ class CreateVersionMetadataV1Beta extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'cloudBuildId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateVersionMetadataV1Beta clone() =>
-      CreateVersionMetadataV1Beta()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateVersionMetadataV1Beta clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateVersionMetadataV1Beta copyWith(
           void Function(CreateVersionMetadataV1Beta) updates) =>
       super.copyWith(
               (message) => updates(message as CreateVersionMetadataV1Beta))
           as CreateVersionMetadataV1Beta;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateVersionMetadataV1Beta create() =>
       CreateVersionMetadataV1Beta._();
+  @$core.override
   CreateVersionMetadataV1Beta createEmptyInstance() => create();
-  static $pb.PbList<CreateVersionMetadataV1Beta> createRepeated() =>
-      $pb.PbList<CreateVersionMetadataV1Beta>();
   @$core.pragma('dart2js:noInline')
   static CreateVersionMetadataV1Beta getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateVersionMetadataV1Beta>(create);
@@ -293,16 +255,14 @@ class CreateVersionMetadataV1Beta extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get cloudBuildId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set cloudBuildId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set cloudBuildId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasCloudBuildId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCloudBuildId() => clearField(1);
+  void clearCloudBuildId() => $_clearField(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

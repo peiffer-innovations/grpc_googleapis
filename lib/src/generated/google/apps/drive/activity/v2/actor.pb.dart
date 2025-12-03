@@ -1,19 +1,22 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/apps/drive/activity/v2/actor.proto
-//
-// @dart = 2.12
+// Generated from google/apps/drive/activity/v2/actor.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'actor.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'actor.pbenum.dart';
 
@@ -35,31 +38,23 @@ class Actor extends $pb.GeneratedMessage {
     SystemEvent? system,
     Administrator? administrator,
   }) {
-    final $result = create();
-    if (user != null) {
-      $result.user = user;
-    }
-    if (anonymous != null) {
-      $result.anonymous = anonymous;
-    }
-    if (impersonation != null) {
-      $result.impersonation = impersonation;
-    }
-    if (system != null) {
-      $result.system = system;
-    }
-    if (administrator != null) {
-      $result.administrator = administrator;
-    }
-    return $result;
+    final result = create();
+    if (user != null) result.user = user;
+    if (anonymous != null) result.anonymous = anonymous;
+    if (impersonation != null) result.impersonation = impersonation;
+    if (system != null) result.system = system;
+    if (administrator != null) result.administrator = administrator;
+    return result;
   }
-  Actor._() : super();
-  factory Actor.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Actor.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Actor._();
+
+  factory Actor.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Actor.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Actor_Type> _Actor_TypeByTag = {
     1: Actor_Type.user,
@@ -86,42 +81,46 @@ class Actor extends $pb.GeneratedMessage {
         subBuilder: Administrator.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Actor clone() => Actor()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Actor clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Actor copyWith(void Function(Actor) updates) =>
       super.copyWith((message) => updates(message as Actor)) as Actor;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Actor create() => Actor._();
+  @$core.override
   Actor createEmptyInstance() => create();
-  static $pb.PbList<Actor> createRepeated() => $pb.PbList<Actor>();
   @$core.pragma('dart2js:noInline')
   static Actor getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Actor>(create);
   static Actor? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
   Actor_Type whichType() => _Actor_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  void clearType() => $_clearField($_whichOneof(0));
 
   /// An end user.
   @$pb.TagNumber(1)
   User get user => $_getN(0);
   @$pb.TagNumber(1)
-  set user(User v) {
-    setField(1, v);
-  }
-
+  set user(User value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUser() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUser() => clearField(1);
+  void clearUser() => $_clearField(1);
   @$pb.TagNumber(1)
   User ensureUser() => $_ensure(0);
 
@@ -129,14 +128,11 @@ class Actor extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   AnonymousUser get anonymous => $_getN(1);
   @$pb.TagNumber(2)
-  set anonymous(AnonymousUser v) {
-    setField(2, v);
-  }
-
+  set anonymous(AnonymousUser value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasAnonymous() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAnonymous() => clearField(2);
+  void clearAnonymous() => $_clearField(2);
   @$pb.TagNumber(2)
   AnonymousUser ensureAnonymous() => $_ensure(1);
 
@@ -144,14 +140,11 @@ class Actor extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Impersonation get impersonation => $_getN(2);
   @$pb.TagNumber(3)
-  set impersonation(Impersonation v) {
-    setField(3, v);
-  }
-
+  set impersonation(Impersonation value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasImpersonation() => $_has(2);
   @$pb.TagNumber(3)
-  void clearImpersonation() => clearField(3);
+  void clearImpersonation() => $_clearField(3);
   @$pb.TagNumber(3)
   Impersonation ensureImpersonation() => $_ensure(2);
 
@@ -159,14 +152,11 @@ class Actor extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   SystemEvent get system => $_getN(3);
   @$pb.TagNumber(4)
-  set system(SystemEvent v) {
-    setField(4, v);
-  }
-
+  set system(SystemEvent value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasSystem() => $_has(3);
   @$pb.TagNumber(4)
-  void clearSystem() => clearField(4);
+  void clearSystem() => $_clearField(4);
   @$pb.TagNumber(4)
   SystemEvent ensureSystem() => $_ensure(3);
 
@@ -174,14 +164,11 @@ class Actor extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Administrator get administrator => $_getN(4);
   @$pb.TagNumber(5)
-  set administrator(Administrator v) {
-    setField(5, v);
-  }
-
+  set administrator(Administrator value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasAdministrator() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAdministrator() => clearField(5);
+  void clearAdministrator() => $_clearField(5);
   @$pb.TagNumber(5)
   Administrator ensureAdministrator() => $_ensure(4);
 }
@@ -192,22 +179,20 @@ class User_KnownUser extends $pb.GeneratedMessage {
     $core.String? personName,
     $core.bool? isCurrentUser,
   }) {
-    final $result = create();
-    if (personName != null) {
-      $result.personName = personName;
-    }
-    if (isCurrentUser != null) {
-      $result.isCurrentUser = isCurrentUser;
-    }
-    return $result;
+    final result = create();
+    if (personName != null) result.personName = personName;
+    if (isCurrentUser != null) result.isCurrentUser = isCurrentUser;
+    return result;
   }
-  User_KnownUser._() : super();
-  factory User_KnownUser.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory User_KnownUser.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  User_KnownUser._();
+
+  factory User_KnownUser.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory User_KnownUser.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'User.KnownUser',
@@ -218,24 +203,20 @@ class User_KnownUser extends $pb.GeneratedMessage {
     ..aOB(2, _omitFieldNames ? '' : 'isCurrentUser')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  User_KnownUser clone() => User_KnownUser()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  User_KnownUser clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   User_KnownUser copyWith(void Function(User_KnownUser) updates) =>
       super.copyWith((message) => updates(message as User_KnownUser))
           as User_KnownUser;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static User_KnownUser create() => User_KnownUser._();
+  @$core.override
   User_KnownUser createEmptyInstance() => create();
-  static $pb.PbList<User_KnownUser> createRepeated() =>
-      $pb.PbList<User_KnownUser>();
   @$core.pragma('dart2js:noInline')
   static User_KnownUser getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<User_KnownUser>(create);
@@ -247,39 +228,35 @@ class User_KnownUser extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get personName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set personName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set personName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPersonName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPersonName() => clearField(1);
+  void clearPersonName() => $_clearField(1);
 
   /// True if this is the user making the request.
   @$pb.TagNumber(2)
   $core.bool get isCurrentUser => $_getBF(1);
   @$pb.TagNumber(2)
-  set isCurrentUser($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set isCurrentUser($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasIsCurrentUser() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIsCurrentUser() => clearField(2);
+  void clearIsCurrentUser() => $_clearField(2);
 }
 
 /// A user whose account has since been deleted.
 class User_DeletedUser extends $pb.GeneratedMessage {
   factory User_DeletedUser() => create();
-  User_DeletedUser._() : super();
-  factory User_DeletedUser.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory User_DeletedUser.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  User_DeletedUser._();
+
+  factory User_DeletedUser.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory User_DeletedUser.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'User.DeletedUser',
@@ -288,24 +265,20 @@ class User_DeletedUser extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  User_DeletedUser clone() => User_DeletedUser()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  User_DeletedUser clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   User_DeletedUser copyWith(void Function(User_DeletedUser) updates) =>
       super.copyWith((message) => updates(message as User_DeletedUser))
           as User_DeletedUser;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static User_DeletedUser create() => User_DeletedUser._();
+  @$core.override
   User_DeletedUser createEmptyInstance() => create();
-  static $pb.PbList<User_DeletedUser> createRepeated() =>
-      $pb.PbList<User_DeletedUser>();
   @$core.pragma('dart2js:noInline')
   static User_DeletedUser getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<User_DeletedUser>(create);
@@ -315,13 +288,15 @@ class User_DeletedUser extends $pb.GeneratedMessage {
 /// A user about whom nothing is currently known.
 class User_UnknownUser extends $pb.GeneratedMessage {
   factory User_UnknownUser() => create();
-  User_UnknownUser._() : super();
-  factory User_UnknownUser.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory User_UnknownUser.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  User_UnknownUser._();
+
+  factory User_UnknownUser.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory User_UnknownUser.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'User.UnknownUser',
@@ -330,24 +305,20 @@ class User_UnknownUser extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  User_UnknownUser clone() => User_UnknownUser()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  User_UnknownUser clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   User_UnknownUser copyWith(void Function(User_UnknownUser) updates) =>
       super.copyWith((message) => updates(message as User_UnknownUser))
           as User_UnknownUser;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static User_UnknownUser create() => User_UnknownUser._();
+  @$core.override
   User_UnknownUser createEmptyInstance() => create();
-  static $pb.PbList<User_UnknownUser> createRepeated() =>
-      $pb.PbList<User_UnknownUser>();
   @$core.pragma('dart2js:noInline')
   static User_UnknownUser getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<User_UnknownUser>(create);
@@ -363,25 +334,21 @@ class User extends $pb.GeneratedMessage {
     User_DeletedUser? deletedUser,
     User_UnknownUser? unknownUser,
   }) {
-    final $result = create();
-    if (knownUser != null) {
-      $result.knownUser = knownUser;
-    }
-    if (deletedUser != null) {
-      $result.deletedUser = deletedUser;
-    }
-    if (unknownUser != null) {
-      $result.unknownUser = unknownUser;
-    }
-    return $result;
+    final result = create();
+    if (knownUser != null) result.knownUser = knownUser;
+    if (deletedUser != null) result.deletedUser = deletedUser;
+    if (unknownUser != null) result.unknownUser = unknownUser;
+    return result;
   }
-  User._() : super();
-  factory User.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory User.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  User._();
+
+  factory User.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory User.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, User_Type> _User_TypeByTag = {
     2: User_Type.knownUser,
@@ -403,42 +370,42 @@ class User extends $pb.GeneratedMessage {
         subBuilder: User_UnknownUser.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  User clone() => User()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  User clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   User copyWith(void Function(User) updates) =>
       super.copyWith((message) => updates(message as User)) as User;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static User create() => User._();
+  @$core.override
   User createEmptyInstance() => create();
-  static $pb.PbList<User> createRepeated() => $pb.PbList<User>();
   @$core.pragma('dart2js:noInline')
   static User getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<User>(create);
   static User? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
   User_Type whichType() => _User_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  void clearType() => $_clearField($_whichOneof(0));
 
   /// A known user.
   @$pb.TagNumber(2)
   User_KnownUser get knownUser => $_getN(0);
   @$pb.TagNumber(2)
-  set knownUser(User_KnownUser v) {
-    setField(2, v);
-  }
-
+  set knownUser(User_KnownUser value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasKnownUser() => $_has(0);
   @$pb.TagNumber(2)
-  void clearKnownUser() => clearField(2);
+  void clearKnownUser() => $_clearField(2);
   @$pb.TagNumber(2)
   User_KnownUser ensureKnownUser() => $_ensure(0);
 
@@ -446,14 +413,11 @@ class User extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   User_DeletedUser get deletedUser => $_getN(1);
   @$pb.TagNumber(3)
-  set deletedUser(User_DeletedUser v) {
-    setField(3, v);
-  }
-
+  set deletedUser(User_DeletedUser value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasDeletedUser() => $_has(1);
   @$pb.TagNumber(3)
-  void clearDeletedUser() => clearField(3);
+  void clearDeletedUser() => $_clearField(3);
   @$pb.TagNumber(3)
   User_DeletedUser ensureDeletedUser() => $_ensure(1);
 
@@ -461,14 +425,11 @@ class User extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   User_UnknownUser get unknownUser => $_getN(2);
   @$pb.TagNumber(4)
-  set unknownUser(User_UnknownUser v) {
-    setField(4, v);
-  }
-
+  set unknownUser(User_UnknownUser value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasUnknownUser() => $_has(2);
   @$pb.TagNumber(4)
-  void clearUnknownUser() => clearField(4);
+  void clearUnknownUser() => $_clearField(4);
   @$pb.TagNumber(4)
   User_UnknownUser ensureUnknownUser() => $_ensure(2);
 }
@@ -477,13 +438,15 @@ class User extends $pb.GeneratedMessage {
 /// user should be anonymized.
 class AnonymousUser extends $pb.GeneratedMessage {
   factory AnonymousUser() => create();
-  AnonymousUser._() : super();
-  factory AnonymousUser.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AnonymousUser.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AnonymousUser._();
+
+  factory AnonymousUser.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AnonymousUser.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AnonymousUser',
@@ -492,24 +455,20 @@ class AnonymousUser extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AnonymousUser clone() => AnonymousUser()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AnonymousUser clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AnonymousUser copyWith(void Function(AnonymousUser) updates) =>
       super.copyWith((message) => updates(message as AnonymousUser))
           as AnonymousUser;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AnonymousUser create() => AnonymousUser._();
+  @$core.override
   AnonymousUser createEmptyInstance() => create();
-  static $pb.PbList<AnonymousUser> createRepeated() =>
-      $pb.PbList<AnonymousUser>();
   @$core.pragma('dart2js:noInline')
   static AnonymousUser getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AnonymousUser>(create);
@@ -522,19 +481,19 @@ class Impersonation extends $pb.GeneratedMessage {
   factory Impersonation({
     User? impersonatedUser,
   }) {
-    final $result = create();
-    if (impersonatedUser != null) {
-      $result.impersonatedUser = impersonatedUser;
-    }
-    return $result;
+    final result = create();
+    if (impersonatedUser != null) result.impersonatedUser = impersonatedUser;
+    return result;
   }
-  Impersonation._() : super();
-  factory Impersonation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Impersonation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Impersonation._();
+
+  factory Impersonation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Impersonation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Impersonation',
@@ -545,24 +504,20 @@ class Impersonation extends $pb.GeneratedMessage {
         subBuilder: User.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Impersonation clone() => Impersonation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Impersonation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Impersonation copyWith(void Function(Impersonation) updates) =>
       super.copyWith((message) => updates(message as Impersonation))
           as Impersonation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Impersonation create() => Impersonation._();
+  @$core.override
   Impersonation createEmptyInstance() => create();
-  static $pb.PbList<Impersonation> createRepeated() =>
-      $pb.PbList<Impersonation>();
   @$core.pragma('dart2js:noInline')
   static Impersonation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Impersonation>(create);
@@ -572,14 +527,11 @@ class Impersonation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   User get impersonatedUser => $_getN(0);
   @$pb.TagNumber(1)
-  set impersonatedUser(User v) {
-    setField(1, v);
-  }
-
+  set impersonatedUser(User value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasImpersonatedUser() => $_has(0);
   @$pb.TagNumber(1)
-  void clearImpersonatedUser() => clearField(1);
+  void clearImpersonatedUser() => $_clearField(1);
   @$pb.TagNumber(1)
   User ensureImpersonatedUser() => $_ensure(0);
 }
@@ -589,48 +541,43 @@ class SystemEvent extends $pb.GeneratedMessage {
   factory SystemEvent({
     SystemEvent_Type? type,
   }) {
-    final $result = create();
-    if (type != null) {
-      $result.type = type;
-    }
-    return $result;
+    final result = create();
+    if (type != null) result.type = type;
+    return result;
   }
-  SystemEvent._() : super();
-  factory SystemEvent.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SystemEvent.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SystemEvent._();
+
+  factory SystemEvent.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SystemEvent.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SystemEvent',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.activity.v2'),
       createEmptyInstance: create)
-    ..e<SystemEvent_Type>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: SystemEvent_Type.TYPE_UNSPECIFIED,
-        valueOf: SystemEvent_Type.valueOf,
+    ..aE<SystemEvent_Type>(1, _omitFieldNames ? '' : 'type',
         enumValues: SystemEvent_Type.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SystemEvent clone() => SystemEvent()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SystemEvent clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SystemEvent copyWith(void Function(SystemEvent) updates) =>
       super.copyWith((message) => updates(message as SystemEvent))
           as SystemEvent;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SystemEvent create() => SystemEvent._();
+  @$core.override
   SystemEvent createEmptyInstance() => create();
-  static $pb.PbList<SystemEvent> createRepeated() => $pb.PbList<SystemEvent>();
   @$core.pragma('dart2js:noInline')
   static SystemEvent getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SystemEvent>(create);
@@ -640,26 +587,25 @@ class SystemEvent extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   SystemEvent_Type get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(SystemEvent_Type v) {
-    setField(1, v);
-  }
-
+  set type(SystemEvent_Type value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearType() => $_clearField(1);
 }
 
 /// Empty message representing an administrator.
 class Administrator extends $pb.GeneratedMessage {
   factory Administrator() => create();
-  Administrator._() : super();
-  factory Administrator.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Administrator.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Administrator._();
+
+  factory Administrator.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Administrator.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Administrator',
@@ -668,30 +614,27 @@ class Administrator extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Administrator clone() => Administrator()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Administrator clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Administrator copyWith(void Function(Administrator) updates) =>
       super.copyWith((message) => updates(message as Administrator))
           as Administrator;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Administrator create() => Administrator._();
+  @$core.override
   Administrator createEmptyInstance() => create();
-  static $pb.PbList<Administrator> createRepeated() =>
-      $pb.PbList<Administrator>();
   @$core.pragma('dart2js:noInline')
   static Administrator getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Administrator>(create);
   static Administrator? _defaultInstance;
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/chat/v1/message.proto
-//
-// @dart = 2.12
+// Generated from google/chat/v1/message.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -261,7 +263,7 @@ final $typed_data.Uint8List messageDescriptor = $convert.base64Decode(
     'QudjEuVXNlckIG4EEF4EEBUhRwcml2YXRlTWVzc2FnZVZpZXdlchJSChFkZWxldGlvbl9tZXRh'
     'ZGF0YRgmIAEoCzIgLmdvb2dsZS5jaGF0LnYxLkRlbGV0aW9uTWV0YWRhdGFCA+BBA1IQZGVsZX'
     'Rpb25NZXRhZGF0YRJiChdxdW90ZWRfbWVzc2FnZV9tZXRhZGF0YRgnIAEoCzIlLmdvb2dsZS5j'
-    'aGF0LnYxLlF1b3RlZE1lc3NhZ2VNZXRhZGF0YUID4EEDUhVxdW90ZWRNZXNzYWdlTWV0YWRhdG'
+    'aGF0LnYxLlF1b3RlZE1lc3NhZ2VNZXRhZGF0YUID4EEBUhVxdW90ZWRNZXNzYWdlTWV0YWRhdG'
     'ESRQoNYXR0YWNoZWRfZ2lmcxgqIAMoCzIbLmdvb2dsZS5jaGF0LnYxLkF0dGFjaGVkR2lmQgPg'
     'QQNSDGF0dGFjaGVkR2lmcxJRChFhY2Nlc3Nvcnlfd2lkZ2V0cxgsIAMoCzIfLmdvb2dsZS5jaG'
     'F0LnYxLkFjY2Vzc29yeVdpZGdldEID4EEBUhBhY2Nlc3NvcnlXaWRnZXRzOkPqQUAKG2NoYXQu'
@@ -300,9 +302,9 @@ const QuotedMessageMetadata$json = {
 
 /// Descriptor for `QuotedMessageMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List quotedMessageMetadataDescriptor = $convert.base64Decode(
-    'ChVRdW90ZWRNZXNzYWdlTWV0YWRhdGESNwoEbmFtZRgBIAEoCUIj4EED+kEdChtjaGF0Lmdvb2'
+    'ChVRdW90ZWRNZXNzYWdlTWV0YWRhdGESNwoEbmFtZRgBIAEoCUIj4EEC+kEdChtjaGF0Lmdvb2'
     'dsZWFwaXMuY29tL01lc3NhZ2VSBG5hbWUSSQoQbGFzdF91cGRhdGVfdGltZRgCIAEoCzIaLmdv'
-    'b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IObGFzdFVwZGF0ZVRpbWU6gQHqQX4KKWNoYX'
+    'b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAlIObGFzdFVwZGF0ZVRpbWU6gQHqQX4KKWNoYX'
     'QuZ29vZ2xlYXBpcy5jb20vUXVvdGVkTWVzc2FnZU1ldGFkYXRhElFzcGFjZXMve3NwYWNlfS9t'
     'ZXNzYWdlcy97bWVzc2FnZX0vcXVvdGVkTWVzc2FnZU1ldGFkYXRhL3txdW90ZWRfbWVzc2FnZV'
     '9tZXRhZGF0YX0=');

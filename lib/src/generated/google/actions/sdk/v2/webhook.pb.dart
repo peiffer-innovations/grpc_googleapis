@@ -1,17 +1,20 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/webhook.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/webhook.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Declares the name of the webhoook handler. A webhook can have
 /// multiple handlers registered. These handlers can be called from multiple
@@ -20,19 +23,19 @@ class Webhook_Handler extends $pb.GeneratedMessage {
   factory Webhook_Handler({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  Webhook_Handler._() : super();
-  factory Webhook_Handler.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Webhook_Handler.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Webhook_Handler._();
+
+  factory Webhook_Handler.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Webhook_Handler.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Webhook.Handler',
@@ -42,24 +45,20 @@ class Webhook_Handler extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Webhook_Handler clone() => Webhook_Handler()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Webhook_Handler clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Webhook_Handler copyWith(void Function(Webhook_Handler) updates) =>
       super.copyWith((message) => updates(message as Webhook_Handler))
           as Webhook_Handler;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Webhook_Handler create() => Webhook_Handler._();
+  @$core.override
   Webhook_Handler createEmptyInstance() => create();
-  static $pb.PbList<Webhook_Handler> createRepeated() =>
-      $pb.PbList<Webhook_Handler>();
   @$core.pragma('dart2js:noInline')
   static Webhook_Handler getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Webhook_Handler>(create);
@@ -71,42 +70,36 @@ class Webhook_Handler extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// REST endpoint to notify if you're not using the inline editor.
 class Webhook_HttpsEndpoint extends $pb.GeneratedMessage {
   factory Webhook_HttpsEndpoint({
     $core.String? baseUrl,
-    $core.Map<$core.String, $core.String>? httpHeaders,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? httpHeaders,
     $core.int? endpointApiVersion,
   }) {
-    final $result = create();
-    if (baseUrl != null) {
-      $result.baseUrl = baseUrl;
-    }
-    if (httpHeaders != null) {
-      $result.httpHeaders.addAll(httpHeaders);
-    }
-    if (endpointApiVersion != null) {
-      $result.endpointApiVersion = endpointApiVersion;
-    }
-    return $result;
+    final result = create();
+    if (baseUrl != null) result.baseUrl = baseUrl;
+    if (httpHeaders != null) result.httpHeaders.addEntries(httpHeaders);
+    if (endpointApiVersion != null)
+      result.endpointApiVersion = endpointApiVersion;
+    return result;
   }
-  Webhook_HttpsEndpoint._() : super();
-  factory Webhook_HttpsEndpoint.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Webhook_HttpsEndpoint.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Webhook_HttpsEndpoint._();
+
+  factory Webhook_HttpsEndpoint.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Webhook_HttpsEndpoint.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Webhook.HttpsEndpoint',
@@ -119,30 +112,24 @@ class Webhook_HttpsEndpoint extends $pb.GeneratedMessage {
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OS,
         packageName: const $pb.PackageName('google.actions.sdk.v2'))
-    ..a<$core.int>(
-        3, _omitFieldNames ? '' : 'endpointApiVersion', $pb.PbFieldType.O3)
+    ..aI(3, _omitFieldNames ? '' : 'endpointApiVersion')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Webhook_HttpsEndpoint clone() =>
-      Webhook_HttpsEndpoint()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Webhook_HttpsEndpoint clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Webhook_HttpsEndpoint copyWith(
           void Function(Webhook_HttpsEndpoint) updates) =>
       super.copyWith((message) => updates(message as Webhook_HttpsEndpoint))
           as Webhook_HttpsEndpoint;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Webhook_HttpsEndpoint create() => Webhook_HttpsEndpoint._();
+  @$core.override
   Webhook_HttpsEndpoint createEmptyInstance() => create();
-  static $pb.PbList<Webhook_HttpsEndpoint> createRepeated() =>
-      $pb.PbList<Webhook_HttpsEndpoint>();
   @$core.pragma('dart2js:noInline')
   static Webhook_HttpsEndpoint getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Webhook_HttpsEndpoint>(create);
@@ -157,32 +144,26 @@ class Webhook_HttpsEndpoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get baseUrl => $_getSZ(0);
   @$pb.TagNumber(1)
-  set baseUrl($core.String v) {
-    $_setString(0, v);
-  }
-
+  set baseUrl($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasBaseUrl() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBaseUrl() => clearField(1);
+  void clearBaseUrl() => $_clearField(1);
 
   /// Map of HTTP parameters to be included in the POST request.
   @$pb.TagNumber(2)
-  $core.Map<$core.String, $core.String> get httpHeaders => $_getMap(1);
+  $pb.PbMap<$core.String, $core.String> get httpHeaders => $_getMap(1);
 
   /// Version of the protocol used by the endpoint. This is the protocol shared
   /// by all fulfillment types and not specific to Google fulfillment type.
   @$pb.TagNumber(3)
   $core.int get endpointApiVersion => $_getIZ(2);
   @$pb.TagNumber(3)
-  set endpointApiVersion($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set endpointApiVersion($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
   $core.bool hasEndpointApiVersion() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEndpointApiVersion() => clearField(3);
+  void clearEndpointApiVersion() => $_clearField(3);
 }
 
 /// Holds the metadata of an inline Cloud Function deployed from the
@@ -191,19 +172,19 @@ class Webhook_InlineCloudFunction extends $pb.GeneratedMessage {
   factory Webhook_InlineCloudFunction({
     $core.String? executeFunction,
   }) {
-    final $result = create();
-    if (executeFunction != null) {
-      $result.executeFunction = executeFunction;
-    }
-    return $result;
+    final result = create();
+    if (executeFunction != null) result.executeFunction = executeFunction;
+    return result;
   }
-  Webhook_InlineCloudFunction._() : super();
-  factory Webhook_InlineCloudFunction.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Webhook_InlineCloudFunction.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Webhook_InlineCloudFunction._();
+
+  factory Webhook_InlineCloudFunction.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Webhook_InlineCloudFunction.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Webhook.InlineCloudFunction',
@@ -213,28 +194,23 @@ class Webhook_InlineCloudFunction extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'executeFunction')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Webhook_InlineCloudFunction clone() =>
-      Webhook_InlineCloudFunction()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Webhook_InlineCloudFunction clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Webhook_InlineCloudFunction copyWith(
           void Function(Webhook_InlineCloudFunction) updates) =>
       super.copyWith(
               (message) => updates(message as Webhook_InlineCloudFunction))
           as Webhook_InlineCloudFunction;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Webhook_InlineCloudFunction create() =>
       Webhook_InlineCloudFunction._();
+  @$core.override
   Webhook_InlineCloudFunction createEmptyInstance() => create();
-  static $pb.PbList<Webhook_InlineCloudFunction> createRepeated() =>
-      $pb.PbList<Webhook_InlineCloudFunction>();
   @$core.pragma('dart2js:noInline')
   static Webhook_InlineCloudFunction getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Webhook_InlineCloudFunction>(create);
@@ -245,14 +221,11 @@ class Webhook_InlineCloudFunction extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get executeFunction => $_getSZ(0);
   @$pb.TagNumber(1)
-  set executeFunction($core.String v) {
-    $_setString(0, v);
-  }
-
+  set executeFunction($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasExecuteFunction() => $_has(0);
   @$pb.TagNumber(1)
-  void clearExecuteFunction() => clearField(1);
+  void clearExecuteFunction() => $_clearField(1);
 }
 
 enum Webhook_WebhookType { httpsEndpoint, inlineCloudFunction, notSet }
@@ -271,25 +244,22 @@ class Webhook extends $pb.GeneratedMessage {
     Webhook_HttpsEndpoint? httpsEndpoint,
     Webhook_InlineCloudFunction? inlineCloudFunction,
   }) {
-    final $result = create();
-    if (handlers != null) {
-      $result.handlers.addAll(handlers);
-    }
-    if (httpsEndpoint != null) {
-      $result.httpsEndpoint = httpsEndpoint;
-    }
-    if (inlineCloudFunction != null) {
-      $result.inlineCloudFunction = inlineCloudFunction;
-    }
-    return $result;
+    final result = create();
+    if (handlers != null) result.handlers.addAll(handlers);
+    if (httpsEndpoint != null) result.httpsEndpoint = httpsEndpoint;
+    if (inlineCloudFunction != null)
+      result.inlineCloudFunction = inlineCloudFunction;
+    return result;
   }
-  Webhook._() : super();
-  factory Webhook.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Webhook.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Webhook._();
+
+  factory Webhook.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Webhook.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Webhook_WebhookType>
       _Webhook_WebhookTypeByTag = {
@@ -303,8 +273,7 @@ class Webhook extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.actions.sdk.v2'),
       createEmptyInstance: create)
     ..oo(0, [2, 3])
-    ..pc<Webhook_Handler>(
-        1, _omitFieldNames ? '' : 'handlers', $pb.PbFieldType.PM,
+    ..pPM<Webhook_Handler>(1, _omitFieldNames ? '' : 'handlers',
         subBuilder: Webhook_Handler.create)
     ..aOM<Webhook_HttpsEndpoint>(2, _omitFieldNames ? '' : 'httpsEndpoint',
         subBuilder: Webhook_HttpsEndpoint.create)
@@ -313,47 +282,45 @@ class Webhook extends $pb.GeneratedMessage {
         subBuilder: Webhook_InlineCloudFunction.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Webhook clone() => Webhook()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Webhook clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Webhook copyWith(void Function(Webhook) updates) =>
       super.copyWith((message) => updates(message as Webhook)) as Webhook;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Webhook create() => Webhook._();
+  @$core.override
   Webhook createEmptyInstance() => create();
-  static $pb.PbList<Webhook> createRepeated() => $pb.PbList<Webhook>();
   @$core.pragma('dart2js:noInline')
   static Webhook getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Webhook>(create);
   static Webhook? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   Webhook_WebhookType whichWebhookType() =>
       _Webhook_WebhookTypeByTag[$_whichOneof(0)]!;
-  void clearWebhookType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearWebhookType() => $_clearField($_whichOneof(0));
 
   /// List of handlers for this webhook.
   @$pb.TagNumber(1)
-  $core.List<Webhook_Handler> get handlers => $_getList(0);
+  $pb.PbList<Webhook_Handler> get handlers => $_getList(0);
 
   /// Custom webhook HTTPS endpoint.
   @$pb.TagNumber(2)
   Webhook_HttpsEndpoint get httpsEndpoint => $_getN(1);
   @$pb.TagNumber(2)
-  set httpsEndpoint(Webhook_HttpsEndpoint v) {
-    setField(2, v);
-  }
-
+  set httpsEndpoint(Webhook_HttpsEndpoint value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasHttpsEndpoint() => $_has(1);
   @$pb.TagNumber(2)
-  void clearHttpsEndpoint() => clearField(2);
+  void clearHttpsEndpoint() => $_clearField(2);
   @$pb.TagNumber(2)
   Webhook_HttpsEndpoint ensureHttpsEndpoint() => $_ensure(1);
 
@@ -361,18 +328,17 @@ class Webhook extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Webhook_InlineCloudFunction get inlineCloudFunction => $_getN(2);
   @$pb.TagNumber(3)
-  set inlineCloudFunction(Webhook_InlineCloudFunction v) {
-    setField(3, v);
-  }
-
+  set inlineCloudFunction(Webhook_InlineCloudFunction value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasInlineCloudFunction() => $_has(2);
   @$pb.TagNumber(3)
-  void clearInlineCloudFunction() => clearField(3);
+  void clearInlineCloudFunction() => $_clearField(3);
   @$pb.TagNumber(3)
   Webhook_InlineCloudFunction ensureInlineCloudFunction() => $_ensure(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

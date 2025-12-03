@@ -1,20 +1,24 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/routing/v2/location.proto
-//
-// @dart = 2.12
+// Generated from google/maps/routing/v2/location.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/wrappers.pb.dart'
+    as $1;
 
-import '../../../protobuf/wrappers.pb.dart' as $1;
 import '../../../type/latlng.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Encapsulates a location (a geographic point, and an optional heading).
 class Location extends $pb.GeneratedMessage {
@@ -22,22 +26,20 @@ class Location extends $pb.GeneratedMessage {
     $0.LatLng? latLng,
     $1.Int32Value? heading,
   }) {
-    final $result = create();
-    if (latLng != null) {
-      $result.latLng = latLng;
-    }
-    if (heading != null) {
-      $result.heading = heading;
-    }
-    return $result;
+    final result = create();
+    if (latLng != null) result.latLng = latLng;
+    if (heading != null) result.heading = heading;
+    return result;
   }
-  Location._() : super();
-  factory Location.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Location.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Location._();
+
+  factory Location.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Location.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Location',
@@ -50,22 +52,19 @@ class Location extends $pb.GeneratedMessage {
         subBuilder: $1.Int32Value.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Location clone() => Location()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Location clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Location copyWith(void Function(Location) updates) =>
       super.copyWith((message) => updates(message as Location)) as Location;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Location create() => Location._();
+  @$core.override
   Location createEmptyInstance() => create();
-  static $pb.PbList<Location> createRepeated() => $pb.PbList<Location>();
   @$core.pragma('dart2js:noInline')
   static Location getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Location>(create);
@@ -75,14 +74,11 @@ class Location extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.LatLng get latLng => $_getN(0);
   @$pb.TagNumber(1)
-  set latLng($0.LatLng v) {
-    setField(1, v);
-  }
-
+  set latLng($0.LatLng value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasLatLng() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLatLng() => clearField(1);
+  void clearLatLng() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.LatLng ensureLatLng() => $_ensure(0);
 
@@ -95,18 +91,16 @@ class Location extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.Int32Value get heading => $_getN(1);
   @$pb.TagNumber(2)
-  set heading($1.Int32Value v) {
-    setField(2, v);
-  }
-
+  set heading($1.Int32Value value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasHeading() => $_has(1);
   @$pb.TagNumber(2)
-  void clearHeading() => clearField(2);
+  void clearHeading() => $_clearField(2);
   @$pb.TagNumber(2)
   $1.Int32Value ensureHeading() => $_ensure(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

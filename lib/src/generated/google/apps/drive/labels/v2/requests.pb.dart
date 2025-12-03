@@ -1,27 +1,29 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/apps/drive/labels/v2/requests.proto
-//
-// @dart = 2.12
+// Generated from google/apps/drive/labels/v2/requests.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/field_mask.pb.dart'
+    as $1;
 
-import '../../../../protobuf/field_mask.pb.dart' as $1;
 import 'common.pb.dart' as $2;
 import 'field.pb.dart' as $3;
 import 'label.pb.dart' as $0;
-import 'label.pbenum.dart' as $0;
 import 'label_lock.pb.dart' as $5;
 import 'label_permission.pb.dart' as $4;
-import 'label_permission.pbenum.dart' as $4;
 import 'requests.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'requests.pbenum.dart';
 
@@ -33,19 +35,20 @@ class WriteControl extends $pb.GeneratedMessage {
   factory WriteControl({
     $core.String? requiredRevisionId,
   }) {
-    final $result = create();
-    if (requiredRevisionId != null) {
-      $result.requiredRevisionId = requiredRevisionId;
-    }
-    return $result;
+    final result = create();
+    if (requiredRevisionId != null)
+      result.requiredRevisionId = requiredRevisionId;
+    return result;
   }
-  WriteControl._() : super();
-  factory WriteControl.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WriteControl.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WriteControl._();
+
+  factory WriteControl.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WriteControl.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, WriteControl_Control>
       _WriteControl_ControlByTag = {
@@ -61,32 +64,30 @@ class WriteControl extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'requiredRevisionId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WriteControl clone() => WriteControl()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WriteControl clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WriteControl copyWith(void Function(WriteControl) updates) =>
       super.copyWith((message) => updates(message as WriteControl))
           as WriteControl;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WriteControl create() => WriteControl._();
+  @$core.override
   WriteControl createEmptyInstance() => create();
-  static $pb.PbList<WriteControl> createRepeated() =>
-      $pb.PbList<WriteControl>();
   @$core.pragma('dart2js:noInline')
   static WriteControl getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WriteControl>(create);
   static WriteControl? _defaultInstance;
 
+  @$pb.TagNumber(1)
   WriteControl_Control whichControl() =>
       _WriteControl_ControlByTag[$_whichOneof(0)]!;
-  void clearControl() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  void clearControl() => $_clearField($_whichOneof(0));
 
   /// The [revision_id][google.apps.drive.labels.v1.Label.revision_id] of the
   /// label that the write request will be applied to. If this is not the
@@ -95,14 +96,11 @@ class WriteControl extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get requiredRevisionId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set requiredRevisionId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set requiredRevisionId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRequiredRevisionId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRequiredRevisionId() => clearField(1);
+  void clearRequiredRevisionId() => $_clearField(1);
 }
 
 /// Request to get the capabilities for a user.
@@ -111,22 +109,20 @@ class GetUserCapabilitiesRequest extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? customer,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (customer != null) {
-      $result.customer = customer;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (customer != null) result.customer = customer;
+    return result;
   }
-  GetUserCapabilitiesRequest._() : super();
-  factory GetUserCapabilitiesRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetUserCapabilitiesRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetUserCapabilitiesRequest._();
+
+  factory GetUserCapabilitiesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetUserCapabilitiesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetUserCapabilitiesRequest',
@@ -137,27 +133,22 @@ class GetUserCapabilitiesRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'customer')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetUserCapabilitiesRequest clone() =>
-      GetUserCapabilitiesRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetUserCapabilitiesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetUserCapabilitiesRequest copyWith(
           void Function(GetUserCapabilitiesRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetUserCapabilitiesRequest))
           as GetUserCapabilitiesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetUserCapabilitiesRequest create() => GetUserCapabilitiesRequest._();
+  @$core.override
   GetUserCapabilitiesRequest createEmptyInstance() => create();
-  static $pb.PbList<GetUserCapabilitiesRequest> createRepeated() =>
-      $pb.PbList<GetUserCapabilitiesRequest>();
   @$core.pragma('dart2js:noInline')
   static GetUserCapabilitiesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetUserCapabilitiesRequest>(create);
@@ -168,14 +159,11 @@ class GetUserCapabilitiesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The customer to scope this request to.
   /// For example: "customers/abcd1234".
@@ -183,14 +171,11 @@ class GetUserCapabilitiesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get customer => $_getSZ(1);
   @$pb.TagNumber(2)
-  set customer($core.String v) {
-    $_setString(1, v);
-  }
-
+  set customer($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCustomer() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCustomer() => clearField(2);
+  void clearCustomer() => $_clearField(2);
 }
 
 /// Request to create a Label.
@@ -200,25 +185,21 @@ class CreateLabelRequest extends $pb.GeneratedMessage {
     $core.bool? useAdminAccess,
     $core.String? languageCode,
   }) {
-    final $result = create();
-    if (label != null) {
-      $result.label = label;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    if (languageCode != null) {
-      $result.languageCode = languageCode;
-    }
-    return $result;
+    final result = create();
+    if (label != null) result.label = label;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    if (languageCode != null) result.languageCode = languageCode;
+    return result;
   }
-  CreateLabelRequest._() : super();
-  factory CreateLabelRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateLabelRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateLabelRequest._();
+
+  factory CreateLabelRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateLabelRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateLabelRequest',
@@ -231,24 +212,20 @@ class CreateLabelRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'languageCode')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateLabelRequest clone() => CreateLabelRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateLabelRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateLabelRequest copyWith(void Function(CreateLabelRequest) updates) =>
       super.copyWith((message) => updates(message as CreateLabelRequest))
           as CreateLabelRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateLabelRequest create() => CreateLabelRequest._();
+  @$core.override
   CreateLabelRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateLabelRequest> createRepeated() =>
-      $pb.PbList<CreateLabelRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateLabelRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateLabelRequest>(create);
@@ -258,14 +235,11 @@ class CreateLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Label get label => $_getN(0);
   @$pb.TagNumber(1)
-  set label($0.Label v) {
-    setField(1, v);
-  }
-
+  set label($0.Label value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasLabel() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLabel() => clearField(1);
+  void clearLabel() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Label ensureLabel() => $_ensure(0);
 
@@ -274,14 +248,11 @@ class CreateLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool get useAdminAccess => $_getBF(1);
   @$pb.TagNumber(2)
-  set useAdminAccess($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUseAdminAccess() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUseAdminAccess() => clearField(2);
+  void clearUseAdminAccess() => $_clearField(2);
 
   /// The BCP-47 language code to use for evaluating localized Field labels in
   /// response. When not specified, values in the default configured language
@@ -289,14 +260,11 @@ class CreateLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get languageCode => $_getSZ(2);
   @$pb.TagNumber(3)
-  set languageCode($core.String v) {
-    $_setString(2, v);
-  }
-
+  set languageCode($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasLanguageCode() => $_has(2);
   @$pb.TagNumber(3)
-  void clearLanguageCode() => clearField(3);
+  void clearLanguageCode() => $_clearField(3);
 }
 
 /// Request to get a label by resource name.
@@ -307,28 +275,22 @@ class GetLabelRequest extends $pb.GeneratedMessage {
     $core.String? languageCode,
     LabelView? view,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    if (languageCode != null) {
-      $result.languageCode = languageCode;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    if (languageCode != null) result.languageCode = languageCode;
+    if (view != null) result.view = view;
+    return result;
   }
-  GetLabelRequest._() : super();
-  factory GetLabelRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetLabelRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetLabelRequest._();
+
+  factory GetLabelRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetLabelRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetLabelRequest',
@@ -338,96 +300,78 @@ class GetLabelRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOB(2, _omitFieldNames ? '' : 'useAdminAccess')
     ..aOS(3, _omitFieldNames ? '' : 'languageCode')
-    ..e<LabelView>(4, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: LabelView.LABEL_VIEW_BASIC,
-        valueOf: LabelView.valueOf,
+    ..aE<LabelView>(4, _omitFieldNames ? '' : 'view',
         enumValues: LabelView.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetLabelRequest clone() => GetLabelRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetLabelRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetLabelRequest copyWith(void Function(GetLabelRequest) updates) =>
       super.copyWith((message) => updates(message as GetLabelRequest))
           as GetLabelRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetLabelRequest create() => GetLabelRequest._();
+  @$core.override
   GetLabelRequest createEmptyInstance() => create();
-  static $pb.PbList<GetLabelRequest> createRepeated() =>
-      $pb.PbList<GetLabelRequest>();
   @$core.pragma('dart2js:noInline')
   static GetLabelRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetLabelRequest>(create);
   static GetLabelRequest? _defaultInstance;
 
-  ///  Required. Label resource name.
+  /// Required. Label resource name.
   ///
-  ///  May be any of:
+  /// May be any of:
   ///
-  ///  * `labels/{id}` (equivalent to labels/{id}@latest)
-  ///  * `labels/{id}@latest`
-  ///  * `labels/{id}@published`
-  ///  * `labels/{id}@{revision_id}`
+  /// * `labels/{id}` (equivalent to labels/{id}@latest)
+  /// * `labels/{id}@latest`
+  /// * `labels/{id}@published`
+  /// * `labels/{id}@{revision_id}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Set to `true` in order to use the user's admin credentials. The server
   /// verifies that the user is an admin for the label before allowing access.
   @$pb.TagNumber(2)
   $core.bool get useAdminAccess => $_getBF(1);
   @$pb.TagNumber(2)
-  set useAdminAccess($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUseAdminAccess() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUseAdminAccess() => clearField(2);
+  void clearUseAdminAccess() => $_clearField(2);
 
   /// The BCP-47 language code to use for evaluating localized field labels.
   /// When not specified, values in the default configured language are used.
   @$pb.TagNumber(3)
   $core.String get languageCode => $_getSZ(2);
   @$pb.TagNumber(3)
-  set languageCode($core.String v) {
-    $_setString(2, v);
-  }
-
+  set languageCode($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasLanguageCode() => $_has(2);
   @$pb.TagNumber(3)
-  void clearLanguageCode() => clearField(3);
+  void clearLanguageCode() => $_clearField(3);
 
   /// When specified, only certain fields belonging to the indicated view are
   /// returned.
   @$pb.TagNumber(4)
   LabelView get view => $_getN(3);
   @$pb.TagNumber(4)
-  set view(LabelView v) {
-    setField(4, v);
-  }
-
+  set view(LabelView value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasView() => $_has(3);
   @$pb.TagNumber(4)
-  void clearView() => clearField(4);
+  void clearView() => $_clearField(4);
 }
 
 enum DeltaUpdateLabelRequest_Request_Kind {
@@ -464,52 +408,35 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
         disableSelectionChoice,
     DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest? deleteSelectionChoice,
   }) {
-    final $result = create();
-    if (updateLabel != null) {
-      $result.updateLabel = updateLabel;
-    }
-    if (createField != null) {
-      $result.createField = createField;
-    }
-    if (updateField != null) {
-      $result.updateField = updateField;
-    }
-    if (updateFieldType != null) {
-      $result.updateFieldType = updateFieldType;
-    }
-    if (enableField != null) {
-      $result.enableField = enableField;
-    }
-    if (disableField != null) {
-      $result.disableField = disableField;
-    }
-    if (deleteField != null) {
-      $result.deleteField = deleteField;
-    }
-    if (createSelectionChoice != null) {
-      $result.createSelectionChoice = createSelectionChoice;
-    }
-    if (updateSelectionChoiceProperties != null) {
-      $result.updateSelectionChoiceProperties = updateSelectionChoiceProperties;
-    }
-    if (enableSelectionChoice != null) {
-      $result.enableSelectionChoice = enableSelectionChoice;
-    }
-    if (disableSelectionChoice != null) {
-      $result.disableSelectionChoice = disableSelectionChoice;
-    }
-    if (deleteSelectionChoice != null) {
-      $result.deleteSelectionChoice = deleteSelectionChoice;
-    }
-    return $result;
+    final result = create();
+    if (updateLabel != null) result.updateLabel = updateLabel;
+    if (createField != null) result.createField = createField;
+    if (updateField != null) result.updateField = updateField;
+    if (updateFieldType != null) result.updateFieldType = updateFieldType;
+    if (enableField != null) result.enableField = enableField;
+    if (disableField != null) result.disableField = disableField;
+    if (deleteField != null) result.deleteField = deleteField;
+    if (createSelectionChoice != null)
+      result.createSelectionChoice = createSelectionChoice;
+    if (updateSelectionChoiceProperties != null)
+      result.updateSelectionChoiceProperties = updateSelectionChoiceProperties;
+    if (enableSelectionChoice != null)
+      result.enableSelectionChoice = enableSelectionChoice;
+    if (disableSelectionChoice != null)
+      result.disableSelectionChoice = disableSelectionChoice;
+    if (deleteSelectionChoice != null)
+      result.deleteSelectionChoice = deleteSelectionChoice;
+    return result;
   }
-  DeltaUpdateLabelRequest_Request._() : super();
-  factory DeltaUpdateLabelRequest_Request.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelRequest_Request.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeltaUpdateLabelRequest_Request._();
+
+  factory DeltaUpdateLabelRequest_Request.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelRequest_Request.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, DeltaUpdateLabelRequest_Request_Kind>
       _DeltaUpdateLabelRequest_Request_KindByTag = {
@@ -574,51 +501,68 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
         subBuilder: DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_Request clone() =>
-      DeltaUpdateLabelRequest_Request()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_Request clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_Request copyWith(
           void Function(DeltaUpdateLabelRequest_Request) updates) =>
       super.copyWith(
               (message) => updates(message as DeltaUpdateLabelRequest_Request))
           as DeltaUpdateLabelRequest_Request;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_Request create() =>
       DeltaUpdateLabelRequest_Request._();
+  @$core.override
   DeltaUpdateLabelRequest_Request createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelRequest_Request> createRepeated() =>
-      $pb.PbList<DeltaUpdateLabelRequest_Request>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_Request getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeltaUpdateLabelRequest_Request>(
           create);
   static DeltaUpdateLabelRequest_Request? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
   DeltaUpdateLabelRequest_Request_Kind whichKind() =>
       _DeltaUpdateLabelRequest_Request_KindByTag[$_whichOneof(0)]!;
-  void clearKind() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
+  void clearKind() => $_clearField($_whichOneof(0));
 
   /// Updates the Label properties.
   @$pb.TagNumber(1)
   DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest get updateLabel =>
       $_getN(0);
   @$pb.TagNumber(1)
-  set updateLabel(DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest v) {
-    setField(1, v);
-  }
-
+  set updateLabel(DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUpdateLabel() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUpdateLabel() => clearField(1);
+  void clearUpdateLabel() => $_clearField(1);
   @$pb.TagNumber(1)
   DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest ensureUpdateLabel() =>
       $_ensure(0);
@@ -627,14 +571,12 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   DeltaUpdateLabelRequest_CreateFieldRequest get createField => $_getN(1);
   @$pb.TagNumber(2)
-  set createField(DeltaUpdateLabelRequest_CreateFieldRequest v) {
-    setField(2, v);
-  }
-
+  set createField(DeltaUpdateLabelRequest_CreateFieldRequest value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCreateField() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCreateField() => clearField(2);
+  void clearCreateField() => $_clearField(2);
   @$pb.TagNumber(2)
   DeltaUpdateLabelRequest_CreateFieldRequest ensureCreateField() => $_ensure(1);
 
@@ -643,14 +585,12 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
   DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest get updateField =>
       $_getN(2);
   @$pb.TagNumber(3)
-  set updateField(DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest v) {
-    setField(3, v);
-  }
-
+  set updateField(DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasUpdateField() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUpdateField() => clearField(3);
+  void clearUpdateField() => $_clearField(3);
   @$pb.TagNumber(3)
   DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest ensureUpdateField() =>
       $_ensure(2);
@@ -660,14 +600,12 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
   DeltaUpdateLabelRequest_UpdateFieldTypeRequest get updateFieldType =>
       $_getN(3);
   @$pb.TagNumber(4)
-  set updateFieldType(DeltaUpdateLabelRequest_UpdateFieldTypeRequest v) {
-    setField(4, v);
-  }
-
+  set updateFieldType(DeltaUpdateLabelRequest_UpdateFieldTypeRequest value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasUpdateFieldType() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUpdateFieldType() => clearField(4);
+  void clearUpdateFieldType() => $_clearField(4);
   @$pb.TagNumber(4)
   DeltaUpdateLabelRequest_UpdateFieldTypeRequest ensureUpdateFieldType() =>
       $_ensure(3);
@@ -676,14 +614,12 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   DeltaUpdateLabelRequest_EnableFieldRequest get enableField => $_getN(4);
   @$pb.TagNumber(5)
-  set enableField(DeltaUpdateLabelRequest_EnableFieldRequest v) {
-    setField(5, v);
-  }
-
+  set enableField(DeltaUpdateLabelRequest_EnableFieldRequest value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasEnableField() => $_has(4);
   @$pb.TagNumber(5)
-  void clearEnableField() => clearField(5);
+  void clearEnableField() => $_clearField(5);
   @$pb.TagNumber(5)
   DeltaUpdateLabelRequest_EnableFieldRequest ensureEnableField() => $_ensure(4);
 
@@ -691,14 +627,12 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   DeltaUpdateLabelRequest_DisableFieldRequest get disableField => $_getN(5);
   @$pb.TagNumber(6)
-  set disableField(DeltaUpdateLabelRequest_DisableFieldRequest v) {
-    setField(6, v);
-  }
-
+  set disableField(DeltaUpdateLabelRequest_DisableFieldRequest value) =>
+      $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasDisableField() => $_has(5);
   @$pb.TagNumber(6)
-  void clearDisableField() => clearField(6);
+  void clearDisableField() => $_clearField(6);
   @$pb.TagNumber(6)
   DeltaUpdateLabelRequest_DisableFieldRequest ensureDisableField() =>
       $_ensure(5);
@@ -707,14 +641,12 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   DeltaUpdateLabelRequest_DeleteFieldRequest get deleteField => $_getN(6);
   @$pb.TagNumber(7)
-  set deleteField(DeltaUpdateLabelRequest_DeleteFieldRequest v) {
-    setField(7, v);
-  }
-
+  set deleteField(DeltaUpdateLabelRequest_DeleteFieldRequest value) =>
+      $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasDeleteField() => $_has(6);
   @$pb.TagNumber(7)
-  void clearDeleteField() => clearField(7);
+  void clearDeleteField() => $_clearField(7);
   @$pb.TagNumber(7)
   DeltaUpdateLabelRequest_DeleteFieldRequest ensureDeleteField() => $_ensure(6);
 
@@ -724,14 +656,12 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
       get createSelectionChoice => $_getN(7);
   @$pb.TagNumber(8)
   set createSelectionChoice(
-      DeltaUpdateLabelRequest_CreateSelectionChoiceRequest v) {
-    setField(8, v);
-  }
-
+          DeltaUpdateLabelRequest_CreateSelectionChoiceRequest value) =>
+      $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasCreateSelectionChoice() => $_has(7);
   @$pb.TagNumber(8)
-  void clearCreateSelectionChoice() => clearField(8);
+  void clearCreateSelectionChoice() => $_clearField(8);
   @$pb.TagNumber(8)
   DeltaUpdateLabelRequest_CreateSelectionChoiceRequest
       ensureCreateSelectionChoice() => $_ensure(7);
@@ -742,14 +672,13 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
       get updateSelectionChoiceProperties => $_getN(8);
   @$pb.TagNumber(9)
   set updateSelectionChoiceProperties(
-      DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest v) {
-    setField(9, v);
-  }
-
+          DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest
+              value) =>
+      $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasUpdateSelectionChoiceProperties() => $_has(8);
   @$pb.TagNumber(9)
-  void clearUpdateSelectionChoiceProperties() => clearField(9);
+  void clearUpdateSelectionChoiceProperties() => $_clearField(9);
   @$pb.TagNumber(9)
   DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest
       ensureUpdateSelectionChoiceProperties() => $_ensure(8);
@@ -760,14 +689,12 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
       get enableSelectionChoice => $_getN(9);
   @$pb.TagNumber(10)
   set enableSelectionChoice(
-      DeltaUpdateLabelRequest_EnableSelectionChoiceRequest v) {
-    setField(10, v);
-  }
-
+          DeltaUpdateLabelRequest_EnableSelectionChoiceRequest value) =>
+      $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasEnableSelectionChoice() => $_has(9);
   @$pb.TagNumber(10)
-  void clearEnableSelectionChoice() => clearField(10);
+  void clearEnableSelectionChoice() => $_clearField(10);
   @$pb.TagNumber(10)
   DeltaUpdateLabelRequest_EnableSelectionChoiceRequest
       ensureEnableSelectionChoice() => $_ensure(9);
@@ -778,14 +705,12 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
       get disableSelectionChoice => $_getN(10);
   @$pb.TagNumber(11)
   set disableSelectionChoice(
-      DeltaUpdateLabelRequest_DisableSelectionChoiceRequest v) {
-    setField(11, v);
-  }
-
+          DeltaUpdateLabelRequest_DisableSelectionChoiceRequest value) =>
+      $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasDisableSelectionChoice() => $_has(10);
   @$pb.TagNumber(11)
-  void clearDisableSelectionChoice() => clearField(11);
+  void clearDisableSelectionChoice() => $_clearField(11);
   @$pb.TagNumber(11)
   DeltaUpdateLabelRequest_DisableSelectionChoiceRequest
       ensureDisableSelectionChoice() => $_ensure(10);
@@ -796,14 +721,12 @@ class DeltaUpdateLabelRequest_Request extends $pb.GeneratedMessage {
       get deleteSelectionChoice => $_getN(11);
   @$pb.TagNumber(12)
   set deleteSelectionChoice(
-      DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest v) {
-    setField(12, v);
-  }
-
+          DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest value) =>
+      $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasDeleteSelectionChoice() => $_has(11);
   @$pb.TagNumber(12)
-  void clearDeleteSelectionChoice() => clearField(12);
+  void clearDeleteSelectionChoice() => $_clearField(12);
   @$pb.TagNumber(12)
   DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest
       ensureDeleteSelectionChoice() => $_ensure(11);
@@ -816,24 +739,22 @@ class DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest
     $1.FieldMask? updateMask,
     $0.Label_Properties? properties,
   }) {
-    final $result = create();
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    if (properties != null) {
-      $result.properties = properties;
-    }
-    return $result;
+    final result = create();
+    if (updateMask != null) result.updateMask = updateMask;
+    if (properties != null) result.properties = properties;
+    return result;
   }
-  DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest._() : super();
+
+  DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest._();
+
   factory DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -848,15 +769,9 @@ class DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest
         subBuilder: $0.Label_Properties.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest clone() =>
-      DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest copyWith(
           void Function(DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest)
               updates) =>
@@ -864,16 +779,15 @@ class DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest
               message as DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest))
           as DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest create() =>
       DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -886,14 +800,11 @@ class DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest
   @$pb.TagNumber(1)
   $1.FieldMask get updateMask => $_getN(0);
   @$pb.TagNumber(1)
-  set updateMask($1.FieldMask v) {
-    setField(1, v);
-  }
-
+  set updateMask($1.FieldMask value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUpdateMask() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUpdateMask() => clearField(1);
+  void clearUpdateMask() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.FieldMask ensureUpdateMask() => $_ensure(0);
 
@@ -901,14 +812,11 @@ class DeltaUpdateLabelRequest_UpdateLabelPropertiesRequest
   @$pb.TagNumber(2)
   $0.Label_Properties get properties => $_getN(1);
   @$pb.TagNumber(2)
-  set properties($0.Label_Properties v) {
-    setField(2, v);
-  }
-
+  set properties($0.Label_Properties value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasProperties() => $_has(1);
   @$pb.TagNumber(2)
-  void clearProperties() => clearField(2);
+  void clearProperties() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Label_Properties ensureProperties() => $_ensure(1);
 }
@@ -920,26 +828,23 @@ class DeltaUpdateLabelRequest_DisableFieldRequest extends $pb.GeneratedMessage {
     $core.String? id,
     $2.Lifecycle_DisabledPolicy? disabledPolicy,
   }) {
-    final $result = create();
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    if (disabledPolicy != null) {
-      $result.disabledPolicy = disabledPolicy;
-    }
-    return $result;
+    final result = create();
+    if (updateMask != null) result.updateMask = updateMask;
+    if (id != null) result.id = id;
+    if (disabledPolicy != null) result.disabledPolicy = disabledPolicy;
+    return result;
   }
-  DeltaUpdateLabelRequest_DisableFieldRequest._() : super();
+
+  DeltaUpdateLabelRequest_DisableFieldRequest._();
+
   factory DeltaUpdateLabelRequest_DisableFieldRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelRequest_DisableFieldRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelRequest_DisableFieldRequest.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeltaUpdateLabelRequest.DisableFieldRequest',
@@ -954,29 +859,23 @@ class DeltaUpdateLabelRequest_DisableFieldRequest extends $pb.GeneratedMessage {
         subBuilder: $2.Lifecycle_DisabledPolicy.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_DisableFieldRequest clone() =>
-      DeltaUpdateLabelRequest_DisableFieldRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_DisableFieldRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_DisableFieldRequest copyWith(
           void Function(DeltaUpdateLabelRequest_DisableFieldRequest) updates) =>
       super.copyWith((message) =>
               updates(message as DeltaUpdateLabelRequest_DisableFieldRequest))
           as DeltaUpdateLabelRequest_DisableFieldRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_DisableFieldRequest create() =>
       DeltaUpdateLabelRequest_DisableFieldRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_DisableFieldRequest createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelRequest_DisableFieldRequest>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelRequest_DisableFieldRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_DisableFieldRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -989,14 +888,11 @@ class DeltaUpdateLabelRequest_DisableFieldRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.FieldMask get updateMask => $_getN(0);
   @$pb.TagNumber(1)
-  set updateMask($1.FieldMask v) {
-    setField(1, v);
-  }
-
+  set updateMask($1.FieldMask value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUpdateMask() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUpdateMask() => clearField(1);
+  void clearUpdateMask() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.FieldMask ensureUpdateMask() => $_ensure(0);
 
@@ -1004,27 +900,21 @@ class DeltaUpdateLabelRequest_DisableFieldRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) {
-    $_setString(1, v);
-  }
-
+  set id($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
+  void clearId() => $_clearField(2);
 
   /// Required. Field Disabled Policy.
   @$pb.TagNumber(3)
   $2.Lifecycle_DisabledPolicy get disabledPolicy => $_getN(2);
   @$pb.TagNumber(3)
-  set disabledPolicy($2.Lifecycle_DisabledPolicy v) {
-    setField(3, v);
-  }
-
+  set disabledPolicy($2.Lifecycle_DisabledPolicy value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasDisabledPolicy() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDisabledPolicy() => clearField(3);
+  void clearDisabledPolicy() => $_clearField(3);
   @$pb.TagNumber(3)
   $2.Lifecycle_DisabledPolicy ensureDisabledPolicy() => $_ensure(2);
 }
@@ -1034,20 +924,20 @@ class DeltaUpdateLabelRequest_EnableFieldRequest extends $pb.GeneratedMessage {
   factory DeltaUpdateLabelRequest_EnableFieldRequest({
     $core.String? id,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    return result;
   }
-  DeltaUpdateLabelRequest_EnableFieldRequest._() : super();
+
+  DeltaUpdateLabelRequest_EnableFieldRequest._();
+
   factory DeltaUpdateLabelRequest_EnableFieldRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelRequest_EnableFieldRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelRequest_EnableFieldRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeltaUpdateLabelRequest.EnableFieldRequest',
@@ -1057,29 +947,23 @@ class DeltaUpdateLabelRequest_EnableFieldRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_EnableFieldRequest clone() =>
-      DeltaUpdateLabelRequest_EnableFieldRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_EnableFieldRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_EnableFieldRequest copyWith(
           void Function(DeltaUpdateLabelRequest_EnableFieldRequest) updates) =>
       super.copyWith((message) =>
               updates(message as DeltaUpdateLabelRequest_EnableFieldRequest))
           as DeltaUpdateLabelRequest_EnableFieldRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_EnableFieldRequest create() =>
       DeltaUpdateLabelRequest_EnableFieldRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_EnableFieldRequest createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelRequest_EnableFieldRequest>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelRequest_EnableFieldRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_EnableFieldRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1090,14 +974,11 @@ class DeltaUpdateLabelRequest_EnableFieldRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
 /// Request to delete the Field.
@@ -1105,20 +986,20 @@ class DeltaUpdateLabelRequest_DeleteFieldRequest extends $pb.GeneratedMessage {
   factory DeltaUpdateLabelRequest_DeleteFieldRequest({
     $core.String? id,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    return result;
   }
-  DeltaUpdateLabelRequest_DeleteFieldRequest._() : super();
+
+  DeltaUpdateLabelRequest_DeleteFieldRequest._();
+
   factory DeltaUpdateLabelRequest_DeleteFieldRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelRequest_DeleteFieldRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelRequest_DeleteFieldRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeltaUpdateLabelRequest.DeleteFieldRequest',
@@ -1128,29 +1009,23 @@ class DeltaUpdateLabelRequest_DeleteFieldRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_DeleteFieldRequest clone() =>
-      DeltaUpdateLabelRequest_DeleteFieldRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_DeleteFieldRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_DeleteFieldRequest copyWith(
           void Function(DeltaUpdateLabelRequest_DeleteFieldRequest) updates) =>
       super.copyWith((message) =>
               updates(message as DeltaUpdateLabelRequest_DeleteFieldRequest))
           as DeltaUpdateLabelRequest_DeleteFieldRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_DeleteFieldRequest create() =>
       DeltaUpdateLabelRequest_DeleteFieldRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_DeleteFieldRequest createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelRequest_DeleteFieldRequest>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelRequest_DeleteFieldRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_DeleteFieldRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1161,14 +1036,11 @@ class DeltaUpdateLabelRequest_DeleteFieldRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
 /// Request to create a Field within a Label.
@@ -1176,20 +1048,20 @@ class DeltaUpdateLabelRequest_CreateFieldRequest extends $pb.GeneratedMessage {
   factory DeltaUpdateLabelRequest_CreateFieldRequest({
     $3.Field? field_1,
   }) {
-    final $result = create();
-    if (field_1 != null) {
-      $result.field_1 = field_1;
-    }
-    return $result;
+    final result = create();
+    if (field_1 != null) result.field_1 = field_1;
+    return result;
   }
-  DeltaUpdateLabelRequest_CreateFieldRequest._() : super();
+
+  DeltaUpdateLabelRequest_CreateFieldRequest._();
+
   factory DeltaUpdateLabelRequest_CreateFieldRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelRequest_CreateFieldRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelRequest_CreateFieldRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeltaUpdateLabelRequest.CreateFieldRequest',
@@ -1200,29 +1072,23 @@ class DeltaUpdateLabelRequest_CreateFieldRequest extends $pb.GeneratedMessage {
         subBuilder: $3.Field.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_CreateFieldRequest clone() =>
-      DeltaUpdateLabelRequest_CreateFieldRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_CreateFieldRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_CreateFieldRequest copyWith(
           void Function(DeltaUpdateLabelRequest_CreateFieldRequest) updates) =>
       super.copyWith((message) =>
               updates(message as DeltaUpdateLabelRequest_CreateFieldRequest))
           as DeltaUpdateLabelRequest_CreateFieldRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_CreateFieldRequest create() =>
       DeltaUpdateLabelRequest_CreateFieldRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_CreateFieldRequest createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelRequest_CreateFieldRequest>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelRequest_CreateFieldRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_CreateFieldRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1233,14 +1099,11 @@ class DeltaUpdateLabelRequest_CreateFieldRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $3.Field get field_1 => $_getN(0);
   @$pb.TagNumber(1)
-  set field_1($3.Field v) {
-    setField(1, v);
-  }
-
+  set field_1($3.Field value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasField_1() => $_has(0);
   @$pb.TagNumber(1)
-  void clearField_1() => clearField(1);
+  void clearField_1() => $_clearField(1);
   @$pb.TagNumber(1)
   $3.Field ensureField_1() => $_ensure(0);
 }
@@ -1253,27 +1116,23 @@ class DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest
     $core.String? id,
     $3.Field_Properties? properties,
   }) {
-    final $result = create();
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    if (properties != null) {
-      $result.properties = properties;
-    }
-    return $result;
+    final result = create();
+    if (updateMask != null) result.updateMask = updateMask;
+    if (id != null) result.id = id;
+    if (properties != null) result.properties = properties;
+    return result;
   }
-  DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest._() : super();
+
+  DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest._();
+
   factory DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -1289,15 +1148,9 @@ class DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest
         subBuilder: $3.Field_Properties.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest clone() =>
-      DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest copyWith(
           void Function(DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest)
               updates) =>
@@ -1305,16 +1158,15 @@ class DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest
               message as DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest))
           as DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest create() =>
       DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1327,14 +1179,11 @@ class DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest
   @$pb.TagNumber(1)
   $1.FieldMask get updateMask => $_getN(0);
   @$pb.TagNumber(1)
-  set updateMask($1.FieldMask v) {
-    setField(1, v);
-  }
-
+  set updateMask($1.FieldMask value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUpdateMask() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUpdateMask() => clearField(1);
+  void clearUpdateMask() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.FieldMask ensureUpdateMask() => $_ensure(0);
 
@@ -1342,27 +1191,21 @@ class DeltaUpdateLabelRequest_UpdateFieldPropertiesRequest
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) {
-    $_setString(1, v);
-  }
-
+  set id($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
+  void clearId() => $_clearField(2);
 
   /// Required. Basic Field properties.
   @$pb.TagNumber(3)
   $3.Field_Properties get properties => $_getN(2);
   @$pb.TagNumber(3)
-  set properties($3.Field_Properties v) {
-    setField(3, v);
-  }
-
+  set properties($3.Field_Properties value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasProperties() => $_has(2);
   @$pb.TagNumber(3)
-  void clearProperties() => clearField(3);
+  void clearProperties() => $_clearField(3);
   @$pb.TagNumber(3)
   $3.Field_Properties ensureProperties() => $_ensure(2);
 }
@@ -1388,39 +1231,27 @@ class DeltaUpdateLabelRequest_UpdateFieldTypeRequest
     $3.Field_SelectionOptions? selectionOptions,
     $3.Field_UserOptions? userOptions,
   }) {
-    final $result = create();
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    if (textOptions != null) {
-      $result.textOptions = textOptions;
-    }
-    if (integerOptions != null) {
-      $result.integerOptions = integerOptions;
-    }
-    if (dateOptions != null) {
-      $result.dateOptions = dateOptions;
-    }
-    if (selectionOptions != null) {
-      $result.selectionOptions = selectionOptions;
-    }
-    if (userOptions != null) {
-      $result.userOptions = userOptions;
-    }
-    return $result;
+    final result = create();
+    if (updateMask != null) result.updateMask = updateMask;
+    if (id != null) result.id = id;
+    if (textOptions != null) result.textOptions = textOptions;
+    if (integerOptions != null) result.integerOptions = integerOptions;
+    if (dateOptions != null) result.dateOptions = dateOptions;
+    if (selectionOptions != null) result.selectionOptions = selectionOptions;
+    if (userOptions != null) result.userOptions = userOptions;
+    return result;
   }
-  DeltaUpdateLabelRequest_UpdateFieldTypeRequest._() : super();
+
+  DeltaUpdateLabelRequest_UpdateFieldTypeRequest._();
+
   factory DeltaUpdateLabelRequest_UpdateFieldTypeRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelRequest_UpdateFieldTypeRequest.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int,
           DeltaUpdateLabelRequest_UpdateFieldTypeRequest_TypeOptions>
@@ -1456,14 +1287,9 @@ class DeltaUpdateLabelRequest_UpdateFieldTypeRequest
         subBuilder: $3.Field_UserOptions.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_UpdateFieldTypeRequest clone() =>
-      DeltaUpdateLabelRequest_UpdateFieldTypeRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_UpdateFieldTypeRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_UpdateFieldTypeRequest copyWith(
           void Function(DeltaUpdateLabelRequest_UpdateFieldTypeRequest)
               updates) =>
@@ -1471,27 +1297,36 @@ class DeltaUpdateLabelRequest_UpdateFieldTypeRequest
               message as DeltaUpdateLabelRequest_UpdateFieldTypeRequest))
           as DeltaUpdateLabelRequest_UpdateFieldTypeRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_UpdateFieldTypeRequest create() =>
       DeltaUpdateLabelRequest_UpdateFieldTypeRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_UpdateFieldTypeRequest createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelRequest_UpdateFieldTypeRequest>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelRequest_UpdateFieldTypeRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_UpdateFieldTypeRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
           DeltaUpdateLabelRequest_UpdateFieldTypeRequest>(create);
   static DeltaUpdateLabelRequest_UpdateFieldTypeRequest? _defaultInstance;
 
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
   DeltaUpdateLabelRequest_UpdateFieldTypeRequest_TypeOptions
       whichTypeOptions() =>
           _DeltaUpdateLabelRequest_UpdateFieldTypeRequest_TypeOptionsByTag[
               $_whichOneof(0)]!;
-  void clearTypeOptions() => clearField($_whichOneof(0));
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  void clearTypeOptions() => $_clearField($_whichOneof(0));
 
   /// The fields that should be updated. At least one field must be specified.
   /// The root of `type_options` is implied and should not be specified. A
@@ -1499,14 +1334,11 @@ class DeltaUpdateLabelRequest_UpdateFieldTypeRequest
   @$pb.TagNumber(1)
   $1.FieldMask get updateMask => $_getN(0);
   @$pb.TagNumber(1)
-  set updateMask($1.FieldMask v) {
-    setField(1, v);
-  }
-
+  set updateMask($1.FieldMask value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUpdateMask() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUpdateMask() => clearField(1);
+  void clearUpdateMask() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.FieldMask ensureUpdateMask() => $_ensure(0);
 
@@ -1514,27 +1346,21 @@ class DeltaUpdateLabelRequest_UpdateFieldTypeRequest
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) {
-    $_setString(1, v);
-  }
-
+  set id($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
+  void clearId() => $_clearField(2);
 
   /// Update field to Text.
   @$pb.TagNumber(3)
   $3.Field_TextOptions get textOptions => $_getN(2);
   @$pb.TagNumber(3)
-  set textOptions($3.Field_TextOptions v) {
-    setField(3, v);
-  }
-
+  set textOptions($3.Field_TextOptions value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasTextOptions() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTextOptions() => clearField(3);
+  void clearTextOptions() => $_clearField(3);
   @$pb.TagNumber(3)
   $3.Field_TextOptions ensureTextOptions() => $_ensure(2);
 
@@ -1542,14 +1368,11 @@ class DeltaUpdateLabelRequest_UpdateFieldTypeRequest
   @$pb.TagNumber(5)
   $3.Field_IntegerOptions get integerOptions => $_getN(3);
   @$pb.TagNumber(5)
-  set integerOptions($3.Field_IntegerOptions v) {
-    setField(5, v);
-  }
-
+  set integerOptions($3.Field_IntegerOptions value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasIntegerOptions() => $_has(3);
   @$pb.TagNumber(5)
-  void clearIntegerOptions() => clearField(5);
+  void clearIntegerOptions() => $_clearField(5);
   @$pb.TagNumber(5)
   $3.Field_IntegerOptions ensureIntegerOptions() => $_ensure(3);
 
@@ -1557,14 +1380,11 @@ class DeltaUpdateLabelRequest_UpdateFieldTypeRequest
   @$pb.TagNumber(6)
   $3.Field_DateOptions get dateOptions => $_getN(4);
   @$pb.TagNumber(6)
-  set dateOptions($3.Field_DateOptions v) {
-    setField(6, v);
-  }
-
+  set dateOptions($3.Field_DateOptions value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasDateOptions() => $_has(4);
   @$pb.TagNumber(6)
-  void clearDateOptions() => clearField(6);
+  void clearDateOptions() => $_clearField(6);
   @$pb.TagNumber(6)
   $3.Field_DateOptions ensureDateOptions() => $_ensure(4);
 
@@ -1572,14 +1392,11 @@ class DeltaUpdateLabelRequest_UpdateFieldTypeRequest
   @$pb.TagNumber(7)
   $3.Field_SelectionOptions get selectionOptions => $_getN(5);
   @$pb.TagNumber(7)
-  set selectionOptions($3.Field_SelectionOptions v) {
-    setField(7, v);
-  }
-
+  set selectionOptions($3.Field_SelectionOptions value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasSelectionOptions() => $_has(5);
   @$pb.TagNumber(7)
-  void clearSelectionOptions() => clearField(7);
+  void clearSelectionOptions() => $_clearField(7);
   @$pb.TagNumber(7)
   $3.Field_SelectionOptions ensureSelectionOptions() => $_ensure(5);
 
@@ -1587,14 +1404,11 @@ class DeltaUpdateLabelRequest_UpdateFieldTypeRequest
   @$pb.TagNumber(8)
   $3.Field_UserOptions get userOptions => $_getN(6);
   @$pb.TagNumber(8)
-  set userOptions($3.Field_UserOptions v) {
-    setField(8, v);
-  }
-
+  set userOptions($3.Field_UserOptions value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasUserOptions() => $_has(6);
   @$pb.TagNumber(8)
-  void clearUserOptions() => clearField(8);
+  void clearUserOptions() => $_clearField(8);
   @$pb.TagNumber(8)
   $3.Field_UserOptions ensureUserOptions() => $_ensure(6);
 }
@@ -1606,24 +1420,22 @@ class DeltaUpdateLabelRequest_CreateSelectionChoiceRequest
     $core.String? fieldId,
     $3.Field_SelectionOptions_Choice? choice,
   }) {
-    final $result = create();
-    if (fieldId != null) {
-      $result.fieldId = fieldId;
-    }
-    if (choice != null) {
-      $result.choice = choice;
-    }
-    return $result;
+    final result = create();
+    if (fieldId != null) result.fieldId = fieldId;
+    if (choice != null) result.choice = choice;
+    return result;
   }
-  DeltaUpdateLabelRequest_CreateSelectionChoiceRequest._() : super();
+
+  DeltaUpdateLabelRequest_CreateSelectionChoiceRequest._();
+
   factory DeltaUpdateLabelRequest_CreateSelectionChoiceRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelRequest_CreateSelectionChoiceRequest.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -1637,15 +1449,9 @@ class DeltaUpdateLabelRequest_CreateSelectionChoiceRequest
         subBuilder: $3.Field_SelectionOptions_Choice.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_CreateSelectionChoiceRequest clone() =>
-      DeltaUpdateLabelRequest_CreateSelectionChoiceRequest()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_CreateSelectionChoiceRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_CreateSelectionChoiceRequest copyWith(
           void Function(DeltaUpdateLabelRequest_CreateSelectionChoiceRequest)
               updates) =>
@@ -1653,16 +1459,15 @@ class DeltaUpdateLabelRequest_CreateSelectionChoiceRequest
               message as DeltaUpdateLabelRequest_CreateSelectionChoiceRequest))
           as DeltaUpdateLabelRequest_CreateSelectionChoiceRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_CreateSelectionChoiceRequest create() =>
       DeltaUpdateLabelRequest_CreateSelectionChoiceRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_CreateSelectionChoiceRequest createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelRequest_CreateSelectionChoiceRequest>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelRequest_CreateSelectionChoiceRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_CreateSelectionChoiceRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1673,27 +1478,21 @@ class DeltaUpdateLabelRequest_CreateSelectionChoiceRequest
   @$pb.TagNumber(1)
   $core.String get fieldId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set fieldId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set fieldId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFieldId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFieldId() => clearField(1);
+  void clearFieldId() => $_clearField(1);
 
   /// Required. The Choice to create.
   @$pb.TagNumber(2)
   $3.Field_SelectionOptions_Choice get choice => $_getN(1);
   @$pb.TagNumber(2)
-  set choice($3.Field_SelectionOptions_Choice v) {
-    setField(2, v);
-  }
-
+  set choice($3.Field_SelectionOptions_Choice value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasChoice() => $_has(1);
   @$pb.TagNumber(2)
-  void clearChoice() => clearField(2);
+  void clearChoice() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.Field_SelectionOptions_Choice ensureChoice() => $_ensure(1);
 }
@@ -1707,30 +1506,24 @@ class DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest
     $core.String? id,
     $3.Field_SelectionOptions_Choice_Properties? properties,
   }) {
-    final $result = create();
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    if (fieldId != null) {
-      $result.fieldId = fieldId;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    if (properties != null) {
-      $result.properties = properties;
-    }
-    return $result;
+    final result = create();
+    if (updateMask != null) result.updateMask = updateMask;
+    if (fieldId != null) result.fieldId = fieldId;
+    if (id != null) result.id = id;
+    if (properties != null) result.properties = properties;
+    return result;
   }
-  DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest._() : super();
+
+  DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest._();
+
   factory DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -1748,15 +1541,10 @@ class DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest
         subBuilder: $3.Field_SelectionOptions_Choice_Properties.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest clone() =>
-      DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest copyWith(
           void Function(
                   DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest)
@@ -1765,18 +1553,16 @@ class DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest
               as DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest))
           as DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest
       create() =>
           DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest
       createEmptyInstance() => create();
-  static $pb
-      .PbList<DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest>
-      createRepeated() => $pb.PbList<
-          DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1791,14 +1577,11 @@ class DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest
   @$pb.TagNumber(1)
   $1.FieldMask get updateMask => $_getN(0);
   @$pb.TagNumber(1)
-  set updateMask($1.FieldMask v) {
-    setField(1, v);
-  }
-
+  set updateMask($1.FieldMask value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUpdateMask() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUpdateMask() => clearField(1);
+  void clearUpdateMask() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.FieldMask ensureUpdateMask() => $_ensure(0);
 
@@ -1806,40 +1589,32 @@ class DeltaUpdateLabelRequest_UpdateSelectionChoicePropertiesRequest
   @$pb.TagNumber(2)
   $core.String get fieldId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set fieldId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set fieldId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasFieldId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFieldId() => clearField(2);
+  void clearFieldId() => $_clearField(2);
 
   /// Required. The Choice to update.
   @$pb.TagNumber(3)
   $core.String get id => $_getSZ(2);
   @$pb.TagNumber(3)
-  set id($core.String v) {
-    $_setString(2, v);
-  }
-
+  set id($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearId() => clearField(3);
+  void clearId() => $_clearField(3);
 
   /// Required. The Choice properties to update.
   @$pb.TagNumber(4)
   $3.Field_SelectionOptions_Choice_Properties get properties => $_getN(3);
   @$pb.TagNumber(4)
-  set properties($3.Field_SelectionOptions_Choice_Properties v) {
-    setField(4, v);
-  }
-
+  set properties($3.Field_SelectionOptions_Choice_Properties value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasProperties() => $_has(3);
   @$pb.TagNumber(4)
-  void clearProperties() => clearField(4);
+  void clearProperties() => $_clearField(4);
   @$pb.TagNumber(4)
   $3.Field_SelectionOptions_Choice_Properties ensureProperties() => $_ensure(3);
 }
@@ -1851,24 +1626,22 @@ class DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest
     $core.String? fieldId,
     $core.String? id,
   }) {
-    final $result = create();
-    if (fieldId != null) {
-      $result.fieldId = fieldId;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    return $result;
+    final result = create();
+    if (fieldId != null) result.fieldId = fieldId;
+    if (id != null) result.id = id;
+    return result;
   }
-  DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest._() : super();
+
+  DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest._();
+
   factory DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -1881,15 +1654,9 @@ class DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest clone() =>
-      DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest copyWith(
           void Function(DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest)
               updates) =>
@@ -1897,16 +1664,15 @@ class DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest
               message as DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest))
           as DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest create() =>
       DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -1917,27 +1683,21 @@ class DeltaUpdateLabelRequest_DeleteSelectionChoiceRequest
   @$pb.TagNumber(1)
   $core.String get fieldId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set fieldId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set fieldId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFieldId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFieldId() => clearField(1);
+  void clearFieldId() => $_clearField(1);
 
   /// Required. Choice to delete.
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) {
-    $_setString(1, v);
-  }
-
+  set id($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
+  void clearId() => $_clearField(2);
 }
 
 /// Request to disable a Choice.
@@ -1949,30 +1709,24 @@ class DeltaUpdateLabelRequest_DisableSelectionChoiceRequest
     $core.String? id,
     $2.Lifecycle_DisabledPolicy? disabledPolicy,
   }) {
-    final $result = create();
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    if (fieldId != null) {
-      $result.fieldId = fieldId;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    if (disabledPolicy != null) {
-      $result.disabledPolicy = disabledPolicy;
-    }
-    return $result;
+    final result = create();
+    if (updateMask != null) result.updateMask = updateMask;
+    if (fieldId != null) result.fieldId = fieldId;
+    if (id != null) result.id = id;
+    if (disabledPolicy != null) result.disabledPolicy = disabledPolicy;
+    return result;
   }
-  DeltaUpdateLabelRequest_DisableSelectionChoiceRequest._() : super();
+
+  DeltaUpdateLabelRequest_DisableSelectionChoiceRequest._();
+
   factory DeltaUpdateLabelRequest_DisableSelectionChoiceRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelRequest_DisableSelectionChoiceRequest.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -1990,15 +1744,9 @@ class DeltaUpdateLabelRequest_DisableSelectionChoiceRequest
         subBuilder: $2.Lifecycle_DisabledPolicy.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_DisableSelectionChoiceRequest clone() =>
-      DeltaUpdateLabelRequest_DisableSelectionChoiceRequest()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_DisableSelectionChoiceRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_DisableSelectionChoiceRequest copyWith(
           void Function(DeltaUpdateLabelRequest_DisableSelectionChoiceRequest)
               updates) =>
@@ -2006,16 +1754,15 @@ class DeltaUpdateLabelRequest_DisableSelectionChoiceRequest
               message as DeltaUpdateLabelRequest_DisableSelectionChoiceRequest))
           as DeltaUpdateLabelRequest_DisableSelectionChoiceRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_DisableSelectionChoiceRequest create() =>
       DeltaUpdateLabelRequest_DisableSelectionChoiceRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_DisableSelectionChoiceRequest createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelRequest_DisableSelectionChoiceRequest>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelRequest_DisableSelectionChoiceRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_DisableSelectionChoiceRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2029,14 +1776,11 @@ class DeltaUpdateLabelRequest_DisableSelectionChoiceRequest
   @$pb.TagNumber(1)
   $1.FieldMask get updateMask => $_getN(0);
   @$pb.TagNumber(1)
-  set updateMask($1.FieldMask v) {
-    setField(1, v);
-  }
-
+  set updateMask($1.FieldMask value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUpdateMask() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUpdateMask() => clearField(1);
+  void clearUpdateMask() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.FieldMask ensureUpdateMask() => $_ensure(0);
 
@@ -2044,40 +1788,31 @@ class DeltaUpdateLabelRequest_DisableSelectionChoiceRequest
   @$pb.TagNumber(2)
   $core.String get fieldId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set fieldId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set fieldId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasFieldId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFieldId() => clearField(2);
+  void clearFieldId() => $_clearField(2);
 
   /// Required. Choice to disable.
   @$pb.TagNumber(3)
   $core.String get id => $_getSZ(2);
   @$pb.TagNumber(3)
-  set id($core.String v) {
-    $_setString(2, v);
-  }
-
+  set id($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearId() => clearField(3);
+  void clearId() => $_clearField(3);
 
   /// Required. The disabled policy to update.
   @$pb.TagNumber(4)
   $2.Lifecycle_DisabledPolicy get disabledPolicy => $_getN(3);
   @$pb.TagNumber(4)
-  set disabledPolicy($2.Lifecycle_DisabledPolicy v) {
-    setField(4, v);
-  }
-
+  set disabledPolicy($2.Lifecycle_DisabledPolicy value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasDisabledPolicy() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDisabledPolicy() => clearField(4);
+  void clearDisabledPolicy() => $_clearField(4);
   @$pb.TagNumber(4)
   $2.Lifecycle_DisabledPolicy ensureDisabledPolicy() => $_ensure(3);
 }
@@ -2089,24 +1824,22 @@ class DeltaUpdateLabelRequest_EnableSelectionChoiceRequest
     $core.String? fieldId,
     $core.String? id,
   }) {
-    final $result = create();
-    if (fieldId != null) {
-      $result.fieldId = fieldId;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    return $result;
+    final result = create();
+    if (fieldId != null) result.fieldId = fieldId;
+    if (id != null) result.id = id;
+    return result;
   }
-  DeltaUpdateLabelRequest_EnableSelectionChoiceRequest._() : super();
+
+  DeltaUpdateLabelRequest_EnableSelectionChoiceRequest._();
+
   factory DeltaUpdateLabelRequest_EnableSelectionChoiceRequest.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelRequest_EnableSelectionChoiceRequest.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2119,15 +1852,9 @@ class DeltaUpdateLabelRequest_EnableSelectionChoiceRequest
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest_EnableSelectionChoiceRequest clone() =>
-      DeltaUpdateLabelRequest_EnableSelectionChoiceRequest()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest_EnableSelectionChoiceRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest_EnableSelectionChoiceRequest copyWith(
           void Function(DeltaUpdateLabelRequest_EnableSelectionChoiceRequest)
               updates) =>
@@ -2135,16 +1862,15 @@ class DeltaUpdateLabelRequest_EnableSelectionChoiceRequest
               message as DeltaUpdateLabelRequest_EnableSelectionChoiceRequest))
           as DeltaUpdateLabelRequest_EnableSelectionChoiceRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_EnableSelectionChoiceRequest create() =>
       DeltaUpdateLabelRequest_EnableSelectionChoiceRequest._();
+  @$core.override
   DeltaUpdateLabelRequest_EnableSelectionChoiceRequest createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelRequest_EnableSelectionChoiceRequest>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelRequest_EnableSelectionChoiceRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest_EnableSelectionChoiceRequest getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2155,27 +1881,21 @@ class DeltaUpdateLabelRequest_EnableSelectionChoiceRequest
   @$pb.TagNumber(1)
   $core.String get fieldId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set fieldId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set fieldId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFieldId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFieldId() => clearField(1);
+  void clearFieldId() => $_clearField(1);
 
   /// Required. Choice to enable.
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) {
-    $_setString(1, v);
-  }
-
+  set id($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
+  void clearId() => $_clearField(2);
 }
 
 /// The set of requests for updating aspects of a Label. If any request is not
@@ -2189,34 +1909,24 @@ class DeltaUpdateLabelRequest extends $pb.GeneratedMessage {
     LabelView? view,
     $core.String? languageCode,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (writeControl != null) {
-      $result.writeControl = writeControl;
-    }
-    if (requests != null) {
-      $result.requests.addAll(requests);
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    if (languageCode != null) {
-      $result.languageCode = languageCode;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (writeControl != null) result.writeControl = writeControl;
+    if (requests != null) result.requests.addAll(requests);
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    if (view != null) result.view = view;
+    if (languageCode != null) result.languageCode = languageCode;
+    return result;
   }
-  DeltaUpdateLabelRequest._() : super();
-  factory DeltaUpdateLabelRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeltaUpdateLabelRequest._();
+
+  factory DeltaUpdateLabelRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeltaUpdateLabelRequest',
@@ -2226,37 +1936,29 @@ class DeltaUpdateLabelRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOM<WriteControl>(2, _omitFieldNames ? '' : 'writeControl',
         subBuilder: WriteControl.create)
-    ..pc<DeltaUpdateLabelRequest_Request>(
-        3, _omitFieldNames ? '' : 'requests', $pb.PbFieldType.PM,
+    ..pPM<DeltaUpdateLabelRequest_Request>(3, _omitFieldNames ? '' : 'requests',
         subBuilder: DeltaUpdateLabelRequest_Request.create)
     ..aOB(4, _omitFieldNames ? '' : 'useAdminAccess')
-    ..e<LabelView>(5, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: LabelView.LABEL_VIEW_BASIC,
-        valueOf: LabelView.valueOf,
+    ..aE<LabelView>(5, _omitFieldNames ? '' : 'view',
         enumValues: LabelView.values)
     ..aOS(6, _omitFieldNames ? '' : 'languageCode')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelRequest clone() =>
-      DeltaUpdateLabelRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelRequest copyWith(
           void Function(DeltaUpdateLabelRequest) updates) =>
       super.copyWith((message) => updates(message as DeltaUpdateLabelRequest))
           as DeltaUpdateLabelRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest create() => DeltaUpdateLabelRequest._();
+  @$core.override
   DeltaUpdateLabelRequest createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelRequest> createRepeated() =>
-      $pb.PbList<DeltaUpdateLabelRequest>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeltaUpdateLabelRequest>(create);
@@ -2266,76 +1968,61 @@ class DeltaUpdateLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Provides control over how write requests are executed.
   @$pb.TagNumber(2)
   WriteControl get writeControl => $_getN(1);
   @$pb.TagNumber(2)
-  set writeControl(WriteControl v) {
-    setField(2, v);
-  }
-
+  set writeControl(WriteControl value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasWriteControl() => $_has(1);
   @$pb.TagNumber(2)
-  void clearWriteControl() => clearField(2);
+  void clearWriteControl() => $_clearField(2);
   @$pb.TagNumber(2)
   WriteControl ensureWriteControl() => $_ensure(1);
 
   /// A list of updates to apply to the Label.
   /// Requests will be applied in the order they are specified.
   @$pb.TagNumber(3)
-  $core.List<DeltaUpdateLabelRequest_Request> get requests => $_getList(2);
+  $pb.PbList<DeltaUpdateLabelRequest_Request> get requests => $_getList(2);
 
   /// Set to `true` in order to use the user's admin credentials. The server
   /// will verify the user is an admin for the Label before allowing access.
   @$pb.TagNumber(4)
   $core.bool get useAdminAccess => $_getBF(3);
   @$pb.TagNumber(4)
-  set useAdminAccess($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasUseAdminAccess() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUseAdminAccess() => clearField(4);
+  void clearUseAdminAccess() => $_clearField(4);
 
   /// When specified, only certain fields belonging to the indicated view will be
   /// returned.
   @$pb.TagNumber(5)
   LabelView get view => $_getN(4);
   @$pb.TagNumber(5)
-  set view(LabelView v) {
-    setField(5, v);
-  }
-
+  set view(LabelView value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasView() => $_has(4);
   @$pb.TagNumber(5)
-  void clearView() => clearField(5);
+  void clearView() => $_clearField(5);
 
   /// The BCP-47 language code to use for evaluating localized Field labels when
   /// `include_label_in_response` is `true`.
   @$pb.TagNumber(6)
   $core.String get languageCode => $_getSZ(5);
   @$pb.TagNumber(6)
-  set languageCode($core.String v) {
-    $_setString(5, v);
-  }
-
+  set languageCode($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasLanguageCode() => $_has(5);
   @$pb.TagNumber(6)
-  void clearLanguageCode() => clearField(6);
+  void clearLanguageCode() => $_clearField(6);
 }
 
 enum DeltaUpdateLabelResponse_Response_Response {
@@ -2375,52 +2062,36 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
     DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse?
         deleteSelectionChoice,
   }) {
-    final $result = create();
-    if (updateLabel != null) {
-      $result.updateLabel = updateLabel;
-    }
-    if (createField != null) {
-      $result.createField = createField;
-    }
-    if (updateField != null) {
-      $result.updateField = updateField;
-    }
-    if (updateFieldType != null) {
-      $result.updateFieldType = updateFieldType;
-    }
-    if (enableField != null) {
-      $result.enableField = enableField;
-    }
-    if (disableField != null) {
-      $result.disableField = disableField;
-    }
-    if (deleteField != null) {
-      $result.deleteField = deleteField;
-    }
-    if (createSelectionChoice != null) {
-      $result.createSelectionChoice = createSelectionChoice;
-    }
-    if (updateSelectionChoiceProperties != null) {
-      $result.updateSelectionChoiceProperties = updateSelectionChoiceProperties;
-    }
-    if (enableSelectionChoice != null) {
-      $result.enableSelectionChoice = enableSelectionChoice;
-    }
-    if (disableSelectionChoice != null) {
-      $result.disableSelectionChoice = disableSelectionChoice;
-    }
-    if (deleteSelectionChoice != null) {
-      $result.deleteSelectionChoice = deleteSelectionChoice;
-    }
-    return $result;
+    final result = create();
+    if (updateLabel != null) result.updateLabel = updateLabel;
+    if (createField != null) result.createField = createField;
+    if (updateField != null) result.updateField = updateField;
+    if (updateFieldType != null) result.updateFieldType = updateFieldType;
+    if (enableField != null) result.enableField = enableField;
+    if (disableField != null) result.disableField = disableField;
+    if (deleteField != null) result.deleteField = deleteField;
+    if (createSelectionChoice != null)
+      result.createSelectionChoice = createSelectionChoice;
+    if (updateSelectionChoiceProperties != null)
+      result.updateSelectionChoiceProperties = updateSelectionChoiceProperties;
+    if (enableSelectionChoice != null)
+      result.enableSelectionChoice = enableSelectionChoice;
+    if (disableSelectionChoice != null)
+      result.disableSelectionChoice = disableSelectionChoice;
+    if (deleteSelectionChoice != null)
+      result.deleteSelectionChoice = deleteSelectionChoice;
+    return result;
   }
-  DeltaUpdateLabelResponse_Response._() : super();
-  factory DeltaUpdateLabelResponse_Response.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelResponse_Response.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeltaUpdateLabelResponse_Response._();
+
+  factory DeltaUpdateLabelResponse_Response.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelResponse_Response.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, DeltaUpdateLabelResponse_Response_Response>
       _DeltaUpdateLabelResponse_Response_ResponseByTag = {
@@ -2491,51 +2162,69 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
             DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_Response clone() =>
-      DeltaUpdateLabelResponse_Response()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_Response clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_Response copyWith(
           void Function(DeltaUpdateLabelResponse_Response) updates) =>
       super.copyWith((message) =>
               updates(message as DeltaUpdateLabelResponse_Response))
           as DeltaUpdateLabelResponse_Response;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_Response create() =>
       DeltaUpdateLabelResponse_Response._();
+  @$core.override
   DeltaUpdateLabelResponse_Response createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelResponse_Response> createRepeated() =>
-      $pb.PbList<DeltaUpdateLabelResponse_Response>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_Response getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeltaUpdateLabelResponse_Response>(
           create);
   static DeltaUpdateLabelResponse_Response? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
   DeltaUpdateLabelResponse_Response_Response whichResponse() =>
       _DeltaUpdateLabelResponse_Response_ResponseByTag[$_whichOneof(0)]!;
-  void clearResponse() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
+  void clearResponse() => $_clearField($_whichOneof(0));
 
   /// Updated basic properties of a Label.
   @$pb.TagNumber(1)
   DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse get updateLabel =>
       $_getN(0);
   @$pb.TagNumber(1)
-  set updateLabel(DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse v) {
-    setField(1, v);
-  }
-
+  set updateLabel(
+          DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUpdateLabel() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUpdateLabel() => clearField(1);
+  void clearUpdateLabel() => $_clearField(1);
   @$pb.TagNumber(1)
   DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse ensureUpdateLabel() =>
       $_ensure(0);
@@ -2544,14 +2233,12 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   DeltaUpdateLabelResponse_CreateFieldResponse get createField => $_getN(1);
   @$pb.TagNumber(2)
-  set createField(DeltaUpdateLabelResponse_CreateFieldResponse v) {
-    setField(2, v);
-  }
-
+  set createField(DeltaUpdateLabelResponse_CreateFieldResponse value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCreateField() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCreateField() => clearField(2);
+  void clearCreateField() => $_clearField(2);
   @$pb.TagNumber(2)
   DeltaUpdateLabelResponse_CreateFieldResponse ensureCreateField() =>
       $_ensure(1);
@@ -2561,14 +2248,13 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
   DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse get updateField =>
       $_getN(2);
   @$pb.TagNumber(3)
-  set updateField(DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse v) {
-    setField(3, v);
-  }
-
+  set updateField(
+          DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasUpdateField() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUpdateField() => clearField(3);
+  void clearUpdateField() => $_clearField(3);
   @$pb.TagNumber(3)
   DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse ensureUpdateField() =>
       $_ensure(2);
@@ -2578,14 +2264,12 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
   DeltaUpdateLabelResponse_UpdateFieldTypeResponse get updateFieldType =>
       $_getN(3);
   @$pb.TagNumber(4)
-  set updateFieldType(DeltaUpdateLabelResponse_UpdateFieldTypeResponse v) {
-    setField(4, v);
-  }
-
+  set updateFieldType(DeltaUpdateLabelResponse_UpdateFieldTypeResponse value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasUpdateFieldType() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUpdateFieldType() => clearField(4);
+  void clearUpdateFieldType() => $_clearField(4);
   @$pb.TagNumber(4)
   DeltaUpdateLabelResponse_UpdateFieldTypeResponse ensureUpdateFieldType() =>
       $_ensure(3);
@@ -2594,14 +2278,12 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   DeltaUpdateLabelResponse_EnableFieldResponse get enableField => $_getN(4);
   @$pb.TagNumber(5)
-  set enableField(DeltaUpdateLabelResponse_EnableFieldResponse v) {
-    setField(5, v);
-  }
-
+  set enableField(DeltaUpdateLabelResponse_EnableFieldResponse value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasEnableField() => $_has(4);
   @$pb.TagNumber(5)
-  void clearEnableField() => clearField(5);
+  void clearEnableField() => $_clearField(5);
   @$pb.TagNumber(5)
   DeltaUpdateLabelResponse_EnableFieldResponse ensureEnableField() =>
       $_ensure(4);
@@ -2610,14 +2292,12 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   DeltaUpdateLabelResponse_DisableFieldResponse get disableField => $_getN(5);
   @$pb.TagNumber(6)
-  set disableField(DeltaUpdateLabelResponse_DisableFieldResponse v) {
-    setField(6, v);
-  }
-
+  set disableField(DeltaUpdateLabelResponse_DisableFieldResponse value) =>
+      $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasDisableField() => $_has(5);
   @$pb.TagNumber(6)
-  void clearDisableField() => clearField(6);
+  void clearDisableField() => $_clearField(6);
   @$pb.TagNumber(6)
   DeltaUpdateLabelResponse_DisableFieldResponse ensureDisableField() =>
       $_ensure(5);
@@ -2626,14 +2306,12 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   DeltaUpdateLabelResponse_DeleteFieldResponse get deleteField => $_getN(6);
   @$pb.TagNumber(7)
-  set deleteField(DeltaUpdateLabelResponse_DeleteFieldResponse v) {
-    setField(7, v);
-  }
-
+  set deleteField(DeltaUpdateLabelResponse_DeleteFieldResponse value) =>
+      $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasDeleteField() => $_has(6);
   @$pb.TagNumber(7)
-  void clearDeleteField() => clearField(7);
+  void clearDeleteField() => $_clearField(7);
   @$pb.TagNumber(7)
   DeltaUpdateLabelResponse_DeleteFieldResponse ensureDeleteField() =>
       $_ensure(6);
@@ -2644,14 +2322,12 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
       get createSelectionChoice => $_getN(7);
   @$pb.TagNumber(8)
   set createSelectionChoice(
-      DeltaUpdateLabelResponse_CreateSelectionChoiceResponse v) {
-    setField(8, v);
-  }
-
+          DeltaUpdateLabelResponse_CreateSelectionChoiceResponse value) =>
+      $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasCreateSelectionChoice() => $_has(7);
   @$pb.TagNumber(8)
-  void clearCreateSelectionChoice() => clearField(8);
+  void clearCreateSelectionChoice() => $_clearField(8);
   @$pb.TagNumber(8)
   DeltaUpdateLabelResponse_CreateSelectionChoiceResponse
       ensureCreateSelectionChoice() => $_ensure(7);
@@ -2662,14 +2338,13 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
       get updateSelectionChoiceProperties => $_getN(8);
   @$pb.TagNumber(9)
   set updateSelectionChoiceProperties(
-      DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse v) {
-    setField(9, v);
-  }
-
+          DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse
+              value) =>
+      $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasUpdateSelectionChoiceProperties() => $_has(8);
   @$pb.TagNumber(9)
-  void clearUpdateSelectionChoiceProperties() => clearField(9);
+  void clearUpdateSelectionChoiceProperties() => $_clearField(9);
   @$pb.TagNumber(9)
   DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse
       ensureUpdateSelectionChoiceProperties() => $_ensure(8);
@@ -2680,14 +2355,12 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
       get enableSelectionChoice => $_getN(9);
   @$pb.TagNumber(10)
   set enableSelectionChoice(
-      DeltaUpdateLabelResponse_EnableSelectionChoiceResponse v) {
-    setField(10, v);
-  }
-
+          DeltaUpdateLabelResponse_EnableSelectionChoiceResponse value) =>
+      $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasEnableSelectionChoice() => $_has(9);
   @$pb.TagNumber(10)
-  void clearEnableSelectionChoice() => clearField(10);
+  void clearEnableSelectionChoice() => $_clearField(10);
   @$pb.TagNumber(10)
   DeltaUpdateLabelResponse_EnableSelectionChoiceResponse
       ensureEnableSelectionChoice() => $_ensure(9);
@@ -2698,14 +2371,12 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
       get disableSelectionChoice => $_getN(10);
   @$pb.TagNumber(11)
   set disableSelectionChoice(
-      DeltaUpdateLabelResponse_DisableSelectionChoiceResponse v) {
-    setField(11, v);
-  }
-
+          DeltaUpdateLabelResponse_DisableSelectionChoiceResponse value) =>
+      $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasDisableSelectionChoice() => $_has(10);
   @$pb.TagNumber(11)
-  void clearDisableSelectionChoice() => clearField(11);
+  void clearDisableSelectionChoice() => $_clearField(11);
   @$pb.TagNumber(11)
   DeltaUpdateLabelResponse_DisableSelectionChoiceResponse
       ensureDisableSelectionChoice() => $_ensure(10);
@@ -2716,14 +2387,12 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
       get deleteSelectionChoice => $_getN(11);
   @$pb.TagNumber(12)
   set deleteSelectionChoice(
-      DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse v) {
-    setField(12, v);
-  }
-
+          DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse value) =>
+      $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasDeleteSelectionChoice() => $_has(11);
   @$pb.TagNumber(12)
-  void clearDeleteSelectionChoice() => clearField(12);
+  void clearDeleteSelectionChoice() => $_clearField(12);
   @$pb.TagNumber(12)
   DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse
       ensureDeleteSelectionChoice() => $_ensure(11);
@@ -2733,15 +2402,17 @@ class DeltaUpdateLabelResponse_Response extends $pb.GeneratedMessage {
 class DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse
     extends $pb.GeneratedMessage {
   factory DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse() => create();
-  DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse._() : super();
+
+  DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse._();
+
   factory DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2752,15 +2423,9 @@ class DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse clone() =>
-      DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse copyWith(
           void Function(DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse)
               updates) =>
@@ -2768,16 +2433,15 @@ class DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse
               as DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse))
           as DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse create() =>
       DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse
       createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_UpdateLabelPropertiesResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2793,23 +2457,22 @@ class DeltaUpdateLabelResponse_CreateFieldResponse
     $core.String? id,
     $core.int? priority,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    if (priority != null) {
-      $result.priority = priority;
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    if (priority != null) result.priority = priority;
+    return result;
   }
-  DeltaUpdateLabelResponse_CreateFieldResponse._() : super();
+
+  DeltaUpdateLabelResponse_CreateFieldResponse._();
+
   factory DeltaUpdateLabelResponse_CreateFieldResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelResponse_CreateFieldResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelResponse_CreateFieldResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeltaUpdateLabelResponse.CreateFieldResponse',
@@ -2817,17 +2480,12 @@ class DeltaUpdateLabelResponse_CreateFieldResponse
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'priority', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'priority')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_CreateFieldResponse clone() =>
-      DeltaUpdateLabelResponse_CreateFieldResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_CreateFieldResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_CreateFieldResponse copyWith(
           void Function(DeltaUpdateLabelResponse_CreateFieldResponse)
               updates) =>
@@ -2835,16 +2493,15 @@ class DeltaUpdateLabelResponse_CreateFieldResponse
               updates(message as DeltaUpdateLabelResponse_CreateFieldResponse))
           as DeltaUpdateLabelResponse_CreateFieldResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_CreateFieldResponse create() =>
       DeltaUpdateLabelResponse_CreateFieldResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_CreateFieldResponse createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelResponse_CreateFieldResponse>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelResponse_CreateFieldResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_CreateFieldResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2856,28 +2513,22 @@ class DeltaUpdateLabelResponse_CreateFieldResponse
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// The priority of the created field. The priority may change from what
   /// was specified to assure contiguous priorities between fields (1-n).
   @$pb.TagNumber(2)
   $core.int get priority => $_getIZ(1);
   @$pb.TagNumber(2)
-  set priority($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set priority($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPriority() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPriority() => clearField(2);
+  void clearPriority() => $_clearField(2);
 }
 
 /// Response following update to Field properties.
@@ -2886,21 +2537,21 @@ class DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse
   factory DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse({
     $core.int? priority,
   }) {
-    final $result = create();
-    if (priority != null) {
-      $result.priority = priority;
-    }
-    return $result;
+    final result = create();
+    if (priority != null) result.priority = priority;
+    return result;
   }
-  DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse._() : super();
+
+  DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse._();
+
   factory DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2909,18 +2560,12 @@ class DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'priority', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'priority')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse clone() =>
-      DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse copyWith(
           void Function(DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse)
               updates) =>
@@ -2928,16 +2573,15 @@ class DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse
               as DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse))
           as DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse create() =>
       DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse
       createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -2950,29 +2594,28 @@ class DeltaUpdateLabelResponse_UpdateFieldPropertiesResponse
   @$pb.TagNumber(1)
   $core.int get priority => $_getIZ(0);
   @$pb.TagNumber(1)
-  set priority($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set priority($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPriority() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPriority() => clearField(1);
+  void clearPriority() => $_clearField(1);
 }
 
 /// Response following update to Field type.
 class DeltaUpdateLabelResponse_UpdateFieldTypeResponse
     extends $pb.GeneratedMessage {
   factory DeltaUpdateLabelResponse_UpdateFieldTypeResponse() => create();
-  DeltaUpdateLabelResponse_UpdateFieldTypeResponse._() : super();
+
+  DeltaUpdateLabelResponse_UpdateFieldTypeResponse._();
+
   factory DeltaUpdateLabelResponse_UpdateFieldTypeResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelResponse_UpdateFieldTypeResponse.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -2983,15 +2626,9 @@ class DeltaUpdateLabelResponse_UpdateFieldTypeResponse
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_UpdateFieldTypeResponse clone() =>
-      DeltaUpdateLabelResponse_UpdateFieldTypeResponse()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_UpdateFieldTypeResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_UpdateFieldTypeResponse copyWith(
           void Function(DeltaUpdateLabelResponse_UpdateFieldTypeResponse)
               updates) =>
@@ -2999,16 +2636,15 @@ class DeltaUpdateLabelResponse_UpdateFieldTypeResponse
               message as DeltaUpdateLabelResponse_UpdateFieldTypeResponse))
           as DeltaUpdateLabelResponse_UpdateFieldTypeResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_UpdateFieldTypeResponse create() =>
       DeltaUpdateLabelResponse_UpdateFieldTypeResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_UpdateFieldTypeResponse createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelResponse_UpdateFieldTypeResponse>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelResponse_UpdateFieldTypeResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_UpdateFieldTypeResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -3020,14 +2656,17 @@ class DeltaUpdateLabelResponse_UpdateFieldTypeResponse
 class DeltaUpdateLabelResponse_EnableFieldResponse
     extends $pb.GeneratedMessage {
   factory DeltaUpdateLabelResponse_EnableFieldResponse() => create();
-  DeltaUpdateLabelResponse_EnableFieldResponse._() : super();
+
+  DeltaUpdateLabelResponse_EnableFieldResponse._();
+
   factory DeltaUpdateLabelResponse_EnableFieldResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelResponse_EnableFieldResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelResponse_EnableFieldResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeltaUpdateLabelResponse.EnableFieldResponse',
@@ -3036,14 +2675,9 @@ class DeltaUpdateLabelResponse_EnableFieldResponse
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_EnableFieldResponse clone() =>
-      DeltaUpdateLabelResponse_EnableFieldResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_EnableFieldResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_EnableFieldResponse copyWith(
           void Function(DeltaUpdateLabelResponse_EnableFieldResponse)
               updates) =>
@@ -3051,16 +2685,15 @@ class DeltaUpdateLabelResponse_EnableFieldResponse
               updates(message as DeltaUpdateLabelResponse_EnableFieldResponse))
           as DeltaUpdateLabelResponse_EnableFieldResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_EnableFieldResponse create() =>
       DeltaUpdateLabelResponse_EnableFieldResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_EnableFieldResponse createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelResponse_EnableFieldResponse>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelResponse_EnableFieldResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_EnableFieldResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -3072,14 +2705,17 @@ class DeltaUpdateLabelResponse_EnableFieldResponse
 class DeltaUpdateLabelResponse_DisableFieldResponse
     extends $pb.GeneratedMessage {
   factory DeltaUpdateLabelResponse_DisableFieldResponse() => create();
-  DeltaUpdateLabelResponse_DisableFieldResponse._() : super();
+
+  DeltaUpdateLabelResponse_DisableFieldResponse._();
+
   factory DeltaUpdateLabelResponse_DisableFieldResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelResponse_DisableFieldResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelResponse_DisableFieldResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeltaUpdateLabelResponse.DisableFieldResponse',
@@ -3088,14 +2724,9 @@ class DeltaUpdateLabelResponse_DisableFieldResponse
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_DisableFieldResponse clone() =>
-      DeltaUpdateLabelResponse_DisableFieldResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_DisableFieldResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_DisableFieldResponse copyWith(
           void Function(DeltaUpdateLabelResponse_DisableFieldResponse)
               updates) =>
@@ -3103,16 +2734,15 @@ class DeltaUpdateLabelResponse_DisableFieldResponse
               updates(message as DeltaUpdateLabelResponse_DisableFieldResponse))
           as DeltaUpdateLabelResponse_DisableFieldResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_DisableFieldResponse create() =>
       DeltaUpdateLabelResponse_DisableFieldResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_DisableFieldResponse createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelResponse_DisableFieldResponse>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelResponse_DisableFieldResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_DisableFieldResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -3124,14 +2754,17 @@ class DeltaUpdateLabelResponse_DisableFieldResponse
 class DeltaUpdateLabelResponse_DeleteFieldResponse
     extends $pb.GeneratedMessage {
   factory DeltaUpdateLabelResponse_DeleteFieldResponse() => create();
-  DeltaUpdateLabelResponse_DeleteFieldResponse._() : super();
+
+  DeltaUpdateLabelResponse_DeleteFieldResponse._();
+
   factory DeltaUpdateLabelResponse_DeleteFieldResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelResponse_DeleteFieldResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelResponse_DeleteFieldResponse.fromJson(
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeltaUpdateLabelResponse.DeleteFieldResponse',
@@ -3140,14 +2773,9 @@ class DeltaUpdateLabelResponse_DeleteFieldResponse
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_DeleteFieldResponse clone() =>
-      DeltaUpdateLabelResponse_DeleteFieldResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_DeleteFieldResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_DeleteFieldResponse copyWith(
           void Function(DeltaUpdateLabelResponse_DeleteFieldResponse)
               updates) =>
@@ -3155,16 +2783,15 @@ class DeltaUpdateLabelResponse_DeleteFieldResponse
               updates(message as DeltaUpdateLabelResponse_DeleteFieldResponse))
           as DeltaUpdateLabelResponse_DeleteFieldResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_DeleteFieldResponse create() =>
       DeltaUpdateLabelResponse_DeleteFieldResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_DeleteFieldResponse createEmptyInstance() =>
       create();
-  static $pb.PbList<DeltaUpdateLabelResponse_DeleteFieldResponse>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelResponse_DeleteFieldResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_DeleteFieldResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -3179,24 +2806,22 @@ class DeltaUpdateLabelResponse_CreateSelectionChoiceResponse
     $core.String? fieldId,
     $core.String? id,
   }) {
-    final $result = create();
-    if (fieldId != null) {
-      $result.fieldId = fieldId;
-    }
-    if (id != null) {
-      $result.id = id;
-    }
-    return $result;
+    final result = create();
+    if (fieldId != null) result.fieldId = fieldId;
+    if (id != null) result.id = id;
+    return result;
   }
-  DeltaUpdateLabelResponse_CreateSelectionChoiceResponse._() : super();
+
+  DeltaUpdateLabelResponse_CreateSelectionChoiceResponse._();
+
   factory DeltaUpdateLabelResponse_CreateSelectionChoiceResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelResponse_CreateSelectionChoiceResponse.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -3209,15 +2834,9 @@ class DeltaUpdateLabelResponse_CreateSelectionChoiceResponse
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_CreateSelectionChoiceResponse clone() =>
-      DeltaUpdateLabelResponse_CreateSelectionChoiceResponse()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_CreateSelectionChoiceResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_CreateSelectionChoiceResponse copyWith(
           void Function(DeltaUpdateLabelResponse_CreateSelectionChoiceResponse)
               updates) =>
@@ -3225,16 +2844,15 @@ class DeltaUpdateLabelResponse_CreateSelectionChoiceResponse
               as DeltaUpdateLabelResponse_CreateSelectionChoiceResponse))
           as DeltaUpdateLabelResponse_CreateSelectionChoiceResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_CreateSelectionChoiceResponse create() =>
       DeltaUpdateLabelResponse_CreateSelectionChoiceResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_CreateSelectionChoiceResponse
       createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelResponse_CreateSelectionChoiceResponse>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelResponse_CreateSelectionChoiceResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_CreateSelectionChoiceResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -3246,27 +2864,21 @@ class DeltaUpdateLabelResponse_CreateSelectionChoiceResponse
   @$pb.TagNumber(1)
   $core.String get fieldId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set fieldId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set fieldId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFieldId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFieldId() => clearField(1);
+  void clearFieldId() => $_clearField(1);
 
   /// The server-generated ID of the created choice within the Field
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) {
-    $_setString(1, v);
-  }
-
+  set id($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
+  void clearId() => $_clearField(2);
 }
 
 /// Response following update to Selection Choice properties.
@@ -3275,22 +2887,21 @@ class DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse
   factory DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse({
     $core.int? priority,
   }) {
-    final $result = create();
-    if (priority != null) {
-      $result.priority = priority;
-    }
-    return $result;
+    final result = create();
+    if (priority != null) result.priority = priority;
+    return result;
   }
-  DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse._()
-      : super();
+
+  DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse._();
+
   factory DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -3299,18 +2910,13 @@ class DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'priority', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'priority')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse clone() =>
-      DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+      deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse copyWith(
           void Function(
                   DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse)
@@ -3319,18 +2925,16 @@ class DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse
               as DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse))
           as DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse
       create() =>
           DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse
       createEmptyInstance() => create();
-  static $pb
-      .PbList<DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse>
-      createRepeated() => $pb.PbList<
-          DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -3344,29 +2948,28 @@ class DeltaUpdateLabelResponse_UpdateSelectionChoicePropertiesResponse
   @$pb.TagNumber(1)
   $core.int get priority => $_getIZ(0);
   @$pb.TagNumber(1)
-  set priority($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set priority($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPriority() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPriority() => clearField(1);
+  void clearPriority() => $_clearField(1);
 }
 
 /// Response following Choice enable.
 class DeltaUpdateLabelResponse_EnableSelectionChoiceResponse
     extends $pb.GeneratedMessage {
   factory DeltaUpdateLabelResponse_EnableSelectionChoiceResponse() => create();
-  DeltaUpdateLabelResponse_EnableSelectionChoiceResponse._() : super();
+
+  DeltaUpdateLabelResponse_EnableSelectionChoiceResponse._();
+
   factory DeltaUpdateLabelResponse_EnableSelectionChoiceResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelResponse_EnableSelectionChoiceResponse.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -3377,15 +2980,9 @@ class DeltaUpdateLabelResponse_EnableSelectionChoiceResponse
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_EnableSelectionChoiceResponse clone() =>
-      DeltaUpdateLabelResponse_EnableSelectionChoiceResponse()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_EnableSelectionChoiceResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_EnableSelectionChoiceResponse copyWith(
           void Function(DeltaUpdateLabelResponse_EnableSelectionChoiceResponse)
               updates) =>
@@ -3393,16 +2990,15 @@ class DeltaUpdateLabelResponse_EnableSelectionChoiceResponse
               as DeltaUpdateLabelResponse_EnableSelectionChoiceResponse))
           as DeltaUpdateLabelResponse_EnableSelectionChoiceResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_EnableSelectionChoiceResponse create() =>
       DeltaUpdateLabelResponse_EnableSelectionChoiceResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_EnableSelectionChoiceResponse
       createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelResponse_EnableSelectionChoiceResponse>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelResponse_EnableSelectionChoiceResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_EnableSelectionChoiceResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -3415,15 +3011,17 @@ class DeltaUpdateLabelResponse_EnableSelectionChoiceResponse
 class DeltaUpdateLabelResponse_DisableSelectionChoiceResponse
     extends $pb.GeneratedMessage {
   factory DeltaUpdateLabelResponse_DisableSelectionChoiceResponse() => create();
-  DeltaUpdateLabelResponse_DisableSelectionChoiceResponse._() : super();
+
+  DeltaUpdateLabelResponse_DisableSelectionChoiceResponse._();
+
   factory DeltaUpdateLabelResponse_DisableSelectionChoiceResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelResponse_DisableSelectionChoiceResponse.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -3434,15 +3032,9 @@ class DeltaUpdateLabelResponse_DisableSelectionChoiceResponse
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_DisableSelectionChoiceResponse clone() =>
-      DeltaUpdateLabelResponse_DisableSelectionChoiceResponse()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_DisableSelectionChoiceResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_DisableSelectionChoiceResponse copyWith(
           void Function(DeltaUpdateLabelResponse_DisableSelectionChoiceResponse)
               updates) =>
@@ -3450,16 +3042,15 @@ class DeltaUpdateLabelResponse_DisableSelectionChoiceResponse
               as DeltaUpdateLabelResponse_DisableSelectionChoiceResponse))
           as DeltaUpdateLabelResponse_DisableSelectionChoiceResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_DisableSelectionChoiceResponse create() =>
       DeltaUpdateLabelResponse_DisableSelectionChoiceResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_DisableSelectionChoiceResponse
       createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelResponse_DisableSelectionChoiceResponse>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelResponse_DisableSelectionChoiceResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_DisableSelectionChoiceResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -3472,15 +3063,17 @@ class DeltaUpdateLabelResponse_DisableSelectionChoiceResponse
 class DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse
     extends $pb.GeneratedMessage {
   factory DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse() => create();
-  DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse._() : super();
+
+  DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse._();
+
   factory DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
   factory DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse.fromJson(
-          $core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames
@@ -3491,15 +3084,9 @@ class DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse clone() =>
-      DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse()
-        ..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse copyWith(
           void Function(DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse)
               updates) =>
@@ -3507,16 +3094,15 @@ class DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse
               as DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse))
           as DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse create() =>
       DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse._();
+  @$core.override
   DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse
       createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse>
-      createRepeated() =>
-          $pb.PbList<DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse_DeleteSelectionChoiceResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -3531,55 +3117,48 @@ class DeltaUpdateLabelResponse extends $pb.GeneratedMessage {
     $core.Iterable<DeltaUpdateLabelResponse_Response>? responses,
     $0.Label? updatedLabel,
   }) {
-    final $result = create();
-    if (responses != null) {
-      $result.responses.addAll(responses);
-    }
-    if (updatedLabel != null) {
-      $result.updatedLabel = updatedLabel;
-    }
-    return $result;
+    final result = create();
+    if (responses != null) result.responses.addAll(responses);
+    if (updatedLabel != null) result.updatedLabel = updatedLabel;
+    return result;
   }
-  DeltaUpdateLabelResponse._() : super();
-  factory DeltaUpdateLabelResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeltaUpdateLabelResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeltaUpdateLabelResponse._();
+
+  factory DeltaUpdateLabelResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeltaUpdateLabelResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeltaUpdateLabelResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
-    ..pc<DeltaUpdateLabelResponse_Response>(
-        1, _omitFieldNames ? '' : 'responses', $pb.PbFieldType.PM,
+    ..pPM<DeltaUpdateLabelResponse_Response>(
+        1, _omitFieldNames ? '' : 'responses',
         subBuilder: DeltaUpdateLabelResponse_Response.create)
     ..aOM<$0.Label>(6, _omitFieldNames ? '' : 'updatedLabel',
         subBuilder: $0.Label.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeltaUpdateLabelResponse clone() =>
-      DeltaUpdateLabelResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeltaUpdateLabelResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeltaUpdateLabelResponse copyWith(
           void Function(DeltaUpdateLabelResponse) updates) =>
       super.copyWith((message) => updates(message as DeltaUpdateLabelResponse))
           as DeltaUpdateLabelResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse create() => DeltaUpdateLabelResponse._();
+  @$core.override
   DeltaUpdateLabelResponse createEmptyInstance() => create();
-  static $pb.PbList<DeltaUpdateLabelResponse> createRepeated() =>
-      $pb.PbList<DeltaUpdateLabelResponse>();
   @$core.pragma('dart2js:noInline')
   static DeltaUpdateLabelResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeltaUpdateLabelResponse>(create);
@@ -3588,7 +3167,7 @@ class DeltaUpdateLabelResponse extends $pb.GeneratedMessage {
   /// The reply of the updates. This maps 1:1 with the updates, although
   /// responses to some requests may be empty.
   @$pb.TagNumber(1)
-  $core.List<DeltaUpdateLabelResponse_Response> get responses => $_getList(0);
+  $pb.PbList<DeltaUpdateLabelResponse_Response> get responses => $_getList(0);
 
   /// The label after updates were applied. This is only set if
   /// [BatchUpdateLabelResponse2.include_label_in_response] is `true` and there
@@ -3596,14 +3175,11 @@ class DeltaUpdateLabelResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $0.Label get updatedLabel => $_getN(1);
   @$pb.TagNumber(6)
-  set updatedLabel($0.Label v) {
-    setField(6, v);
-  }
-
+  set updatedLabel($0.Label value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasUpdatedLabel() => $_has(1);
   @$pb.TagNumber(6)
-  void clearUpdatedLabel() => clearField(6);
+  void clearUpdatedLabel() => $_clearField(6);
   @$pb.TagNumber(6)
   $0.Label ensureUpdatedLabel() => $_ensure(1);
 }
@@ -3619,31 +3195,23 @@ class UpdateLabelCopyModeRequest extends $pb.GeneratedMessage {
     $core.String? languageCode,
     LabelView? view,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (copyMode != null) {
-      $result.copyMode = copyMode;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    if (languageCode != null) {
-      $result.languageCode = languageCode;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (copyMode != null) result.copyMode = copyMode;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    if (languageCode != null) result.languageCode = languageCode;
+    if (view != null) result.view = view;
+    return result;
   }
-  UpdateLabelCopyModeRequest._() : super();
-  factory UpdateLabelCopyModeRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateLabelCopyModeRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateLabelCopyModeRequest._();
+
+  factory UpdateLabelCopyModeRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateLabelCopyModeRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateLabelCopyModeRequest',
@@ -3651,41 +3219,31 @@ class UpdateLabelCopyModeRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<$0.Label_AppliedLabelPolicy_CopyMode>(
-        2, _omitFieldNames ? '' : 'copyMode', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            $0.Label_AppliedLabelPolicy_CopyMode.COPY_MODE_UNSPECIFIED,
-        valueOf: $0.Label_AppliedLabelPolicy_CopyMode.valueOf,
+    ..aE<$0.Label_AppliedLabelPolicy_CopyMode>(
+        2, _omitFieldNames ? '' : 'copyMode',
         enumValues: $0.Label_AppliedLabelPolicy_CopyMode.values)
     ..aOB(3, _omitFieldNames ? '' : 'useAdminAccess')
     ..aOS(4, _omitFieldNames ? '' : 'languageCode')
-    ..e<LabelView>(5, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: LabelView.LABEL_VIEW_BASIC,
-        valueOf: LabelView.valueOf,
+    ..aE<LabelView>(5, _omitFieldNames ? '' : 'view',
         enumValues: LabelView.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateLabelCopyModeRequest clone() =>
-      UpdateLabelCopyModeRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateLabelCopyModeRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateLabelCopyModeRequest copyWith(
           void Function(UpdateLabelCopyModeRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateLabelCopyModeRequest))
           as UpdateLabelCopyModeRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateLabelCopyModeRequest create() => UpdateLabelCopyModeRequest._();
+  @$core.override
   UpdateLabelCopyModeRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateLabelCopyModeRequest> createRepeated() =>
-      $pb.PbList<UpdateLabelCopyModeRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateLabelCopyModeRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateLabelCopyModeRequest>(create);
@@ -3695,70 +3253,56 @@ class UpdateLabelCopyModeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Required. Indicates how the applied Label, and Field values should be copied
   /// when a Drive item is copied.
   @$pb.TagNumber(2)
   $0.Label_AppliedLabelPolicy_CopyMode get copyMode => $_getN(1);
   @$pb.TagNumber(2)
-  set copyMode($0.Label_AppliedLabelPolicy_CopyMode v) {
-    setField(2, v);
-  }
-
+  set copyMode($0.Label_AppliedLabelPolicy_CopyMode value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCopyMode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCopyMode() => clearField(2);
+  void clearCopyMode() => $_clearField(2);
 
   /// Set to `true` in order to use the user's admin credentials. The server
   /// will verify the user is an admin for the Label before allowing access.
   @$pb.TagNumber(3)
   $core.bool get useAdminAccess => $_getBF(2);
   @$pb.TagNumber(3)
-  set useAdminAccess($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasUseAdminAccess() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUseAdminAccess() => clearField(3);
+  void clearUseAdminAccess() => $_clearField(3);
 
   /// The BCP-47 language code to use for evaluating localized field labels.
   /// When not specified, values in the default configured language will be used.
   @$pb.TagNumber(4)
   $core.String get languageCode => $_getSZ(3);
   @$pb.TagNumber(4)
-  set languageCode($core.String v) {
-    $_setString(3, v);
-  }
-
+  set languageCode($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasLanguageCode() => $_has(3);
   @$pb.TagNumber(4)
-  void clearLanguageCode() => clearField(4);
+  void clearLanguageCode() => $_clearField(4);
 
   /// When specified, only certain fields belonging to the indicated view will be
   /// returned.
   @$pb.TagNumber(5)
   LabelView get view => $_getN(4);
   @$pb.TagNumber(5)
-  set view(LabelView v) {
-    setField(5, v);
-  }
-
+  set view(LabelView value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasView() => $_has(4);
   @$pb.TagNumber(5)
-  void clearView() => clearField(5);
+  void clearView() => $_clearField(5);
 }
 
 /// Request to get the limits for a Label.
@@ -3766,19 +3310,19 @@ class GetLabelLimitsRequest extends $pb.GeneratedMessage {
   factory GetLabelLimitsRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetLabelLimitsRequest._() : super();
-  factory GetLabelLimitsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetLabelLimitsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetLabelLimitsRequest._();
+
+  factory GetLabelLimitsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetLabelLimitsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetLabelLimitsRequest',
@@ -3788,26 +3332,21 @@ class GetLabelLimitsRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetLabelLimitsRequest clone() =>
-      GetLabelLimitsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetLabelLimitsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetLabelLimitsRequest copyWith(
           void Function(GetLabelLimitsRequest) updates) =>
       super.copyWith((message) => updates(message as GetLabelLimitsRequest))
           as GetLabelLimitsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetLabelLimitsRequest create() => GetLabelLimitsRequest._();
+  @$core.override
   GetLabelLimitsRequest createEmptyInstance() => create();
-  static $pb.PbList<GetLabelLimitsRequest> createRepeated() =>
-      $pb.PbList<GetLabelLimitsRequest>();
   @$core.pragma('dart2js:noInline')
   static GetLabelLimitsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetLabelLimitsRequest>(create);
@@ -3818,14 +3357,11 @@ class GetLabelLimitsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 enum ListLabelsRequest_Access { useAdminAccess, minimumRole, notSet }
@@ -3842,40 +3378,26 @@ class ListLabelsRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     LabelView? view,
   }) {
-    final $result = create();
-    if (publishedOnly != null) {
-      $result.publishedOnly = publishedOnly;
-    }
-    if (customer != null) {
-      $result.customer = customer;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    if (minimumRole != null) {
-      $result.minimumRole = minimumRole;
-    }
-    if (languageCode != null) {
-      $result.languageCode = languageCode;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    return $result;
+    final result = create();
+    if (publishedOnly != null) result.publishedOnly = publishedOnly;
+    if (customer != null) result.customer = customer;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    if (minimumRole != null) result.minimumRole = minimumRole;
+    if (languageCode != null) result.languageCode = languageCode;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (view != null) result.view = view;
+    return result;
   }
-  ListLabelsRequest._() : super();
-  factory ListLabelsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListLabelsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListLabelsRequest._();
+
+  factory ListLabelsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListLabelsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, ListLabelsRequest_Access>
       _ListLabelsRequest_AccessByTag = {
@@ -3892,66 +3414,58 @@ class ListLabelsRequest extends $pb.GeneratedMessage {
     ..aOB(1, _omitFieldNames ? '' : 'publishedOnly')
     ..aOS(2, _omitFieldNames ? '' : 'customer')
     ..aOB(3, _omitFieldNames ? '' : 'useAdminAccess')
-    ..e<$4.LabelPermission_LabelRole>(
-        4, _omitFieldNames ? '' : 'minimumRole', $pb.PbFieldType.OE,
-        defaultOrMaker: $4.LabelPermission_LabelRole.LABEL_ROLE_UNSPECIFIED,
-        valueOf: $4.LabelPermission_LabelRole.valueOf,
+    ..aE<$4.LabelPermission_LabelRole>(4, _omitFieldNames ? '' : 'minimumRole',
         enumValues: $4.LabelPermission_LabelRole.values)
     ..aOS(5, _omitFieldNames ? '' : 'languageCode')
-    ..a<$core.int>(6, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(6, _omitFieldNames ? '' : 'pageSize')
     ..aOS(7, _omitFieldNames ? '' : 'pageToken')
-    ..e<LabelView>(8, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: LabelView.LABEL_VIEW_BASIC,
-        valueOf: LabelView.valueOf,
+    ..aE<LabelView>(8, _omitFieldNames ? '' : 'view',
         enumValues: LabelView.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListLabelsRequest clone() => ListLabelsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListLabelsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListLabelsRequest copyWith(void Function(ListLabelsRequest) updates) =>
       super.copyWith((message) => updates(message as ListLabelsRequest))
           as ListLabelsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListLabelsRequest create() => ListLabelsRequest._();
+  @$core.override
   ListLabelsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListLabelsRequest> createRepeated() =>
-      $pb.PbList<ListLabelsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListLabelsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListLabelsRequest>(create);
   static ListLabelsRequest? _defaultInstance;
 
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
   ListLabelsRequest_Access whichAccess() =>
       _ListLabelsRequest_AccessByTag[$_whichOneof(0)]!;
-  void clearAccess() => clearField($_whichOneof(0));
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  void clearAccess() => $_clearField($_whichOneof(0));
 
-  ///  Whether to include only published labels in the results.
+  /// Whether to include only published labels in the results.
   ///
-  ///  * When `true`, only the current published label revisions are returned.
-  ///    Disabled labels are included. Returned label resource names
-  ///    reference the published revision (`labels/{id}/{revision_id}`).
-  ///  * When `false`, the current label revisions are returned, which might not
-  ///    be published. Returned label resource names don't reference a specific
-  ///    revision (`labels/{id}`).
+  /// * When `true`, only the current published label revisions are returned.
+  ///   Disabled labels are included. Returned label resource names
+  ///   reference the published revision (`labels/{id}/{revision_id}`).
+  /// * When `false`, the current label revisions are returned, which might not
+  ///   be published. Returned label resource names don't reference a specific
+  ///   revision (`labels/{id}`).
   @$pb.TagNumber(1)
   $core.bool get publishedOnly => $_getBF(0);
   @$pb.TagNumber(1)
-  set publishedOnly($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set publishedOnly($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPublishedOnly() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPublishedOnly() => clearField(1);
+  void clearPublishedOnly() => $_clearField(1);
 
   /// The customer to scope this list request to.
   /// For example: "customers/abcd1234".
@@ -3959,28 +3473,22 @@ class ListLabelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get customer => $_getSZ(1);
   @$pb.TagNumber(2)
-  set customer($core.String v) {
-    $_setString(1, v);
-  }
-
+  set customer($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCustomer() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCustomer() => clearField(2);
+  void clearCustomer() => $_clearField(2);
 
   /// Set to `true` in order to use the user's admin credentials. This will
   /// return all Labels within the customer.
   @$pb.TagNumber(3)
   $core.bool get useAdminAccess => $_getBF(2);
   @$pb.TagNumber(3)
-  set useAdminAccess($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasUseAdminAccess() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUseAdminAccess() => clearField(3);
+  void clearUseAdminAccess() => $_clearField(3);
 
   /// Specifies the level of access the user must have on the returned Labels.
   /// The minimum role a user must have on a label.
@@ -3988,68 +3496,53 @@ class ListLabelsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $4.LabelPermission_LabelRole get minimumRole => $_getN(3);
   @$pb.TagNumber(4)
-  set minimumRole($4.LabelPermission_LabelRole v) {
-    setField(4, v);
-  }
-
+  set minimumRole($4.LabelPermission_LabelRole value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasMinimumRole() => $_has(3);
   @$pb.TagNumber(4)
-  void clearMinimumRole() => clearField(4);
+  void clearMinimumRole() => $_clearField(4);
 
   /// The BCP-47 language code to use for evaluating localized field labels.
   /// When not specified, values in the default configured language are used.
   @$pb.TagNumber(5)
   $core.String get languageCode => $_getSZ(4);
   @$pb.TagNumber(5)
-  set languageCode($core.String v) {
-    $_setString(4, v);
-  }
-
+  set languageCode($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasLanguageCode() => $_has(4);
   @$pb.TagNumber(5)
-  void clearLanguageCode() => clearField(5);
+  void clearLanguageCode() => $_clearField(5);
 
   /// Maximum number of labels to return per page. Default: 50. Max: 200.
   @$pb.TagNumber(6)
   $core.int get pageSize => $_getIZ(5);
   @$pb.TagNumber(6)
-  set pageSize($core.int v) {
-    $_setSignedInt32(5, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(5, value);
   @$pb.TagNumber(6)
   $core.bool hasPageSize() => $_has(5);
   @$pb.TagNumber(6)
-  void clearPageSize() => clearField(6);
+  void clearPageSize() => $_clearField(6);
 
   /// The token of the page to return.
   @$pb.TagNumber(7)
   $core.String get pageToken => $_getSZ(6);
   @$pb.TagNumber(7)
-  set pageToken($core.String v) {
-    $_setString(6, v);
-  }
-
+  set pageToken($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
   $core.bool hasPageToken() => $_has(6);
   @$pb.TagNumber(7)
-  void clearPageToken() => clearField(7);
+  void clearPageToken() => $_clearField(7);
 
   /// When specified, only certain fields belonging to the indicated view are
   /// returned.
   @$pb.TagNumber(8)
   LabelView get view => $_getN(7);
   @$pb.TagNumber(8)
-  set view(LabelView v) {
-    setField(8, v);
-  }
-
+  set view(LabelView value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasView() => $_has(7);
   @$pb.TagNumber(8)
-  void clearView() => clearField(8);
+  void clearView() => $_clearField(8);
 }
 
 /// Response for listing Labels.
@@ -4058,51 +3551,45 @@ class ListLabelsResponse extends $pb.GeneratedMessage {
     $core.Iterable<$0.Label>? labels,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (labels != null) {
-      $result.labels.addAll(labels);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (labels != null) result.labels.addAll(labels);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListLabelsResponse._() : super();
-  factory ListLabelsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListLabelsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListLabelsResponse._();
+
+  factory ListLabelsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListLabelsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListLabelsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
-    ..pc<$0.Label>(1, _omitFieldNames ? '' : 'labels', $pb.PbFieldType.PM,
+    ..pPM<$0.Label>(1, _omitFieldNames ? '' : 'labels',
         subBuilder: $0.Label.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListLabelsResponse clone() => ListLabelsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListLabelsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListLabelsResponse copyWith(void Function(ListLabelsResponse) updates) =>
       super.copyWith((message) => updates(message as ListLabelsResponse))
           as ListLabelsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListLabelsResponse create() => ListLabelsResponse._();
+  @$core.override
   ListLabelsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListLabelsResponse> createRepeated() =>
-      $pb.PbList<ListLabelsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListLabelsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListLabelsResponse>(create);
@@ -4110,20 +3597,17 @@ class ListLabelsResponse extends $pb.GeneratedMessage {
 
   /// Labels.
   @$pb.TagNumber(1)
-  $core.List<$0.Label> get labels => $_getList(0);
+  $pb.PbList<$0.Label> get labels => $_getList(0);
 
   /// The token of the next page in the response.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Creates or updates a permission on the Label. Permissions affect the Label
@@ -4134,25 +3618,21 @@ class CreateLabelPermissionRequest extends $pb.GeneratedMessage {
     $4.LabelPermission? labelPermission,
     $core.bool? useAdminAccess,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (labelPermission != null) {
-      $result.labelPermission = labelPermission;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (labelPermission != null) result.labelPermission = labelPermission;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    return result;
   }
-  CreateLabelPermissionRequest._() : super();
-  factory CreateLabelPermissionRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateLabelPermissionRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateLabelPermissionRequest._();
+
+  factory CreateLabelPermissionRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateLabelPermissionRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateLabelPermissionRequest',
@@ -4165,28 +3645,23 @@ class CreateLabelPermissionRequest extends $pb.GeneratedMessage {
     ..aOB(3, _omitFieldNames ? '' : 'useAdminAccess')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateLabelPermissionRequest clone() =>
-      CreateLabelPermissionRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateLabelPermissionRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateLabelPermissionRequest copyWith(
           void Function(CreateLabelPermissionRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateLabelPermissionRequest))
           as CreateLabelPermissionRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateLabelPermissionRequest create() =>
       CreateLabelPermissionRequest._();
+  @$core.override
   CreateLabelPermissionRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateLabelPermissionRequest> createRepeated() =>
-      $pb.PbList<CreateLabelPermissionRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateLabelPermissionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateLabelPermissionRequest>(create);
@@ -4197,27 +3672,21 @@ class CreateLabelPermissionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The permission to create or update on the Label.
   @$pb.TagNumber(2)
   $4.LabelPermission get labelPermission => $_getN(1);
   @$pb.TagNumber(2)
-  set labelPermission($4.LabelPermission v) {
-    setField(2, v);
-  }
-
+  set labelPermission($4.LabelPermission value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasLabelPermission() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLabelPermission() => clearField(2);
+  void clearLabelPermission() => $_clearField(2);
   @$pb.TagNumber(2)
   $4.LabelPermission ensureLabelPermission() => $_ensure(1);
 
@@ -4226,14 +3695,11 @@ class CreateLabelPermissionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get useAdminAccess => $_getBF(2);
   @$pb.TagNumber(3)
-  set useAdminAccess($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasUseAdminAccess() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUseAdminAccess() => clearField(3);
+  void clearUseAdminAccess() => $_clearField(3);
 }
 
 /// Request to list the permissions on a Label.
@@ -4244,28 +3710,22 @@ class ListLabelPermissionsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListLabelPermissionsRequest._() : super();
-  factory ListLabelPermissionsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListLabelPermissionsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListLabelPermissionsRequest._();
+
+  factory ListLabelPermissionsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListLabelPermissionsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListLabelPermissionsRequest',
@@ -4274,32 +3734,27 @@ class ListLabelPermissionsRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOB(2, _omitFieldNames ? '' : 'useAdminAccess')
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(3, _omitFieldNames ? '' : 'pageSize')
     ..aOS(4, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListLabelPermissionsRequest clone() =>
-      ListLabelPermissionsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListLabelPermissionsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListLabelPermissionsRequest copyWith(
           void Function(ListLabelPermissionsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListLabelPermissionsRequest))
           as ListLabelPermissionsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListLabelPermissionsRequest create() =>
       ListLabelPermissionsRequest._();
+  @$core.override
   ListLabelPermissionsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListLabelPermissionsRequest> createRepeated() =>
-      $pb.PbList<ListLabelPermissionsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListLabelPermissionsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListLabelPermissionsRequest>(create);
@@ -4310,54 +3765,42 @@ class ListLabelPermissionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Set to `true` in order to use the user's admin credentials. The server will
   /// verify the user is an admin for the Label before allowing access.
   @$pb.TagNumber(2)
   $core.bool get useAdminAccess => $_getBF(1);
   @$pb.TagNumber(2)
-  set useAdminAccess($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUseAdminAccess() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUseAdminAccess() => clearField(2);
+  void clearUseAdminAccess() => $_clearField(2);
 
   /// Maximum number of permissions to return per page. Default: 50. Max: 200.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
-  set pageSize($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageSize() => clearField(3);
+  void clearPageSize() => $_clearField(3);
 
   /// The token of the page to return.
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
-  set pageToken($core.String v) {
-    $_setString(3, v);
-  }
-
+  set pageToken($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPageToken() => clearField(4);
+  void clearPageToken() => $_clearField(4);
 }
 
 /// Response for listing the permissions on a Label.
@@ -4366,56 +3809,49 @@ class ListLabelPermissionsResponse extends $pb.GeneratedMessage {
     $core.Iterable<$4.LabelPermission>? labelPermissions,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (labelPermissions != null) {
-      $result.labelPermissions.addAll(labelPermissions);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (labelPermissions != null)
+      result.labelPermissions.addAll(labelPermissions);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListLabelPermissionsResponse._() : super();
-  factory ListLabelPermissionsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListLabelPermissionsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListLabelPermissionsResponse._();
+
+  factory ListLabelPermissionsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListLabelPermissionsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListLabelPermissionsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
-    ..pc<$4.LabelPermission>(
-        1, _omitFieldNames ? '' : 'labelPermissions', $pb.PbFieldType.PM,
+    ..pPM<$4.LabelPermission>(1, _omitFieldNames ? '' : 'labelPermissions',
         subBuilder: $4.LabelPermission.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListLabelPermissionsResponse clone() =>
-      ListLabelPermissionsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListLabelPermissionsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListLabelPermissionsResponse copyWith(
           void Function(ListLabelPermissionsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListLabelPermissionsResponse))
           as ListLabelPermissionsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListLabelPermissionsResponse create() =>
       ListLabelPermissionsResponse._();
+  @$core.override
   ListLabelPermissionsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListLabelPermissionsResponse> createRepeated() =>
-      $pb.PbList<ListLabelPermissionsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListLabelPermissionsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListLabelPermissionsResponse>(create);
@@ -4423,20 +3859,17 @@ class ListLabelPermissionsResponse extends $pb.GeneratedMessage {
 
   /// Label permissions.
   @$pb.TagNumber(1)
-  $core.List<$4.LabelPermission> get labelPermissions => $_getList(0);
+  $pb.PbList<$4.LabelPermission> get labelPermissions => $_getList(0);
 
   /// The token of the next page in the response.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Updates a Label Permission. Permissions affect the Label resource as a whole,
@@ -4447,25 +3880,21 @@ class UpdateLabelPermissionRequest extends $pb.GeneratedMessage {
     $4.LabelPermission? labelPermission,
     $core.bool? useAdminAccess,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (labelPermission != null) {
-      $result.labelPermission = labelPermission;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (labelPermission != null) result.labelPermission = labelPermission;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    return result;
   }
-  UpdateLabelPermissionRequest._() : super();
-  factory UpdateLabelPermissionRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateLabelPermissionRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateLabelPermissionRequest._();
+
+  factory UpdateLabelPermissionRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateLabelPermissionRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateLabelPermissionRequest',
@@ -4478,28 +3907,23 @@ class UpdateLabelPermissionRequest extends $pb.GeneratedMessage {
     ..aOB(3, _omitFieldNames ? '' : 'useAdminAccess')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateLabelPermissionRequest clone() =>
-      UpdateLabelPermissionRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateLabelPermissionRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateLabelPermissionRequest copyWith(
           void Function(UpdateLabelPermissionRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateLabelPermissionRequest))
           as UpdateLabelPermissionRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateLabelPermissionRequest create() =>
       UpdateLabelPermissionRequest._();
+  @$core.override
   UpdateLabelPermissionRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateLabelPermissionRequest> createRepeated() =>
-      $pb.PbList<UpdateLabelPermissionRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateLabelPermissionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateLabelPermissionRequest>(create);
@@ -4509,27 +3933,21 @@ class UpdateLabelPermissionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The permission to create or update on the Label.
   @$pb.TagNumber(2)
   $4.LabelPermission get labelPermission => $_getN(1);
   @$pb.TagNumber(2)
-  set labelPermission($4.LabelPermission v) {
-    setField(2, v);
-  }
-
+  set labelPermission($4.LabelPermission value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasLabelPermission() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLabelPermission() => clearField(2);
+  void clearLabelPermission() => $_clearField(2);
   @$pb.TagNumber(2)
   $4.LabelPermission ensureLabelPermission() => $_ensure(1);
 
@@ -4538,14 +3956,11 @@ class UpdateLabelPermissionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get useAdminAccess => $_getBF(2);
   @$pb.TagNumber(3)
-  set useAdminAccess($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasUseAdminAccess() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUseAdminAccess() => clearField(3);
+  void clearUseAdminAccess() => $_clearField(3);
 }
 
 /// Deletes a Label Permission. Permissions affect the Label resource as a whole,
@@ -4555,22 +3970,20 @@ class DeleteLabelPermissionRequest extends $pb.GeneratedMessage {
     $core.String? name,
     $core.bool? useAdminAccess,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    return result;
   }
-  DeleteLabelPermissionRequest._() : super();
-  factory DeleteLabelPermissionRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteLabelPermissionRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteLabelPermissionRequest._();
+
+  factory DeleteLabelPermissionRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteLabelPermissionRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteLabelPermissionRequest',
@@ -4581,28 +3994,23 @@ class DeleteLabelPermissionRequest extends $pb.GeneratedMessage {
     ..aOB(2, _omitFieldNames ? '' : 'useAdminAccess')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteLabelPermissionRequest clone() =>
-      DeleteLabelPermissionRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteLabelPermissionRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteLabelPermissionRequest copyWith(
           void Function(DeleteLabelPermissionRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeleteLabelPermissionRequest))
           as DeleteLabelPermissionRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteLabelPermissionRequest create() =>
       DeleteLabelPermissionRequest._();
+  @$core.override
   DeleteLabelPermissionRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteLabelPermissionRequest> createRepeated() =>
-      $pb.PbList<DeleteLabelPermissionRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteLabelPermissionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteLabelPermissionRequest>(create);
@@ -4612,28 +4020,22 @@ class DeleteLabelPermissionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Set to `true` in order to use the user's admin credentials. The server
   /// will verify the user is an admin for the Label before allowing access.
   @$pb.TagNumber(2)
   $core.bool get useAdminAccess => $_getBF(1);
   @$pb.TagNumber(2)
-  set useAdminAccess($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUseAdminAccess() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUseAdminAccess() => clearField(2);
+  void clearUseAdminAccess() => $_clearField(2);
 }
 
 /// Updates one or more Label Permissions.
@@ -4643,25 +4045,22 @@ class BatchUpdateLabelPermissionsRequest extends $pb.GeneratedMessage {
     $core.Iterable<UpdateLabelPermissionRequest>? requests,
     $core.bool? useAdminAccess,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (requests != null) {
-      $result.requests.addAll(requests);
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (requests != null) result.requests.addAll(requests);
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    return result;
   }
-  BatchUpdateLabelPermissionsRequest._() : super();
-  factory BatchUpdateLabelPermissionsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchUpdateLabelPermissionsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchUpdateLabelPermissionsRequest._();
+
+  factory BatchUpdateLabelPermissionsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchUpdateLabelPermissionsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchUpdateLabelPermissionsRequest',
@@ -4669,34 +4068,28 @@ class BatchUpdateLabelPermissionsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..pc<UpdateLabelPermissionRequest>(
-        2, _omitFieldNames ? '' : 'requests', $pb.PbFieldType.PM,
+    ..pPM<UpdateLabelPermissionRequest>(2, _omitFieldNames ? '' : 'requests',
         subBuilder: UpdateLabelPermissionRequest.create)
     ..aOB(3, _omitFieldNames ? '' : 'useAdminAccess')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchUpdateLabelPermissionsRequest clone() =>
-      BatchUpdateLabelPermissionsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchUpdateLabelPermissionsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchUpdateLabelPermissionsRequest copyWith(
           void Function(BatchUpdateLabelPermissionsRequest) updates) =>
       super.copyWith((message) =>
               updates(message as BatchUpdateLabelPermissionsRequest))
           as BatchUpdateLabelPermissionsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchUpdateLabelPermissionsRequest create() =>
       BatchUpdateLabelPermissionsRequest._();
+  @$core.override
   BatchUpdateLabelPermissionsRequest createEmptyInstance() => create();
-  static $pb.PbList<BatchUpdateLabelPermissionsRequest> createRepeated() =>
-      $pb.PbList<BatchUpdateLabelPermissionsRequest>();
   @$core.pragma('dart2js:noInline')
   static BatchUpdateLabelPermissionsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchUpdateLabelPermissionsRequest>(
@@ -4710,18 +4103,15 @@ class BatchUpdateLabelPermissionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The request message specifying the resources to update.
   @$pb.TagNumber(2)
-  $core.List<UpdateLabelPermissionRequest> get requests => $_getList(1);
+  $pb.PbList<UpdateLabelPermissionRequest> get requests => $_getList(1);
 
   /// Set to `true` in order to use the user's admin credentials. The server
   /// will verify the user is an admin for the Label before allowing access.
@@ -4731,14 +4121,11 @@ class BatchUpdateLabelPermissionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get useAdminAccess => $_getBF(2);
   @$pb.TagNumber(3)
-  set useAdminAccess($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasUseAdminAccess() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUseAdminAccess() => clearField(3);
+  void clearUseAdminAccess() => $_clearField(3);
 }
 
 /// Response for updating one or more Label Permissions.
@@ -4746,53 +4133,47 @@ class BatchUpdateLabelPermissionsResponse extends $pb.GeneratedMessage {
   factory BatchUpdateLabelPermissionsResponse({
     $core.Iterable<$4.LabelPermission>? permissions,
   }) {
-    final $result = create();
-    if (permissions != null) {
-      $result.permissions.addAll(permissions);
-    }
-    return $result;
+    final result = create();
+    if (permissions != null) result.permissions.addAll(permissions);
+    return result;
   }
-  BatchUpdateLabelPermissionsResponse._() : super();
+
+  BatchUpdateLabelPermissionsResponse._();
+
   factory BatchUpdateLabelPermissionsResponse.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchUpdateLabelPermissionsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchUpdateLabelPermissionsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchUpdateLabelPermissionsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
-    ..pc<$4.LabelPermission>(
-        1, _omitFieldNames ? '' : 'permissions', $pb.PbFieldType.PM,
+    ..pPM<$4.LabelPermission>(1, _omitFieldNames ? '' : 'permissions',
         subBuilder: $4.LabelPermission.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchUpdateLabelPermissionsResponse clone() =>
-      BatchUpdateLabelPermissionsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchUpdateLabelPermissionsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchUpdateLabelPermissionsResponse copyWith(
           void Function(BatchUpdateLabelPermissionsResponse) updates) =>
       super.copyWith((message) =>
               updates(message as BatchUpdateLabelPermissionsResponse))
           as BatchUpdateLabelPermissionsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchUpdateLabelPermissionsResponse create() =>
       BatchUpdateLabelPermissionsResponse._();
+  @$core.override
   BatchUpdateLabelPermissionsResponse createEmptyInstance() => create();
-  static $pb.PbList<BatchUpdateLabelPermissionsResponse> createRepeated() =>
-      $pb.PbList<BatchUpdateLabelPermissionsResponse>();
   @$core.pragma('dart2js:noInline')
   static BatchUpdateLabelPermissionsResponse getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -4801,7 +4182,7 @@ class BatchUpdateLabelPermissionsResponse extends $pb.GeneratedMessage {
 
   /// Required. Permissions updated.
   @$pb.TagNumber(1)
-  $core.List<$4.LabelPermission> get permissions => $_getList(0);
+  $pb.PbList<$4.LabelPermission> get permissions => $_getList(0);
 }
 
 /// Deletes one of more Label Permissions.
@@ -4811,60 +4192,51 @@ class BatchDeleteLabelPermissionsRequest extends $pb.GeneratedMessage {
     $core.bool? useAdminAccess,
     $core.String? parent,
   }) {
-    final $result = create();
-    if (requests != null) {
-      $result.requests.addAll(requests);
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    return $result;
+    final result = create();
+    if (requests != null) result.requests.addAll(requests);
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    if (parent != null) result.parent = parent;
+    return result;
   }
-  BatchDeleteLabelPermissionsRequest._() : super();
-  factory BatchDeleteLabelPermissionsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BatchDeleteLabelPermissionsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BatchDeleteLabelPermissionsRequest._();
+
+  factory BatchDeleteLabelPermissionsRequest.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BatchDeleteLabelPermissionsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BatchDeleteLabelPermissionsRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
-    ..pc<DeleteLabelPermissionRequest>(
-        1, _omitFieldNames ? '' : 'requests', $pb.PbFieldType.PM,
+    ..pPM<DeleteLabelPermissionRequest>(1, _omitFieldNames ? '' : 'requests',
         subBuilder: DeleteLabelPermissionRequest.create)
     ..aOB(2, _omitFieldNames ? '' : 'useAdminAccess')
     ..aOS(3, _omitFieldNames ? '' : 'parent')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BatchDeleteLabelPermissionsRequest clone() =>
-      BatchDeleteLabelPermissionsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BatchDeleteLabelPermissionsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BatchDeleteLabelPermissionsRequest copyWith(
           void Function(BatchDeleteLabelPermissionsRequest) updates) =>
       super.copyWith((message) =>
               updates(message as BatchDeleteLabelPermissionsRequest))
           as BatchDeleteLabelPermissionsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchDeleteLabelPermissionsRequest create() =>
       BatchDeleteLabelPermissionsRequest._();
+  @$core.override
   BatchDeleteLabelPermissionsRequest createEmptyInstance() => create();
-  static $pb.PbList<BatchDeleteLabelPermissionsRequest> createRepeated() =>
-      $pb.PbList<BatchDeleteLabelPermissionsRequest>();
   @$core.pragma('dart2js:noInline')
   static BatchDeleteLabelPermissionsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BatchDeleteLabelPermissionsRequest>(
@@ -4873,7 +4245,7 @@ class BatchDeleteLabelPermissionsRequest extends $pb.GeneratedMessage {
 
   /// Required. The request message specifying the resources to update.
   @$pb.TagNumber(1)
-  $core.List<DeleteLabelPermissionRequest> get requests => $_getList(0);
+  $pb.PbList<DeleteLabelPermissionRequest> get requests => $_getList(0);
 
   /// Set to `true` in order to use the user's admin credentials. The server
   /// will verify the user is an admin for the Label before allowing access.
@@ -4883,14 +4255,11 @@ class BatchDeleteLabelPermissionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool get useAdminAccess => $_getBF(1);
   @$pb.TagNumber(2)
-  set useAdminAccess($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUseAdminAccess() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUseAdminAccess() => clearField(2);
+  void clearUseAdminAccess() => $_clearField(2);
 
   /// Required. The parent Label resource name shared by all permissions being
   /// deleted. Format: labels/{label} If this is set, the parent field in the
@@ -4899,14 +4268,11 @@ class BatchDeleteLabelPermissionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get parent => $_getSZ(2);
   @$pb.TagNumber(3)
-  set parent($core.String v) {
-    $_setString(2, v);
-  }
-
+  set parent($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasParent() => $_has(2);
   @$pb.TagNumber(3)
-  void clearParent() => clearField(3);
+  void clearParent() => $_clearField(3);
 }
 
 /// Request to deprecate a published Label.
@@ -4919,34 +4285,24 @@ class DisableLabelRequest extends $pb.GeneratedMessage {
     $2.Lifecycle_DisabledPolicy? disabledPolicy,
     $core.String? languageCode,
   }) {
-    final $result = create();
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    if (name != null) {
-      $result.name = name;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    if (writeControl != null) {
-      $result.writeControl = writeControl;
-    }
-    if (disabledPolicy != null) {
-      $result.disabledPolicy = disabledPolicy;
-    }
-    if (languageCode != null) {
-      $result.languageCode = languageCode;
-    }
-    return $result;
+    final result = create();
+    if (updateMask != null) result.updateMask = updateMask;
+    if (name != null) result.name = name;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    if (writeControl != null) result.writeControl = writeControl;
+    if (disabledPolicy != null) result.disabledPolicy = disabledPolicy;
+    if (languageCode != null) result.languageCode = languageCode;
+    return result;
   }
-  DisableLabelRequest._() : super();
-  factory DisableLabelRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DisableLabelRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DisableLabelRequest._();
+
+  factory DisableLabelRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DisableLabelRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DisableLabelRequest',
@@ -4965,24 +4321,20 @@ class DisableLabelRequest extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'languageCode')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DisableLabelRequest clone() => DisableLabelRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DisableLabelRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DisableLabelRequest copyWith(void Function(DisableLabelRequest) updates) =>
       super.copyWith((message) => updates(message as DisableLabelRequest))
           as DisableLabelRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DisableLabelRequest create() => DisableLabelRequest._();
+  @$core.override
   DisableLabelRequest createEmptyInstance() => create();
-  static $pb.PbList<DisableLabelRequest> createRepeated() =>
-      $pb.PbList<DisableLabelRequest>();
   @$core.pragma('dart2js:noInline')
   static DisableLabelRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DisableLabelRequest>(create);
@@ -4994,14 +4346,11 @@ class DisableLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.FieldMask get updateMask => $_getN(0);
   @$pb.TagNumber(1)
-  set updateMask($1.FieldMask v) {
-    setField(1, v);
-  }
-
+  set updateMask($1.FieldMask value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUpdateMask() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUpdateMask() => clearField(1);
+  void clearUpdateMask() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.FieldMask ensureUpdateMask() => $_ensure(0);
 
@@ -5009,42 +4358,33 @@ class DisableLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
-  set name($core.String v) {
-    $_setString(1, v);
-  }
-
+  set name($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => clearField(2);
+  void clearName() => $_clearField(2);
 
   /// Set to `true` in order to use the user's admin credentials. The server
   /// will verify the user is an admin for the Label before allowing access.
   @$pb.TagNumber(3)
   $core.bool get useAdminAccess => $_getBF(2);
   @$pb.TagNumber(3)
-  set useAdminAccess($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasUseAdminAccess() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUseAdminAccess() => clearField(3);
+  void clearUseAdminAccess() => $_clearField(3);
 
   /// Provides control over how write requests are executed. Defaults to unset,
   /// which means last write wins.
   @$pb.TagNumber(4)
   WriteControl get writeControl => $_getN(3);
   @$pb.TagNumber(4)
-  set writeControl(WriteControl v) {
-    setField(4, v);
-  }
-
+  set writeControl(WriteControl value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasWriteControl() => $_has(3);
   @$pb.TagNumber(4)
-  void clearWriteControl() => clearField(4);
+  void clearWriteControl() => $_clearField(4);
   @$pb.TagNumber(4)
   WriteControl ensureWriteControl() => $_ensure(3);
 
@@ -5052,14 +4392,11 @@ class DisableLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $2.Lifecycle_DisabledPolicy get disabledPolicy => $_getN(4);
   @$pb.TagNumber(5)
-  set disabledPolicy($2.Lifecycle_DisabledPolicy v) {
-    setField(5, v);
-  }
-
+  set disabledPolicy($2.Lifecycle_DisabledPolicy value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasDisabledPolicy() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDisabledPolicy() => clearField(5);
+  void clearDisabledPolicy() => $_clearField(5);
   @$pb.TagNumber(5)
   $2.Lifecycle_DisabledPolicy ensureDisabledPolicy() => $_ensure(4);
 
@@ -5068,14 +4405,11 @@ class DisableLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get languageCode => $_getSZ(5);
   @$pb.TagNumber(6)
-  set languageCode($core.String v) {
-    $_setString(5, v);
-  }
-
+  set languageCode($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasLanguageCode() => $_has(5);
   @$pb.TagNumber(6)
-  void clearLanguageCode() => clearField(6);
+  void clearLanguageCode() => $_clearField(6);
 }
 
 /// Request to publish a label.
@@ -5086,28 +4420,22 @@ class PublishLabelRequest extends $pb.GeneratedMessage {
     WriteControl? writeControl,
     $core.String? languageCode,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    if (writeControl != null) {
-      $result.writeControl = writeControl;
-    }
-    if (languageCode != null) {
-      $result.languageCode = languageCode;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    if (writeControl != null) result.writeControl = writeControl;
+    if (languageCode != null) result.languageCode = languageCode;
+    return result;
   }
-  PublishLabelRequest._() : super();
-  factory PublishLabelRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PublishLabelRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PublishLabelRequest._();
+
+  factory PublishLabelRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PublishLabelRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PublishLabelRequest',
@@ -5121,24 +4449,20 @@ class PublishLabelRequest extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'languageCode')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PublishLabelRequest clone() => PublishLabelRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PublishLabelRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PublishLabelRequest copyWith(void Function(PublishLabelRequest) updates) =>
       super.copyWith((message) => updates(message as PublishLabelRequest))
           as PublishLabelRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PublishLabelRequest create() => PublishLabelRequest._();
+  @$core.override
   PublishLabelRequest createEmptyInstance() => create();
-  static $pb.PbList<PublishLabelRequest> createRepeated() =>
-      $pb.PbList<PublishLabelRequest>();
   @$core.pragma('dart2js:noInline')
   static PublishLabelRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PublishLabelRequest>(create);
@@ -5148,42 +4472,33 @@ class PublishLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Set to `true` in order to use the user's admin credentials. The server
   /// will verify the user is an admin for the Label before allowing access.
   @$pb.TagNumber(2)
   $core.bool get useAdminAccess => $_getBF(1);
   @$pb.TagNumber(2)
-  set useAdminAccess($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUseAdminAccess() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUseAdminAccess() => clearField(2);
+  void clearUseAdminAccess() => $_clearField(2);
 
   /// Provides control over how write requests are executed. Defaults to unset,
   /// which means last write wins.
   @$pb.TagNumber(3)
   WriteControl get writeControl => $_getN(2);
   @$pb.TagNumber(3)
-  set writeControl(WriteControl v) {
-    setField(3, v);
-  }
-
+  set writeControl(WriteControl value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasWriteControl() => $_has(2);
   @$pb.TagNumber(3)
-  void clearWriteControl() => clearField(3);
+  void clearWriteControl() => $_clearField(3);
   @$pb.TagNumber(3)
   WriteControl ensureWriteControl() => $_ensure(2);
 
@@ -5192,14 +4507,11 @@ class PublishLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get languageCode => $_getSZ(3);
   @$pb.TagNumber(4)
-  set languageCode($core.String v) {
-    $_setString(3, v);
-  }
-
+  set languageCode($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasLanguageCode() => $_has(3);
   @$pb.TagNumber(4)
-  void clearLanguageCode() => clearField(4);
+  void clearLanguageCode() => $_clearField(4);
 }
 
 /// Request to enable a label.
@@ -5210,28 +4522,22 @@ class EnableLabelRequest extends $pb.GeneratedMessage {
     WriteControl? writeControl,
     $core.String? languageCode,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    if (writeControl != null) {
-      $result.writeControl = writeControl;
-    }
-    if (languageCode != null) {
-      $result.languageCode = languageCode;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    if (writeControl != null) result.writeControl = writeControl;
+    if (languageCode != null) result.languageCode = languageCode;
+    return result;
   }
-  EnableLabelRequest._() : super();
-  factory EnableLabelRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EnableLabelRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EnableLabelRequest._();
+
+  factory EnableLabelRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EnableLabelRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EnableLabelRequest',
@@ -5245,24 +4551,20 @@ class EnableLabelRequest extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'languageCode')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EnableLabelRequest clone() => EnableLabelRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EnableLabelRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EnableLabelRequest copyWith(void Function(EnableLabelRequest) updates) =>
       super.copyWith((message) => updates(message as EnableLabelRequest))
           as EnableLabelRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EnableLabelRequest create() => EnableLabelRequest._();
+  @$core.override
   EnableLabelRequest createEmptyInstance() => create();
-  static $pb.PbList<EnableLabelRequest> createRepeated() =>
-      $pb.PbList<EnableLabelRequest>();
   @$core.pragma('dart2js:noInline')
   static EnableLabelRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EnableLabelRequest>(create);
@@ -5272,42 +4574,33 @@ class EnableLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Set to `true` in order to use the user's admin credentials. The server
   /// will verify the user is an admin for the Label before allowing access.
   @$pb.TagNumber(2)
   $core.bool get useAdminAccess => $_getBF(1);
   @$pb.TagNumber(2)
-  set useAdminAccess($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUseAdminAccess() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUseAdminAccess() => clearField(2);
+  void clearUseAdminAccess() => $_clearField(2);
 
   /// Provides control over how write requests are executed. Defaults to unset,
   /// which means last write wins.
   @$pb.TagNumber(3)
   WriteControl get writeControl => $_getN(2);
   @$pb.TagNumber(3)
-  set writeControl(WriteControl v) {
-    setField(3, v);
-  }
-
+  set writeControl(WriteControl value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasWriteControl() => $_has(2);
   @$pb.TagNumber(3)
-  void clearWriteControl() => clearField(3);
+  void clearWriteControl() => $_clearField(3);
   @$pb.TagNumber(3)
   WriteControl ensureWriteControl() => $_ensure(2);
 
@@ -5316,14 +4609,11 @@ class EnableLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get languageCode => $_getSZ(3);
   @$pb.TagNumber(4)
-  set languageCode($core.String v) {
-    $_setString(3, v);
-  }
-
+  set languageCode($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasLanguageCode() => $_has(3);
   @$pb.TagNumber(4)
-  void clearLanguageCode() => clearField(4);
+  void clearLanguageCode() => $_clearField(4);
 }
 
 /// Request to delete a label.
@@ -5333,25 +4623,21 @@ class DeleteLabelRequest extends $pb.GeneratedMessage {
     $core.bool? useAdminAccess,
     WriteControl? writeControl,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (useAdminAccess != null) {
-      $result.useAdminAccess = useAdminAccess;
-    }
-    if (writeControl != null) {
-      $result.writeControl = writeControl;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (useAdminAccess != null) result.useAdminAccess = useAdminAccess;
+    if (writeControl != null) result.writeControl = writeControl;
+    return result;
   }
-  DeleteLabelRequest._() : super();
-  factory DeleteLabelRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteLabelRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteLabelRequest._();
+
+  factory DeleteLabelRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteLabelRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteLabelRequest',
@@ -5364,24 +4650,20 @@ class DeleteLabelRequest extends $pb.GeneratedMessage {
         subBuilder: WriteControl.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteLabelRequest clone() => DeleteLabelRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteLabelRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteLabelRequest copyWith(void Function(DeleteLabelRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteLabelRequest))
           as DeleteLabelRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteLabelRequest create() => DeleteLabelRequest._();
+  @$core.override
   DeleteLabelRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteLabelRequest> createRepeated() =>
-      $pb.PbList<DeleteLabelRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteLabelRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteLabelRequest>(create);
@@ -5391,42 +4673,33 @@ class DeleteLabelRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Set to `true` in order to use the user's admin credentials. The server
   /// will verify the user is an admin for the Label before allowing access.
   @$pb.TagNumber(2)
   $core.bool get useAdminAccess => $_getBF(1);
   @$pb.TagNumber(2)
-  set useAdminAccess($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set useAdminAccess($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUseAdminAccess() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUseAdminAccess() => clearField(2);
+  void clearUseAdminAccess() => $_clearField(2);
 
   /// Provides control over how write requests are executed. Defaults to unset,
   /// which means last write wins.
   @$pb.TagNumber(3)
   WriteControl get writeControl => $_getN(2);
   @$pb.TagNumber(3)
-  set writeControl(WriteControl v) {
-    setField(3, v);
-  }
-
+  set writeControl(WriteControl value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasWriteControl() => $_has(2);
   @$pb.TagNumber(3)
-  void clearWriteControl() => clearField(3);
+  void clearWriteControl() => $_clearField(3);
   @$pb.TagNumber(3)
   WriteControl ensureWriteControl() => $_ensure(2);
 }
@@ -5438,25 +4711,21 @@ class ListLabelLocksRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListLabelLocksRequest._() : super();
-  factory ListLabelLocksRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListLabelLocksRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListLabelLocksRequest._();
+
+  factory ListLabelLocksRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListLabelLocksRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListLabelLocksRequest',
@@ -5464,30 +4733,25 @@ class ListLabelLocksRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListLabelLocksRequest clone() =>
-      ListLabelLocksRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListLabelLocksRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListLabelLocksRequest copyWith(
           void Function(ListLabelLocksRequest) updates) =>
       super.copyWith((message) => updates(message as ListLabelLocksRequest))
           as ListLabelLocksRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListLabelLocksRequest create() => ListLabelLocksRequest._();
+  @$core.override
   ListLabelLocksRequest createEmptyInstance() => create();
-  static $pb.PbList<ListLabelLocksRequest> createRepeated() =>
-      $pb.PbList<ListLabelLocksRequest>();
   @$core.pragma('dart2js:noInline')
   static ListLabelLocksRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListLabelLocksRequest>(create);
@@ -5498,40 +4762,31 @@ class ListLabelLocksRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Maximum number of Locks to return per page. Default: 100. Max: 200.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// The token of the page to return.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 }
 
 /// The response to a ListLabelLocksRequest.
@@ -5540,54 +4795,46 @@ class ListLabelLocksResponse extends $pb.GeneratedMessage {
     $core.Iterable<$5.LabelLock>? labelLocks,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (labelLocks != null) {
-      $result.labelLocks.addAll(labelLocks);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (labelLocks != null) result.labelLocks.addAll(labelLocks);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListLabelLocksResponse._() : super();
-  factory ListLabelLocksResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListLabelLocksResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListLabelLocksResponse._();
+
+  factory ListLabelLocksResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListLabelLocksResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListLabelLocksResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.drive.labels.v2'),
       createEmptyInstance: create)
-    ..pc<$5.LabelLock>(
-        1, _omitFieldNames ? '' : 'labelLocks', $pb.PbFieldType.PM,
+    ..pPM<$5.LabelLock>(1, _omitFieldNames ? '' : 'labelLocks',
         subBuilder: $5.LabelLock.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListLabelLocksResponse clone() =>
-      ListLabelLocksResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListLabelLocksResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListLabelLocksResponse copyWith(
           void Function(ListLabelLocksResponse) updates) =>
       super.copyWith((message) => updates(message as ListLabelLocksResponse))
           as ListLabelLocksResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListLabelLocksResponse create() => ListLabelLocksResponse._();
+  @$core.override
   ListLabelLocksResponse createEmptyInstance() => create();
-  static $pb.PbList<ListLabelLocksResponse> createRepeated() =>
-      $pb.PbList<ListLabelLocksResponse>();
   @$core.pragma('dart2js:noInline')
   static ListLabelLocksResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListLabelLocksResponse>(create);
@@ -5595,22 +4842,20 @@ class ListLabelLocksResponse extends $pb.GeneratedMessage {
 
   /// LabelLocks.
   @$pb.TagNumber(1)
-  $core.List<$5.LabelLock> get labelLocks => $_getList(0);
+  $pb.PbList<$5.LabelLock> get labelLocks => $_getList(0);
 
   /// The token of the next page in the response.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

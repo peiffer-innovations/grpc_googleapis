@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/conversation/prompt/content/collection.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/conversation/prompt/content/collection.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,24 +16,26 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'image.pbenum.dart' as $0;
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 /// An item in the collection
 class Collection_CollectionItem extends $pb.GeneratedMessage {
   factory Collection_CollectionItem({
     $core.String? key,
   }) {
-    final $result = create();
-    if (key != null) {
-      $result.key = key;
-    }
-    return $result;
+    final result = create();
+    if (key != null) result.key = key;
+    return result;
   }
-  Collection_CollectionItem._() : super();
-  factory Collection_CollectionItem.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Collection_CollectionItem.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Collection_CollectionItem._();
+
+  factory Collection_CollectionItem.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Collection_CollectionItem.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Collection.CollectionItem',
@@ -42,26 +45,21 @@ class Collection_CollectionItem extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'key')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Collection_CollectionItem clone() =>
-      Collection_CollectionItem()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Collection_CollectionItem clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Collection_CollectionItem copyWith(
           void Function(Collection_CollectionItem) updates) =>
       super.copyWith((message) => updates(message as Collection_CollectionItem))
           as Collection_CollectionItem;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Collection_CollectionItem create() => Collection_CollectionItem._();
+  @$core.override
   Collection_CollectionItem createEmptyInstance() => create();
-  static $pb.PbList<Collection_CollectionItem> createRepeated() =>
-      $pb.PbList<Collection_CollectionItem>();
   @$core.pragma('dart2js:noInline')
   static Collection_CollectionItem getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Collection_CollectionItem>(create);
@@ -72,14 +70,11 @@ class Collection_CollectionItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get key => $_getSZ(0);
   @$pb.TagNumber(1)
-  set key($core.String v) {
-    $_setString(0, v);
-  }
-
+  set key($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasKey() => $_has(0);
   @$pb.TagNumber(1)
-  void clearKey() => clearField(1);
+  void clearKey() => $_clearField(1);
 }
 
 /// A card for presenting a collection of options to select from.
@@ -90,28 +85,22 @@ class Collection extends $pb.GeneratedMessage {
     $core.Iterable<Collection_CollectionItem>? items,
     $0.Image_ImageFill? imageFill,
   }) {
-    final $result = create();
-    if (title != null) {
-      $result.title = title;
-    }
-    if (subtitle != null) {
-      $result.subtitle = subtitle;
-    }
-    if (items != null) {
-      $result.items.addAll(items);
-    }
-    if (imageFill != null) {
-      $result.imageFill = imageFill;
-    }
-    return $result;
+    final result = create();
+    if (title != null) result.title = title;
+    if (subtitle != null) result.subtitle = subtitle;
+    if (items != null) result.items.addAll(items);
+    if (imageFill != null) result.imageFill = imageFill;
+    return result;
   }
-  Collection._() : super();
-  factory Collection.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Collection.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Collection._();
+
+  factory Collection.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Collection.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Collection',
@@ -120,32 +109,25 @@ class Collection extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'title')
     ..aOS(2, _omitFieldNames ? '' : 'subtitle')
-    ..pc<Collection_CollectionItem>(
-        3, _omitFieldNames ? '' : 'items', $pb.PbFieldType.PM,
+    ..pPM<Collection_CollectionItem>(3, _omitFieldNames ? '' : 'items',
         subBuilder: Collection_CollectionItem.create)
-    ..e<$0.Image_ImageFill>(
-        4, _omitFieldNames ? '' : 'imageFill', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.Image_ImageFill.UNSPECIFIED,
-        valueOf: $0.Image_ImageFill.valueOf,
+    ..aE<$0.Image_ImageFill>(4, _omitFieldNames ? '' : 'imageFill',
         enumValues: $0.Image_ImageFill.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Collection clone() => Collection()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Collection clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Collection copyWith(void Function(Collection) updates) =>
       super.copyWith((message) => updates(message as Collection)) as Collection;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Collection create() => Collection._();
+  @$core.override
   Collection createEmptyInstance() => create();
-  static $pb.PbList<Collection> createRepeated() => $pb.PbList<Collection>();
   @$core.pragma('dart2js:noInline')
   static Collection getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Collection>(create);
@@ -155,46 +137,38 @@ class Collection extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
-  set title($core.String v) {
-    $_setString(0, v);
-  }
-
+  set title($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasTitle() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTitle() => clearField(1);
+  void clearTitle() => $_clearField(1);
 
   /// Subtitle of the collection. Optional.
   @$pb.TagNumber(2)
   $core.String get subtitle => $_getSZ(1);
   @$pb.TagNumber(2)
-  set subtitle($core.String v) {
-    $_setString(1, v);
-  }
-
+  set subtitle($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSubtitle() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSubtitle() => clearField(2);
+  void clearSubtitle() => $_clearField(2);
 
   /// min: 2 max: 10
   @$pb.TagNumber(3)
-  $core.List<Collection_CollectionItem> get items => $_getList(2);
+  $pb.PbList<Collection_CollectionItem> get items => $_getList(2);
 
   /// How the image backgrounds of collection items will be filled. Optional.
   @$pb.TagNumber(4)
   $0.Image_ImageFill get imageFill => $_getN(3);
   @$pb.TagNumber(4)
-  set imageFill($0.Image_ImageFill v) {
-    setField(4, v);
-  }
-
+  set imageFill($0.Image_ImageFill value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasImageFill() => $_has(3);
   @$pb.TagNumber(4)
-  void clearImageFill() => clearField(4);
+  void clearImageFill() => $_clearField(4);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

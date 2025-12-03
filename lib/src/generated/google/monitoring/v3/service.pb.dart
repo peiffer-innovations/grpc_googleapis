@@ -1,20 +1,24 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/monitoring/v3/service.proto
-//
-// @dart = 2.12
+// Generated from google/monitoring/v3/service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/duration.pb.dart'
+    as $0;
 
-import '../../protobuf/duration.pb.dart' as $0;
 import '../../type/calendar_period.pbenum.dart' as $1;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'service.pbenum.dart';
 
@@ -23,13 +27,15 @@ export 'service.pbenum.dart';
 /// a GKE type) matches your intended service.
 class Service_Custom extends $pb.GeneratedMessage {
   factory Service_Custom() => create();
-  Service_Custom._() : super();
-  factory Service_Custom.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_Custom.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_Custom._();
+
+  factory Service_Custom.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_Custom.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.Custom',
@@ -38,24 +44,20 @@ class Service_Custom extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_Custom clone() => Service_Custom()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_Custom clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_Custom copyWith(void Function(Service_Custom) updates) =>
       super.copyWith((message) => updates(message as Service_Custom))
           as Service_Custom;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_Custom create() => Service_Custom._();
+  @$core.override
   Service_Custom createEmptyInstance() => create();
-  static $pb.PbList<Service_Custom> createRepeated() =>
-      $pb.PbList<Service_Custom>();
   @$core.pragma('dart2js:noInline')
   static Service_Custom getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_Custom>(create);
@@ -67,19 +69,19 @@ class Service_AppEngine extends $pb.GeneratedMessage {
   factory Service_AppEngine({
     $core.String? moduleId,
   }) {
-    final $result = create();
-    if (moduleId != null) {
-      $result.moduleId = moduleId;
-    }
-    return $result;
+    final result = create();
+    if (moduleId != null) result.moduleId = moduleId;
+    return result;
   }
-  Service_AppEngine._() : super();
-  factory Service_AppEngine.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_AppEngine.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_AppEngine._();
+
+  factory Service_AppEngine.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_AppEngine.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.AppEngine',
@@ -89,24 +91,20 @@ class Service_AppEngine extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'moduleId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_AppEngine clone() => Service_AppEngine()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_AppEngine clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_AppEngine copyWith(void Function(Service_AppEngine) updates) =>
       super.copyWith((message) => updates(message as Service_AppEngine))
           as Service_AppEngine;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_AppEngine create() => Service_AppEngine._();
+  @$core.override
   Service_AppEngine createEmptyInstance() => create();
-  static $pb.PbList<Service_AppEngine> createRepeated() =>
-      $pb.PbList<Service_AppEngine>();
   @$core.pragma('dart2js:noInline')
   static Service_AppEngine getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_AppEngine>(create);
@@ -118,14 +116,11 @@ class Service_AppEngine extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get moduleId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set moduleId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set moduleId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasModuleId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearModuleId() => clearField(1);
+  void clearModuleId() => $_clearField(1);
 }
 
 /// Cloud Endpoints service. Learn more at https://cloud.google.com/endpoints.
@@ -133,19 +128,19 @@ class Service_CloudEndpoints extends $pb.GeneratedMessage {
   factory Service_CloudEndpoints({
     $core.String? service,
   }) {
-    final $result = create();
-    if (service != null) {
-      $result.service = service;
-    }
-    return $result;
+    final result = create();
+    if (service != null) result.service = service;
+    return result;
   }
-  Service_CloudEndpoints._() : super();
-  factory Service_CloudEndpoints.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_CloudEndpoints.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_CloudEndpoints._();
+
+  factory Service_CloudEndpoints.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_CloudEndpoints.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.CloudEndpoints',
@@ -155,26 +150,21 @@ class Service_CloudEndpoints extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'service')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_CloudEndpoints clone() =>
-      Service_CloudEndpoints()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_CloudEndpoints clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_CloudEndpoints copyWith(
           void Function(Service_CloudEndpoints) updates) =>
       super.copyWith((message) => updates(message as Service_CloudEndpoints))
           as Service_CloudEndpoints;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_CloudEndpoints create() => Service_CloudEndpoints._();
+  @$core.override
   Service_CloudEndpoints createEmptyInstance() => create();
-  static $pb.PbList<Service_CloudEndpoints> createRepeated() =>
-      $pb.PbList<Service_CloudEndpoints>();
   @$core.pragma('dart2js:noInline')
   static Service_CloudEndpoints getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_CloudEndpoints>(create);
@@ -186,14 +176,11 @@ class Service_CloudEndpoints extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get service => $_getSZ(0);
   @$pb.TagNumber(1)
-  set service($core.String v) {
-    $_setString(0, v);
-  }
-
+  set service($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasService() => $_has(0);
   @$pb.TagNumber(1)
-  void clearService() => clearField(1);
+  void clearService() => $_clearField(1);
 }
 
 /// Istio service scoped to a single Kubernetes cluster. Learn more at
@@ -206,28 +193,22 @@ class Service_ClusterIstio extends $pb.GeneratedMessage {
     $core.String? serviceNamespace,
     $core.String? serviceName,
   }) {
-    final $result = create();
-    if (location != null) {
-      $result.location = location;
-    }
-    if (clusterName != null) {
-      $result.clusterName = clusterName;
-    }
-    if (serviceNamespace != null) {
-      $result.serviceNamespace = serviceNamespace;
-    }
-    if (serviceName != null) {
-      $result.serviceName = serviceName;
-    }
-    return $result;
+    final result = create();
+    if (location != null) result.location = location;
+    if (clusterName != null) result.clusterName = clusterName;
+    if (serviceNamespace != null) result.serviceNamespace = serviceNamespace;
+    if (serviceName != null) result.serviceName = serviceName;
+    return result;
   }
-  Service_ClusterIstio._() : super();
-  factory Service_ClusterIstio.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_ClusterIstio.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_ClusterIstio._();
+
+  factory Service_ClusterIstio.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_ClusterIstio.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.ClusterIstio',
@@ -240,25 +221,20 @@ class Service_ClusterIstio extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'serviceName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_ClusterIstio clone() =>
-      Service_ClusterIstio()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_ClusterIstio clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_ClusterIstio copyWith(void Function(Service_ClusterIstio) updates) =>
       super.copyWith((message) => updates(message as Service_ClusterIstio))
           as Service_ClusterIstio;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_ClusterIstio create() => Service_ClusterIstio._();
+  @$core.override
   Service_ClusterIstio createEmptyInstance() => create();
-  static $pb.PbList<Service_ClusterIstio> createRepeated() =>
-      $pb.PbList<Service_ClusterIstio>();
   @$core.pragma('dart2js:noInline')
   static Service_ClusterIstio getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_ClusterIstio>(create);
@@ -270,14 +246,11 @@ class Service_ClusterIstio extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get location => $_getSZ(0);
   @$pb.TagNumber(1)
-  set location($core.String v) {
-    $_setString(0, v);
-  }
-
+  set location($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasLocation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLocation() => clearField(1);
+  void clearLocation() => $_clearField(1);
 
   /// The name of the Kubernetes cluster in which this Istio service is
   /// defined. Corresponds to the `cluster_name` resource label in
@@ -285,42 +258,33 @@ class Service_ClusterIstio extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get clusterName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set clusterName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set clusterName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasClusterName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearClusterName() => clearField(2);
+  void clearClusterName() => $_clearField(2);
 
   /// The namespace of the Istio service underlying this service. Corresponds
   /// to the `destination_service_namespace` metric label in Istio metrics.
   @$pb.TagNumber(3)
   $core.String get serviceNamespace => $_getSZ(2);
   @$pb.TagNumber(3)
-  set serviceNamespace($core.String v) {
-    $_setString(2, v);
-  }
-
+  set serviceNamespace($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasServiceNamespace() => $_has(2);
   @$pb.TagNumber(3)
-  void clearServiceNamespace() => clearField(3);
+  void clearServiceNamespace() => $_clearField(3);
 
   /// The name of the Istio service underlying this service. Corresponds to the
   /// `destination_service_name` metric label in Istio metrics.
   @$pb.TagNumber(4)
   $core.String get serviceName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set serviceName($core.String v) {
-    $_setString(3, v);
-  }
-
+  set serviceName($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasServiceName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearServiceName() => clearField(4);
+  void clearServiceName() => $_clearField(4);
 }
 
 /// Istio service scoped to an Istio mesh. Anthos clusters running ASM < 1.6.8
@@ -331,25 +295,21 @@ class Service_MeshIstio extends $pb.GeneratedMessage {
     $core.String? serviceNamespace,
     $core.String? serviceName,
   }) {
-    final $result = create();
-    if (meshUid != null) {
-      $result.meshUid = meshUid;
-    }
-    if (serviceNamespace != null) {
-      $result.serviceNamespace = serviceNamespace;
-    }
-    if (serviceName != null) {
-      $result.serviceName = serviceName;
-    }
-    return $result;
+    final result = create();
+    if (meshUid != null) result.meshUid = meshUid;
+    if (serviceNamespace != null) result.serviceNamespace = serviceNamespace;
+    if (serviceName != null) result.serviceName = serviceName;
+    return result;
   }
-  Service_MeshIstio._() : super();
-  factory Service_MeshIstio.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_MeshIstio.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_MeshIstio._();
+
+  factory Service_MeshIstio.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_MeshIstio.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.MeshIstio',
@@ -361,24 +321,20 @@ class Service_MeshIstio extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'serviceName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_MeshIstio clone() => Service_MeshIstio()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_MeshIstio clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_MeshIstio copyWith(void Function(Service_MeshIstio) updates) =>
       super.copyWith((message) => updates(message as Service_MeshIstio))
           as Service_MeshIstio;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_MeshIstio create() => Service_MeshIstio._();
+  @$core.override
   Service_MeshIstio createEmptyInstance() => create();
-  static $pb.PbList<Service_MeshIstio> createRepeated() =>
-      $pb.PbList<Service_MeshIstio>();
   @$core.pragma('dart2js:noInline')
   static Service_MeshIstio getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_MeshIstio>(create);
@@ -389,42 +345,33 @@ class Service_MeshIstio extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get meshUid => $_getSZ(0);
   @$pb.TagNumber(1)
-  set meshUid($core.String v) {
-    $_setString(0, v);
-  }
-
+  set meshUid($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMeshUid() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMeshUid() => clearField(1);
+  void clearMeshUid() => $_clearField(1);
 
   /// The namespace of the Istio service underlying this service. Corresponds
   /// to the `destination_service_namespace` metric label in Istio metrics.
   @$pb.TagNumber(3)
   $core.String get serviceNamespace => $_getSZ(1);
   @$pb.TagNumber(3)
-  set serviceNamespace($core.String v) {
-    $_setString(1, v);
-  }
-
+  set serviceNamespace($core.String value) => $_setString(1, value);
   @$pb.TagNumber(3)
   $core.bool hasServiceNamespace() => $_has(1);
   @$pb.TagNumber(3)
-  void clearServiceNamespace() => clearField(3);
+  void clearServiceNamespace() => $_clearField(3);
 
   /// The name of the Istio service underlying this service. Corresponds to the
   /// `destination_service_name` metric label in Istio metrics.
   @$pb.TagNumber(4)
   $core.String get serviceName => $_getSZ(2);
   @$pb.TagNumber(4)
-  set serviceName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set serviceName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(4)
   $core.bool hasServiceName() => $_has(2);
   @$pb.TagNumber(4)
-  void clearServiceName() => clearField(4);
+  void clearServiceName() => $_clearField(4);
 }
 
 /// Canonical service scoped to an Istio mesh. Anthos clusters running ASM >=
@@ -435,25 +382,22 @@ class Service_IstioCanonicalService extends $pb.GeneratedMessage {
     $core.String? canonicalServiceNamespace,
     $core.String? canonicalService,
   }) {
-    final $result = create();
-    if (meshUid != null) {
-      $result.meshUid = meshUid;
-    }
-    if (canonicalServiceNamespace != null) {
-      $result.canonicalServiceNamespace = canonicalServiceNamespace;
-    }
-    if (canonicalService != null) {
-      $result.canonicalService = canonicalService;
-    }
-    return $result;
+    final result = create();
+    if (meshUid != null) result.meshUid = meshUid;
+    if (canonicalServiceNamespace != null)
+      result.canonicalServiceNamespace = canonicalServiceNamespace;
+    if (canonicalService != null) result.canonicalService = canonicalService;
+    return result;
   }
-  Service_IstioCanonicalService._() : super();
-  factory Service_IstioCanonicalService.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_IstioCanonicalService.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_IstioCanonicalService._();
+
+  factory Service_IstioCanonicalService.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_IstioCanonicalService.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.IstioCanonicalService',
@@ -465,28 +409,23 @@ class Service_IstioCanonicalService extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'canonicalService')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_IstioCanonicalService clone() =>
-      Service_IstioCanonicalService()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_IstioCanonicalService clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_IstioCanonicalService copyWith(
           void Function(Service_IstioCanonicalService) updates) =>
       super.copyWith(
               (message) => updates(message as Service_IstioCanonicalService))
           as Service_IstioCanonicalService;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_IstioCanonicalService create() =>
       Service_IstioCanonicalService._();
+  @$core.override
   Service_IstioCanonicalService createEmptyInstance() => create();
-  static $pb.PbList<Service_IstioCanonicalService> createRepeated() =>
-      $pb.PbList<Service_IstioCanonicalService>();
   @$core.pragma('dart2js:noInline')
   static Service_IstioCanonicalService getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_IstioCanonicalService>(create);
@@ -498,14 +437,11 @@ class Service_IstioCanonicalService extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get meshUid => $_getSZ(0);
   @$pb.TagNumber(1)
-  set meshUid($core.String v) {
-    $_setString(0, v);
-  }
-
+  set meshUid($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMeshUid() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMeshUid() => clearField(1);
+  void clearMeshUid() => $_clearField(1);
 
   /// The namespace of the canonical service underlying this service.
   /// Corresponds to the `destination_canonical_service_namespace` metric
@@ -514,14 +450,11 @@ class Service_IstioCanonicalService extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get canonicalServiceNamespace => $_getSZ(1);
   @$pb.TagNumber(3)
-  set canonicalServiceNamespace($core.String v) {
-    $_setString(1, v);
-  }
-
+  set canonicalServiceNamespace($core.String value) => $_setString(1, value);
   @$pb.TagNumber(3)
   $core.bool hasCanonicalServiceNamespace() => $_has(1);
   @$pb.TagNumber(3)
-  void clearCanonicalServiceNamespace() => clearField(3);
+  void clearCanonicalServiceNamespace() => $_clearField(3);
 
   /// The name of the canonical service underlying this service.
   /// Corresponds to the `destination_canonical_service_name` metric label in
@@ -530,14 +463,11 @@ class Service_IstioCanonicalService extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get canonicalService => $_getSZ(2);
   @$pb.TagNumber(4)
-  set canonicalService($core.String v) {
-    $_setString(2, v);
-  }
-
+  set canonicalService($core.String value) => $_setString(2, value);
   @$pb.TagNumber(4)
   $core.bool hasCanonicalService() => $_has(2);
   @$pb.TagNumber(4)
-  void clearCanonicalService() => clearField(4);
+  void clearCanonicalService() => $_clearField(4);
 }
 
 /// Cloud Run service. Learn more at https://cloud.google.com/run.
@@ -546,22 +476,20 @@ class Service_CloudRun extends $pb.GeneratedMessage {
     $core.String? serviceName,
     $core.String? location,
   }) {
-    final $result = create();
-    if (serviceName != null) {
-      $result.serviceName = serviceName;
-    }
-    if (location != null) {
-      $result.location = location;
-    }
-    return $result;
+    final result = create();
+    if (serviceName != null) result.serviceName = serviceName;
+    if (location != null) result.location = location;
+    return result;
   }
-  Service_CloudRun._() : super();
-  factory Service_CloudRun.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_CloudRun.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_CloudRun._();
+
+  factory Service_CloudRun.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_CloudRun.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.CloudRun',
@@ -572,24 +500,20 @@ class Service_CloudRun extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'location')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_CloudRun clone() => Service_CloudRun()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_CloudRun clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_CloudRun copyWith(void Function(Service_CloudRun) updates) =>
       super.copyWith((message) => updates(message as Service_CloudRun))
           as Service_CloudRun;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_CloudRun create() => Service_CloudRun._();
+  @$core.override
   Service_CloudRun createEmptyInstance() => create();
-  static $pb.PbList<Service_CloudRun> createRepeated() =>
-      $pb.PbList<Service_CloudRun>();
   @$core.pragma('dart2js:noInline')
   static Service_CloudRun getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_CloudRun>(create);
@@ -601,14 +525,11 @@ class Service_CloudRun extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set serviceName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set serviceName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearServiceName() => clearField(1);
+  void clearServiceName() => $_clearField(1);
 
   /// The location the service is run. Corresponds to the `location`
   /// resource label in the [`cloud_run_revision` monitored
@@ -616,14 +537,11 @@ class Service_CloudRun extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get location => $_getSZ(1);
   @$pb.TagNumber(2)
-  set location($core.String v) {
-    $_setString(1, v);
-  }
-
+  set location($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasLocation() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLocation() => clearField(2);
+  void clearLocation() => $_clearField(2);
 }
 
 /// GKE Namespace. The field names correspond to the resource metadata labels
@@ -636,28 +554,22 @@ class Service_GkeNamespace extends $pb.GeneratedMessage {
     $core.String? clusterName,
     $core.String? namespaceName,
   }) {
-    final $result = create();
-    if (projectId != null) {
-      $result.projectId = projectId;
-    }
-    if (location != null) {
-      $result.location = location;
-    }
-    if (clusterName != null) {
-      $result.clusterName = clusterName;
-    }
-    if (namespaceName != null) {
-      $result.namespaceName = namespaceName;
-    }
-    return $result;
+    final result = create();
+    if (projectId != null) result.projectId = projectId;
+    if (location != null) result.location = location;
+    if (clusterName != null) result.clusterName = clusterName;
+    if (namespaceName != null) result.namespaceName = namespaceName;
+    return result;
   }
-  Service_GkeNamespace._() : super();
-  factory Service_GkeNamespace.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_GkeNamespace.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_GkeNamespace._();
+
+  factory Service_GkeNamespace.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_GkeNamespace.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.GkeNamespace',
@@ -670,25 +582,20 @@ class Service_GkeNamespace extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'namespaceName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_GkeNamespace clone() =>
-      Service_GkeNamespace()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_GkeNamespace clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_GkeNamespace copyWith(void Function(Service_GkeNamespace) updates) =>
       super.copyWith((message) => updates(message as Service_GkeNamespace))
           as Service_GkeNamespace;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_GkeNamespace create() => Service_GkeNamespace._();
+  @$core.override
   Service_GkeNamespace createEmptyInstance() => create();
-  static $pb.PbList<Service_GkeNamespace> createRepeated() =>
-      $pb.PbList<Service_GkeNamespace>();
   @$core.pragma('dart2js:noInline')
   static Service_GkeNamespace getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_GkeNamespace>(create);
@@ -700,53 +607,41 @@ class Service_GkeNamespace extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set projectId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set projectId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasProjectId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearProjectId() => clearField(1);
+  void clearProjectId() => $_clearField(1);
 
   /// The location of the parent cluster. This may be a zone or region.
   @$pb.TagNumber(2)
   $core.String get location => $_getSZ(1);
   @$pb.TagNumber(2)
-  set location($core.String v) {
-    $_setString(1, v);
-  }
-
+  set location($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasLocation() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLocation() => clearField(2);
+  void clearLocation() => $_clearField(2);
 
   /// The name of the parent cluster.
   @$pb.TagNumber(3)
   $core.String get clusterName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set clusterName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set clusterName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasClusterName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearClusterName() => clearField(3);
+  void clearClusterName() => $_clearField(3);
 
   /// The name of this namespace.
   @$pb.TagNumber(4)
   $core.String get namespaceName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set namespaceName($core.String v) {
-    $_setString(3, v);
-  }
-
+  set namespaceName($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasNamespaceName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearNamespaceName() => clearField(4);
+  void clearNamespaceName() => $_clearField(4);
 }
 
 /// A GKE Workload (Deployment, StatefulSet, etc). The field names correspond
@@ -761,34 +656,26 @@ class Service_GkeWorkload extends $pb.GeneratedMessage {
     $core.String? topLevelControllerType,
     $core.String? topLevelControllerName,
   }) {
-    final $result = create();
-    if (projectId != null) {
-      $result.projectId = projectId;
-    }
-    if (location != null) {
-      $result.location = location;
-    }
-    if (clusterName != null) {
-      $result.clusterName = clusterName;
-    }
-    if (namespaceName != null) {
-      $result.namespaceName = namespaceName;
-    }
-    if (topLevelControllerType != null) {
-      $result.topLevelControllerType = topLevelControllerType;
-    }
-    if (topLevelControllerName != null) {
-      $result.topLevelControllerName = topLevelControllerName;
-    }
-    return $result;
+    final result = create();
+    if (projectId != null) result.projectId = projectId;
+    if (location != null) result.location = location;
+    if (clusterName != null) result.clusterName = clusterName;
+    if (namespaceName != null) result.namespaceName = namespaceName;
+    if (topLevelControllerType != null)
+      result.topLevelControllerType = topLevelControllerType;
+    if (topLevelControllerName != null)
+      result.topLevelControllerName = topLevelControllerName;
+    return result;
   }
-  Service_GkeWorkload._() : super();
-  factory Service_GkeWorkload.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_GkeWorkload.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_GkeWorkload._();
+
+  factory Service_GkeWorkload.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_GkeWorkload.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.GkeWorkload',
@@ -803,24 +690,20 @@ class Service_GkeWorkload extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'topLevelControllerName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_GkeWorkload clone() => Service_GkeWorkload()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_GkeWorkload clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_GkeWorkload copyWith(void Function(Service_GkeWorkload) updates) =>
       super.copyWith((message) => updates(message as Service_GkeWorkload))
           as Service_GkeWorkload;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_GkeWorkload create() => Service_GkeWorkload._();
+  @$core.override
   Service_GkeWorkload createEmptyInstance() => create();
-  static $pb.PbList<Service_GkeWorkload> createRepeated() =>
-      $pb.PbList<Service_GkeWorkload>();
   @$core.pragma('dart2js:noInline')
   static Service_GkeWorkload getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_GkeWorkload>(create);
@@ -832,79 +715,61 @@ class Service_GkeWorkload extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set projectId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set projectId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasProjectId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearProjectId() => clearField(1);
+  void clearProjectId() => $_clearField(1);
 
   /// The location of the parent cluster. This may be a zone or region.
   @$pb.TagNumber(2)
   $core.String get location => $_getSZ(1);
   @$pb.TagNumber(2)
-  set location($core.String v) {
-    $_setString(1, v);
-  }
-
+  set location($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasLocation() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLocation() => clearField(2);
+  void clearLocation() => $_clearField(2);
 
   /// The name of the parent cluster.
   @$pb.TagNumber(3)
   $core.String get clusterName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set clusterName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set clusterName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasClusterName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearClusterName() => clearField(3);
+  void clearClusterName() => $_clearField(3);
 
   /// The name of the parent namespace.
   @$pb.TagNumber(4)
   $core.String get namespaceName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set namespaceName($core.String v) {
-    $_setString(3, v);
-  }
-
+  set namespaceName($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasNamespaceName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearNamespaceName() => clearField(4);
+  void clearNamespaceName() => $_clearField(4);
 
   /// The type of this workload (for example, "Deployment" or "DaemonSet")
   @$pb.TagNumber(5)
   $core.String get topLevelControllerType => $_getSZ(4);
   @$pb.TagNumber(5)
-  set topLevelControllerType($core.String v) {
-    $_setString(4, v);
-  }
-
+  set topLevelControllerType($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasTopLevelControllerType() => $_has(4);
   @$pb.TagNumber(5)
-  void clearTopLevelControllerType() => clearField(5);
+  void clearTopLevelControllerType() => $_clearField(5);
 
   /// The name of this workload.
   @$pb.TagNumber(6)
   $core.String get topLevelControllerName => $_getSZ(5);
   @$pb.TagNumber(6)
-  set topLevelControllerName($core.String v) {
-    $_setString(5, v);
-  }
-
+  set topLevelControllerName($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasTopLevelControllerName() => $_has(5);
   @$pb.TagNumber(6)
-  void clearTopLevelControllerName() => clearField(6);
+  void clearTopLevelControllerName() => $_clearField(6);
 }
 
 /// GKE Service. The "service" here represents a
@@ -921,31 +786,23 @@ class Service_GkeService extends $pb.GeneratedMessage {
     $core.String? namespaceName,
     $core.String? serviceName,
   }) {
-    final $result = create();
-    if (projectId != null) {
-      $result.projectId = projectId;
-    }
-    if (location != null) {
-      $result.location = location;
-    }
-    if (clusterName != null) {
-      $result.clusterName = clusterName;
-    }
-    if (namespaceName != null) {
-      $result.namespaceName = namespaceName;
-    }
-    if (serviceName != null) {
-      $result.serviceName = serviceName;
-    }
-    return $result;
+    final result = create();
+    if (projectId != null) result.projectId = projectId;
+    if (location != null) result.location = location;
+    if (clusterName != null) result.clusterName = clusterName;
+    if (namespaceName != null) result.namespaceName = namespaceName;
+    if (serviceName != null) result.serviceName = serviceName;
+    return result;
   }
-  Service_GkeService._() : super();
-  factory Service_GkeService.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_GkeService.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_GkeService._();
+
+  factory Service_GkeService.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_GkeService.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.GkeService',
@@ -959,24 +816,20 @@ class Service_GkeService extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'serviceName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_GkeService clone() => Service_GkeService()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_GkeService clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_GkeService copyWith(void Function(Service_GkeService) updates) =>
       super.copyWith((message) => updates(message as Service_GkeService))
           as Service_GkeService;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_GkeService create() => Service_GkeService._();
+  @$core.override
   Service_GkeService createEmptyInstance() => create();
-  static $pb.PbList<Service_GkeService> createRepeated() =>
-      $pb.PbList<Service_GkeService>();
   @$core.pragma('dart2js:noInline')
   static Service_GkeService getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_GkeService>(create);
@@ -988,66 +841,51 @@ class Service_GkeService extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set projectId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set projectId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasProjectId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearProjectId() => clearField(1);
+  void clearProjectId() => $_clearField(1);
 
   /// The location of the parent cluster. This may be a zone or region.
   @$pb.TagNumber(2)
   $core.String get location => $_getSZ(1);
   @$pb.TagNumber(2)
-  set location($core.String v) {
-    $_setString(1, v);
-  }
-
+  set location($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasLocation() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLocation() => clearField(2);
+  void clearLocation() => $_clearField(2);
 
   /// The name of the parent cluster.
   @$pb.TagNumber(3)
   $core.String get clusterName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set clusterName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set clusterName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasClusterName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearClusterName() => clearField(3);
+  void clearClusterName() => $_clearField(3);
 
   /// The name of the parent namespace.
   @$pb.TagNumber(4)
   $core.String get namespaceName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set namespaceName($core.String v) {
-    $_setString(3, v);
-  }
-
+  set namespaceName($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasNamespaceName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearNamespaceName() => clearField(4);
+  void clearNamespaceName() => $_clearField(4);
 
   /// The name of this service.
   @$pb.TagNumber(5)
   $core.String get serviceName => $_getSZ(4);
   @$pb.TagNumber(5)
-  set serviceName($core.String v) {
-    $_setString(4, v);
-  }
-
+  set serviceName($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasServiceName() => $_has(4);
   @$pb.TagNumber(5)
-  void clearServiceName() => clearField(5);
+  void clearServiceName() => $_clearField(5);
 }
 
 /// A well-known service type, defined by its service type and service labels.
@@ -1056,24 +894,22 @@ class Service_GkeService extends $pb.GeneratedMessage {
 class Service_BasicService extends $pb.GeneratedMessage {
   factory Service_BasicService({
     $core.String? serviceType,
-    $core.Map<$core.String, $core.String>? serviceLabels,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? serviceLabels,
   }) {
-    final $result = create();
-    if (serviceType != null) {
-      $result.serviceType = serviceType;
-    }
-    if (serviceLabels != null) {
-      $result.serviceLabels.addAll(serviceLabels);
-    }
-    return $result;
+    final result = create();
+    if (serviceType != null) result.serviceType = serviceType;
+    if (serviceLabels != null) result.serviceLabels.addEntries(serviceLabels);
+    return result;
   }
-  Service_BasicService._() : super();
-  factory Service_BasicService.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_BasicService.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_BasicService._();
+
+  factory Service_BasicService.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_BasicService.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.BasicService',
@@ -1088,25 +924,20 @@ class Service_BasicService extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.monitoring.v3'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_BasicService clone() =>
-      Service_BasicService()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_BasicService clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_BasicService copyWith(void Function(Service_BasicService) updates) =>
       super.copyWith((message) => updates(message as Service_BasicService))
           as Service_BasicService;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_BasicService create() => Service_BasicService._();
+  @$core.override
   Service_BasicService createEmptyInstance() => create();
-  static $pb.PbList<Service_BasicService> createRepeated() =>
-      $pb.PbList<Service_BasicService>();
   @$core.pragma('dart2js:noInline')
   static Service_BasicService getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_BasicService>(create);
@@ -1119,21 +950,18 @@ class Service_BasicService extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get serviceType => $_getSZ(0);
   @$pb.TagNumber(1)
-  set serviceType($core.String v) {
-    $_setString(0, v);
-  }
-
+  set serviceType($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasServiceType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearServiceType() => clearField(1);
+  void clearServiceType() => $_clearField(1);
 
   /// Labels that specify the resource that emits the monitoring data which
   /// is used for SLO reporting of this `Service`.
   /// Documentation and valid values for given service types
   /// [here](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-svc-w-basic-sli).
   @$pb.TagNumber(2)
-  $core.Map<$core.String, $core.String> get serviceLabels => $_getMap(1);
+  $pb.PbMap<$core.String, $core.String> get serviceLabels => $_getMap(1);
 }
 
 /// Configuration for how to query telemetry on a Service.
@@ -1141,19 +969,19 @@ class Service_Telemetry extends $pb.GeneratedMessage {
   factory Service_Telemetry({
     $core.String? resourceName,
   }) {
-    final $result = create();
-    if (resourceName != null) {
-      $result.resourceName = resourceName;
-    }
-    return $result;
+    final result = create();
+    if (resourceName != null) result.resourceName = resourceName;
+    return result;
   }
-  Service_Telemetry._() : super();
-  factory Service_Telemetry.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service_Telemetry.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service_Telemetry._();
+
+  factory Service_Telemetry.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service_Telemetry.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service.Telemetry',
@@ -1163,24 +991,20 @@ class Service_Telemetry extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service_Telemetry clone() => Service_Telemetry()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service_Telemetry clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service_Telemetry copyWith(void Function(Service_Telemetry) updates) =>
       super.copyWith((message) => updates(message as Service_Telemetry))
           as Service_Telemetry;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service_Telemetry create() => Service_Telemetry._();
+  @$core.override
   Service_Telemetry createEmptyInstance() => create();
-  static $pb.PbList<Service_Telemetry> createRepeated() =>
-      $pb.PbList<Service_Telemetry>();
   @$core.pragma('dart2js:noInline')
   static Service_Telemetry getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Service_Telemetry>(create);
@@ -1191,14 +1015,11 @@ class Service_Telemetry extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get resourceName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set resourceName($core.String v) {
-    $_setString(0, v);
-  }
-
+  set resourceName($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearResourceName() => clearField(1);
+  void clearResourceName() => $_clearField(1);
 }
 
 enum Service_Identifier {
@@ -1232,67 +1053,40 @@ class Service extends $pb.GeneratedMessage {
     Service_IstioCanonicalService? istioCanonicalService,
     Service_CloudRun? cloudRun,
     Service_Telemetry? telemetry,
-    $core.Map<$core.String, $core.String>? userLabels,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? userLabels,
     Service_GkeNamespace? gkeNamespace,
     Service_GkeWorkload? gkeWorkload,
     Service_GkeService? gkeService,
     Service_BasicService? basicService,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (custom != null) {
-      $result.custom = custom;
-    }
-    if (appEngine != null) {
-      $result.appEngine = appEngine;
-    }
-    if (cloudEndpoints != null) {
-      $result.cloudEndpoints = cloudEndpoints;
-    }
-    if (clusterIstio != null) {
-      $result.clusterIstio = clusterIstio;
-    }
-    if (meshIstio != null) {
-      $result.meshIstio = meshIstio;
-    }
-    if (istioCanonicalService != null) {
-      $result.istioCanonicalService = istioCanonicalService;
-    }
-    if (cloudRun != null) {
-      $result.cloudRun = cloudRun;
-    }
-    if (telemetry != null) {
-      $result.telemetry = telemetry;
-    }
-    if (userLabels != null) {
-      $result.userLabels.addAll(userLabels);
-    }
-    if (gkeNamespace != null) {
-      $result.gkeNamespace = gkeNamespace;
-    }
-    if (gkeWorkload != null) {
-      $result.gkeWorkload = gkeWorkload;
-    }
-    if (gkeService != null) {
-      $result.gkeService = gkeService;
-    }
-    if (basicService != null) {
-      $result.basicService = basicService;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (displayName != null) result.displayName = displayName;
+    if (custom != null) result.custom = custom;
+    if (appEngine != null) result.appEngine = appEngine;
+    if (cloudEndpoints != null) result.cloudEndpoints = cloudEndpoints;
+    if (clusterIstio != null) result.clusterIstio = clusterIstio;
+    if (meshIstio != null) result.meshIstio = meshIstio;
+    if (istioCanonicalService != null)
+      result.istioCanonicalService = istioCanonicalService;
+    if (cloudRun != null) result.cloudRun = cloudRun;
+    if (telemetry != null) result.telemetry = telemetry;
+    if (userLabels != null) result.userLabels.addEntries(userLabels);
+    if (gkeNamespace != null) result.gkeNamespace = gkeNamespace;
+    if (gkeWorkload != null) result.gkeWorkload = gkeWorkload;
+    if (gkeService != null) result.gkeService = gkeService;
+    if (basicService != null) result.basicService = basicService;
+    return result;
   }
-  Service._() : super();
-  factory Service.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service._();
+
+  factory Service.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Service_Identifier>
       _Service_IdentifierByTag = {
@@ -1348,71 +1142,79 @@ class Service extends $pb.GeneratedMessage {
         subBuilder: Service_BasicService.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service clone() => Service()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service copyWith(void Function(Service) updates) =>
       super.copyWith((message) => updates(message as Service)) as Service;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service create() => Service._();
+  @$core.override
   Service createEmptyInstance() => create();
-  static $pb.PbList<Service> createRepeated() => $pb.PbList<Service>();
   @$core.pragma('dart2js:noInline')
   static Service getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Service>(create);
   static Service? _defaultInstance;
 
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
+  @$pb.TagNumber(15)
+  @$pb.TagNumber(16)
+  @$pb.TagNumber(17)
   Service_Identifier whichIdentifier() =>
       _Service_IdentifierByTag[$_whichOneof(0)]!;
-  void clearIdentifier() => clearField($_whichOneof(0));
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  @$pb.TagNumber(11)
+  @$pb.TagNumber(12)
+  @$pb.TagNumber(15)
+  @$pb.TagNumber(16)
+  @$pb.TagNumber(17)
+  void clearIdentifier() => $_clearField($_whichOneof(0));
 
-  ///  Identifier. Resource name for this Service. The format is:
+  /// Identifier. Resource name for this Service. The format is:
   ///
-  ///      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+  ///     projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Name used for UI elements listing this Service.
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set displayName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisplayName() => clearField(2);
+  void clearDisplayName() => $_clearField(2);
 
   /// Custom service type.
   @$pb.TagNumber(6)
   Service_Custom get custom => $_getN(2);
   @$pb.TagNumber(6)
-  set custom(Service_Custom v) {
-    setField(6, v);
-  }
-
+  set custom(Service_Custom value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasCustom() => $_has(2);
   @$pb.TagNumber(6)
-  void clearCustom() => clearField(6);
+  void clearCustom() => $_clearField(6);
   @$pb.TagNumber(6)
   Service_Custom ensureCustom() => $_ensure(2);
 
@@ -1420,14 +1222,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   Service_AppEngine get appEngine => $_getN(3);
   @$pb.TagNumber(7)
-  set appEngine(Service_AppEngine v) {
-    setField(7, v);
-  }
-
+  set appEngine(Service_AppEngine value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasAppEngine() => $_has(3);
   @$pb.TagNumber(7)
-  void clearAppEngine() => clearField(7);
+  void clearAppEngine() => $_clearField(7);
   @$pb.TagNumber(7)
   Service_AppEngine ensureAppEngine() => $_ensure(3);
 
@@ -1435,14 +1234,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   Service_CloudEndpoints get cloudEndpoints => $_getN(4);
   @$pb.TagNumber(8)
-  set cloudEndpoints(Service_CloudEndpoints v) {
-    setField(8, v);
-  }
-
+  set cloudEndpoints(Service_CloudEndpoints value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasCloudEndpoints() => $_has(4);
   @$pb.TagNumber(8)
-  void clearCloudEndpoints() => clearField(8);
+  void clearCloudEndpoints() => $_clearField(8);
   @$pb.TagNumber(8)
   Service_CloudEndpoints ensureCloudEndpoints() => $_ensure(4);
 
@@ -1450,14 +1246,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   Service_ClusterIstio get clusterIstio => $_getN(5);
   @$pb.TagNumber(9)
-  set clusterIstio(Service_ClusterIstio v) {
-    setField(9, v);
-  }
-
+  set clusterIstio(Service_ClusterIstio value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasClusterIstio() => $_has(5);
   @$pb.TagNumber(9)
-  void clearClusterIstio() => clearField(9);
+  void clearClusterIstio() => $_clearField(9);
   @$pb.TagNumber(9)
   Service_ClusterIstio ensureClusterIstio() => $_ensure(5);
 
@@ -1465,14 +1258,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   Service_MeshIstio get meshIstio => $_getN(6);
   @$pb.TagNumber(10)
-  set meshIstio(Service_MeshIstio v) {
-    setField(10, v);
-  }
-
+  set meshIstio(Service_MeshIstio value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasMeshIstio() => $_has(6);
   @$pb.TagNumber(10)
-  void clearMeshIstio() => clearField(10);
+  void clearMeshIstio() => $_clearField(10);
   @$pb.TagNumber(10)
   Service_MeshIstio ensureMeshIstio() => $_ensure(6);
 
@@ -1482,14 +1272,12 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   Service_IstioCanonicalService get istioCanonicalService => $_getN(7);
   @$pb.TagNumber(11)
-  set istioCanonicalService(Service_IstioCanonicalService v) {
-    setField(11, v);
-  }
-
+  set istioCanonicalService(Service_IstioCanonicalService value) =>
+      $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasIstioCanonicalService() => $_has(7);
   @$pb.TagNumber(11)
-  void clearIstioCanonicalService() => clearField(11);
+  void clearIstioCanonicalService() => $_clearField(11);
   @$pb.TagNumber(11)
   Service_IstioCanonicalService ensureIstioCanonicalService() => $_ensure(7);
 
@@ -1497,14 +1285,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   Service_CloudRun get cloudRun => $_getN(8);
   @$pb.TagNumber(12)
-  set cloudRun(Service_CloudRun v) {
-    setField(12, v);
-  }
-
+  set cloudRun(Service_CloudRun value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasCloudRun() => $_has(8);
   @$pb.TagNumber(12)
-  void clearCloudRun() => clearField(12);
+  void clearCloudRun() => $_clearField(12);
   @$pb.TagNumber(12)
   Service_CloudRun ensureCloudRun() => $_ensure(8);
 
@@ -1512,14 +1297,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   Service_Telemetry get telemetry => $_getN(9);
   @$pb.TagNumber(13)
-  set telemetry(Service_Telemetry v) {
-    setField(13, v);
-  }
-
+  set telemetry(Service_Telemetry value) => $_setField(13, value);
   @$pb.TagNumber(13)
   $core.bool hasTelemetry() => $_has(9);
   @$pb.TagNumber(13)
-  void clearTelemetry() => clearField(13);
+  void clearTelemetry() => $_clearField(13);
   @$pb.TagNumber(13)
   Service_Telemetry ensureTelemetry() => $_ensure(9);
 
@@ -1530,20 +1312,17 @@ class Service extends $pb.GeneratedMessage {
   /// label entries may be stored. For labels which do not have a semantic value,
   /// the empty string may be supplied for the label value.
   @$pb.TagNumber(14)
-  $core.Map<$core.String, $core.String> get userLabels => $_getMap(10);
+  $pb.PbMap<$core.String, $core.String> get userLabels => $_getMap(10);
 
   /// Type used for GKE Namespaces.
   @$pb.TagNumber(15)
   Service_GkeNamespace get gkeNamespace => $_getN(11);
   @$pb.TagNumber(15)
-  set gkeNamespace(Service_GkeNamespace v) {
-    setField(15, v);
-  }
-
+  set gkeNamespace(Service_GkeNamespace value) => $_setField(15, value);
   @$pb.TagNumber(15)
   $core.bool hasGkeNamespace() => $_has(11);
   @$pb.TagNumber(15)
-  void clearGkeNamespace() => clearField(15);
+  void clearGkeNamespace() => $_clearField(15);
   @$pb.TagNumber(15)
   Service_GkeNamespace ensureGkeNamespace() => $_ensure(11);
 
@@ -1551,14 +1330,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   Service_GkeWorkload get gkeWorkload => $_getN(12);
   @$pb.TagNumber(16)
-  set gkeWorkload(Service_GkeWorkload v) {
-    setField(16, v);
-  }
-
+  set gkeWorkload(Service_GkeWorkload value) => $_setField(16, value);
   @$pb.TagNumber(16)
   $core.bool hasGkeWorkload() => $_has(12);
   @$pb.TagNumber(16)
-  void clearGkeWorkload() => clearField(16);
+  void clearGkeWorkload() => $_clearField(16);
   @$pb.TagNumber(16)
   Service_GkeWorkload ensureGkeWorkload() => $_ensure(12);
 
@@ -1566,14 +1342,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   Service_GkeService get gkeService => $_getN(13);
   @$pb.TagNumber(17)
-  set gkeService(Service_GkeService v) {
-    setField(17, v);
-  }
-
+  set gkeService(Service_GkeService value) => $_setField(17, value);
   @$pb.TagNumber(17)
   $core.bool hasGkeService() => $_has(13);
   @$pb.TagNumber(17)
-  void clearGkeService() => clearField(17);
+  void clearGkeService() => $_clearField(17);
   @$pb.TagNumber(17)
   Service_GkeService ensureGkeService() => $_ensure(13);
 
@@ -1584,14 +1357,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   Service_BasicService get basicService => $_getN(14);
   @$pb.TagNumber(19)
-  set basicService(Service_BasicService v) {
-    setField(19, v);
-  }
-
+  set basicService(Service_BasicService value) => $_setField(19, value);
   @$pb.TagNumber(19)
   $core.bool hasBasicService() => $_has(14);
   @$pb.TagNumber(19)
-  void clearBasicService() => clearField(19);
+  void clearBasicService() => $_clearField(19);
   @$pb.TagNumber(19)
   Service_BasicService ensureBasicService() => $_ensure(14);
 }
@@ -1612,39 +1382,28 @@ class ServiceLevelObjective extends $pb.GeneratedMessage {
     $0.Duration? rollingPeriod,
     $1.CalendarPeriod? calendarPeriod,
     $core.String? displayName,
-    $core.Map<$core.String, $core.String>? userLabels,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? userLabels,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (serviceLevelIndicator != null) {
-      $result.serviceLevelIndicator = serviceLevelIndicator;
-    }
-    if (goal != null) {
-      $result.goal = goal;
-    }
-    if (rollingPeriod != null) {
-      $result.rollingPeriod = rollingPeriod;
-    }
-    if (calendarPeriod != null) {
-      $result.calendarPeriod = calendarPeriod;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (userLabels != null) {
-      $result.userLabels.addAll(userLabels);
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (serviceLevelIndicator != null)
+      result.serviceLevelIndicator = serviceLevelIndicator;
+    if (goal != null) result.goal = goal;
+    if (rollingPeriod != null) result.rollingPeriod = rollingPeriod;
+    if (calendarPeriod != null) result.calendarPeriod = calendarPeriod;
+    if (displayName != null) result.displayName = displayName;
+    if (userLabels != null) result.userLabels.addEntries(userLabels);
+    return result;
   }
-  ServiceLevelObjective._() : super();
-  factory ServiceLevelObjective.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ServiceLevelObjective.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ServiceLevelObjective._();
+
+  factory ServiceLevelObjective.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ServiceLevelObjective.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, ServiceLevelObjective_Period>
       _ServiceLevelObjective_PeriodByTag = {
@@ -1662,13 +1421,10 @@ class ServiceLevelObjective extends $pb.GeneratedMessage {
     ..aOM<ServiceLevelIndicator>(
         3, _omitFieldNames ? '' : 'serviceLevelIndicator',
         subBuilder: ServiceLevelIndicator.create)
-    ..a<$core.double>(4, _omitFieldNames ? '' : 'goal', $pb.PbFieldType.OD)
+    ..aD(4, _omitFieldNames ? '' : 'goal')
     ..aOM<$0.Duration>(5, _omitFieldNames ? '' : 'rollingPeriod',
         subBuilder: $0.Duration.create)
-    ..e<$1.CalendarPeriod>(
-        6, _omitFieldNames ? '' : 'calendarPeriod', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.CalendarPeriod.CALENDAR_PERIOD_UNSPECIFIED,
-        valueOf: $1.CalendarPeriod.valueOf,
+    ..aE<$1.CalendarPeriod>(6, _omitFieldNames ? '' : 'calendarPeriod',
         enumValues: $1.CalendarPeriod.values)
     ..aOS(11, _omitFieldNames ? '' : 'displayName')
     ..m<$core.String, $core.String>(12, _omitFieldNames ? '' : 'userLabels',
@@ -1678,49 +1434,45 @@ class ServiceLevelObjective extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.monitoring.v3'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ServiceLevelObjective clone() =>
-      ServiceLevelObjective()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ServiceLevelObjective clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ServiceLevelObjective copyWith(
           void Function(ServiceLevelObjective) updates) =>
       super.copyWith((message) => updates(message as ServiceLevelObjective))
           as ServiceLevelObjective;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ServiceLevelObjective create() => ServiceLevelObjective._();
+  @$core.override
   ServiceLevelObjective createEmptyInstance() => create();
-  static $pb.PbList<ServiceLevelObjective> createRepeated() =>
-      $pb.PbList<ServiceLevelObjective>();
   @$core.pragma('dart2js:noInline')
   static ServiceLevelObjective getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ServiceLevelObjective>(create);
   static ServiceLevelObjective? _defaultInstance;
 
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
   ServiceLevelObjective_Period whichPeriod() =>
       _ServiceLevelObjective_PeriodByTag[$_whichOneof(0)]!;
-  void clearPeriod() => clearField($_whichOneof(0));
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  void clearPeriod() => $_clearField($_whichOneof(0));
 
-  ///  Identifier. Resource name for this `ServiceLevelObjective`. The format is:
+  /// Identifier. Resource name for this `ServiceLevelObjective`. The format is:
   ///
-  ///      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
+  ///     projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The definition of good service, used to measure and calculate the quality
   /// of the `Service`'s performance with respect to a single aspect of service
@@ -1728,14 +1480,12 @@ class ServiceLevelObjective extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   ServiceLevelIndicator get serviceLevelIndicator => $_getN(1);
   @$pb.TagNumber(3)
-  set serviceLevelIndicator(ServiceLevelIndicator v) {
-    setField(3, v);
-  }
-
+  set serviceLevelIndicator(ServiceLevelIndicator value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasServiceLevelIndicator() => $_has(1);
   @$pb.TagNumber(3)
-  void clearServiceLevelIndicator() => clearField(3);
+  void clearServiceLevelIndicator() => $_clearField(3);
   @$pb.TagNumber(3)
   ServiceLevelIndicator ensureServiceLevelIndicator() => $_ensure(1);
 
@@ -1744,28 +1494,22 @@ class ServiceLevelObjective extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.double get goal => $_getN(2);
   @$pb.TagNumber(4)
-  set goal($core.double v) {
-    $_setDouble(2, v);
-  }
-
+  set goal($core.double value) => $_setDouble(2, value);
   @$pb.TagNumber(4)
   $core.bool hasGoal() => $_has(2);
   @$pb.TagNumber(4)
-  void clearGoal() => clearField(4);
+  void clearGoal() => $_clearField(4);
 
   /// A rolling time period, semantically "in the past `<rolling_period>`".
   /// Must be an integer multiple of 1 day no larger than 30 days.
   @$pb.TagNumber(5)
   $0.Duration get rollingPeriod => $_getN(3);
   @$pb.TagNumber(5)
-  set rollingPeriod($0.Duration v) {
-    setField(5, v);
-  }
-
+  set rollingPeriod($0.Duration value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasRollingPeriod() => $_has(3);
   @$pb.TagNumber(5)
-  void clearRollingPeriod() => clearField(5);
+  void clearRollingPeriod() => $_clearField(5);
   @$pb.TagNumber(5)
   $0.Duration ensureRollingPeriod() => $_ensure(3);
 
@@ -1775,27 +1519,21 @@ class ServiceLevelObjective extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $1.CalendarPeriod get calendarPeriod => $_getN(4);
   @$pb.TagNumber(6)
-  set calendarPeriod($1.CalendarPeriod v) {
-    setField(6, v);
-  }
-
+  set calendarPeriod($1.CalendarPeriod value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasCalendarPeriod() => $_has(4);
   @$pb.TagNumber(6)
-  void clearCalendarPeriod() => clearField(6);
+  void clearCalendarPeriod() => $_clearField(6);
 
   /// Name used for UI elements listing this SLO.
   @$pb.TagNumber(11)
   $core.String get displayName => $_getSZ(5);
   @$pb.TagNumber(11)
-  set displayName($core.String v) {
-    $_setString(5, v);
-  }
-
+  set displayName($core.String value) => $_setString(5, value);
   @$pb.TagNumber(11)
   $core.bool hasDisplayName() => $_has(5);
   @$pb.TagNumber(11)
-  void clearDisplayName() => clearField(11);
+  void clearDisplayName() => $_clearField(11);
 
   /// Labels which have been used to annotate the service-level objective. Label
   /// keys must start with a letter. Label keys and values may contain lowercase
@@ -1804,7 +1542,7 @@ class ServiceLevelObjective extends $pb.GeneratedMessage {
   /// Up to 64 label entries may be stored. For labels which do not have a
   /// semantic value, the empty string may be supplied for the label value.
   @$pb.TagNumber(12)
-  $core.Map<$core.String, $core.String> get userLabels => $_getMap(6);
+  $pb.PbMap<$core.String, $core.String> get userLabels => $_getMap(6);
 }
 
 enum ServiceLevelIndicator_Type { requestBased, windowsBased, basicSli, notSet }
@@ -1828,25 +1566,21 @@ class ServiceLevelIndicator extends $pb.GeneratedMessage {
     WindowsBasedSli? windowsBased,
     BasicSli? basicSli,
   }) {
-    final $result = create();
-    if (requestBased != null) {
-      $result.requestBased = requestBased;
-    }
-    if (windowsBased != null) {
-      $result.windowsBased = windowsBased;
-    }
-    if (basicSli != null) {
-      $result.basicSli = basicSli;
-    }
-    return $result;
+    final result = create();
+    if (requestBased != null) result.requestBased = requestBased;
+    if (windowsBased != null) result.windowsBased = windowsBased;
+    if (basicSli != null) result.basicSli = basicSli;
+    return result;
   }
-  ServiceLevelIndicator._() : super();
-  factory ServiceLevelIndicator.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ServiceLevelIndicator.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ServiceLevelIndicator._();
+
+  factory ServiceLevelIndicator.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ServiceLevelIndicator.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, ServiceLevelIndicator_Type>
       _ServiceLevelIndicator_TypeByTag = {
@@ -1869,47 +1603,45 @@ class ServiceLevelIndicator extends $pb.GeneratedMessage {
         subBuilder: BasicSli.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ServiceLevelIndicator clone() =>
-      ServiceLevelIndicator()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ServiceLevelIndicator clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ServiceLevelIndicator copyWith(
           void Function(ServiceLevelIndicator) updates) =>
       super.copyWith((message) => updates(message as ServiceLevelIndicator))
           as ServiceLevelIndicator;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ServiceLevelIndicator create() => ServiceLevelIndicator._();
+  @$core.override
   ServiceLevelIndicator createEmptyInstance() => create();
-  static $pb.PbList<ServiceLevelIndicator> createRepeated() =>
-      $pb.PbList<ServiceLevelIndicator>();
   @$core.pragma('dart2js:noInline')
   static ServiceLevelIndicator getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ServiceLevelIndicator>(create);
   static ServiceLevelIndicator? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(4)
   ServiceLevelIndicator_Type whichType() =>
       _ServiceLevelIndicator_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(4)
+  void clearType() => $_clearField($_whichOneof(0));
 
   /// Request-based SLIs
   @$pb.TagNumber(1)
   RequestBasedSli get requestBased => $_getN(0);
   @$pb.TagNumber(1)
-  set requestBased(RequestBasedSli v) {
-    setField(1, v);
-  }
-
+  set requestBased(RequestBasedSli value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasRequestBased() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRequestBased() => clearField(1);
+  void clearRequestBased() => $_clearField(1);
   @$pb.TagNumber(1)
   RequestBasedSli ensureRequestBased() => $_ensure(0);
 
@@ -1917,14 +1649,11 @@ class ServiceLevelIndicator extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   WindowsBasedSli get windowsBased => $_getN(1);
   @$pb.TagNumber(2)
-  set windowsBased(WindowsBasedSli v) {
-    setField(2, v);
-  }
-
+  set windowsBased(WindowsBasedSli value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasWindowsBased() => $_has(1);
   @$pb.TagNumber(2)
-  void clearWindowsBased() => clearField(2);
+  void clearWindowsBased() => $_clearField(2);
   @$pb.TagNumber(2)
   WindowsBasedSli ensureWindowsBased() => $_ensure(1);
 
@@ -1932,14 +1661,11 @@ class ServiceLevelIndicator extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   BasicSli get basicSli => $_getN(2);
   @$pb.TagNumber(4)
-  set basicSli(BasicSli v) {
-    setField(4, v);
-  }
-
+  set basicSli(BasicSli value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasBasicSli() => $_has(2);
   @$pb.TagNumber(4)
-  void clearBasicSli() => clearField(4);
+  void clearBasicSli() => $_clearField(4);
   @$pb.TagNumber(4)
   BasicSli ensureBasicSli() => $_ensure(2);
 }
@@ -1947,13 +1673,15 @@ class ServiceLevelIndicator extends $pb.GeneratedMessage {
 /// Future parameters for the availability SLI.
 class BasicSli_AvailabilityCriteria extends $pb.GeneratedMessage {
   factory BasicSli_AvailabilityCriteria() => create();
-  BasicSli_AvailabilityCriteria._() : super();
-  factory BasicSli_AvailabilityCriteria.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BasicSli_AvailabilityCriteria.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BasicSli_AvailabilityCriteria._();
+
+  factory BasicSli_AvailabilityCriteria.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BasicSli_AvailabilityCriteria.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BasicSli.AvailabilityCriteria',
@@ -1962,28 +1690,23 @@ class BasicSli_AvailabilityCriteria extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BasicSli_AvailabilityCriteria clone() =>
-      BasicSli_AvailabilityCriteria()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BasicSli_AvailabilityCriteria clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BasicSli_AvailabilityCriteria copyWith(
           void Function(BasicSli_AvailabilityCriteria) updates) =>
       super.copyWith(
               (message) => updates(message as BasicSli_AvailabilityCriteria))
           as BasicSli_AvailabilityCriteria;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BasicSli_AvailabilityCriteria create() =>
       BasicSli_AvailabilityCriteria._();
+  @$core.override
   BasicSli_AvailabilityCriteria createEmptyInstance() => create();
-  static $pb.PbList<BasicSli_AvailabilityCriteria> createRepeated() =>
-      $pb.PbList<BasicSli_AvailabilityCriteria>();
   @$core.pragma('dart2js:noInline')
   static BasicSli_AvailabilityCriteria getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BasicSli_AvailabilityCriteria>(create);
@@ -1995,19 +1718,19 @@ class BasicSli_LatencyCriteria extends $pb.GeneratedMessage {
   factory BasicSli_LatencyCriteria({
     $0.Duration? threshold,
   }) {
-    final $result = create();
-    if (threshold != null) {
-      $result.threshold = threshold;
-    }
-    return $result;
+    final result = create();
+    if (threshold != null) result.threshold = threshold;
+    return result;
   }
-  BasicSli_LatencyCriteria._() : super();
-  factory BasicSli_LatencyCriteria.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BasicSli_LatencyCriteria.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BasicSli_LatencyCriteria._();
+
+  factory BasicSli_LatencyCriteria.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BasicSli_LatencyCriteria.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'BasicSli.LatencyCriteria',
@@ -2018,26 +1741,21 @@ class BasicSli_LatencyCriteria extends $pb.GeneratedMessage {
         subBuilder: $0.Duration.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BasicSli_LatencyCriteria clone() =>
-      BasicSli_LatencyCriteria()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BasicSli_LatencyCriteria clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BasicSli_LatencyCriteria copyWith(
           void Function(BasicSli_LatencyCriteria) updates) =>
       super.copyWith((message) => updates(message as BasicSli_LatencyCriteria))
           as BasicSli_LatencyCriteria;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BasicSli_LatencyCriteria create() => BasicSli_LatencyCriteria._();
+  @$core.override
   BasicSli_LatencyCriteria createEmptyInstance() => create();
-  static $pb.PbList<BasicSli_LatencyCriteria> createRepeated() =>
-      $pb.PbList<BasicSli_LatencyCriteria>();
   @$core.pragma('dart2js:noInline')
   static BasicSli_LatencyCriteria getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BasicSli_LatencyCriteria>(create);
@@ -2048,14 +1766,11 @@ class BasicSli_LatencyCriteria extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Duration get threshold => $_getN(0);
   @$pb.TagNumber(3)
-  set threshold($0.Duration v) {
-    setField(3, v);
-  }
-
+  set threshold($0.Duration value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasThreshold() => $_has(0);
   @$pb.TagNumber(3)
-  void clearThreshold() => clearField(3);
+  void clearThreshold() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Duration ensureThreshold() => $_ensure(0);
 }
@@ -2076,31 +1791,23 @@ class BasicSli extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? location,
     $core.Iterable<$core.String>? version,
   }) {
-    final $result = create();
-    if (availability != null) {
-      $result.availability = availability;
-    }
-    if (latency != null) {
-      $result.latency = latency;
-    }
-    if (method != null) {
-      $result.method.addAll(method);
-    }
-    if (location != null) {
-      $result.location.addAll(location);
-    }
-    if (version != null) {
-      $result.version.addAll(version);
-    }
-    return $result;
+    final result = create();
+    if (availability != null) result.availability = availability;
+    if (latency != null) result.latency = latency;
+    if (method != null) result.method.addAll(method);
+    if (location != null) result.location.addAll(location);
+    if (version != null) result.version.addAll(version);
+    return result;
   }
-  BasicSli._() : super();
-  factory BasicSli.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory BasicSli.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  BasicSli._();
+
+  factory BasicSli.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BasicSli.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, BasicSli_SliCriteria>
       _BasicSli_SliCriteriaByTag = {
@@ -2124,44 +1831,42 @@ class BasicSli extends $pb.GeneratedMessage {
     ..pPS(9, _omitFieldNames ? '' : 'version')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  BasicSli clone() => BasicSli()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BasicSli clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   BasicSli copyWith(void Function(BasicSli) updates) =>
       super.copyWith((message) => updates(message as BasicSli)) as BasicSli;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BasicSli create() => BasicSli._();
+  @$core.override
   BasicSli createEmptyInstance() => create();
-  static $pb.PbList<BasicSli> createRepeated() => $pb.PbList<BasicSli>();
   @$core.pragma('dart2js:noInline')
   static BasicSli getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BasicSli>(create);
   static BasicSli? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   BasicSli_SliCriteria whichSliCriteria() =>
       _BasicSli_SliCriteriaByTag[$_whichOneof(0)]!;
-  void clearSliCriteria() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearSliCriteria() => $_clearField($_whichOneof(0));
 
   /// Good service is defined to be the count of requests made to this service
   /// that return successfully.
   @$pb.TagNumber(2)
   BasicSli_AvailabilityCriteria get availability => $_getN(0);
   @$pb.TagNumber(2)
-  set availability(BasicSli_AvailabilityCriteria v) {
-    setField(2, v);
-  }
-
+  set availability(BasicSli_AvailabilityCriteria value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasAvailability() => $_has(0);
   @$pb.TagNumber(2)
-  void clearAvailability() => clearField(2);
+  void clearAvailability() => $_clearField(2);
   @$pb.TagNumber(2)
   BasicSli_AvailabilityCriteria ensureAvailability() => $_ensure(0);
 
@@ -2170,14 +1875,11 @@ class BasicSli extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   BasicSli_LatencyCriteria get latency => $_getN(1);
   @$pb.TagNumber(3)
-  set latency(BasicSli_LatencyCriteria v) {
-    setField(3, v);
-  }
-
+  set latency(BasicSli_LatencyCriteria value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasLatency() => $_has(1);
   @$pb.TagNumber(3)
-  void clearLatency() => clearField(3);
+  void clearLatency() => $_clearField(3);
   @$pb.TagNumber(3)
   BasicSli_LatencyCriteria ensureLatency() => $_ensure(1);
 
@@ -2187,7 +1889,7 @@ class BasicSli extends $pb.GeneratedMessage {
   /// that don't support breaking down by method, setting this field will result
   /// in an error.
   @$pb.TagNumber(7)
-  $core.List<$core.String> get method => $_getList(2);
+  $pb.PbList<$core.String> get method => $_getList(2);
 
   /// OPTIONAL: The set of locations to which this SLI is relevant. Telemetry
   /// from other locations will not be used to calculate performance for this
@@ -2195,7 +1897,7 @@ class BasicSli extends $pb.GeneratedMessage {
   /// activity. For service types that don't support breaking down by location,
   /// setting this field will result in an error.
   @$pb.TagNumber(8)
-  $core.List<$core.String> get location => $_getList(3);
+  $pb.PbList<$core.String> get location => $_getList(3);
 
   /// OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry
   /// from other API versions will not be used to calculate performance for this
@@ -2203,7 +1905,7 @@ class BasicSli extends $pb.GeneratedMessage {
   /// that don't support breaking down by version, setting this field will result
   /// in an error.
   @$pb.TagNumber(9)
-  $core.List<$core.String> get version => $_getList(4);
+  $pb.PbList<$core.String> get version => $_getList(4);
 }
 
 /// Range of numerical values within `min` and `max`.
@@ -2212,48 +1914,43 @@ class Range extends $pb.GeneratedMessage {
     $core.double? min,
     $core.double? max,
   }) {
-    final $result = create();
-    if (min != null) {
-      $result.min = min;
-    }
-    if (max != null) {
-      $result.max = max;
-    }
-    return $result;
+    final result = create();
+    if (min != null) result.min = min;
+    if (max != null) result.max = max;
+    return result;
   }
-  Range._() : super();
-  factory Range.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Range.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Range._();
+
+  factory Range.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Range.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Range',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.monitoring.v3'),
       createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'min', $pb.PbFieldType.OD)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'max', $pb.PbFieldType.OD)
+    ..aD(1, _omitFieldNames ? '' : 'min')
+    ..aD(2, _omitFieldNames ? '' : 'max')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Range clone() => Range()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Range clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Range copyWith(void Function(Range) updates) =>
       super.copyWith((message) => updates(message as Range)) as Range;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Range create() => Range._();
+  @$core.override
   Range createEmptyInstance() => create();
-  static $pb.PbList<Range> createRepeated() => $pb.PbList<Range>();
   @$core.pragma('dart2js:noInline')
   static Range getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Range>(create);
@@ -2263,27 +1960,21 @@ class Range extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.double get min => $_getN(0);
   @$pb.TagNumber(1)
-  set min($core.double v) {
-    $_setDouble(0, v);
-  }
-
+  set min($core.double value) => $_setDouble(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMin() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMin() => clearField(1);
+  void clearMin() => $_clearField(1);
 
   /// Range maximum.
   @$pb.TagNumber(2)
   $core.double get max => $_getN(1);
   @$pb.TagNumber(2)
-  set max($core.double v) {
-    $_setDouble(1, v);
-  }
-
+  set max($core.double value) => $_setDouble(1, value);
   @$pb.TagNumber(2)
   $core.bool hasMax() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMax() => clearField(2);
+  void clearMax() => $_clearField(2);
 }
 
 enum RequestBasedSli_Method { goodTotalRatio, distributionCut, notSet }
@@ -2295,22 +1986,20 @@ class RequestBasedSli extends $pb.GeneratedMessage {
     TimeSeriesRatio? goodTotalRatio,
     DistributionCut? distributionCut,
   }) {
-    final $result = create();
-    if (goodTotalRatio != null) {
-      $result.goodTotalRatio = goodTotalRatio;
-    }
-    if (distributionCut != null) {
-      $result.distributionCut = distributionCut;
-    }
-    return $result;
+    final result = create();
+    if (goodTotalRatio != null) result.goodTotalRatio = goodTotalRatio;
+    if (distributionCut != null) result.distributionCut = distributionCut;
+    return result;
   }
-  RequestBasedSli._() : super();
-  factory RequestBasedSli.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RequestBasedSli.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RequestBasedSli._();
+
+  factory RequestBasedSli.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RequestBasedSli.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, RequestBasedSli_Method>
       _RequestBasedSli_MethodByTag = {
@@ -2330,46 +2019,43 @@ class RequestBasedSli extends $pb.GeneratedMessage {
         subBuilder: DistributionCut.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RequestBasedSli clone() => RequestBasedSli()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RequestBasedSli clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RequestBasedSli copyWith(void Function(RequestBasedSli) updates) =>
       super.copyWith((message) => updates(message as RequestBasedSli))
           as RequestBasedSli;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RequestBasedSli create() => RequestBasedSli._();
+  @$core.override
   RequestBasedSli createEmptyInstance() => create();
-  static $pb.PbList<RequestBasedSli> createRepeated() =>
-      $pb.PbList<RequestBasedSli>();
   @$core.pragma('dart2js:noInline')
   static RequestBasedSli getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RequestBasedSli>(create);
   static RequestBasedSli? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(3)
   RequestBasedSli_Method whichMethod() =>
       _RequestBasedSli_MethodByTag[$_whichOneof(0)]!;
-  void clearMethod() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(3)
+  void clearMethod() => $_clearField($_whichOneof(0));
 
   /// `good_total_ratio` is used when the ratio of `good_service` to
   /// `total_service` is computed from two `TimeSeries`.
   @$pb.TagNumber(1)
   TimeSeriesRatio get goodTotalRatio => $_getN(0);
   @$pb.TagNumber(1)
-  set goodTotalRatio(TimeSeriesRatio v) {
-    setField(1, v);
-  }
-
+  set goodTotalRatio(TimeSeriesRatio value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasGoodTotalRatio() => $_has(0);
   @$pb.TagNumber(1)
-  void clearGoodTotalRatio() => clearField(1);
+  void clearGoodTotalRatio() => $_clearField(1);
   @$pb.TagNumber(1)
   TimeSeriesRatio ensureGoodTotalRatio() => $_ensure(0);
 
@@ -2380,14 +2066,11 @@ class RequestBasedSli extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   DistributionCut get distributionCut => $_getN(1);
   @$pb.TagNumber(3)
-  set distributionCut(DistributionCut v) {
-    setField(3, v);
-  }
-
+  set distributionCut(DistributionCut value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasDistributionCut() => $_has(1);
   @$pb.TagNumber(3)
-  void clearDistributionCut() => clearField(3);
+  void clearDistributionCut() => $_clearField(3);
   @$pb.TagNumber(3)
   DistributionCut ensureDistributionCut() => $_ensure(1);
 }
@@ -2404,25 +2087,22 @@ class TimeSeriesRatio extends $pb.GeneratedMessage {
     $core.String? badServiceFilter,
     $core.String? totalServiceFilter,
   }) {
-    final $result = create();
-    if (goodServiceFilter != null) {
-      $result.goodServiceFilter = goodServiceFilter;
-    }
-    if (badServiceFilter != null) {
-      $result.badServiceFilter = badServiceFilter;
-    }
-    if (totalServiceFilter != null) {
-      $result.totalServiceFilter = totalServiceFilter;
-    }
-    return $result;
+    final result = create();
+    if (goodServiceFilter != null) result.goodServiceFilter = goodServiceFilter;
+    if (badServiceFilter != null) result.badServiceFilter = badServiceFilter;
+    if (totalServiceFilter != null)
+      result.totalServiceFilter = totalServiceFilter;
+    return result;
   }
-  TimeSeriesRatio._() : super();
-  factory TimeSeriesRatio.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory TimeSeriesRatio.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  TimeSeriesRatio._();
+
+  factory TimeSeriesRatio.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory TimeSeriesRatio.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'TimeSeriesRatio',
@@ -2434,24 +2114,20 @@ class TimeSeriesRatio extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'totalServiceFilter')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  TimeSeriesRatio clone() => TimeSeriesRatio()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TimeSeriesRatio clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TimeSeriesRatio copyWith(void Function(TimeSeriesRatio) updates) =>
       super.copyWith((message) => updates(message as TimeSeriesRatio))
           as TimeSeriesRatio;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static TimeSeriesRatio create() => TimeSeriesRatio._();
+  @$core.override
   TimeSeriesRatio createEmptyInstance() => create();
-  static $pb.PbList<TimeSeriesRatio> createRepeated() =>
-      $pb.PbList<TimeSeriesRatio>();
   @$core.pragma('dart2js:noInline')
   static TimeSeriesRatio getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TimeSeriesRatio>(create);
@@ -2464,14 +2140,11 @@ class TimeSeriesRatio extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get goodServiceFilter => $_getSZ(0);
   @$pb.TagNumber(4)
-  set goodServiceFilter($core.String v) {
-    $_setString(0, v);
-  }
-
+  set goodServiceFilter($core.String value) => $_setString(0, value);
   @$pb.TagNumber(4)
   $core.bool hasGoodServiceFilter() => $_has(0);
   @$pb.TagNumber(4)
-  void clearGoodServiceFilter() => clearField(4);
+  void clearGoodServiceFilter() => $_clearField(4);
 
   /// A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
   /// specifying a `TimeSeries` quantifying bad service, either demanded service
@@ -2481,14 +2154,11 @@ class TimeSeriesRatio extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get badServiceFilter => $_getSZ(1);
   @$pb.TagNumber(5)
-  set badServiceFilter($core.String v) {
-    $_setString(1, v);
-  }
-
+  set badServiceFilter($core.String value) => $_setString(1, value);
   @$pb.TagNumber(5)
   $core.bool hasBadServiceFilter() => $_has(1);
   @$pb.TagNumber(5)
-  void clearBadServiceFilter() => clearField(5);
+  void clearBadServiceFilter() => $_clearField(5);
 
   /// A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
   /// specifying a `TimeSeries` quantifying total demanded service. Must have
@@ -2497,14 +2167,11 @@ class TimeSeriesRatio extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get totalServiceFilter => $_getSZ(2);
   @$pb.TagNumber(6)
-  set totalServiceFilter($core.String v) {
-    $_setString(2, v);
-  }
-
+  set totalServiceFilter($core.String value) => $_setString(2, value);
   @$pb.TagNumber(6)
   $core.bool hasTotalServiceFilter() => $_has(2);
   @$pb.TagNumber(6)
-  void clearTotalServiceFilter() => clearField(6);
+  void clearTotalServiceFilter() => $_clearField(6);
 }
 
 /// A `DistributionCut` defines a `TimeSeries` and thresholds used for measuring
@@ -2517,22 +2184,21 @@ class DistributionCut extends $pb.GeneratedMessage {
     $core.String? distributionFilter,
     Range? range,
   }) {
-    final $result = create();
-    if (distributionFilter != null) {
-      $result.distributionFilter = distributionFilter;
-    }
-    if (range != null) {
-      $result.range = range;
-    }
-    return $result;
+    final result = create();
+    if (distributionFilter != null)
+      result.distributionFilter = distributionFilter;
+    if (range != null) result.range = range;
+    return result;
   }
-  DistributionCut._() : super();
-  factory DistributionCut.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DistributionCut.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DistributionCut._();
+
+  factory DistributionCut.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DistributionCut.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DistributionCut',
@@ -2543,24 +2209,20 @@ class DistributionCut extends $pb.GeneratedMessage {
     ..aOM<Range>(5, _omitFieldNames ? '' : 'range', subBuilder: Range.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DistributionCut clone() => DistributionCut()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DistributionCut clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DistributionCut copyWith(void Function(DistributionCut) updates) =>
       super.copyWith((message) => updates(message as DistributionCut))
           as DistributionCut;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DistributionCut create() => DistributionCut._();
+  @$core.override
   DistributionCut createEmptyInstance() => create();
-  static $pb.PbList<DistributionCut> createRepeated() =>
-      $pb.PbList<DistributionCut>();
   @$core.pragma('dart2js:noInline')
   static DistributionCut getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DistributionCut>(create);
@@ -2572,28 +2234,22 @@ class DistributionCut extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get distributionFilter => $_getSZ(0);
   @$pb.TagNumber(4)
-  set distributionFilter($core.String v) {
-    $_setString(0, v);
-  }
-
+  set distributionFilter($core.String value) => $_setString(0, value);
   @$pb.TagNumber(4)
   $core.bool hasDistributionFilter() => $_has(0);
   @$pb.TagNumber(4)
-  void clearDistributionFilter() => clearField(4);
+  void clearDistributionFilter() => $_clearField(4);
 
   /// Range of values considered "good." For a one-sided range, set one bound to
   /// an infinite value.
   @$pb.TagNumber(5)
   Range get range => $_getN(1);
   @$pb.TagNumber(5)
-  set range(Range v) {
-    setField(5, v);
-  }
-
+  set range(Range value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasRange() => $_has(1);
   @$pb.TagNumber(5)
-  void clearRange() => clearField(5);
+  void clearRange() => $_clearField(5);
   @$pb.TagNumber(5)
   Range ensureRange() => $_ensure(1);
 }
@@ -2612,26 +2268,23 @@ class WindowsBasedSli_PerformanceThreshold extends $pb.GeneratedMessage {
     $core.double? threshold,
     BasicSli? basicSliPerformance,
   }) {
-    final $result = create();
-    if (performance != null) {
-      $result.performance = performance;
-    }
-    if (threshold != null) {
-      $result.threshold = threshold;
-    }
-    if (basicSliPerformance != null) {
-      $result.basicSliPerformance = basicSliPerformance;
-    }
-    return $result;
+    final result = create();
+    if (performance != null) result.performance = performance;
+    if (threshold != null) result.threshold = threshold;
+    if (basicSliPerformance != null)
+      result.basicSliPerformance = basicSliPerformance;
+    return result;
   }
-  WindowsBasedSli_PerformanceThreshold._() : super();
+
+  WindowsBasedSli_PerformanceThreshold._();
+
   factory WindowsBasedSli_PerformanceThreshold.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WindowsBasedSli_PerformanceThreshold.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WindowsBasedSli_PerformanceThreshold.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, WindowsBasedSli_PerformanceThreshold_Type>
       _WindowsBasedSli_PerformanceThreshold_TypeByTag = {
@@ -2647,55 +2300,51 @@ class WindowsBasedSli_PerformanceThreshold extends $pb.GeneratedMessage {
     ..oo(0, [1, 3])
     ..aOM<RequestBasedSli>(1, _omitFieldNames ? '' : 'performance',
         subBuilder: RequestBasedSli.create)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'threshold', $pb.PbFieldType.OD)
+    ..aD(2, _omitFieldNames ? '' : 'threshold')
     ..aOM<BasicSli>(3, _omitFieldNames ? '' : 'basicSliPerformance',
         subBuilder: BasicSli.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WindowsBasedSli_PerformanceThreshold clone() =>
-      WindowsBasedSli_PerformanceThreshold()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WindowsBasedSli_PerformanceThreshold clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WindowsBasedSli_PerformanceThreshold copyWith(
           void Function(WindowsBasedSli_PerformanceThreshold) updates) =>
       super.copyWith((message) =>
               updates(message as WindowsBasedSli_PerformanceThreshold))
           as WindowsBasedSli_PerformanceThreshold;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WindowsBasedSli_PerformanceThreshold create() =>
       WindowsBasedSli_PerformanceThreshold._();
+  @$core.override
   WindowsBasedSli_PerformanceThreshold createEmptyInstance() => create();
-  static $pb.PbList<WindowsBasedSli_PerformanceThreshold> createRepeated() =>
-      $pb.PbList<WindowsBasedSli_PerformanceThreshold>();
   @$core.pragma('dart2js:noInline')
   static WindowsBasedSli_PerformanceThreshold getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
           WindowsBasedSli_PerformanceThreshold>(create);
   static WindowsBasedSli_PerformanceThreshold? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(3)
   WindowsBasedSli_PerformanceThreshold_Type whichType() =>
       _WindowsBasedSli_PerformanceThreshold_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(3)
+  void clearType() => $_clearField($_whichOneof(0));
 
   /// `RequestBasedSli` to evaluate to judge window quality.
   @$pb.TagNumber(1)
   RequestBasedSli get performance => $_getN(0);
   @$pb.TagNumber(1)
-  set performance(RequestBasedSli v) {
-    setField(1, v);
-  }
-
+  set performance(RequestBasedSli value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasPerformance() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPerformance() => clearField(1);
+  void clearPerformance() => $_clearField(1);
   @$pb.TagNumber(1)
   RequestBasedSli ensurePerformance() => $_ensure(0);
 
@@ -2703,27 +2352,21 @@ class WindowsBasedSli_PerformanceThreshold extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.double get threshold => $_getN(1);
   @$pb.TagNumber(2)
-  set threshold($core.double v) {
-    $_setDouble(1, v);
-  }
-
+  set threshold($core.double value) => $_setDouble(1, value);
   @$pb.TagNumber(2)
   $core.bool hasThreshold() => $_has(1);
   @$pb.TagNumber(2)
-  void clearThreshold() => clearField(2);
+  void clearThreshold() => $_clearField(2);
 
   /// `BasicSli` to evaluate to judge window quality.
   @$pb.TagNumber(3)
   BasicSli get basicSliPerformance => $_getN(2);
   @$pb.TagNumber(3)
-  set basicSliPerformance(BasicSli v) {
-    setField(3, v);
-  }
-
+  set basicSliPerformance(BasicSli value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasBasicSliPerformance() => $_has(2);
   @$pb.TagNumber(3)
-  void clearBasicSliPerformance() => clearField(3);
+  void clearBasicSliPerformance() => $_clearField(3);
   @$pb.TagNumber(3)
   BasicSli ensureBasicSliPerformance() => $_ensure(2);
 }
@@ -2737,22 +2380,20 @@ class WindowsBasedSli_MetricRange extends $pb.GeneratedMessage {
     $core.String? timeSeries,
     Range? range,
   }) {
-    final $result = create();
-    if (timeSeries != null) {
-      $result.timeSeries = timeSeries;
-    }
-    if (range != null) {
-      $result.range = range;
-    }
-    return $result;
+    final result = create();
+    if (timeSeries != null) result.timeSeries = timeSeries;
+    if (range != null) result.range = range;
+    return result;
   }
-  WindowsBasedSli_MetricRange._() : super();
-  factory WindowsBasedSli_MetricRange.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WindowsBasedSli_MetricRange.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WindowsBasedSli_MetricRange._();
+
+  factory WindowsBasedSli_MetricRange.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WindowsBasedSli_MetricRange.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'WindowsBasedSli.MetricRange',
@@ -2763,28 +2404,23 @@ class WindowsBasedSli_MetricRange extends $pb.GeneratedMessage {
     ..aOM<Range>(4, _omitFieldNames ? '' : 'range', subBuilder: Range.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WindowsBasedSli_MetricRange clone() =>
-      WindowsBasedSli_MetricRange()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WindowsBasedSli_MetricRange clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WindowsBasedSli_MetricRange copyWith(
           void Function(WindowsBasedSli_MetricRange) updates) =>
       super.copyWith(
               (message) => updates(message as WindowsBasedSli_MetricRange))
           as WindowsBasedSli_MetricRange;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WindowsBasedSli_MetricRange create() =>
       WindowsBasedSli_MetricRange._();
+  @$core.override
   WindowsBasedSli_MetricRange createEmptyInstance() => create();
-  static $pb.PbList<WindowsBasedSli_MetricRange> createRepeated() =>
-      $pb.PbList<WindowsBasedSli_MetricRange>();
   @$core.pragma('dart2js:noInline')
   static WindowsBasedSli_MetricRange getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WindowsBasedSli_MetricRange>(create);
@@ -2795,28 +2431,22 @@ class WindowsBasedSli_MetricRange extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get timeSeries => $_getSZ(0);
   @$pb.TagNumber(1)
-  set timeSeries($core.String v) {
-    $_setString(0, v);
-  }
-
+  set timeSeries($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasTimeSeries() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTimeSeries() => clearField(1);
+  void clearTimeSeries() => $_clearField(1);
 
   /// Range of values considered "good." For a one-sided range, set one bound
   /// to an infinite value.
   @$pb.TagNumber(4)
   Range get range => $_getN(1);
   @$pb.TagNumber(4)
-  set range(Range v) {
-    setField(4, v);
-  }
-
+  set range(Range value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasRange() => $_has(1);
   @$pb.TagNumber(4)
-  void clearRange() => clearField(4);
+  void clearRange() => $_clearField(4);
   @$pb.TagNumber(4)
   Range ensureRange() => $_ensure(1);
 }
@@ -2840,31 +2470,25 @@ class WindowsBasedSli extends $pb.GeneratedMessage {
     WindowsBasedSli_MetricRange? metricMeanInRange,
     WindowsBasedSli_MetricRange? metricSumInRange,
   }) {
-    final $result = create();
-    if (goodTotalRatioThreshold != null) {
-      $result.goodTotalRatioThreshold = goodTotalRatioThreshold;
-    }
-    if (windowPeriod != null) {
-      $result.windowPeriod = windowPeriod;
-    }
-    if (goodBadMetricFilter != null) {
-      $result.goodBadMetricFilter = goodBadMetricFilter;
-    }
-    if (metricMeanInRange != null) {
-      $result.metricMeanInRange = metricMeanInRange;
-    }
-    if (metricSumInRange != null) {
-      $result.metricSumInRange = metricSumInRange;
-    }
-    return $result;
+    final result = create();
+    if (goodTotalRatioThreshold != null)
+      result.goodTotalRatioThreshold = goodTotalRatioThreshold;
+    if (windowPeriod != null) result.windowPeriod = windowPeriod;
+    if (goodBadMetricFilter != null)
+      result.goodBadMetricFilter = goodBadMetricFilter;
+    if (metricMeanInRange != null) result.metricMeanInRange = metricMeanInRange;
+    if (metricSumInRange != null) result.metricSumInRange = metricSumInRange;
+    return result;
   }
-  WindowsBasedSli._() : super();
-  factory WindowsBasedSli.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WindowsBasedSli.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  WindowsBasedSli._();
+
+  factory WindowsBasedSli.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory WindowsBasedSli.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, WindowsBasedSli_WindowCriterion>
       _WindowsBasedSli_WindowCriterionByTag = {
@@ -2894,45 +2518,47 @@ class WindowsBasedSli extends $pb.GeneratedMessage {
         subBuilder: WindowsBasedSli_MetricRange.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  WindowsBasedSli clone() => WindowsBasedSli()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  WindowsBasedSli clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   WindowsBasedSli copyWith(void Function(WindowsBasedSli) updates) =>
       super.copyWith((message) => updates(message as WindowsBasedSli))
           as WindowsBasedSli;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WindowsBasedSli create() => WindowsBasedSli._();
+  @$core.override
   WindowsBasedSli createEmptyInstance() => create();
-  static $pb.PbList<WindowsBasedSli> createRepeated() =>
-      $pb.PbList<WindowsBasedSli>();
   @$core.pragma('dart2js:noInline')
   static WindowsBasedSli getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WindowsBasedSli>(create);
   static WindowsBasedSli? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
   WindowsBasedSli_WindowCriterion whichWindowCriterion() =>
       _WindowsBasedSli_WindowCriterionByTag[$_whichOneof(0)]!;
-  void clearWindowCriterion() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  void clearWindowCriterion() => $_clearField($_whichOneof(0));
 
   /// A window is good if its `performance` is high enough.
   @$pb.TagNumber(2)
   WindowsBasedSli_PerformanceThreshold get goodTotalRatioThreshold => $_getN(0);
   @$pb.TagNumber(2)
-  set goodTotalRatioThreshold(WindowsBasedSli_PerformanceThreshold v) {
-    setField(2, v);
-  }
-
+  set goodTotalRatioThreshold(WindowsBasedSli_PerformanceThreshold value) =>
+      $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasGoodTotalRatioThreshold() => $_has(0);
   @$pb.TagNumber(2)
-  void clearGoodTotalRatioThreshold() => clearField(2);
+  void clearGoodTotalRatioThreshold() => $_clearField(2);
   @$pb.TagNumber(2)
   WindowsBasedSli_PerformanceThreshold ensureGoodTotalRatioThreshold() =>
       $_ensure(0);
@@ -2942,14 +2568,11 @@ class WindowsBasedSli extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Duration get windowPeriod => $_getN(1);
   @$pb.TagNumber(4)
-  set windowPeriod($0.Duration v) {
-    setField(4, v);
-  }
-
+  set windowPeriod($0.Duration value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasWindowPeriod() => $_has(1);
   @$pb.TagNumber(4)
-  void clearWindowPeriod() => clearField(4);
+  void clearWindowPeriod() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.Duration ensureWindowPeriod() => $_ensure(1);
 
@@ -2959,28 +2582,23 @@ class WindowsBasedSli extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get goodBadMetricFilter => $_getSZ(2);
   @$pb.TagNumber(5)
-  set goodBadMetricFilter($core.String v) {
-    $_setString(2, v);
-  }
-
+  set goodBadMetricFilter($core.String value) => $_setString(2, value);
   @$pb.TagNumber(5)
   $core.bool hasGoodBadMetricFilter() => $_has(2);
   @$pb.TagNumber(5)
-  void clearGoodBadMetricFilter() => clearField(5);
+  void clearGoodBadMetricFilter() => $_clearField(5);
 
   /// A window is good if the metric's value is in a good range, averaged
   /// across returned streams.
   @$pb.TagNumber(6)
   WindowsBasedSli_MetricRange get metricMeanInRange => $_getN(3);
   @$pb.TagNumber(6)
-  set metricMeanInRange(WindowsBasedSli_MetricRange v) {
-    setField(6, v);
-  }
-
+  set metricMeanInRange(WindowsBasedSli_MetricRange value) =>
+      $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasMetricMeanInRange() => $_has(3);
   @$pb.TagNumber(6)
-  void clearMetricMeanInRange() => clearField(6);
+  void clearMetricMeanInRange() => $_clearField(6);
   @$pb.TagNumber(6)
   WindowsBasedSli_MetricRange ensureMetricMeanInRange() => $_ensure(3);
 
@@ -2989,18 +2607,17 @@ class WindowsBasedSli extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   WindowsBasedSli_MetricRange get metricSumInRange => $_getN(4);
   @$pb.TagNumber(7)
-  set metricSumInRange(WindowsBasedSli_MetricRange v) {
-    setField(7, v);
-  }
-
+  set metricSumInRange(WindowsBasedSli_MetricRange value) =>
+      $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasMetricSumInRange() => $_has(4);
   @$pb.TagNumber(7)
-  void clearMetricSumInRange() => clearField(7);
+  void clearMetricSumInRange() => $_clearField(7);
   @$pb.TagNumber(7)
   WindowsBasedSli_MetricRange ensureMetricSumInRange() => $_ensure(4);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

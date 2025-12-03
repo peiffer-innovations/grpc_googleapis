@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/ai/generativelanguage/v1beta/file_service.proto
-//
-// @dart = 2.12
+// Generated from google/ai/generativelanguage/v1beta/file_service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -115,3 +117,25 @@ const DeleteFileRequest$json = {
 final $typed_data.Uint8List deleteFileRequestDescriptor = $convert.base64Decode(
     'ChFEZWxldGVGaWxlUmVxdWVzdBJCCgRuYW1lGAEgASgJQi7gQQL6QSgKJmdlbmVyYXRpdmVsYW'
     '5ndWFnZS5nb29nbGVhcGlzLmNvbS9GaWxlUgRuYW1l');
+
+@$core.Deprecated('Use downloadFileRequestDescriptor instead')
+const DownloadFileRequest$json = {
+  '1': 'DownloadFileRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+/// Descriptor for `DownloadFileRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List downloadFileRequestDescriptor = $convert.base64Decode(
+    'ChNEb3dubG9hZEZpbGVSZXF1ZXN0EkIKBG5hbWUYASABKAlCLuBBAvpBKAomZ2VuZXJhdGl2ZW'
+    'xhbmd1YWdlLmdvb2dsZWFwaXMuY29tL0ZpbGVSBG5hbWU=');
+
+@$core.Deprecated('Use downloadFileResponseDescriptor instead')
+const DownloadFileResponse$json = {
+  '1': 'DownloadFileResponse',
+};
+
+/// Descriptor for `DownloadFileResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List downloadFileResponseDescriptor =
+    $convert.base64Decode('ChREb3dubG9hZEZpbGVSZXNwb25zZQ==');

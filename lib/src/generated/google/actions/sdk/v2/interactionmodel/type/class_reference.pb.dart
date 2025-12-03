@@ -1,17 +1,20 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/interactionmodel/type/class_reference.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/interactionmodel/type/class_reference.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// A reference to a class which is used to declare the type of a field or return
 /// value. Enums are also a type of class that can be referenced using
@@ -21,22 +24,20 @@ class ClassReference extends $pb.GeneratedMessage {
     $core.String? name,
     $core.bool? list,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (list != null) {
-      $result.list = list;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (list != null) result.list = list;
+    return result;
   }
-  ClassReference._() : super();
-  factory ClassReference.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ClassReference.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ClassReference._();
+
+  factory ClassReference.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ClassReference.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ClassReference',
@@ -48,24 +49,20 @@ class ClassReference extends $pb.GeneratedMessage {
     ..aOB(2, _omitFieldNames ? '' : 'list')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ClassReference clone() => ClassReference()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ClassReference clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ClassReference copyWith(void Function(ClassReference) updates) =>
       super.copyWith((message) => updates(message as ClassReference))
           as ClassReference;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ClassReference create() => ClassReference._();
+  @$core.override
   ClassReference createEmptyInstance() => create();
-  static $pb.PbList<ClassReference> createRepeated() =>
-      $pb.PbList<ClassReference>();
   @$core.pragma('dart2js:noInline')
   static ClassReference getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ClassReference>(create);
@@ -76,29 +73,24 @@ class ClassReference extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Optional. Indicates whether the data type represents a list of values.
   @$pb.TagNumber(2)
   $core.bool get list => $_getBF(1);
   @$pb.TagNumber(2)
-  set list($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set list($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasList() => $_has(1);
   @$pb.TagNumber(2)
-  void clearList() => clearField(2);
+  void clearList() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

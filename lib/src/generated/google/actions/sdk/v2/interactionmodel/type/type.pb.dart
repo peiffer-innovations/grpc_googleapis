@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/actions/sdk/v2/interactionmodel/type/type.proto
-//
-// @dart = 2.12
+// Generated from google/actions/sdk/v2/interactionmodel/type/type.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -16,6 +17,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'free_text_type.pb.dart' as $2;
 import 'regular_expression_type.pb.dart' as $1;
 import 'synonym_type.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum Type_SubType { synonym, regularExpression, freeText, notSet }
 
@@ -30,28 +33,22 @@ class Type extends $pb.GeneratedMessage {
     $2.FreeTextType? freeText,
     $core.Iterable<$core.String>? exclusions,
   }) {
-    final $result = create();
-    if (synonym != null) {
-      $result.synonym = synonym;
-    }
-    if (regularExpression != null) {
-      $result.regularExpression = regularExpression;
-    }
-    if (freeText != null) {
-      $result.freeText = freeText;
-    }
-    if (exclusions != null) {
-      $result.exclusions.addAll(exclusions);
-    }
-    return $result;
+    final result = create();
+    if (synonym != null) result.synonym = synonym;
+    if (regularExpression != null) result.regularExpression = regularExpression;
+    if (freeText != null) result.freeText = freeText;
+    if (exclusions != null) result.exclusions.addAll(exclusions);
+    return result;
   }
-  Type._() : super();
-  factory Type.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Type.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Type._();
+
+  factory Type.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Type.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Type_SubType> _Type_SubTypeByTag = {
     1: Type_SubType.synonym,
@@ -76,42 +73,42 @@ class Type extends $pb.GeneratedMessage {
     ..pPS(4, _omitFieldNames ? '' : 'exclusions')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Type clone() => Type()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Type clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Type copyWith(void Function(Type) updates) =>
       super.copyWith((message) => updates(message as Type)) as Type;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Type create() => Type._();
+  @$core.override
   Type createEmptyInstance() => create();
-  static $pb.PbList<Type> createRepeated() => $pb.PbList<Type>();
   @$core.pragma('dart2js:noInline')
   static Type getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Type>(create);
   static Type? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   Type_SubType whichSubType() => _Type_SubTypeByTag[$_whichOneof(0)]!;
-  void clearSubType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearSubType() => $_clearField($_whichOneof(0));
 
   /// Synonyms type, which is essentially an enum.
   @$pb.TagNumber(1)
   $0.SynonymType get synonym => $_getN(0);
   @$pb.TagNumber(1)
-  set synonym($0.SynonymType v) {
-    setField(1, v);
-  }
-
+  set synonym($0.SynonymType value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSynonym() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSynonym() => clearField(1);
+  void clearSynonym() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.SynonymType ensureSynonym() => $_ensure(0);
 
@@ -119,14 +116,11 @@ class Type extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.RegularExpressionType get regularExpression => $_getN(1);
   @$pb.TagNumber(2)
-  set regularExpression($1.RegularExpressionType v) {
-    setField(2, v);
-  }
-
+  set regularExpression($1.RegularExpressionType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasRegularExpression() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRegularExpression() => clearField(2);
+  void clearRegularExpression() => $_clearField(2);
   @$pb.TagNumber(2)
   $1.RegularExpressionType ensureRegularExpression() => $_ensure(1);
 
@@ -134,14 +128,11 @@ class Type extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $2.FreeTextType get freeText => $_getN(2);
   @$pb.TagNumber(3)
-  set freeText($2.FreeTextType v) {
-    setField(3, v);
-  }
-
+  set freeText($2.FreeTextType value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasFreeText() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFreeText() => clearField(3);
+  void clearFreeText() => $_clearField(3);
   @$pb.TagNumber(3)
   $2.FreeTextType ensureFreeText() => $_ensure(2);
 
@@ -150,9 +141,10 @@ class Type extends $pb.GeneratedMessage {
   /// won't be returned in parameter extraction result.
   /// **This field is localizable.**
   @$pb.TagNumber(4)
-  $core.List<$core.String> get exclusions => $_getList(3);
+  $pb.PbList<$core.String> get exclusions => $_getList(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

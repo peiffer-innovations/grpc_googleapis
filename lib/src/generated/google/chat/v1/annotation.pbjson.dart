@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/chat/v1/annotation.proto
-//
-// @dart = 2.12
+// Generated from google/chat/v1/annotation.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -226,6 +228,24 @@ const RichLinkMetadata$json = {
       '9': 0,
       '10': 'chatSpaceLinkData'
     },
+    {
+      '1': 'meet_space_link_data',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.chat.v1.MeetSpaceLinkData',
+      '9': 0,
+      '10': 'meetSpaceLinkData'
+    },
+    {
+      '1': 'calendar_event_link_data',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.chat.v1.CalendarEventLinkData',
+      '9': 0,
+      '10': 'calendarEventLinkData'
+    },
   ],
   '4': [RichLinkMetadata_RichLinkType$json],
   '8': [
@@ -240,6 +260,8 @@ const RichLinkMetadata_RichLinkType$json = {
     {'1': 'RICH_LINK_TYPE_UNSPECIFIED', '2': 0},
     {'1': 'DRIVE_FILE', '2': 1},
     {'1': 'CHAT_SPACE', '2': 2},
+    {'1': 'MEET_SPACE', '2': 4},
+    {'1': 'CALENDAR_EVENT', '2': 5},
   ],
 };
 
@@ -250,8 +272,12 @@ final $typed_data.Uint8List richLinkMetadataDescriptor = $convert.base64Decode(
     'Y2hMaW5rVHlwZRJHCg9kcml2ZV9saW5rX2RhdGEYAyABKAsyHS5nb29nbGUuY2hhdC52MS5Ecm'
     'l2ZUxpbmtEYXRhSABSDWRyaXZlTGlua0RhdGESVAoUY2hhdF9zcGFjZV9saW5rX2RhdGEYBCAB'
     'KAsyIS5nb29nbGUuY2hhdC52MS5DaGF0U3BhY2VMaW5rRGF0YUgAUhFjaGF0U3BhY2VMaW5rRG'
-    'F0YSJOCgxSaWNoTGlua1R5cGUSHgoaUklDSF9MSU5LX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpE'
-    'UklWRV9GSUxFEAESDgoKQ0hBVF9TUEFDRRACQgYKBGRhdGE=');
+    'F0YRJUChRtZWV0X3NwYWNlX2xpbmtfZGF0YRgFIAEoCzIhLmdvb2dsZS5jaGF0LnYxLk1lZXRT'
+    'cGFjZUxpbmtEYXRhSABSEW1lZXRTcGFjZUxpbmtEYXRhEmAKGGNhbGVuZGFyX2V2ZW50X2xpbm'
+    'tfZGF0YRgGIAEoCzIlLmdvb2dsZS5jaGF0LnYxLkNhbGVuZGFyRXZlbnRMaW5rRGF0YUgAUhVj'
+    'YWxlbmRhckV2ZW50TGlua0RhdGEicgoMUmljaExpbmtUeXBlEh4KGlJJQ0hfTElOS19UWVBFX1'
+    'VOU1BFQ0lGSUVEEAASDgoKRFJJVkVfRklMRRABEg4KCkNIQVRfU1BBQ0UQAhIOCgpNRUVUX1NQ'
+    'QUNFEAQSEgoOQ0FMRU5EQVJfRVZFTlQQBUIGCgRkYXRh');
 
 @$core.Deprecated('Use customEmojiMetadataDescriptor instead')
 const CustomEmojiMetadata$json = {
@@ -311,3 +337,74 @@ final $typed_data.Uint8List chatSpaceLinkDataDescriptor = $convert.base64Decode(
     'MuY29tL1NwYWNlUgVzcGFjZRI3CgZ0aHJlYWQYAiABKAlCH/pBHAoaY2hhdC5nb29nbGVhcGlz'
     'LmNvbS9UaHJlYWRSBnRocmVhZBI6CgdtZXNzYWdlGAMgASgJQiD6QR0KG2NoYXQuZ29vZ2xlYX'
     'Bpcy5jb20vTWVzc2FnZVIHbWVzc2FnZQ==');
+
+@$core.Deprecated('Use meetSpaceLinkDataDescriptor instead')
+const MeetSpaceLinkData$json = {
+  '1': 'MeetSpaceLinkData',
+  '2': [
+    {'1': 'meeting_code', '3': 1, '4': 1, '5': 9, '10': 'meetingCode'},
+    {
+      '1': 'type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.chat.v1.MeetSpaceLinkData.Type',
+      '10': 'type'
+    },
+    {
+      '1': 'huddle_status',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.chat.v1.MeetSpaceLinkData.HuddleStatus',
+      '8': {},
+      '10': 'huddleStatus'
+    },
+  ],
+  '4': [MeetSpaceLinkData_Type$json, MeetSpaceLinkData_HuddleStatus$json],
+};
+
+@$core.Deprecated('Use meetSpaceLinkDataDescriptor instead')
+const MeetSpaceLinkData_Type$json = {
+  '1': 'Type',
+  '2': [
+    {'1': 'TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'MEETING', '2': 1},
+    {'1': 'HUDDLE', '2': 2},
+  ],
+};
+
+@$core.Deprecated('Use meetSpaceLinkDataDescriptor instead')
+const MeetSpaceLinkData_HuddleStatus$json = {
+  '1': 'HuddleStatus',
+  '2': [
+    {'1': 'HUDDLE_STATUS_UNSPECIFIED', '2': 0},
+    {'1': 'STARTED', '2': 1},
+    {'1': 'ENDED', '2': 2},
+    {'1': 'MISSED', '2': 3},
+  ],
+};
+
+/// Descriptor for `MeetSpaceLinkData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List meetSpaceLinkDataDescriptor = $convert.base64Decode(
+    'ChFNZWV0U3BhY2VMaW5rRGF0YRIhCgxtZWV0aW5nX2NvZGUYASABKAlSC21lZXRpbmdDb2RlEj'
+    'oKBHR5cGUYAiABKA4yJi5nb29nbGUuY2hhdC52MS5NZWV0U3BhY2VMaW5rRGF0YS5UeXBlUgR0'
+    'eXBlElsKDWh1ZGRsZV9zdGF0dXMYAyABKA4yLi5nb29nbGUuY2hhdC52MS5NZWV0U3BhY2VMaW'
+    '5rRGF0YS5IdWRkbGVTdGF0dXNCBuBBAeBBA1IMaHVkZGxlU3RhdHVzIjUKBFR5cGUSFAoQVFlQ'
+    'RV9VTlNQRUNJRklFRBAAEgsKB01FRVRJTkcQARIKCgZIVURETEUQAiJRCgxIdWRkbGVTdGF0dX'
+    'MSHQoZSFVERExFX1NUQVRVU19VTlNQRUNJRklFRBAAEgsKB1NUQVJURUQQARIJCgVFTkRFRBAC'
+    'EgoKBk1JU1NFRBAD');
+
+@$core.Deprecated('Use calendarEventLinkDataDescriptor instead')
+const CalendarEventLinkData$json = {
+  '1': 'CalendarEventLinkData',
+  '2': [
+    {'1': 'calendar_id', '3': 1, '4': 1, '5': 9, '10': 'calendarId'},
+    {'1': 'event_id', '3': 2, '4': 1, '5': 9, '10': 'eventId'},
+  ],
+};
+
+/// Descriptor for `CalendarEventLinkData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List calendarEventLinkDataDescriptor = $convert.base64Decode(
+    'ChVDYWxlbmRhckV2ZW50TGlua0RhdGESHwoLY2FsZW5kYXJfaWQYASABKAlSCmNhbGVuZGFySW'
+    'QSGQoIZXZlbnRfaWQYAiABKAlSB2V2ZW50SWQ=');

@@ -1,21 +1,25 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/iam/v3beta/policy_binding_resources.proto
-//
-// @dart = 2.12
+// Generated from google/iam/v3beta/policy_binding_resources.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $1;
 
-import '../../protobuf/timestamp.pb.dart' as $1;
 import '../../type/expr.pb.dart' as $0;
 import 'policy_binding_resources.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'policy_binding_resources.pbenum.dart';
 
@@ -27,19 +31,19 @@ class PolicyBinding_Target extends $pb.GeneratedMessage {
   factory PolicyBinding_Target({
     $core.String? principalSet,
   }) {
-    final $result = create();
-    if (principalSet != null) {
-      $result.principalSet = principalSet;
-    }
-    return $result;
+    final result = create();
+    if (principalSet != null) result.principalSet = principalSet;
+    return result;
   }
-  PolicyBinding_Target._() : super();
-  factory PolicyBinding_Target.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PolicyBinding_Target.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PolicyBinding_Target._();
+
+  factory PolicyBinding_Target.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PolicyBinding_Target.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, PolicyBinding_Target_Target>
       _PolicyBinding_Target_TargetByTag = {
@@ -55,70 +59,71 @@ class PolicyBinding_Target extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'principalSet')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PolicyBinding_Target clone() =>
-      PolicyBinding_Target()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PolicyBinding_Target clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PolicyBinding_Target copyWith(void Function(PolicyBinding_Target) updates) =>
       super.copyWith((message) => updates(message as PolicyBinding_Target))
           as PolicyBinding_Target;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PolicyBinding_Target create() => PolicyBinding_Target._();
+  @$core.override
   PolicyBinding_Target createEmptyInstance() => create();
-  static $pb.PbList<PolicyBinding_Target> createRepeated() =>
-      $pb.PbList<PolicyBinding_Target>();
   @$core.pragma('dart2js:noInline')
   static PolicyBinding_Target getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PolicyBinding_Target>(create);
   static PolicyBinding_Target? _defaultInstance;
 
+  @$pb.TagNumber(1)
   PolicyBinding_Target_Target whichTarget() =>
       _PolicyBinding_Target_TargetByTag[$_whichOneof(0)]!;
-  void clearTarget() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  void clearTarget() => $_clearField($_whichOneof(0));
 
-  ///  Immutable. Full Resource Name used for principal access boundary policy
-  ///  bindings Examples:
+  /// Immutable. Full Resource Name used for principal access boundary policy
+  /// bindings. The principal set must be directly parented by the policy
+  /// binding's parent or same as the parent if the target is a
+  /// project/folder/organization.
   ///
-  ///  * Organization:
-  ///  `//cloudresourcemanager.googleapis.com/organizations/ORGANIZATION_ID`
-  ///  * Folder: `//cloudresourcemanager.googleapis.com/folders/FOLDER_ID`
-  ///  * Project:
-  ///      * `//cloudresourcemanager.googleapis.com/projects/PROJECT_NUMBER`
-  ///      * `//cloudresourcemanager.googleapis.com/projects/PROJECT_ID`
-  ///  * Workload Identity Pool:
-  ///  `//iam.googleapis.com/projects/PROJECT_NUMBER/locations/LOCATION/workloadIdentityPools/WORKLOAD_POOL_ID`
-  ///  * Workforce Identity:
-  ///  `//iam.googleapis.com/locations/global/workforcePools/WORKFORCE_POOL_ID`
-  ///  * Workspace Identity:
-  ///  `//iam.googleapis.com/locations/global/workspace/WORKSPACE_ID`
+  /// Examples:
+  /// * For binding's parented by an organization:
+  ///   * Organization:
+  ///   `//cloudresourcemanager.googleapis.com/organizations/ORGANIZATION_ID`
+  ///   * Workforce Identity:
+  ///   `//iam.googleapis.com/locations/global/workforcePools/WORKFORCE_POOL_ID`
+  ///   * Workspace Identity:
+  ///   `//iam.googleapis.com/locations/global/workspace/WORKSPACE_ID`
+  /// * For binding's parented by a folder:
+  ///   * Folder:
+  ///   `//cloudresourcemanager.googleapis.com/folders/FOLDER_ID`
+  /// * For binding's parented by a project:
+  ///   * Project:
+  ///     * `//cloudresourcemanager.googleapis.com/projects/PROJECT_NUMBER`
+  ///     * `//cloudresourcemanager.googleapis.com/projects/PROJECT_ID`
+  ///   * Workload Identity Pool:
+  ///   `//iam.googleapis.com/projects/PROJECT_NUMBER/locations/LOCATION/workloadIdentityPools/WORKLOAD_POOL_ID`
   @$pb.TagNumber(1)
   $core.String get principalSet => $_getSZ(0);
   @$pb.TagNumber(1)
-  set principalSet($core.String v) {
-    $_setString(0, v);
-  }
-
+  set principalSet($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPrincipalSet() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPrincipalSet() => clearField(1);
+  void clearPrincipalSet() => $_clearField(1);
 }
 
-/// IAM policy binding
+/// IAM policy binding resource.
 class PolicyBinding extends $pb.GeneratedMessage {
   factory PolicyBinding({
     $core.String? name,
     $core.String? uid,
     $core.String? etag,
     $core.String? displayName,
-    $core.Map<$core.String, $core.String>? annotations,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? annotations,
     PolicyBinding_Target? target,
     $core.String? policy,
     $0.Expr? condition,
@@ -127,52 +132,30 @@ class PolicyBinding extends $pb.GeneratedMessage {
     PolicyBinding_PolicyKind? policyKind,
     $core.String? policyUid,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (uid != null) {
-      $result.uid = uid;
-    }
-    if (etag != null) {
-      $result.etag = etag;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (annotations != null) {
-      $result.annotations.addAll(annotations);
-    }
-    if (target != null) {
-      $result.target = target;
-    }
-    if (policy != null) {
-      $result.policy = policy;
-    }
-    if (condition != null) {
-      $result.condition = condition;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    if (updateTime != null) {
-      $result.updateTime = updateTime;
-    }
-    if (policyKind != null) {
-      $result.policyKind = policyKind;
-    }
-    if (policyUid != null) {
-      $result.policyUid = policyUid;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (uid != null) result.uid = uid;
+    if (etag != null) result.etag = etag;
+    if (displayName != null) result.displayName = displayName;
+    if (annotations != null) result.annotations.addEntries(annotations);
+    if (target != null) result.target = target;
+    if (policy != null) result.policy = policy;
+    if (condition != null) result.condition = condition;
+    if (createTime != null) result.createTime = createTime;
+    if (updateTime != null) result.updateTime = updateTime;
+    if (policyKind != null) result.policyKind = policyKind;
+    if (policyUid != null) result.policyUid = policyUid;
+    return result;
   }
-  PolicyBinding._() : super();
-  factory PolicyBinding.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PolicyBinding.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PolicyBinding._();
+
+  factory PolicyBinding.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PolicyBinding.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PolicyBinding',
@@ -197,184 +180,157 @@ class PolicyBinding extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..aOM<$1.Timestamp>(10, _omitFieldNames ? '' : 'updateTime',
         subBuilder: $1.Timestamp.create)
-    ..e<PolicyBinding_PolicyKind>(
-        11, _omitFieldNames ? '' : 'policyKind', $pb.PbFieldType.OE,
-        defaultOrMaker: PolicyBinding_PolicyKind.POLICY_KIND_UNSPECIFIED,
-        valueOf: PolicyBinding_PolicyKind.valueOf,
+    ..aE<PolicyBinding_PolicyKind>(11, _omitFieldNames ? '' : 'policyKind',
         enumValues: PolicyBinding_PolicyKind.values)
     ..aOS(12, _omitFieldNames ? '' : 'policyUid')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PolicyBinding clone() => PolicyBinding()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PolicyBinding clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PolicyBinding copyWith(void Function(PolicyBinding) updates) =>
       super.copyWith((message) => updates(message as PolicyBinding))
           as PolicyBinding;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PolicyBinding create() => PolicyBinding._();
+  @$core.override
   PolicyBinding createEmptyInstance() => create();
-  static $pb.PbList<PolicyBinding> createRepeated() =>
-      $pb.PbList<PolicyBinding>();
   @$core.pragma('dart2js:noInline')
   static PolicyBinding getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PolicyBinding>(create);
   static PolicyBinding? _defaultInstance;
 
-  ///  Identifier. The name of the policy binding, in the format
-  ///  `{binding_parent/locations/{location}/policyBindings/{policy_binding_id}`.
-  ///  The binding parent is the closest Resource Manager resource (i.e., Project,
-  ///  Folder or Organization) to the binding target.
+  /// Identifier. The name of the policy binding, in the format
+  /// `{binding_parent/locations/{location}/policyBindings/{policy_binding_id}`.
+  /// The binding parent is the closest Resource Manager resource (project,
+  /// folder, or organization) to the binding target.
   ///
-  ///  Format:
+  /// Format:
   ///
-  ///  * `projects/{project_id}/locations/{location}/policyBindings/{policy_binding_id}`
-  ///  * `projects/{project_number}/locations/{location}/policyBindings/{policy_binding_id}`
-  ///  * `folders/{folder_id}/locations/{location}/policyBindings/{policy_binding_id}`
-  ///  * `organizations/{organization_id}/locations/{location}/policyBindings/{policy_binding_id}`
+  /// * `projects/{project_id}/locations/{location}/policyBindings/{policy_binding_id}`
+  /// * `projects/{project_number}/locations/{location}/policyBindings/{policy_binding_id}`
+  /// * `folders/{folder_id}/locations/{location}/policyBindings/{policy_binding_id}`
+  /// * `organizations/{organization_id}/locations/{location}/policyBindings/{policy_binding_id}`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Output only. The globally unique ID of the policy binding. Assigned when
   /// the policy binding is created.
   @$pb.TagNumber(2)
   $core.String get uid => $_getSZ(1);
   @$pb.TagNumber(2)
-  set uid($core.String v) {
-    $_setString(1, v);
-  }
-
+  set uid($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUid() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUid() => clearField(2);
+  void clearUid() => $_clearField(2);
 
   /// Optional. The etag for the policy binding.
   /// If this is provided on update, it must match the server's etag.
   @$pb.TagNumber(3)
   $core.String get etag => $_getSZ(2);
   @$pb.TagNumber(3)
-  set etag($core.String v) {
-    $_setString(2, v);
-  }
-
+  set etag($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasEtag() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEtag() => clearField(3);
+  void clearEtag() => $_clearField(3);
 
   /// Optional. The description of the policy binding. Must be less than or equal
   /// to 63 characters.
   @$pb.TagNumber(4)
   $core.String get displayName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set displayName($core.String v) {
-    $_setString(3, v);
-  }
-
+  set displayName($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDisplayName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDisplayName() => clearField(4);
+  void clearDisplayName() => $_clearField(4);
 
-  /// Optional. User defined annotations. See
+  /// Optional. User-defined annotations. See
   /// https://google.aip.dev/148#annotations for more details such as format and
   /// size limitations
   @$pb.TagNumber(5)
-  $core.Map<$core.String, $core.String> get annotations => $_getMap(4);
+  $pb.PbMap<$core.String, $core.String> get annotations => $_getMap(4);
 
   /// Required. Immutable. Target is the full resource name of the resource to
   /// which the policy will be bound. Immutable once set.
   @$pb.TagNumber(6)
   PolicyBinding_Target get target => $_getN(5);
   @$pb.TagNumber(6)
-  set target(PolicyBinding_Target v) {
-    setField(6, v);
-  }
-
+  set target(PolicyBinding_Target value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasTarget() => $_has(5);
   @$pb.TagNumber(6)
-  void clearTarget() => clearField(6);
+  void clearTarget() => $_clearField(6);
   @$pb.TagNumber(6)
   PolicyBinding_Target ensureTarget() => $_ensure(5);
 
   /// Required. Immutable. The resource name of the policy to be bound. The
-  /// binding parent and policy must belong to the same Organization (or
-  /// Project).
+  /// binding parent and policy must belong to the same organization.
   @$pb.TagNumber(7)
   $core.String get policy => $_getSZ(6);
   @$pb.TagNumber(7)
-  set policy($core.String v) {
-    $_setString(6, v);
-  }
-
+  set policy($core.String value) => $_setString(6, value);
   @$pb.TagNumber(7)
   $core.bool hasPolicy() => $_has(6);
   @$pb.TagNumber(7)
-  void clearPolicy() => clearField(7);
+  void clearPolicy() => $_clearField(7);
 
-  ///  Optional. Condition can either be a principal condition or a resource
-  ///  condition. It depends on the type of target, the policy it is attached to,
-  ///  and/or the expression itself. When set, the `expression` field in the
-  ///  `Expr` must include from 1 to 10 subexpressions, joined by the "||"(Logical
-  ///  OR),
-  ///  "&&"(Logical AND) or "!"(Logical NOT) operators and cannot contain more
-  ///  than 250 characters.
-  ///  Allowed operations for principal.subject:
+  /// Optional. The condition to apply to the policy binding. When set, the
+  /// `expression` field in the `Expr` must include from 1 to 10 subexpressions,
+  /// joined by the
+  /// "||"(Logical OR), "&&"(Logical AND) or "!"(Logical NOT) operators and
+  /// cannot contain more than 250 characters.
   ///
-  ///  - `principal.subject == <principal subject string>`
-  ///  - `principal.subject != <principal subject string>`
-  ///  - `principal.subject in [<list of principal subjects>]`
-  ///  - `principal.subject.startsWith(<string>)`
-  ///  - `principal.subject.endsWith(<string>)`
+  /// The condition is currently only supported when bound to policies of kind
+  /// principal access boundary.
   ///
-  ///  Allowed operations for principal.type:
+  /// When the bound policy is a principal access boundary policy, the only
+  /// supported attributes in any subexpression are `principal.type` and
+  /// `principal.subject`. An example expression is: "principal.type ==
+  /// 'iam.googleapis.com/ServiceAccount'" or "principal.subject ==
+  /// 'bob@example.com'".
   ///
-  ///  - `principal.type == <principal type string>`
-  ///  - `principal.type != <principal type string>`
-  ///  - `principal.type in [<list of principal types>]`
+  /// Allowed operations for `principal.subject`:
   ///
-  ///  Supported principal types are Workspace, Workforce Pool, Workload Pool and
-  ///  Service Account. Allowed string must be one of:
+  /// - `principal.subject == <principal subject string>`
+  /// - `principal.subject != <principal subject string>`
+  /// - `principal.subject in [<list of principal subjects>]`
+  /// - `principal.subject.startsWith(<string>)`
+  /// - `principal.subject.endsWith(<string>)`
   ///
-  ///  - iam.googleapis.com/WorkspaceIdentity
-  ///  - iam.googleapis.com/WorkforcePoolIdentity
-  ///  - iam.googleapis.com/WorkloadPoolIdentity
-  ///  - iam.googleapis.com/ServiceAccount
+  /// Allowed operations for `principal.type`:
   ///
-  ///  When the bound policy is a principal access boundary policy, the only
-  ///  supported attributes in any subexpression are `principal.type` and
-  ///  `principal.subject`. An example expression is: "principal.type ==
-  ///  'iam.googleapis.com/ServiceAccount'" or "principal.subject ==
-  ///  'bob@example.com'".
+  /// - `principal.type == <principal type string>`
+  /// - `principal.type != <principal type string>`
+  /// - `principal.type in [<list of principal types>]`
+  ///
+  /// Supported principal types are Workspace, Workforce Pool, Workload Pool and
+  /// Service Account. Allowed string must be one of:
+  ///
+  /// - iam.googleapis.com/WorkspaceIdentity
+  /// - iam.googleapis.com/WorkforcePoolIdentity
+  /// - iam.googleapis.com/WorkloadPoolIdentity
+  /// - iam.googleapis.com/ServiceAccount
   @$pb.TagNumber(8)
   $0.Expr get condition => $_getN(7);
   @$pb.TagNumber(8)
-  set condition($0.Expr v) {
-    setField(8, v);
-  }
-
+  set condition($0.Expr value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasCondition() => $_has(7);
   @$pb.TagNumber(8)
-  void clearCondition() => clearField(8);
+  void clearCondition() => $_clearField(8);
   @$pb.TagNumber(8)
   $0.Expr ensureCondition() => $_ensure(7);
 
@@ -382,14 +338,11 @@ class PolicyBinding extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $1.Timestamp get createTime => $_getN(8);
   @$pb.TagNumber(9)
-  set createTime($1.Timestamp v) {
-    setField(9, v);
-  }
-
+  set createTime($1.Timestamp value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasCreateTime() => $_has(8);
   @$pb.TagNumber(9)
-  void clearCreateTime() => clearField(9);
+  void clearCreateTime() => $_clearField(9);
   @$pb.TagNumber(9)
   $1.Timestamp ensureCreateTime() => $_ensure(8);
 
@@ -397,48 +350,40 @@ class PolicyBinding extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $1.Timestamp get updateTime => $_getN(9);
   @$pb.TagNumber(10)
-  set updateTime($1.Timestamp v) {
-    setField(10, v);
-  }
-
+  set updateTime($1.Timestamp value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasUpdateTime() => $_has(9);
   @$pb.TagNumber(10)
-  void clearUpdateTime() => clearField(10);
+  void clearUpdateTime() => $_clearField(10);
   @$pb.TagNumber(10)
   $1.Timestamp ensureUpdateTime() => $_ensure(9);
 
-  ///  Immutable. The kind of the policy to attach in this binding. This field
-  ///  must be one of the following:
+  /// Immutable. The kind of the policy to attach in this binding. This field
+  /// must be one of the following:
   ///
-  ///  - Left empty (will be automatically set to the policy kind)
-  ///  - The input policy kind
+  /// - Left empty (will be automatically set to the policy kind)
+  /// - The input policy kind
   @$pb.TagNumber(11)
   PolicyBinding_PolicyKind get policyKind => $_getN(10);
   @$pb.TagNumber(11)
-  set policyKind(PolicyBinding_PolicyKind v) {
-    setField(11, v);
-  }
-
+  set policyKind(PolicyBinding_PolicyKind value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasPolicyKind() => $_has(10);
   @$pb.TagNumber(11)
-  void clearPolicyKind() => clearField(11);
+  void clearPolicyKind() => $_clearField(11);
 
   /// Output only. The globally unique ID of the policy to be bound.
   @$pb.TagNumber(12)
   $core.String get policyUid => $_getSZ(11);
   @$pb.TagNumber(12)
-  set policyUid($core.String v) {
-    $_setString(11, v);
-  }
-
+  set policyUid($core.String value) => $_setString(11, value);
   @$pb.TagNumber(12)
   $core.bool hasPolicyUid() => $_has(11);
   @$pb.TagNumber(12)
-  void clearPolicyUid() => clearField(12);
+  void clearPolicyUid() => $_clearField(12);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/ai/generativelanguage/v1beta2/model_service.proto
-//
-// @dart = 2.12
+// Generated from google/ai/generativelanguage/v1beta2/model_service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:async' as $async;
 import 'dart:core' as $core;
@@ -20,34 +21,46 @@ import 'model_service.pb.dart' as $0;
 
 export 'model_service.pb.dart';
 
+/// Provides methods for getting metadata information about Generative Models.
 @$pb.GrpcServiceName('google.ai.generativelanguage.v1beta2.ModelService')
 class ModelServiceClient extends $grpc.Client {
+  /// The hostname for this service.
+  static const $core.String defaultHost = 'generativelanguage.googleapis.com';
+
+  /// OAuth scopes needed for the client.
+  static const $core.List<$core.String> oauthScopes = [
+    '',
+  ];
+
+  ModelServiceClient(super.channel, {super.options, super.interceptors});
+
+  /// Gets information about a specific Model.
+  $grpc.ResponseFuture<$1.Model> getModel(
+    $0.GetModelRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$getModel, request, options: options);
+  }
+
+  /// Lists models available through the API.
+  $grpc.ResponseFuture<$0.ListModelsResponse> listModels(
+    $0.ListModelsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listModels, request, options: options);
+  }
+
+  // method descriptors
+
   static final _$getModel = $grpc.ClientMethod<$0.GetModelRequest, $1.Model>(
       '/google.ai.generativelanguage.v1beta2.ModelService/GetModel',
       ($0.GetModelRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Model.fromBuffer(value));
+      $1.Model.fromBuffer);
   static final _$listModels =
       $grpc.ClientMethod<$0.ListModelsRequest, $0.ListModelsResponse>(
           '/google.ai.generativelanguage.v1beta2.ModelService/ListModels',
           ($0.ListModelsRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $0.ListModelsResponse.fromBuffer(value));
-
-  ModelServiceClient($grpc.ClientChannel channel,
-      {$grpc.CallOptions? options,
-      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
-      : super(channel, options: options, interceptors: interceptors);
-
-  $grpc.ResponseFuture<$1.Model> getModel($0.GetModelRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getModel, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$0.ListModelsResponse> listModels(
-      $0.ListModelsRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$listModels, request, options: options);
-  }
+          $0.ListModelsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('google.ai.generativelanguage.v1beta2.ModelService')
@@ -71,18 +84,19 @@ abstract class ModelServiceBase extends $grpc.Service {
         ($0.ListModelsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.Model> getModel_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.GetModelRequest> request) async {
-    return getModel(call, await request);
-  }
-
-  $async.Future<$0.ListModelsResponse> listModels_Pre($grpc.ServiceCall call,
-      $async.Future<$0.ListModelsRequest> request) async {
-    return listModels(call, await request);
+  $async.Future<$1.Model> getModel_Pre($grpc.ServiceCall $call,
+      $async.Future<$0.GetModelRequest> $request) async {
+    return getModel($call, await $request);
   }
 
   $async.Future<$1.Model> getModel(
       $grpc.ServiceCall call, $0.GetModelRequest request);
+
+  $async.Future<$0.ListModelsResponse> listModels_Pre($grpc.ServiceCall $call,
+      $async.Future<$0.ListModelsRequest> $request) async {
+    return listModels($call, await $request);
+  }
+
   $async.Future<$0.ListModelsResponse> listModels(
       $grpc.ServiceCall call, $0.ListModelsRequest request);
 }

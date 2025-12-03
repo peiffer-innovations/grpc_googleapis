@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/genomics/v1/variants.proto
-//
-// @dart = 2.12
+// Generated from google/genomics/v1/variants.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -21,8 +22,16 @@ class InfoMergeOperation extends $pb.ProtobufEnum {
   static const InfoMergeOperation INFO_MERGE_OPERATION_UNSPECIFIED =
       InfoMergeOperation._(
           0, _omitEnumNames ? '' : 'INFO_MERGE_OPERATION_UNSPECIFIED');
+
+  /// By default, Variant info fields are persisted if the Variant doesn't
+  /// already exist in the variantset.  If the Variant is equivalent to a
+  /// Variant already in the variantset, the incoming Variant's info field
+  /// is ignored in favor of that of the already persisted Variant.
   static const InfoMergeOperation IGNORE_NEW =
       InfoMergeOperation._(1, _omitEnumNames ? '' : 'IGNORE_NEW');
+
+  /// This operation removes an info field from the incoming Variant
+  /// and persists this info field in each of the incoming Variant's Calls.
   static const InfoMergeOperation MOVE_TO_CALLS =
       InfoMergeOperation._(2, _omitEnumNames ? '' : 'MOVE_TO_CALLS');
 
@@ -32,11 +41,12 @@ class InfoMergeOperation extends $pb.ProtobufEnum {
     MOVE_TO_CALLS,
   ];
 
-  static final $core.Map<$core.int, InfoMergeOperation> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static InfoMergeOperation? valueOf($core.int value) => _byValue[value];
+  static final $core.List<InfoMergeOperation?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static InfoMergeOperation? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const InfoMergeOperation._($core.int v, $core.String n) : super(v, n);
+  const InfoMergeOperation._(super.value, super.name);
 }
 
 class VariantSetMetadata_Type extends $pb.ProtobufEnum {
@@ -63,19 +73,26 @@ class VariantSetMetadata_Type extends $pb.ProtobufEnum {
     STRING,
   ];
 
-  static final $core.Map<$core.int, VariantSetMetadata_Type> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static VariantSetMetadata_Type? valueOf($core.int value) => _byValue[value];
+  static final $core.List<VariantSetMetadata_Type?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 5);
+  static VariantSetMetadata_Type? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const VariantSetMetadata_Type._($core.int v, $core.String n) : super(v, n);
+  const VariantSetMetadata_Type._(super.value, super.name);
 }
 
 class ImportVariantsRequest_Format extends $pb.ProtobufEnum {
   static const ImportVariantsRequest_Format FORMAT_UNSPECIFIED =
       ImportVariantsRequest_Format._(
           0, _omitEnumNames ? '' : 'FORMAT_UNSPECIFIED');
+
+  /// VCF (Variant Call Format). The VCF files may be gzip compressed. gVCF is
+  /// also supported.
   static const ImportVariantsRequest_Format FORMAT_VCF =
       ImportVariantsRequest_Format._(1, _omitEnumNames ? '' : 'FORMAT_VCF');
+
+  /// Complete Genomics masterVarBeta format. The masterVarBeta files may
+  /// be bzip2 compressed.
   static const ImportVariantsRequest_Format FORMAT_COMPLETE_GENOMICS =
       ImportVariantsRequest_Format._(
           2, _omitEnumNames ? '' : 'FORMAT_COMPLETE_GENOMICS');
@@ -87,19 +104,20 @@ class ImportVariantsRequest_Format extends $pb.ProtobufEnum {
     FORMAT_COMPLETE_GENOMICS,
   ];
 
-  static final $core.Map<$core.int, ImportVariantsRequest_Format> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
+  static final $core.List<ImportVariantsRequest_Format?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
   static ImportVariantsRequest_Format? valueOf($core.int value) =>
-      _byValue[value];
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const ImportVariantsRequest_Format._($core.int v, $core.String n)
-      : super(v, n);
+  const ImportVariantsRequest_Format._(super.value, super.name);
 }
 
 class ExportVariantSetRequest_Format extends $pb.ProtobufEnum {
   static const ExportVariantSetRequest_Format FORMAT_UNSPECIFIED =
       ExportVariantSetRequest_Format._(
           0, _omitEnumNames ? '' : 'FORMAT_UNSPECIFIED');
+
+  /// Export the data to Google BigQuery.
   static const ExportVariantSetRequest_Format FORMAT_BIGQUERY =
       ExportVariantSetRequest_Format._(
           1, _omitEnumNames ? '' : 'FORMAT_BIGQUERY');
@@ -110,13 +128,13 @@ class ExportVariantSetRequest_Format extends $pb.ProtobufEnum {
     FORMAT_BIGQUERY,
   ];
 
-  static final $core.Map<$core.int, ExportVariantSetRequest_Format> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
+  static final $core.List<ExportVariantSetRequest_Format?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 1);
   static ExportVariantSetRequest_Format? valueOf($core.int value) =>
-      _byValue[value];
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const ExportVariantSetRequest_Format._($core.int v, $core.String n)
-      : super(v, n);
+  const ExportVariantSetRequest_Format._(super.value, super.name);
 }
 
-const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');
+const $core.bool _omitEnumNames =
+    $core.bool.fromEnvironment('protobuf.omit_enum_names');

@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/ai/generativelanguage/v1beta/retriever_service.proto
-//
-// @dart = 2.12
+// Generated from google/ai/generativelanguage/v1beta/retriever_service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -203,6 +205,14 @@ const RelevantChunk$json = {
       '6': '.google.ai.generativelanguage.v1beta.Chunk',
       '10': 'chunk'
     },
+    {
+      '1': 'document',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.ai.generativelanguage.v1beta.Document',
+      '10': 'document'
+    },
   ],
 };
 
@@ -210,7 +220,8 @@ const RelevantChunk$json = {
 final $typed_data.Uint8List relevantChunkDescriptor = $convert.base64Decode(
     'Cg1SZWxldmFudENodW5rEjIKFWNodW5rX3JlbGV2YW5jZV9zY29yZRgBIAEoAlITY2h1bmtSZW'
     'xldmFuY2VTY29yZRJACgVjaHVuaxgCIAEoCzIqLmdvb2dsZS5haS5nZW5lcmF0aXZlbGFuZ3Vh'
-    'Z2UudjFiZXRhLkNodW5rUgVjaHVuaw==');
+    'Z2UudjFiZXRhLkNodW5rUgVjaHVuaxJJCghkb2N1bWVudBgDIAEoCzItLmdvb2dsZS5haS5nZW'
+    '5lcmF0aXZlbGFuZ3VhZ2UudjFiZXRhLkRvY3VtZW50Ughkb2N1bWVudA==');
 
 @$core.Deprecated('Use createDocumentRequestDescriptor instead')
 const CreateDocumentRequest$json = {

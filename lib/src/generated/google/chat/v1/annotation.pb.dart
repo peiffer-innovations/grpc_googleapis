@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/chat/v1/annotation.proto
-//
-// @dart = 2.12
+// Generated from google/chat/v1/annotation.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -19,6 +20,8 @@ import 'attachment.pb.dart' as $2;
 import 'reaction.pb.dart' as $1;
 import 'user.pb.dart' as $0;
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 export 'annotation.pbenum.dart';
 
 enum Annotation_Metadata {
@@ -29,33 +32,34 @@ enum Annotation_Metadata {
   notSet
 }
 
-///  Output only. Annotations associated with the plain-text body of the message.
-///  To add basic formatting to a text message, see
-///  [Format text
-///  messages](https://developers.google.com/workspace/chat/format-messages).
+/// Output only. Annotations can be associated with the plain-text body of the
+/// message or with chips that link to Google Workspace resources like Google
+/// Docs or Sheets with `start_index` and `length` of 0. To add basic formatting
+/// to a text message, see [Format text
+/// messages](https://developers.google.com/workspace/chat/format-messages).
 ///
-///  Example plain-text message body:
-///  ```
-///  Hello @FooBot how are you!"
-///  ```
+/// Example plain-text message body:
+/// ```
+/// Hello @FooBot how are you!"
+/// ```
 ///
-///  The corresponding annotations metadata:
-///  ```
-///  "annotations":[{
-///    "type":"USER_MENTION",
-///    "startIndex":6,
-///    "length":7,
-///    "userMention": {
-///      "user": {
-///        "name":"users/{user}",
-///        "displayName":"FooBot",
-///        "avatarUrl":"https://goo.gl/aeDtrS",
-///        "type":"BOT"
-///      },
-///      "type":"MENTION"
-///     }
-///  }]
-///  ```
+/// The corresponding annotations metadata:
+/// ```
+/// "annotations":[{
+///   "type":"USER_MENTION",
+///   "startIndex":6,
+///   "length":7,
+///   "userMention": {
+///     "user": {
+///       "name":"users/{user}",
+///       "displayName":"FooBot",
+///       "avatarUrl":"https://goo.gl/aeDtrS",
+///       "type":"BOT"
+///     },
+///     "type":"MENTION"
+///    }
+/// }]
+/// ```
 class Annotation extends $pb.GeneratedMessage {
   factory Annotation({
     AnnotationType? type,
@@ -66,37 +70,26 @@ class Annotation extends $pb.GeneratedMessage {
     RichLinkMetadata? richLinkMetadata,
     CustomEmojiMetadata? customEmojiMetadata,
   }) {
-    final $result = create();
-    if (type != null) {
-      $result.type = type;
-    }
-    if (startIndex != null) {
-      $result.startIndex = startIndex;
-    }
-    if (length != null) {
-      $result.length = length;
-    }
-    if (userMention != null) {
-      $result.userMention = userMention;
-    }
-    if (slashCommand != null) {
-      $result.slashCommand = slashCommand;
-    }
-    if (richLinkMetadata != null) {
-      $result.richLinkMetadata = richLinkMetadata;
-    }
-    if (customEmojiMetadata != null) {
-      $result.customEmojiMetadata = customEmojiMetadata;
-    }
-    return $result;
+    final result = create();
+    if (type != null) result.type = type;
+    if (startIndex != null) result.startIndex = startIndex;
+    if (length != null) result.length = length;
+    if (userMention != null) result.userMention = userMention;
+    if (slashCommand != null) result.slashCommand = slashCommand;
+    if (richLinkMetadata != null) result.richLinkMetadata = richLinkMetadata;
+    if (customEmojiMetadata != null)
+      result.customEmojiMetadata = customEmojiMetadata;
+    return result;
   }
-  Annotation._() : super();
-  factory Annotation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Annotation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Annotation._();
+
+  factory Annotation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Annotation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Annotation_Metadata>
       _Annotation_MetadataByTag = {
@@ -111,12 +104,10 @@ class Annotation extends $pb.GeneratedMessage {
       package: const $pb.PackageName(_omitMessageNames ? '' : 'google.chat.v1'),
       createEmptyInstance: create)
     ..oo(0, [4, 5, 6, 7])
-    ..e<AnnotationType>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: AnnotationType.ANNOTATION_TYPE_UNSPECIFIED,
-        valueOf: AnnotationType.valueOf,
+    ..aE<AnnotationType>(1, _omitFieldNames ? '' : 'type',
         enumValues: AnnotationType.values)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'startIndex', $pb.PbFieldType.O3)
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'length', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'startIndex')
+    ..aI(3, _omitFieldNames ? '' : 'length')
     ..aOM<UserMentionMetadata>(4, _omitFieldNames ? '' : 'userMention',
         subBuilder: UserMentionMetadata.create)
     ..aOM<SlashCommandMetadata>(5, _omitFieldNames ? '' : 'slashCommand',
@@ -127,84 +118,77 @@ class Annotation extends $pb.GeneratedMessage {
         subBuilder: CustomEmojiMetadata.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Annotation clone() => Annotation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Annotation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Annotation copyWith(void Function(Annotation) updates) =>
       super.copyWith((message) => updates(message as Annotation)) as Annotation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Annotation create() => Annotation._();
+  @$core.override
   Annotation createEmptyInstance() => create();
-  static $pb.PbList<Annotation> createRepeated() => $pb.PbList<Annotation>();
   @$core.pragma('dart2js:noInline')
   static Annotation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Annotation>(create);
   static Annotation? _defaultInstance;
 
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
   Annotation_Metadata whichMetadata() =>
       _Annotation_MetadataByTag[$_whichOneof(0)]!;
-  void clearMetadata() => clearField($_whichOneof(0));
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  void clearMetadata() => $_clearField($_whichOneof(0));
 
   /// The type of this annotation.
   @$pb.TagNumber(1)
   AnnotationType get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(AnnotationType v) {
-    setField(1, v);
-  }
-
+  set type(AnnotationType value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearType() => $_clearField(1);
 
   /// Start index (0-based, inclusive) in the plain-text message body this
   /// annotation corresponds to.
   @$pb.TagNumber(2)
   $core.int get startIndex => $_getIZ(1);
   @$pb.TagNumber(2)
-  set startIndex($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set startIndex($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasStartIndex() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStartIndex() => clearField(2);
+  void clearStartIndex() => $_clearField(2);
 
   /// Length of the substring in the plain-text message body this annotation
-  /// corresponds to.
+  /// corresponds to. If not present, indicates a length of 0.
   @$pb.TagNumber(3)
   $core.int get length => $_getIZ(2);
   @$pb.TagNumber(3)
-  set length($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set length($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
   $core.bool hasLength() => $_has(2);
   @$pb.TagNumber(3)
-  void clearLength() => clearField(3);
+  void clearLength() => $_clearField(3);
 
   /// The metadata of user mention.
   @$pb.TagNumber(4)
   UserMentionMetadata get userMention => $_getN(3);
   @$pb.TagNumber(4)
-  set userMention(UserMentionMetadata v) {
-    setField(4, v);
-  }
-
+  set userMention(UserMentionMetadata value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasUserMention() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUserMention() => clearField(4);
+  void clearUserMention() => $_clearField(4);
   @$pb.TagNumber(4)
   UserMentionMetadata ensureUserMention() => $_ensure(3);
 
@@ -212,14 +196,11 @@ class Annotation extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   SlashCommandMetadata get slashCommand => $_getN(4);
   @$pb.TagNumber(5)
-  set slashCommand(SlashCommandMetadata v) {
-    setField(5, v);
-  }
-
+  set slashCommand(SlashCommandMetadata value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasSlashCommand() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSlashCommand() => clearField(5);
+  void clearSlashCommand() => $_clearField(5);
   @$pb.TagNumber(5)
   SlashCommandMetadata ensureSlashCommand() => $_ensure(4);
 
@@ -227,14 +208,11 @@ class Annotation extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   RichLinkMetadata get richLinkMetadata => $_getN(5);
   @$pb.TagNumber(6)
-  set richLinkMetadata(RichLinkMetadata v) {
-    setField(6, v);
-  }
-
+  set richLinkMetadata(RichLinkMetadata value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasRichLinkMetadata() => $_has(5);
   @$pb.TagNumber(6)
-  void clearRichLinkMetadata() => clearField(6);
+  void clearRichLinkMetadata() => $_clearField(6);
   @$pb.TagNumber(6)
   RichLinkMetadata ensureRichLinkMetadata() => $_ensure(5);
 
@@ -242,14 +220,11 @@ class Annotation extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   CustomEmojiMetadata get customEmojiMetadata => $_getN(6);
   @$pb.TagNumber(7)
-  set customEmojiMetadata(CustomEmojiMetadata v) {
-    setField(7, v);
-  }
-
+  set customEmojiMetadata(CustomEmojiMetadata value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasCustomEmojiMetadata() => $_has(6);
   @$pb.TagNumber(7)
-  void clearCustomEmojiMetadata() => clearField(7);
+  void clearCustomEmojiMetadata() => $_clearField(7);
   @$pb.TagNumber(7)
   CustomEmojiMetadata ensureCustomEmojiMetadata() => $_ensure(6);
 }
@@ -260,53 +235,44 @@ class UserMentionMetadata extends $pb.GeneratedMessage {
     $0.User? user,
     UserMentionMetadata_Type? type,
   }) {
-    final $result = create();
-    if (user != null) {
-      $result.user = user;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    return $result;
+    final result = create();
+    if (user != null) result.user = user;
+    if (type != null) result.type = type;
+    return result;
   }
-  UserMentionMetadata._() : super();
-  factory UserMentionMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UserMentionMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UserMentionMetadata._();
+
+  factory UserMentionMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UserMentionMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UserMentionMetadata',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'google.chat.v1'),
       createEmptyInstance: create)
     ..aOM<$0.User>(1, _omitFieldNames ? '' : 'user', subBuilder: $0.User.create)
-    ..e<UserMentionMetadata_Type>(
-        2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: UserMentionMetadata_Type.TYPE_UNSPECIFIED,
-        valueOf: UserMentionMetadata_Type.valueOf,
+    ..aE<UserMentionMetadata_Type>(2, _omitFieldNames ? '' : 'type',
         enumValues: UserMentionMetadata_Type.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UserMentionMetadata clone() => UserMentionMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UserMentionMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UserMentionMetadata copyWith(void Function(UserMentionMetadata) updates) =>
       super.copyWith((message) => updates(message as UserMentionMetadata))
           as UserMentionMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UserMentionMetadata create() => UserMentionMetadata._();
+  @$core.override
   UserMentionMetadata createEmptyInstance() => create();
-  static $pb.PbList<UserMentionMetadata> createRepeated() =>
-      $pb.PbList<UserMentionMetadata>();
   @$core.pragma('dart2js:noInline')
   static UserMentionMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UserMentionMetadata>(create);
@@ -316,14 +282,11 @@ class UserMentionMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.User get user => $_getN(0);
   @$pb.TagNumber(1)
-  set user($0.User v) {
-    setField(1, v);
-  }
-
+  set user($0.User value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUser() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUser() => clearField(1);
+  void clearUser() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.User ensureUser() => $_ensure(0);
 
@@ -331,14 +294,11 @@ class UserMentionMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   UserMentionMetadata_Type get type => $_getN(1);
   @$pb.TagNumber(2)
-  set type(UserMentionMetadata_Type v) {
-    setField(2, v);
-  }
-
+  set type(UserMentionMetadata_Type value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearType() => clearField(2);
+  void clearType() => $_clearField(2);
 }
 
 /// Annotation metadata for slash commands (/).
@@ -350,66 +310,50 @@ class SlashCommandMetadata extends $pb.GeneratedMessage {
     $fixnum.Int64? commandId,
     $core.bool? triggersDialog,
   }) {
-    final $result = create();
-    if (bot != null) {
-      $result.bot = bot;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    if (commandName != null) {
-      $result.commandName = commandName;
-    }
-    if (commandId != null) {
-      $result.commandId = commandId;
-    }
-    if (triggersDialog != null) {
-      $result.triggersDialog = triggersDialog;
-    }
-    return $result;
+    final result = create();
+    if (bot != null) result.bot = bot;
+    if (type != null) result.type = type;
+    if (commandName != null) result.commandName = commandName;
+    if (commandId != null) result.commandId = commandId;
+    if (triggersDialog != null) result.triggersDialog = triggersDialog;
+    return result;
   }
-  SlashCommandMetadata._() : super();
-  factory SlashCommandMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SlashCommandMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SlashCommandMetadata._();
+
+  factory SlashCommandMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SlashCommandMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SlashCommandMetadata',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'google.chat.v1'),
       createEmptyInstance: create)
     ..aOM<$0.User>(1, _omitFieldNames ? '' : 'bot', subBuilder: $0.User.create)
-    ..e<SlashCommandMetadata_Type>(
-        2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: SlashCommandMetadata_Type.TYPE_UNSPECIFIED,
-        valueOf: SlashCommandMetadata_Type.valueOf,
+    ..aE<SlashCommandMetadata_Type>(2, _omitFieldNames ? '' : 'type',
         enumValues: SlashCommandMetadata_Type.values)
     ..aOS(3, _omitFieldNames ? '' : 'commandName')
     ..aInt64(4, _omitFieldNames ? '' : 'commandId')
     ..aOB(5, _omitFieldNames ? '' : 'triggersDialog')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SlashCommandMetadata clone() =>
-      SlashCommandMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SlashCommandMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SlashCommandMetadata copyWith(void Function(SlashCommandMetadata) updates) =>
       super.copyWith((message) => updates(message as SlashCommandMetadata))
           as SlashCommandMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SlashCommandMetadata create() => SlashCommandMetadata._();
+  @$core.override
   SlashCommandMetadata createEmptyInstance() => create();
-  static $pb.PbList<SlashCommandMetadata> createRepeated() =>
-      $pb.PbList<SlashCommandMetadata>();
   @$core.pragma('dart2js:noInline')
   static SlashCommandMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SlashCommandMetadata>(create);
@@ -419,14 +363,11 @@ class SlashCommandMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.User get bot => $_getN(0);
   @$pb.TagNumber(1)
-  set bot($0.User v) {
-    setField(1, v);
-  }
-
+  set bot($0.User value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasBot() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBot() => clearField(1);
+  void clearBot() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.User ensureBot() => $_ensure(0);
 
@@ -434,177 +375,172 @@ class SlashCommandMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SlashCommandMetadata_Type get type => $_getN(1);
   @$pb.TagNumber(2)
-  set type(SlashCommandMetadata_Type v) {
-    setField(2, v);
-  }
-
+  set type(SlashCommandMetadata_Type value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearType() => clearField(2);
+  void clearType() => $_clearField(2);
 
   /// The name of the invoked slash command.
   @$pb.TagNumber(3)
   $core.String get commandName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set commandName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set commandName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasCommandName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCommandName() => clearField(3);
+  void clearCommandName() => $_clearField(3);
 
   /// The command ID of the invoked slash command.
   @$pb.TagNumber(4)
   $fixnum.Int64 get commandId => $_getI64(3);
   @$pb.TagNumber(4)
-  set commandId($fixnum.Int64 v) {
-    $_setInt64(3, v);
-  }
-
+  set commandId($fixnum.Int64 value) => $_setInt64(3, value);
   @$pb.TagNumber(4)
   $core.bool hasCommandId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCommandId() => clearField(4);
+  void clearCommandId() => $_clearField(4);
 
   /// Indicates whether the slash command is for a dialog.
   @$pb.TagNumber(5)
   $core.bool get triggersDialog => $_getBF(4);
   @$pb.TagNumber(5)
-  set triggersDialog($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set triggersDialog($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasTriggersDialog() => $_has(4);
   @$pb.TagNumber(5)
-  void clearTriggersDialog() => clearField(5);
+  void clearTriggersDialog() => $_clearField(5);
 }
 
-enum RichLinkMetadata_Data { driveLinkData, chatSpaceLinkData, notSet }
+enum RichLinkMetadata_Data {
+  driveLinkData,
+  chatSpaceLinkData,
+  meetSpaceLinkData,
+  calendarEventLinkData,
+  notSet
+}
 
-/// A rich link to a resource.
+/// A rich link to a resource. Rich links can be associated with the plain-text
+/// body of the message or represent chips that link to Google Workspace
+/// resources like Google Docs or Sheets with `start_index` and `length`
+/// of 0.
 class RichLinkMetadata extends $pb.GeneratedMessage {
   factory RichLinkMetadata({
     $core.String? uri,
     RichLinkMetadata_RichLinkType? richLinkType,
     DriveLinkData? driveLinkData,
     ChatSpaceLinkData? chatSpaceLinkData,
+    MeetSpaceLinkData? meetSpaceLinkData,
+    CalendarEventLinkData? calendarEventLinkData,
   }) {
-    final $result = create();
-    if (uri != null) {
-      $result.uri = uri;
-    }
-    if (richLinkType != null) {
-      $result.richLinkType = richLinkType;
-    }
-    if (driveLinkData != null) {
-      $result.driveLinkData = driveLinkData;
-    }
-    if (chatSpaceLinkData != null) {
-      $result.chatSpaceLinkData = chatSpaceLinkData;
-    }
-    return $result;
+    final result = create();
+    if (uri != null) result.uri = uri;
+    if (richLinkType != null) result.richLinkType = richLinkType;
+    if (driveLinkData != null) result.driveLinkData = driveLinkData;
+    if (chatSpaceLinkData != null) result.chatSpaceLinkData = chatSpaceLinkData;
+    if (meetSpaceLinkData != null) result.meetSpaceLinkData = meetSpaceLinkData;
+    if (calendarEventLinkData != null)
+      result.calendarEventLinkData = calendarEventLinkData;
+    return result;
   }
-  RichLinkMetadata._() : super();
-  factory RichLinkMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RichLinkMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RichLinkMetadata._();
+
+  factory RichLinkMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RichLinkMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, RichLinkMetadata_Data>
       _RichLinkMetadata_DataByTag = {
     3: RichLinkMetadata_Data.driveLinkData,
     4: RichLinkMetadata_Data.chatSpaceLinkData,
+    5: RichLinkMetadata_Data.meetSpaceLinkData,
+    6: RichLinkMetadata_Data.calendarEventLinkData,
     0: RichLinkMetadata_Data.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RichLinkMetadata',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'google.chat.v1'),
       createEmptyInstance: create)
-    ..oo(0, [3, 4])
+    ..oo(0, [3, 4, 5, 6])
     ..aOS(1, _omitFieldNames ? '' : 'uri')
-    ..e<RichLinkMetadata_RichLinkType>(
-        2, _omitFieldNames ? '' : 'richLinkType', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            RichLinkMetadata_RichLinkType.RICH_LINK_TYPE_UNSPECIFIED,
-        valueOf: RichLinkMetadata_RichLinkType.valueOf,
+    ..aE<RichLinkMetadata_RichLinkType>(
+        2, _omitFieldNames ? '' : 'richLinkType',
         enumValues: RichLinkMetadata_RichLinkType.values)
     ..aOM<DriveLinkData>(3, _omitFieldNames ? '' : 'driveLinkData',
         subBuilder: DriveLinkData.create)
     ..aOM<ChatSpaceLinkData>(4, _omitFieldNames ? '' : 'chatSpaceLinkData',
         subBuilder: ChatSpaceLinkData.create)
+    ..aOM<MeetSpaceLinkData>(5, _omitFieldNames ? '' : 'meetSpaceLinkData',
+        subBuilder: MeetSpaceLinkData.create)
+    ..aOM<CalendarEventLinkData>(
+        6, _omitFieldNames ? '' : 'calendarEventLinkData',
+        subBuilder: CalendarEventLinkData.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RichLinkMetadata clone() => RichLinkMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RichLinkMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RichLinkMetadata copyWith(void Function(RichLinkMetadata) updates) =>
       super.copyWith((message) => updates(message as RichLinkMetadata))
           as RichLinkMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RichLinkMetadata create() => RichLinkMetadata._();
+  @$core.override
   RichLinkMetadata createEmptyInstance() => create();
-  static $pb.PbList<RichLinkMetadata> createRepeated() =>
-      $pb.PbList<RichLinkMetadata>();
   @$core.pragma('dart2js:noInline')
   static RichLinkMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RichLinkMetadata>(create);
   static RichLinkMetadata? _defaultInstance;
 
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
   RichLinkMetadata_Data whichData() =>
       _RichLinkMetadata_DataByTag[$_whichOneof(0)]!;
-  void clearData() => clearField($_whichOneof(0));
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  void clearData() => $_clearField($_whichOneof(0));
 
   /// The URI of this link.
   @$pb.TagNumber(1)
   $core.String get uri => $_getSZ(0);
   @$pb.TagNumber(1)
-  set uri($core.String v) {
-    $_setString(0, v);
-  }
-
+  set uri($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasUri() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUri() => clearField(1);
+  void clearUri() => $_clearField(1);
 
   /// The rich link type.
   @$pb.TagNumber(2)
   RichLinkMetadata_RichLinkType get richLinkType => $_getN(1);
   @$pb.TagNumber(2)
-  set richLinkType(RichLinkMetadata_RichLinkType v) {
-    setField(2, v);
-  }
-
+  set richLinkType(RichLinkMetadata_RichLinkType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasRichLinkType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRichLinkType() => clearField(2);
+  void clearRichLinkType() => $_clearField(2);
 
   /// Data for a drive link.
   @$pb.TagNumber(3)
   DriveLinkData get driveLinkData => $_getN(2);
   @$pb.TagNumber(3)
-  set driveLinkData(DriveLinkData v) {
-    setField(3, v);
-  }
-
+  set driveLinkData(DriveLinkData value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasDriveLinkData() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDriveLinkData() => clearField(3);
+  void clearDriveLinkData() => $_clearField(3);
   @$pb.TagNumber(3)
   DriveLinkData ensureDriveLinkData() => $_ensure(2);
 
@@ -612,16 +548,38 @@ class RichLinkMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   ChatSpaceLinkData get chatSpaceLinkData => $_getN(3);
   @$pb.TagNumber(4)
-  set chatSpaceLinkData(ChatSpaceLinkData v) {
-    setField(4, v);
-  }
-
+  set chatSpaceLinkData(ChatSpaceLinkData value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasChatSpaceLinkData() => $_has(3);
   @$pb.TagNumber(4)
-  void clearChatSpaceLinkData() => clearField(4);
+  void clearChatSpaceLinkData() => $_clearField(4);
   @$pb.TagNumber(4)
   ChatSpaceLinkData ensureChatSpaceLinkData() => $_ensure(3);
+
+  /// Data for a Meet space link.
+  @$pb.TagNumber(5)
+  MeetSpaceLinkData get meetSpaceLinkData => $_getN(4);
+  @$pb.TagNumber(5)
+  set meetSpaceLinkData(MeetSpaceLinkData value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasMeetSpaceLinkData() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearMeetSpaceLinkData() => $_clearField(5);
+  @$pb.TagNumber(5)
+  MeetSpaceLinkData ensureMeetSpaceLinkData() => $_ensure(4);
+
+  /// Data for a Calendar event link.
+  @$pb.TagNumber(6)
+  CalendarEventLinkData get calendarEventLinkData => $_getN(5);
+  @$pb.TagNumber(6)
+  set calendarEventLinkData(CalendarEventLinkData value) =>
+      $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasCalendarEventLinkData() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearCalendarEventLinkData() => $_clearField(6);
+  @$pb.TagNumber(6)
+  CalendarEventLinkData ensureCalendarEventLinkData() => $_ensure(5);
 }
 
 /// Annotation metadata for custom emoji.
@@ -629,19 +587,19 @@ class CustomEmojiMetadata extends $pb.GeneratedMessage {
   factory CustomEmojiMetadata({
     $1.CustomEmoji? customEmoji,
   }) {
-    final $result = create();
-    if (customEmoji != null) {
-      $result.customEmoji = customEmoji;
-    }
-    return $result;
+    final result = create();
+    if (customEmoji != null) result.customEmoji = customEmoji;
+    return result;
   }
-  CustomEmojiMetadata._() : super();
-  factory CustomEmojiMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CustomEmojiMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CustomEmojiMetadata._();
+
+  factory CustomEmojiMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CustomEmojiMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CustomEmojiMetadata',
@@ -651,24 +609,20 @@ class CustomEmojiMetadata extends $pb.GeneratedMessage {
         subBuilder: $1.CustomEmoji.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CustomEmojiMetadata clone() => CustomEmojiMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CustomEmojiMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CustomEmojiMetadata copyWith(void Function(CustomEmojiMetadata) updates) =>
       super.copyWith((message) => updates(message as CustomEmojiMetadata))
           as CustomEmojiMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CustomEmojiMetadata create() => CustomEmojiMetadata._();
+  @$core.override
   CustomEmojiMetadata createEmptyInstance() => create();
-  static $pb.PbList<CustomEmojiMetadata> createRepeated() =>
-      $pb.PbList<CustomEmojiMetadata>();
   @$core.pragma('dart2js:noInline')
   static CustomEmojiMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CustomEmojiMetadata>(create);
@@ -678,14 +632,11 @@ class CustomEmojiMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.CustomEmoji get customEmoji => $_getN(0);
   @$pb.TagNumber(1)
-  set customEmoji($1.CustomEmoji v) {
-    setField(1, v);
-  }
-
+  set customEmoji($1.CustomEmoji value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasCustomEmoji() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCustomEmoji() => clearField(1);
+  void clearCustomEmoji() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.CustomEmoji ensureCustomEmoji() => $_ensure(0);
 }
@@ -696,22 +647,20 @@ class DriveLinkData extends $pb.GeneratedMessage {
     $2.DriveDataRef? driveDataRef,
     $core.String? mimeType,
   }) {
-    final $result = create();
-    if (driveDataRef != null) {
-      $result.driveDataRef = driveDataRef;
-    }
-    if (mimeType != null) {
-      $result.mimeType = mimeType;
-    }
-    return $result;
+    final result = create();
+    if (driveDataRef != null) result.driveDataRef = driveDataRef;
+    if (mimeType != null) result.mimeType = mimeType;
+    return result;
   }
-  DriveLinkData._() : super();
-  factory DriveLinkData.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DriveLinkData.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DriveLinkData._();
+
+  factory DriveLinkData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DriveLinkData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DriveLinkData',
@@ -722,24 +671,20 @@ class DriveLinkData extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'mimeType')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DriveLinkData clone() => DriveLinkData()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DriveLinkData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DriveLinkData copyWith(void Function(DriveLinkData) updates) =>
       super.copyWith((message) => updates(message as DriveLinkData))
           as DriveLinkData;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DriveLinkData create() => DriveLinkData._();
+  @$core.override
   DriveLinkData createEmptyInstance() => create();
-  static $pb.PbList<DriveLinkData> createRepeated() =>
-      $pb.PbList<DriveLinkData>();
   @$core.pragma('dart2js:noInline')
   static DriveLinkData getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DriveLinkData>(create);
@@ -751,14 +696,11 @@ class DriveLinkData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.DriveDataRef get driveDataRef => $_getN(0);
   @$pb.TagNumber(1)
-  set driveDataRef($2.DriveDataRef v) {
-    setField(1, v);
-  }
-
+  set driveDataRef($2.DriveDataRef value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasDriveDataRef() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDriveDataRef() => clearField(1);
+  void clearDriveDataRef() => $_clearField(1);
   @$pb.TagNumber(1)
   $2.DriveDataRef ensureDriveDataRef() => $_ensure(0);
 
@@ -766,14 +708,11 @@ class DriveLinkData extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get mimeType => $_getSZ(1);
   @$pb.TagNumber(2)
-  set mimeType($core.String v) {
-    $_setString(1, v);
-  }
-
+  set mimeType($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasMimeType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMimeType() => clearField(2);
+  void clearMimeType() => $_clearField(2);
 }
 
 /// Data for Chat space links.
@@ -783,25 +722,21 @@ class ChatSpaceLinkData extends $pb.GeneratedMessage {
     $core.String? thread,
     $core.String? message,
   }) {
-    final $result = create();
-    if (space != null) {
-      $result.space = space;
-    }
-    if (thread != null) {
-      $result.thread = thread;
-    }
-    if (message != null) {
-      $result.message = message;
-    }
-    return $result;
+    final result = create();
+    if (space != null) result.space = space;
+    if (thread != null) result.thread = thread;
+    if (message != null) result.message = message;
+    return result;
   }
-  ChatSpaceLinkData._() : super();
-  factory ChatSpaceLinkData.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ChatSpaceLinkData.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ChatSpaceLinkData._();
+
+  factory ChatSpaceLinkData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ChatSpaceLinkData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ChatSpaceLinkData',
@@ -812,75 +747,224 @@ class ChatSpaceLinkData extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'message')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ChatSpaceLinkData clone() => ChatSpaceLinkData()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ChatSpaceLinkData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ChatSpaceLinkData copyWith(void Function(ChatSpaceLinkData) updates) =>
       super.copyWith((message) => updates(message as ChatSpaceLinkData))
           as ChatSpaceLinkData;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ChatSpaceLinkData create() => ChatSpaceLinkData._();
+  @$core.override
   ChatSpaceLinkData createEmptyInstance() => create();
-  static $pb.PbList<ChatSpaceLinkData> createRepeated() =>
-      $pb.PbList<ChatSpaceLinkData>();
   @$core.pragma('dart2js:noInline')
   static ChatSpaceLinkData getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ChatSpaceLinkData>(create);
   static ChatSpaceLinkData? _defaultInstance;
 
-  ///  The space of the linked Chat space resource.
+  /// The space of the linked Chat space resource.
   ///
-  ///  Format: `spaces/{space}`
+  /// Format: `spaces/{space}`
   @$pb.TagNumber(1)
   $core.String get space => $_getSZ(0);
   @$pb.TagNumber(1)
-  set space($core.String v) {
-    $_setString(0, v);
-  }
-
+  set space($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSpace() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSpace() => clearField(1);
+  void clearSpace() => $_clearField(1);
 
-  ///  The thread of the linked Chat space resource.
+  /// The thread of the linked Chat space resource.
   ///
-  ///  Format: `spaces/{space}/threads/{thread}`
+  /// Format: `spaces/{space}/threads/{thread}`
   @$pb.TagNumber(2)
   $core.String get thread => $_getSZ(1);
   @$pb.TagNumber(2)
-  set thread($core.String v) {
-    $_setString(1, v);
-  }
-
+  set thread($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasThread() => $_has(1);
   @$pb.TagNumber(2)
-  void clearThread() => clearField(2);
+  void clearThread() => $_clearField(2);
 
-  ///  The message of the linked Chat space resource.
+  /// The message of the linked Chat space resource.
   ///
-  ///  Format: `spaces/{space}/messages/{message}`
+  /// Format: `spaces/{space}/messages/{message}`
   @$pb.TagNumber(3)
   $core.String get message => $_getSZ(2);
   @$pb.TagNumber(3)
-  set message($core.String v) {
-    $_setString(2, v);
-  }
-
+  set message($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasMessage() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMessage() => clearField(3);
+  void clearMessage() => $_clearField(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+/// Data for Meet space links.
+class MeetSpaceLinkData extends $pb.GeneratedMessage {
+  factory MeetSpaceLinkData({
+    $core.String? meetingCode,
+    MeetSpaceLinkData_Type? type,
+    MeetSpaceLinkData_HuddleStatus? huddleStatus,
+  }) {
+    final result = create();
+    if (meetingCode != null) result.meetingCode = meetingCode;
+    if (type != null) result.type = type;
+    if (huddleStatus != null) result.huddleStatus = huddleStatus;
+    return result;
+  }
+
+  MeetSpaceLinkData._();
+
+  factory MeetSpaceLinkData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory MeetSpaceLinkData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MeetSpaceLinkData',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'google.chat.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'meetingCode')
+    ..aE<MeetSpaceLinkData_Type>(2, _omitFieldNames ? '' : 'type',
+        enumValues: MeetSpaceLinkData_Type.values)
+    ..aE<MeetSpaceLinkData_HuddleStatus>(
+        3, _omitFieldNames ? '' : 'huddleStatus',
+        enumValues: MeetSpaceLinkData_HuddleStatus.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MeetSpaceLinkData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MeetSpaceLinkData copyWith(void Function(MeetSpaceLinkData) updates) =>
+      super.copyWith((message) => updates(message as MeetSpaceLinkData))
+          as MeetSpaceLinkData;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MeetSpaceLinkData create() => MeetSpaceLinkData._();
+  @$core.override
+  MeetSpaceLinkData createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static MeetSpaceLinkData getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MeetSpaceLinkData>(create);
+  static MeetSpaceLinkData? _defaultInstance;
+
+  /// Meeting code of the linked Meet space.
+  @$pb.TagNumber(1)
+  $core.String get meetingCode => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set meetingCode($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasMeetingCode() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMeetingCode() => $_clearField(1);
+
+  /// Indicates the type of the Meet space.
+  @$pb.TagNumber(2)
+  MeetSpaceLinkData_Type get type => $_getN(1);
+  @$pb.TagNumber(2)
+  set type(MeetSpaceLinkData_Type value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearType() => $_clearField(2);
+
+  /// Optional. Output only. If the Meet is a Huddle, indicates the status of the
+  /// huddle. Otherwise, this is unset.
+  @$pb.TagNumber(3)
+  MeetSpaceLinkData_HuddleStatus get huddleStatus => $_getN(2);
+  @$pb.TagNumber(3)
+  set huddleStatus(MeetSpaceLinkData_HuddleStatus value) =>
+      $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasHuddleStatus() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearHuddleStatus() => $_clearField(3);
+}
+
+/// Data for Calendar event links.
+class CalendarEventLinkData extends $pb.GeneratedMessage {
+  factory CalendarEventLinkData({
+    $core.String? calendarId,
+    $core.String? eventId,
+  }) {
+    final result = create();
+    if (calendarId != null) result.calendarId = calendarId;
+    if (eventId != null) result.eventId = eventId;
+    return result;
+  }
+
+  CalendarEventLinkData._();
+
+  factory CalendarEventLinkData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CalendarEventLinkData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CalendarEventLinkData',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'google.chat.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'calendarId')
+    ..aOS(2, _omitFieldNames ? '' : 'eventId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CalendarEventLinkData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CalendarEventLinkData copyWith(
+          void Function(CalendarEventLinkData) updates) =>
+      super.copyWith((message) => updates(message as CalendarEventLinkData))
+          as CalendarEventLinkData;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CalendarEventLinkData create() => CalendarEventLinkData._();
+  @$core.override
+  CalendarEventLinkData createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static CalendarEventLinkData getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CalendarEventLinkData>(create);
+  static CalendarEventLinkData? _defaultInstance;
+
+  /// The [Calendar
+  /// identifier](https://developers.google.com/workspace/calendar/api/v3/reference/calendars)
+  /// of the linked Calendar.
+  @$pb.TagNumber(1)
+  $core.String get calendarId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set calendarId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasCalendarId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCalendarId() => $_clearField(1);
+
+  /// The [Event
+  /// identifier](https://developers.google.com/workspace/calendar/api/v3/reference/events)
+  /// of the linked Calendar event.
+  @$pb.TagNumber(2)
+  $core.String get eventId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set eventId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasEventId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEventId() => $_clearField(2);
+}
+
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

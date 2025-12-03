@@ -1,23 +1,28 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/datastore/v1/query.proto
-//
-// @dart = 2.12
+// Generated from google/datastore/v1/query.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $1;
+import 'package:grpc_googleapis/src/generated/google/protobuf/wrappers.pb.dart'
+    as $2;
 
-import '../../protobuf/timestamp.pb.dart' as $1;
-import '../../protobuf/wrappers.pb.dart' as $2;
 import 'entity.pb.dart' as $0;
 import 'query.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'query.pbenum.dart';
 
@@ -30,31 +35,23 @@ class EntityResult extends $pb.GeneratedMessage {
     $1.Timestamp? updateTime,
     $1.Timestamp? createTime,
   }) {
-    final $result = create();
-    if (entity != null) {
-      $result.entity = entity;
-    }
-    if (cursor != null) {
-      $result.cursor = cursor;
-    }
-    if (version != null) {
-      $result.version = version;
-    }
-    if (updateTime != null) {
-      $result.updateTime = updateTime;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
-    return $result;
+    final result = create();
+    if (entity != null) result.entity = entity;
+    if (cursor != null) result.cursor = cursor;
+    if (version != null) result.version = version;
+    if (updateTime != null) result.updateTime = updateTime;
+    if (createTime != null) result.createTime = createTime;
+    return result;
   }
-  EntityResult._() : super();
-  factory EntityResult.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EntityResult.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EntityResult._();
+
+  factory EntityResult.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EntityResult.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EntityResult',
@@ -72,24 +69,20 @@ class EntityResult extends $pb.GeneratedMessage {
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EntityResult clone() => EntityResult()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EntityResult clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EntityResult copyWith(void Function(EntityResult) updates) =>
       super.copyWith((message) => updates(message as EntityResult))
           as EntityResult;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EntityResult create() => EntityResult._();
+  @$core.override
   EntityResult createEmptyInstance() => create();
-  static $pb.PbList<EntityResult> createRepeated() =>
-      $pb.PbList<EntityResult>();
   @$core.pragma('dart2js:noInline')
   static EntityResult getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EntityResult>(create);
@@ -99,14 +92,11 @@ class EntityResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Entity get entity => $_getN(0);
   @$pb.TagNumber(1)
-  set entity($0.Entity v) {
-    setField(1, v);
-  }
-
+  set entity($0.Entity value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasEntity() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEntity() => clearField(1);
+  void clearEntity() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Entity ensureEntity() => $_ensure(0);
 
@@ -115,35 +105,29 @@ class EntityResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.List<$core.int> get cursor => $_getN(1);
   @$pb.TagNumber(3)
-  set cursor($core.List<$core.int> v) {
-    $_setBytes(1, v);
-  }
-
+  set cursor($core.List<$core.int> value) => $_setBytes(1, value);
   @$pb.TagNumber(3)
   $core.bool hasCursor() => $_has(1);
   @$pb.TagNumber(3)
-  void clearCursor() => clearField(3);
+  void clearCursor() => $_clearField(3);
 
-  ///  The version of the entity, a strictly positive number that monotonically
-  ///  increases with changes to the entity.
+  /// The version of the entity, a strictly positive number that monotonically
+  /// increases with changes to the entity.
   ///
-  ///  This field is set for
-  ///  [`FULL`][google.datastore.v1.EntityResult.ResultType.FULL] entity results.
+  /// This field is set for
+  /// [`FULL`][google.datastore.v1.EntityResult.ResultType.FULL] entity results.
   ///
-  ///  For [missing][google.datastore.v1.LookupResponse.missing] entities in
-  ///  `LookupResponse`, this is the version of the snapshot that was used to look
-  ///  up the entity, and it is always set except for eventually consistent reads.
+  /// For [missing][google.datastore.v1.LookupResponse.missing] entities in
+  /// `LookupResponse`, this is the version of the snapshot that was used to look
+  /// up the entity, and it is always set except for eventually consistent reads.
   @$pb.TagNumber(4)
   $fixnum.Int64 get version => $_getI64(2);
   @$pb.TagNumber(4)
-  set version($fixnum.Int64 v) {
-    $_setInt64(2, v);
-  }
-
+  set version($fixnum.Int64 value) => $_setInt64(2, value);
   @$pb.TagNumber(4)
   $core.bool hasVersion() => $_has(2);
   @$pb.TagNumber(4)
-  void clearVersion() => clearField(4);
+  void clearVersion() => $_clearField(4);
 
   /// The time at which the entity was last changed.
   /// This field is set for
@@ -152,14 +136,11 @@ class EntityResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $1.Timestamp get updateTime => $_getN(3);
   @$pb.TagNumber(5)
-  set updateTime($1.Timestamp v) {
-    setField(5, v);
-  }
-
+  set updateTime($1.Timestamp value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasUpdateTime() => $_has(3);
   @$pb.TagNumber(5)
-  void clearUpdateTime() => clearField(5);
+  void clearUpdateTime() => $_clearField(5);
   @$pb.TagNumber(5)
   $1.Timestamp ensureUpdateTime() => $_ensure(3);
 
@@ -170,28 +151,25 @@ class EntityResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $1.Timestamp get createTime => $_getN(4);
   @$pb.TagNumber(6)
-  set createTime($1.Timestamp v) {
-    setField(6, v);
-  }
-
+  set createTime($1.Timestamp value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasCreateTime() => $_has(4);
   @$pb.TagNumber(6)
-  void clearCreateTime() => clearField(6);
+  void clearCreateTime() => $_clearField(6);
   @$pb.TagNumber(6)
   $1.Timestamp ensureCreateTime() => $_ensure(4);
 }
 
-///  A query for entities.
+/// A query for entities.
 ///
-///  The query stages are executed in the following order:
-///  1. kind
-///  2. filter
-///  3. projection
-///  4. order + start_cursor + end_cursor
-///  5. offset
-///  6. limit
-///  7. find_nearest
+/// The query stages are executed in the following order:
+/// 1. kind
+/// 2. filter
+/// 3. projection
+/// 4. order + start_cursor + end_cursor
+/// 5. offset
+/// 6. limit
+/// 7. find_nearest
 class Query extends $pb.GeneratedMessage {
   factory Query({
     $core.Iterable<Projection>? projection,
@@ -205,89 +183,67 @@ class Query extends $pb.GeneratedMessage {
     $2.Int32Value? limit,
     FindNearest? findNearest,
   }) {
-    final $result = create();
-    if (projection != null) {
-      $result.projection.addAll(projection);
-    }
-    if (kind != null) {
-      $result.kind.addAll(kind);
-    }
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    if (order != null) {
-      $result.order.addAll(order);
-    }
-    if (distinctOn != null) {
-      $result.distinctOn.addAll(distinctOn);
-    }
-    if (startCursor != null) {
-      $result.startCursor = startCursor;
-    }
-    if (endCursor != null) {
-      $result.endCursor = endCursor;
-    }
-    if (offset != null) {
-      $result.offset = offset;
-    }
-    if (limit != null) {
-      $result.limit = limit;
-    }
-    if (findNearest != null) {
-      $result.findNearest = findNearest;
-    }
-    return $result;
+    final result = create();
+    if (projection != null) result.projection.addAll(projection);
+    if (kind != null) result.kind.addAll(kind);
+    if (filter != null) result.filter = filter;
+    if (order != null) result.order.addAll(order);
+    if (distinctOn != null) result.distinctOn.addAll(distinctOn);
+    if (startCursor != null) result.startCursor = startCursor;
+    if (endCursor != null) result.endCursor = endCursor;
+    if (offset != null) result.offset = offset;
+    if (limit != null) result.limit = limit;
+    if (findNearest != null) result.findNearest = findNearest;
+    return result;
   }
-  Query._() : super();
-  factory Query.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Query.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Query._();
+
+  factory Query.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Query.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Query',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..pc<Projection>(2, _omitFieldNames ? '' : 'projection', $pb.PbFieldType.PM,
+    ..pPM<Projection>(2, _omitFieldNames ? '' : 'projection',
         subBuilder: Projection.create)
-    ..pc<KindExpression>(3, _omitFieldNames ? '' : 'kind', $pb.PbFieldType.PM,
+    ..pPM<KindExpression>(3, _omitFieldNames ? '' : 'kind',
         subBuilder: KindExpression.create)
     ..aOM<Filter>(4, _omitFieldNames ? '' : 'filter', subBuilder: Filter.create)
-    ..pc<PropertyOrder>(5, _omitFieldNames ? '' : 'order', $pb.PbFieldType.PM,
+    ..pPM<PropertyOrder>(5, _omitFieldNames ? '' : 'order',
         subBuilder: PropertyOrder.create)
-    ..pc<PropertyReference>(
-        6, _omitFieldNames ? '' : 'distinctOn', $pb.PbFieldType.PM,
+    ..pPM<PropertyReference>(6, _omitFieldNames ? '' : 'distinctOn',
         subBuilder: PropertyReference.create)
     ..a<$core.List<$core.int>>(
         7, _omitFieldNames ? '' : 'startCursor', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(
         8, _omitFieldNames ? '' : 'endCursor', $pb.PbFieldType.OY)
-    ..a<$core.int>(10, _omitFieldNames ? '' : 'offset', $pb.PbFieldType.O3)
+    ..aI(10, _omitFieldNames ? '' : 'offset')
     ..aOM<$2.Int32Value>(12, _omitFieldNames ? '' : 'limit',
         subBuilder: $2.Int32Value.create)
     ..aOM<FindNearest>(13, _omitFieldNames ? '' : 'findNearest',
         subBuilder: FindNearest.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Query clone() => Query()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Query clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Query copyWith(void Function(Query) updates) =>
       super.copyWith((message) => updates(message as Query)) as Query;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Query create() => Query._();
+  @$core.override
   Query createEmptyInstance() => create();
-  static $pb.PbList<Query> createRepeated() => $pb.PbList<Query>();
   @$core.pragma('dart2js:noInline')
   static Query getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Query>(create);
@@ -295,42 +251,39 @@ class Query extends $pb.GeneratedMessage {
 
   /// The projection to return. Defaults to returning all properties.
   @$pb.TagNumber(2)
-  $core.List<Projection> get projection => $_getList(0);
+  $pb.PbList<Projection> get projection => $_getList(0);
 
   /// The kinds to query (if empty, returns entities of all kinds).
   /// Currently at most 1 kind may be specified.
   @$pb.TagNumber(3)
-  $core.List<KindExpression> get kind => $_getList(1);
+  $pb.PbList<KindExpression> get kind => $_getList(1);
 
   /// The filter to apply.
   @$pb.TagNumber(4)
   Filter get filter => $_getN(2);
   @$pb.TagNumber(4)
-  set filter(Filter v) {
-    setField(4, v);
-  }
-
+  set filter(Filter value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasFilter() => $_has(2);
   @$pb.TagNumber(4)
-  void clearFilter() => clearField(4);
+  void clearFilter() => $_clearField(4);
   @$pb.TagNumber(4)
   Filter ensureFilter() => $_ensure(2);
 
   /// The order to apply to the query results (if empty, order is unspecified).
   @$pb.TagNumber(5)
-  $core.List<PropertyOrder> get order => $_getList(3);
+  $pb.PbList<PropertyOrder> get order => $_getList(3);
 
-  ///  The properties to make distinct. The query results will contain the first
-  ///  result for each distinct combination of values for the given properties
-  ///  (if empty, all results are returned).
+  /// The properties to make distinct. The query results will contain the first
+  /// result for each distinct combination of values for the given properties
+  /// (if empty, all results are returned).
   ///
-  ///  Requires:
+  /// Requires:
   ///
-  ///  * If `order` is specified, the set of distinct on properties must appear
-  ///  before the non-distinct on properties in `order`.
+  /// * If `order` is specified, the set of distinct on properties must appear
+  /// before the non-distinct on properties in `order`.
   @$pb.TagNumber(6)
-  $core.List<PropertyReference> get distinctOn => $_getList(4);
+  $pb.PbList<PropertyReference> get distinctOn => $_getList(4);
 
   /// A starting point for the query results. Query cursors are
   /// returned in query result batches and
@@ -339,14 +292,11 @@ class Query extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.List<$core.int> get startCursor => $_getN(5);
   @$pb.TagNumber(7)
-  set startCursor($core.List<$core.int> v) {
-    $_setBytes(5, v);
-  }
-
+  set startCursor($core.List<$core.int> value) => $_setBytes(5, value);
   @$pb.TagNumber(7)
   $core.bool hasStartCursor() => $_has(5);
   @$pb.TagNumber(7)
-  void clearStartCursor() => clearField(7);
+  void clearStartCursor() => $_clearField(7);
 
   /// An ending point for the query results. Query cursors are
   /// returned in query result batches and
@@ -355,28 +305,22 @@ class Query extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.List<$core.int> get endCursor => $_getN(6);
   @$pb.TagNumber(8)
-  set endCursor($core.List<$core.int> v) {
-    $_setBytes(6, v);
-  }
-
+  set endCursor($core.List<$core.int> value) => $_setBytes(6, value);
   @$pb.TagNumber(8)
   $core.bool hasEndCursor() => $_has(6);
   @$pb.TagNumber(8)
-  void clearEndCursor() => clearField(8);
+  void clearEndCursor() => $_clearField(8);
 
   /// The number of results to skip. Applies before limit, but after all other
   /// constraints. Optional. Must be >= 0 if specified.
   @$pb.TagNumber(10)
   $core.int get offset => $_getIZ(7);
   @$pb.TagNumber(10)
-  set offset($core.int v) {
-    $_setSignedInt32(7, v);
-  }
-
+  set offset($core.int value) => $_setSignedInt32(7, value);
   @$pb.TagNumber(10)
   $core.bool hasOffset() => $_has(7);
   @$pb.TagNumber(10)
-  void clearOffset() => clearField(10);
+  void clearOffset() => $_clearField(10);
 
   /// The maximum number of results to return. Applies after all other
   /// constraints. Optional.
@@ -385,58 +329,53 @@ class Query extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $2.Int32Value get limit => $_getN(8);
   @$pb.TagNumber(12)
-  set limit($2.Int32Value v) {
-    setField(12, v);
-  }
-
+  set limit($2.Int32Value value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasLimit() => $_has(8);
   @$pb.TagNumber(12)
-  void clearLimit() => clearField(12);
+  void clearLimit() => $_clearField(12);
   @$pb.TagNumber(12)
   $2.Int32Value ensureLimit() => $_ensure(8);
 
-  ///  Optional. A potential Nearest Neighbors Search.
+  /// Optional. A potential Nearest Neighbors Search.
   ///
-  ///  Applies after all other filters and ordering.
+  /// Applies after all other filters and ordering.
   ///
-  ///  Finds the closest vector embeddings to the given query vector.
+  /// Finds the closest vector embeddings to the given query vector.
   @$pb.TagNumber(13)
   FindNearest get findNearest => $_getN(9);
   @$pb.TagNumber(13)
-  set findNearest(FindNearest v) {
-    setField(13, v);
-  }
-
+  set findNearest(FindNearest value) => $_setField(13, value);
   @$pb.TagNumber(13)
   $core.bool hasFindNearest() => $_has(9);
   @$pb.TagNumber(13)
-  void clearFindNearest() => clearField(13);
+  void clearFindNearest() => $_clearField(13);
   @$pb.TagNumber(13)
   FindNearest ensureFindNearest() => $_ensure(9);
 }
 
-///  Count of entities that match the query.
+/// Count of entities that match the query.
 ///
-///  The `COUNT(*)` aggregation function operates on the entire entity
-///  so it does not require a field reference.
+/// The `COUNT(*)` aggregation function operates on the entire entity
+/// so it does not require a field reference.
 class AggregationQuery_Aggregation_Count extends $pb.GeneratedMessage {
   factory AggregationQuery_Aggregation_Count({
     $2.Int64Value? upTo,
   }) {
-    final $result = create();
-    if (upTo != null) {
-      $result.upTo = upTo;
-    }
-    return $result;
+    final result = create();
+    if (upTo != null) result.upTo = upTo;
+    return result;
   }
-  AggregationQuery_Aggregation_Count._() : super();
-  factory AggregationQuery_Aggregation_Count.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AggregationQuery_Aggregation_Count.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AggregationQuery_Aggregation_Count._();
+
+  factory AggregationQuery_Aggregation_Count.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AggregationQuery_Aggregation_Count.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AggregationQuery.Aggregation.Count',
@@ -447,107 +386,100 @@ class AggregationQuery_Aggregation_Count extends $pb.GeneratedMessage {
         subBuilder: $2.Int64Value.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AggregationQuery_Aggregation_Count clone() =>
-      AggregationQuery_Aggregation_Count()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AggregationQuery_Aggregation_Count clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AggregationQuery_Aggregation_Count copyWith(
           void Function(AggregationQuery_Aggregation_Count) updates) =>
       super.copyWith((message) =>
               updates(message as AggregationQuery_Aggregation_Count))
           as AggregationQuery_Aggregation_Count;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AggregationQuery_Aggregation_Count create() =>
       AggregationQuery_Aggregation_Count._();
+  @$core.override
   AggregationQuery_Aggregation_Count createEmptyInstance() => create();
-  static $pb.PbList<AggregationQuery_Aggregation_Count> createRepeated() =>
-      $pb.PbList<AggregationQuery_Aggregation_Count>();
   @$core.pragma('dart2js:noInline')
   static AggregationQuery_Aggregation_Count getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AggregationQuery_Aggregation_Count>(
           create);
   static AggregationQuery_Aggregation_Count? _defaultInstance;
 
-  ///  Optional. Optional constraint on the maximum number of entities to
-  ///  count.
+  /// Optional. Optional constraint on the maximum number of entities to
+  /// count.
   ///
-  ///  This provides a way to set an upper bound on the number of entities
-  ///  to scan, limiting latency, and cost.
+  /// This provides a way to set an upper bound on the number of entities
+  /// to scan, limiting latency, and cost.
   ///
-  ///  Unspecified is interpreted as no bound.
+  /// Unspecified is interpreted as no bound.
   ///
-  ///  If a zero value is provided, a count result of zero should always be
-  ///  expected.
+  /// If a zero value is provided, a count result of zero should always be
+  /// expected.
   ///
-  ///  High-Level Example:
+  /// High-Level Example:
   ///
-  ///  ```
-  ///  AGGREGATE COUNT_UP_TO(1000) OVER ( SELECT * FROM k );
-  ///  ```
+  /// ```
+  /// AGGREGATE COUNT_UP_TO(1000) OVER ( SELECT * FROM k );
+  /// ```
   ///
-  ///  Requires:
+  /// Requires:
   ///
-  ///  * Must be non-negative when present.
+  /// * Must be non-negative when present.
   @$pb.TagNumber(1)
   $2.Int64Value get upTo => $_getN(0);
   @$pb.TagNumber(1)
-  set upTo($2.Int64Value v) {
-    setField(1, v);
-  }
-
+  set upTo($2.Int64Value value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasUpTo() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUpTo() => clearField(1);
+  void clearUpTo() => $_clearField(1);
   @$pb.TagNumber(1)
   $2.Int64Value ensureUpTo() => $_ensure(0);
 }
 
-///  Sum of the values of the requested property.
+/// Sum of the values of the requested property.
 ///
-///  * Only numeric values will be aggregated. All non-numeric values
-///  including `NULL` are skipped.
+/// * Only numeric values will be aggregated. All non-numeric values
+/// including `NULL` are skipped.
 ///
-///  * If the aggregated values contain `NaN`, returns `NaN`. Infinity math
-///  follows IEEE-754 standards.
+/// * If the aggregated values contain `NaN`, returns `NaN`. Infinity math
+/// follows IEEE-754 standards.
 ///
-///  * If the aggregated value set is empty, returns 0.
+/// * If the aggregated value set is empty, returns 0.
 ///
-///  * Returns a 64-bit integer if all aggregated numbers are integers and the
-///  sum result does not overflow. Otherwise, the result is returned as a
-///  double. Note that even if all the aggregated values are integers, the
-///  result is returned as a double if it cannot fit within a 64-bit signed
-///  integer. When this occurs, the returned value will lose precision.
+/// * Returns a 64-bit integer if all aggregated numbers are integers and the
+/// sum result does not overflow. Otherwise, the result is returned as a
+/// double. Note that even if all the aggregated values are integers, the
+/// result is returned as a double if it cannot fit within a 64-bit signed
+/// integer. When this occurs, the returned value will lose precision.
 ///
-///  * When underflow occurs, floating-point aggregation is non-deterministic.
-///  This means that running the same query repeatedly without any changes to
-///  the underlying values could produce slightly different results each
-///  time. In those cases, values should be stored as integers over
-///  floating-point numbers.
+/// * When underflow occurs, floating-point aggregation is non-deterministic.
+/// This means that running the same query repeatedly without any changes to
+/// the underlying values could produce slightly different results each
+/// time. In those cases, values should be stored as integers over
+/// floating-point numbers.
 class AggregationQuery_Aggregation_Sum extends $pb.GeneratedMessage {
   factory AggregationQuery_Aggregation_Sum({
     PropertyReference? property,
   }) {
-    final $result = create();
-    if (property != null) {
-      $result.property = property;
-    }
-    return $result;
+    final result = create();
+    if (property != null) result.property = property;
+    return result;
   }
-  AggregationQuery_Aggregation_Sum._() : super();
-  factory AggregationQuery_Aggregation_Sum.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AggregationQuery_Aggregation_Sum.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AggregationQuery_Aggregation_Sum._();
+
+  factory AggregationQuery_Aggregation_Sum.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AggregationQuery_Aggregation_Sum.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AggregationQuery.Aggregation.Sum',
@@ -558,28 +490,23 @@ class AggregationQuery_Aggregation_Sum extends $pb.GeneratedMessage {
         subBuilder: PropertyReference.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AggregationQuery_Aggregation_Sum clone() =>
-      AggregationQuery_Aggregation_Sum()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AggregationQuery_Aggregation_Sum clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AggregationQuery_Aggregation_Sum copyWith(
           void Function(AggregationQuery_Aggregation_Sum) updates) =>
       super.copyWith(
               (message) => updates(message as AggregationQuery_Aggregation_Sum))
           as AggregationQuery_Aggregation_Sum;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AggregationQuery_Aggregation_Sum create() =>
       AggregationQuery_Aggregation_Sum._();
+  @$core.override
   AggregationQuery_Aggregation_Sum createEmptyInstance() => create();
-  static $pb.PbList<AggregationQuery_Aggregation_Sum> createRepeated() =>
-      $pb.PbList<AggregationQuery_Aggregation_Sum>();
   @$core.pragma('dart2js:noInline')
   static AggregationQuery_Aggregation_Sum getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AggregationQuery_Aggregation_Sum>(
@@ -590,46 +517,44 @@ class AggregationQuery_Aggregation_Sum extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   PropertyReference get property => $_getN(0);
   @$pb.TagNumber(1)
-  set property(PropertyReference v) {
-    setField(1, v);
-  }
-
+  set property(PropertyReference value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasProperty() => $_has(0);
   @$pb.TagNumber(1)
-  void clearProperty() => clearField(1);
+  void clearProperty() => $_clearField(1);
   @$pb.TagNumber(1)
   PropertyReference ensureProperty() => $_ensure(0);
 }
 
-///  Average of the values of the requested property.
+/// Average of the values of the requested property.
 ///
-///  * Only numeric values will be aggregated. All non-numeric values
-///  including `NULL` are skipped.
+/// * Only numeric values will be aggregated. All non-numeric values
+/// including `NULL` are skipped.
 ///
-///  * If the aggregated values contain `NaN`, returns `NaN`. Infinity math
-///  follows IEEE-754 standards.
+/// * If the aggregated values contain `NaN`, returns `NaN`. Infinity math
+/// follows IEEE-754 standards.
 ///
-///  * If the aggregated value set is empty, returns `NULL`.
+/// * If the aggregated value set is empty, returns `NULL`.
 ///
-///  * Always returns the result as a double.
+/// * Always returns the result as a double.
 class AggregationQuery_Aggregation_Avg extends $pb.GeneratedMessage {
   factory AggregationQuery_Aggregation_Avg({
     PropertyReference? property,
   }) {
-    final $result = create();
-    if (property != null) {
-      $result.property = property;
-    }
-    return $result;
+    final result = create();
+    if (property != null) result.property = property;
+    return result;
   }
-  AggregationQuery_Aggregation_Avg._() : super();
-  factory AggregationQuery_Aggregation_Avg.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AggregationQuery_Aggregation_Avg.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AggregationQuery_Aggregation_Avg._();
+
+  factory AggregationQuery_Aggregation_Avg.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AggregationQuery_Aggregation_Avg.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AggregationQuery.Aggregation.Avg',
@@ -640,28 +565,23 @@ class AggregationQuery_Aggregation_Avg extends $pb.GeneratedMessage {
         subBuilder: PropertyReference.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AggregationQuery_Aggregation_Avg clone() =>
-      AggregationQuery_Aggregation_Avg()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AggregationQuery_Aggregation_Avg clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AggregationQuery_Aggregation_Avg copyWith(
           void Function(AggregationQuery_Aggregation_Avg) updates) =>
       super.copyWith(
               (message) => updates(message as AggregationQuery_Aggregation_Avg))
           as AggregationQuery_Aggregation_Avg;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AggregationQuery_Aggregation_Avg create() =>
       AggregationQuery_Aggregation_Avg._();
+  @$core.override
   AggregationQuery_Aggregation_Avg createEmptyInstance() => create();
-  static $pb.PbList<AggregationQuery_Aggregation_Avg> createRepeated() =>
-      $pb.PbList<AggregationQuery_Aggregation_Avg>();
   @$core.pragma('dart2js:noInline')
   static AggregationQuery_Aggregation_Avg getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AggregationQuery_Aggregation_Avg>(
@@ -672,14 +592,11 @@ class AggregationQuery_Aggregation_Avg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   PropertyReference get property => $_getN(0);
   @$pb.TagNumber(1)
-  set property(PropertyReference v) {
-    setField(1, v);
-  }
-
+  set property(PropertyReference value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasProperty() => $_has(0);
   @$pb.TagNumber(1)
-  void clearProperty() => clearField(1);
+  void clearProperty() => $_clearField(1);
   @$pb.TagNumber(1)
   PropertyReference ensureProperty() => $_ensure(0);
 }
@@ -694,28 +611,22 @@ class AggregationQuery_Aggregation extends $pb.GeneratedMessage {
     AggregationQuery_Aggregation_Avg? avg,
     $core.String? alias,
   }) {
-    final $result = create();
-    if (count != null) {
-      $result.count = count;
-    }
-    if (sum != null) {
-      $result.sum = sum;
-    }
-    if (avg != null) {
-      $result.avg = avg;
-    }
-    if (alias != null) {
-      $result.alias = alias;
-    }
-    return $result;
+    final result = create();
+    if (count != null) result.count = count;
+    if (sum != null) result.sum = sum;
+    if (avg != null) result.avg = avg;
+    if (alias != null) result.alias = alias;
+    return result;
   }
-  AggregationQuery_Aggregation._() : super();
-  factory AggregationQuery_Aggregation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AggregationQuery_Aggregation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AggregationQuery_Aggregation._();
+
+  factory AggregationQuery_Aggregation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AggregationQuery_Aggregation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, AggregationQuery_Aggregation_Operator>
       _AggregationQuery_Aggregation_OperatorByTag = {
@@ -739,49 +650,47 @@ class AggregationQuery_Aggregation extends $pb.GeneratedMessage {
     ..aOS(7, _omitFieldNames ? '' : 'alias')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AggregationQuery_Aggregation clone() =>
-      AggregationQuery_Aggregation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AggregationQuery_Aggregation clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AggregationQuery_Aggregation copyWith(
           void Function(AggregationQuery_Aggregation) updates) =>
       super.copyWith(
               (message) => updates(message as AggregationQuery_Aggregation))
           as AggregationQuery_Aggregation;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AggregationQuery_Aggregation create() =>
       AggregationQuery_Aggregation._();
+  @$core.override
   AggregationQuery_Aggregation createEmptyInstance() => create();
-  static $pb.PbList<AggregationQuery_Aggregation> createRepeated() =>
-      $pb.PbList<AggregationQuery_Aggregation>();
   @$core.pragma('dart2js:noInline')
   static AggregationQuery_Aggregation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AggregationQuery_Aggregation>(create);
   static AggregationQuery_Aggregation? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   AggregationQuery_Aggregation_Operator whichOperator() =>
       _AggregationQuery_Aggregation_OperatorByTag[$_whichOneof(0)]!;
-  void clearOperator() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearOperator() => $_clearField($_whichOneof(0));
 
   /// Count aggregator.
   @$pb.TagNumber(1)
   AggregationQuery_Aggregation_Count get count => $_getN(0);
   @$pb.TagNumber(1)
-  set count(AggregationQuery_Aggregation_Count v) {
-    setField(1, v);
-  }
-
+  set count(AggregationQuery_Aggregation_Count value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasCount() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCount() => clearField(1);
+  void clearCount() => $_clearField(1);
   @$pb.TagNumber(1)
   AggregationQuery_Aggregation_Count ensureCount() => $_ensure(0);
 
@@ -789,14 +698,11 @@ class AggregationQuery_Aggregation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   AggregationQuery_Aggregation_Sum get sum => $_getN(1);
   @$pb.TagNumber(2)
-  set sum(AggregationQuery_Aggregation_Sum v) {
-    setField(2, v);
-  }
-
+  set sum(AggregationQuery_Aggregation_Sum value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSum() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSum() => clearField(2);
+  void clearSum() => $_clearField(2);
   @$pb.TagNumber(2)
   AggregationQuery_Aggregation_Sum ensureSum() => $_ensure(1);
 
@@ -804,63 +710,57 @@ class AggregationQuery_Aggregation extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   AggregationQuery_Aggregation_Avg get avg => $_getN(2);
   @$pb.TagNumber(3)
-  set avg(AggregationQuery_Aggregation_Avg v) {
-    setField(3, v);
-  }
-
+  set avg(AggregationQuery_Aggregation_Avg value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasAvg() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAvg() => clearField(3);
+  void clearAvg() => $_clearField(3);
   @$pb.TagNumber(3)
   AggregationQuery_Aggregation_Avg ensureAvg() => $_ensure(2);
 
-  ///  Optional. Optional name of the property to store the result of the
-  ///  aggregation.
+  /// Optional. Optional name of the property to store the result of the
+  /// aggregation.
   ///
-  ///  If not provided, Datastore will pick a default name following the format
-  ///  `property_<incremental_id++>`. For example:
+  /// If not provided, Datastore will pick a default name following the format
+  /// `property_<incremental_id++>`. For example:
   ///
-  ///  ```
-  ///  AGGREGATE
-  ///    COUNT_UP_TO(1) AS count_up_to_1,
-  ///    COUNT_UP_TO(2),
-  ///    COUNT_UP_TO(3) AS count_up_to_3,
-  ///    COUNT(*)
-  ///  OVER (
-  ///    ...
-  ///  );
-  ///  ```
+  /// ```
+  /// AGGREGATE
+  ///   COUNT_UP_TO(1) AS count_up_to_1,
+  ///   COUNT_UP_TO(2),
+  ///   COUNT_UP_TO(3) AS count_up_to_3,
+  ///   COUNT(*)
+  /// OVER (
+  ///   ...
+  /// );
+  /// ```
   ///
-  ///  becomes:
+  /// becomes:
   ///
-  ///  ```
-  ///  AGGREGATE
-  ///    COUNT_UP_TO(1) AS count_up_to_1,
-  ///    COUNT_UP_TO(2) AS property_1,
-  ///    COUNT_UP_TO(3) AS count_up_to_3,
-  ///    COUNT(*) AS property_2
-  ///  OVER (
-  ///    ...
-  ///  );
-  ///  ```
+  /// ```
+  /// AGGREGATE
+  ///   COUNT_UP_TO(1) AS count_up_to_1,
+  ///   COUNT_UP_TO(2) AS property_1,
+  ///   COUNT_UP_TO(3) AS count_up_to_3,
+  ///   COUNT(*) AS property_2
+  /// OVER (
+  ///   ...
+  /// );
+  /// ```
   ///
-  ///  Requires:
+  /// Requires:
   ///
-  ///  * Must be unique across all aggregation aliases.
-  ///  * Conform to [entity property
-  ///  name][google.datastore.v1.Entity.properties] limitations.
+  /// * Must be unique across all aggregation aliases.
+  /// * Conform to [entity property
+  /// name][google.datastore.v1.Entity.properties] limitations.
   @$pb.TagNumber(7)
   $core.String get alias => $_getSZ(3);
   @$pb.TagNumber(7)
-  set alias($core.String v) {
-    $_setString(3, v);
-  }
-
+  set alias($core.String value) => $_setString(3, value);
   @$pb.TagNumber(7)
   $core.bool hasAlias() => $_has(3);
   @$pb.TagNumber(7)
-  void clearAlias() => clearField(7);
+  void clearAlias() => $_clearField(7);
 }
 
 enum AggregationQuery_QueryType { nestedQuery, notSet }
@@ -872,22 +772,20 @@ class AggregationQuery extends $pb.GeneratedMessage {
     Query? nestedQuery,
     $core.Iterable<AggregationQuery_Aggregation>? aggregations,
   }) {
-    final $result = create();
-    if (nestedQuery != null) {
-      $result.nestedQuery = nestedQuery;
-    }
-    if (aggregations != null) {
-      $result.aggregations.addAll(aggregations);
-    }
-    return $result;
+    final result = create();
+    if (nestedQuery != null) result.nestedQuery = nestedQuery;
+    if (aggregations != null) result.aggregations.addAll(aggregations);
+    return result;
   }
-  AggregationQuery._() : super();
-  factory AggregationQuery.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AggregationQuery.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AggregationQuery._();
+
+  factory AggregationQuery.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AggregationQuery.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, AggregationQuery_QueryType>
       _AggregationQuery_QueryTypeByTag = {
@@ -902,61 +800,56 @@ class AggregationQuery extends $pb.GeneratedMessage {
     ..oo(0, [1])
     ..aOM<Query>(1, _omitFieldNames ? '' : 'nestedQuery',
         subBuilder: Query.create)
-    ..pc<AggregationQuery_Aggregation>(
-        3, _omitFieldNames ? '' : 'aggregations', $pb.PbFieldType.PM,
+    ..pPM<AggregationQuery_Aggregation>(
+        3, _omitFieldNames ? '' : 'aggregations',
         subBuilder: AggregationQuery_Aggregation.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AggregationQuery clone() => AggregationQuery()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AggregationQuery clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AggregationQuery copyWith(void Function(AggregationQuery) updates) =>
       super.copyWith((message) => updates(message as AggregationQuery))
           as AggregationQuery;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AggregationQuery create() => AggregationQuery._();
+  @$core.override
   AggregationQuery createEmptyInstance() => create();
-  static $pb.PbList<AggregationQuery> createRepeated() =>
-      $pb.PbList<AggregationQuery>();
   @$core.pragma('dart2js:noInline')
   static AggregationQuery getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AggregationQuery>(create);
   static AggregationQuery? _defaultInstance;
 
+  @$pb.TagNumber(1)
   AggregationQuery_QueryType whichQueryType() =>
       _AggregationQuery_QueryTypeByTag[$_whichOneof(0)]!;
-  void clearQueryType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  void clearQueryType() => $_clearField($_whichOneof(0));
 
   /// Nested query for aggregation
   @$pb.TagNumber(1)
   Query get nestedQuery => $_getN(0);
   @$pb.TagNumber(1)
-  set nestedQuery(Query v) {
-    setField(1, v);
-  }
-
+  set nestedQuery(Query value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasNestedQuery() => $_has(0);
   @$pb.TagNumber(1)
-  void clearNestedQuery() => clearField(1);
+  void clearNestedQuery() => $_clearField(1);
   @$pb.TagNumber(1)
   Query ensureNestedQuery() => $_ensure(0);
 
-  ///  Optional. Series of aggregations to apply over the results of the
-  ///  `nested_query`.
+  /// Optional. Series of aggregations to apply over the results of the
+  /// `nested_query`.
   ///
-  ///  Requires:
+  /// Requires:
   ///
-  ///  * A minimum of one and maximum of five aggregations per query.
+  /// * A minimum of one and maximum of five aggregations per query.
   @$pb.TagNumber(3)
-  $core.List<AggregationQuery_Aggregation> get aggregations => $_getList(1);
+  $pb.PbList<AggregationQuery_Aggregation> get aggregations => $_getList(1);
 }
 
 /// A representation of a kind.
@@ -964,19 +857,19 @@ class KindExpression extends $pb.GeneratedMessage {
   factory KindExpression({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  KindExpression._() : super();
-  factory KindExpression.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory KindExpression.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  KindExpression._();
+
+  factory KindExpression.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory KindExpression.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'KindExpression',
@@ -986,24 +879,20 @@ class KindExpression extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  KindExpression clone() => KindExpression()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  KindExpression clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   KindExpression copyWith(void Function(KindExpression) updates) =>
       super.copyWith((message) => updates(message as KindExpression))
           as KindExpression;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static KindExpression create() => KindExpression._();
+  @$core.override
   KindExpression createEmptyInstance() => create();
-  static $pb.PbList<KindExpression> createRepeated() =>
-      $pb.PbList<KindExpression>();
   @$core.pragma('dart2js:noInline')
   static KindExpression getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<KindExpression>(create);
@@ -1013,14 +902,11 @@ class KindExpression extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// A reference to a property relative to the kind expressions.
@@ -1028,19 +914,19 @@ class PropertyReference extends $pb.GeneratedMessage {
   factory PropertyReference({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  PropertyReference._() : super();
-  factory PropertyReference.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PropertyReference.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PropertyReference._();
+
+  factory PropertyReference.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PropertyReference.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PropertyReference',
@@ -1050,47 +936,40 @@ class PropertyReference extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PropertyReference clone() => PropertyReference()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PropertyReference clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PropertyReference copyWith(void Function(PropertyReference) updates) =>
       super.copyWith((message) => updates(message as PropertyReference))
           as PropertyReference;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PropertyReference create() => PropertyReference._();
+  @$core.override
   PropertyReference createEmptyInstance() => create();
-  static $pb.PbList<PropertyReference> createRepeated() =>
-      $pb.PbList<PropertyReference>();
   @$core.pragma('dart2js:noInline')
   static PropertyReference getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PropertyReference>(create);
   static PropertyReference? _defaultInstance;
 
-  ///  A reference to a property.
+  /// A reference to a property.
   ///
-  ///  Requires:
+  /// Requires:
   ///
-  ///  * MUST be a dot-delimited (`.`) string of segments, where each segment
-  ///  conforms to [entity property name][google.datastore.v1.Entity.properties]
-  ///  limitations.
+  /// * MUST be a dot-delimited (`.`) string of segments, where each segment
+  /// conforms to [entity property name][google.datastore.v1.Entity.properties]
+  /// limitations.
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(2)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(2)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(2)
-  void clearName() => clearField(2);
+  void clearName() => $_clearField(2);
 }
 
 /// A representation of a property in a projection.
@@ -1098,19 +977,19 @@ class Projection extends $pb.GeneratedMessage {
   factory Projection({
     PropertyReference? property,
   }) {
-    final $result = create();
-    if (property != null) {
-      $result.property = property;
-    }
-    return $result;
+    final result = create();
+    if (property != null) result.property = property;
+    return result;
   }
-  Projection._() : super();
-  factory Projection.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Projection.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Projection._();
+
+  factory Projection.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Projection.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Projection',
@@ -1121,22 +1000,19 @@ class Projection extends $pb.GeneratedMessage {
         subBuilder: PropertyReference.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Projection clone() => Projection()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Projection clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Projection copyWith(void Function(Projection) updates) =>
       super.copyWith((message) => updates(message as Projection)) as Projection;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Projection create() => Projection._();
+  @$core.override
   Projection createEmptyInstance() => create();
-  static $pb.PbList<Projection> createRepeated() => $pb.PbList<Projection>();
   @$core.pragma('dart2js:noInline')
   static Projection getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Projection>(create);
@@ -1146,14 +1022,11 @@ class Projection extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   PropertyReference get property => $_getN(0);
   @$pb.TagNumber(1)
-  set property(PropertyReference v) {
-    setField(1, v);
-  }
-
+  set property(PropertyReference value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasProperty() => $_has(0);
   @$pb.TagNumber(1)
-  void clearProperty() => clearField(1);
+  void clearProperty() => $_clearField(1);
   @$pb.TagNumber(1)
   PropertyReference ensureProperty() => $_ensure(0);
 }
@@ -1164,22 +1037,20 @@ class PropertyOrder extends $pb.GeneratedMessage {
     PropertyReference? property,
     PropertyOrder_Direction? direction,
   }) {
-    final $result = create();
-    if (property != null) {
-      $result.property = property;
-    }
-    if (direction != null) {
-      $result.direction = direction;
-    }
-    return $result;
+    final result = create();
+    if (property != null) result.property = property;
+    if (direction != null) result.direction = direction;
+    return result;
   }
-  PropertyOrder._() : super();
-  factory PropertyOrder.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PropertyOrder.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PropertyOrder._();
+
+  factory PropertyOrder.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PropertyOrder.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PropertyOrder',
@@ -1188,31 +1059,24 @@ class PropertyOrder extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<PropertyReference>(1, _omitFieldNames ? '' : 'property',
         subBuilder: PropertyReference.create)
-    ..e<PropertyOrder_Direction>(
-        2, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OE,
-        defaultOrMaker: PropertyOrder_Direction.DIRECTION_UNSPECIFIED,
-        valueOf: PropertyOrder_Direction.valueOf,
+    ..aE<PropertyOrder_Direction>(2, _omitFieldNames ? '' : 'direction',
         enumValues: PropertyOrder_Direction.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PropertyOrder clone() => PropertyOrder()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PropertyOrder clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PropertyOrder copyWith(void Function(PropertyOrder) updates) =>
       super.copyWith((message) => updates(message as PropertyOrder))
           as PropertyOrder;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PropertyOrder create() => PropertyOrder._();
+  @$core.override
   PropertyOrder createEmptyInstance() => create();
-  static $pb.PbList<PropertyOrder> createRepeated() =>
-      $pb.PbList<PropertyOrder>();
   @$core.pragma('dart2js:noInline')
   static PropertyOrder getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PropertyOrder>(create);
@@ -1222,14 +1086,11 @@ class PropertyOrder extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   PropertyReference get property => $_getN(0);
   @$pb.TagNumber(1)
-  set property(PropertyReference v) {
-    setField(1, v);
-  }
-
+  set property(PropertyReference value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasProperty() => $_has(0);
   @$pb.TagNumber(1)
-  void clearProperty() => clearField(1);
+  void clearProperty() => $_clearField(1);
   @$pb.TagNumber(1)
   PropertyReference ensureProperty() => $_ensure(0);
 
@@ -1237,14 +1098,11 @@ class PropertyOrder extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   PropertyOrder_Direction get direction => $_getN(1);
   @$pb.TagNumber(2)
-  set direction(PropertyOrder_Direction v) {
-    setField(2, v);
-  }
-
+  set direction(PropertyOrder_Direction value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasDirection() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDirection() => clearField(2);
+  void clearDirection() => $_clearField(2);
 }
 
 enum Filter_FilterType { compositeFilter, propertyFilter, notSet }
@@ -1255,22 +1113,20 @@ class Filter extends $pb.GeneratedMessage {
     CompositeFilter? compositeFilter,
     PropertyFilter? propertyFilter,
   }) {
-    final $result = create();
-    if (compositeFilter != null) {
-      $result.compositeFilter = compositeFilter;
-    }
-    if (propertyFilter != null) {
-      $result.propertyFilter = propertyFilter;
-    }
-    return $result;
+    final result = create();
+    if (compositeFilter != null) result.compositeFilter = compositeFilter;
+    if (propertyFilter != null) result.propertyFilter = propertyFilter;
+    return result;
   }
-  Filter._() : super();
-  factory Filter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Filter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Filter._();
+
+  factory Filter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Filter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, Filter_FilterType> _Filter_FilterTypeByTag =
       {
@@ -1290,43 +1146,41 @@ class Filter extends $pb.GeneratedMessage {
         subBuilder: PropertyFilter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Filter clone() => Filter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Filter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Filter copyWith(void Function(Filter) updates) =>
       super.copyWith((message) => updates(message as Filter)) as Filter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Filter create() => Filter._();
+  @$core.override
   Filter createEmptyInstance() => create();
-  static $pb.PbList<Filter> createRepeated() => $pb.PbList<Filter>();
   @$core.pragma('dart2js:noInline')
   static Filter getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Filter>(create);
   static Filter? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   Filter_FilterType whichFilterType() =>
       _Filter_FilterTypeByTag[$_whichOneof(0)]!;
-  void clearFilterType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  void clearFilterType() => $_clearField($_whichOneof(0));
 
   /// A composite filter.
   @$pb.TagNumber(1)
   CompositeFilter get compositeFilter => $_getN(0);
   @$pb.TagNumber(1)
-  set compositeFilter(CompositeFilter v) {
-    setField(1, v);
-  }
-
+  set compositeFilter(CompositeFilter value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasCompositeFilter() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCompositeFilter() => clearField(1);
+  void clearCompositeFilter() => $_clearField(1);
   @$pb.TagNumber(1)
   CompositeFilter ensureCompositeFilter() => $_ensure(0);
 
@@ -1334,14 +1188,11 @@ class Filter extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   PropertyFilter get propertyFilter => $_getN(1);
   @$pb.TagNumber(2)
-  set propertyFilter(PropertyFilter v) {
-    setField(2, v);
-  }
-
+  set propertyFilter(PropertyFilter value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasPropertyFilter() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPropertyFilter() => clearField(2);
+  void clearPropertyFilter() => $_clearField(2);
   @$pb.TagNumber(2)
   PropertyFilter ensurePropertyFilter() => $_ensure(1);
 }
@@ -1352,55 +1203,46 @@ class CompositeFilter extends $pb.GeneratedMessage {
     CompositeFilter_Operator? op,
     $core.Iterable<Filter>? filters,
   }) {
-    final $result = create();
-    if (op != null) {
-      $result.op = op;
-    }
-    if (filters != null) {
-      $result.filters.addAll(filters);
-    }
-    return $result;
+    final result = create();
+    if (op != null) result.op = op;
+    if (filters != null) result.filters.addAll(filters);
+    return result;
   }
-  CompositeFilter._() : super();
-  factory CompositeFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CompositeFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CompositeFilter._();
+
+  factory CompositeFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CompositeFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CompositeFilter',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..e<CompositeFilter_Operator>(
-        1, _omitFieldNames ? '' : 'op', $pb.PbFieldType.OE,
-        defaultOrMaker: CompositeFilter_Operator.OPERATOR_UNSPECIFIED,
-        valueOf: CompositeFilter_Operator.valueOf,
+    ..aE<CompositeFilter_Operator>(1, _omitFieldNames ? '' : 'op',
         enumValues: CompositeFilter_Operator.values)
-    ..pc<Filter>(2, _omitFieldNames ? '' : 'filters', $pb.PbFieldType.PM,
+    ..pPM<Filter>(2, _omitFieldNames ? '' : 'filters',
         subBuilder: Filter.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CompositeFilter clone() => CompositeFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CompositeFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CompositeFilter copyWith(void Function(CompositeFilter) updates) =>
       super.copyWith((message) => updates(message as CompositeFilter))
           as CompositeFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CompositeFilter create() => CompositeFilter._();
+  @$core.override
   CompositeFilter createEmptyInstance() => create();
-  static $pb.PbList<CompositeFilter> createRepeated() =>
-      $pb.PbList<CompositeFilter>();
   @$core.pragma('dart2js:noInline')
   static CompositeFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CompositeFilter>(create);
@@ -1410,22 +1252,19 @@ class CompositeFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   CompositeFilter_Operator get op => $_getN(0);
   @$pb.TagNumber(1)
-  set op(CompositeFilter_Operator v) {
-    setField(1, v);
-  }
-
+  set op(CompositeFilter_Operator value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOp() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOp() => clearField(1);
+  void clearOp() => $_clearField(1);
 
-  ///  The list of filters to combine.
+  /// The list of filters to combine.
   ///
-  ///  Requires:
+  /// Requires:
   ///
-  ///  * At least one filter is present.
+  /// * At least one filter is present.
   @$pb.TagNumber(2)
-  $core.List<Filter> get filters => $_getList(1);
+  $pb.PbList<Filter> get filters => $_getList(1);
 }
 
 /// A filter on a specific property.
@@ -1435,25 +1274,21 @@ class PropertyFilter extends $pb.GeneratedMessage {
     PropertyFilter_Operator? op,
     $0.Value? value,
   }) {
-    final $result = create();
-    if (property != null) {
-      $result.property = property;
-    }
-    if (op != null) {
-      $result.op = op;
-    }
-    if (value != null) {
-      $result.value = value;
-    }
-    return $result;
+    final result = create();
+    if (property != null) result.property = property;
+    if (op != null) result.op = op;
+    if (value != null) result.value = value;
+    return result;
   }
-  PropertyFilter._() : super();
-  factory PropertyFilter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PropertyFilter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PropertyFilter._();
+
+  factory PropertyFilter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PropertyFilter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PropertyFilter',
@@ -1462,33 +1297,26 @@ class PropertyFilter extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<PropertyReference>(1, _omitFieldNames ? '' : 'property',
         subBuilder: PropertyReference.create)
-    ..e<PropertyFilter_Operator>(
-        2, _omitFieldNames ? '' : 'op', $pb.PbFieldType.OE,
-        defaultOrMaker: PropertyFilter_Operator.OPERATOR_UNSPECIFIED,
-        valueOf: PropertyFilter_Operator.valueOf,
+    ..aE<PropertyFilter_Operator>(2, _omitFieldNames ? '' : 'op',
         enumValues: PropertyFilter_Operator.values)
     ..aOM<$0.Value>(3, _omitFieldNames ? '' : 'value',
         subBuilder: $0.Value.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PropertyFilter clone() => PropertyFilter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PropertyFilter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PropertyFilter copyWith(void Function(PropertyFilter) updates) =>
       super.copyWith((message) => updates(message as PropertyFilter))
           as PropertyFilter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PropertyFilter create() => PropertyFilter._();
+  @$core.override
   PropertyFilter createEmptyInstance() => create();
-  static $pb.PbList<PropertyFilter> createRepeated() =>
-      $pb.PbList<PropertyFilter>();
   @$core.pragma('dart2js:noInline')
   static PropertyFilter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PropertyFilter>(create);
@@ -1498,14 +1326,11 @@ class PropertyFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   PropertyReference get property => $_getN(0);
   @$pb.TagNumber(1)
-  set property(PropertyReference v) {
-    setField(1, v);
-  }
-
+  set property(PropertyReference value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasProperty() => $_has(0);
   @$pb.TagNumber(1)
-  void clearProperty() => clearField(1);
+  void clearProperty() => $_clearField(1);
   @$pb.TagNumber(1)
   PropertyReference ensureProperty() => $_ensure(0);
 
@@ -1513,27 +1338,21 @@ class PropertyFilter extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   PropertyFilter_Operator get op => $_getN(1);
   @$pb.TagNumber(2)
-  set op(PropertyFilter_Operator v) {
-    setField(2, v);
-  }
-
+  set op(PropertyFilter_Operator value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasOp() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOp() => clearField(2);
+  void clearOp() => $_clearField(2);
 
   /// The value to compare the property to.
   @$pb.TagNumber(3)
   $0.Value get value => $_getN(2);
   @$pb.TagNumber(3)
-  set value($0.Value v) {
-    setField(3, v);
-  }
-
+  set value($0.Value value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasValue() => $_has(2);
   @$pb.TagNumber(3)
-  void clearValue() => clearField(3);
+  void clearValue() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.Value ensureValue() => $_ensure(2);
 }
@@ -1551,34 +1370,25 @@ class FindNearest extends $pb.GeneratedMessage {
     $core.String? distanceResultProperty,
     $2.DoubleValue? distanceThreshold,
   }) {
-    final $result = create();
-    if (vectorProperty != null) {
-      $result.vectorProperty = vectorProperty;
-    }
-    if (queryVector != null) {
-      $result.queryVector = queryVector;
-    }
-    if (distanceMeasure != null) {
-      $result.distanceMeasure = distanceMeasure;
-    }
-    if (limit != null) {
-      $result.limit = limit;
-    }
-    if (distanceResultProperty != null) {
-      $result.distanceResultProperty = distanceResultProperty;
-    }
-    if (distanceThreshold != null) {
-      $result.distanceThreshold = distanceThreshold;
-    }
-    return $result;
+    final result = create();
+    if (vectorProperty != null) result.vectorProperty = vectorProperty;
+    if (queryVector != null) result.queryVector = queryVector;
+    if (distanceMeasure != null) result.distanceMeasure = distanceMeasure;
+    if (limit != null) result.limit = limit;
+    if (distanceResultProperty != null)
+      result.distanceResultProperty = distanceResultProperty;
+    if (distanceThreshold != null) result.distanceThreshold = distanceThreshold;
+    return result;
   }
-  FindNearest._() : super();
-  factory FindNearest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FindNearest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FindNearest._();
+
+  factory FindNearest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FindNearest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindNearest',
@@ -1589,11 +1399,8 @@ class FindNearest extends $pb.GeneratedMessage {
         subBuilder: PropertyReference.create)
     ..aOM<$0.Value>(2, _omitFieldNames ? '' : 'queryVector',
         subBuilder: $0.Value.create)
-    ..e<FindNearest_DistanceMeasure>(
-        3, _omitFieldNames ? '' : 'distanceMeasure', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            FindNearest_DistanceMeasure.DISTANCE_MEASURE_UNSPECIFIED,
-        valueOf: FindNearest_DistanceMeasure.valueOf,
+    ..aE<FindNearest_DistanceMeasure>(
+        3, _omitFieldNames ? '' : 'distanceMeasure',
         enumValues: FindNearest_DistanceMeasure.values)
     ..aOM<$2.Int32Value>(4, _omitFieldNames ? '' : 'limit',
         subBuilder: $2.Int32Value.create)
@@ -1602,23 +1409,20 @@ class FindNearest extends $pb.GeneratedMessage {
         subBuilder: $2.DoubleValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FindNearest clone() => FindNearest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FindNearest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FindNearest copyWith(void Function(FindNearest) updates) =>
       super.copyWith((message) => updates(message as FindNearest))
           as FindNearest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FindNearest create() => FindNearest._();
+  @$core.override
   FindNearest createEmptyInstance() => create();
-  static $pb.PbList<FindNearest> createRepeated() => $pb.PbList<FindNearest>();
   @$core.pragma('dart2js:noInline')
   static FindNearest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FindNearest>(create);
@@ -1630,14 +1434,11 @@ class FindNearest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   PropertyReference get vectorProperty => $_getN(0);
   @$pb.TagNumber(1)
-  set vectorProperty(PropertyReference v) {
-    setField(1, v);
-  }
-
+  set vectorProperty(PropertyReference value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasVectorProperty() => $_has(0);
   @$pb.TagNumber(1)
-  void clearVectorProperty() => clearField(1);
+  void clearVectorProperty() => $_clearField(1);
   @$pb.TagNumber(1)
   PropertyReference ensureVectorProperty() => $_ensure(0);
 
@@ -1646,14 +1447,11 @@ class FindNearest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Value get queryVector => $_getN(1);
   @$pb.TagNumber(2)
-  set queryVector($0.Value v) {
-    setField(2, v);
-  }
-
+  set queryVector($0.Value value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasQueryVector() => $_has(1);
   @$pb.TagNumber(2)
-  void clearQueryVector() => clearField(2);
+  void clearQueryVector() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Value ensureQueryVector() => $_ensure(1);
 
@@ -1661,28 +1459,23 @@ class FindNearest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   FindNearest_DistanceMeasure get distanceMeasure => $_getN(2);
   @$pb.TagNumber(3)
-  set distanceMeasure(FindNearest_DistanceMeasure v) {
-    setField(3, v);
-  }
-
+  set distanceMeasure(FindNearest_DistanceMeasure value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasDistanceMeasure() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDistanceMeasure() => clearField(3);
+  void clearDistanceMeasure() => $_clearField(3);
 
   /// Required. The number of nearest neighbors to return. Must be a positive
   /// integer of no more than 100.
   @$pb.TagNumber(4)
   $2.Int32Value get limit => $_getN(3);
   @$pb.TagNumber(4)
-  set limit($2.Int32Value v) {
-    setField(4, v);
-  }
-
+  set limit($2.Int32Value value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasLimit() => $_has(3);
   @$pb.TagNumber(4)
-  void clearLimit() => clearField(4);
+  void clearLimit() => $_clearField(4);
   @$pb.TagNumber(4)
   $2.Int32Value ensureLimit() => $_ensure(3);
 
@@ -1692,33 +1485,27 @@ class FindNearest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get distanceResultProperty => $_getSZ(4);
   @$pb.TagNumber(5)
-  set distanceResultProperty($core.String v) {
-    $_setString(4, v);
-  }
-
+  set distanceResultProperty($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasDistanceResultProperty() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDistanceResultProperty() => clearField(5);
+  void clearDistanceResultProperty() => $_clearField(5);
 
-  ///  Optional. Option to specify a threshold for which no less similar documents
-  ///  will be returned. The behavior of the specified `distance_measure` will
-  ///  affect the meaning of the distance threshold. Since DOT_PRODUCT distances
-  ///  increase when the vectors are more similar, the comparison is inverted.
+  /// Optional. Option to specify a threshold for which no less similar documents
+  /// will be returned. The behavior of the specified `distance_measure` will
+  /// affect the meaning of the distance threshold. Since DOT_PRODUCT distances
+  /// increase when the vectors are more similar, the comparison is inverted.
   ///
-  ///  For EUCLIDEAN, COSINE: WHERE distance <= distance_threshold
-  ///  For DOT_PRODUCT:       WHERE distance >= distance_threshold
+  /// For EUCLIDEAN, COSINE: WHERE distance <= distance_threshold
+  /// For DOT_PRODUCT:       WHERE distance >= distance_threshold
   @$pb.TagNumber(6)
   $2.DoubleValue get distanceThreshold => $_getN(5);
   @$pb.TagNumber(6)
-  set distanceThreshold($2.DoubleValue v) {
-    setField(6, v);
-  }
-
+  set distanceThreshold($2.DoubleValue value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasDistanceThreshold() => $_has(5);
   @$pb.TagNumber(6)
-  void clearDistanceThreshold() => clearField(6);
+  void clearDistanceThreshold() => $_clearField(6);
   @$pb.TagNumber(6)
   $2.DoubleValue ensureDistanceThreshold() => $_ensure(5);
 }
@@ -1730,30 +1517,26 @@ class GqlQuery extends $pb.GeneratedMessage {
     $core.String? queryString,
     $core.bool? allowLiterals,
     $core.Iterable<GqlQueryParameter>? positionalBindings,
-    $core.Map<$core.String, GqlQueryParameter>? namedBindings,
+    $core.Iterable<$core.MapEntry<$core.String, GqlQueryParameter>>?
+        namedBindings,
   }) {
-    final $result = create();
-    if (queryString != null) {
-      $result.queryString = queryString;
-    }
-    if (allowLiterals != null) {
-      $result.allowLiterals = allowLiterals;
-    }
-    if (positionalBindings != null) {
-      $result.positionalBindings.addAll(positionalBindings);
-    }
-    if (namedBindings != null) {
-      $result.namedBindings.addAll(namedBindings);
-    }
-    return $result;
+    final result = create();
+    if (queryString != null) result.queryString = queryString;
+    if (allowLiterals != null) result.allowLiterals = allowLiterals;
+    if (positionalBindings != null)
+      result.positionalBindings.addAll(positionalBindings);
+    if (namedBindings != null) result.namedBindings.addEntries(namedBindings);
+    return result;
   }
-  GqlQuery._() : super();
-  factory GqlQuery.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GqlQuery.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GqlQuery._();
+
+  factory GqlQuery.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GqlQuery.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GqlQuery',
@@ -1762,8 +1545,7 @@ class GqlQuery extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'queryString')
     ..aOB(2, _omitFieldNames ? '' : 'allowLiterals')
-    ..pc<GqlQueryParameter>(
-        4, _omitFieldNames ? '' : 'positionalBindings', $pb.PbFieldType.PM,
+    ..pPM<GqlQueryParameter>(4, _omitFieldNames ? '' : 'positionalBindings',
         subBuilder: GqlQueryParameter.create)
     ..m<$core.String, GqlQueryParameter>(
         5, _omitFieldNames ? '' : 'namedBindings',
@@ -1775,22 +1557,19 @@ class GqlQuery extends $pb.GeneratedMessage {
         packageName: const $pb.PackageName('google.datastore.v1'))
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GqlQuery clone() => GqlQuery()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GqlQuery clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GqlQuery copyWith(void Function(GqlQuery) updates) =>
       super.copyWith((message) => updates(message as GqlQuery)) as GqlQuery;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GqlQuery create() => GqlQuery._();
+  @$core.override
   GqlQuery createEmptyInstance() => create();
-  static $pb.PbList<GqlQuery> createRepeated() => $pb.PbList<GqlQuery>();
   @$core.pragma('dart2js:noInline')
   static GqlQuery getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GqlQuery>(create);
@@ -1801,14 +1580,11 @@ class GqlQuery extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get queryString => $_getSZ(0);
   @$pb.TagNumber(1)
-  set queryString($core.String v) {
-    $_setString(0, v);
-  }
-
+  set queryString($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasQueryString() => $_has(0);
   @$pb.TagNumber(1)
-  void clearQueryString() => clearField(1);
+  void clearQueryString() => $_clearField(1);
 
   /// When false, the query string must not contain any literals and instead must
   /// bind all values. For example,
@@ -1817,30 +1593,27 @@ class GqlQuery extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool get allowLiterals => $_getBF(1);
   @$pb.TagNumber(2)
-  set allowLiterals($core.bool v) {
-    $_setBool(1, v);
-  }
-
+  set allowLiterals($core.bool value) => $_setBool(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAllowLiterals() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAllowLiterals() => clearField(2);
+  void clearAllowLiterals() => $_clearField(2);
 
-  ///  Numbered binding site @1 references the first numbered parameter,
-  ///  effectively using 1-based indexing, rather than the usual 0.
+  /// Numbered binding site @1 references the first numbered parameter,
+  /// effectively using 1-based indexing, rather than the usual 0.
   ///
-  ///  For each binding site numbered i in `query_string`, there must be an i-th
-  ///  numbered parameter. The inverse must also be true.
+  /// For each binding site numbered i in `query_string`, there must be an i-th
+  /// numbered parameter. The inverse must also be true.
   @$pb.TagNumber(4)
-  $core.List<GqlQueryParameter> get positionalBindings => $_getList(2);
+  $pb.PbList<GqlQueryParameter> get positionalBindings => $_getList(2);
 
-  ///  For each non-reserved named binding site in the query string, there must be
-  ///  a named parameter with that name, but not necessarily the inverse.
+  /// For each non-reserved named binding site in the query string, there must be
+  /// a named parameter with that name, but not necessarily the inverse.
   ///
-  ///  Key must match regex `[A-Za-z_$][A-Za-z_$0-9]*`, must not match regex
-  ///  `__.*__`, and must not be `""`.
+  /// Key must match regex `[A-Za-z_$][A-Za-z_$0-9]*`, must not match regex
+  /// `__.*__`, and must not be `""`.
   @$pb.TagNumber(5)
-  $core.Map<$core.String, GqlQueryParameter> get namedBindings => $_getMap(3);
+  $pb.PbMap<$core.String, GqlQueryParameter> get namedBindings => $_getMap(3);
 }
 
 enum GqlQueryParameter_ParameterType { value, cursor, notSet }
@@ -1851,22 +1624,20 @@ class GqlQueryParameter extends $pb.GeneratedMessage {
     $0.Value? value,
     $core.List<$core.int>? cursor,
   }) {
-    final $result = create();
-    if (value != null) {
-      $result.value = value;
-    }
-    if (cursor != null) {
-      $result.cursor = cursor;
-    }
-    return $result;
+    final result = create();
+    if (value != null) result.value = value;
+    if (cursor != null) result.cursor = cursor;
+    return result;
   }
-  GqlQueryParameter._() : super();
-  factory GqlQueryParameter.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GqlQueryParameter.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GqlQueryParameter._();
+
+  factory GqlQueryParameter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GqlQueryParameter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, GqlQueryParameter_ParameterType>
       _GqlQueryParameter_ParameterTypeByTag = {
@@ -1886,45 +1657,42 @@ class GqlQueryParameter extends $pb.GeneratedMessage {
         3, _omitFieldNames ? '' : 'cursor', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GqlQueryParameter clone() => GqlQueryParameter()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GqlQueryParameter clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GqlQueryParameter copyWith(void Function(GqlQueryParameter) updates) =>
       super.copyWith((message) => updates(message as GqlQueryParameter))
           as GqlQueryParameter;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GqlQueryParameter create() => GqlQueryParameter._();
+  @$core.override
   GqlQueryParameter createEmptyInstance() => create();
-  static $pb.PbList<GqlQueryParameter> createRepeated() =>
-      $pb.PbList<GqlQueryParameter>();
   @$core.pragma('dart2js:noInline')
   static GqlQueryParameter getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GqlQueryParameter>(create);
   static GqlQueryParameter? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   GqlQueryParameter_ParameterType whichParameterType() =>
       _GqlQueryParameter_ParameterTypeByTag[$_whichOneof(0)]!;
-  void clearParameterType() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearParameterType() => $_clearField($_whichOneof(0));
 
   /// A value parameter.
   @$pb.TagNumber(2)
   $0.Value get value => $_getN(0);
   @$pb.TagNumber(2)
-  set value($0.Value v) {
-    setField(2, v);
-  }
-
+  set value($0.Value value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(0);
   @$pb.TagNumber(2)
-  void clearValue() => clearField(2);
+  void clearValue() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.Value ensureValue() => $_ensure(0);
 
@@ -1933,14 +1701,11 @@ class GqlQueryParameter extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.List<$core.int> get cursor => $_getN(1);
   @$pb.TagNumber(3)
-  set cursor($core.List<$core.int> v) {
-    $_setBytes(1, v);
-  }
-
+  set cursor($core.List<$core.int> value) => $_setBytes(1, value);
   @$pb.TagNumber(3)
   $core.bool hasCursor() => $_has(1);
   @$pb.TagNumber(3)
-  void clearCursor() => clearField(3);
+  void clearCursor() => $_clearField(3);
 }
 
 /// A batch of results produced by a query.
@@ -1955,89 +1720,63 @@ class QueryResultBatch extends $pb.GeneratedMessage {
     $fixnum.Int64? snapshotVersion,
     $1.Timestamp? readTime,
   }) {
-    final $result = create();
-    if (entityResultType != null) {
-      $result.entityResultType = entityResultType;
-    }
-    if (entityResults != null) {
-      $result.entityResults.addAll(entityResults);
-    }
-    if (skippedCursor != null) {
-      $result.skippedCursor = skippedCursor;
-    }
-    if (endCursor != null) {
-      $result.endCursor = endCursor;
-    }
-    if (moreResults != null) {
-      $result.moreResults = moreResults;
-    }
-    if (skippedResults != null) {
-      $result.skippedResults = skippedResults;
-    }
-    if (snapshotVersion != null) {
-      $result.snapshotVersion = snapshotVersion;
-    }
-    if (readTime != null) {
-      $result.readTime = readTime;
-    }
-    return $result;
+    final result = create();
+    if (entityResultType != null) result.entityResultType = entityResultType;
+    if (entityResults != null) result.entityResults.addAll(entityResults);
+    if (skippedCursor != null) result.skippedCursor = skippedCursor;
+    if (endCursor != null) result.endCursor = endCursor;
+    if (moreResults != null) result.moreResults = moreResults;
+    if (skippedResults != null) result.skippedResults = skippedResults;
+    if (snapshotVersion != null) result.snapshotVersion = snapshotVersion;
+    if (readTime != null) result.readTime = readTime;
+    return result;
   }
-  QueryResultBatch._() : super();
-  factory QueryResultBatch.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory QueryResultBatch.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  QueryResultBatch._();
+
+  factory QueryResultBatch.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QueryResultBatch.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'QueryResultBatch',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..e<EntityResult_ResultType>(
-        1, _omitFieldNames ? '' : 'entityResultType', $pb.PbFieldType.OE,
-        defaultOrMaker: EntityResult_ResultType.RESULT_TYPE_UNSPECIFIED,
-        valueOf: EntityResult_ResultType.valueOf,
+    ..aE<EntityResult_ResultType>(1, _omitFieldNames ? '' : 'entityResultType',
         enumValues: EntityResult_ResultType.values)
-    ..pc<EntityResult>(
-        2, _omitFieldNames ? '' : 'entityResults', $pb.PbFieldType.PM,
+    ..pPM<EntityResult>(2, _omitFieldNames ? '' : 'entityResults',
         subBuilder: EntityResult.create)
     ..a<$core.List<$core.int>>(
         3, _omitFieldNames ? '' : 'skippedCursor', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(
         4, _omitFieldNames ? '' : 'endCursor', $pb.PbFieldType.OY)
-    ..e<QueryResultBatch_MoreResultsType>(
-        5, _omitFieldNames ? '' : 'moreResults', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            QueryResultBatch_MoreResultsType.MORE_RESULTS_TYPE_UNSPECIFIED,
-        valueOf: QueryResultBatch_MoreResultsType.valueOf,
+    ..aE<QueryResultBatch_MoreResultsType>(
+        5, _omitFieldNames ? '' : 'moreResults',
         enumValues: QueryResultBatch_MoreResultsType.values)
-    ..a<$core.int>(
-        6, _omitFieldNames ? '' : 'skippedResults', $pb.PbFieldType.O3)
+    ..aI(6, _omitFieldNames ? '' : 'skippedResults')
     ..aInt64(7, _omitFieldNames ? '' : 'snapshotVersion')
     ..aOM<$1.Timestamp>(8, _omitFieldNames ? '' : 'readTime',
         subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  QueryResultBatch clone() => QueryResultBatch()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QueryResultBatch clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   QueryResultBatch copyWith(void Function(QueryResultBatch) updates) =>
       super.copyWith((message) => updates(message as QueryResultBatch))
           as QueryResultBatch;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static QueryResultBatch create() => QueryResultBatch._();
+  @$core.override
   QueryResultBatch createEmptyInstance() => create();
-  static $pb.PbList<QueryResultBatch> createRepeated() =>
-      $pb.PbList<QueryResultBatch>();
   @$core.pragma('dart2js:noInline')
   static QueryResultBatch getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<QueryResultBatch>(create);
@@ -2047,118 +1786,99 @@ class QueryResultBatch extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   EntityResult_ResultType get entityResultType => $_getN(0);
   @$pb.TagNumber(1)
-  set entityResultType(EntityResult_ResultType v) {
-    setField(1, v);
-  }
-
+  set entityResultType(EntityResult_ResultType value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasEntityResultType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEntityResultType() => clearField(1);
+  void clearEntityResultType() => $_clearField(1);
 
   /// The results for this batch.
   @$pb.TagNumber(2)
-  $core.List<EntityResult> get entityResults => $_getList(1);
+  $pb.PbList<EntityResult> get entityResults => $_getList(1);
 
   /// A cursor that points to the position after the last skipped result.
   /// Will be set when `skipped_results` != 0.
   @$pb.TagNumber(3)
   $core.List<$core.int> get skippedCursor => $_getN(2);
   @$pb.TagNumber(3)
-  set skippedCursor($core.List<$core.int> v) {
-    $_setBytes(2, v);
-  }
-
+  set skippedCursor($core.List<$core.int> value) => $_setBytes(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSkippedCursor() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSkippedCursor() => clearField(3);
+  void clearSkippedCursor() => $_clearField(3);
 
   /// A cursor that points to the position after the last result in the batch.
   @$pb.TagNumber(4)
   $core.List<$core.int> get endCursor => $_getN(3);
   @$pb.TagNumber(4)
-  set endCursor($core.List<$core.int> v) {
-    $_setBytes(3, v);
-  }
-
+  set endCursor($core.List<$core.int> value) => $_setBytes(3, value);
   @$pb.TagNumber(4)
   $core.bool hasEndCursor() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEndCursor() => clearField(4);
+  void clearEndCursor() => $_clearField(4);
 
   /// The state of the query after the current batch.
   @$pb.TagNumber(5)
   QueryResultBatch_MoreResultsType get moreResults => $_getN(4);
   @$pb.TagNumber(5)
-  set moreResults(QueryResultBatch_MoreResultsType v) {
-    setField(5, v);
-  }
-
+  set moreResults(QueryResultBatch_MoreResultsType value) =>
+      $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasMoreResults() => $_has(4);
   @$pb.TagNumber(5)
-  void clearMoreResults() => clearField(5);
+  void clearMoreResults() => $_clearField(5);
 
   /// The number of results skipped, typically because of an offset.
   @$pb.TagNumber(6)
   $core.int get skippedResults => $_getIZ(5);
   @$pb.TagNumber(6)
-  set skippedResults($core.int v) {
-    $_setSignedInt32(5, v);
-  }
-
+  set skippedResults($core.int value) => $_setSignedInt32(5, value);
   @$pb.TagNumber(6)
   $core.bool hasSkippedResults() => $_has(5);
   @$pb.TagNumber(6)
-  void clearSkippedResults() => clearField(6);
+  void clearSkippedResults() => $_clearField(6);
 
-  ///  The version number of the snapshot this batch was returned from.
-  ///  This applies to the range of results from the query's `start_cursor` (or
-  ///  the beginning of the query if no cursor was given) to this batch's
-  ///  `end_cursor` (not the query's `end_cursor`).
+  /// The version number of the snapshot this batch was returned from.
+  /// This applies to the range of results from the query's `start_cursor` (or
+  /// the beginning of the query if no cursor was given) to this batch's
+  /// `end_cursor` (not the query's `end_cursor`).
   ///
-  ///  In a single transaction, subsequent query result batches for the same query
-  ///  can have a greater snapshot version number. Each batch's snapshot version
-  ///  is valid for all preceding batches.
-  ///  The value will be zero for eventually consistent queries.
+  /// In a single transaction, subsequent query result batches for the same query
+  /// can have a greater snapshot version number. Each batch's snapshot version
+  /// is valid for all preceding batches.
+  /// The value will be zero for eventually consistent queries.
   @$pb.TagNumber(7)
   $fixnum.Int64 get snapshotVersion => $_getI64(6);
   @$pb.TagNumber(7)
-  set snapshotVersion($fixnum.Int64 v) {
-    $_setInt64(6, v);
-  }
-
+  set snapshotVersion($fixnum.Int64 value) => $_setInt64(6, value);
   @$pb.TagNumber(7)
   $core.bool hasSnapshotVersion() => $_has(6);
   @$pb.TagNumber(7)
-  void clearSnapshotVersion() => clearField(7);
+  void clearSnapshotVersion() => $_clearField(7);
 
-  ///  Read timestamp this batch was returned from.
-  ///  This applies to the range of results from the query's `start_cursor` (or
-  ///  the beginning of the query if no cursor was given) to this batch's
-  ///  `end_cursor` (not the query's `end_cursor`).
+  /// Read timestamp this batch was returned from.
+  /// This applies to the range of results from the query's `start_cursor` (or
+  /// the beginning of the query if no cursor was given) to this batch's
+  /// `end_cursor` (not the query's `end_cursor`).
   ///
-  ///  In a single transaction, subsequent query result batches for the same query
-  ///  can have a greater timestamp. Each batch's read timestamp
-  ///  is valid for all preceding batches.
-  ///  This value will not be set for eventually consistent queries in Cloud
-  ///  Datastore.
+  /// In a single transaction, subsequent query result batches for the same query
+  /// can have a greater timestamp. Each batch's read timestamp
+  /// is valid for all preceding batches.
+  /// This value will not be set for eventually consistent queries in Cloud
+  /// Datastore.
   @$pb.TagNumber(8)
   $1.Timestamp get readTime => $_getN(7);
   @$pb.TagNumber(8)
-  set readTime($1.Timestamp v) {
-    setField(8, v);
-  }
-
+  set readTime($1.Timestamp value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasReadTime() => $_has(7);
   @$pb.TagNumber(8)
-  void clearReadTime() => clearField(8);
+  void clearReadTime() => $_clearField(8);
   @$pb.TagNumber(8)
   $1.Timestamp ensureReadTime() => $_ensure(7);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

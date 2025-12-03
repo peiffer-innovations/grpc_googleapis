@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/storagetransfer/v1/transfer_types.proto
-//
-// @dart = 2.12
+// Generated from google/storagetransfer/v1/transfer_types.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -229,6 +231,26 @@ const AzureBlobStorageData$json = {
       '8': {},
       '10': 'credentialsSecret'
     },
+    {
+      '1': 'federated_identity_config',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.storagetransfer.v1.AzureBlobStorageData.FederatedIdentityConfig',
+      '8': {},
+      '10': 'federatedIdentityConfig'
+    },
+  ],
+  '3': [AzureBlobStorageData_FederatedIdentityConfig$json],
+};
+
+@$core.Deprecated('Use azureBlobStorageDataDescriptor instead')
+const AzureBlobStorageData_FederatedIdentityConfig$json = {
+  '1': 'FederatedIdentityConfig',
+  '2': [
+    {'1': 'client_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'clientId'},
+    {'1': 'tenant_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'tenantId'},
   ],
 };
 
@@ -238,7 +260,12 @@ final $typed_data.Uint8List azureBlobStorageDataDescriptor = $convert.base64Deco
     'RvcmFnZUFjY291bnQSYAoRYXp1cmVfY3JlZGVudGlhbHMYAiABKAsyKy5nb29nbGUuc3RvcmFn'
     'ZXRyYW5zZmVyLnYxLkF6dXJlQ3JlZGVudGlhbHNCBuBBAuBBBFIQYXp1cmVDcmVkZW50aWFscx'
     'IhCgljb250YWluZXIYBCABKAlCA+BBAlIJY29udGFpbmVyEhIKBHBhdGgYBSABKAlSBHBhdGgS'
-    'MgoSY3JlZGVudGlhbHNfc2VjcmV0GAcgASgJQgPgQQFSEWNyZWRlbnRpYWxzU2VjcmV0');
+    'MgoSY3JlZGVudGlhbHNfc2VjcmV0GAcgASgJQgPgQQFSEWNyZWRlbnRpYWxzU2VjcmV0EogBCh'
+    'lmZWRlcmF0ZWRfaWRlbnRpdHlfY29uZmlnGAggASgLMkcuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zl'
+    'ci52MS5BenVyZUJsb2JTdG9yYWdlRGF0YS5GZWRlcmF0ZWRJZGVudGl0eUNvbmZpZ0ID4EEBUh'
+    'dmZWRlcmF0ZWRJZGVudGl0eUNvbmZpZxpdChdGZWRlcmF0ZWRJZGVudGl0eUNvbmZpZxIgCglj'
+    'bGllbnRfaWQYASABKAlCA+BBAlIIY2xpZW50SWQSIAoJdGVuYW50X2lkGAIgASgJQgPgQQJSCH'
+    'RlbmFudElk');
 
 @$core.Deprecated('Use httpDataDescriptor instead')
 const HttpData$json = {
@@ -1088,6 +1115,14 @@ const TransferJob$json = {
     {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
     {'1': 'project_id', '3': 3, '4': 1, '5': 9, '10': 'projectId'},
     {
+      '1': 'service_account',
+      '3': 18,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'serviceAccount'
+    },
+    {
       '1': 'transfer_spec',
       '3': 4,
       '4': 1,
@@ -1195,24 +1230,24 @@ const TransferJob_Status$json = {
 /// Descriptor for `TransferJob`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List transferJobDescriptor = $convert.base64Decode(
     'CgtUcmFuc2ZlckpvYhISCgRuYW1lGAEgASgJUgRuYW1lEiAKC2Rlc2NyaXB0aW9uGAIgASgJUg'
-    'tkZXNjcmlwdGlvbhIdCgpwcm9qZWN0X2lkGAMgASgJUglwcm9qZWN0SWQSTAoNdHJhbnNmZXJf'
-    'c3BlYxgEIAEoCzInLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuVHJhbnNmZXJTcGVjUgx0cm'
-    'Fuc2ZlclNwZWMSVQoQcmVwbGljYXRpb25fc3BlYxgRIAEoCzIqLmdvb2dsZS5zdG9yYWdldHJh'
-    'bnNmZXIudjEuUmVwbGljYXRpb25TcGVjUg9yZXBsaWNhdGlvblNwZWMSXgoTbm90aWZpY2F0aW'
-    '9uX2NvbmZpZxgLIAEoCzItLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuTm90aWZpY2F0aW9u'
-    'Q29uZmlnUhJub3RpZmljYXRpb25Db25maWcSTwoObG9nZ2luZ19jb25maWcYDiABKAsyKC5nb2'
-    '9nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLkxvZ2dpbmdDb25maWdSDWxvZ2dpbmdDb25maWcSPwoI'
-    'c2NoZWR1bGUYBSABKAsyIy5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLlNjaGVkdWxlUghzY2'
-    'hlZHVsZRJJCgxldmVudF9zdHJlYW0YDyABKAsyJi5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYx'
-    'LkV2ZW50U3RyZWFtUgtldmVudFN0cmVhbRJFCgZzdGF0dXMYBiABKA4yLS5nb29nbGUuc3Rvcm'
-    'FnZXRyYW5zZmVyLnYxLlRyYW5zZmVySm9iLlN0YXR1c1IGc3RhdHVzEkQKDWNyZWF0aW9uX3Rp'
-    'bWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSDGNyZWF0aW9uVGltZR'
-    'JVChZsYXN0X21vZGlmaWNhdGlvbl90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz'
-    'dGFtcEID4EEDUhRsYXN0TW9kaWZpY2F0aW9uVGltZRJECg1kZWxldGlvbl90aW1lGAkgASgLMh'
-    'ouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgxkZWxldGlvblRpbWUSMgoVbGF0ZXN0'
-    'X29wZXJhdGlvbl9uYW1lGAwgASgJUhNsYXRlc3RPcGVyYXRpb25OYW1lIkgKBlN0YXR1cxIWCh'
-    'JTVEFUVVNfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVEEAESDAoIRElTQUJMRUQQAhILCgdERUxF'
-    'VEVEEAM=');
+    'tkZXNjcmlwdGlvbhIdCgpwcm9qZWN0X2lkGAMgASgJUglwcm9qZWN0SWQSLAoPc2VydmljZV9h'
+    'Y2NvdW50GBIgASgJQgPgQQFSDnNlcnZpY2VBY2NvdW50EkwKDXRyYW5zZmVyX3NwZWMYBCABKA'
+    'syJy5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLlRyYW5zZmVyU3BlY1IMdHJhbnNmZXJTcGVj'
+    'ElUKEHJlcGxpY2F0aW9uX3NwZWMYESABKAsyKi5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLl'
+    'JlcGxpY2F0aW9uU3BlY1IPcmVwbGljYXRpb25TcGVjEl4KE25vdGlmaWNhdGlvbl9jb25maWcY'
+    'CyABKAsyLS5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLk5vdGlmaWNhdGlvbkNvbmZpZ1ISbm'
+    '90aWZpY2F0aW9uQ29uZmlnEk8KDmxvZ2dpbmdfY29uZmlnGA4gASgLMiguZ29vZ2xlLnN0b3Jh'
+    'Z2V0cmFuc2Zlci52MS5Mb2dnaW5nQ29uZmlnUg1sb2dnaW5nQ29uZmlnEj8KCHNjaGVkdWxlGA'
+    'UgASgLMiMuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5TY2hlZHVsZVIIc2NoZWR1bGUSSQoM'
+    'ZXZlbnRfc3RyZWFtGA8gASgLMiYuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5FdmVudFN0cm'
+    'VhbVILZXZlbnRTdHJlYW0SRQoGc3RhdHVzGAYgASgOMi0uZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zl'
+    'ci52MS5UcmFuc2ZlckpvYi5TdGF0dXNSBnN0YXR1cxJECg1jcmVhdGlvbl90aW1lGAcgASgLMh'
+    'ouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgxjcmVhdGlvblRpbWUSVQoWbGFzdF9t'
+    'b2RpZmljYXRpb25fdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1'
+    'IUbGFzdE1vZGlmaWNhdGlvblRpbWUSRAoNZGVsZXRpb25fdGltZRgJIAEoCzIaLmdvb2dsZS5w'
+    'cm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IMZGVsZXRpb25UaW1lEjIKFWxhdGVzdF9vcGVyYXRpb2'
+    '5fbmFtZRgMIAEoCVITbGF0ZXN0T3BlcmF0aW9uTmFtZSJICgZTdGF0dXMSFgoSU1RBVFVTX1VO'
+    'U1BFQ0lGSUVEEAASCwoHRU5BQkxFRBABEgwKCERJU0FCTEVEEAISCwoHREVMRVRFRBAD');
 
 @$core.Deprecated('Use errorLogEntryDescriptor instead')
 const ErrorLogEntry$json = {
@@ -1557,6 +1592,7 @@ const LoggingConfig_LoggableActionState$json = {
     {'1': 'LOGGABLE_ACTION_STATE_UNSPECIFIED', '2': 0},
     {'1': 'SUCCEEDED', '2': 1},
     {'1': 'FAILED', '2': 2},
+    {'1': 'SKIPPED', '2': 3},
   ],
 };
 
@@ -1568,9 +1604,9 @@ final $typed_data.Uint8List loggingConfigDescriptor = $convert.base64Decode(
     '5nQ29uZmlnLkxvZ2dhYmxlQWN0aW9uU3RhdGVSD2xvZ0FjdGlvblN0YXRlcxJECh9lbmFibGVf'
     'b25wcmVtX2djc190cmFuc2Zlcl9sb2dzGAMgASgIUhtlbmFibGVPbnByZW1HY3NUcmFuc2Zlck'
     'xvZ3MiUQoOTG9nZ2FibGVBY3Rpb24SHwobTE9HR0FCTEVfQUNUSU9OX1VOU1BFQ0lGSUVEEAAS'
-    'CAoERklORBABEgoKBkRFTEVURRACEggKBENPUFkQAyJXChNMb2dnYWJsZUFjdGlvblN0YXRlEi'
+    'CAoERklORBABEgoKBkRFTEVURRACEggKBENPUFkQAyJkChNMb2dnYWJsZUFjdGlvblN0YXRlEi'
     'UKIUxPR0dBQkxFX0FDVElPTl9TVEFURV9VTlNQRUNJRklFRBAAEg0KCVNVQ0NFRURFRBABEgoK'
-    'BkZBSUxFRBAC');
+    'BkZBSUxFRBACEgsKB1NLSVBQRUQQAw==');
 
 @$core.Deprecated('Use transferOperationDescriptor instead')
 const TransferOperation$json = {

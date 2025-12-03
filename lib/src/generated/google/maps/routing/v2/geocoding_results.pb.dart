@@ -1,19 +1,22 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/routing/v2/geocoding_results.proto
-//
-// @dart = 2.12
+// Generated from google/maps/routing/v2/geocoding_results.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../rpc/status.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Contains [`GeocodedWaypoints`][google.maps.routing.v2.GeocodedWaypoint] for
 /// origin, destination and intermediate waypoints. Only populated for address
@@ -24,25 +27,21 @@ class GeocodingResults extends $pb.GeneratedMessage {
     GeocodedWaypoint? destination,
     $core.Iterable<GeocodedWaypoint>? intermediates,
   }) {
-    final $result = create();
-    if (origin != null) {
-      $result.origin = origin;
-    }
-    if (destination != null) {
-      $result.destination = destination;
-    }
-    if (intermediates != null) {
-      $result.intermediates.addAll(intermediates);
-    }
-    return $result;
+    final result = create();
+    if (origin != null) result.origin = origin;
+    if (destination != null) result.destination = destination;
+    if (intermediates != null) result.intermediates.addAll(intermediates);
+    return result;
   }
-  GeocodingResults._() : super();
-  factory GeocodingResults.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GeocodingResults.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GeocodingResults._();
+
+  factory GeocodingResults.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GeocodingResults.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GeocodingResults',
@@ -53,29 +52,24 @@ class GeocodingResults extends $pb.GeneratedMessage {
         subBuilder: GeocodedWaypoint.create)
     ..aOM<GeocodedWaypoint>(2, _omitFieldNames ? '' : 'destination',
         subBuilder: GeocodedWaypoint.create)
-    ..pc<GeocodedWaypoint>(
-        3, _omitFieldNames ? '' : 'intermediates', $pb.PbFieldType.PM,
+    ..pPM<GeocodedWaypoint>(3, _omitFieldNames ? '' : 'intermediates',
         subBuilder: GeocodedWaypoint.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GeocodingResults clone() => GeocodingResults()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GeocodingResults clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GeocodingResults copyWith(void Function(GeocodingResults) updates) =>
       super.copyWith((message) => updates(message as GeocodingResults))
           as GeocodingResults;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GeocodingResults create() => GeocodingResults._();
+  @$core.override
   GeocodingResults createEmptyInstance() => create();
-  static $pb.PbList<GeocodingResults> createRepeated() =>
-      $pb.PbList<GeocodingResults>();
   @$core.pragma('dart2js:noInline')
   static GeocodingResults getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GeocodingResults>(create);
@@ -85,14 +79,11 @@ class GeocodingResults extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   GeocodedWaypoint get origin => $_getN(0);
   @$pb.TagNumber(1)
-  set origin(GeocodedWaypoint v) {
-    setField(1, v);
-  }
-
+  set origin(GeocodedWaypoint value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOrigin() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOrigin() => clearField(1);
+  void clearOrigin() => $_clearField(1);
   @$pb.TagNumber(1)
   GeocodedWaypoint ensureOrigin() => $_ensure(0);
 
@@ -100,14 +91,11 @@ class GeocodingResults extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   GeocodedWaypoint get destination => $_getN(1);
   @$pb.TagNumber(2)
-  set destination(GeocodedWaypoint v) {
-    setField(2, v);
-  }
-
+  set destination(GeocodedWaypoint value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasDestination() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDestination() => clearField(2);
+  void clearDestination() => $_clearField(2);
   @$pb.TagNumber(2)
   GeocodedWaypoint ensureDestination() => $_ensure(1);
 
@@ -115,7 +103,7 @@ class GeocodingResults extends $pb.GeneratedMessage {
   /// that corresponds to the zero-based position of the waypoint in the order
   /// they were specified in the request.
   @$pb.TagNumber(3)
-  $core.List<GeocodedWaypoint> get intermediates => $_getList(2);
+  $pb.PbList<GeocodedWaypoint> get intermediates => $_getList(2);
 }
 
 /// Details about the locations used as waypoints. Only populated for address
@@ -129,32 +117,25 @@ class GeocodedWaypoint extends $pb.GeneratedMessage {
     $core.bool? partialMatch,
     $core.String? placeId,
   }) {
-    final $result = create();
-    if (geocoderStatus != null) {
-      $result.geocoderStatus = geocoderStatus;
-    }
-    if (intermediateWaypointRequestIndex != null) {
-      $result.intermediateWaypointRequestIndex =
+    final result = create();
+    if (geocoderStatus != null) result.geocoderStatus = geocoderStatus;
+    if (intermediateWaypointRequestIndex != null)
+      result.intermediateWaypointRequestIndex =
           intermediateWaypointRequestIndex;
-    }
-    if (type != null) {
-      $result.type.addAll(type);
-    }
-    if (partialMatch != null) {
-      $result.partialMatch = partialMatch;
-    }
-    if (placeId != null) {
-      $result.placeId = placeId;
-    }
-    return $result;
+    if (type != null) result.type.addAll(type);
+    if (partialMatch != null) result.partialMatch = partialMatch;
+    if (placeId != null) result.placeId = placeId;
+    return result;
   }
-  GeocodedWaypoint._() : super();
-  factory GeocodedWaypoint.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GeocodedWaypoint.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GeocodedWaypoint._();
+
+  factory GeocodedWaypoint.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GeocodedWaypoint.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GeocodedWaypoint',
@@ -163,31 +144,26 @@ class GeocodedWaypoint extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$0.Status>(1, _omitFieldNames ? '' : 'geocoderStatus',
         subBuilder: $0.Status.create)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'intermediateWaypointRequestIndex',
-        $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'intermediateWaypointRequestIndex')
     ..pPS(3, _omitFieldNames ? '' : 'type')
     ..aOB(4, _omitFieldNames ? '' : 'partialMatch')
     ..aOS(5, _omitFieldNames ? '' : 'placeId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GeocodedWaypoint clone() => GeocodedWaypoint()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GeocodedWaypoint clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GeocodedWaypoint copyWith(void Function(GeocodedWaypoint) updates) =>
       super.copyWith((message) => updates(message as GeocodedWaypoint))
           as GeocodedWaypoint;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GeocodedWaypoint create() => GeocodedWaypoint._();
+  @$core.override
   GeocodedWaypoint createEmptyInstance() => create();
-  static $pb.PbList<GeocodedWaypoint> createRepeated() =>
-      $pb.PbList<GeocodedWaypoint>();
   @$core.pragma('dart2js:noInline')
   static GeocodedWaypoint getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GeocodedWaypoint>(create);
@@ -197,14 +173,11 @@ class GeocodedWaypoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Status get geocoderStatus => $_getN(0);
   @$pb.TagNumber(1)
-  set geocoderStatus($0.Status v) {
-    setField(1, v);
-  }
-
+  set geocoderStatus($0.Status value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasGeocoderStatus() => $_has(0);
   @$pb.TagNumber(1)
-  void clearGeocoderStatus() => clearField(1);
+  void clearGeocoderStatus() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.Status ensureGeocoderStatus() => $_ensure(0);
 
@@ -214,20 +187,18 @@ class GeocodedWaypoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get intermediateWaypointRequestIndex => $_getIZ(1);
   @$pb.TagNumber(2)
-  set intermediateWaypointRequestIndex($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set intermediateWaypointRequestIndex($core.int value) =>
+      $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasIntermediateWaypointRequestIndex() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIntermediateWaypointRequestIndex() => clearField(2);
+  void clearIntermediateWaypointRequestIndex() => $_clearField(2);
 
   /// The type(s) of the result, in the form of zero or more type tags.
   /// Supported types: [Address types and address component
   /// types](https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types).
   @$pb.TagNumber(3)
-  $core.List<$core.String> get type => $_getList(2);
+  $pb.PbList<$core.String> get type => $_getList(2);
 
   /// Indicates that the geocoder did not return an exact match for the original
   /// request, though it was able to match part of the requested address. You may
@@ -236,29 +207,24 @@ class GeocodedWaypoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get partialMatch => $_getBF(3);
   @$pb.TagNumber(4)
-  set partialMatch($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set partialMatch($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasPartialMatch() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPartialMatch() => clearField(4);
+  void clearPartialMatch() => $_clearField(4);
 
   /// The place ID for this result.
   @$pb.TagNumber(5)
   $core.String get placeId => $_getSZ(4);
   @$pb.TagNumber(5)
-  set placeId($core.String v) {
-    $_setString(4, v);
-  }
-
+  set placeId($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasPlaceId() => $_has(4);
   @$pb.TagNumber(5)
-  void clearPlaceId() => clearField(5);
+  void clearPlaceId() => $_clearField(5);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

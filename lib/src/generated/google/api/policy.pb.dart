@@ -1,51 +1,51 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/api/policy.proto
-//
-// @dart = 2.12
+// Generated from google/api/policy.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-///  Google API Policy Annotation
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
+/// Google API Policy Annotation
 ///
-///  This message defines a simple API policy annotation that can be used to
-///  annotate API request and response message fields with applicable policies.
-///  One field may have multiple applicable policies that must all be satisfied
-///  before a request can be processed. This policy annotation is used to
-///  generate the overall policy that will be used for automatic runtime
-///  policy enforcement and documentation generation.
+/// This message defines a simple API policy annotation that can be used to
+/// annotate API request and response message fields with applicable policies.
+/// One field may have multiple applicable policies that must all be satisfied
+/// before a request can be processed. This policy annotation is used to
+/// generate the overall policy that will be used for automatic runtime
+/// policy enforcement and documentation generation.
 class FieldPolicy extends $pb.GeneratedMessage {
   factory FieldPolicy({
     $core.String? selector,
     $core.String? resourcePermission,
     $core.String? resourceType,
   }) {
-    final $result = create();
-    if (selector != null) {
-      $result.selector = selector;
-    }
-    if (resourcePermission != null) {
-      $result.resourcePermission = resourcePermission;
-    }
-    if (resourceType != null) {
-      $result.resourceType = resourceType;
-    }
-    return $result;
+    final result = create();
+    if (selector != null) result.selector = selector;
+    if (resourcePermission != null)
+      result.resourcePermission = resourcePermission;
+    if (resourceType != null) result.resourceType = resourceType;
+    return result;
   }
-  FieldPolicy._() : super();
-  factory FieldPolicy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory FieldPolicy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  FieldPolicy._();
+
+  factory FieldPolicy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory FieldPolicy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FieldPolicy',
@@ -56,49 +56,43 @@ class FieldPolicy extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'resourceType')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  FieldPolicy clone() => FieldPolicy()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FieldPolicy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FieldPolicy copyWith(void Function(FieldPolicy) updates) =>
       super.copyWith((message) => updates(message as FieldPolicy))
           as FieldPolicy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static FieldPolicy create() => FieldPolicy._();
+  @$core.override
   FieldPolicy createEmptyInstance() => create();
-  static $pb.PbList<FieldPolicy> createRepeated() => $pb.PbList<FieldPolicy>();
   @$core.pragma('dart2js:noInline')
   static FieldPolicy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FieldPolicy>(create);
   static FieldPolicy? _defaultInstance;
 
-  ///  Selects one or more request or response message fields to apply this
-  ///  `FieldPolicy`.
+  /// Selects one or more request or response message fields to apply this
+  /// `FieldPolicy`.
   ///
-  ///  When a `FieldPolicy` is used in proto annotation, the selector must
-  ///  be left as empty. The service config generator will automatically fill
-  ///  the correct value.
+  /// When a `FieldPolicy` is used in proto annotation, the selector must
+  /// be left as empty. The service config generator will automatically fill
+  /// the correct value.
   ///
-  ///  When a `FieldPolicy` is used in service config, the selector must be a
-  ///  comma-separated string with valid request or response field paths,
-  ///  such as "foo.bar" or "foo.bar,foo.baz".
+  /// When a `FieldPolicy` is used in service config, the selector must be a
+  /// comma-separated string with valid request or response field paths,
+  /// such as "foo.bar" or "foo.bar,foo.baz".
   @$pb.TagNumber(1)
   $core.String get selector => $_getSZ(0);
   @$pb.TagNumber(1)
-  set selector($core.String v) {
-    $_setString(0, v);
-  }
-
+  set selector($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSelector() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSelector() => clearField(1);
+  void clearSelector() => $_clearField(1);
 
   /// Specifies the required permission(s) for the resource referred to by the
   /// field. It requires the field contains a valid resource reference, and
@@ -107,27 +101,21 @@ class FieldPolicy extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get resourcePermission => $_getSZ(1);
   @$pb.TagNumber(2)
-  set resourcePermission($core.String v) {
-    $_setString(1, v);
-  }
-
+  set resourcePermission($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasResourcePermission() => $_has(1);
   @$pb.TagNumber(2)
-  void clearResourcePermission() => clearField(2);
+  void clearResourcePermission() => $_clearField(2);
 
   /// Specifies the resource type for the resource referred to by the field.
   @$pb.TagNumber(3)
   $core.String get resourceType => $_getSZ(2);
   @$pb.TagNumber(3)
-  set resourceType($core.String v) {
-    $_setString(2, v);
-  }
-
+  set resourceType($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasResourceType() => $_has(2);
   @$pb.TagNumber(3)
-  void clearResourceType() => clearField(3);
+  void clearResourceType() => $_clearField(3);
 }
 
 /// Defines policies applying to an RPC method.
@@ -136,51 +124,44 @@ class MethodPolicy extends $pb.GeneratedMessage {
     $core.Iterable<FieldPolicy>? requestPolicies,
     $core.String? selector,
   }) {
-    final $result = create();
-    if (requestPolicies != null) {
-      $result.requestPolicies.addAll(requestPolicies);
-    }
-    if (selector != null) {
-      $result.selector = selector;
-    }
-    return $result;
+    final result = create();
+    if (requestPolicies != null) result.requestPolicies.addAll(requestPolicies);
+    if (selector != null) result.selector = selector;
+    return result;
   }
-  MethodPolicy._() : super();
-  factory MethodPolicy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory MethodPolicy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  MethodPolicy._();
+
+  factory MethodPolicy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory MethodPolicy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'MethodPolicy',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'google.api'),
       createEmptyInstance: create)
-    ..pc<FieldPolicy>(
-        2, _omitFieldNames ? '' : 'requestPolicies', $pb.PbFieldType.PM,
+    ..pPM<FieldPolicy>(2, _omitFieldNames ? '' : 'requestPolicies',
         subBuilder: FieldPolicy.create)
     ..aOS(9, _omitFieldNames ? '' : 'selector')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  MethodPolicy clone() => MethodPolicy()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MethodPolicy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   MethodPolicy copyWith(void Function(MethodPolicy) updates) =>
       super.copyWith((message) => updates(message as MethodPolicy))
           as MethodPolicy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static MethodPolicy create() => MethodPolicy._();
+  @$core.override
   MethodPolicy createEmptyInstance() => create();
-  static $pb.PbList<MethodPolicy> createRepeated() =>
-      $pb.PbList<MethodPolicy>();
   @$core.pragma('dart2js:noInline')
   static MethodPolicy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<MethodPolicy>(create);
@@ -188,27 +169,24 @@ class MethodPolicy extends $pb.GeneratedMessage {
 
   /// Policies that are applicable to the request message.
   @$pb.TagNumber(2)
-  $core.List<FieldPolicy> get requestPolicies => $_getList(0);
+  $pb.PbList<FieldPolicy> get requestPolicies => $_getList(0);
 
-  ///  Selects a method to which these policies should be enforced, for example,
-  ///  "google.pubsub.v1.Subscriber.CreateSubscription".
+  /// Selects a method to which these policies should be enforced, for example,
+  /// "google.pubsub.v1.Subscriber.CreateSubscription".
   ///
-  ///  Refer to [selector][google.api.DocumentationRule.selector] for syntax
-  ///  details.
+  /// Refer to [selector][google.api.DocumentationRule.selector] for syntax
+  /// details.
   ///
-  ///  NOTE: This field must not be set in the proto annotation. It will be
-  ///  automatically filled by the service config compiler .
+  /// NOTE: This field must not be set in the proto annotation. It will be
+  /// automatically filled by the service config compiler .
   @$pb.TagNumber(9)
   $core.String get selector => $_getSZ(1);
   @$pb.TagNumber(9)
-  set selector($core.String v) {
-    $_setString(1, v);
-  }
-
+  set selector($core.String value) => $_setString(1, value);
   @$pb.TagNumber(9)
   $core.bool hasSelector() => $_has(1);
   @$pb.TagNumber(9)
-  void clearSelector() => clearField(9);
+  void clearSelector() => $_clearField(9);
 }
 
 class Policy {
@@ -232,6 +210,7 @@ class Policy {
   }
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/spanner/admin/database/v1/spanner_database_admin.proto
-//
-// @dart = 2.12
+// Generated from google/spanner/admin/database/v1/spanner_database_admin.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -402,6 +404,14 @@ const UpdateDatabaseDdlRequest$json = {
       '8': {},
       '10': 'protoDescriptors'
     },
+    {
+      '1': 'throughput_mode',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'throughputMode'
+    },
   ],
 };
 
@@ -410,7 +420,8 @@ final $typed_data.Uint8List updateDatabaseDdlRequestDescriptor = $convert.base64
     'ChhVcGRhdGVEYXRhYmFzZURkbFJlcXVlc3QSQwoIZGF0YWJhc2UYASABKAlCJ+BBAvpBIQofc3'
     'Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZVIIZGF0YWJhc2USIwoKc3RhdGVtZW50cxgC'
     'IAMoCUID4EECUgpzdGF0ZW1lbnRzEiEKDG9wZXJhdGlvbl9pZBgDIAEoCVILb3BlcmF0aW9uSW'
-    'QSMAoRcHJvdG9fZGVzY3JpcHRvcnMYBCABKAxCA+BBAVIQcHJvdG9EZXNjcmlwdG9ycw==');
+    'QSMAoRcHJvdG9fZGVzY3JpcHRvcnMYBCABKAxCA+BBAVIQcHJvdG9EZXNjcmlwdG9ycxIsCg90'
+    'aHJvdWdocHV0X21vZGUYBSABKAhCA+BBAVIOdGhyb3VnaHB1dE1vZGU=');
 
 @$core.Deprecated('Use ddlStatementActionInfoDescriptor instead')
 const DdlStatementActionInfo$json = {
@@ -867,3 +878,49 @@ final $typed_data.Uint8List splitPointsDescriptor = $convert.base64Decode(
     'dFBvaW50cy5LZXlCA+BBAlIEa2V5cxJACgtleHBpcmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm'
     '90b2J1Zi5UaW1lc3RhbXBCA+BBAVIKZXhwaXJlVGltZRpDCgNLZXkSPAoJa2V5X3BhcnRzGAEg'
     'ASgLMhouZ29vZ2xlLnByb3RvYnVmLkxpc3RWYWx1ZUID4EECUghrZXlQYXJ0cw==');
+
+@$core.Deprecated('Use internalUpdateGraphOperationRequestDescriptor instead')
+const InternalUpdateGraphOperationRequest$json = {
+  '1': 'InternalUpdateGraphOperationRequest',
+  '2': [
+    {'1': 'database', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'database'},
+    {'1': 'operation_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'operationId'},
+    {
+      '1': 'vm_identity_token',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'vmIdentityToken'
+    },
+    {'1': 'progress', '3': 3, '4': 1, '5': 1, '8': {}, '10': 'progress'},
+    {
+      '1': 'status',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '8': {},
+      '10': 'status'
+    },
+  ],
+};
+
+/// Descriptor for `InternalUpdateGraphOperationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List internalUpdateGraphOperationRequestDescriptor = $convert.base64Decode(
+    'CiNJbnRlcm5hbFVwZGF0ZUdyYXBoT3BlcmF0aW9uUmVxdWVzdBJDCghkYXRhYmFzZRgBIAEoCU'
+    'In4EEC+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlUghkYXRhYmFzZRImCgxv'
+    'cGVyYXRpb25faWQYAiABKAlCA+BBAlILb3BlcmF0aW9uSWQSLwoRdm1faWRlbnRpdHlfdG9rZW'
+    '4YBSABKAlCA+BBAlIPdm1JZGVudGl0eVRva2VuEh8KCHByb2dyZXNzGAMgASgBQgPgQQFSCHBy'
+    'b2dyZXNzEi8KBnN0YXR1cxgGIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQFSBnN0YXR1cw'
+    '==');
+
+@$core.Deprecated('Use internalUpdateGraphOperationResponseDescriptor instead')
+const InternalUpdateGraphOperationResponse$json = {
+  '1': 'InternalUpdateGraphOperationResponse',
+};
+
+/// Descriptor for `InternalUpdateGraphOperationResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List internalUpdateGraphOperationResponseDescriptor =
+    $convert
+        .base64Decode('CiRJbnRlcm5hbFVwZGF0ZUdyYXBoT3BlcmF0aW9uUmVzcG9uc2U=');

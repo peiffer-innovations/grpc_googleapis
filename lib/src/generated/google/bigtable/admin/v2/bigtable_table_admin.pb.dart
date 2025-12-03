@@ -1,24 +1,29 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/bigtable/admin/v2/bigtable_table_admin.proto
-//
-// @dart = 2.12
+// Generated from google/bigtable/admin/v2/bigtable_table_admin.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/duration.pb.dart'
+    as $9;
+import 'package:grpc_googleapis/src/generated/google/protobuf/field_mask.pb.dart'
+    as $7;
+import 'package:grpc_googleapis/src/generated/google/protobuf/timestamp.pb.dart'
+    as $8;
 
-import '../../../protobuf/duration.pb.dart' as $9;
-import '../../../protobuf/field_mask.pb.dart' as $7;
-import '../../../protobuf/timestamp.pb.dart' as $8;
 import 'common.pb.dart' as $6;
-import 'table.pb.dart' as $5;
-import 'table.pbenum.dart' as $5;
+import 'table.pb.dart' as $1;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum RestoreTableRequest_Source { backup, notSet }
 
@@ -30,25 +35,21 @@ class RestoreTableRequest extends $pb.GeneratedMessage {
     $core.String? tableId,
     $core.String? backup,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (tableId != null) {
-      $result.tableId = tableId;
-    }
-    if (backup != null) {
-      $result.backup = backup;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (tableId != null) result.tableId = tableId;
+    if (backup != null) result.backup = backup;
+    return result;
   }
-  RestoreTableRequest._() : super();
-  factory RestoreTableRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RestoreTableRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RestoreTableRequest._();
+
+  factory RestoreTableRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RestoreTableRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, RestoreTableRequest_Source>
       _RestoreTableRequest_SourceByTag = {
@@ -66,46 +67,41 @@ class RestoreTableRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'backup')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RestoreTableRequest clone() => RestoreTableRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RestoreTableRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RestoreTableRequest copyWith(void Function(RestoreTableRequest) updates) =>
       super.copyWith((message) => updates(message as RestoreTableRequest))
           as RestoreTableRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RestoreTableRequest create() => RestoreTableRequest._();
+  @$core.override
   RestoreTableRequest createEmptyInstance() => create();
-  static $pb.PbList<RestoreTableRequest> createRepeated() =>
-      $pb.PbList<RestoreTableRequest>();
   @$core.pragma('dart2js:noInline')
   static RestoreTableRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RestoreTableRequest>(create);
   static RestoreTableRequest? _defaultInstance;
 
+  @$pb.TagNumber(3)
   RestoreTableRequest_Source whichSource() =>
       _RestoreTableRequest_SourceByTag[$_whichOneof(0)]!;
-  void clearSource() => clearField($_whichOneof(0));
+  @$pb.TagNumber(3)
+  void clearSource() => $_clearField($_whichOneof(0));
 
   /// Required. The name of the instance in which to create the restored
   /// table. Values are of the form `projects/<project>/instances/<instance>`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The id of the table to create and restore to. This
   /// table must not already exist. The `table_id` appended to
@@ -114,28 +110,22 @@ class RestoreTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get tableId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set tableId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set tableId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasTableId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTableId() => clearField(2);
+  void clearTableId() => $_clearField(2);
 
   /// Name of the backup from which to restore.  Values are of the form
   /// `projects/<project>/instances/<instance>/clusters/<cluster>/backups/<backup>`.
   @$pb.TagNumber(3)
   $core.String get backup => $_getSZ(2);
   @$pb.TagNumber(3)
-  set backup($core.String v) {
-    $_setString(2, v);
-  }
-
+  set backup($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasBackup() => $_has(2);
   @$pb.TagNumber(3)
-  void clearBackup() => clearField(3);
+  void clearBackup() => $_clearField(3);
 }
 
 enum RestoreTableMetadata_SourceInfo { backupInfo, notSet }
@@ -145,36 +135,29 @@ enum RestoreTableMetadata_SourceInfo { backupInfo, notSet }
 class RestoreTableMetadata extends $pb.GeneratedMessage {
   factory RestoreTableMetadata({
     $core.String? name,
-    $5.RestoreSourceType? sourceType,
-    $5.BackupInfo? backupInfo,
+    $1.RestoreSourceType? sourceType,
+    $1.BackupInfo? backupInfo,
     $core.String? optimizeTableOperationName,
     $6.OperationProgress? progress,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (sourceType != null) {
-      $result.sourceType = sourceType;
-    }
-    if (backupInfo != null) {
-      $result.backupInfo = backupInfo;
-    }
-    if (optimizeTableOperationName != null) {
-      $result.optimizeTableOperationName = optimizeTableOperationName;
-    }
-    if (progress != null) {
-      $result.progress = progress;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (sourceType != null) result.sourceType = sourceType;
+    if (backupInfo != null) result.backupInfo = backupInfo;
+    if (optimizeTableOperationName != null)
+      result.optimizeTableOperationName = optimizeTableOperationName;
+    if (progress != null) result.progress = progress;
+    return result;
   }
-  RestoreTableMetadata._() : super();
-  factory RestoreTableMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory RestoreTableMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  RestoreTableMetadata._();
+
+  factory RestoreTableMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RestoreTableMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, RestoreTableMetadata_SourceInfo>
       _RestoreTableMetadata_SourceInfoByTag = {
@@ -188,85 +171,70 @@ class RestoreTableMetadata extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..oo(0, [3])
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<$5.RestoreSourceType>(
-        2, _omitFieldNames ? '' : 'sourceType', $pb.PbFieldType.OE,
-        defaultOrMaker: $5.RestoreSourceType.RESTORE_SOURCE_TYPE_UNSPECIFIED,
-        valueOf: $5.RestoreSourceType.valueOf,
-        enumValues: $5.RestoreSourceType.values)
-    ..aOM<$5.BackupInfo>(3, _omitFieldNames ? '' : 'backupInfo',
-        subBuilder: $5.BackupInfo.create)
+    ..aE<$1.RestoreSourceType>(2, _omitFieldNames ? '' : 'sourceType',
+        enumValues: $1.RestoreSourceType.values)
+    ..aOM<$1.BackupInfo>(3, _omitFieldNames ? '' : 'backupInfo',
+        subBuilder: $1.BackupInfo.create)
     ..aOS(4, _omitFieldNames ? '' : 'optimizeTableOperationName')
     ..aOM<$6.OperationProgress>(5, _omitFieldNames ? '' : 'progress',
         subBuilder: $6.OperationProgress.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  RestoreTableMetadata clone() =>
-      RestoreTableMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RestoreTableMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RestoreTableMetadata copyWith(void Function(RestoreTableMetadata) updates) =>
       super.copyWith((message) => updates(message as RestoreTableMetadata))
           as RestoreTableMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RestoreTableMetadata create() => RestoreTableMetadata._();
+  @$core.override
   RestoreTableMetadata createEmptyInstance() => create();
-  static $pb.PbList<RestoreTableMetadata> createRepeated() =>
-      $pb.PbList<RestoreTableMetadata>();
   @$core.pragma('dart2js:noInline')
   static RestoreTableMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RestoreTableMetadata>(create);
   static RestoreTableMetadata? _defaultInstance;
 
+  @$pb.TagNumber(3)
   RestoreTableMetadata_SourceInfo whichSourceInfo() =>
       _RestoreTableMetadata_SourceInfoByTag[$_whichOneof(0)]!;
-  void clearSourceInfo() => clearField($_whichOneof(0));
+  @$pb.TagNumber(3)
+  void clearSourceInfo() => $_clearField($_whichOneof(0));
 
   /// Name of the table being created and restored to.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The type of the restore source.
   @$pb.TagNumber(2)
-  $5.RestoreSourceType get sourceType => $_getN(1);
+  $1.RestoreSourceType get sourceType => $_getN(1);
   @$pb.TagNumber(2)
-  set sourceType($5.RestoreSourceType v) {
-    setField(2, v);
-  }
-
+  set sourceType($1.RestoreSourceType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSourceType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSourceType() => clearField(2);
+  void clearSourceType() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $5.BackupInfo get backupInfo => $_getN(2);
+  $1.BackupInfo get backupInfo => $_getN(2);
   @$pb.TagNumber(3)
-  set backupInfo($5.BackupInfo v) {
-    setField(3, v);
-  }
-
+  set backupInfo($1.BackupInfo value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasBackupInfo() => $_has(2);
   @$pb.TagNumber(3)
-  void clearBackupInfo() => clearField(3);
+  void clearBackupInfo() => $_clearField(3);
   @$pb.TagNumber(3)
-  $5.BackupInfo ensureBackupInfo() => $_ensure(2);
+  $1.BackupInfo ensureBackupInfo() => $_ensure(2);
 
   /// If exists, the name of the long-running operation that will be used to
   /// track the post-restore optimization process to optimize the performance of
@@ -280,14 +248,11 @@ class RestoreTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get optimizeTableOperationName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set optimizeTableOperationName($core.String v) {
-    $_setString(3, v);
-  }
-
+  set optimizeTableOperationName($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasOptimizeTableOperationName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearOptimizeTableOperationName() => clearField(4);
+  void clearOptimizeTableOperationName() => $_clearField(4);
 
   /// The progress of the
   /// [RestoreTable][google.bigtable.admin.v2.BigtableTableAdmin.RestoreTable]
@@ -295,14 +260,11 @@ class RestoreTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $6.OperationProgress get progress => $_getN(4);
   @$pb.TagNumber(5)
-  set progress($6.OperationProgress v) {
-    setField(5, v);
-  }
-
+  set progress($6.OperationProgress value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasProgress() => $_has(4);
   @$pb.TagNumber(5)
-  void clearProgress() => clearField(5);
+  void clearProgress() => $_clearField(5);
   @$pb.TagNumber(5)
   $6.OperationProgress ensureProgress() => $_ensure(4);
 }
@@ -316,22 +278,20 @@ class OptimizeRestoredTableMetadata extends $pb.GeneratedMessage {
     $core.String? name,
     $6.OperationProgress? progress,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (progress != null) {
-      $result.progress = progress;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (progress != null) result.progress = progress;
+    return result;
   }
-  OptimizeRestoredTableMetadata._() : super();
-  factory OptimizeRestoredTableMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory OptimizeRestoredTableMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  OptimizeRestoredTableMetadata._();
+
+  factory OptimizeRestoredTableMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OptimizeRestoredTableMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'OptimizeRestoredTableMetadata',
@@ -343,28 +303,23 @@ class OptimizeRestoredTableMetadata extends $pb.GeneratedMessage {
         subBuilder: $6.OperationProgress.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  OptimizeRestoredTableMetadata clone() =>
-      OptimizeRestoredTableMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OptimizeRestoredTableMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OptimizeRestoredTableMetadata copyWith(
           void Function(OptimizeRestoredTableMetadata) updates) =>
       super.copyWith(
               (message) => updates(message as OptimizeRestoredTableMetadata))
           as OptimizeRestoredTableMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static OptimizeRestoredTableMetadata create() =>
       OptimizeRestoredTableMetadata._();
+  @$core.override
   OptimizeRestoredTableMetadata createEmptyInstance() => create();
-  static $pb.PbList<OptimizeRestoredTableMetadata> createRepeated() =>
-      $pb.PbList<OptimizeRestoredTableMetadata>();
   @$core.pragma('dart2js:noInline')
   static OptimizeRestoredTableMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OptimizeRestoredTableMetadata>(create);
@@ -374,27 +329,21 @@ class OptimizeRestoredTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The progress of the post-restore optimizations.
   @$pb.TagNumber(2)
   $6.OperationProgress get progress => $_getN(1);
   @$pb.TagNumber(2)
-  set progress($6.OperationProgress v) {
-    setField(2, v);
-  }
-
+  set progress($6.OperationProgress value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasProgress() => $_has(1);
   @$pb.TagNumber(2)
-  void clearProgress() => clearField(2);
+  void clearProgress() => $_clearField(2);
   @$pb.TagNumber(2)
   $6.OperationProgress ensureProgress() => $_ensure(1);
 }
@@ -404,19 +353,19 @@ class CreateTableRequest_Split extends $pb.GeneratedMessage {
   factory CreateTableRequest_Split({
     $core.List<$core.int>? key,
   }) {
-    final $result = create();
-    if (key != null) {
-      $result.key = key;
-    }
-    return $result;
+    final result = create();
+    if (key != null) result.key = key;
+    return result;
   }
-  CreateTableRequest_Split._() : super();
-  factory CreateTableRequest_Split.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateTableRequest_Split.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateTableRequest_Split._();
+
+  factory CreateTableRequest_Split.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateTableRequest_Split.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateTableRequest.Split',
@@ -427,26 +376,21 @@ class CreateTableRequest_Split extends $pb.GeneratedMessage {
         1, _omitFieldNames ? '' : 'key', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateTableRequest_Split clone() =>
-      CreateTableRequest_Split()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateTableRequest_Split clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateTableRequest_Split copyWith(
           void Function(CreateTableRequest_Split) updates) =>
       super.copyWith((message) => updates(message as CreateTableRequest_Split))
           as CreateTableRequest_Split;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateTableRequest_Split create() => CreateTableRequest_Split._();
+  @$core.override
   CreateTableRequest_Split createEmptyInstance() => create();
-  static $pb.PbList<CreateTableRequest_Split> createRepeated() =>
-      $pb.PbList<CreateTableRequest_Split>();
   @$core.pragma('dart2js:noInline')
   static CreateTableRequest_Split getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateTableRequest_Split>(create);
@@ -456,14 +400,11 @@ class CreateTableRequest_Split extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.List<$core.int> get key => $_getN(0);
   @$pb.TagNumber(1)
-  set key($core.List<$core.int> v) {
-    $_setBytes(0, v);
-  }
-
+  set key($core.List<$core.int> value) => $_setBytes(0, value);
   @$pb.TagNumber(1)
   $core.bool hasKey() => $_has(0);
   @$pb.TagNumber(1)
-  void clearKey() => clearField(1);
+  void clearKey() => $_clearField(1);
 }
 
 /// Request message for
@@ -472,31 +413,25 @@ class CreateTableRequest extends $pb.GeneratedMessage {
   factory CreateTableRequest({
     $core.String? parent,
     $core.String? tableId,
-    $5.Table? table,
+    $1.Table? table,
     $core.Iterable<CreateTableRequest_Split>? initialSplits,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (tableId != null) {
-      $result.tableId = tableId;
-    }
-    if (table != null) {
-      $result.table = table;
-    }
-    if (initialSplits != null) {
-      $result.initialSplits.addAll(initialSplits);
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (tableId != null) result.tableId = tableId;
+    if (table != null) result.table = table;
+    if (initialSplits != null) result.initialSplits.addAll(initialSplits);
+    return result;
   }
-  CreateTableRequest._() : super();
-  factory CreateTableRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateTableRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateTableRequest._();
+
+  factory CreateTableRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateTableRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateTableRequest',
@@ -505,31 +440,26 @@ class CreateTableRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOS(2, _omitFieldNames ? '' : 'tableId')
-    ..aOM<$5.Table>(3, _omitFieldNames ? '' : 'table',
-        subBuilder: $5.Table.create)
-    ..pc<CreateTableRequest_Split>(
-        4, _omitFieldNames ? '' : 'initialSplits', $pb.PbFieldType.PM,
+    ..aOM<$1.Table>(3, _omitFieldNames ? '' : 'table',
+        subBuilder: $1.Table.create)
+    ..pPM<CreateTableRequest_Split>(4, _omitFieldNames ? '' : 'initialSplits',
         subBuilder: CreateTableRequest_Split.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateTableRequest clone() => CreateTableRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateTableRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateTableRequest copyWith(void Function(CreateTableRequest) updates) =>
       super.copyWith((message) => updates(message as CreateTableRequest))
           as CreateTableRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateTableRequest create() => CreateTableRequest._();
+  @$core.override
   CreateTableRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateTableRequest> createRepeated() =>
-      $pb.PbList<CreateTableRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateTableRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateTableRequest>(create);
@@ -540,14 +470,11 @@ class CreateTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The name by which the new table should be referred to within the
   /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
@@ -555,82 +482,72 @@ class CreateTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get tableId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set tableId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set tableId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasTableId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTableId() => clearField(2);
+  void clearTableId() => $_clearField(2);
 
   /// Required. The Table to create.
   @$pb.TagNumber(3)
-  $5.Table get table => $_getN(2);
+  $1.Table get table => $_getN(2);
   @$pb.TagNumber(3)
-  set table($5.Table v) {
-    setField(3, v);
-  }
-
+  set table($1.Table value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasTable() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTable() => clearField(3);
+  void clearTable() => $_clearField(3);
   @$pb.TagNumber(3)
-  $5.Table ensureTable() => $_ensure(2);
+  $1.Table ensureTable() => $_ensure(2);
 
-  ///  The optional list of row keys that will be used to initially split the
-  ///  table into several tablets (tablets are similar to HBase regions).
-  ///  Given two split keys, `s1` and `s2`, three tablets will be created,
-  ///  spanning the key ranges: `[, s1), [s1, s2), [s2, )`.
+  /// The optional list of row keys that will be used to initially split the
+  /// table into several tablets (tablets are similar to HBase regions).
+  /// Given two split keys, `s1` and `s2`, three tablets will be created,
+  /// spanning the key ranges: `[, s1), [s1, s2), [s2, )`.
   ///
-  ///  Example:
+  /// Example:
   ///
-  ///  * Row keys := `["a", "apple", "custom", "customer_1", "customer_2",`
-  ///                 `"other", "zz"]`
-  ///  * initial_split_keys := `["apple", "customer_1", "customer_2", "other"]`
-  ///  * Key assignment:
-  ///      - Tablet 1 `[, apple)                => {"a"}.`
-  ///      - Tablet 2 `[apple, customer_1)      => {"apple", "custom"}.`
-  ///      - Tablet 3 `[customer_1, customer_2) => {"customer_1"}.`
-  ///      - Tablet 4 `[customer_2, other)      => {"customer_2"}.`
-  ///      - Tablet 5 `[other, )                => {"other", "zz"}.`
+  /// * Row keys := `["a", "apple", "custom", "customer_1", "customer_2",`
+  ///                `"other", "zz"]`
+  /// * initial_split_keys := `["apple", "customer_1", "customer_2", "other"]`
+  /// * Key assignment:
+  ///     - Tablet 1 `[, apple)                => {"a"}.`
+  ///     - Tablet 2 `[apple, customer_1)      => {"apple", "custom"}.`
+  ///     - Tablet 3 `[customer_1, customer_2) => {"customer_1"}.`
+  ///     - Tablet 4 `[customer_2, other)      => {"customer_2"}.`
+  ///     - Tablet 5 `[other, )                => {"other", "zz"}.`
   @$pb.TagNumber(4)
-  $core.List<CreateTableRequest_Split> get initialSplits => $_getList(3);
+  $pb.PbList<CreateTableRequest_Split> get initialSplits => $_getList(3);
 }
 
-///  Request message for
-///  [google.bigtable.admin.v2.BigtableTableAdmin.CreateTableFromSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.CreateTableFromSnapshot]
+/// Request message for
+/// [google.bigtable.admin.v2.BigtableTableAdmin.CreateTableFromSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.CreateTableFromSnapshot]
 ///
-///  Note: This is a private alpha release of Cloud Bigtable snapshots. This
-///  feature is not currently available to most Cloud Bigtable customers. This
-///  feature might be changed in backward-incompatible ways and is not recommended
-///  for production use. It is not subject to any SLA or deprecation policy.
+/// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+/// feature is not currently available to most Cloud Bigtable customers. This
+/// feature might be changed in backward-incompatible ways and is not recommended
+/// for production use. It is not subject to any SLA or deprecation policy.
 class CreateTableFromSnapshotRequest extends $pb.GeneratedMessage {
   factory CreateTableFromSnapshotRequest({
     $core.String? parent,
     $core.String? tableId,
     $core.String? sourceSnapshot,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (tableId != null) {
-      $result.tableId = tableId;
-    }
-    if (sourceSnapshot != null) {
-      $result.sourceSnapshot = sourceSnapshot;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (tableId != null) result.tableId = tableId;
+    if (sourceSnapshot != null) result.sourceSnapshot = sourceSnapshot;
+    return result;
   }
-  CreateTableFromSnapshotRequest._() : super();
-  factory CreateTableFromSnapshotRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateTableFromSnapshotRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateTableFromSnapshotRequest._();
+
+  factory CreateTableFromSnapshotRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateTableFromSnapshotRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateTableFromSnapshotRequest',
@@ -642,28 +559,23 @@ class CreateTableFromSnapshotRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'sourceSnapshot')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateTableFromSnapshotRequest clone() =>
-      CreateTableFromSnapshotRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateTableFromSnapshotRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateTableFromSnapshotRequest copyWith(
           void Function(CreateTableFromSnapshotRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateTableFromSnapshotRequest))
           as CreateTableFromSnapshotRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateTableFromSnapshotRequest create() =>
       CreateTableFromSnapshotRequest._();
+  @$core.override
   CreateTableFromSnapshotRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateTableFromSnapshotRequest> createRepeated() =>
-      $pb.PbList<CreateTableFromSnapshotRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateTableFromSnapshotRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateTableFromSnapshotRequest>(create);
@@ -674,28 +586,22 @@ class CreateTableFromSnapshotRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The name by which the new table should be referred to within the
   /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
   @$pb.TagNumber(2)
   $core.String get tableId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set tableId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set tableId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasTableId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTableId() => clearField(2);
+  void clearTableId() => $_clearField(2);
 
   /// Required. The unique name of the snapshot from which to restore the table.
   /// The snapshot and the table must be in the same instance. Values are of the
@@ -704,14 +610,11 @@ class CreateTableFromSnapshotRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get sourceSnapshot => $_getSZ(2);
   @$pb.TagNumber(3)
-  set sourceSnapshot($core.String v) {
-    $_setString(2, v);
-  }
-
+  set sourceSnapshot($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSourceSnapshot() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSourceSnapshot() => clearField(3);
+  void clearSourceSnapshot() => $_clearField(3);
 }
 
 enum DropRowRangeRequest_Target { rowKeyPrefix, deleteAllDataFromTable, notSet }
@@ -724,25 +627,22 @@ class DropRowRangeRequest extends $pb.GeneratedMessage {
     $core.List<$core.int>? rowKeyPrefix,
     $core.bool? deleteAllDataFromTable,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (rowKeyPrefix != null) {
-      $result.rowKeyPrefix = rowKeyPrefix;
-    }
-    if (deleteAllDataFromTable != null) {
-      $result.deleteAllDataFromTable = deleteAllDataFromTable;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (rowKeyPrefix != null) result.rowKeyPrefix = rowKeyPrefix;
+    if (deleteAllDataFromTable != null)
+      result.deleteAllDataFromTable = deleteAllDataFromTable;
+    return result;
   }
-  DropRowRangeRequest._() : super();
-  factory DropRowRangeRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DropRowRangeRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DropRowRangeRequest._();
+
+  factory DropRowRangeRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DropRowRangeRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, DropRowRangeRequest_Target>
       _DropRowRangeRequest_TargetByTag = {
@@ -762,32 +662,32 @@ class DropRowRangeRequest extends $pb.GeneratedMessage {
     ..aOB(3, _omitFieldNames ? '' : 'deleteAllDataFromTable')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DropRowRangeRequest clone() => DropRowRangeRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DropRowRangeRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DropRowRangeRequest copyWith(void Function(DropRowRangeRequest) updates) =>
       super.copyWith((message) => updates(message as DropRowRangeRequest))
           as DropRowRangeRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DropRowRangeRequest create() => DropRowRangeRequest._();
+  @$core.override
   DropRowRangeRequest createEmptyInstance() => create();
-  static $pb.PbList<DropRowRangeRequest> createRepeated() =>
-      $pb.PbList<DropRowRangeRequest>();
   @$core.pragma('dart2js:noInline')
   static DropRowRangeRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DropRowRangeRequest>(create);
   static DropRowRangeRequest? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
   DropRowRangeRequest_Target whichTarget() =>
       _DropRowRangeRequest_TargetByTag[$_whichOneof(0)]!;
-  void clearTarget() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearTarget() => $_clearField($_whichOneof(0));
 
   /// Required. The unique name of the table on which to drop a range of rows.
   /// Values are of the form
@@ -795,41 +695,32 @@ class DropRowRangeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Delete all rows that start with this row key prefix. Prefix cannot be
   /// zero length.
   @$pb.TagNumber(2)
   $core.List<$core.int> get rowKeyPrefix => $_getN(1);
   @$pb.TagNumber(2)
-  set rowKeyPrefix($core.List<$core.int> v) {
-    $_setBytes(1, v);
-  }
-
+  set rowKeyPrefix($core.List<$core.int> value) => $_setBytes(1, value);
   @$pb.TagNumber(2)
   $core.bool hasRowKeyPrefix() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRowKeyPrefix() => clearField(2);
+  void clearRowKeyPrefix() => $_clearField(2);
 
   /// Delete all rows in the table. Setting this to false is a no-op.
   @$pb.TagNumber(3)
   $core.bool get deleteAllDataFromTable => $_getBF(2);
   @$pb.TagNumber(3)
-  set deleteAllDataFromTable($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set deleteAllDataFromTable($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasDeleteAllDataFromTable() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDeleteAllDataFromTable() => clearField(3);
+  void clearDeleteAllDataFromTable() => $_clearField(3);
 }
 
 /// Request message for
@@ -837,32 +728,26 @@ class DropRowRangeRequest extends $pb.GeneratedMessage {
 class ListTablesRequest extends $pb.GeneratedMessage {
   factory ListTablesRequest({
     $core.String? parent,
-    $5.Table_View? view,
+    $1.Table_View? view,
     $core.String? pageToken,
     $core.int? pageSize,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (view != null) result.view = view;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (pageSize != null) result.pageSize = pageSize;
+    return result;
   }
-  ListTablesRequest._() : super();
-  factory ListTablesRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListTablesRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListTablesRequest._();
+
+  factory ListTablesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTablesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListTablesRequest',
@@ -870,32 +755,26 @@ class ListTablesRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..e<$5.Table_View>(2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: $5.Table_View.VIEW_UNSPECIFIED,
-        valueOf: $5.Table_View.valueOf,
-        enumValues: $5.Table_View.values)
+    ..aE<$1.Table_View>(2, _omitFieldNames ? '' : 'view',
+        enumValues: $1.Table_View.values)
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
-    ..a<$core.int>(4, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(4, _omitFieldNames ? '' : 'pageSize')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListTablesRequest clone() => ListTablesRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTablesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListTablesRequest copyWith(void Function(ListTablesRequest) updates) =>
       super.copyWith((message) => updates(message as ListTablesRequest))
           as ListTablesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListTablesRequest create() => ListTablesRequest._();
+  @$core.override
   ListTablesRequest createEmptyInstance() => create();
-  static $pb.PbList<ListTablesRequest> createRepeated() =>
-      $pb.PbList<ListTablesRequest>();
   @$core.pragma('dart2js:noInline')
   static ListTablesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListTablesRequest>(create);
@@ -906,116 +785,98 @@ class ListTablesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// The view to be applied to the returned tables' fields.
   /// NAME_ONLY view (default) and REPLICATION_VIEW are supported.
   @$pb.TagNumber(2)
-  $5.Table_View get view => $_getN(1);
+  $1.Table_View get view => $_getN(1);
   @$pb.TagNumber(2)
-  set view($5.Table_View v) {
-    setField(2, v);
-  }
-
+  set view($1.Table_View value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasView() => $_has(1);
   @$pb.TagNumber(2)
-  void clearView() => clearField(2);
+  void clearView() => $_clearField(2);
 
   /// The value of `next_page_token` returned by a previous call.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 
-  ///  Maximum number of results per page.
+  /// Maximum number of results per page.
   ///
-  ///  A page_size of zero lets the server choose the number of items to return.
-  ///  A page_size which is strictly positive will return at most that many items.
-  ///  A negative page_size will cause an error.
+  /// A page_size of zero lets the server choose the number of items to return.
+  /// A page_size which is strictly positive will return at most that many items.
+  /// A negative page_size will cause an error.
   ///
-  ///  Following the first request, subsequent paginated calls are not required
-  ///  to pass a page_size. If a page_size is set in subsequent calls, it must
-  ///  match the page_size given in the first request.
+  /// Following the first request, subsequent paginated calls are not required
+  /// to pass a page_size. If a page_size is set in subsequent calls, it must
+  /// match the page_size given in the first request.
   @$pb.TagNumber(4)
   $core.int get pageSize => $_getIZ(3);
   @$pb.TagNumber(4)
-  set pageSize($core.int v) {
-    $_setSignedInt32(3, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(3, value);
   @$pb.TagNumber(4)
   $core.bool hasPageSize() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPageSize() => clearField(4);
+  void clearPageSize() => $_clearField(4);
 }
 
 /// Response message for
 /// [google.bigtable.admin.v2.BigtableTableAdmin.ListTables][google.bigtable.admin.v2.BigtableTableAdmin.ListTables]
 class ListTablesResponse extends $pb.GeneratedMessage {
   factory ListTablesResponse({
-    $core.Iterable<$5.Table>? tables,
+    $core.Iterable<$1.Table>? tables,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (tables != null) {
-      $result.tables.addAll(tables);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (tables != null) result.tables.addAll(tables);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListTablesResponse._() : super();
-  factory ListTablesResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListTablesResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListTablesResponse._();
+
+  factory ListTablesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTablesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListTablesResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
-    ..pc<$5.Table>(1, _omitFieldNames ? '' : 'tables', $pb.PbFieldType.PM,
-        subBuilder: $5.Table.create)
+    ..pPM<$1.Table>(1, _omitFieldNames ? '' : 'tables',
+        subBuilder: $1.Table.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListTablesResponse clone() => ListTablesResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTablesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListTablesResponse copyWith(void Function(ListTablesResponse) updates) =>
       super.copyWith((message) => updates(message as ListTablesResponse))
           as ListTablesResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListTablesResponse create() => ListTablesResponse._();
+  @$core.override
   ListTablesResponse createEmptyInstance() => create();
-  static $pb.PbList<ListTablesResponse> createRepeated() =>
-      $pb.PbList<ListTablesResponse>();
   @$core.pragma('dart2js:noInline')
   static ListTablesResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListTablesResponse>(create);
@@ -1023,7 +884,7 @@ class ListTablesResponse extends $pb.GeneratedMessage {
 
   /// The tables present in the requested instance.
   @$pb.TagNumber(1)
-  $core.List<$5.Table> get tables => $_getList(0);
+  $pb.PbList<$1.Table> get tables => $_getList(0);
 
   /// Set if not all tables could be returned in a single response.
   /// Pass this value to `page_token` in another request to get the next
@@ -1031,14 +892,11 @@ class ListTablesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request message for
@@ -1046,24 +904,22 @@ class ListTablesResponse extends $pb.GeneratedMessage {
 class GetTableRequest extends $pb.GeneratedMessage {
   factory GetTableRequest({
     $core.String? name,
-    $5.Table_View? view,
+    $1.Table_View? view,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (view != null) result.view = view;
+    return result;
   }
-  GetTableRequest._() : super();
-  factory GetTableRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetTableRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetTableRequest._();
+
+  factory GetTableRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetTableRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetTableRequest',
@@ -1071,30 +927,24 @@ class GetTableRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<$5.Table_View>(2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: $5.Table_View.VIEW_UNSPECIFIED,
-        valueOf: $5.Table_View.valueOf,
-        enumValues: $5.Table_View.values)
+    ..aE<$1.Table_View>(2, _omitFieldNames ? '' : 'view',
+        enumValues: $1.Table_View.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetTableRequest clone() => GetTableRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetTableRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetTableRequest copyWith(void Function(GetTableRequest) updates) =>
       super.copyWith((message) => updates(message as GetTableRequest))
           as GetTableRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetTableRequest create() => GetTableRequest._();
+  @$core.override
   GetTableRequest createEmptyInstance() => create();
-  static $pb.PbList<GetTableRequest> createRepeated() =>
-      $pb.PbList<GetTableRequest>();
   @$core.pragma('dart2js:noInline')
   static GetTableRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetTableRequest>(create);
@@ -1106,88 +956,74 @@ class GetTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The view to be applied to the returned table's fields.
   /// Defaults to `SCHEMA_VIEW` if unspecified.
   @$pb.TagNumber(2)
-  $5.Table_View get view => $_getN(1);
+  $1.Table_View get view => $_getN(1);
   @$pb.TagNumber(2)
-  set view($5.Table_View v) {
-    setField(2, v);
-  }
-
+  set view($1.Table_View value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasView() => $_has(1);
   @$pb.TagNumber(2)
-  void clearView() => clearField(2);
+  void clearView() => $_clearField(2);
 }
 
 /// The request for
 /// [UpdateTable][google.bigtable.admin.v2.BigtableTableAdmin.UpdateTable].
 class UpdateTableRequest extends $pb.GeneratedMessage {
   factory UpdateTableRequest({
-    $5.Table? table,
+    $1.Table? table,
     $7.FieldMask? updateMask,
     $core.bool? ignoreWarnings,
   }) {
-    final $result = create();
-    if (table != null) {
-      $result.table = table;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    if (ignoreWarnings != null) {
-      $result.ignoreWarnings = ignoreWarnings;
-    }
-    return $result;
+    final result = create();
+    if (table != null) result.table = table;
+    if (updateMask != null) result.updateMask = updateMask;
+    if (ignoreWarnings != null) result.ignoreWarnings = ignoreWarnings;
+    return result;
   }
-  UpdateTableRequest._() : super();
-  factory UpdateTableRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateTableRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateTableRequest._();
+
+  factory UpdateTableRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateTableRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateTableRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
-    ..aOM<$5.Table>(1, _omitFieldNames ? '' : 'table',
-        subBuilder: $5.Table.create)
+    ..aOM<$1.Table>(1, _omitFieldNames ? '' : 'table',
+        subBuilder: $1.Table.create)
     ..aOM<$7.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
         subBuilder: $7.FieldMask.create)
     ..aOB(3, _omitFieldNames ? '' : 'ignoreWarnings')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateTableRequest clone() => UpdateTableRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateTableRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateTableRequest copyWith(void Function(UpdateTableRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateTableRequest))
           as UpdateTableRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateTableRequest create() => UpdateTableRequest._();
+  @$core.override
   UpdateTableRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateTableRequest> createRepeated() =>
-      $pb.PbList<UpdateTableRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateTableRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateTableRequest>(create);
@@ -1196,43 +1032,37 @@ class UpdateTableRequest extends $pb.GeneratedMessage {
   /// Required. The table to update.
   /// The table's `name` field is used to identify the table to update.
   @$pb.TagNumber(1)
-  $5.Table get table => $_getN(0);
+  $1.Table get table => $_getN(0);
   @$pb.TagNumber(1)
-  set table($5.Table v) {
-    setField(1, v);
-  }
-
+  set table($1.Table value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasTable() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTable() => clearField(1);
+  void clearTable() => $_clearField(1);
   @$pb.TagNumber(1)
-  $5.Table ensureTable() => $_ensure(0);
+  $1.Table ensureTable() => $_ensure(0);
 
-  ///  Required. The list of fields to update.
-  ///  A mask specifying which fields (e.g. `change_stream_config`) in the `table`
-  ///  field should be updated. This mask is relative to the `table` field, not to
-  ///  the request message. The wildcard (*) path is currently not supported.
-  ///  Currently UpdateTable is only supported for the following fields:
+  /// Required. The list of fields to update.
+  /// A mask specifying which fields (e.g. `change_stream_config`) in the `table`
+  /// field should be updated. This mask is relative to the `table` field, not to
+  /// the request message. The wildcard (*) path is currently not supported.
+  /// Currently UpdateTable is only supported for the following fields:
   ///
-  ///  * `change_stream_config`
-  ///  * `change_stream_config.retention_period`
-  ///  * `deletion_protection`
-  ///  * `row_key_schema`
+  /// * `change_stream_config`
+  /// * `change_stream_config.retention_period`
+  /// * `deletion_protection`
+  /// * `row_key_schema`
   ///
-  ///  If `column_families` is set in `update_mask`, it will return an
-  ///  UNIMPLEMENTED error.
+  /// If `column_families` is set in `update_mask`, it will return an
+  /// UNIMPLEMENTED error.
   @$pb.TagNumber(2)
   $7.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($7.FieldMask v) {
-    setField(2, v);
-  }
-
+  set updateMask($7.FieldMask value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $7.FieldMask ensureUpdateMask() => $_ensure(1);
 
@@ -1240,14 +1070,11 @@ class UpdateTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get ignoreWarnings => $_getBF(2);
   @$pb.TagNumber(3)
-  set ignoreWarnings($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set ignoreWarnings($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasIgnoreWarnings() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIgnoreWarnings() => clearField(3);
+  void clearIgnoreWarnings() => $_clearField(3);
 }
 
 /// Metadata type for the operation returned by
@@ -1258,25 +1085,21 @@ class UpdateTableMetadata extends $pb.GeneratedMessage {
     $8.Timestamp? startTime,
     $8.Timestamp? endTime,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    return result;
   }
-  UpdateTableMetadata._() : super();
-  factory UpdateTableMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateTableMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateTableMetadata._();
+
+  factory UpdateTableMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateTableMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateTableMetadata',
@@ -1290,24 +1113,20 @@ class UpdateTableMetadata extends $pb.GeneratedMessage {
         subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateTableMetadata clone() => UpdateTableMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateTableMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateTableMetadata copyWith(void Function(UpdateTableMetadata) updates) =>
       super.copyWith((message) => updates(message as UpdateTableMetadata))
           as UpdateTableMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateTableMetadata create() => UpdateTableMetadata._();
+  @$core.override
   UpdateTableMetadata createEmptyInstance() => create();
-  static $pb.PbList<UpdateTableMetadata> createRepeated() =>
-      $pb.PbList<UpdateTableMetadata>();
   @$core.pragma('dart2js:noInline')
   static UpdateTableMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateTableMetadata>(create);
@@ -1317,27 +1136,21 @@ class UpdateTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The time at which this operation started.
   @$pb.TagNumber(2)
   $8.Timestamp get startTime => $_getN(1);
   @$pb.TagNumber(2)
-  set startTime($8.Timestamp v) {
-    setField(2, v);
-  }
-
+  set startTime($8.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasStartTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStartTime() => clearField(2);
+  void clearStartTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $8.Timestamp ensureStartTime() => $_ensure(1);
 
@@ -1345,14 +1158,11 @@ class UpdateTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $8.Timestamp get endTime => $_getN(2);
   @$pb.TagNumber(3)
-  set endTime($8.Timestamp v) {
-    setField(3, v);
-  }
-
+  set endTime($8.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasEndTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEndTime() => clearField(3);
+  void clearEndTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $8.Timestamp ensureEndTime() => $_ensure(2);
 }
@@ -1363,19 +1173,19 @@ class DeleteTableRequest extends $pb.GeneratedMessage {
   factory DeleteTableRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteTableRequest._() : super();
-  factory DeleteTableRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteTableRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteTableRequest._();
+
+  factory DeleteTableRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteTableRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteTableRequest',
@@ -1385,24 +1195,20 @@ class DeleteTableRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteTableRequest clone() => DeleteTableRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteTableRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteTableRequest copyWith(void Function(DeleteTableRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteTableRequest))
           as DeleteTableRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteTableRequest create() => DeleteTableRequest._();
+  @$core.override
   DeleteTableRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteTableRequest> createRepeated() =>
-      $pb.PbList<DeleteTableRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteTableRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteTableRequest>(create);
@@ -1414,14 +1220,11 @@ class DeleteTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request message for
@@ -1430,19 +1233,19 @@ class UndeleteTableRequest extends $pb.GeneratedMessage {
   factory UndeleteTableRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  UndeleteTableRequest._() : super();
-  factory UndeleteTableRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UndeleteTableRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UndeleteTableRequest._();
+
+  factory UndeleteTableRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UndeleteTableRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UndeleteTableRequest',
@@ -1452,25 +1255,20 @@ class UndeleteTableRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UndeleteTableRequest clone() =>
-      UndeleteTableRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UndeleteTableRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UndeleteTableRequest copyWith(void Function(UndeleteTableRequest) updates) =>
       super.copyWith((message) => updates(message as UndeleteTableRequest))
           as UndeleteTableRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UndeleteTableRequest create() => UndeleteTableRequest._();
+  @$core.override
   UndeleteTableRequest createEmptyInstance() => create();
-  static $pb.PbList<UndeleteTableRequest> createRepeated() =>
-      $pb.PbList<UndeleteTableRequest>();
   @$core.pragma('dart2js:noInline')
   static UndeleteTableRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UndeleteTableRequest>(create);
@@ -1482,14 +1280,11 @@ class UndeleteTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Metadata type for the operation returned by
@@ -1500,25 +1295,21 @@ class UndeleteTableMetadata extends $pb.GeneratedMessage {
     $8.Timestamp? startTime,
     $8.Timestamp? endTime,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    return result;
   }
-  UndeleteTableMetadata._() : super();
-  factory UndeleteTableMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UndeleteTableMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UndeleteTableMetadata._();
+
+  factory UndeleteTableMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UndeleteTableMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UndeleteTableMetadata',
@@ -1532,26 +1323,21 @@ class UndeleteTableMetadata extends $pb.GeneratedMessage {
         subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UndeleteTableMetadata clone() =>
-      UndeleteTableMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UndeleteTableMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UndeleteTableMetadata copyWith(
           void Function(UndeleteTableMetadata) updates) =>
       super.copyWith((message) => updates(message as UndeleteTableMetadata))
           as UndeleteTableMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UndeleteTableMetadata create() => UndeleteTableMetadata._();
+  @$core.override
   UndeleteTableMetadata createEmptyInstance() => create();
-  static $pb.PbList<UndeleteTableMetadata> createRepeated() =>
-      $pb.PbList<UndeleteTableMetadata>();
   @$core.pragma('dart2js:noInline')
   static UndeleteTableMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UndeleteTableMetadata>(create);
@@ -1561,27 +1347,21 @@ class UndeleteTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The time at which this operation started.
   @$pb.TagNumber(2)
   $8.Timestamp get startTime => $_getN(1);
   @$pb.TagNumber(2)
-  set startTime($8.Timestamp v) {
-    setField(2, v);
-  }
-
+  set startTime($8.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasStartTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStartTime() => clearField(2);
+  void clearStartTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $8.Timestamp ensureStartTime() => $_ensure(1);
 
@@ -1589,14 +1369,11 @@ class UndeleteTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $8.Timestamp get endTime => $_getN(2);
   @$pb.TagNumber(3)
-  set endTime($8.Timestamp v) {
-    setField(3, v);
-  }
-
+  set endTime($8.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasEndTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEndTime() => clearField(3);
+  void clearEndTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $8.Timestamp ensureEndTime() => $_ensure(2);
 }
@@ -1612,37 +1389,29 @@ enum ModifyColumnFamiliesRequest_Modification_Mod {
 class ModifyColumnFamiliesRequest_Modification extends $pb.GeneratedMessage {
   factory ModifyColumnFamiliesRequest_Modification({
     $core.String? id,
-    $5.ColumnFamily? create_2,
-    $5.ColumnFamily? update,
+    $1.ColumnFamily? create_2,
+    $1.ColumnFamily? update,
     $core.bool? drop,
     $7.FieldMask? updateMask,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    if (create_2 != null) {
-      $result.create_2 = create_2;
-    }
-    if (update != null) {
-      $result.update = update;
-    }
-    if (drop != null) {
-      $result.drop = drop;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    if (create_2 != null) result.create_2 = create_2;
+    if (update != null) result.update = update;
+    if (drop != null) result.drop = drop;
+    if (updateMask != null) result.updateMask = updateMask;
+    return result;
   }
-  ModifyColumnFamiliesRequest_Modification._() : super();
+
+  ModifyColumnFamiliesRequest_Modification._();
+
   factory ModifyColumnFamiliesRequest_Modification.fromBuffer(
-          $core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ModifyColumnFamiliesRequest_Modification.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ModifyColumnFamiliesRequest_Modification.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core
       .Map<$core.int, ModifyColumnFamiliesRequest_Modification_Mod>
@@ -1659,106 +1428,94 @@ class ModifyColumnFamiliesRequest_Modification extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..oo(0, [2, 3, 4])
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$5.ColumnFamily>(2, _omitFieldNames ? '' : 'create',
-        subBuilder: $5.ColumnFamily.create)
-    ..aOM<$5.ColumnFamily>(3, _omitFieldNames ? '' : 'update',
-        subBuilder: $5.ColumnFamily.create)
+    ..aOM<$1.ColumnFamily>(2, _omitFieldNames ? '' : 'create',
+        subBuilder: $1.ColumnFamily.create)
+    ..aOM<$1.ColumnFamily>(3, _omitFieldNames ? '' : 'update',
+        subBuilder: $1.ColumnFamily.create)
     ..aOB(4, _omitFieldNames ? '' : 'drop')
     ..aOM<$7.FieldMask>(6, _omitFieldNames ? '' : 'updateMask',
         subBuilder: $7.FieldMask.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ModifyColumnFamiliesRequest_Modification clone() =>
-      ModifyColumnFamiliesRequest_Modification()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ModifyColumnFamiliesRequest_Modification clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ModifyColumnFamiliesRequest_Modification copyWith(
           void Function(ModifyColumnFamiliesRequest_Modification) updates) =>
       super.copyWith((message) =>
               updates(message as ModifyColumnFamiliesRequest_Modification))
           as ModifyColumnFamiliesRequest_Modification;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ModifyColumnFamiliesRequest_Modification create() =>
       ModifyColumnFamiliesRequest_Modification._();
+  @$core.override
   ModifyColumnFamiliesRequest_Modification createEmptyInstance() => create();
-  static $pb.PbList<ModifyColumnFamiliesRequest_Modification>
-      createRepeated() =>
-          $pb.PbList<ModifyColumnFamiliesRequest_Modification>();
   @$core.pragma('dart2js:noInline')
   static ModifyColumnFamiliesRequest_Modification getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
           ModifyColumnFamiliesRequest_Modification>(create);
   static ModifyColumnFamiliesRequest_Modification? _defaultInstance;
 
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
   ModifyColumnFamiliesRequest_Modification_Mod whichMod() =>
       _ModifyColumnFamiliesRequest_Modification_ModByTag[$_whichOneof(0)]!;
-  void clearMod() => clearField($_whichOneof(0));
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  void clearMod() => $_clearField($_whichOneof(0));
 
   /// The ID of the column family to be modified.
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String v) {
-    $_setString(0, v);
-  }
-
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// Create a new column family with the specified schema, or fail if
   /// one already exists with the given ID.
   @$pb.TagNumber(2)
-  $5.ColumnFamily get create_2 => $_getN(1);
+  $1.ColumnFamily get create_2 => $_getN(1);
   @$pb.TagNumber(2)
-  set create_2($5.ColumnFamily v) {
-    setField(2, v);
-  }
-
+  set create_2($1.ColumnFamily value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCreate_2() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCreate_2() => clearField(2);
+  void clearCreate_2() => $_clearField(2);
   @$pb.TagNumber(2)
-  $5.ColumnFamily ensureCreate_2() => $_ensure(1);
+  $1.ColumnFamily ensureCreate_2() => $_ensure(1);
 
   /// Update an existing column family to the specified schema, or fail
   /// if no column family exists with the given ID.
   @$pb.TagNumber(3)
-  $5.ColumnFamily get update => $_getN(2);
+  $1.ColumnFamily get update => $_getN(2);
   @$pb.TagNumber(3)
-  set update($5.ColumnFamily v) {
-    setField(3, v);
-  }
-
+  set update($1.ColumnFamily value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasUpdate() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUpdate() => clearField(3);
+  void clearUpdate() => $_clearField(3);
   @$pb.TagNumber(3)
-  $5.ColumnFamily ensureUpdate() => $_ensure(2);
+  $1.ColumnFamily ensureUpdate() => $_ensure(2);
 
   /// Drop (delete) the column family with the given ID, or fail if no such
   /// family exists.
   @$pb.TagNumber(4)
   $core.bool get drop => $_getBF(3);
   @$pb.TagNumber(4)
-  set drop($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set drop($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(4)
   $core.bool hasDrop() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDrop() => clearField(4);
+  void clearDrop() => $_clearField(4);
 
   /// Optional. A mask specifying which fields (e.g. `gc_rule`) in the `update`
   /// mod should be updated, ignored for other modification types. If unset or
@@ -1766,14 +1523,11 @@ class ModifyColumnFamiliesRequest_Modification extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $7.FieldMask get updateMask => $_getN(4);
   @$pb.TagNumber(6)
-  set updateMask($7.FieldMask v) {
-    setField(6, v);
-  }
-
+  set updateMask($7.FieldMask value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasUpdateMask() => $_has(4);
   @$pb.TagNumber(6)
-  void clearUpdateMask() => clearField(6);
+  void clearUpdateMask() => $_clearField(6);
   @$pb.TagNumber(6)
   $7.FieldMask ensureUpdateMask() => $_ensure(4);
 }
@@ -1786,25 +1540,21 @@ class ModifyColumnFamiliesRequest extends $pb.GeneratedMessage {
     $core.Iterable<ModifyColumnFamiliesRequest_Modification>? modifications,
     $core.bool? ignoreWarnings,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (modifications != null) {
-      $result.modifications.addAll(modifications);
-    }
-    if (ignoreWarnings != null) {
-      $result.ignoreWarnings = ignoreWarnings;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (modifications != null) result.modifications.addAll(modifications);
+    if (ignoreWarnings != null) result.ignoreWarnings = ignoreWarnings;
+    return result;
   }
-  ModifyColumnFamiliesRequest._() : super();
-  factory ModifyColumnFamiliesRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ModifyColumnFamiliesRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ModifyColumnFamiliesRequest._();
+
+  factory ModifyColumnFamiliesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ModifyColumnFamiliesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ModifyColumnFamiliesRequest',
@@ -1812,34 +1562,29 @@ class ModifyColumnFamiliesRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..pc<ModifyColumnFamiliesRequest_Modification>(
-        2, _omitFieldNames ? '' : 'modifications', $pb.PbFieldType.PM,
+    ..pPM<ModifyColumnFamiliesRequest_Modification>(
+        2, _omitFieldNames ? '' : 'modifications',
         subBuilder: ModifyColumnFamiliesRequest_Modification.create)
     ..aOB(3, _omitFieldNames ? '' : 'ignoreWarnings')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ModifyColumnFamiliesRequest clone() =>
-      ModifyColumnFamiliesRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ModifyColumnFamiliesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ModifyColumnFamiliesRequest copyWith(
           void Function(ModifyColumnFamiliesRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ModifyColumnFamiliesRequest))
           as ModifyColumnFamiliesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ModifyColumnFamiliesRequest create() =>
       ModifyColumnFamiliesRequest._();
+  @$core.override
   ModifyColumnFamiliesRequest createEmptyInstance() => create();
-  static $pb.PbList<ModifyColumnFamiliesRequest> createRepeated() =>
-      $pb.PbList<ModifyColumnFamiliesRequest>();
   @$core.pragma('dart2js:noInline')
   static ModifyColumnFamiliesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ModifyColumnFamiliesRequest>(create);
@@ -1851,35 +1596,29 @@ class ModifyColumnFamiliesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Required. Modifications to be atomically applied to the specified table's
   /// families. Entries are applied in order, meaning that earlier modifications
   /// can be masked by later ones (in the case of repeated updates to the same
   /// family, for example).
   @$pb.TagNumber(2)
-  $core.List<ModifyColumnFamiliesRequest_Modification> get modifications =>
+  $pb.PbList<ModifyColumnFamiliesRequest_Modification> get modifications =>
       $_getList(1);
 
   /// Optional. If true, ignore safety checks when modifying the column families.
   @$pb.TagNumber(3)
   $core.bool get ignoreWarnings => $_getBF(2);
   @$pb.TagNumber(3)
-  set ignoreWarnings($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set ignoreWarnings($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasIgnoreWarnings() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIgnoreWarnings() => clearField(3);
+  void clearIgnoreWarnings() => $_clearField(3);
 }
 
 /// Request message for
@@ -1888,19 +1627,19 @@ class GenerateConsistencyTokenRequest extends $pb.GeneratedMessage {
   factory GenerateConsistencyTokenRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GenerateConsistencyTokenRequest._() : super();
-  factory GenerateConsistencyTokenRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GenerateConsistencyTokenRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GenerateConsistencyTokenRequest._();
+
+  factory GenerateConsistencyTokenRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GenerateConsistencyTokenRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GenerateConsistencyTokenRequest',
@@ -1910,28 +1649,23 @@ class GenerateConsistencyTokenRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GenerateConsistencyTokenRequest clone() =>
-      GenerateConsistencyTokenRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GenerateConsistencyTokenRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GenerateConsistencyTokenRequest copyWith(
           void Function(GenerateConsistencyTokenRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GenerateConsistencyTokenRequest))
           as GenerateConsistencyTokenRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GenerateConsistencyTokenRequest create() =>
       GenerateConsistencyTokenRequest._();
+  @$core.override
   GenerateConsistencyTokenRequest createEmptyInstance() => create();
-  static $pb.PbList<GenerateConsistencyTokenRequest> createRepeated() =>
-      $pb.PbList<GenerateConsistencyTokenRequest>();
   @$core.pragma('dart2js:noInline')
   static GenerateConsistencyTokenRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GenerateConsistencyTokenRequest>(
@@ -1944,14 +1678,11 @@ class GenerateConsistencyTokenRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Response message for
@@ -1960,19 +1691,20 @@ class GenerateConsistencyTokenResponse extends $pb.GeneratedMessage {
   factory GenerateConsistencyTokenResponse({
     $core.String? consistencyToken,
   }) {
-    final $result = create();
-    if (consistencyToken != null) {
-      $result.consistencyToken = consistencyToken;
-    }
-    return $result;
+    final result = create();
+    if (consistencyToken != null) result.consistencyToken = consistencyToken;
+    return result;
   }
-  GenerateConsistencyTokenResponse._() : super();
-  factory GenerateConsistencyTokenResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GenerateConsistencyTokenResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GenerateConsistencyTokenResponse._();
+
+  factory GenerateConsistencyTokenResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GenerateConsistencyTokenResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GenerateConsistencyTokenResponse',
@@ -1982,28 +1714,23 @@ class GenerateConsistencyTokenResponse extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'consistencyToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GenerateConsistencyTokenResponse clone() =>
-      GenerateConsistencyTokenResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GenerateConsistencyTokenResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GenerateConsistencyTokenResponse copyWith(
           void Function(GenerateConsistencyTokenResponse) updates) =>
       super.copyWith(
               (message) => updates(message as GenerateConsistencyTokenResponse))
           as GenerateConsistencyTokenResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GenerateConsistencyTokenResponse create() =>
       GenerateConsistencyTokenResponse._();
+  @$core.override
   GenerateConsistencyTokenResponse createEmptyInstance() => create();
-  static $pb.PbList<GenerateConsistencyTokenResponse> createRepeated() =>
-      $pb.PbList<GenerateConsistencyTokenResponse>();
   @$core.pragma('dart2js:noInline')
   static GenerateConsistencyTokenResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GenerateConsistencyTokenResponse>(
@@ -2014,14 +1741,11 @@ class GenerateConsistencyTokenResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get consistencyToken => $_getSZ(0);
   @$pb.TagNumber(1)
-  set consistencyToken($core.String v) {
-    $_setString(0, v);
-  }
-
+  set consistencyToken($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasConsistencyToken() => $_has(0);
   @$pb.TagNumber(1)
-  void clearConsistencyToken() => clearField(1);
+  void clearConsistencyToken() => $_clearField(1);
 }
 
 enum CheckConsistencyRequest_Mode {
@@ -2039,28 +1763,24 @@ class CheckConsistencyRequest extends $pb.GeneratedMessage {
     StandardReadRemoteWrites? standardReadRemoteWrites,
     DataBoostReadLocalWrites? dataBoostReadLocalWrites,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (consistencyToken != null) {
-      $result.consistencyToken = consistencyToken;
-    }
-    if (standardReadRemoteWrites != null) {
-      $result.standardReadRemoteWrites = standardReadRemoteWrites;
-    }
-    if (dataBoostReadLocalWrites != null) {
-      $result.dataBoostReadLocalWrites = dataBoostReadLocalWrites;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (consistencyToken != null) result.consistencyToken = consistencyToken;
+    if (standardReadRemoteWrites != null)
+      result.standardReadRemoteWrites = standardReadRemoteWrites;
+    if (dataBoostReadLocalWrites != null)
+      result.dataBoostReadLocalWrites = dataBoostReadLocalWrites;
+    return result;
   }
-  CheckConsistencyRequest._() : super();
-  factory CheckConsistencyRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CheckConsistencyRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CheckConsistencyRequest._();
+
+  factory CheckConsistencyRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CheckConsistencyRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, CheckConsistencyRequest_Mode>
       _CheckConsistencyRequest_ModeByTag = {
@@ -2084,34 +1804,33 @@ class CheckConsistencyRequest extends $pb.GeneratedMessage {
         subBuilder: DataBoostReadLocalWrites.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CheckConsistencyRequest clone() =>
-      CheckConsistencyRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CheckConsistencyRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CheckConsistencyRequest copyWith(
           void Function(CheckConsistencyRequest) updates) =>
       super.copyWith((message) => updates(message as CheckConsistencyRequest))
           as CheckConsistencyRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CheckConsistencyRequest create() => CheckConsistencyRequest._();
+  @$core.override
   CheckConsistencyRequest createEmptyInstance() => create();
-  static $pb.PbList<CheckConsistencyRequest> createRepeated() =>
-      $pb.PbList<CheckConsistencyRequest>();
   @$core.pragma('dart2js:noInline')
   static CheckConsistencyRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CheckConsistencyRequest>(create);
   static CheckConsistencyRequest? _defaultInstance;
 
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
   CheckConsistencyRequest_Mode whichMode() =>
       _CheckConsistencyRequest_ModeByTag[$_whichOneof(0)]!;
-  void clearMode() => clearField($_whichOneof(0));
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  void clearMode() => $_clearField($_whichOneof(0));
 
   /// Required. The unique name of the Table for which to check replication
   /// consistency. Values are of the form
@@ -2119,27 +1838,21 @@ class CheckConsistencyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Required. The token created using GenerateConsistencyToken for the Table.
   @$pb.TagNumber(2)
   $core.String get consistencyToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set consistencyToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set consistencyToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasConsistencyToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConsistencyToken() => clearField(2);
+  void clearConsistencyToken() => $_clearField(2);
 
   /// Checks that reads using an app profile with `StandardIsolation` can
   /// see all writes committed before the token was created, even if the
@@ -2147,14 +1860,12 @@ class CheckConsistencyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   StandardReadRemoteWrites get standardReadRemoteWrites => $_getN(2);
   @$pb.TagNumber(3)
-  set standardReadRemoteWrites(StandardReadRemoteWrites v) {
-    setField(3, v);
-  }
-
+  set standardReadRemoteWrites(StandardReadRemoteWrites value) =>
+      $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasStandardReadRemoteWrites() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStandardReadRemoteWrites() => clearField(3);
+  void clearStandardReadRemoteWrites() => $_clearField(3);
   @$pb.TagNumber(3)
   StandardReadRemoteWrites ensureStandardReadRemoteWrites() => $_ensure(2);
 
@@ -2164,14 +1875,12 @@ class CheckConsistencyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   DataBoostReadLocalWrites get dataBoostReadLocalWrites => $_getN(3);
   @$pb.TagNumber(4)
-  set dataBoostReadLocalWrites(DataBoostReadLocalWrites v) {
-    setField(4, v);
-  }
-
+  set dataBoostReadLocalWrites(DataBoostReadLocalWrites value) =>
+      $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasDataBoostReadLocalWrites() => $_has(3);
   @$pb.TagNumber(4)
-  void clearDataBoostReadLocalWrites() => clearField(4);
+  void clearDataBoostReadLocalWrites() => $_clearField(4);
   @$pb.TagNumber(4)
   DataBoostReadLocalWrites ensureDataBoostReadLocalWrites() => $_ensure(3);
 }
@@ -2180,13 +1889,15 @@ class CheckConsistencyRequest extends $pb.GeneratedMessage {
 /// replicated in every cluster and readable.
 class StandardReadRemoteWrites extends $pb.GeneratedMessage {
   factory StandardReadRemoteWrites() => create();
-  StandardReadRemoteWrites._() : super();
-  factory StandardReadRemoteWrites.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory StandardReadRemoteWrites.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  StandardReadRemoteWrites._();
+
+  factory StandardReadRemoteWrites.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory StandardReadRemoteWrites.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'StandardReadRemoteWrites',
@@ -2195,26 +1906,21 @@ class StandardReadRemoteWrites extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  StandardReadRemoteWrites clone() =>
-      StandardReadRemoteWrites()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StandardReadRemoteWrites clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   StandardReadRemoteWrites copyWith(
           void Function(StandardReadRemoteWrites) updates) =>
       super.copyWith((message) => updates(message as StandardReadRemoteWrites))
           as StandardReadRemoteWrites;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static StandardReadRemoteWrites create() => StandardReadRemoteWrites._();
+  @$core.override
   StandardReadRemoteWrites createEmptyInstance() => create();
-  static $pb.PbList<StandardReadRemoteWrites> createRepeated() =>
-      $pb.PbList<StandardReadRemoteWrites>();
   @$core.pragma('dart2js:noInline')
   static StandardReadRemoteWrites getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<StandardReadRemoteWrites>(create);
@@ -2225,13 +1931,15 @@ class StandardReadRemoteWrites extends $pb.GeneratedMessage {
 /// cluster are readable by Databoost.
 class DataBoostReadLocalWrites extends $pb.GeneratedMessage {
   factory DataBoostReadLocalWrites() => create();
-  DataBoostReadLocalWrites._() : super();
-  factory DataBoostReadLocalWrites.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DataBoostReadLocalWrites.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DataBoostReadLocalWrites._();
+
+  factory DataBoostReadLocalWrites.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DataBoostReadLocalWrites.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DataBoostReadLocalWrites',
@@ -2240,26 +1948,21 @@ class DataBoostReadLocalWrites extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DataBoostReadLocalWrites clone() =>
-      DataBoostReadLocalWrites()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DataBoostReadLocalWrites clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DataBoostReadLocalWrites copyWith(
           void Function(DataBoostReadLocalWrites) updates) =>
       super.copyWith((message) => updates(message as DataBoostReadLocalWrites))
           as DataBoostReadLocalWrites;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DataBoostReadLocalWrites create() => DataBoostReadLocalWrites._();
+  @$core.override
   DataBoostReadLocalWrites createEmptyInstance() => create();
-  static $pb.PbList<DataBoostReadLocalWrites> createRepeated() =>
-      $pb.PbList<DataBoostReadLocalWrites>();
   @$core.pragma('dart2js:noInline')
   static DataBoostReadLocalWrites getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DataBoostReadLocalWrites>(create);
@@ -2272,19 +1975,19 @@ class CheckConsistencyResponse extends $pb.GeneratedMessage {
   factory CheckConsistencyResponse({
     $core.bool? consistent,
   }) {
-    final $result = create();
-    if (consistent != null) {
-      $result.consistent = consistent;
-    }
-    return $result;
+    final result = create();
+    if (consistent != null) result.consistent = consistent;
+    return result;
   }
-  CheckConsistencyResponse._() : super();
-  factory CheckConsistencyResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CheckConsistencyResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CheckConsistencyResponse._();
+
+  factory CheckConsistencyResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CheckConsistencyResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CheckConsistencyResponse',
@@ -2294,26 +1997,21 @@ class CheckConsistencyResponse extends $pb.GeneratedMessage {
     ..aOB(1, _omitFieldNames ? '' : 'consistent')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CheckConsistencyResponse clone() =>
-      CheckConsistencyResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CheckConsistencyResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CheckConsistencyResponse copyWith(
           void Function(CheckConsistencyResponse) updates) =>
       super.copyWith((message) => updates(message as CheckConsistencyResponse))
           as CheckConsistencyResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CheckConsistencyResponse create() => CheckConsistencyResponse._();
+  @$core.override
   CheckConsistencyResponse createEmptyInstance() => create();
-  static $pb.PbList<CheckConsistencyResponse> createRepeated() =>
-      $pb.PbList<CheckConsistencyResponse>();
   @$core.pragma('dart2js:noInline')
   static CheckConsistencyResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CheckConsistencyResponse>(create);
@@ -2324,23 +2022,20 @@ class CheckConsistencyResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool get consistent => $_getBF(0);
   @$pb.TagNumber(1)
-  set consistent($core.bool v) {
-    $_setBool(0, v);
-  }
-
+  set consistent($core.bool value) => $_setBool(0, value);
   @$pb.TagNumber(1)
   $core.bool hasConsistent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearConsistent() => clearField(1);
+  void clearConsistent() => $_clearField(1);
 }
 
-///  Request message for
-///  [google.bigtable.admin.v2.BigtableTableAdmin.SnapshotTable][google.bigtable.admin.v2.BigtableTableAdmin.SnapshotTable]
+/// Request message for
+/// [google.bigtable.admin.v2.BigtableTableAdmin.SnapshotTable][google.bigtable.admin.v2.BigtableTableAdmin.SnapshotTable]
 ///
-///  Note: This is a private alpha release of Cloud Bigtable snapshots. This
-///  feature is not currently available to most Cloud Bigtable customers. This
-///  feature might be changed in backward-incompatible ways and is not recommended
-///  for production use. It is not subject to any SLA or deprecation policy.
+/// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+/// feature is not currently available to most Cloud Bigtable customers. This
+/// feature might be changed in backward-incompatible ways and is not recommended
+/// for production use. It is not subject to any SLA or deprecation policy.
 class SnapshotTableRequest extends $pb.GeneratedMessage {
   factory SnapshotTableRequest({
     $core.String? name,
@@ -2349,31 +2044,23 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
     $9.Duration? ttl,
     $core.String? description,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (cluster != null) {
-      $result.cluster = cluster;
-    }
-    if (snapshotId != null) {
-      $result.snapshotId = snapshotId;
-    }
-    if (ttl != null) {
-      $result.ttl = ttl;
-    }
-    if (description != null) {
-      $result.description = description;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (cluster != null) result.cluster = cluster;
+    if (snapshotId != null) result.snapshotId = snapshotId;
+    if (ttl != null) result.ttl = ttl;
+    if (description != null) result.description = description;
+    return result;
   }
-  SnapshotTableRequest._() : super();
-  factory SnapshotTableRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SnapshotTableRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SnapshotTableRequest._();
+
+  factory SnapshotTableRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SnapshotTableRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SnapshotTableRequest',
@@ -2388,25 +2075,20 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'description')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SnapshotTableRequest clone() =>
-      SnapshotTableRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SnapshotTableRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SnapshotTableRequest copyWith(void Function(SnapshotTableRequest) updates) =>
       super.copyWith((message) => updates(message as SnapshotTableRequest))
           as SnapshotTableRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SnapshotTableRequest create() => SnapshotTableRequest._();
+  @$core.override
   SnapshotTableRequest createEmptyInstance() => create();
-  static $pb.PbList<SnapshotTableRequest> createRepeated() =>
-      $pb.PbList<SnapshotTableRequest>();
   @$core.pragma('dart2js:noInline')
   static SnapshotTableRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SnapshotTableRequest>(create);
@@ -2418,14 +2100,11 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Required. The name of the cluster where the snapshot will be created in.
   /// Values are of the form
@@ -2433,14 +2112,11 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get cluster => $_getSZ(1);
   @$pb.TagNumber(2)
-  set cluster($core.String v) {
-    $_setString(1, v);
-  }
-
+  set cluster($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCluster() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCluster() => clearField(2);
+  void clearCluster() => $_clearField(2);
 
   /// Required. The ID by which the new snapshot should be referred to within the
   /// parent cluster, e.g., `mysnapshot` of the form:
@@ -2449,14 +2125,11 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get snapshotId => $_getSZ(2);
   @$pb.TagNumber(3)
-  set snapshotId($core.String v) {
-    $_setString(2, v);
-  }
-
+  set snapshotId($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSnapshotId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSnapshotId() => clearField(3);
+  void clearSnapshotId() => $_clearField(3);
 
   /// The amount of time that the new snapshot can stay active after it is
   /// created. Once 'ttl' expires, the snapshot will get deleted. The maximum
@@ -2465,14 +2138,11 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $9.Duration get ttl => $_getN(3);
   @$pb.TagNumber(4)
-  set ttl($9.Duration v) {
-    setField(4, v);
-  }
-
+  set ttl($9.Duration value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasTtl() => $_has(3);
   @$pb.TagNumber(4)
-  void clearTtl() => clearField(4);
+  void clearTtl() => $_clearField(4);
   @$pb.TagNumber(4)
   $9.Duration ensureTtl() => $_ensure(3);
 
@@ -2480,40 +2150,37 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get description => $_getSZ(4);
   @$pb.TagNumber(5)
-  set description($core.String v) {
-    $_setString(4, v);
-  }
-
+  set description($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasDescription() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDescription() => clearField(5);
+  void clearDescription() => $_clearField(5);
 }
 
-///  Request message for
-///  [google.bigtable.admin.v2.BigtableTableAdmin.GetSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.GetSnapshot]
+/// Request message for
+/// [google.bigtable.admin.v2.BigtableTableAdmin.GetSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.GetSnapshot]
 ///
-///  Note: This is a private alpha release of Cloud Bigtable snapshots. This
-///  feature is not currently available to most Cloud Bigtable customers. This
-///  feature might be changed in backward-incompatible ways and is not recommended
-///  for production use. It is not subject to any SLA or deprecation policy.
+/// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+/// feature is not currently available to most Cloud Bigtable customers. This
+/// feature might be changed in backward-incompatible ways and is not recommended
+/// for production use. It is not subject to any SLA or deprecation policy.
 class GetSnapshotRequest extends $pb.GeneratedMessage {
   factory GetSnapshotRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetSnapshotRequest._() : super();
-  factory GetSnapshotRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetSnapshotRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetSnapshotRequest._();
+
+  factory GetSnapshotRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSnapshotRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetSnapshotRequest',
@@ -2523,24 +2190,20 @@ class GetSnapshotRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetSnapshotRequest clone() => GetSnapshotRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSnapshotRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetSnapshotRequest copyWith(void Function(GetSnapshotRequest) updates) =>
       super.copyWith((message) => updates(message as GetSnapshotRequest))
           as GetSnapshotRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetSnapshotRequest create() => GetSnapshotRequest._();
+  @$core.override
   GetSnapshotRequest createEmptyInstance() => create();
-  static $pb.PbList<GetSnapshotRequest> createRepeated() =>
-      $pb.PbList<GetSnapshotRequest>();
   @$core.pragma('dart2js:noInline')
   static GetSnapshotRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetSnapshotRequest>(create);
@@ -2552,48 +2215,41 @@ class GetSnapshotRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
-///  Request message for
-///  [google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots][google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots]
+/// Request message for
+/// [google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots][google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots]
 ///
-///  Note: This is a private alpha release of Cloud Bigtable snapshots. This
-///  feature is not currently available to most Cloud Bigtable customers. This
-///  feature might be changed in backward-incompatible ways and is not recommended
-///  for production use. It is not subject to any SLA or deprecation policy.
+/// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+/// feature is not currently available to most Cloud Bigtable customers. This
+/// feature might be changed in backward-incompatible ways and is not recommended
+/// for production use. It is not subject to any SLA or deprecation policy.
 class ListSnapshotsRequest extends $pb.GeneratedMessage {
   factory ListSnapshotsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListSnapshotsRequest._() : super();
-  factory ListSnapshotsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListSnapshotsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListSnapshotsRequest._();
+
+  factory ListSnapshotsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListSnapshotsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListSnapshotsRequest',
@@ -2601,29 +2257,24 @@ class ListSnapshotsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListSnapshotsRequest clone() =>
-      ListSnapshotsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSnapshotsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListSnapshotsRequest copyWith(void Function(ListSnapshotsRequest) updates) =>
       super.copyWith((message) => updates(message as ListSnapshotsRequest))
           as ListSnapshotsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListSnapshotsRequest create() => ListSnapshotsRequest._();
+  @$core.override
   ListSnapshotsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListSnapshotsRequest> createRepeated() =>
-      $pb.PbList<ListSnapshotsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListSnapshotsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListSnapshotsRequest>(create);
@@ -2637,102 +2288,86 @@ class ListSnapshotsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// The maximum number of snapshots to return per page.
   /// CURRENTLY UNIMPLEMENTED AND IGNORED.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// The value of `next_page_token` returned by a previous call.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 }
 
-///  Response message for
-///  [google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots][google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots]
+/// Response message for
+/// [google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots][google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots]
 ///
-///  Note: This is a private alpha release of Cloud Bigtable snapshots. This
-///  feature is not currently available to most Cloud Bigtable customers. This
-///  feature might be changed in backward-incompatible ways and is not recommended
-///  for production use. It is not subject to any SLA or deprecation policy.
+/// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+/// feature is not currently available to most Cloud Bigtable customers. This
+/// feature might be changed in backward-incompatible ways and is not recommended
+/// for production use. It is not subject to any SLA or deprecation policy.
 class ListSnapshotsResponse extends $pb.GeneratedMessage {
   factory ListSnapshotsResponse({
-    $core.Iterable<$5.Snapshot>? snapshots,
+    $core.Iterable<$1.Snapshot>? snapshots,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (snapshots != null) {
-      $result.snapshots.addAll(snapshots);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (snapshots != null) result.snapshots.addAll(snapshots);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListSnapshotsResponse._() : super();
-  factory ListSnapshotsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListSnapshotsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListSnapshotsResponse._();
+
+  factory ListSnapshotsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListSnapshotsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListSnapshotsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
-    ..pc<$5.Snapshot>(1, _omitFieldNames ? '' : 'snapshots', $pb.PbFieldType.PM,
-        subBuilder: $5.Snapshot.create)
+    ..pPM<$1.Snapshot>(1, _omitFieldNames ? '' : 'snapshots',
+        subBuilder: $1.Snapshot.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListSnapshotsResponse clone() =>
-      ListSnapshotsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSnapshotsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListSnapshotsResponse copyWith(
           void Function(ListSnapshotsResponse) updates) =>
       super.copyWith((message) => updates(message as ListSnapshotsResponse))
           as ListSnapshotsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListSnapshotsResponse create() => ListSnapshotsResponse._();
+  @$core.override
   ListSnapshotsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListSnapshotsResponse> createRepeated() =>
-      $pb.PbList<ListSnapshotsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListSnapshotsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListSnapshotsResponse>(create);
@@ -2740,7 +2375,7 @@ class ListSnapshotsResponse extends $pb.GeneratedMessage {
 
   /// The snapshots present in the requested cluster.
   @$pb.TagNumber(1)
-  $core.List<$5.Snapshot> get snapshots => $_getList(0);
+  $pb.PbList<$1.Snapshot> get snapshots => $_getList(0);
 
   /// Set if not all snapshots could be returned in a single response.
   /// Pass this value to `page_token` in another request to get the next
@@ -2748,40 +2383,37 @@ class ListSnapshotsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
-///  Request message for
-///  [google.bigtable.admin.v2.BigtableTableAdmin.DeleteSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.DeleteSnapshot]
+/// Request message for
+/// [google.bigtable.admin.v2.BigtableTableAdmin.DeleteSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.DeleteSnapshot]
 ///
-///  Note: This is a private alpha release of Cloud Bigtable snapshots. This
-///  feature is not currently available to most Cloud Bigtable customers. This
-///  feature might be changed in backward-incompatible ways and is not recommended
-///  for production use. It is not subject to any SLA or deprecation policy.
+/// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+/// feature is not currently available to most Cloud Bigtable customers. This
+/// feature might be changed in backward-incompatible ways and is not recommended
+/// for production use. It is not subject to any SLA or deprecation policy.
 class DeleteSnapshotRequest extends $pb.GeneratedMessage {
   factory DeleteSnapshotRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteSnapshotRequest._() : super();
-  factory DeleteSnapshotRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteSnapshotRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteSnapshotRequest._();
+
+  factory DeleteSnapshotRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteSnapshotRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteSnapshotRequest',
@@ -2791,26 +2423,21 @@ class DeleteSnapshotRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteSnapshotRequest clone() =>
-      DeleteSnapshotRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteSnapshotRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteSnapshotRequest copyWith(
           void Function(DeleteSnapshotRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteSnapshotRequest))
           as DeleteSnapshotRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteSnapshotRequest create() => DeleteSnapshotRequest._();
+  @$core.override
   DeleteSnapshotRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteSnapshotRequest> createRepeated() =>
-      $pb.PbList<DeleteSnapshotRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteSnapshotRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteSnapshotRequest>(create);
@@ -2822,47 +2449,40 @@ class DeleteSnapshotRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
-///  The metadata for the Operation returned by SnapshotTable.
+/// The metadata for the Operation returned by SnapshotTable.
 ///
-///  Note: This is a private alpha release of Cloud Bigtable snapshots. This
-///  feature is not currently available to most Cloud Bigtable customers. This
-///  feature might be changed in backward-incompatible ways and is not recommended
-///  for production use. It is not subject to any SLA or deprecation policy.
+/// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+/// feature is not currently available to most Cloud Bigtable customers. This
+/// feature might be changed in backward-incompatible ways and is not recommended
+/// for production use. It is not subject to any SLA or deprecation policy.
 class SnapshotTableMetadata extends $pb.GeneratedMessage {
   factory SnapshotTableMetadata({
     SnapshotTableRequest? originalRequest,
     $8.Timestamp? requestTime,
     $8.Timestamp? finishTime,
   }) {
-    final $result = create();
-    if (originalRequest != null) {
-      $result.originalRequest = originalRequest;
-    }
-    if (requestTime != null) {
-      $result.requestTime = requestTime;
-    }
-    if (finishTime != null) {
-      $result.finishTime = finishTime;
-    }
-    return $result;
+    final result = create();
+    if (originalRequest != null) result.originalRequest = originalRequest;
+    if (requestTime != null) result.requestTime = requestTime;
+    if (finishTime != null) result.finishTime = finishTime;
+    return result;
   }
-  SnapshotTableMetadata._() : super();
-  factory SnapshotTableMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory SnapshotTableMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  SnapshotTableMetadata._();
+
+  factory SnapshotTableMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SnapshotTableMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'SnapshotTableMetadata',
@@ -2877,26 +2497,21 @@ class SnapshotTableMetadata extends $pb.GeneratedMessage {
         subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  SnapshotTableMetadata clone() =>
-      SnapshotTableMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SnapshotTableMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SnapshotTableMetadata copyWith(
           void Function(SnapshotTableMetadata) updates) =>
       super.copyWith((message) => updates(message as SnapshotTableMetadata))
           as SnapshotTableMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static SnapshotTableMetadata create() => SnapshotTableMetadata._();
+  @$core.override
   SnapshotTableMetadata createEmptyInstance() => create();
-  static $pb.PbList<SnapshotTableMetadata> createRepeated() =>
-      $pb.PbList<SnapshotTableMetadata>();
   @$core.pragma('dart2js:noInline')
   static SnapshotTableMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SnapshotTableMetadata>(create);
@@ -2906,14 +2521,11 @@ class SnapshotTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   SnapshotTableRequest get originalRequest => $_getN(0);
   @$pb.TagNumber(1)
-  set originalRequest(SnapshotTableRequest v) {
-    setField(1, v);
-  }
-
+  set originalRequest(SnapshotTableRequest value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOriginalRequest() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOriginalRequest() => clearField(1);
+  void clearOriginalRequest() => $_clearField(1);
   @$pb.TagNumber(1)
   SnapshotTableRequest ensureOriginalRequest() => $_ensure(0);
 
@@ -2921,14 +2533,11 @@ class SnapshotTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $8.Timestamp get requestTime => $_getN(1);
   @$pb.TagNumber(2)
-  set requestTime($8.Timestamp v) {
-    setField(2, v);
-  }
-
+  set requestTime($8.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasRequestTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRequestTime() => clearField(2);
+  void clearRequestTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $8.Timestamp ensureRequestTime() => $_ensure(1);
 
@@ -2936,49 +2545,42 @@ class SnapshotTableMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $8.Timestamp get finishTime => $_getN(2);
   @$pb.TagNumber(3)
-  set finishTime($8.Timestamp v) {
-    setField(3, v);
-  }
-
+  set finishTime($8.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasFinishTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFinishTime() => clearField(3);
+  void clearFinishTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $8.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
-///  The metadata for the Operation returned by CreateTableFromSnapshot.
+/// The metadata for the Operation returned by CreateTableFromSnapshot.
 ///
-///  Note: This is a private alpha release of Cloud Bigtable snapshots. This
-///  feature is not currently available to most Cloud Bigtable customers. This
-///  feature might be changed in backward-incompatible ways and is not recommended
-///  for production use. It is not subject to any SLA or deprecation policy.
+/// Note: This is a private alpha release of Cloud Bigtable snapshots. This
+/// feature is not currently available to most Cloud Bigtable customers. This
+/// feature might be changed in backward-incompatible ways and is not recommended
+/// for production use. It is not subject to any SLA or deprecation policy.
 class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
   factory CreateTableFromSnapshotMetadata({
     CreateTableFromSnapshotRequest? originalRequest,
     $8.Timestamp? requestTime,
     $8.Timestamp? finishTime,
   }) {
-    final $result = create();
-    if (originalRequest != null) {
-      $result.originalRequest = originalRequest;
-    }
-    if (requestTime != null) {
-      $result.requestTime = requestTime;
-    }
-    if (finishTime != null) {
-      $result.finishTime = finishTime;
-    }
-    return $result;
+    final result = create();
+    if (originalRequest != null) result.originalRequest = originalRequest;
+    if (requestTime != null) result.requestTime = requestTime;
+    if (finishTime != null) result.finishTime = finishTime;
+    return result;
   }
-  CreateTableFromSnapshotMetadata._() : super();
-  factory CreateTableFromSnapshotMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateTableFromSnapshotMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateTableFromSnapshotMetadata._();
+
+  factory CreateTableFromSnapshotMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateTableFromSnapshotMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateTableFromSnapshotMetadata',
@@ -2994,28 +2596,23 @@ class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
         subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateTableFromSnapshotMetadata clone() =>
-      CreateTableFromSnapshotMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateTableFromSnapshotMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateTableFromSnapshotMetadata copyWith(
           void Function(CreateTableFromSnapshotMetadata) updates) =>
       super.copyWith(
               (message) => updates(message as CreateTableFromSnapshotMetadata))
           as CreateTableFromSnapshotMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateTableFromSnapshotMetadata create() =>
       CreateTableFromSnapshotMetadata._();
+  @$core.override
   CreateTableFromSnapshotMetadata createEmptyInstance() => create();
-  static $pb.PbList<CreateTableFromSnapshotMetadata> createRepeated() =>
-      $pb.PbList<CreateTableFromSnapshotMetadata>();
   @$core.pragma('dart2js:noInline')
   static CreateTableFromSnapshotMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateTableFromSnapshotMetadata>(
@@ -3027,14 +2624,12 @@ class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   CreateTableFromSnapshotRequest get originalRequest => $_getN(0);
   @$pb.TagNumber(1)
-  set originalRequest(CreateTableFromSnapshotRequest v) {
-    setField(1, v);
-  }
-
+  set originalRequest(CreateTableFromSnapshotRequest value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOriginalRequest() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOriginalRequest() => clearField(1);
+  void clearOriginalRequest() => $_clearField(1);
   @$pb.TagNumber(1)
   CreateTableFromSnapshotRequest ensureOriginalRequest() => $_ensure(0);
 
@@ -3042,14 +2637,11 @@ class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $8.Timestamp get requestTime => $_getN(1);
   @$pb.TagNumber(2)
-  set requestTime($8.Timestamp v) {
-    setField(2, v);
-  }
-
+  set requestTime($8.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasRequestTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRequestTime() => clearField(2);
+  void clearRequestTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $8.Timestamp ensureRequestTime() => $_ensure(1);
 
@@ -3057,14 +2649,11 @@ class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $8.Timestamp get finishTime => $_getN(2);
   @$pb.TagNumber(3)
-  set finishTime($8.Timestamp v) {
-    setField(3, v);
-  }
-
+  set finishTime($8.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasFinishTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFinishTime() => clearField(3);
+  void clearFinishTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $8.Timestamp ensureFinishTime() => $_ensure(2);
 }
@@ -3075,27 +2664,23 @@ class CreateBackupRequest extends $pb.GeneratedMessage {
   factory CreateBackupRequest({
     $core.String? parent,
     $core.String? backupId,
-    $5.Backup? backup,
+    $1.Backup? backup,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (backupId != null) {
-      $result.backupId = backupId;
-    }
-    if (backup != null) {
-      $result.backup = backup;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (backupId != null) result.backupId = backupId;
+    if (backup != null) result.backup = backup;
+    return result;
   }
-  CreateBackupRequest._() : super();
-  factory CreateBackupRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateBackupRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateBackupRequest._();
+
+  factory CreateBackupRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateBackupRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateBackupRequest',
@@ -3104,28 +2689,24 @@ class CreateBackupRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOS(2, _omitFieldNames ? '' : 'backupId')
-    ..aOM<$5.Backup>(3, _omitFieldNames ? '' : 'backup',
-        subBuilder: $5.Backup.create)
+    ..aOM<$1.Backup>(3, _omitFieldNames ? '' : 'backup',
+        subBuilder: $1.Backup.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateBackupRequest clone() => CreateBackupRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateBackupRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateBackupRequest copyWith(void Function(CreateBackupRequest) updates) =>
       super.copyWith((message) => updates(message as CreateBackupRequest))
           as CreateBackupRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateBackupRequest create() => CreateBackupRequest._();
+  @$core.override
   CreateBackupRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateBackupRequest> createRepeated() =>
-      $pb.PbList<CreateBackupRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateBackupRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateBackupRequest>(create);
@@ -3137,14 +2718,11 @@ class CreateBackupRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The id of the backup to be created. The `backup_id` along with
   /// the parent `parent` are combined as {parent}/backups/{backup_id} to create
@@ -3155,29 +2733,23 @@ class CreateBackupRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get backupId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set backupId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set backupId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasBackupId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearBackupId() => clearField(2);
+  void clearBackupId() => $_clearField(2);
 
   /// Required. The backup to create.
   @$pb.TagNumber(3)
-  $5.Backup get backup => $_getN(2);
+  $1.Backup get backup => $_getN(2);
   @$pb.TagNumber(3)
-  set backup($5.Backup v) {
-    setField(3, v);
-  }
-
+  set backup($1.Backup value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasBackup() => $_has(2);
   @$pb.TagNumber(3)
-  void clearBackup() => clearField(3);
+  void clearBackup() => $_clearField(3);
   @$pb.TagNumber(3)
-  $5.Backup ensureBackup() => $_ensure(2);
+  $1.Backup ensureBackup() => $_ensure(2);
 }
 
 /// Metadata type for the operation returned by
@@ -3189,28 +2761,22 @@ class CreateBackupMetadata extends $pb.GeneratedMessage {
     $8.Timestamp? startTime,
     $8.Timestamp? endTime,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (sourceTable != null) {
-      $result.sourceTable = sourceTable;
-    }
-    if (startTime != null) {
-      $result.startTime = startTime;
-    }
-    if (endTime != null) {
-      $result.endTime = endTime;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (sourceTable != null) result.sourceTable = sourceTable;
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    return result;
   }
-  CreateBackupMetadata._() : super();
-  factory CreateBackupMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateBackupMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateBackupMetadata._();
+
+  factory CreateBackupMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateBackupMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateBackupMetadata',
@@ -3225,25 +2791,20 @@ class CreateBackupMetadata extends $pb.GeneratedMessage {
         subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateBackupMetadata clone() =>
-      CreateBackupMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateBackupMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateBackupMetadata copyWith(void Function(CreateBackupMetadata) updates) =>
       super.copyWith((message) => updates(message as CreateBackupMetadata))
           as CreateBackupMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateBackupMetadata create() => CreateBackupMetadata._();
+  @$core.override
   CreateBackupMetadata createEmptyInstance() => create();
-  static $pb.PbList<CreateBackupMetadata> createRepeated() =>
-      $pb.PbList<CreateBackupMetadata>();
   @$core.pragma('dart2js:noInline')
   static CreateBackupMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateBackupMetadata>(create);
@@ -3253,40 +2814,31 @@ class CreateBackupMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The name of the table the backup is created from.
   @$pb.TagNumber(2)
   $core.String get sourceTable => $_getSZ(1);
   @$pb.TagNumber(2)
-  set sourceTable($core.String v) {
-    $_setString(1, v);
-  }
-
+  set sourceTable($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSourceTable() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSourceTable() => clearField(2);
+  void clearSourceTable() => $_clearField(2);
 
   /// The time at which this operation started.
   @$pb.TagNumber(3)
   $8.Timestamp get startTime => $_getN(2);
   @$pb.TagNumber(3)
-  set startTime($8.Timestamp v) {
-    setField(3, v);
-  }
-
+  set startTime($8.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasStartTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStartTime() => clearField(3);
+  void clearStartTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $8.Timestamp ensureStartTime() => $_ensure(2);
 
@@ -3294,14 +2846,11 @@ class CreateBackupMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $8.Timestamp get endTime => $_getN(3);
   @$pb.TagNumber(4)
-  set endTime($8.Timestamp v) {
-    setField(4, v);
-  }
-
+  set endTime($8.Timestamp value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasEndTime() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEndTime() => clearField(4);
+  void clearEndTime() => $_clearField(4);
   @$pb.TagNumber(4)
   $8.Timestamp ensureEndTime() => $_ensure(3);
 }
@@ -3310,78 +2859,69 @@ class CreateBackupMetadata extends $pb.GeneratedMessage {
 /// [UpdateBackup][google.bigtable.admin.v2.BigtableTableAdmin.UpdateBackup].
 class UpdateBackupRequest extends $pb.GeneratedMessage {
   factory UpdateBackupRequest({
-    $5.Backup? backup,
+    $1.Backup? backup,
     $7.FieldMask? updateMask,
   }) {
-    final $result = create();
-    if (backup != null) {
-      $result.backup = backup;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    return $result;
+    final result = create();
+    if (backup != null) result.backup = backup;
+    if (updateMask != null) result.updateMask = updateMask;
+    return result;
   }
-  UpdateBackupRequest._() : super();
-  factory UpdateBackupRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateBackupRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateBackupRequest._();
+
+  factory UpdateBackupRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateBackupRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateBackupRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
-    ..aOM<$5.Backup>(1, _omitFieldNames ? '' : 'backup',
-        subBuilder: $5.Backup.create)
+    ..aOM<$1.Backup>(1, _omitFieldNames ? '' : 'backup',
+        subBuilder: $1.Backup.create)
     ..aOM<$7.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
         subBuilder: $7.FieldMask.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateBackupRequest clone() => UpdateBackupRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateBackupRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateBackupRequest copyWith(void Function(UpdateBackupRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateBackupRequest))
           as UpdateBackupRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateBackupRequest create() => UpdateBackupRequest._();
+  @$core.override
   UpdateBackupRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateBackupRequest> createRepeated() =>
-      $pb.PbList<UpdateBackupRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateBackupRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateBackupRequest>(create);
   static UpdateBackupRequest? _defaultInstance;
 
-  ///  Required. The backup to update. `backup.name`, and the fields to be updated
-  ///  as specified by `update_mask` are required. Other fields are ignored.
-  ///  Update is only supported for the following fields:
+  /// Required. The backup to update. `backup.name`, and the fields to be updated
+  /// as specified by `update_mask` are required. Other fields are ignored.
+  /// Update is only supported for the following fields:
   ///
-  ///   * `backup.expire_time`.
+  ///  * `backup.expire_time`.
   @$pb.TagNumber(1)
-  $5.Backup get backup => $_getN(0);
+  $1.Backup get backup => $_getN(0);
   @$pb.TagNumber(1)
-  set backup($5.Backup v) {
-    setField(1, v);
-  }
-
+  set backup($1.Backup value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasBackup() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBackup() => clearField(1);
+  void clearBackup() => $_clearField(1);
   @$pb.TagNumber(1)
-  $5.Backup ensureBackup() => $_ensure(0);
+  $1.Backup ensureBackup() => $_ensure(0);
 
   /// Required. A mask specifying which fields (e.g. `expire_time`) in the
   /// Backup resource should be updated. This mask is relative to the Backup
@@ -3391,14 +2931,11 @@ class UpdateBackupRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $7.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($7.FieldMask v) {
-    setField(2, v);
-  }
-
+  set updateMask($7.FieldMask value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $7.FieldMask ensureUpdateMask() => $_ensure(1);
 }
@@ -3409,19 +2946,19 @@ class GetBackupRequest extends $pb.GeneratedMessage {
   factory GetBackupRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetBackupRequest._() : super();
-  factory GetBackupRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetBackupRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetBackupRequest._();
+
+  factory GetBackupRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetBackupRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetBackupRequest',
@@ -3431,24 +2968,20 @@ class GetBackupRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetBackupRequest clone() => GetBackupRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetBackupRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetBackupRequest copyWith(void Function(GetBackupRequest) updates) =>
       super.copyWith((message) => updates(message as GetBackupRequest))
           as GetBackupRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetBackupRequest create() => GetBackupRequest._();
+  @$core.override
   GetBackupRequest createEmptyInstance() => create();
-  static $pb.PbList<GetBackupRequest> createRepeated() =>
-      $pb.PbList<GetBackupRequest>();
   @$core.pragma('dart2js:noInline')
   static GetBackupRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetBackupRequest>(create);
@@ -3460,14 +2993,11 @@ class GetBackupRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// The request for
@@ -3476,19 +3006,19 @@ class DeleteBackupRequest extends $pb.GeneratedMessage {
   factory DeleteBackupRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteBackupRequest._() : super();
-  factory DeleteBackupRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteBackupRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteBackupRequest._();
+
+  factory DeleteBackupRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteBackupRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteBackupRequest',
@@ -3498,24 +3028,20 @@ class DeleteBackupRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteBackupRequest clone() => DeleteBackupRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteBackupRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteBackupRequest copyWith(void Function(DeleteBackupRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteBackupRequest))
           as DeleteBackupRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteBackupRequest create() => DeleteBackupRequest._();
+  @$core.override
   DeleteBackupRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteBackupRequest> createRepeated() =>
-      $pb.PbList<DeleteBackupRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteBackupRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteBackupRequest>(create);
@@ -3527,14 +3053,11 @@ class DeleteBackupRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// The request for
@@ -3547,31 +3070,23 @@ class ListBackupsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    if (orderBy != null) {
-      $result.orderBy = orderBy;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (filter != null) result.filter = filter;
+    if (orderBy != null) result.orderBy = orderBy;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListBackupsRequest._() : super();
-  factory ListBackupsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListBackupsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListBackupsRequest._();
+
+  factory ListBackupsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListBackupsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListBackupsRequest',
@@ -3581,28 +3096,24 @@ class ListBackupsRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOS(2, _omitFieldNames ? '' : 'filter')
     ..aOS(3, _omitFieldNames ? '' : 'orderBy')
-    ..a<$core.int>(4, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(4, _omitFieldNames ? '' : 'pageSize')
     ..aOS(5, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListBackupsRequest clone() => ListBackupsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListBackupsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListBackupsRequest copyWith(void Function(ListBackupsRequest) updates) =>
       super.copyWith((message) => updates(message as ListBackupsRequest))
           as ListBackupsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListBackupsRequest create() => ListBackupsRequest._();
+  @$core.override
   ListBackupsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListBackupsRequest> createRepeated() =>
-      $pb.PbList<ListBackupsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListBackupsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListBackupsRequest>(create);
@@ -3615,107 +3126,95 @@ class ListBackupsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
-  ///  A filter expression that filters backups listed in the response.
-  ///  The expression must specify the field name, a comparison operator,
-  ///  and the value that you want to use for filtering. The value must be a
-  ///  string, a number, or a boolean. The comparison operator must be
-  ///  <, >, <=, >=, !=, =, or :. Colon ':' represents a HAS operator which is
-  ///  roughly synonymous with equality. Filter rules are case insensitive.
+  /// A filter expression that filters backups listed in the response.
+  /// The expression must specify the field name, a comparison operator,
+  /// and the value that you want to use for filtering. The value must be a
+  /// string, a number, or a boolean. The comparison operator must be
+  /// <, >, <=, >=, !=, =, or :. Colon ':' represents a HAS operator which is
+  /// roughly synonymous with equality. Filter rules are case insensitive.
   ///
-  ///  The fields eligible for filtering are:
+  /// The fields eligible for filtering are:
   ///
-  ///  * `name`
-  ///  * `source_table`
-  ///  * `state`
-  ///  * `start_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ)
-  ///  * `end_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ)
-  ///  * `expire_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ)
-  ///  * `size_bytes`
+  /// * `name`
+  /// * `source_table`
+  /// * `state`
+  /// * `start_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ)
+  /// * `end_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ)
+  /// * `expire_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ)
+  /// * `size_bytes`
   ///
-  ///  To filter on multiple expressions, provide each separate expression within
-  ///  parentheses. By default, each expression is an AND expression. However,
-  ///  you can include AND, OR, and NOT expressions explicitly.
+  /// To filter on multiple expressions, provide each separate expression within
+  /// parentheses. By default, each expression is an AND expression. However,
+  /// you can include AND, OR, and NOT expressions explicitly.
   ///
-  ///  Some examples of using filters are:
+  /// Some examples of using filters are:
   ///
-  ///  * `name:"exact"` --> The backup's name is the string "exact".
-  ///  * `name:howl` --> The backup's name contains the string "howl".
-  ///  * `source_table:prod`
-  ///         --> The source_table's name contains the string "prod".
-  ///  * `state:CREATING` --> The backup is pending creation.
-  ///  * `state:READY` --> The backup is fully created and ready for use.
-  ///  * `(name:howl) AND (start_time < \"2018-03-28T14:50:00Z\")`
-  ///         --> The backup name contains the string "howl" and start_time
-  ///             of the backup is before 2018-03-28T14:50:00Z.
-  ///  * `size_bytes > 10000000000` --> The backup's size is greater than 10GB
+  /// * `name:"exact"` --> The backup's name is the string "exact".
+  /// * `name:howl` --> The backup's name contains the string "howl".
+  /// * `source_table:prod`
+  ///        --> The source_table's name contains the string "prod".
+  /// * `state:CREATING` --> The backup is pending creation.
+  /// * `state:READY` --> The backup is fully created and ready for use.
+  /// * `(name:howl) AND (start_time < \"2018-03-28T14:50:00Z\")`
+  ///        --> The backup name contains the string "howl" and start_time
+  ///            of the backup is before 2018-03-28T14:50:00Z.
+  /// * `size_bytes > 10000000000` --> The backup's size is greater than 10GB
   @$pb.TagNumber(2)
   $core.String get filter => $_getSZ(1);
   @$pb.TagNumber(2)
-  set filter($core.String v) {
-    $_setString(1, v);
-  }
-
+  set filter($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFilter() => clearField(2);
+  void clearFilter() => $_clearField(2);
 
-  ///  An expression for specifying the sort order of the results of the request.
-  ///  The string value should specify one or more fields in
-  ///  [Backup][google.bigtable.admin.v2.Backup]. The full syntax is described at
-  ///  https://aip.dev/132#ordering.
+  /// An expression for specifying the sort order of the results of the request.
+  /// The string value should specify one or more fields in
+  /// [Backup][google.bigtable.admin.v2.Backup]. The full syntax is described at
+  /// https://aip.dev/132#ordering.
   ///
-  ///  Fields supported are:
+  /// Fields supported are:
   ///
-  ///  * name
-  ///  * source_table
-  ///  * expire_time
-  ///  * start_time
-  ///  * end_time
-  ///  * size_bytes
-  ///  * state
+  /// * name
+  /// * source_table
+  /// * expire_time
+  /// * start_time
+  /// * end_time
+  /// * size_bytes
+  /// * state
   ///
-  ///  For example, "start_time". The default sorting order is ascending.
-  ///  To specify descending order for the field, a suffix " desc" should
-  ///  be appended to the field name. For example, "start_time desc".
-  ///  Redundant space characters in the syntax are insigificant.
+  /// For example, "start_time". The default sorting order is ascending.
+  /// To specify descending order for the field, a suffix " desc" should
+  /// be appended to the field name. For example, "start_time desc".
+  /// Redundant space characters in the syntax are insigificant.
   ///
-  ///  If order_by is empty, results will be sorted by `start_time` in descending
-  ///  order starting from the most recently created backup.
+  /// If order_by is empty, results will be sorted by `start_time` in descending
+  /// order starting from the most recently created backup.
   @$pb.TagNumber(3)
   $core.String get orderBy => $_getSZ(2);
   @$pb.TagNumber(3)
-  set orderBy($core.String v) {
-    $_setString(2, v);
-  }
-
+  set orderBy($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasOrderBy() => $_has(2);
   @$pb.TagNumber(3)
-  void clearOrderBy() => clearField(3);
+  void clearOrderBy() => $_clearField(3);
 
   /// Number of backups to be returned in the response. If 0 or
   /// less, defaults to the server's maximum allowed page size.
   @$pb.TagNumber(4)
   $core.int get pageSize => $_getIZ(3);
   @$pb.TagNumber(4)
-  set pageSize($core.int v) {
-    $_setSignedInt32(3, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(3, value);
   @$pb.TagNumber(4)
   $core.bool hasPageSize() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPageSize() => clearField(4);
+  void clearPageSize() => $_clearField(4);
 
   /// If non-empty, `page_token` should contain a
   /// [next_page_token][google.bigtable.admin.v2.ListBackupsResponse.next_page_token]
@@ -3725,68 +3224,59 @@ class ListBackupsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get pageToken => $_getSZ(4);
   @$pb.TagNumber(5)
-  set pageToken($core.String v) {
-    $_setString(4, v);
-  }
-
+  set pageToken($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasPageToken() => $_has(4);
   @$pb.TagNumber(5)
-  void clearPageToken() => clearField(5);
+  void clearPageToken() => $_clearField(5);
 }
 
 /// The response for
 /// [ListBackups][google.bigtable.admin.v2.BigtableTableAdmin.ListBackups].
 class ListBackupsResponse extends $pb.GeneratedMessage {
   factory ListBackupsResponse({
-    $core.Iterable<$5.Backup>? backups,
+    $core.Iterable<$1.Backup>? backups,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (backups != null) {
-      $result.backups.addAll(backups);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (backups != null) result.backups.addAll(backups);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListBackupsResponse._() : super();
-  factory ListBackupsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListBackupsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListBackupsResponse._();
+
+  factory ListBackupsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListBackupsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListBackupsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
-    ..pc<$5.Backup>(1, _omitFieldNames ? '' : 'backups', $pb.PbFieldType.PM,
-        subBuilder: $5.Backup.create)
+    ..pPM<$1.Backup>(1, _omitFieldNames ? '' : 'backups',
+        subBuilder: $1.Backup.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListBackupsResponse clone() => ListBackupsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListBackupsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListBackupsResponse copyWith(void Function(ListBackupsResponse) updates) =>
       super.copyWith((message) => updates(message as ListBackupsResponse))
           as ListBackupsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListBackupsResponse create() => ListBackupsResponse._();
+  @$core.override
   ListBackupsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListBackupsResponse> createRepeated() =>
-      $pb.PbList<ListBackupsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListBackupsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListBackupsResponse>(create);
@@ -3794,7 +3284,7 @@ class ListBackupsResponse extends $pb.GeneratedMessage {
 
   /// The list of matching backups.
   @$pb.TagNumber(1)
-  $core.List<$5.Backup> get backups => $_getList(0);
+  $pb.PbList<$1.Backup> get backups => $_getList(0);
 
   /// `next_page_token` can be sent in a subsequent
   /// [ListBackups][google.bigtable.admin.v2.BigtableTableAdmin.ListBackups] call
@@ -3802,14 +3292,11 @@ class ListBackupsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// The request for
@@ -3821,28 +3308,22 @@ class CopyBackupRequest extends $pb.GeneratedMessage {
     $core.String? sourceBackup,
     $8.Timestamp? expireTime,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (backupId != null) {
-      $result.backupId = backupId;
-    }
-    if (sourceBackup != null) {
-      $result.sourceBackup = sourceBackup;
-    }
-    if (expireTime != null) {
-      $result.expireTime = expireTime;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (backupId != null) result.backupId = backupId;
+    if (sourceBackup != null) result.sourceBackup = sourceBackup;
+    if (expireTime != null) result.expireTime = expireTime;
+    return result;
   }
-  CopyBackupRequest._() : super();
-  factory CopyBackupRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CopyBackupRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CopyBackupRequest._();
+
+  factory CopyBackupRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CopyBackupRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CopyBackupRequest',
@@ -3856,24 +3337,20 @@ class CopyBackupRequest extends $pb.GeneratedMessage {
         subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CopyBackupRequest clone() => CopyBackupRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CopyBackupRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CopyBackupRequest copyWith(void Function(CopyBackupRequest) updates) =>
       super.copyWith((message) => updates(message as CopyBackupRequest))
           as CopyBackupRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CopyBackupRequest create() => CopyBackupRequest._();
+  @$core.override
   CopyBackupRequest createEmptyInstance() => create();
-  static $pb.PbList<CopyBackupRequest> createRepeated() =>
-      $pb.PbList<CopyBackupRequest>();
   @$core.pragma('dart2js:noInline')
   static CopyBackupRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CopyBackupRequest>(create);
@@ -3885,14 +3362,11 @@ class CopyBackupRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The id of the new backup. The `backup_id` along with `parent`
   /// are combined as {parent}/backups/{backup_id} to create the full backup
@@ -3903,14 +3377,11 @@ class CopyBackupRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get backupId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set backupId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set backupId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasBackupId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearBackupId() => clearField(2);
+  void clearBackupId() => $_clearField(2);
 
   /// Required. The source backup to be copied from.
   /// The source backup needs to be in READY state for it to be copied.
@@ -3922,14 +3393,11 @@ class CopyBackupRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get sourceBackup => $_getSZ(2);
   @$pb.TagNumber(3)
-  set sourceBackup($core.String v) {
-    $_setString(2, v);
-  }
-
+  set sourceBackup($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSourceBackup() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSourceBackup() => clearField(3);
+  void clearSourceBackup() => $_clearField(3);
 
   /// Required. Required. The expiration time of the copied backup with
   /// microsecond granularity that must be at least 6 hours and at most 30 days
@@ -3939,14 +3407,11 @@ class CopyBackupRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $8.Timestamp get expireTime => $_getN(3);
   @$pb.TagNumber(4)
-  set expireTime($8.Timestamp v) {
-    setField(4, v);
-  }
-
+  set expireTime($8.Timestamp value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasExpireTime() => $_has(3);
   @$pb.TagNumber(4)
-  void clearExpireTime() => clearField(4);
+  void clearExpireTime() => $_clearField(4);
   @$pb.TagNumber(4)
   $8.Timestamp ensureExpireTime() => $_ensure(3);
 }
@@ -3956,28 +3421,24 @@ class CopyBackupRequest extends $pb.GeneratedMessage {
 class CopyBackupMetadata extends $pb.GeneratedMessage {
   factory CopyBackupMetadata({
     $core.String? name,
-    $5.BackupInfo? sourceBackupInfo,
+    $1.BackupInfo? sourceBackupInfo,
     $6.OperationProgress? progress,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (sourceBackupInfo != null) {
-      $result.sourceBackupInfo = sourceBackupInfo;
-    }
-    if (progress != null) {
-      $result.progress = progress;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (sourceBackupInfo != null) result.sourceBackupInfo = sourceBackupInfo;
+    if (progress != null) result.progress = progress;
+    return result;
   }
-  CopyBackupMetadata._() : super();
-  factory CopyBackupMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CopyBackupMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CopyBackupMetadata._();
+
+  factory CopyBackupMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CopyBackupMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CopyBackupMetadata',
@@ -3985,30 +3446,26 @@ class CopyBackupMetadata extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOM<$5.BackupInfo>(2, _omitFieldNames ? '' : 'sourceBackupInfo',
-        subBuilder: $5.BackupInfo.create)
+    ..aOM<$1.BackupInfo>(2, _omitFieldNames ? '' : 'sourceBackupInfo',
+        subBuilder: $1.BackupInfo.create)
     ..aOM<$6.OperationProgress>(3, _omitFieldNames ? '' : 'progress',
         subBuilder: $6.OperationProgress.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CopyBackupMetadata clone() => CopyBackupMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CopyBackupMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CopyBackupMetadata copyWith(void Function(CopyBackupMetadata) updates) =>
       super.copyWith((message) => updates(message as CopyBackupMetadata))
           as CopyBackupMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CopyBackupMetadata create() => CopyBackupMetadata._();
+  @$core.override
   CopyBackupMetadata createEmptyInstance() => create();
-  static $pb.PbList<CopyBackupMetadata> createRepeated() =>
-      $pb.PbList<CopyBackupMetadata>();
   @$core.pragma('dart2js:noInline')
   static CopyBackupMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CopyBackupMetadata>(create);
@@ -4020,29 +3477,23 @@ class CopyBackupMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Information about the source backup that is being copied from.
   @$pb.TagNumber(2)
-  $5.BackupInfo get sourceBackupInfo => $_getN(1);
+  $1.BackupInfo get sourceBackupInfo => $_getN(1);
   @$pb.TagNumber(2)
-  set sourceBackupInfo($5.BackupInfo v) {
-    setField(2, v);
-  }
-
+  set sourceBackupInfo($1.BackupInfo value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasSourceBackupInfo() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSourceBackupInfo() => clearField(2);
+  void clearSourceBackupInfo() => $_clearField(2);
   @$pb.TagNumber(2)
-  $5.BackupInfo ensureSourceBackupInfo() => $_ensure(1);
+  $1.BackupInfo ensureSourceBackupInfo() => $_ensure(1);
 
   /// The progress of the
   /// [CopyBackup][google.bigtable.admin.v2.BigtableTableAdmin.CopyBackup]
@@ -4050,14 +3501,11 @@ class CopyBackupMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $6.OperationProgress get progress => $_getN(2);
   @$pb.TagNumber(3)
-  set progress($6.OperationProgress v) {
-    setField(3, v);
-  }
-
+  set progress($6.OperationProgress value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasProgress() => $_has(2);
   @$pb.TagNumber(3)
-  void clearProgress() => clearField(3);
+  void clearProgress() => $_clearField(3);
   @$pb.TagNumber(3)
   $6.OperationProgress ensureProgress() => $_ensure(2);
 }
@@ -4068,27 +3516,23 @@ class CreateAuthorizedViewRequest extends $pb.GeneratedMessage {
   factory CreateAuthorizedViewRequest({
     $core.String? parent,
     $core.String? authorizedViewId,
-    $5.AuthorizedView? authorizedView,
+    $1.AuthorizedView? authorizedView,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (authorizedViewId != null) {
-      $result.authorizedViewId = authorizedViewId;
-    }
-    if (authorizedView != null) {
-      $result.authorizedView = authorizedView;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (authorizedViewId != null) result.authorizedViewId = authorizedViewId;
+    if (authorizedView != null) result.authorizedView = authorizedView;
+    return result;
   }
-  CreateAuthorizedViewRequest._() : super();
-  factory CreateAuthorizedViewRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateAuthorizedViewRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateAuthorizedViewRequest._();
+
+  factory CreateAuthorizedViewRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateAuthorizedViewRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateAuthorizedViewRequest',
@@ -4097,32 +3541,27 @@ class CreateAuthorizedViewRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOS(2, _omitFieldNames ? '' : 'authorizedViewId')
-    ..aOM<$5.AuthorizedView>(3, _omitFieldNames ? '' : 'authorizedView',
-        subBuilder: $5.AuthorizedView.create)
+    ..aOM<$1.AuthorizedView>(3, _omitFieldNames ? '' : 'authorizedView',
+        subBuilder: $1.AuthorizedView.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateAuthorizedViewRequest clone() =>
-      CreateAuthorizedViewRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateAuthorizedViewRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateAuthorizedViewRequest copyWith(
           void Function(CreateAuthorizedViewRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateAuthorizedViewRequest))
           as CreateAuthorizedViewRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateAuthorizedViewRequest create() =>
       CreateAuthorizedViewRequest._();
+  @$core.override
   CreateAuthorizedViewRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateAuthorizedViewRequest> createRepeated() =>
-      $pb.PbList<CreateAuthorizedViewRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateAuthorizedViewRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateAuthorizedViewRequest>(create);
@@ -4134,14 +3573,11 @@ class CreateAuthorizedViewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The id of the AuthorizedView to create. This AuthorizedView must
   /// not already exist. The `authorized_view_id` appended to `parent` forms the
@@ -4150,29 +3586,23 @@ class CreateAuthorizedViewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get authorizedViewId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set authorizedViewId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set authorizedViewId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAuthorizedViewId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAuthorizedViewId() => clearField(2);
+  void clearAuthorizedViewId() => $_clearField(2);
 
   /// Required. The AuthorizedView to create.
   @$pb.TagNumber(3)
-  $5.AuthorizedView get authorizedView => $_getN(2);
+  $1.AuthorizedView get authorizedView => $_getN(2);
   @$pb.TagNumber(3)
-  set authorizedView($5.AuthorizedView v) {
-    setField(3, v);
-  }
-
+  set authorizedView($1.AuthorizedView value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasAuthorizedView() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAuthorizedView() => clearField(3);
+  void clearAuthorizedView() => $_clearField(3);
   @$pb.TagNumber(3)
-  $5.AuthorizedView ensureAuthorizedView() => $_ensure(2);
+  $1.AuthorizedView ensureAuthorizedView() => $_ensure(2);
 }
 
 /// The metadata for the Operation returned by CreateAuthorizedView.
@@ -4182,25 +3612,21 @@ class CreateAuthorizedViewMetadata extends $pb.GeneratedMessage {
     $8.Timestamp? requestTime,
     $8.Timestamp? finishTime,
   }) {
-    final $result = create();
-    if (originalRequest != null) {
-      $result.originalRequest = originalRequest;
-    }
-    if (requestTime != null) {
-      $result.requestTime = requestTime;
-    }
-    if (finishTime != null) {
-      $result.finishTime = finishTime;
-    }
-    return $result;
+    final result = create();
+    if (originalRequest != null) result.originalRequest = originalRequest;
+    if (requestTime != null) result.requestTime = requestTime;
+    if (finishTime != null) result.finishTime = finishTime;
+    return result;
   }
-  CreateAuthorizedViewMetadata._() : super();
-  factory CreateAuthorizedViewMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateAuthorizedViewMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateAuthorizedViewMetadata._();
+
+  factory CreateAuthorizedViewMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateAuthorizedViewMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateAuthorizedViewMetadata',
@@ -4216,45 +3642,39 @@ class CreateAuthorizedViewMetadata extends $pb.GeneratedMessage {
         subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateAuthorizedViewMetadata clone() =>
-      CreateAuthorizedViewMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateAuthorizedViewMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateAuthorizedViewMetadata copyWith(
           void Function(CreateAuthorizedViewMetadata) updates) =>
       super.copyWith(
               (message) => updates(message as CreateAuthorizedViewMetadata))
           as CreateAuthorizedViewMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateAuthorizedViewMetadata create() =>
       CreateAuthorizedViewMetadata._();
+  @$core.override
   CreateAuthorizedViewMetadata createEmptyInstance() => create();
-  static $pb.PbList<CreateAuthorizedViewMetadata> createRepeated() =>
-      $pb.PbList<CreateAuthorizedViewMetadata>();
   @$core.pragma('dart2js:noInline')
   static CreateAuthorizedViewMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateAuthorizedViewMetadata>(create);
   static CreateAuthorizedViewMetadata? _defaultInstance;
 
-  /// The request that prompted the initiation of this CreateInstance operation.
+  /// The request that prompted the initiation of this CreateAuthorizedView
+  /// operation.
   @$pb.TagNumber(1)
   CreateAuthorizedViewRequest get originalRequest => $_getN(0);
   @$pb.TagNumber(1)
-  set originalRequest(CreateAuthorizedViewRequest v) {
-    setField(1, v);
-  }
-
+  set originalRequest(CreateAuthorizedViewRequest value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOriginalRequest() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOriginalRequest() => clearField(1);
+  void clearOriginalRequest() => $_clearField(1);
   @$pb.TagNumber(1)
   CreateAuthorizedViewRequest ensureOriginalRequest() => $_ensure(0);
 
@@ -4262,14 +3682,11 @@ class CreateAuthorizedViewMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $8.Timestamp get requestTime => $_getN(1);
   @$pb.TagNumber(2)
-  set requestTime($8.Timestamp v) {
-    setField(2, v);
-  }
-
+  set requestTime($8.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasRequestTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRequestTime() => clearField(2);
+  void clearRequestTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $8.Timestamp ensureRequestTime() => $_ensure(1);
 
@@ -4277,14 +3694,11 @@ class CreateAuthorizedViewMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $8.Timestamp get finishTime => $_getN(2);
   @$pb.TagNumber(3)
-  set finishTime($8.Timestamp v) {
-    setField(3, v);
-  }
-
+  set finishTime($8.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasFinishTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFinishTime() => clearField(3);
+  void clearFinishTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $8.Timestamp ensureFinishTime() => $_ensure(2);
 }
@@ -4296,30 +3710,24 @@ class ListAuthorizedViewsRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
-    $5.AuthorizedView_ResponseView? view,
+    $1.AuthorizedView_ResponseView? view,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (view != null) result.view = view;
+    return result;
   }
-  ListAuthorizedViewsRequest._() : super();
-  factory ListAuthorizedViewsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListAuthorizedViewsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListAuthorizedViewsRequest._();
+
+  factory ListAuthorizedViewsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListAuthorizedViewsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListAuthorizedViewsRequest',
@@ -4327,37 +3735,28 @@ class ListAuthorizedViewsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
-    ..e<$5.AuthorizedView_ResponseView>(
-        4, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            $5.AuthorizedView_ResponseView.RESPONSE_VIEW_UNSPECIFIED,
-        valueOf: $5.AuthorizedView_ResponseView.valueOf,
-        enumValues: $5.AuthorizedView_ResponseView.values)
+    ..aE<$1.AuthorizedView_ResponseView>(4, _omitFieldNames ? '' : 'view',
+        enumValues: $1.AuthorizedView_ResponseView.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListAuthorizedViewsRequest clone() =>
-      ListAuthorizedViewsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAuthorizedViewsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListAuthorizedViewsRequest copyWith(
           void Function(ListAuthorizedViewsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListAuthorizedViewsRequest))
           as ListAuthorizedViewsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListAuthorizedViewsRequest create() => ListAuthorizedViewsRequest._();
+  @$core.override
   ListAuthorizedViewsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListAuthorizedViewsRequest> createRepeated() =>
-      $pb.PbList<ListAuthorizedViewsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListAuthorizedViewsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListAuthorizedViewsRequest>(create);
@@ -4369,121 +3768,101 @@ class ListAuthorizedViewsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
-  ///  Optional. Maximum number of results per page.
+  /// Optional. Maximum number of results per page.
   ///
-  ///  A page_size of zero lets the server choose the number of items to return.
-  ///  A page_size which is strictly positive will return at most that many items.
-  ///  A negative page_size will cause an error.
+  /// A page_size of zero lets the server choose the number of items to return.
+  /// A page_size which is strictly positive will return at most that many items.
+  /// A negative page_size will cause an error.
   ///
-  ///  Following the first request, subsequent paginated calls are not required
-  ///  to pass a page_size. If a page_size is set in subsequent calls, it must
-  ///  match the page_size given in the first request.
+  /// Following the first request, subsequent paginated calls are not required
+  /// to pass a page_size. If a page_size is set in subsequent calls, it must
+  /// match the page_size given in the first request.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// Optional. The value of `next_page_token` returned by a previous call.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 
-  /// Optional. The resource_view to be applied to the returned views' fields.
-  /// Default to NAME_ONLY.
+  /// Optional. The resource_view to be applied to the returned AuthorizedViews'
+  /// fields. Default to NAME_ONLY.
   @$pb.TagNumber(4)
-  $5.AuthorizedView_ResponseView get view => $_getN(3);
+  $1.AuthorizedView_ResponseView get view => $_getN(3);
   @$pb.TagNumber(4)
-  set view($5.AuthorizedView_ResponseView v) {
-    setField(4, v);
-  }
-
+  set view($1.AuthorizedView_ResponseView value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasView() => $_has(3);
   @$pb.TagNumber(4)
-  void clearView() => clearField(4);
+  void clearView() => $_clearField(4);
 }
 
 /// Response message for
 /// [google.bigtable.admin.v2.BigtableTableAdmin.ListAuthorizedViews][google.bigtable.admin.v2.BigtableTableAdmin.ListAuthorizedViews]
 class ListAuthorizedViewsResponse extends $pb.GeneratedMessage {
   factory ListAuthorizedViewsResponse({
-    $core.Iterable<$5.AuthorizedView>? authorizedViews,
+    $core.Iterable<$1.AuthorizedView>? authorizedViews,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (authorizedViews != null) {
-      $result.authorizedViews.addAll(authorizedViews);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (authorizedViews != null) result.authorizedViews.addAll(authorizedViews);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListAuthorizedViewsResponse._() : super();
-  factory ListAuthorizedViewsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListAuthorizedViewsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListAuthorizedViewsResponse._();
+
+  factory ListAuthorizedViewsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListAuthorizedViewsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListAuthorizedViewsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
-    ..pc<$5.AuthorizedView>(
-        1, _omitFieldNames ? '' : 'authorizedViews', $pb.PbFieldType.PM,
-        subBuilder: $5.AuthorizedView.create)
+    ..pPM<$1.AuthorizedView>(1, _omitFieldNames ? '' : 'authorizedViews',
+        subBuilder: $1.AuthorizedView.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListAuthorizedViewsResponse clone() =>
-      ListAuthorizedViewsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAuthorizedViewsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListAuthorizedViewsResponse copyWith(
           void Function(ListAuthorizedViewsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListAuthorizedViewsResponse))
           as ListAuthorizedViewsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListAuthorizedViewsResponse create() =>
       ListAuthorizedViewsResponse._();
+  @$core.override
   ListAuthorizedViewsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListAuthorizedViewsResponse> createRepeated() =>
-      $pb.PbList<ListAuthorizedViewsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListAuthorizedViewsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListAuthorizedViewsResponse>(create);
@@ -4491,7 +3870,7 @@ class ListAuthorizedViewsResponse extends $pb.GeneratedMessage {
 
   /// The AuthorizedViews present in the requested table.
   @$pb.TagNumber(1)
-  $core.List<$5.AuthorizedView> get authorizedViews => $_getList(0);
+  $pb.PbList<$1.AuthorizedView> get authorizedViews => $_getList(0);
 
   /// Set if not all tables could be returned in a single response.
   /// Pass this value to `page_token` in another request to get the next
@@ -4499,14 +3878,11 @@ class ListAuthorizedViewsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request message for
@@ -4514,24 +3890,22 @@ class ListAuthorizedViewsResponse extends $pb.GeneratedMessage {
 class GetAuthorizedViewRequest extends $pb.GeneratedMessage {
   factory GetAuthorizedViewRequest({
     $core.String? name,
-    $5.AuthorizedView_ResponseView? view,
+    $1.AuthorizedView_ResponseView? view,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (view != null) {
-      $result.view = view;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (view != null) result.view = view;
+    return result;
   }
-  GetAuthorizedViewRequest._() : super();
-  factory GetAuthorizedViewRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetAuthorizedViewRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetAuthorizedViewRequest._();
+
+  factory GetAuthorizedViewRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetAuthorizedViewRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetAuthorizedViewRequest',
@@ -4539,34 +3913,25 @@ class GetAuthorizedViewRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<$5.AuthorizedView_ResponseView>(
-        2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            $5.AuthorizedView_ResponseView.RESPONSE_VIEW_UNSPECIFIED,
-        valueOf: $5.AuthorizedView_ResponseView.valueOf,
-        enumValues: $5.AuthorizedView_ResponseView.values)
+    ..aE<$1.AuthorizedView_ResponseView>(2, _omitFieldNames ? '' : 'view',
+        enumValues: $1.AuthorizedView_ResponseView.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetAuthorizedViewRequest clone() =>
-      GetAuthorizedViewRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAuthorizedViewRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetAuthorizedViewRequest copyWith(
           void Function(GetAuthorizedViewRequest) updates) =>
       super.copyWith((message) => updates(message as GetAuthorizedViewRequest))
           as GetAuthorizedViewRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetAuthorizedViewRequest create() => GetAuthorizedViewRequest._();
+  @$core.override
   GetAuthorizedViewRequest createEmptyInstance() => create();
-  static $pb.PbList<GetAuthorizedViewRequest> createRepeated() =>
-      $pb.PbList<GetAuthorizedViewRequest>();
   @$core.pragma('dart2js:noInline')
   static GetAuthorizedViewRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetAuthorizedViewRequest>(create);
@@ -4578,92 +3943,77 @@ class GetAuthorizedViewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Optional. The resource_view to be applied to the returned AuthorizedView's
   /// fields. Default to BASIC.
   @$pb.TagNumber(2)
-  $5.AuthorizedView_ResponseView get view => $_getN(1);
+  $1.AuthorizedView_ResponseView get view => $_getN(1);
   @$pb.TagNumber(2)
-  set view($5.AuthorizedView_ResponseView v) {
-    setField(2, v);
-  }
-
+  set view($1.AuthorizedView_ResponseView value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasView() => $_has(1);
   @$pb.TagNumber(2)
-  void clearView() => clearField(2);
+  void clearView() => $_clearField(2);
 }
 
 /// The request for
 /// [UpdateAuthorizedView][google.bigtable.admin.v2.BigtableTableAdmin.UpdateAuthorizedView].
 class UpdateAuthorizedViewRequest extends $pb.GeneratedMessage {
   factory UpdateAuthorizedViewRequest({
-    $5.AuthorizedView? authorizedView,
+    $1.AuthorizedView? authorizedView,
     $7.FieldMask? updateMask,
     $core.bool? ignoreWarnings,
   }) {
-    final $result = create();
-    if (authorizedView != null) {
-      $result.authorizedView = authorizedView;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    if (ignoreWarnings != null) {
-      $result.ignoreWarnings = ignoreWarnings;
-    }
-    return $result;
+    final result = create();
+    if (authorizedView != null) result.authorizedView = authorizedView;
+    if (updateMask != null) result.updateMask = updateMask;
+    if (ignoreWarnings != null) result.ignoreWarnings = ignoreWarnings;
+    return result;
   }
-  UpdateAuthorizedViewRequest._() : super();
-  factory UpdateAuthorizedViewRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateAuthorizedViewRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateAuthorizedViewRequest._();
+
+  factory UpdateAuthorizedViewRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateAuthorizedViewRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateAuthorizedViewRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
       createEmptyInstance: create)
-    ..aOM<$5.AuthorizedView>(1, _omitFieldNames ? '' : 'authorizedView',
-        subBuilder: $5.AuthorizedView.create)
+    ..aOM<$1.AuthorizedView>(1, _omitFieldNames ? '' : 'authorizedView',
+        subBuilder: $1.AuthorizedView.create)
     ..aOM<$7.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
         subBuilder: $7.FieldMask.create)
     ..aOB(3, _omitFieldNames ? '' : 'ignoreWarnings')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateAuthorizedViewRequest clone() =>
-      UpdateAuthorizedViewRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateAuthorizedViewRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateAuthorizedViewRequest copyWith(
           void Function(UpdateAuthorizedViewRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateAuthorizedViewRequest))
           as UpdateAuthorizedViewRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateAuthorizedViewRequest create() =>
       UpdateAuthorizedViewRequest._();
+  @$core.override
   UpdateAuthorizedViewRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateAuthorizedViewRequest> createRepeated() =>
-      $pb.PbList<UpdateAuthorizedViewRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateAuthorizedViewRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateAuthorizedViewRequest>(create);
@@ -4671,21 +4021,18 @@ class UpdateAuthorizedViewRequest extends $pb.GeneratedMessage {
 
   /// Required. The AuthorizedView to update. The `name` in `authorized_view` is
   /// used to identify the AuthorizedView. AuthorizedView name must in this
-  /// format
-  /// projects/<project>/instances/<instance>/tables/<table>/authorizedViews/<authorized_view>
+  /// format:
+  /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
   @$pb.TagNumber(1)
-  $5.AuthorizedView get authorizedView => $_getN(0);
+  $1.AuthorizedView get authorizedView => $_getN(0);
   @$pb.TagNumber(1)
-  set authorizedView($5.AuthorizedView v) {
-    setField(1, v);
-  }
-
+  set authorizedView($1.AuthorizedView value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAuthorizedView() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAuthorizedView() => clearField(1);
+  void clearAuthorizedView() => $_clearField(1);
   @$pb.TagNumber(1)
-  $5.AuthorizedView ensureAuthorizedView() => $_ensure(0);
+  $1.AuthorizedView ensureAuthorizedView() => $_ensure(0);
 
   /// Optional. The list of fields to update.
   /// A mask specifying which fields in the AuthorizedView resource should be
@@ -4697,14 +4044,11 @@ class UpdateAuthorizedViewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $7.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($7.FieldMask v) {
-    setField(2, v);
-  }
-
+  set updateMask($7.FieldMask value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $7.FieldMask ensureUpdateMask() => $_ensure(1);
 
@@ -4713,14 +4057,11 @@ class UpdateAuthorizedViewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get ignoreWarnings => $_getBF(2);
   @$pb.TagNumber(3)
-  set ignoreWarnings($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set ignoreWarnings($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasIgnoreWarnings() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIgnoreWarnings() => clearField(3);
+  void clearIgnoreWarnings() => $_clearField(3);
 }
 
 /// Metadata for the google.longrunning.Operation returned by
@@ -4731,25 +4072,21 @@ class UpdateAuthorizedViewMetadata extends $pb.GeneratedMessage {
     $8.Timestamp? requestTime,
     $8.Timestamp? finishTime,
   }) {
-    final $result = create();
-    if (originalRequest != null) {
-      $result.originalRequest = originalRequest;
-    }
-    if (requestTime != null) {
-      $result.requestTime = requestTime;
-    }
-    if (finishTime != null) {
-      $result.finishTime = finishTime;
-    }
-    return $result;
+    final result = create();
+    if (originalRequest != null) result.originalRequest = originalRequest;
+    if (requestTime != null) result.requestTime = requestTime;
+    if (finishTime != null) result.finishTime = finishTime;
+    return result;
   }
-  UpdateAuthorizedViewMetadata._() : super();
-  factory UpdateAuthorizedViewMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateAuthorizedViewMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateAuthorizedViewMetadata._();
+
+  factory UpdateAuthorizedViewMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateAuthorizedViewMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateAuthorizedViewMetadata',
@@ -4765,28 +4102,23 @@ class UpdateAuthorizedViewMetadata extends $pb.GeneratedMessage {
         subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateAuthorizedViewMetadata clone() =>
-      UpdateAuthorizedViewMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateAuthorizedViewMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateAuthorizedViewMetadata copyWith(
           void Function(UpdateAuthorizedViewMetadata) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateAuthorizedViewMetadata))
           as UpdateAuthorizedViewMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateAuthorizedViewMetadata create() =>
       UpdateAuthorizedViewMetadata._();
+  @$core.override
   UpdateAuthorizedViewMetadata createEmptyInstance() => create();
-  static $pb.PbList<UpdateAuthorizedViewMetadata> createRepeated() =>
-      $pb.PbList<UpdateAuthorizedViewMetadata>();
   @$core.pragma('dart2js:noInline')
   static UpdateAuthorizedViewMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateAuthorizedViewMetadata>(create);
@@ -4797,14 +4129,12 @@ class UpdateAuthorizedViewMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   UpdateAuthorizedViewRequest get originalRequest => $_getN(0);
   @$pb.TagNumber(1)
-  set originalRequest(UpdateAuthorizedViewRequest v) {
-    setField(1, v);
-  }
-
+  set originalRequest(UpdateAuthorizedViewRequest value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOriginalRequest() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOriginalRequest() => clearField(1);
+  void clearOriginalRequest() => $_clearField(1);
   @$pb.TagNumber(1)
   UpdateAuthorizedViewRequest ensureOriginalRequest() => $_ensure(0);
 
@@ -4812,14 +4142,11 @@ class UpdateAuthorizedViewMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $8.Timestamp get requestTime => $_getN(1);
   @$pb.TagNumber(2)
-  set requestTime($8.Timestamp v) {
-    setField(2, v);
-  }
-
+  set requestTime($8.Timestamp value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasRequestTime() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRequestTime() => clearField(2);
+  void clearRequestTime() => $_clearField(2);
   @$pb.TagNumber(2)
   $8.Timestamp ensureRequestTime() => $_ensure(1);
 
@@ -4827,14 +4154,11 @@ class UpdateAuthorizedViewMetadata extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $8.Timestamp get finishTime => $_getN(2);
   @$pb.TagNumber(3)
-  set finishTime($8.Timestamp v) {
-    setField(3, v);
-  }
-
+  set finishTime($8.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasFinishTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFinishTime() => clearField(3);
+  void clearFinishTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $8.Timestamp ensureFinishTime() => $_ensure(2);
 }
@@ -4846,22 +4170,20 @@ class DeleteAuthorizedViewRequest extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? etag,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (etag != null) {
-      $result.etag = etag;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (etag != null) result.etag = etag;
+    return result;
   }
-  DeleteAuthorizedViewRequest._() : super();
-  factory DeleteAuthorizedViewRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteAuthorizedViewRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteAuthorizedViewRequest._();
+
+  factory DeleteAuthorizedViewRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteAuthorizedViewRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteAuthorizedViewRequest',
@@ -4872,28 +4194,23 @@ class DeleteAuthorizedViewRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'etag')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteAuthorizedViewRequest clone() =>
-      DeleteAuthorizedViewRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteAuthorizedViewRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteAuthorizedViewRequest copyWith(
           void Function(DeleteAuthorizedViewRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeleteAuthorizedViewRequest))
           as DeleteAuthorizedViewRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteAuthorizedViewRequest create() =>
       DeleteAuthorizedViewRequest._();
+  @$core.override
   DeleteAuthorizedViewRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteAuthorizedViewRequest> createRepeated() =>
-      $pb.PbList<DeleteAuthorizedViewRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteAuthorizedViewRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteAuthorizedViewRequest>(create);
@@ -4905,14 +4222,11 @@ class DeleteAuthorizedViewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Optional. The current etag of the AuthorizedView.
   /// If an etag is provided and does not match the current etag of the
@@ -4921,16 +4235,689 @@ class DeleteAuthorizedViewRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get etag => $_getSZ(1);
   @$pb.TagNumber(2)
-  set etag($core.String v) {
-    $_setString(1, v);
-  }
-
+  set etag($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEtag() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEtag() => clearField(2);
+  void clearEtag() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+/// The request for
+/// [CreateSchemaBundle][google.bigtable.admin.v2.BigtableTableAdmin.CreateSchemaBundle].
+class CreateSchemaBundleRequest extends $pb.GeneratedMessage {
+  factory CreateSchemaBundleRequest({
+    $core.String? parent,
+    $core.String? schemaBundleId,
+    $1.SchemaBundle? schemaBundle,
+  }) {
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (schemaBundleId != null) result.schemaBundleId = schemaBundleId;
+    if (schemaBundle != null) result.schemaBundle = schemaBundle;
+    return result;
+  }
+
+  CreateSchemaBundleRequest._();
+
+  factory CreateSchemaBundleRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateSchemaBundleRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateSchemaBundleRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'schemaBundleId')
+    ..aOM<$1.SchemaBundle>(3, _omitFieldNames ? '' : 'schemaBundle',
+        subBuilder: $1.SchemaBundle.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateSchemaBundleRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateSchemaBundleRequest copyWith(
+          void Function(CreateSchemaBundleRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateSchemaBundleRequest))
+          as CreateSchemaBundleRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSchemaBundleRequest create() => CreateSchemaBundleRequest._();
+  @$core.override
+  CreateSchemaBundleRequest createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static CreateSchemaBundleRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSchemaBundleRequest>(create);
+  static CreateSchemaBundleRequest? _defaultInstance;
+
+  /// Required. The parent resource where this schema bundle will be created.
+  /// Values are of the form
+  /// `projects/{project}/instances/{instance}/tables/{table}`.
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => $_clearField(1);
+
+  /// Required. The unique ID to use for the schema bundle, which will become the
+  /// final component of the schema bundle's resource name.
+  @$pb.TagNumber(2)
+  $core.String get schemaBundleId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set schemaBundleId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSchemaBundleId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSchemaBundleId() => $_clearField(2);
+
+  /// Required. The schema bundle to create.
+  @$pb.TagNumber(3)
+  $1.SchemaBundle get schemaBundle => $_getN(2);
+  @$pb.TagNumber(3)
+  set schemaBundle($1.SchemaBundle value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasSchemaBundle() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSchemaBundle() => $_clearField(3);
+  @$pb.TagNumber(3)
+  $1.SchemaBundle ensureSchemaBundle() => $_ensure(2);
+}
+
+/// The metadata for the Operation returned by
+/// [CreateSchemaBundle][google.bigtable.admin.v2.BigtableTableAdmin.CreateSchemaBundle].
+class CreateSchemaBundleMetadata extends $pb.GeneratedMessage {
+  factory CreateSchemaBundleMetadata({
+    $core.String? name,
+    $8.Timestamp? startTime,
+    $8.Timestamp? endTime,
+  }) {
+    final result = create();
+    if (name != null) result.name = name;
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    return result;
+  }
+
+  CreateSchemaBundleMetadata._();
+
+  factory CreateSchemaBundleMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateSchemaBundleMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateSchemaBundleMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$8.Timestamp>(2, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $8.Timestamp.create)
+    ..aOM<$8.Timestamp>(3, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $8.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateSchemaBundleMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateSchemaBundleMetadata copyWith(
+          void Function(CreateSchemaBundleMetadata) updates) =>
+      super.copyWith(
+              (message) => updates(message as CreateSchemaBundleMetadata))
+          as CreateSchemaBundleMetadata;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSchemaBundleMetadata create() => CreateSchemaBundleMetadata._();
+  @$core.override
+  CreateSchemaBundleMetadata createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static CreateSchemaBundleMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSchemaBundleMetadata>(create);
+  static CreateSchemaBundleMetadata? _defaultInstance;
+
+  /// The unique name identifying this schema bundle.
+  /// Values are of the form
+  /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => $_clearField(1);
+
+  /// The time at which this operation started.
+  @$pb.TagNumber(2)
+  $8.Timestamp get startTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set startTime($8.Timestamp value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasStartTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStartTime() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $8.Timestamp ensureStartTime() => $_ensure(1);
+
+  /// If set, the time at which this operation finished or was canceled.
+  @$pb.TagNumber(3)
+  $8.Timestamp get endTime => $_getN(2);
+  @$pb.TagNumber(3)
+  set endTime($8.Timestamp value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasEndTime() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEndTime() => $_clearField(3);
+  @$pb.TagNumber(3)
+  $8.Timestamp ensureEndTime() => $_ensure(2);
+}
+
+/// The request for
+/// [UpdateSchemaBundle][google.bigtable.admin.v2.BigtableTableAdmin.UpdateSchemaBundle].
+class UpdateSchemaBundleRequest extends $pb.GeneratedMessage {
+  factory UpdateSchemaBundleRequest({
+    $1.SchemaBundle? schemaBundle,
+    $7.FieldMask? updateMask,
+    $core.bool? ignoreWarnings,
+  }) {
+    final result = create();
+    if (schemaBundle != null) result.schemaBundle = schemaBundle;
+    if (updateMask != null) result.updateMask = updateMask;
+    if (ignoreWarnings != null) result.ignoreWarnings = ignoreWarnings;
+    return result;
+  }
+
+  UpdateSchemaBundleRequest._();
+
+  factory UpdateSchemaBundleRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateSchemaBundleRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateSchemaBundleRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$1.SchemaBundle>(1, _omitFieldNames ? '' : 'schemaBundle',
+        subBuilder: $1.SchemaBundle.create)
+    ..aOM<$7.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $7.FieldMask.create)
+    ..aOB(3, _omitFieldNames ? '' : 'ignoreWarnings')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateSchemaBundleRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateSchemaBundleRequest copyWith(
+          void Function(UpdateSchemaBundleRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateSchemaBundleRequest))
+          as UpdateSchemaBundleRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateSchemaBundleRequest create() => UpdateSchemaBundleRequest._();
+  @$core.override
+  UpdateSchemaBundleRequest createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSchemaBundleRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSchemaBundleRequest>(create);
+  static UpdateSchemaBundleRequest? _defaultInstance;
+
+  /// Required. The schema bundle to update.
+  ///
+  /// The schema bundle's `name` field is used to identify the schema bundle to
+  /// update. Values are of the form
+  /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+  @$pb.TagNumber(1)
+  $1.SchemaBundle get schemaBundle => $_getN(0);
+  @$pb.TagNumber(1)
+  set schemaBundle($1.SchemaBundle value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSchemaBundle() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSchemaBundle() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $1.SchemaBundle ensureSchemaBundle() => $_ensure(0);
+
+  /// Optional. The list of fields to update.
+  @$pb.TagNumber(2)
+  $7.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
+  set updateMask($7.FieldMask value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdateMask() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $7.FieldMask ensureUpdateMask() => $_ensure(1);
+
+  /// Optional. If set, ignore the safety checks when updating the Schema Bundle.
+  /// The safety checks are:
+  /// - The new Schema Bundle is backwards compatible with the existing Schema
+  /// Bundle.
+  @$pb.TagNumber(3)
+  $core.bool get ignoreWarnings => $_getBF(2);
+  @$pb.TagNumber(3)
+  set ignoreWarnings($core.bool value) => $_setBool(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasIgnoreWarnings() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearIgnoreWarnings() => $_clearField(3);
+}
+
+/// The metadata for the Operation returned by
+/// [UpdateSchemaBundle][google.bigtable.admin.v2.BigtableTableAdmin.UpdateSchemaBundle].
+class UpdateSchemaBundleMetadata extends $pb.GeneratedMessage {
+  factory UpdateSchemaBundleMetadata({
+    $core.String? name,
+    $8.Timestamp? startTime,
+    $8.Timestamp? endTime,
+  }) {
+    final result = create();
+    if (name != null) result.name = name;
+    if (startTime != null) result.startTime = startTime;
+    if (endTime != null) result.endTime = endTime;
+    return result;
+  }
+
+  UpdateSchemaBundleMetadata._();
+
+  factory UpdateSchemaBundleMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateSchemaBundleMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateSchemaBundleMetadata',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$8.Timestamp>(2, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $8.Timestamp.create)
+    ..aOM<$8.Timestamp>(3, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $8.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateSchemaBundleMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateSchemaBundleMetadata copyWith(
+          void Function(UpdateSchemaBundleMetadata) updates) =>
+      super.copyWith(
+              (message) => updates(message as UpdateSchemaBundleMetadata))
+          as UpdateSchemaBundleMetadata;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateSchemaBundleMetadata create() => UpdateSchemaBundleMetadata._();
+  @$core.override
+  UpdateSchemaBundleMetadata createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSchemaBundleMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSchemaBundleMetadata>(create);
+  static UpdateSchemaBundleMetadata? _defaultInstance;
+
+  /// The unique name identifying this schema bundle.
+  /// Values are of the form
+  /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => $_clearField(1);
+
+  /// The time at which this operation started.
+  @$pb.TagNumber(2)
+  $8.Timestamp get startTime => $_getN(1);
+  @$pb.TagNumber(2)
+  set startTime($8.Timestamp value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasStartTime() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStartTime() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $8.Timestamp ensureStartTime() => $_ensure(1);
+
+  /// If set, the time at which this operation finished or was canceled.
+  @$pb.TagNumber(3)
+  $8.Timestamp get endTime => $_getN(2);
+  @$pb.TagNumber(3)
+  set endTime($8.Timestamp value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasEndTime() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEndTime() => $_clearField(3);
+  @$pb.TagNumber(3)
+  $8.Timestamp ensureEndTime() => $_ensure(2);
+}
+
+/// The request for
+/// [GetSchemaBundle][google.bigtable.admin.v2.BigtableTableAdmin.GetSchemaBundle].
+class GetSchemaBundleRequest extends $pb.GeneratedMessage {
+  factory GetSchemaBundleRequest({
+    $core.String? name,
+  }) {
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
+  }
+
+  GetSchemaBundleRequest._();
+
+  factory GetSchemaBundleRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSchemaBundleRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetSchemaBundleRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchemaBundleRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSchemaBundleRequest copyWith(
+          void Function(GetSchemaBundleRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSchemaBundleRequest))
+          as GetSchemaBundleRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSchemaBundleRequest create() => GetSchemaBundleRequest._();
+  @$core.override
+  GetSchemaBundleRequest createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static GetSchemaBundleRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSchemaBundleRequest>(create);
+  static GetSchemaBundleRequest? _defaultInstance;
+
+  /// Required. The unique name of the schema bundle to retrieve.
+  /// Values are of the form
+  /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => $_clearField(1);
+}
+
+/// The request for
+/// [ListSchemaBundles][google.bigtable.admin.v2.BigtableTableAdmin.ListSchemaBundles].
+class ListSchemaBundlesRequest extends $pb.GeneratedMessage {
+  factory ListSchemaBundlesRequest({
+    $core.String? parent,
+    $core.int? pageSize,
+    $core.String? pageToken,
+  }) {
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
+  }
+
+  ListSchemaBundlesRequest._();
+
+  factory ListSchemaBundlesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListSchemaBundlesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListSchemaBundlesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSchemaBundlesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSchemaBundlesRequest copyWith(
+          void Function(ListSchemaBundlesRequest) updates) =>
+      super.copyWith((message) => updates(message as ListSchemaBundlesRequest))
+          as ListSchemaBundlesRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListSchemaBundlesRequest create() => ListSchemaBundlesRequest._();
+  @$core.override
+  ListSchemaBundlesRequest createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static ListSchemaBundlesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSchemaBundlesRequest>(create);
+  static ListSchemaBundlesRequest? _defaultInstance;
+
+  /// Required. The parent, which owns this collection of schema bundles.
+  /// Values are of the form
+  /// `projects/{project}/instances/{instance}/tables/{table}`.
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parent($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParent() => $_clearField(1);
+
+  /// The maximum number of schema bundles to return. If the value is positive,
+  /// the server may return at most this value. If unspecified, the server will
+  /// return the maximum allowed page size.
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPageSize() => $_clearField(2);
+
+  /// A page token, received from a previous `ListSchemaBundles` call.
+  /// Provide this to retrieve the subsequent page.
+  ///
+  /// When paginating, all other parameters provided to `ListSchemaBundles` must
+  /// match the call that provided the page token.
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set pageToken($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageToken() => $_clearField(3);
+}
+
+/// The response for
+/// [ListSchemaBundles][google.bigtable.admin.v2.BigtableTableAdmin.ListSchemaBundles].
+class ListSchemaBundlesResponse extends $pb.GeneratedMessage {
+  factory ListSchemaBundlesResponse({
+    $core.Iterable<$1.SchemaBundle>? schemaBundles,
+    $core.String? nextPageToken,
+  }) {
+    final result = create();
+    if (schemaBundles != null) result.schemaBundles.addAll(schemaBundles);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
+  }
+
+  ListSchemaBundlesResponse._();
+
+  factory ListSchemaBundlesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListSchemaBundlesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListSchemaBundlesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..pPM<$1.SchemaBundle>(1, _omitFieldNames ? '' : 'schemaBundles',
+        subBuilder: $1.SchemaBundle.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSchemaBundlesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListSchemaBundlesResponse copyWith(
+          void Function(ListSchemaBundlesResponse) updates) =>
+      super.copyWith((message) => updates(message as ListSchemaBundlesResponse))
+          as ListSchemaBundlesResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListSchemaBundlesResponse create() => ListSchemaBundlesResponse._();
+  @$core.override
+  ListSchemaBundlesResponse createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static ListSchemaBundlesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSchemaBundlesResponse>(create);
+  static ListSchemaBundlesResponse? _defaultInstance;
+
+  /// The schema bundles from the specified table.
+  @$pb.TagNumber(1)
+  $pb.PbList<$1.SchemaBundle> get schemaBundles => $_getList(0);
+
+  /// A token, which can be sent as `page_token` to retrieve the next page.
+  /// If this field is omitted, there are no subsequent pages.
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set nextPageToken($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextPageToken() => $_clearField(2);
+}
+
+/// The request for
+/// [DeleteSchemaBundle][google.bigtable.admin.v2.BigtableTableAdmin.DeleteSchemaBundle].
+class DeleteSchemaBundleRequest extends $pb.GeneratedMessage {
+  factory DeleteSchemaBundleRequest({
+    $core.String? name,
+    $core.String? etag,
+  }) {
+    final result = create();
+    if (name != null) result.name = name;
+    if (etag != null) result.etag = etag;
+    return result;
+  }
+
+  DeleteSchemaBundleRequest._();
+
+  factory DeleteSchemaBundleRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteSchemaBundleRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteSchemaBundleRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'etag')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteSchemaBundleRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteSchemaBundleRequest copyWith(
+          void Function(DeleteSchemaBundleRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteSchemaBundleRequest))
+          as DeleteSchemaBundleRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeleteSchemaBundleRequest create() => DeleteSchemaBundleRequest._();
+  @$core.override
+  DeleteSchemaBundleRequest createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static DeleteSchemaBundleRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSchemaBundleRequest>(create);
+  static DeleteSchemaBundleRequest? _defaultInstance;
+
+  /// Required. The unique name of the schema bundle to delete.
+  /// Values are of the form
+  /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => $_clearField(1);
+
+  /// Optional. The etag of the schema bundle.
+  /// If this is provided, it must match the server's etag. The server
+  /// returns an ABORTED error on a mismatched etag.
+  @$pb.TagNumber(2)
+  $core.String get etag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set etag($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasEtag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEtag() => $_clearField(2);
+}
+
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

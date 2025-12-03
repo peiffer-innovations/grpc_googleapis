@@ -1,22 +1,26 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/apps/script/type/script_manifest.proto
-//
-// @dart = 2.12
+// Generated from google/apps/script/type/script_manifest.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/struct.pb.dart'
+    as $2;
 
-import '../../../protobuf/struct.pb.dart' as $2;
 import 'addon_widget_set.pb.dart' as $0;
 import 'extension_point.pb.dart' as $1;
 import 'script_manifest.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'script_manifest.pbenum.dart';
 
@@ -32,40 +36,28 @@ class CommonAddOnManifest extends $pb.GeneratedMessage {
     $core.Iterable<$1.UniversalActionExtensionPoint>? universalActions,
     $2.ListValue? openLinkUrlPrefixes,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (logoUrl != null) {
-      $result.logoUrl = logoUrl;
-    }
-    if (layoutProperties != null) {
-      $result.layoutProperties = layoutProperties;
-    }
-    if (addOnWidgetSet != null) {
-      $result.addOnWidgetSet = addOnWidgetSet;
-    }
-    if (useLocaleFromApp != null) {
-      $result.useLocaleFromApp = useLocaleFromApp;
-    }
-    if (homepageTrigger != null) {
-      $result.homepageTrigger = homepageTrigger;
-    }
-    if (universalActions != null) {
-      $result.universalActions.addAll(universalActions);
-    }
-    if (openLinkUrlPrefixes != null) {
-      $result.openLinkUrlPrefixes = openLinkUrlPrefixes;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (logoUrl != null) result.logoUrl = logoUrl;
+    if (layoutProperties != null) result.layoutProperties = layoutProperties;
+    if (addOnWidgetSet != null) result.addOnWidgetSet = addOnWidgetSet;
+    if (useLocaleFromApp != null) result.useLocaleFromApp = useLocaleFromApp;
+    if (homepageTrigger != null) result.homepageTrigger = homepageTrigger;
+    if (universalActions != null)
+      result.universalActions.addAll(universalActions);
+    if (openLinkUrlPrefixes != null)
+      result.openLinkUrlPrefixes = openLinkUrlPrefixes;
+    return result;
   }
-  CommonAddOnManifest._() : super();
-  factory CommonAddOnManifest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CommonAddOnManifest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CommonAddOnManifest._();
+
+  factory CommonAddOnManifest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CommonAddOnManifest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CommonAddOnManifest',
@@ -82,31 +74,27 @@ class CommonAddOnManifest extends $pb.GeneratedMessage {
     ..aOM<$1.HomepageExtensionPoint>(
         6, _omitFieldNames ? '' : 'homepageTrigger',
         subBuilder: $1.HomepageExtensionPoint.create)
-    ..pc<$1.UniversalActionExtensionPoint>(
-        7, _omitFieldNames ? '' : 'universalActions', $pb.PbFieldType.PM,
+    ..pPM<$1.UniversalActionExtensionPoint>(
+        7, _omitFieldNames ? '' : 'universalActions',
         subBuilder: $1.UniversalActionExtensionPoint.create)
     ..aOM<$2.ListValue>(8, _omitFieldNames ? '' : 'openLinkUrlPrefixes',
         subBuilder: $2.ListValue.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CommonAddOnManifest clone() => CommonAddOnManifest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CommonAddOnManifest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CommonAddOnManifest copyWith(void Function(CommonAddOnManifest) updates) =>
       super.copyWith((message) => updates(message as CommonAddOnManifest))
           as CommonAddOnManifest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CommonAddOnManifest create() => CommonAddOnManifest._();
+  @$core.override
   CommonAddOnManifest createEmptyInstance() => create();
-  static $pb.PbList<CommonAddOnManifest> createRepeated() =>
-      $pb.PbList<CommonAddOnManifest>();
   @$core.pragma('dart2js:noInline')
   static CommonAddOnManifest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CommonAddOnManifest>(create);
@@ -116,40 +104,31 @@ class CommonAddOnManifest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// Required. The URL for the logo image shown in the add-on toolbar.
   @$pb.TagNumber(2)
   $core.String get logoUrl => $_getSZ(1);
   @$pb.TagNumber(2)
-  set logoUrl($core.String v) {
-    $_setString(1, v);
-  }
-
+  set logoUrl($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasLogoUrl() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLogoUrl() => clearField(2);
+  void clearLogoUrl() => $_clearField(2);
 
   /// Common layout properties for the add-on cards.
   @$pb.TagNumber(3)
   LayoutProperties get layoutProperties => $_getN(2);
   @$pb.TagNumber(3)
-  set layoutProperties(LayoutProperties v) {
-    setField(3, v);
-  }
-
+  set layoutProperties(LayoutProperties value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasLayoutProperties() => $_has(2);
   @$pb.TagNumber(3)
-  void clearLayoutProperties() => clearField(3);
+  void clearLayoutProperties() => $_clearField(3);
   @$pb.TagNumber(3)
   LayoutProperties ensureLayoutProperties() => $_ensure(2);
 
@@ -158,14 +137,11 @@ class CommonAddOnManifest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.AddOnWidgetSet get addOnWidgetSet => $_getN(3);
   @$pb.TagNumber(4)
-  set addOnWidgetSet($0.AddOnWidgetSet v) {
-    setField(4, v);
-  }
-
+  set addOnWidgetSet($0.AddOnWidgetSet value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasAddOnWidgetSet() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAddOnWidgetSet() => clearField(4);
+  void clearAddOnWidgetSet() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.AddOnWidgetSet ensureAddOnWidgetSet() => $_ensure(3);
 
@@ -173,14 +149,11 @@ class CommonAddOnManifest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool get useLocaleFromApp => $_getBF(4);
   @$pb.TagNumber(5)
-  set useLocaleFromApp($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set useLocaleFromApp($core.bool value) => $_setBool(4, value);
   @$pb.TagNumber(5)
   $core.bool hasUseLocaleFromApp() => $_has(4);
   @$pb.TagNumber(5)
-  void clearUseLocaleFromApp() => clearField(5);
+  void clearUseLocaleFromApp() => $_clearField(5);
 
   /// Defines an endpoint that will be executed in any context, in
   /// any host. Any cards generated by this function will always be available to
@@ -189,14 +162,11 @@ class CommonAddOnManifest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $1.HomepageExtensionPoint get homepageTrigger => $_getN(5);
   @$pb.TagNumber(6)
-  set homepageTrigger($1.HomepageExtensionPoint v) {
-    setField(6, v);
-  }
-
+  set homepageTrigger($1.HomepageExtensionPoint value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasHomepageTrigger() => $_has(5);
   @$pb.TagNumber(6)
-  void clearHomepageTrigger() => clearField(6);
+  void clearHomepageTrigger() => $_clearField(6);
   @$pb.TagNumber(6)
   $1.HomepageExtensionPoint ensureHomepageTrigger() => $_ensure(5);
 
@@ -205,7 +175,7 @@ class CommonAddOnManifest extends $pb.GeneratedMessage {
   /// link URL to open or an endpoint to execute as a form
   /// submission.
   @$pb.TagNumber(7)
-  $core.List<$1.UniversalActionExtensionPoint> get universalActions =>
+  $pb.PbList<$1.UniversalActionExtensionPoint> get universalActions =>
       $_getList(6);
 
   /// An OpenLink action
@@ -218,14 +188,11 @@ class CommonAddOnManifest extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $2.ListValue get openLinkUrlPrefixes => $_getN(7);
   @$pb.TagNumber(8)
-  set openLinkUrlPrefixes($2.ListValue v) {
-    setField(8, v);
-  }
-
+  set openLinkUrlPrefixes($2.ListValue value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasOpenLinkUrlPrefixes() => $_has(7);
   @$pb.TagNumber(8)
-  void clearOpenLinkUrlPrefixes() => clearField(8);
+  void clearOpenLinkUrlPrefixes() => $_clearField(8);
   @$pb.TagNumber(8)
   $2.ListValue ensureOpenLinkUrlPrefixes() => $_ensure(7);
 }
@@ -236,22 +203,20 @@ class LayoutProperties extends $pb.GeneratedMessage {
     $core.String? primaryColor,
     $core.String? secondaryColor,
   }) {
-    final $result = create();
-    if (primaryColor != null) {
-      $result.primaryColor = primaryColor;
-    }
-    if (secondaryColor != null) {
-      $result.secondaryColor = secondaryColor;
-    }
-    return $result;
+    final result = create();
+    if (primaryColor != null) result.primaryColor = primaryColor;
+    if (secondaryColor != null) result.secondaryColor = secondaryColor;
+    return result;
   }
-  LayoutProperties._() : super();
-  factory LayoutProperties.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory LayoutProperties.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  LayoutProperties._();
+
+  factory LayoutProperties.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory LayoutProperties.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'LayoutProperties',
@@ -262,24 +227,20 @@ class LayoutProperties extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'secondaryColor')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  LayoutProperties clone() => LayoutProperties()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  LayoutProperties clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   LayoutProperties copyWith(void Function(LayoutProperties) updates) =>
       super.copyWith((message) => updates(message as LayoutProperties))
           as LayoutProperties;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static LayoutProperties create() => LayoutProperties._();
+  @$core.override
   LayoutProperties createEmptyInstance() => create();
-  static $pb.PbList<LayoutProperties> createRepeated() =>
-      $pb.PbList<LayoutProperties>();
   @$core.pragma('dart2js:noInline')
   static LayoutProperties getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LayoutProperties>(create);
@@ -291,14 +252,11 @@ class LayoutProperties extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get primaryColor => $_getSZ(0);
   @$pb.TagNumber(1)
-  set primaryColor($core.String v) {
-    $_setString(0, v);
-  }
-
+  set primaryColor($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPrimaryColor() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPrimaryColor() => clearField(1);
+  void clearPrimaryColor() => $_clearField(1);
 
   /// The secondary color of the add-on. It sets the color of buttons.
   /// If primary color is set but no secondary color is set, the
@@ -308,14 +266,11 @@ class LayoutProperties extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get secondaryColor => $_getSZ(1);
   @$pb.TagNumber(2)
-  set secondaryColor($core.String v) {
-    $_setString(1, v);
-  }
-
+  set secondaryColor($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSecondaryColor() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSecondaryColor() => clearField(2);
+  void clearSecondaryColor() => $_clearField(2);
 }
 
 /// Options for sending requests to add-on HTTP endpoints
@@ -323,50 +278,45 @@ class HttpOptions extends $pb.GeneratedMessage {
   factory HttpOptions({
     HttpAuthorizationHeader? authorizationHeader,
   }) {
-    final $result = create();
-    if (authorizationHeader != null) {
-      $result.authorizationHeader = authorizationHeader;
-    }
-    return $result;
+    final result = create();
+    if (authorizationHeader != null)
+      result.authorizationHeader = authorizationHeader;
+    return result;
   }
-  HttpOptions._() : super();
-  factory HttpOptions.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory HttpOptions.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  HttpOptions._();
+
+  factory HttpOptions.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory HttpOptions.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'HttpOptions',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.script.type'),
       createEmptyInstance: create)
-    ..e<HttpAuthorizationHeader>(
-        1, _omitFieldNames ? '' : 'authorizationHeader', $pb.PbFieldType.OE,
-        defaultOrMaker:
-            HttpAuthorizationHeader.HTTP_AUTHORIZATION_HEADER_UNSPECIFIED,
-        valueOf: HttpAuthorizationHeader.valueOf,
+    ..aE<HttpAuthorizationHeader>(
+        1, _omitFieldNames ? '' : 'authorizationHeader',
         enumValues: HttpAuthorizationHeader.values)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  HttpOptions clone() => HttpOptions()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  HttpOptions clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   HttpOptions copyWith(void Function(HttpOptions) updates) =>
       super.copyWith((message) => updates(message as HttpOptions))
           as HttpOptions;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static HttpOptions create() => HttpOptions._();
+  @$core.override
   HttpOptions createEmptyInstance() => create();
-  static $pb.PbList<HttpOptions> createRepeated() => $pb.PbList<HttpOptions>();
   @$core.pragma('dart2js:noInline')
   static HttpOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<HttpOptions>(create);
@@ -376,16 +326,15 @@ class HttpOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   HttpAuthorizationHeader get authorizationHeader => $_getN(0);
   @$pb.TagNumber(1)
-  set authorizationHeader(HttpAuthorizationHeader v) {
-    setField(1, v);
-  }
-
+  set authorizationHeader(HttpAuthorizationHeader value) =>
+      $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasAuthorizationHeader() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAuthorizationHeader() => clearField(1);
+  void clearAuthorizationHeader() => $_clearField(1);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,43 +1,44 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/bigtable/v2/response_params.proto
-//
-// @dart = 2.12
+// Generated from google/bigtable/v2/response_params.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 /// Response metadata proto
-/// This is an experimental feature that will be used to get zone_id and
-/// cluster_id from response trailers to tag the metrics. This should not be
-/// used by customers directly
 class ResponseParams extends $pb.GeneratedMessage {
   factory ResponseParams({
     $core.String? zoneId,
     $core.String? clusterId,
+    $fixnum.Int64? afeId,
   }) {
-    final $result = create();
-    if (zoneId != null) {
-      $result.zoneId = zoneId;
-    }
-    if (clusterId != null) {
-      $result.clusterId = clusterId;
-    }
-    return $result;
+    final result = create();
+    if (zoneId != null) result.zoneId = zoneId;
+    if (clusterId != null) result.clusterId = clusterId;
+    if (afeId != null) result.afeId = afeId;
+    return result;
   }
-  ResponseParams._() : super();
-  factory ResponseParams.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ResponseParams.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ResponseParams._();
+
+  factory ResponseParams.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ResponseParams.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ResponseParams',
@@ -46,26 +47,23 @@ class ResponseParams extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'zoneId')
     ..aOS(2, _omitFieldNames ? '' : 'clusterId')
+    ..aInt64(3, _omitFieldNames ? '' : 'afeId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ResponseParams clone() => ResponseParams()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ResponseParams clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ResponseParams copyWith(void Function(ResponseParams) updates) =>
       super.copyWith((message) => updates(message as ResponseParams))
           as ResponseParams;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ResponseParams create() => ResponseParams._();
+  @$core.override
   ResponseParams createEmptyInstance() => create();
-  static $pb.PbList<ResponseParams> createRepeated() =>
-      $pb.PbList<ResponseParams>();
   @$core.pragma('dart2js:noInline')
   static ResponseParams getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ResponseParams>(create);
@@ -75,30 +73,35 @@ class ResponseParams extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get zoneId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set zoneId($core.String v) {
-    $_setString(0, v);
-  }
-
+  set zoneId($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasZoneId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearZoneId() => clearField(1);
+  void clearZoneId() => $_clearField(1);
 
   /// Identifier for a cluster that represents set of
   /// bigtable resources.
   @$pb.TagNumber(2)
   $core.String get clusterId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set clusterId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set clusterId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasClusterId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearClusterId() => clearField(2);
+  void clearClusterId() => $_clearField(2);
+
+  /// The AFE ID for the AFE that is served this request.
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get afeId => $_getI64(2);
+  @$pb.TagNumber(3)
+  set afeId($fixnum.Int64 value) => $_setInt64(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasAfeId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAfeId() => $_clearField(3);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

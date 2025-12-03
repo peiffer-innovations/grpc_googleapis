@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/ai/generativelanguage/v1beta/cached_content.proto
-//
-// @dart = 2.12
+// Generated from google/ai/generativelanguage/v1beta/cached_content.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -158,7 +160,7 @@ const CachedContent_UsageMetadata$json = {
 final $typed_data.Uint8List cachedContentDescriptor = $convert.base64Decode(
     'Cg1DYWNoZWRDb250ZW50Ej0KC2V4cGlyZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLl'
     'RpbWVzdGFtcEgAUgpleHBpcmVUaW1lEjIKA3R0bBgKIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5E'
-    'dXJhdGlvbkID4EEESABSA3R0bBIfCgRuYW1lGAEgASgJQgbgQQjgQQFIAVIEbmFtZYgBARIuCg'
+    'dXJhdGlvbkID4EEESABSA3R0bBIfCgRuYW1lGAEgASgJQgbgQQjgQQNIAVIEbmFtZYgBARIuCg'
     'xkaXNwbGF5X25hbWUYCyABKAlCBuBBAeBBBUgCUgtkaXNwbGF5TmFtZYgBARJNCgVtb2RlbBgC'
     'IAEoCUIy4EEF4EEC+kEpCidnZW5lcmF0aXZlbGFuZ3VhZ2UuZ29vZ2xlYXBpcy5jb20vTW9kZW'
     'xIA1IFbW9kZWyIAQESawoSc3lzdGVtX2luc3RydWN0aW9uGAMgASgLMiwuZ29vZ2xlLmFpLmdl'

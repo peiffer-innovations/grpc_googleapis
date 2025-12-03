@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/maps/solar/v1/solar_service.proto
-//
-// @dart = 2.12
+// Generated from google/maps/solar/v1/solar_service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -41,13 +43,14 @@ const ImageryQuality$json = {
     {'1': 'HIGH', '2': 1},
     {'1': 'MEDIUM', '2': 2},
     {'1': 'LOW', '2': 3},
+    {'1': 'BASE', '2': 4},
   ],
 };
 
 /// Descriptor for `ImageryQuality`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List imageryQualityDescriptor = $convert.base64Decode(
     'Cg5JbWFnZXJ5UXVhbGl0eRIfChtJTUFHRVJZX1FVQUxJVFlfVU5TUEVDSUZJRUQQABIICgRISU'
-    'dIEAESCgoGTUVESVVNEAISBwoDTE9XEAM=');
+    'dIEAESCgoGTUVESVVNEAISBwoDTE9XEAMSCAoEQkFTRRAE');
 
 @$core.Deprecated('Use solarPanelOrientationDescriptor instead')
 const SolarPanelOrientation$json = {
@@ -63,6 +66,20 @@ const SolarPanelOrientation$json = {
 final $typed_data.Uint8List solarPanelOrientationDescriptor = $convert.base64Decode(
     'ChVTb2xhclBhbmVsT3JpZW50YXRpb24SJwojU09MQVJfUEFORUxfT1JJRU5UQVRJT05fVU5TUE'
     'VDSUZJRUQQABINCglMQU5EU0NBUEUQARIMCghQT1JUUkFJVBAC');
+
+@$core.Deprecated('Use experimentDescriptor instead')
+const Experiment$json = {
+  '1': 'Experiment',
+  '2': [
+    {'1': 'EXPERIMENT_UNSPECIFIED', '2': 0},
+    {'1': 'EXPANDED_COVERAGE', '2': 1},
+  ],
+};
+
+/// Descriptor for `Experiment`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List experimentDescriptor = $convert.base64Decode(
+    'CgpFeHBlcmltZW50EhoKFkVYUEVSSU1FTlRfVU5TUEVDSUZJRUQQABIVChFFWFBBTkRFRF9DT1'
+    'ZFUkFHRRAB');
 
 @$core.Deprecated('Use findClosestBuildingInsightsRequestDescriptor instead')
 const FindClosestBuildingInsightsRequest$json = {
@@ -94,17 +111,26 @@ const FindClosestBuildingInsightsRequest$json = {
       '8': {},
       '10': 'exactQualityRequired'
     },
+    {
+      '1': 'experiments',
+      '3': 5,
+      '4': 3,
+      '5': 14,
+      '6': '.google.maps.solar.v1.Experiment',
+      '8': {},
+      '10': 'experiments'
+    },
   ],
 };
 
 /// Descriptor for `FindClosestBuildingInsightsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List findClosestBuildingInsightsRequestDescriptor =
-    $convert.base64Decode(
-        'CiJGaW5kQ2xvc2VzdEJ1aWxkaW5nSW5zaWdodHNSZXF1ZXN0EjQKCGxvY2F0aW9uGAEgASgLMh'
-        'MuZ29vZ2xlLnR5cGUuTGF0TG5nQgPgQQJSCGxvY2F0aW9uElQKEHJlcXVpcmVkX3F1YWxpdHkY'
-        'AyABKA4yJC5nb29nbGUubWFwcy5zb2xhci52MS5JbWFnZXJ5UXVhbGl0eUID4EEBUg9yZXF1aX'
-        'JlZFF1YWxpdHkSOQoWZXhhY3RfcXVhbGl0eV9yZXF1aXJlZBgEIAEoCEID4EEBUhRleGFjdFF1'
-        'YWxpdHlSZXF1aXJlZA==');
+final $typed_data.Uint8List findClosestBuildingInsightsRequestDescriptor = $convert.base64Decode(
+    'CiJGaW5kQ2xvc2VzdEJ1aWxkaW5nSW5zaWdodHNSZXF1ZXN0EjQKCGxvY2F0aW9uGAEgASgLMh'
+    'MuZ29vZ2xlLnR5cGUuTGF0TG5nQgPgQQJSCGxvY2F0aW9uElQKEHJlcXVpcmVkX3F1YWxpdHkY'
+    'AyABKA4yJC5nb29nbGUubWFwcy5zb2xhci52MS5JbWFnZXJ5UXVhbGl0eUID4EEBUg9yZXF1aX'
+    'JlZFF1YWxpdHkSOQoWZXhhY3RfcXVhbGl0eV9yZXF1aXJlZBgEIAEoCEID4EEBUhRleGFjdFF1'
+    'YWxpdHlSZXF1aXJlZBJHCgtleHBlcmltZW50cxgFIAMoDjIgLmdvb2dsZS5tYXBzLnNvbGFyLn'
+    'YxLkV4cGVyaW1lbnRCA+BBAVILZXhwZXJpbWVudHM=');
 
 @$core.Deprecated('Use latLngBoxDescriptor instead')
 const LatLngBox$json = {
@@ -1032,6 +1058,15 @@ const GetDataLayersRequest$json = {
       '8': {},
       '10': 'exactQualityRequired'
     },
+    {
+      '1': 'experiments',
+      '3': 8,
+      '4': 3,
+      '5': 14,
+      '6': '.google.maps.solar.v1.Experiment',
+      '8': {},
+      '10': 'experiments'
+    },
   ],
 };
 
@@ -1043,7 +1078,9 @@ final $typed_data.Uint8List getDataLayersRequestDescriptor = $convert.base64Deco
     'lld0ID4EEBUgR2aWV3ElQKEHJlcXVpcmVkX3F1YWxpdHkYBSABKA4yJC5nb29nbGUubWFwcy5z'
     'b2xhci52MS5JbWFnZXJ5UXVhbGl0eUID4EEBUg9yZXF1aXJlZFF1YWxpdHkSLwoRcGl4ZWxfc2'
     'l6ZV9tZXRlcnMYBiABKAJCA+BBAVIPcGl4ZWxTaXplTWV0ZXJzEjkKFmV4YWN0X3F1YWxpdHlf'
-    'cmVxdWlyZWQYByABKAhCA+BBAVIUZXhhY3RRdWFsaXR5UmVxdWlyZWQ=');
+    'cmVxdWlyZWQYByABKAhCA+BBAVIUZXhhY3RRdWFsaXR5UmVxdWlyZWQSRwoLZXhwZXJpbWVudH'
+    'MYCCADKA4yIC5nb29nbGUubWFwcy5zb2xhci52MS5FeHBlcmltZW50QgPgQQFSC2V4cGVyaW1l'
+    'bnRz');
 
 @$core.Deprecated('Use dataLayersDescriptor instead')
 const DataLayers$json = {

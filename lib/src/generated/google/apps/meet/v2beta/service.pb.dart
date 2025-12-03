@@ -1,39 +1,43 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/apps/meet/v2beta/service.proto
-//
-// @dart = 2.12
+// Generated from google/apps/meet/v2beta/service.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/field_mask.pb.dart'
+    as $3;
 
-import '../../../protobuf/field_mask.pb.dart' as $3;
 import 'resource.pb.dart' as $1;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Request to create a space.
 class CreateSpaceRequest extends $pb.GeneratedMessage {
   factory CreateSpaceRequest({
     $1.Space? space,
   }) {
-    final $result = create();
-    if (space != null) {
-      $result.space = space;
-    }
-    return $result;
+    final result = create();
+    if (space != null) result.space = space;
+    return result;
   }
-  CreateSpaceRequest._() : super();
-  factory CreateSpaceRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateSpaceRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateSpaceRequest._();
+
+  factory CreateSpaceRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateSpaceRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateSpaceRequest',
@@ -44,24 +48,20 @@ class CreateSpaceRequest extends $pb.GeneratedMessage {
         subBuilder: $1.Space.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateSpaceRequest clone() => CreateSpaceRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateSpaceRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateSpaceRequest copyWith(void Function(CreateSpaceRequest) updates) =>
       super.copyWith((message) => updates(message as CreateSpaceRequest))
           as CreateSpaceRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateSpaceRequest create() => CreateSpaceRequest._();
+  @$core.override
   CreateSpaceRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateSpaceRequest> createRepeated() =>
-      $pb.PbList<CreateSpaceRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateSpaceRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateSpaceRequest>(create);
@@ -72,14 +72,11 @@ class CreateSpaceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.Space get space => $_getN(0);
   @$pb.TagNumber(1)
-  set space($1.Space v) {
-    setField(1, v);
-  }
-
+  set space($1.Space value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSpace() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSpace() => clearField(1);
+  void clearSpace() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.Space ensureSpace() => $_ensure(0);
 }
@@ -89,19 +86,19 @@ class GetSpaceRequest extends $pb.GeneratedMessage {
   factory GetSpaceRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetSpaceRequest._() : super();
-  factory GetSpaceRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetSpaceRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetSpaceRequest._();
+
+  factory GetSpaceRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetSpaceRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetSpaceRequest',
@@ -111,59 +108,52 @@ class GetSpaceRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetSpaceRequest clone() => GetSpaceRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetSpaceRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetSpaceRequest copyWith(void Function(GetSpaceRequest) updates) =>
       super.copyWith((message) => updates(message as GetSpaceRequest))
           as GetSpaceRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetSpaceRequest create() => GetSpaceRequest._();
+  @$core.override
   GetSpaceRequest createEmptyInstance() => create();
-  static $pb.PbList<GetSpaceRequest> createRepeated() =>
-      $pb.PbList<GetSpaceRequest>();
   @$core.pragma('dart2js:noInline')
   static GetSpaceRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetSpaceRequest>(create);
   static GetSpaceRequest? _defaultInstance;
 
-  ///  Required. Resource name of the space.
+  /// Required. Resource name of the space.
   ///
-  ///  Format: `spaces/{space}` or `spaces/{meetingCode}`.
+  /// Format: `spaces/{space}` or `spaces/{meetingCode}`.
   ///
-  ///  `{space}` is the resource identifier for the space. It's a unique,
-  ///  server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+  /// `{space}` is the resource identifier for the space. It's a unique,
+  /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
   ///
-  ///  `{meetingCode}` is an alias for the space. It's a typeable, unique
-  ///  character string and is non-case sensitive. For example, `abc-mnop-xyz`.
-  ///  The maximum length is 128 characters.
+  /// `{meetingCode}` is an alias for the space. It's a typeable, unique
+  /// character string and is non-case sensitive. For example, `abc-mnop-xyz`.
+  /// The maximum length is 128 characters.
   ///
-  ///  A `meetingCode` shouldn't be stored long term as it can become
-  ///  dissociated from a meeting space and can be reused for different meeting
-  ///  spaces in the future. Generally, a `meetingCode` expires 365 days after
-  ///  last use. For more information, see [Learn about meeting codes in Google
-  ///  Meet](https://support.google.com/meet/answer/10710509).
+  /// A `meetingCode` shouldn't be stored long term as it can become
+  /// dissociated from a meeting space and can be reused for different meeting
+  /// spaces in the future. Generally, a `meetingCode` expires 365 days after
+  /// last use. For more information, see [Learn about meeting codes in Google
+  /// Meet](https://support.google.com/meet/answer/10710509).
   ///
-  ///  For more information, see [How Meet identifies a meeting
-  ///  space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+  /// For more information, see [How Meet identifies a meeting
+  /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request to update a space.
@@ -172,22 +162,20 @@ class UpdateSpaceRequest extends $pb.GeneratedMessage {
     $1.Space? space,
     $3.FieldMask? updateMask,
   }) {
-    final $result = create();
-    if (space != null) {
-      $result.space = space;
-    }
-    if (updateMask != null) {
-      $result.updateMask = updateMask;
-    }
-    return $result;
+    final result = create();
+    if (space != null) result.space = space;
+    if (updateMask != null) result.updateMask = updateMask;
+    return result;
   }
-  UpdateSpaceRequest._() : super();
-  factory UpdateSpaceRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory UpdateSpaceRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  UpdateSpaceRequest._();
+
+  factory UpdateSpaceRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateSpaceRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateSpaceRequest',
@@ -200,24 +188,20 @@ class UpdateSpaceRequest extends $pb.GeneratedMessage {
         subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  UpdateSpaceRequest clone() => UpdateSpaceRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateSpaceRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateSpaceRequest copyWith(void Function(UpdateSpaceRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateSpaceRequest))
           as UpdateSpaceRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static UpdateSpaceRequest create() => UpdateSpaceRequest._();
+  @$core.override
   UpdateSpaceRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateSpaceRequest> createRepeated() =>
-      $pb.PbList<UpdateSpaceRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateSpaceRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateSpaceRequest>(create);
@@ -227,14 +211,11 @@ class UpdateSpaceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.Space get space => $_getN(0);
   @$pb.TagNumber(1)
-  set space($1.Space v) {
-    setField(1, v);
-  }
-
+  set space($1.Space value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasSpace() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSpace() => clearField(1);
+  void clearSpace() => $_clearField(1);
   @$pb.TagNumber(1)
   $1.Space ensureSpace() => $_ensure(0);
 
@@ -247,14 +228,11 @@ class UpdateSpaceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($3.FieldMask v) {
-    setField(2, v);
-  }
-
+  set updateMask($3.FieldMask value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
@@ -266,22 +244,20 @@ class ConnectActiveConferenceRequest extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? offer,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (offer != null) {
-      $result.offer = offer;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (offer != null) result.offer = offer;
+    return result;
   }
-  ConnectActiveConferenceRequest._() : super();
-  factory ConnectActiveConferenceRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ConnectActiveConferenceRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ConnectActiveConferenceRequest._();
+
+  factory ConnectActiveConferenceRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ConnectActiveConferenceRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ConnectActiveConferenceRequest',
@@ -292,28 +268,23 @@ class ConnectActiveConferenceRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'offer')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ConnectActiveConferenceRequest clone() =>
-      ConnectActiveConferenceRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConnectActiveConferenceRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ConnectActiveConferenceRequest copyWith(
           void Function(ConnectActiveConferenceRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ConnectActiveConferenceRequest))
           as ConnectActiveConferenceRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ConnectActiveConferenceRequest create() =>
       ConnectActiveConferenceRequest._();
+  @$core.override
   ConnectActiveConferenceRequest createEmptyInstance() => create();
-  static $pb.PbList<ConnectActiveConferenceRequest> createRepeated() =>
-      $pb.PbList<ConnectActiveConferenceRequest>();
   @$core.pragma('dart2js:noInline')
   static ConnectActiveConferenceRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConnectActiveConferenceRequest>(create);
@@ -324,64 +295,56 @@ class ConnectActiveConferenceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  ///  Required. WebRTC SDP (Session Description Protocol) offer from the client.
+  /// Required. WebRTC SDP (Session Description Protocol) offer from the client.
   ///
-  ///  The format is defined by [RFC
-  ///  8866](https://www.rfc-editor.org/rfc/rfc8866) with mandatory keys defined
-  ///  by [RFC 8829](https://www.rfc-editor.org/rfc/rfc8829). This is the standard
-  ///  SDP format generated by a peer connection's createOffer() and
-  ///  createAnswer() methods.
+  /// The format is defined by [RFC
+  /// 8866](https://www.rfc-editor.org/rfc/rfc8866) with mandatory keys defined
+  /// by [RFC 8829](https://www.rfc-editor.org/rfc/rfc8829). This is the standard
+  /// SDP format generated by a peer connection's createOffer() and
+  /// createAnswer() methods.
   @$pb.TagNumber(2)
   $core.String get offer => $_getSZ(1);
   @$pb.TagNumber(2)
-  set offer($core.String v) {
-    $_setString(1, v);
-  }
-
+  set offer($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasOffer() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOffer() => clearField(2);
+  void clearOffer() => $_clearField(2);
 }
 
-///  Response of ConnectActiveConference method.
+/// Response of ConnectActiveConference method.
 ///
-///  A success response does not indicate the meeting is fully joined; further
-///  communication must occur across WebRTC.
+/// A success response does not indicate the meeting is fully joined; further
+/// communication must occur across WebRTC.
 ///
-///  See [Meet Media API
-///  overview](https://developers.google.com/meet/media-api/guides/overview) for
-///  more details about this connection.
+/// See [Meet Media API
+/// overview](https://developers.google.com/meet/media-api/guides/overview) for
+/// more details about this connection.
 class ConnectActiveConferenceResponse extends $pb.GeneratedMessage {
   factory ConnectActiveConferenceResponse({
     $core.String? answer,
     $core.String? traceId,
   }) {
-    final $result = create();
-    if (answer != null) {
-      $result.answer = answer;
-    }
-    if (traceId != null) {
-      $result.traceId = traceId;
-    }
-    return $result;
+    final result = create();
+    if (answer != null) result.answer = answer;
+    if (traceId != null) result.traceId = traceId;
+    return result;
   }
-  ConnectActiveConferenceResponse._() : super();
-  factory ConnectActiveConferenceResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ConnectActiveConferenceResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ConnectActiveConferenceResponse._();
+
+  factory ConnectActiveConferenceResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ConnectActiveConferenceResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ConnectActiveConferenceResponse',
@@ -392,28 +355,23 @@ class ConnectActiveConferenceResponse extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'traceId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ConnectActiveConferenceResponse clone() =>
-      ConnectActiveConferenceResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConnectActiveConferenceResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ConnectActiveConferenceResponse copyWith(
           void Function(ConnectActiveConferenceResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ConnectActiveConferenceResponse))
           as ConnectActiveConferenceResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ConnectActiveConferenceResponse create() =>
       ConnectActiveConferenceResponse._();
+  @$core.override
   ConnectActiveConferenceResponse createEmptyInstance() => create();
-  static $pb.PbList<ConnectActiveConferenceResponse> createRepeated() =>
-      $pb.PbList<ConnectActiveConferenceResponse>();
   @$core.pragma('dart2js:noInline')
   static ConnectActiveConferenceResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConnectActiveConferenceResponse>(
@@ -424,28 +382,22 @@ class ConnectActiveConferenceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get answer => $_getSZ(0);
   @$pb.TagNumber(1)
-  set answer($core.String v) {
-    $_setString(0, v);
-  }
-
+  set answer($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAnswer() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAnswer() => clearField(1);
+  void clearAnswer() => $_clearField(1);
 
   /// Trace ID for debugging purposes. Please include this value when filing
   /// bugs.
   @$pb.TagNumber(2)
   $core.String get traceId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set traceId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set traceId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasTraceId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTraceId() => clearField(2);
+  void clearTraceId() => $_clearField(2);
 }
 
 /// Request to end an ongoing conference of a space.
@@ -453,19 +405,19 @@ class EndActiveConferenceRequest extends $pb.GeneratedMessage {
   factory EndActiveConferenceRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  EndActiveConferenceRequest._() : super();
-  factory EndActiveConferenceRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EndActiveConferenceRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  EndActiveConferenceRequest._();
+
+  factory EndActiveConferenceRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EndActiveConferenceRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'EndActiveConferenceRequest',
@@ -475,52 +427,44 @@ class EndActiveConferenceRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EndActiveConferenceRequest clone() =>
-      EndActiveConferenceRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EndActiveConferenceRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   EndActiveConferenceRequest copyWith(
           void Function(EndActiveConferenceRequest) updates) =>
       super.copyWith(
               (message) => updates(message as EndActiveConferenceRequest))
           as EndActiveConferenceRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EndActiveConferenceRequest create() => EndActiveConferenceRequest._();
+  @$core.override
   EndActiveConferenceRequest createEmptyInstance() => create();
-  static $pb.PbList<EndActiveConferenceRequest> createRepeated() =>
-      $pb.PbList<EndActiveConferenceRequest>();
   @$core.pragma('dart2js:noInline')
   static EndActiveConferenceRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<EndActiveConferenceRequest>(create);
   static EndActiveConferenceRequest? _defaultInstance;
 
-  ///  Required. Resource name of the space.
+  /// Required. Resource name of the space.
   ///
-  ///  Format: `spaces/{space}`.
+  /// Format: `spaces/{space}`.
   ///
-  ///  `{space}` is the resource identifier for the space. It's a unique,
-  ///  server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+  /// `{space}` is the resource identifier for the space. It's a unique,
+  /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
   ///
-  ///  For more information, see [How Meet identifies a meeting
-  ///  space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+  /// For more information, see [How Meet identifies a meeting
+  /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request to create a member for a space.
@@ -529,22 +473,20 @@ class CreateMemberRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $1.Member? member,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (member != null) {
-      $result.member = member;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (member != null) result.member = member;
+    return result;
   }
-  CreateMemberRequest._() : super();
-  factory CreateMemberRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CreateMemberRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  CreateMemberRequest._();
+
+  factory CreateMemberRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory CreateMemberRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'CreateMemberRequest',
@@ -556,24 +498,20 @@ class CreateMemberRequest extends $pb.GeneratedMessage {
         subBuilder: $1.Member.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CreateMemberRequest clone() => CreateMemberRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateMemberRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateMemberRequest copyWith(void Function(CreateMemberRequest) updates) =>
       super.copyWith((message) => updates(message as CreateMemberRequest))
           as CreateMemberRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static CreateMemberRequest create() => CreateMemberRequest._();
+  @$core.override
   CreateMemberRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateMemberRequest> createRepeated() =>
-      $pb.PbList<CreateMemberRequest>();
   @$core.pragma('dart2js:noInline')
   static CreateMemberRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CreateMemberRequest>(create);
@@ -583,27 +521,21 @@ class CreateMemberRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Required. The member to be created.
   @$pb.TagNumber(2)
   $1.Member get member => $_getN(1);
   @$pb.TagNumber(2)
-  set member($1.Member v) {
-    setField(2, v);
-  }
-
+  set member($1.Member value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasMember() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMember() => clearField(2);
+  void clearMember() => $_clearField(2);
   @$pb.TagNumber(2)
   $1.Member ensureMember() => $_ensure(1);
 }
@@ -613,19 +545,19 @@ class GetMemberRequest extends $pb.GeneratedMessage {
   factory GetMemberRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetMemberRequest._() : super();
-  factory GetMemberRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetMemberRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetMemberRequest._();
+
+  factory GetMemberRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetMemberRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetMemberRequest',
@@ -635,24 +567,20 @@ class GetMemberRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetMemberRequest clone() => GetMemberRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetMemberRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetMemberRequest copyWith(void Function(GetMemberRequest) updates) =>
       super.copyWith((message) => updates(message as GetMemberRequest))
           as GetMemberRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetMemberRequest create() => GetMemberRequest._();
+  @$core.override
   GetMemberRequest createEmptyInstance() => create();
-  static $pb.PbList<GetMemberRequest> createRepeated() =>
-      $pb.PbList<GetMemberRequest>();
   @$core.pragma('dart2js:noInline')
   static GetMemberRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetMemberRequest>(create);
@@ -662,14 +590,11 @@ class GetMemberRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request to list all members of a space.
@@ -679,25 +604,21 @@ class ListMembersRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListMembersRequest._() : super();
-  factory ListMembersRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListMembersRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListMembersRequest._();
+
+  factory ListMembersRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListMembersRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListMembersRequest',
@@ -705,28 +626,24 @@ class ListMembersRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListMembersRequest clone() => ListMembersRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListMembersRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListMembersRequest copyWith(void Function(ListMembersRequest) updates) =>
       super.copyWith((message) => updates(message as ListMembersRequest))
           as ListMembersRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListMembersRequest create() => ListMembersRequest._();
+  @$core.override
   ListMembersRequest createEmptyInstance() => create();
-  static $pb.PbList<ListMembersRequest> createRepeated() =>
-      $pb.PbList<ListMembersRequest>();
   @$core.pragma('dart2js:noInline')
   static ListMembersRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListMembersRequest>(create);
@@ -736,14 +653,11 @@ class ListMembersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Optional. Maximum number of members to return. The service might return
   /// fewer than this value. If unspecified, at most 25 members are returned. The
@@ -752,27 +666,21 @@ class ListMembersRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// Optional. Page token returned from previous List Call.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 }
 
 /// Response of list members.
@@ -781,51 +689,45 @@ class ListMembersResponse extends $pb.GeneratedMessage {
     $core.Iterable<$1.Member>? members,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (members != null) {
-      $result.members.addAll(members);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (members != null) result.members.addAll(members);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListMembersResponse._() : super();
-  factory ListMembersResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListMembersResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListMembersResponse._();
+
+  factory ListMembersResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListMembersResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListMembersResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
-    ..pc<$1.Member>(1, _omitFieldNames ? '' : 'members', $pb.PbFieldType.PM,
+    ..pPM<$1.Member>(1, _omitFieldNames ? '' : 'members',
         subBuilder: $1.Member.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListMembersResponse clone() => ListMembersResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListMembersResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListMembersResponse copyWith(void Function(ListMembersResponse) updates) =>
       super.copyWith((message) => updates(message as ListMembersResponse))
           as ListMembersResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListMembersResponse create() => ListMembersResponse._();
+  @$core.override
   ListMembersResponse createEmptyInstance() => create();
-  static $pb.PbList<ListMembersResponse> createRepeated() =>
-      $pb.PbList<ListMembersResponse>();
   @$core.pragma('dart2js:noInline')
   static ListMembersResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListMembersResponse>(create);
@@ -833,21 +735,18 @@ class ListMembersResponse extends $pb.GeneratedMessage {
 
   /// The list of members for the current page.
   @$pb.TagNumber(1)
-  $core.List<$1.Member> get members => $_getList(0);
+  $pb.PbList<$1.Member> get members => $_getList(0);
 
   /// Token to be circulated back for further list call if current list doesn't
   /// include all the members. Unset if all members are returned.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request to delete a member from a space.
@@ -855,19 +754,19 @@ class DeleteMemberRequest extends $pb.GeneratedMessage {
   factory DeleteMemberRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  DeleteMemberRequest._() : super();
-  factory DeleteMemberRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DeleteMemberRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  DeleteMemberRequest._();
+
+  factory DeleteMemberRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteMemberRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'DeleteMemberRequest',
@@ -877,24 +776,20 @@ class DeleteMemberRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DeleteMemberRequest clone() => DeleteMemberRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteMemberRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteMemberRequest copyWith(void Function(DeleteMemberRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteMemberRequest))
           as DeleteMemberRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DeleteMemberRequest create() => DeleteMemberRequest._();
+  @$core.override
   DeleteMemberRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteMemberRequest> createRepeated() =>
-      $pb.PbList<DeleteMemberRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteMemberRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteMemberRequest>(create);
@@ -904,14 +799,11 @@ class DeleteMemberRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request to get a conference record.
@@ -919,19 +811,19 @@ class GetConferenceRecordRequest extends $pb.GeneratedMessage {
   factory GetConferenceRecordRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetConferenceRecordRequest._() : super();
-  factory GetConferenceRecordRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetConferenceRecordRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetConferenceRecordRequest._();
+
+  factory GetConferenceRecordRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetConferenceRecordRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetConferenceRecordRequest',
@@ -941,27 +833,22 @@ class GetConferenceRecordRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetConferenceRecordRequest clone() =>
-      GetConferenceRecordRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetConferenceRecordRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetConferenceRecordRequest copyWith(
           void Function(GetConferenceRecordRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetConferenceRecordRequest))
           as GetConferenceRecordRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetConferenceRecordRequest create() => GetConferenceRecordRequest._();
+  @$core.override
   GetConferenceRecordRequest createEmptyInstance() => create();
-  static $pb.PbList<GetConferenceRecordRequest> createRepeated() =>
-      $pb.PbList<GetConferenceRecordRequest>();
   @$core.pragma('dart2js:noInline')
   static GetConferenceRecordRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetConferenceRecordRequest>(create);
@@ -971,14 +858,11 @@ class GetConferenceRecordRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request to fetch list of conference records per user.
@@ -988,58 +872,49 @@ class ListConferenceRecordsRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.String? filter,
   }) {
-    final $result = create();
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    return $result;
+    final result = create();
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (filter != null) result.filter = filter;
+    return result;
   }
-  ListConferenceRecordsRequest._() : super();
-  factory ListConferenceRecordsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListConferenceRecordsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListConferenceRecordsRequest._();
+
+  factory ListConferenceRecordsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListConferenceRecordsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListConferenceRecordsRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(1, _omitFieldNames ? '' : 'pageSize')
     ..aOS(2, _omitFieldNames ? '' : 'pageToken')
     ..aOS(3, _omitFieldNames ? '' : 'filter')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListConferenceRecordsRequest clone() =>
-      ListConferenceRecordsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListConferenceRecordsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListConferenceRecordsRequest copyWith(
           void Function(ListConferenceRecordsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListConferenceRecordsRequest))
           as ListConferenceRecordsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListConferenceRecordsRequest create() =>
       ListConferenceRecordsRequest._();
+  @$core.override
   ListConferenceRecordsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListConferenceRecordsRequest> createRepeated() =>
-      $pb.PbList<ListConferenceRecordsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListConferenceRecordsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListConferenceRecordsRequest>(create);
@@ -1052,55 +927,46 @@ class ListConferenceRecordsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get pageSize => $_getIZ(0);
   @$pb.TagNumber(1)
-  set pageSize($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPageSize() => clearField(1);
+  void clearPageSize() => $_clearField(1);
 
   /// Optional. Page token returned from previous List Call.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set pageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set pageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageToken() => clearField(2);
+  void clearPageToken() => $_clearField(2);
 
-  ///  Optional. User specified filtering condition in [EBNF
-  ///  format](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form).
-  ///  The following are the filterable fields:
+  /// Optional. User specified filtering condition in [EBNF
+  /// format](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form).
+  /// The following are the filterable fields:
   ///
-  ///  * `space.meeting_code`
-  ///  * `space.name`
-  ///  * `start_time`
-  ///  * `end_time`
+  /// * `space.meeting_code`
+  /// * `space.name`
+  /// * `start_time`
+  /// * `end_time`
   ///
-  ///  For example, consider the following filters:
+  /// For example, consider the following filters:
   ///
-  ///  * `space.name = "spaces/NAME"`
-  ///  * `space.meeting_code = "abc-mnop-xyz"`
-  ///  * `start_time>="2024-01-01T00:00:00.000Z" AND
-  ///  start_time<="2024-01-02T00:00:00.000Z"`
-  ///  * `end_time IS NULL`
+  /// * `space.name = "spaces/NAME"`
+  /// * `space.meeting_code = "abc-mnop-xyz"`
+  /// * `start_time>="2024-01-01T00:00:00.000Z" AND
+  /// start_time<="2024-01-02T00:00:00.000Z"`
+  /// * `end_time IS NULL`
   @$pb.TagNumber(3)
   $core.String get filter => $_getSZ(2);
   @$pb.TagNumber(3)
-  set filter($core.String v) {
-    $_setString(2, v);
-  }
-
+  set filter($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasFilter() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFilter() => clearField(3);
+  void clearFilter() => $_clearField(3);
 }
 
 /// Response of ListConferenceRecords method.
@@ -1109,56 +975,49 @@ class ListConferenceRecordsResponse extends $pb.GeneratedMessage {
     $core.Iterable<$1.ConferenceRecord>? conferenceRecords,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (conferenceRecords != null) {
-      $result.conferenceRecords.addAll(conferenceRecords);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (conferenceRecords != null)
+      result.conferenceRecords.addAll(conferenceRecords);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListConferenceRecordsResponse._() : super();
-  factory ListConferenceRecordsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListConferenceRecordsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListConferenceRecordsResponse._();
+
+  factory ListConferenceRecordsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListConferenceRecordsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListConferenceRecordsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
-    ..pc<$1.ConferenceRecord>(
-        1, _omitFieldNames ? '' : 'conferenceRecords', $pb.PbFieldType.PM,
+    ..pPM<$1.ConferenceRecord>(1, _omitFieldNames ? '' : 'conferenceRecords',
         subBuilder: $1.ConferenceRecord.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListConferenceRecordsResponse clone() =>
-      ListConferenceRecordsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListConferenceRecordsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListConferenceRecordsResponse copyWith(
           void Function(ListConferenceRecordsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListConferenceRecordsResponse))
           as ListConferenceRecordsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListConferenceRecordsResponse create() =>
       ListConferenceRecordsResponse._();
+  @$core.override
   ListConferenceRecordsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListConferenceRecordsResponse> createRepeated() =>
-      $pb.PbList<ListConferenceRecordsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListConferenceRecordsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListConferenceRecordsResponse>(create);
@@ -1166,21 +1025,18 @@ class ListConferenceRecordsResponse extends $pb.GeneratedMessage {
 
   /// List of conferences in one page.
   @$pb.TagNumber(1)
-  $core.List<$1.ConferenceRecord> get conferenceRecords => $_getList(0);
+  $pb.PbList<$1.ConferenceRecord> get conferenceRecords => $_getList(0);
 
   /// Token to be circulated back for further List call if current List does NOT
   /// include all the Conferences. Unset if all conferences have been returned.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request to get a participant.
@@ -1188,19 +1044,19 @@ class GetParticipantRequest extends $pb.GeneratedMessage {
   factory GetParticipantRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetParticipantRequest._() : super();
-  factory GetParticipantRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetParticipantRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetParticipantRequest._();
+
+  factory GetParticipantRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetParticipantRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetParticipantRequest',
@@ -1210,26 +1066,21 @@ class GetParticipantRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetParticipantRequest clone() =>
-      GetParticipantRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParticipantRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetParticipantRequest copyWith(
           void Function(GetParticipantRequest) updates) =>
       super.copyWith((message) => updates(message as GetParticipantRequest))
           as GetParticipantRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetParticipantRequest create() => GetParticipantRequest._();
+  @$core.override
   GetParticipantRequest createEmptyInstance() => create();
-  static $pb.PbList<GetParticipantRequest> createRepeated() =>
-      $pb.PbList<GetParticipantRequest>();
   @$core.pragma('dart2js:noInline')
   static GetParticipantRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetParticipantRequest>(create);
@@ -1239,14 +1090,11 @@ class GetParticipantRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request to fetch list of participants per conference.
@@ -1257,28 +1105,22 @@ class ListParticipantsRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.String? filter,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (filter != null) result.filter = filter;
+    return result;
   }
-  ListParticipantsRequest._() : super();
-  factory ListParticipantsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListParticipantsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListParticipantsRequest._();
+
+  factory ListParticipantsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListParticipantsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListParticipantsRequest',
@@ -1286,31 +1128,26 @@ class ListParticipantsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..aOS(4, _omitFieldNames ? '' : 'filter')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListParticipantsRequest clone() =>
-      ListParticipantsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListParticipantsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListParticipantsRequest copyWith(
           void Function(ListParticipantsRequest) updates) =>
       super.copyWith((message) => updates(message as ListParticipantsRequest))
           as ListParticipantsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListParticipantsRequest create() => ListParticipantsRequest._();
+  @$core.override
   ListParticipantsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListParticipantsRequest> createRepeated() =>
-      $pb.PbList<ListParticipantsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListParticipantsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListParticipantsRequest>(create);
@@ -1320,14 +1157,11 @@ class ListParticipantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Maximum number of participants to return. The service might return fewer
   /// than this value.
@@ -1337,48 +1171,39 @@ class ListParticipantsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// Page token returned from previous List Call.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 
-  ///  Optional. User specified filtering condition in [EBNF
-  ///  format](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form).
-  ///  The following are the filterable fields:
+  /// Optional. User specified filtering condition in [EBNF
+  /// format](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form).
+  /// The following are the filterable fields:
   ///
-  ///  * `earliest_start_time`
-  ///  * `latest_end_time`
+  /// * `earliest_start_time`
+  /// * `latest_end_time`
   ///
-  ///  For example, `latest_end_time IS NULL` returns active participants in
-  ///  the conference.
+  /// For example, `latest_end_time IS NULL` returns active participants in
+  /// the conference.
   @$pb.TagNumber(4)
   $core.String get filter => $_getSZ(3);
   @$pb.TagNumber(4)
-  set filter($core.String v) {
-    $_setString(3, v);
-  }
-
+  set filter($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFilter() => clearField(4);
+  void clearFilter() => $_clearField(4);
 }
 
 /// Response of ListParticipants method.
@@ -1388,58 +1213,48 @@ class ListParticipantsResponse extends $pb.GeneratedMessage {
     $core.String? nextPageToken,
     $core.int? totalSize,
   }) {
-    final $result = create();
-    if (participants != null) {
-      $result.participants.addAll(participants);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    if (totalSize != null) {
-      $result.totalSize = totalSize;
-    }
-    return $result;
+    final result = create();
+    if (participants != null) result.participants.addAll(participants);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    if (totalSize != null) result.totalSize = totalSize;
+    return result;
   }
-  ListParticipantsResponse._() : super();
-  factory ListParticipantsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListParticipantsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListParticipantsResponse._();
+
+  factory ListParticipantsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListParticipantsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListParticipantsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
-    ..pc<$1.Participant>(
-        1, _omitFieldNames ? '' : 'participants', $pb.PbFieldType.PM,
+    ..pPM<$1.Participant>(1, _omitFieldNames ? '' : 'participants',
         subBuilder: $1.Participant.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'totalSize', $pb.PbFieldType.O3)
+    ..aI(3, _omitFieldNames ? '' : 'totalSize')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListParticipantsResponse clone() =>
-      ListParticipantsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListParticipantsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListParticipantsResponse copyWith(
           void Function(ListParticipantsResponse) updates) =>
       super.copyWith((message) => updates(message as ListParticipantsResponse))
           as ListParticipantsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListParticipantsResponse create() => ListParticipantsResponse._();
+  @$core.override
   ListParticipantsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListParticipantsResponse> createRepeated() =>
-      $pb.PbList<ListParticipantsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListParticipantsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListParticipantsResponse>(create);
@@ -1447,21 +1262,18 @@ class ListParticipantsResponse extends $pb.GeneratedMessage {
 
   /// List of participants in one page.
   @$pb.TagNumber(1)
-  $core.List<$1.Participant> get participants => $_getList(0);
+  $pb.PbList<$1.Participant> get participants => $_getList(0);
 
   /// Token to be circulated back for further List call if current List doesn't
   /// include all the participants. Unset if all participants are returned.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 
   /// Total, exact number of `participants`. By default, this field isn't
   /// included in the response. Set the field mask in
@@ -1470,14 +1282,11 @@ class ListParticipantsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get totalSize => $_getIZ(2);
   @$pb.TagNumber(3)
-  set totalSize($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set totalSize($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
   $core.bool hasTotalSize() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTotalSize() => clearField(3);
+  void clearTotalSize() => $_clearField(3);
 }
 
 /// Request to get a participant session.
@@ -1485,19 +1294,19 @@ class GetParticipantSessionRequest extends $pb.GeneratedMessage {
   factory GetParticipantSessionRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetParticipantSessionRequest._() : super();
-  factory GetParticipantSessionRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetParticipantSessionRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetParticipantSessionRequest._();
+
+  factory GetParticipantSessionRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetParticipantSessionRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetParticipantSessionRequest',
@@ -1507,28 +1316,23 @@ class GetParticipantSessionRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetParticipantSessionRequest clone() =>
-      GetParticipantSessionRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetParticipantSessionRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetParticipantSessionRequest copyWith(
           void Function(GetParticipantSessionRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetParticipantSessionRequest))
           as GetParticipantSessionRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetParticipantSessionRequest create() =>
       GetParticipantSessionRequest._();
+  @$core.override
   GetParticipantSessionRequest createEmptyInstance() => create();
-  static $pb.PbList<GetParticipantSessionRequest> createRepeated() =>
-      $pb.PbList<GetParticipantSessionRequest>();
   @$core.pragma('dart2js:noInline')
   static GetParticipantSessionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetParticipantSessionRequest>(create);
@@ -1538,14 +1342,11 @@ class GetParticipantSessionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request to fetch list of participant sessions per conference record, per
@@ -1557,28 +1358,22 @@ class ListParticipantSessionsRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.String? filter,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    if (filter != null) result.filter = filter;
+    return result;
   }
-  ListParticipantSessionsRequest._() : super();
-  factory ListParticipantSessionsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListParticipantSessionsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListParticipantSessionsRequest._();
+
+  factory ListParticipantSessionsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListParticipantSessionsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListParticipantSessionsRequest',
@@ -1586,33 +1381,28 @@ class ListParticipantSessionsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..aOS(4, _omitFieldNames ? '' : 'filter')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListParticipantSessionsRequest clone() =>
-      ListParticipantSessionsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListParticipantSessionsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListParticipantSessionsRequest copyWith(
           void Function(ListParticipantSessionsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListParticipantSessionsRequest))
           as ListParticipantSessionsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListParticipantSessionsRequest create() =>
       ListParticipantSessionsRequest._();
+  @$core.override
   ListParticipantSessionsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListParticipantSessionsRequest> createRepeated() =>
-      $pb.PbList<ListParticipantSessionsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListParticipantSessionsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListParticipantSessionsRequest>(create);
@@ -1623,14 +1413,11 @@ class ListParticipantSessionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Optional. Maximum number of participant sessions to return. The service
   /// might return fewer than this value. If unspecified, at most 100
@@ -1639,48 +1426,39 @@ class ListParticipantSessionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// Optional. Page token returned from previous List Call.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 
-  ///  Optional. User specified filtering condition in [EBNF
-  ///  format](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form).
-  ///  The following are the filterable fields:
+  /// Optional. User specified filtering condition in [EBNF
+  /// format](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form).
+  /// The following are the filterable fields:
   ///
-  ///  * `start_time`
-  ///  * `end_time`
+  /// * `start_time`
+  /// * `end_time`
   ///
-  ///  For example, `end_time IS NULL` returns active participant sessions in
-  ///  the conference record.
+  /// For example, `end_time IS NULL` returns active participant sessions in
+  /// the conference record.
   @$pb.TagNumber(4)
   $core.String get filter => $_getSZ(3);
   @$pb.TagNumber(4)
-  set filter($core.String v) {
-    $_setString(3, v);
-  }
-
+  set filter($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasFilter() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFilter() => clearField(4);
+  void clearFilter() => $_clearField(4);
 }
 
 /// Response of ListParticipants method.
@@ -1689,56 +1467,50 @@ class ListParticipantSessionsResponse extends $pb.GeneratedMessage {
     $core.Iterable<$1.ParticipantSession>? participantSessions,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (participantSessions != null) {
-      $result.participantSessions.addAll(participantSessions);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (participantSessions != null)
+      result.participantSessions.addAll(participantSessions);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListParticipantSessionsResponse._() : super();
-  factory ListParticipantSessionsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListParticipantSessionsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListParticipantSessionsResponse._();
+
+  factory ListParticipantSessionsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListParticipantSessionsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListParticipantSessionsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
-    ..pc<$1.ParticipantSession>(
-        1, _omitFieldNames ? '' : 'participantSessions', $pb.PbFieldType.PM,
+    ..pPM<$1.ParticipantSession>(
+        1, _omitFieldNames ? '' : 'participantSessions',
         subBuilder: $1.ParticipantSession.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListParticipantSessionsResponse clone() =>
-      ListParticipantSessionsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListParticipantSessionsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListParticipantSessionsResponse copyWith(
           void Function(ListParticipantSessionsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListParticipantSessionsResponse))
           as ListParticipantSessionsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListParticipantSessionsResponse create() =>
       ListParticipantSessionsResponse._();
+  @$core.override
   ListParticipantSessionsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListParticipantSessionsResponse> createRepeated() =>
-      $pb.PbList<ListParticipantSessionsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListParticipantSessionsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListParticipantSessionsResponse>(
@@ -1747,21 +1519,18 @@ class ListParticipantSessionsResponse extends $pb.GeneratedMessage {
 
   /// List of participants in one page.
   @$pb.TagNumber(1)
-  $core.List<$1.ParticipantSession> get participantSessions => $_getList(0);
+  $pb.PbList<$1.ParticipantSession> get participantSessions => $_getList(0);
 
   /// Token to be circulated back for further List call if current List doesn't
   /// include all the participants. Unset if all participants are returned.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request message for GetRecording method.
@@ -1769,19 +1538,19 @@ class GetRecordingRequest extends $pb.GeneratedMessage {
   factory GetRecordingRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetRecordingRequest._() : super();
-  factory GetRecordingRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetRecordingRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetRecordingRequest._();
+
+  factory GetRecordingRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetRecordingRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetRecordingRequest',
@@ -1791,24 +1560,20 @@ class GetRecordingRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetRecordingRequest clone() => GetRecordingRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetRecordingRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetRecordingRequest copyWith(void Function(GetRecordingRequest) updates) =>
       super.copyWith((message) => updates(message as GetRecordingRequest))
           as GetRecordingRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetRecordingRequest create() => GetRecordingRequest._();
+  @$core.override
   GetRecordingRequest createEmptyInstance() => create();
-  static $pb.PbList<GetRecordingRequest> createRepeated() =>
-      $pb.PbList<GetRecordingRequest>();
   @$core.pragma('dart2js:noInline')
   static GetRecordingRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetRecordingRequest>(create);
@@ -1818,14 +1583,11 @@ class GetRecordingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request for ListRecordings method.
@@ -1835,25 +1597,21 @@ class ListRecordingsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListRecordingsRequest._() : super();
-  factory ListRecordingsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListRecordingsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListRecordingsRequest._();
+
+  factory ListRecordingsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListRecordingsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListRecordingsRequest',
@@ -1861,30 +1619,25 @@ class ListRecordingsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListRecordingsRequest clone() =>
-      ListRecordingsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListRecordingsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListRecordingsRequest copyWith(
           void Function(ListRecordingsRequest) updates) =>
       super.copyWith((message) => updates(message as ListRecordingsRequest))
           as ListRecordingsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListRecordingsRequest create() => ListRecordingsRequest._();
+  @$core.override
   ListRecordingsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListRecordingsRequest> createRepeated() =>
-      $pb.PbList<ListRecordingsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListRecordingsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListRecordingsRequest>(create);
@@ -1894,14 +1647,11 @@ class ListRecordingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Maximum number of recordings to return. The service might return fewer
   /// than this value.
@@ -1911,27 +1661,21 @@ class ListRecordingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// Page token returned from previous List Call.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 }
 
 /// Response for ListRecordings method.
@@ -1940,54 +1684,46 @@ class ListRecordingsResponse extends $pb.GeneratedMessage {
     $core.Iterable<$1.Recording>? recordings,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (recordings != null) {
-      $result.recordings.addAll(recordings);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (recordings != null) result.recordings.addAll(recordings);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListRecordingsResponse._() : super();
-  factory ListRecordingsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListRecordingsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListRecordingsResponse._();
+
+  factory ListRecordingsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListRecordingsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListRecordingsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
-    ..pc<$1.Recording>(
-        1, _omitFieldNames ? '' : 'recordings', $pb.PbFieldType.PM,
+    ..pPM<$1.Recording>(1, _omitFieldNames ? '' : 'recordings',
         subBuilder: $1.Recording.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListRecordingsResponse clone() =>
-      ListRecordingsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListRecordingsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListRecordingsResponse copyWith(
           void Function(ListRecordingsResponse) updates) =>
       super.copyWith((message) => updates(message as ListRecordingsResponse))
           as ListRecordingsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListRecordingsResponse create() => ListRecordingsResponse._();
+  @$core.override
   ListRecordingsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListRecordingsResponse> createRepeated() =>
-      $pb.PbList<ListRecordingsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListRecordingsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListRecordingsResponse>(create);
@@ -1995,21 +1731,18 @@ class ListRecordingsResponse extends $pb.GeneratedMessage {
 
   /// List of recordings in one page.
   @$pb.TagNumber(1)
-  $core.List<$1.Recording> get recordings => $_getList(0);
+  $pb.PbList<$1.Recording> get recordings => $_getList(0);
 
   /// Token to be circulated back for further List call if current List doesn't
   /// include all the recordings. Unset if all recordings are returned.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request for GetTranscript method.
@@ -2017,19 +1750,19 @@ class GetTranscriptRequest extends $pb.GeneratedMessage {
   factory GetTranscriptRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetTranscriptRequest._() : super();
-  factory GetTranscriptRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetTranscriptRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetTranscriptRequest._();
+
+  factory GetTranscriptRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetTranscriptRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetTranscriptRequest',
@@ -2039,25 +1772,20 @@ class GetTranscriptRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetTranscriptRequest clone() =>
-      GetTranscriptRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetTranscriptRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetTranscriptRequest copyWith(void Function(GetTranscriptRequest) updates) =>
       super.copyWith((message) => updates(message as GetTranscriptRequest))
           as GetTranscriptRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetTranscriptRequest create() => GetTranscriptRequest._();
+  @$core.override
   GetTranscriptRequest createEmptyInstance() => create();
-  static $pb.PbList<GetTranscriptRequest> createRepeated() =>
-      $pb.PbList<GetTranscriptRequest>();
   @$core.pragma('dart2js:noInline')
   static GetTranscriptRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetTranscriptRequest>(create);
@@ -2067,14 +1795,11 @@ class GetTranscriptRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request for ListTranscripts method.
@@ -2084,25 +1809,21 @@ class ListTranscriptsRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListTranscriptsRequest._() : super();
-  factory ListTranscriptsRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListTranscriptsRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListTranscriptsRequest._();
+
+  factory ListTranscriptsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTranscriptsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListTranscriptsRequest',
@@ -2110,30 +1831,25 @@ class ListTranscriptsRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListTranscriptsRequest clone() =>
-      ListTranscriptsRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTranscriptsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListTranscriptsRequest copyWith(
           void Function(ListTranscriptsRequest) updates) =>
       super.copyWith((message) => updates(message as ListTranscriptsRequest))
           as ListTranscriptsRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListTranscriptsRequest create() => ListTranscriptsRequest._();
+  @$core.override
   ListTranscriptsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListTranscriptsRequest> createRepeated() =>
-      $pb.PbList<ListTranscriptsRequest>();
   @$core.pragma('dart2js:noInline')
   static ListTranscriptsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListTranscriptsRequest>(create);
@@ -2143,14 +1859,11 @@ class ListTranscriptsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Maximum number of transcripts to return. The service might return fewer
   /// than this value.
@@ -2160,27 +1873,21 @@ class ListTranscriptsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// Page token returned from previous List Call.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 }
 
 /// Response for ListTranscripts method.
@@ -2189,54 +1896,46 @@ class ListTranscriptsResponse extends $pb.GeneratedMessage {
     $core.Iterable<$1.Transcript>? transcripts,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (transcripts != null) {
-      $result.transcripts.addAll(transcripts);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (transcripts != null) result.transcripts.addAll(transcripts);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListTranscriptsResponse._() : super();
-  factory ListTranscriptsResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListTranscriptsResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListTranscriptsResponse._();
+
+  factory ListTranscriptsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTranscriptsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListTranscriptsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
-    ..pc<$1.Transcript>(
-        1, _omitFieldNames ? '' : 'transcripts', $pb.PbFieldType.PM,
+    ..pPM<$1.Transcript>(1, _omitFieldNames ? '' : 'transcripts',
         subBuilder: $1.Transcript.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListTranscriptsResponse clone() =>
-      ListTranscriptsResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTranscriptsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListTranscriptsResponse copyWith(
           void Function(ListTranscriptsResponse) updates) =>
       super.copyWith((message) => updates(message as ListTranscriptsResponse))
           as ListTranscriptsResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListTranscriptsResponse create() => ListTranscriptsResponse._();
+  @$core.override
   ListTranscriptsResponse createEmptyInstance() => create();
-  static $pb.PbList<ListTranscriptsResponse> createRepeated() =>
-      $pb.PbList<ListTranscriptsResponse>();
   @$core.pragma('dart2js:noInline')
   static ListTranscriptsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListTranscriptsResponse>(create);
@@ -2244,21 +1943,18 @@ class ListTranscriptsResponse extends $pb.GeneratedMessage {
 
   /// List of transcripts in one page.
   @$pb.TagNumber(1)
-  $core.List<$1.Transcript> get transcripts => $_getList(0);
+  $pb.PbList<$1.Transcript> get transcripts => $_getList(0);
 
   /// Token to be circulated back for further List call if current List doesn't
   /// include all the transcripts. Unset if all transcripts are returned.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
 /// Request for GetTranscriptEntry method.
@@ -2266,19 +1962,19 @@ class GetTranscriptEntryRequest extends $pb.GeneratedMessage {
   factory GetTranscriptEntryRequest({
     $core.String? name,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    return result;
   }
-  GetTranscriptEntryRequest._() : super();
-  factory GetTranscriptEntryRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetTranscriptEntryRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  GetTranscriptEntryRequest._();
+
+  factory GetTranscriptEntryRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetTranscriptEntryRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetTranscriptEntryRequest',
@@ -2288,26 +1984,21 @@ class GetTranscriptEntryRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetTranscriptEntryRequest clone() =>
-      GetTranscriptEntryRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetTranscriptEntryRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetTranscriptEntryRequest copyWith(
           void Function(GetTranscriptEntryRequest) updates) =>
       super.copyWith((message) => updates(message as GetTranscriptEntryRequest))
           as GetTranscriptEntryRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static GetTranscriptEntryRequest create() => GetTranscriptEntryRequest._();
+  @$core.override
   GetTranscriptEntryRequest createEmptyInstance() => create();
-  static $pb.PbList<GetTranscriptEntryRequest> createRepeated() =>
-      $pb.PbList<GetTranscriptEntryRequest>();
   @$core.pragma('dart2js:noInline')
   static GetTranscriptEntryRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetTranscriptEntryRequest>(create);
@@ -2317,14 +2008,11 @@ class GetTranscriptEntryRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 }
 
 /// Request for ListTranscriptEntries method.
@@ -2334,25 +2022,21 @@ class ListTranscriptEntriesRequest extends $pb.GeneratedMessage {
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (pageSize != null) {
-      $result.pageSize = pageSize;
-    }
-    if (pageToken != null) {
-      $result.pageToken = pageToken;
-    }
-    return $result;
+    final result = create();
+    if (parent != null) result.parent = parent;
+    if (pageSize != null) result.pageSize = pageSize;
+    if (pageToken != null) result.pageToken = pageToken;
+    return result;
   }
-  ListTranscriptEntriesRequest._() : super();
-  factory ListTranscriptEntriesRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListTranscriptEntriesRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListTranscriptEntriesRequest._();
+
+  factory ListTranscriptEntriesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTranscriptEntriesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListTranscriptEntriesRequest',
@@ -2360,32 +2044,27 @@ class ListTranscriptEntriesRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aI(2, _omitFieldNames ? '' : 'pageSize')
     ..aOS(3, _omitFieldNames ? '' : 'pageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListTranscriptEntriesRequest clone() =>
-      ListTranscriptEntriesRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTranscriptEntriesRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListTranscriptEntriesRequest copyWith(
           void Function(ListTranscriptEntriesRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListTranscriptEntriesRequest))
           as ListTranscriptEntriesRequest;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListTranscriptEntriesRequest create() =>
       ListTranscriptEntriesRequest._();
+  @$core.override
   ListTranscriptEntriesRequest createEmptyInstance() => create();
-  static $pb.PbList<ListTranscriptEntriesRequest> createRepeated() =>
-      $pb.PbList<ListTranscriptEntriesRequest>();
   @$core.pragma('dart2js:noInline')
   static ListTranscriptEntriesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListTranscriptEntriesRequest>(create);
@@ -2396,14 +2075,11 @@ class ListTranscriptEntriesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
-  set parent($core.String v) {
-    $_setString(0, v);
-  }
-
+  set parent($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
   @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
+  void clearParent() => $_clearField(1);
 
   /// Maximum number of entries to return. The service might return fewer than
   /// this value.
@@ -2413,27 +2089,21 @@ class ListTranscriptEntriesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pageSize($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set pageSize($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageSize() => clearField(2);
+  void clearPageSize() => $_clearField(2);
 
   /// Page token returned from previous List Call.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
-  set pageToken($core.String v) {
-    $_setString(2, v);
-  }
-
+  set pageToken($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPageToken() => clearField(3);
+  void clearPageToken() => $_clearField(3);
 }
 
 /// Response for ListTranscriptEntries method.
@@ -2442,56 +2112,49 @@ class ListTranscriptEntriesResponse extends $pb.GeneratedMessage {
     $core.Iterable<$1.TranscriptEntry>? transcriptEntries,
     $core.String? nextPageToken,
   }) {
-    final $result = create();
-    if (transcriptEntries != null) {
-      $result.transcriptEntries.addAll(transcriptEntries);
-    }
-    if (nextPageToken != null) {
-      $result.nextPageToken = nextPageToken;
-    }
-    return $result;
+    final result = create();
+    if (transcriptEntries != null)
+      result.transcriptEntries.addAll(transcriptEntries);
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
   }
-  ListTranscriptEntriesResponse._() : super();
-  factory ListTranscriptEntriesResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ListTranscriptEntriesResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ListTranscriptEntriesResponse._();
+
+  factory ListTranscriptEntriesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListTranscriptEntriesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ListTranscriptEntriesResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.apps.meet.v2beta'),
       createEmptyInstance: create)
-    ..pc<$1.TranscriptEntry>(
-        1, _omitFieldNames ? '' : 'transcriptEntries', $pb.PbFieldType.PM,
+    ..pPM<$1.TranscriptEntry>(1, _omitFieldNames ? '' : 'transcriptEntries',
         subBuilder: $1.TranscriptEntry.create)
     ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ListTranscriptEntriesResponse clone() =>
-      ListTranscriptEntriesResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListTranscriptEntriesResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListTranscriptEntriesResponse copyWith(
           void Function(ListTranscriptEntriesResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListTranscriptEntriesResponse))
           as ListTranscriptEntriesResponse;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ListTranscriptEntriesResponse create() =>
       ListTranscriptEntriesResponse._();
+  @$core.override
   ListTranscriptEntriesResponse createEmptyInstance() => create();
-  static $pb.PbList<ListTranscriptEntriesResponse> createRepeated() =>
-      $pb.PbList<ListTranscriptEntriesResponse>();
   @$core.pragma('dart2js:noInline')
   static ListTranscriptEntriesResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListTranscriptEntriesResponse>(create);
@@ -2499,23 +2162,21 @@ class ListTranscriptEntriesResponse extends $pb.GeneratedMessage {
 
   /// List of TranscriptEntries in one page.
   @$pb.TagNumber(1)
-  $core.List<$1.TranscriptEntry> get transcriptEntries => $_getList(0);
+  $pb.PbList<$1.TranscriptEntry> get transcriptEntries => $_getList(0);
 
   /// Token to be circulated back for further List call if current List doesn't
   /// include all the transcript entries. Unset if all entries are returned.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextPageToken($core.String v) {
-    $_setString(1, v);
-  }
-
+  set nextPageToken($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

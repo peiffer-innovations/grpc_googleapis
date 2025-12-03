@@ -1,21 +1,25 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/monitoring/dashboard/v1/piechart.proto
-//
-// @dart = 2.12
+// Generated from google/monitoring/dashboard/v1/piechart.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/duration.pb.dart'
+    as $1;
 
-import '../../../protobuf/duration.pb.dart' as $1;
 import 'metrics.pb.dart' as $0;
 import 'piechart.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'piechart.pbenum.dart';
 
@@ -26,25 +30,22 @@ class PieChart_PieChartDataSet extends $pb.GeneratedMessage {
     $core.String? sliceNameTemplate,
     $1.Duration? minAlignmentPeriod,
   }) {
-    final $result = create();
-    if (timeSeriesQuery != null) {
-      $result.timeSeriesQuery = timeSeriesQuery;
-    }
-    if (sliceNameTemplate != null) {
-      $result.sliceNameTemplate = sliceNameTemplate;
-    }
-    if (minAlignmentPeriod != null) {
-      $result.minAlignmentPeriod = minAlignmentPeriod;
-    }
-    return $result;
+    final result = create();
+    if (timeSeriesQuery != null) result.timeSeriesQuery = timeSeriesQuery;
+    if (sliceNameTemplate != null) result.sliceNameTemplate = sliceNameTemplate;
+    if (minAlignmentPeriod != null)
+      result.minAlignmentPeriod = minAlignmentPeriod;
+    return result;
   }
-  PieChart_PieChartDataSet._() : super();
-  factory PieChart_PieChartDataSet.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PieChart_PieChartDataSet.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PieChart_PieChartDataSet._();
+
+  factory PieChart_PieChartDataSet.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PieChart_PieChartDataSet.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PieChart.PieChartDataSet',
@@ -58,26 +59,21 @@ class PieChart_PieChartDataSet extends $pb.GeneratedMessage {
         subBuilder: $1.Duration.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PieChart_PieChartDataSet clone() =>
-      PieChart_PieChartDataSet()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PieChart_PieChartDataSet clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PieChart_PieChartDataSet copyWith(
           void Function(PieChart_PieChartDataSet) updates) =>
       super.copyWith((message) => updates(message as PieChart_PieChartDataSet))
           as PieChart_PieChartDataSet;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PieChart_PieChartDataSet create() => PieChart_PieChartDataSet._();
+  @$core.override
   PieChart_PieChartDataSet createEmptyInstance() => create();
-  static $pb.PbList<PieChart_PieChartDataSet> createRepeated() =>
-      $pb.PbList<PieChart_PieChartDataSet>();
   @$core.pragma('dart2js:noInline')
   static PieChart_PieChartDataSet getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PieChart_PieChartDataSet>(create);
@@ -88,14 +84,11 @@ class PieChart_PieChartDataSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.TimeSeriesQuery get timeSeriesQuery => $_getN(0);
   @$pb.TagNumber(1)
-  set timeSeriesQuery($0.TimeSeriesQuery v) {
-    setField(1, v);
-  }
-
+  set timeSeriesQuery($0.TimeSeriesQuery value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasTimeSeriesQuery() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTimeSeriesQuery() => clearField(1);
+  void clearTimeSeriesQuery() => $_clearField(1);
   @$pb.TagNumber(1)
   $0.TimeSeriesQuery ensureTimeSeriesQuery() => $_ensure(0);
 
@@ -108,14 +101,11 @@ class PieChart_PieChartDataSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get sliceNameTemplate => $_getSZ(1);
   @$pb.TagNumber(2)
-  set sliceNameTemplate($core.String v) {
-    $_setString(1, v);
-  }
-
+  set sliceNameTemplate($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSliceNameTemplate() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSliceNameTemplate() => clearField(2);
+  void clearSliceNameTemplate() => $_clearField(2);
 
   /// Optional. The lower bound on data point frequency for this data set,
   /// implemented by specifying the minimum alignment period to use in a time
@@ -125,14 +115,11 @@ class PieChart_PieChartDataSet extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.Duration get minAlignmentPeriod => $_getN(2);
   @$pb.TagNumber(3)
-  set minAlignmentPeriod($1.Duration v) {
-    setField(3, v);
-  }
-
+  set minAlignmentPeriod($1.Duration value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasMinAlignmentPeriod() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMinAlignmentPeriod() => clearField(3);
+  void clearMinAlignmentPeriod() => $_clearField(3);
   @$pb.TagNumber(3)
   $1.Duration ensureMinAlignmentPeriod() => $_ensure(2);
 }
@@ -144,58 +131,47 @@ class PieChart extends $pb.GeneratedMessage {
     PieChart_PieChartType? chartType,
     $core.bool? showLabels,
   }) {
-    final $result = create();
-    if (dataSets != null) {
-      $result.dataSets.addAll(dataSets);
-    }
-    if (chartType != null) {
-      $result.chartType = chartType;
-    }
-    if (showLabels != null) {
-      $result.showLabels = showLabels;
-    }
-    return $result;
+    final result = create();
+    if (dataSets != null) result.dataSets.addAll(dataSets);
+    if (chartType != null) result.chartType = chartType;
+    if (showLabels != null) result.showLabels = showLabels;
+    return result;
   }
-  PieChart._() : super();
-  factory PieChart.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory PieChart.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  PieChart._();
+
+  factory PieChart.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PieChart.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PieChart',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.monitoring.dashboard.v1'),
       createEmptyInstance: create)
-    ..pc<PieChart_PieChartDataSet>(
-        1, _omitFieldNames ? '' : 'dataSets', $pb.PbFieldType.PM,
+    ..pPM<PieChart_PieChartDataSet>(1, _omitFieldNames ? '' : 'dataSets',
         subBuilder: PieChart_PieChartDataSet.create)
-    ..e<PieChart_PieChartType>(
-        2, _omitFieldNames ? '' : 'chartType', $pb.PbFieldType.OE,
-        defaultOrMaker: PieChart_PieChartType.PIE_CHART_TYPE_UNSPECIFIED,
-        valueOf: PieChart_PieChartType.valueOf,
+    ..aE<PieChart_PieChartType>(2, _omitFieldNames ? '' : 'chartType',
         enumValues: PieChart_PieChartType.values)
     ..aOB(4, _omitFieldNames ? '' : 'showLabels')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  PieChart clone() => PieChart()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PieChart clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PieChart copyWith(void Function(PieChart) updates) =>
       super.copyWith((message) => updates(message as PieChart)) as PieChart;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PieChart create() => PieChart._();
+  @$core.override
   PieChart createEmptyInstance() => create();
-  static $pb.PbList<PieChart> createRepeated() => $pb.PbList<PieChart>();
   @$core.pragma('dart2js:noInline')
   static PieChart getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PieChart>(create);
@@ -203,35 +179,30 @@ class PieChart extends $pb.GeneratedMessage {
 
   /// Required. The queries for the chart's data.
   @$pb.TagNumber(1)
-  $core.List<PieChart_PieChartDataSet> get dataSets => $_getList(0);
+  $pb.PbList<PieChart_PieChartDataSet> get dataSets => $_getList(0);
 
   /// Required. Indicates the visualization type for the PieChart.
   @$pb.TagNumber(2)
   PieChart_PieChartType get chartType => $_getN(1);
   @$pb.TagNumber(2)
-  set chartType(PieChart_PieChartType v) {
-    setField(2, v);
-  }
-
+  set chartType(PieChart_PieChartType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasChartType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearChartType() => clearField(2);
+  void clearChartType() => $_clearField(2);
 
   /// Optional. Indicates whether or not the pie chart should show slices' labels
   @$pb.TagNumber(4)
   $core.bool get showLabels => $_getBF(2);
   @$pb.TagNumber(4)
-  set showLabels($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set showLabels($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(4)
   $core.bool hasShowLabels() => $_has(2);
   @$pb.TagNumber(4)
-  void clearShowLabels() => clearField(4);
+  void clearShowLabels() => $_clearField(4);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

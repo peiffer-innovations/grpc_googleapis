@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/bigtable/v2/feature_flags.proto
-//
-// @dart = 2.12
+// Generated from google/bigtable/v2/feature_flags.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -62,6 +64,7 @@ const FeatureFlags$json = {
       '5': 8,
       '10': 'directAccessRequested'
     },
+    {'1': 'peer_info', '3': 11, '4': 1, '5': 8, '10': 'peerInfo'},
   ],
 };
 
@@ -75,4 +78,4 @@ final $typed_data.Uint8List featureFlagsDescriptor = $convert.base64Decode(
     'gIUglyZXRyeUluZm8SPQobY2xpZW50X3NpZGVfbWV0cmljc19lbmFibGVkGAggASgIUhhjbGll'
     'bnRTaWRlTWV0cmljc0VuYWJsZWQSOAoYdHJhZmZpY19kaXJlY3Rvcl9lbmFibGVkGAkgASgIUh'
     'Z0cmFmZmljRGlyZWN0b3JFbmFibGVkEjYKF2RpcmVjdF9hY2Nlc3NfcmVxdWVzdGVkGAogASgI'
-    'UhVkaXJlY3RBY2Nlc3NSZXF1ZXN0ZWQ=');
+    'UhVkaXJlY3RBY2Nlc3NSZXF1ZXN0ZWQSGwoJcGVlcl9pbmZvGAsgASgIUghwZWVySW5mbw==');

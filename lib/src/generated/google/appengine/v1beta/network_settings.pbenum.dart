@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/appengine/v1beta/network_settings.proto
-//
-// @dart = 2.12
+// Generated from google/appengine/v1beta/network_settings.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -15,17 +16,24 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 /// If unspecified, INGRESS_TRAFFIC_ALLOWED_ALL will be used.
 class NetworkSettings_IngressTrafficAllowed extends $pb.ProtobufEnum {
+  /// Unspecified
   static const NetworkSettings_IngressTrafficAllowed
       INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED =
       NetworkSettings_IngressTrafficAllowed._(
           0, _omitEnumNames ? '' : 'INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED');
+
+  /// Allow HTTP traffic from public and private sources.
   static const NetworkSettings_IngressTrafficAllowed
       INGRESS_TRAFFIC_ALLOWED_ALL = NetworkSettings_IngressTrafficAllowed._(
           1, _omitEnumNames ? '' : 'INGRESS_TRAFFIC_ALLOWED_ALL');
+
+  /// Allow HTTP traffic from only private VPC sources.
   static const NetworkSettings_IngressTrafficAllowed
       INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY =
       NetworkSettings_IngressTrafficAllowed._(
           2, _omitEnumNames ? '' : 'INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY');
+
+  /// Allow HTTP traffic from private VPC sources and through load balancers.
   static const NetworkSettings_IngressTrafficAllowed
       INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB =
       NetworkSettings_IngressTrafficAllowed._(
@@ -39,13 +47,13 @@ class NetworkSettings_IngressTrafficAllowed extends $pb.ProtobufEnum {
     INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB,
   ];
 
-  static final $core.Map<$core.int, NetworkSettings_IngressTrafficAllowed>
-      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.List<NetworkSettings_IngressTrafficAllowed?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
   static NetworkSettings_IngressTrafficAllowed? valueOf($core.int value) =>
-      _byValue[value];
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const NetworkSettings_IngressTrafficAllowed._($core.int v, $core.String n)
-      : super(v, n);
+  const NetworkSettings_IngressTrafficAllowed._(super.value, super.name);
 }
 
-const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');
+const $core.bool _omitEnumNames =
+    $core.bool.fromEnvironment('protobuf.omit_enum_names');

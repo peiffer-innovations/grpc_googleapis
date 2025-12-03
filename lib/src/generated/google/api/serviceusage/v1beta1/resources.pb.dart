@@ -1,20 +1,22 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: google/api/serviceusage/v1beta1/resources.proto
-//
-// @dart = 2.12
+// Generated from google/api/serviceusage/v1beta1/resources.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:grpc_googleapis/src/generated/google/protobuf/api.pb.dart'
+    as $0;
 
-import '../../../protobuf/api.pb.dart' as $0;
 import '../../auth.pb.dart' as $3;
 import '../../documentation.pb.dart' as $1;
 import '../../endpoint.pb.dart' as $5;
@@ -23,6 +25,8 @@ import '../../monitoring.pb.dart' as $7;
 import '../../quota.pb.dart' as $2;
 import '../../usage.pb.dart' as $4;
 import 'resources.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'resources.pbenum.dart';
 
@@ -34,28 +38,22 @@ class Service extends $pb.GeneratedMessage {
     State? state,
     $core.String? parent,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (config != null) {
-      $result.config = config;
-    }
-    if (state != null) {
-      $result.state = state;
-    }
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (config != null) result.config = config;
+    if (state != null) result.state = state;
+    if (parent != null) result.parent = parent;
+    return result;
   }
-  Service._() : super();
-  factory Service.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Service.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  Service._();
+
+  factory Service.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Service.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'Service',
@@ -65,49 +63,40 @@ class Service extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOM<ServiceConfig>(2, _omitFieldNames ? '' : 'config',
         subBuilder: ServiceConfig.create)
-    ..e<State>(4, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
-        defaultOrMaker: State.STATE_UNSPECIFIED,
-        valueOf: State.valueOf,
-        enumValues: State.values)
+    ..aE<State>(4, _omitFieldNames ? '' : 'state', enumValues: State.values)
     ..aOS(5, _omitFieldNames ? '' : 'parent')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  Service clone() => Service()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Service clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Service copyWith(void Function(Service) updates) =>
       super.copyWith((message) => updates(message as Service)) as Service;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Service create() => Service._();
+  @$core.override
   Service createEmptyInstance() => create();
-  static $pb.PbList<Service> createRepeated() => $pb.PbList<Service>();
   @$core.pragma('dart2js:noInline')
   static Service getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Service>(create);
   static Service? _defaultInstance;
 
-  ///  The resource name of the consumer and service.
+  /// The resource name of the consumer and service.
   ///
-  ///  A valid name would be:
-  ///  - `projects/123/services/serviceusage.googleapis.com`
+  /// A valid name would be:
+  /// - `projects/123/services/serviceusage.googleapis.com`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The service configuration of the available service.
   /// Some fields may be filtered out of the configuration in responses to
@@ -116,14 +105,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ServiceConfig get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(ServiceConfig v) {
-    setField(2, v);
-  }
-
+  set config(ServiceConfig value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => clearField(2);
+  void clearConfig() => $_clearField(2);
   @$pb.TagNumber(2)
   ServiceConfig ensureConfig() => $_ensure(1);
 
@@ -131,30 +117,24 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   State get state => $_getN(2);
   @$pb.TagNumber(4)
-  set state(State v) {
-    setField(4, v);
-  }
-
+  set state(State value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasState() => $_has(2);
   @$pb.TagNumber(4)
-  void clearState() => clearField(4);
+  void clearState() => $_clearField(4);
 
-  ///  The resource name of the consumer.
+  /// The resource name of the consumer.
   ///
-  ///  A valid name would be:
-  ///  - `projects/123`
+  /// A valid name would be:
+  /// - `projects/123`
   @$pb.TagNumber(5)
   $core.String get parent => $_getSZ(3);
   @$pb.TagNumber(5)
-  set parent($core.String v) {
-    $_setString(3, v);
-  }
-
+  set parent($core.String value) => $_setString(3, value);
   @$pb.TagNumber(5)
   $core.bool hasParent() => $_has(3);
   @$pb.TagNumber(5)
-  void clearParent() => clearField(5);
+  void clearParent() => $_clearField(5);
 }
 
 /// The configuration of the service.
@@ -171,46 +151,29 @@ class ServiceConfig extends $pb.GeneratedMessage {
     $core.Iterable<$6.MonitoredResourceDescriptor>? monitoredResources,
     $7.Monitoring? monitoring,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (title != null) {
-      $result.title = title;
-    }
-    if (apis != null) {
-      $result.apis.addAll(apis);
-    }
-    if (documentation != null) {
-      $result.documentation = documentation;
-    }
-    if (quota != null) {
-      $result.quota = quota;
-    }
-    if (authentication != null) {
-      $result.authentication = authentication;
-    }
-    if (usage != null) {
-      $result.usage = usage;
-    }
-    if (endpoints != null) {
-      $result.endpoints.addAll(endpoints);
-    }
-    if (monitoredResources != null) {
-      $result.monitoredResources.addAll(monitoredResources);
-    }
-    if (monitoring != null) {
-      $result.monitoring = monitoring;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (title != null) result.title = title;
+    if (apis != null) result.apis.addAll(apis);
+    if (documentation != null) result.documentation = documentation;
+    if (quota != null) result.quota = quota;
+    if (authentication != null) result.authentication = authentication;
+    if (usage != null) result.usage = usage;
+    if (endpoints != null) result.endpoints.addAll(endpoints);
+    if (monitoredResources != null)
+      result.monitoredResources.addAll(monitoredResources);
+    if (monitoring != null) result.monitoring = monitoring;
+    return result;
   }
-  ServiceConfig._() : super();
-  factory ServiceConfig.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ServiceConfig.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ServiceConfig._();
+
+  factory ServiceConfig.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ServiceConfig.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ServiceConfig',
@@ -219,8 +182,7 @@ class ServiceConfig extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'title')
-    ..pc<$0.Api>(3, _omitFieldNames ? '' : 'apis', $pb.PbFieldType.PM,
-        subBuilder: $0.Api.create)
+    ..pPM<$0.Api>(3, _omitFieldNames ? '' : 'apis', subBuilder: $0.Api.create)
     ..aOM<$1.Documentation>(6, _omitFieldNames ? '' : 'documentation',
         subBuilder: $1.Documentation.create)
     ..aOM<$2.Quota>(10, _omitFieldNames ? '' : 'quota',
@@ -229,86 +191,72 @@ class ServiceConfig extends $pb.GeneratedMessage {
         subBuilder: $3.Authentication.create)
     ..aOM<$4.Usage>(15, _omitFieldNames ? '' : 'usage',
         subBuilder: $4.Usage.create)
-    ..pc<$5.Endpoint>(
-        18, _omitFieldNames ? '' : 'endpoints', $pb.PbFieldType.PM,
+    ..pPM<$5.Endpoint>(18, _omitFieldNames ? '' : 'endpoints',
         subBuilder: $5.Endpoint.create)
-    ..pc<$6.MonitoredResourceDescriptor>(
-        25, _omitFieldNames ? '' : 'monitoredResources', $pb.PbFieldType.PM,
+    ..pPM<$6.MonitoredResourceDescriptor>(
+        25, _omitFieldNames ? '' : 'monitoredResources',
         subBuilder: $6.MonitoredResourceDescriptor.create)
     ..aOM<$7.Monitoring>(28, _omitFieldNames ? '' : 'monitoring',
         subBuilder: $7.Monitoring.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ServiceConfig clone() => ServiceConfig()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ServiceConfig clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ServiceConfig copyWith(void Function(ServiceConfig) updates) =>
       super.copyWith((message) => updates(message as ServiceConfig))
           as ServiceConfig;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ServiceConfig create() => ServiceConfig._();
+  @$core.override
   ServiceConfig createEmptyInstance() => create();
-  static $pb.PbList<ServiceConfig> createRepeated() =>
-      $pb.PbList<ServiceConfig>();
   @$core.pragma('dart2js:noInline')
   static ServiceConfig getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ServiceConfig>(create);
   static ServiceConfig? _defaultInstance;
 
-  ///  The DNS address at which this service is available.
+  /// The DNS address at which this service is available.
   ///
-  ///  An example DNS address would be:
-  ///  `calendar.googleapis.com`.
+  /// An example DNS address would be:
+  /// `calendar.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The product title for this service.
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
   @$pb.TagNumber(2)
-  set title($core.String v) {
-    $_setString(1, v);
-  }
-
+  set title($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasTitle() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTitle() => clearField(2);
+  void clearTitle() => $_clearField(2);
 
   /// A list of API interfaces exported by this service. Contains only the names,
   /// versions, and method names of the interfaces.
   @$pb.TagNumber(3)
-  $core.List<$0.Api> get apis => $_getList(2);
+  $pb.PbList<$0.Api> get apis => $_getList(2);
 
   /// Additional API documentation. Contains only the summary and the
   /// documentation URL.
   @$pb.TagNumber(6)
   $1.Documentation get documentation => $_getN(3);
   @$pb.TagNumber(6)
-  set documentation($1.Documentation v) {
-    setField(6, v);
-  }
-
+  set documentation($1.Documentation value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasDocumentation() => $_has(3);
   @$pb.TagNumber(6)
-  void clearDocumentation() => clearField(6);
+  void clearDocumentation() => $_clearField(6);
   @$pb.TagNumber(6)
   $1.Documentation ensureDocumentation() => $_ensure(3);
 
@@ -316,14 +264,11 @@ class ServiceConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $2.Quota get quota => $_getN(4);
   @$pb.TagNumber(10)
-  set quota($2.Quota v) {
-    setField(10, v);
-  }
-
+  set quota($2.Quota value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasQuota() => $_has(4);
   @$pb.TagNumber(10)
-  void clearQuota() => clearField(10);
+  void clearQuota() => $_clearField(10);
   @$pb.TagNumber(10)
   $2.Quota ensureQuota() => $_ensure(4);
 
@@ -331,14 +276,11 @@ class ServiceConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $3.Authentication get authentication => $_getN(5);
   @$pb.TagNumber(11)
-  set authentication($3.Authentication v) {
-    setField(11, v);
-  }
-
+  set authentication($3.Authentication value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasAuthentication() => $_has(5);
   @$pb.TagNumber(11)
-  void clearAuthentication() => clearField(11);
+  void clearAuthentication() => $_clearField(11);
   @$pb.TagNumber(11)
   $3.Authentication ensureAuthentication() => $_ensure(5);
 
@@ -346,27 +288,24 @@ class ServiceConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $4.Usage get usage => $_getN(6);
   @$pb.TagNumber(15)
-  set usage($4.Usage v) {
-    setField(15, v);
-  }
-
+  set usage($4.Usage value) => $_setField(15, value);
   @$pb.TagNumber(15)
   $core.bool hasUsage() => $_has(6);
   @$pb.TagNumber(15)
-  void clearUsage() => clearField(15);
+  void clearUsage() => $_clearField(15);
   @$pb.TagNumber(15)
   $4.Usage ensureUsage() => $_ensure(6);
 
   /// Configuration for network endpoints. Contains only the names and aliases
   /// of the endpoints.
   @$pb.TagNumber(18)
-  $core.List<$5.Endpoint> get endpoints => $_getList(7);
+  $pb.PbList<$5.Endpoint> get endpoints => $_getList(7);
 
   /// Defines the monitored resources used by this service. This is required
   /// by the [Service.monitoring][google.api.Service.monitoring] and
   /// [Service.logging][google.api.Service.logging] configurations.
   @$pb.TagNumber(25)
-  $core.List<$6.MonitoredResourceDescriptor> get monitoredResources =>
+  $pb.PbList<$6.MonitoredResourceDescriptor> get monitoredResources =>
       $_getList(8);
 
   /// Monitoring configuration.
@@ -374,14 +313,11 @@ class ServiceConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(28)
   $7.Monitoring get monitoring => $_getN(9);
   @$pb.TagNumber(28)
-  set monitoring($7.Monitoring v) {
-    setField(28, v);
-  }
-
+  set monitoring($7.Monitoring value) => $_setField(28, value);
   @$pb.TagNumber(28)
   $core.bool hasMonitoring() => $_has(9);
   @$pb.TagNumber(28)
-  void clearMonitoring() => clearField(28);
+  void clearMonitoring() => $_clearField(28);
   @$pb.TagNumber(28)
   $7.Monitoring ensureMonitoring() => $_ensure(9);
 }
@@ -391,19 +327,19 @@ class OperationMetadata extends $pb.GeneratedMessage {
   factory OperationMetadata({
     $core.Iterable<$core.String>? resourceNames,
   }) {
-    final $result = create();
-    if (resourceNames != null) {
-      $result.resourceNames.addAll(resourceNames);
-    }
-    return $result;
+    final result = create();
+    if (resourceNames != null) result.resourceNames.addAll(resourceNames);
+    return result;
   }
-  OperationMetadata._() : super();
-  factory OperationMetadata.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory OperationMetadata.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  OperationMetadata._();
+
+  factory OperationMetadata.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OperationMetadata.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'OperationMetadata',
@@ -413,24 +349,20 @@ class OperationMetadata extends $pb.GeneratedMessage {
     ..pPS(2, _omitFieldNames ? '' : 'resourceNames')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OperationMetadata clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
       super.copyWith((message) => updates(message as OperationMetadata))
           as OperationMetadata;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static OperationMetadata create() => OperationMetadata._();
+  @$core.override
   OperationMetadata createEmptyInstance() => create();
-  static $pb.PbList<OperationMetadata> createRepeated() =>
-      $pb.PbList<OperationMetadata>();
   @$core.pragma('dart2js:noInline')
   static OperationMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OperationMetadata>(create);
@@ -439,7 +371,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   /// The full name of the resources that this operation is directly
   /// associated with.
   @$pb.TagNumber(2)
-  $core.List<$core.String> get resourceNames => $_getList(0);
+  $pb.PbList<$core.String> get resourceNames => $_getList(0);
 }
 
 /// Consumer quota settings for a quota metric.
@@ -452,35 +384,27 @@ class ConsumerQuotaMetric extends $pb.GeneratedMessage {
     $core.String? unit,
     $core.Iterable<ConsumerQuotaLimit>? descendantConsumerQuotaLimits,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (displayName != null) {
-      $result.displayName = displayName;
-    }
-    if (consumerQuotaLimits != null) {
-      $result.consumerQuotaLimits.addAll(consumerQuotaLimits);
-    }
-    if (metric != null) {
-      $result.metric = metric;
-    }
-    if (unit != null) {
-      $result.unit = unit;
-    }
-    if (descendantConsumerQuotaLimits != null) {
-      $result.descendantConsumerQuotaLimits
+    final result = create();
+    if (name != null) result.name = name;
+    if (displayName != null) result.displayName = displayName;
+    if (consumerQuotaLimits != null)
+      result.consumerQuotaLimits.addAll(consumerQuotaLimits);
+    if (metric != null) result.metric = metric;
+    if (unit != null) result.unit = unit;
+    if (descendantConsumerQuotaLimits != null)
+      result.descendantConsumerQuotaLimits
           .addAll(descendantConsumerQuotaLimits);
-    }
-    return $result;
+    return result;
   }
-  ConsumerQuotaMetric._() : super();
-  factory ConsumerQuotaMetric.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ConsumerQuotaMetric.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ConsumerQuotaMetric._();
+
+  factory ConsumerQuotaMetric.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ConsumerQuotaMetric.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ConsumerQuotaMetric',
@@ -489,120 +413,101 @@ class ConsumerQuotaMetric extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'displayName')
-    ..pc<ConsumerQuotaLimit>(
-        3, _omitFieldNames ? '' : 'consumerQuotaLimits', $pb.PbFieldType.PM,
+    ..pPM<ConsumerQuotaLimit>(3, _omitFieldNames ? '' : 'consumerQuotaLimits',
         subBuilder: ConsumerQuotaLimit.create)
     ..aOS(4, _omitFieldNames ? '' : 'metric')
     ..aOS(5, _omitFieldNames ? '' : 'unit')
-    ..pc<ConsumerQuotaLimit>(
-        6,
-        _omitFieldNames ? '' : 'descendantConsumerQuotaLimits',
-        $pb.PbFieldType.PM,
+    ..pPM<ConsumerQuotaLimit>(
+        6, _omitFieldNames ? '' : 'descendantConsumerQuotaLimits',
         subBuilder: ConsumerQuotaLimit.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ConsumerQuotaMetric clone() => ConsumerQuotaMetric()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConsumerQuotaMetric clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ConsumerQuotaMetric copyWith(void Function(ConsumerQuotaMetric) updates) =>
       super.copyWith((message) => updates(message as ConsumerQuotaMetric))
           as ConsumerQuotaMetric;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ConsumerQuotaMetric create() => ConsumerQuotaMetric._();
+  @$core.override
   ConsumerQuotaMetric createEmptyInstance() => create();
-  static $pb.PbList<ConsumerQuotaMetric> createRepeated() =>
-      $pb.PbList<ConsumerQuotaMetric>();
   @$core.pragma('dart2js:noInline')
   static ConsumerQuotaMetric getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConsumerQuotaMetric>(create);
   static ConsumerQuotaMetric? _defaultInstance;
 
-  ///  The resource name of the quota settings on this metric for this consumer.
+  /// The resource name of the quota settings on this metric for this consumer.
   ///
-  ///  An example name would be:
-  ///  `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus`
+  /// An example name would be:
+  /// `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus`
   ///
-  ///  The resource name is intended to be opaque and should not be parsed for
-  ///  its component strings, since its representation could change in the future.
+  /// The resource name is intended to be opaque and should not be parsed for
+  /// its component strings, since its representation could change in the future.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  ///  The display name of the metric.
+  /// The display name of the metric.
   ///
-  ///  An example name would be:
-  ///  `CPUs`
+  /// An example name would be:
+  /// `CPUs`
   @$pb.TagNumber(2)
   $core.String get displayName => $_getSZ(1);
   @$pb.TagNumber(2)
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
+  set displayName($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDisplayName() => clearField(2);
+  void clearDisplayName() => $_clearField(2);
 
   /// The consumer quota for each quota limit defined on the metric.
   @$pb.TagNumber(3)
-  $core.List<ConsumerQuotaLimit> get consumerQuotaLimits => $_getList(2);
+  $pb.PbList<ConsumerQuotaLimit> get consumerQuotaLimits => $_getList(2);
 
-  ///  The name of the metric.
+  /// The name of the metric.
   ///
-  ///  An example name would be:
-  ///  `compute.googleapis.com/cpus`
+  /// An example name would be:
+  /// `compute.googleapis.com/cpus`
   @$pb.TagNumber(4)
   $core.String get metric => $_getSZ(3);
   @$pb.TagNumber(4)
-  set metric($core.String v) {
-    $_setString(3, v);
-  }
-
+  set metric($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasMetric() => $_has(3);
   @$pb.TagNumber(4)
-  void clearMetric() => clearField(4);
+  void clearMetric() => $_clearField(4);
 
   /// The units in which the metric value is reported.
   @$pb.TagNumber(5)
   $core.String get unit => $_getSZ(4);
   @$pb.TagNumber(5)
-  set unit($core.String v) {
-    $_setString(4, v);
-  }
-
+  set unit($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasUnit() => $_has(4);
   @$pb.TagNumber(5)
-  void clearUnit() => clearField(5);
+  void clearUnit() => $_clearField(5);
 
-  ///  The quota limits targeting the descendant containers of the
-  ///  consumer in request.
+  /// The quota limits targeting the descendant containers of the
+  /// consumer in request.
   ///
-  ///  If the consumer in request is of type `organizations`
-  ///  or `folders`, the field will list per-project limits in the metric; if the
-  ///  consumer in request is of type `project`, the field will be empty.
+  /// If the consumer in request is of type `organizations`
+  /// or `folders`, the field will list per-project limits in the metric; if the
+  /// consumer in request is of type `project`, the field will be empty.
   ///
-  ///  The `quota_buckets` field of each descendant consumer quota limit will not
-  ///  be populated.
+  /// The `quota_buckets` field of each descendant consumer quota limit will not
+  /// be populated.
   @$pb.TagNumber(6)
-  $core.List<ConsumerQuotaLimit> get descendantConsumerQuotaLimits =>
+  $pb.PbList<ConsumerQuotaLimit> get descendantConsumerQuotaLimits =>
       $_getList(5);
 }
 
@@ -617,37 +522,27 @@ class ConsumerQuotaLimit extends $pb.GeneratedMessage {
     $core.Iterable<QuotaBucket>? quotaBuckets,
     $core.Iterable<$core.String>? supportedLocations,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (unit != null) {
-      $result.unit = unit;
-    }
-    if (isPrecise != null) {
-      $result.isPrecise = isPrecise;
-    }
-    if (allowsAdminOverrides != null) {
-      $result.allowsAdminOverrides = allowsAdminOverrides;
-    }
-    if (metric != null) {
-      $result.metric = metric;
-    }
-    if (quotaBuckets != null) {
-      $result.quotaBuckets.addAll(quotaBuckets);
-    }
-    if (supportedLocations != null) {
-      $result.supportedLocations.addAll(supportedLocations);
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (unit != null) result.unit = unit;
+    if (isPrecise != null) result.isPrecise = isPrecise;
+    if (allowsAdminOverrides != null)
+      result.allowsAdminOverrides = allowsAdminOverrides;
+    if (metric != null) result.metric = metric;
+    if (quotaBuckets != null) result.quotaBuckets.addAll(quotaBuckets);
+    if (supportedLocations != null)
+      result.supportedLocations.addAll(supportedLocations);
+    return result;
   }
-  ConsumerQuotaLimit._() : super();
-  factory ConsumerQuotaLimit.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ConsumerQuotaLimit.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ConsumerQuotaLimit._();
+
+  factory ConsumerQuotaLimit.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ConsumerQuotaLimit.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ConsumerQuotaLimit',
@@ -659,124 +554,104 @@ class ConsumerQuotaLimit extends $pb.GeneratedMessage {
     ..aOB(3, _omitFieldNames ? '' : 'isPrecise')
     ..aOB(7, _omitFieldNames ? '' : 'allowsAdminOverrides')
     ..aOS(8, _omitFieldNames ? '' : 'metric')
-    ..pc<QuotaBucket>(
-        9, _omitFieldNames ? '' : 'quotaBuckets', $pb.PbFieldType.PM,
+    ..pPM<QuotaBucket>(9, _omitFieldNames ? '' : 'quotaBuckets',
         subBuilder: QuotaBucket.create)
     ..pPS(11, _omitFieldNames ? '' : 'supportedLocations')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ConsumerQuotaLimit clone() => ConsumerQuotaLimit()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConsumerQuotaLimit clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ConsumerQuotaLimit copyWith(void Function(ConsumerQuotaLimit) updates) =>
       super.copyWith((message) => updates(message as ConsumerQuotaLimit))
           as ConsumerQuotaLimit;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ConsumerQuotaLimit create() => ConsumerQuotaLimit._();
+  @$core.override
   ConsumerQuotaLimit createEmptyInstance() => create();
-  static $pb.PbList<ConsumerQuotaLimit> createRepeated() =>
-      $pb.PbList<ConsumerQuotaLimit>();
   @$core.pragma('dart2js:noInline')
   static ConsumerQuotaLimit getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConsumerQuotaLimit>(create);
   static ConsumerQuotaLimit? _defaultInstance;
 
-  ///  The resource name of the quota limit.
+  /// The resource name of the quota limit.
   ///
-  ///  An example name would be:
-  ///  `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+  /// An example name would be:
+  /// `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
   ///
-  ///  The resource name is intended to be opaque and should not be parsed for
-  ///  its component strings, since its representation could change in the future.
+  /// The resource name is intended to be opaque and should not be parsed for
+  /// its component strings, since its representation could change in the future.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
-  ///  The limit unit.
+  /// The limit unit.
   ///
-  ///  An example unit would be
-  ///  `1/{project}/{region}`
-  ///  Note that `{project}` and `{region}` are not placeholders in this example;
-  ///  the literal characters `{` and `}` occur in the string.
+  /// An example unit would be
+  /// `1/{project}/{region}`
+  /// Note that `{project}` and `{region}` are not placeholders in this example;
+  /// the literal characters `{` and `}` occur in the string.
   @$pb.TagNumber(2)
   $core.String get unit => $_getSZ(1);
   @$pb.TagNumber(2)
-  set unit($core.String v) {
-    $_setString(1, v);
-  }
-
+  set unit($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUnit() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUnit() => clearField(2);
+  void clearUnit() => $_clearField(2);
 
   /// Whether this limit is precise or imprecise.
   @$pb.TagNumber(3)
   $core.bool get isPrecise => $_getBF(2);
   @$pb.TagNumber(3)
-  set isPrecise($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set isPrecise($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasIsPrecise() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIsPrecise() => clearField(3);
+  void clearIsPrecise() => $_clearField(3);
 
   /// Whether admin overrides are allowed on this limit
   @$pb.TagNumber(7)
   $core.bool get allowsAdminOverrides => $_getBF(3);
   @$pb.TagNumber(7)
-  set allowsAdminOverrides($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set allowsAdminOverrides($core.bool value) => $_setBool(3, value);
   @$pb.TagNumber(7)
   $core.bool hasAllowsAdminOverrides() => $_has(3);
   @$pb.TagNumber(7)
-  void clearAllowsAdminOverrides() => clearField(7);
+  void clearAllowsAdminOverrides() => $_clearField(7);
 
-  ///  The name of the parent metric of this limit.
+  /// The name of the parent metric of this limit.
   ///
-  ///  An example name would be:
-  ///  `compute.googleapis.com/cpus`
+  /// An example name would be:
+  /// `compute.googleapis.com/cpus`
   @$pb.TagNumber(8)
   $core.String get metric => $_getSZ(4);
   @$pb.TagNumber(8)
-  set metric($core.String v) {
-    $_setString(4, v);
-  }
-
+  set metric($core.String value) => $_setString(4, value);
   @$pb.TagNumber(8)
   $core.bool hasMetric() => $_has(4);
   @$pb.TagNumber(8)
-  void clearMetric() => clearField(8);
+  void clearMetric() => $_clearField(8);
 
   /// Summary of the enforced quota buckets, organized by quota dimension,
   /// ordered from least specific to most specific (for example, the global
   /// default bucket, with no quota dimensions, will always appear first).
   @$pb.TagNumber(9)
-  $core.List<QuotaBucket> get quotaBuckets => $_getList(5);
+  $pb.PbList<QuotaBucket> get quotaBuckets => $_getList(5);
 
   /// List of all supported locations.
   /// This field is present only if the limit has a {region} or {zone} dimension.
   @$pb.TagNumber(11)
-  $core.List<$core.String> get supportedLocations => $_getList(6);
+  $pb.PbList<$core.String> get supportedLocations => $_getList(6);
 }
 
 /// A quota bucket is a quota provisioning unit for a specific set of dimensions.
@@ -787,40 +662,29 @@ class QuotaBucket extends $pb.GeneratedMessage {
     QuotaOverride? producerOverride,
     QuotaOverride? consumerOverride,
     QuotaOverride? adminOverride,
-    $core.Map<$core.String, $core.String>? dimensions,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? dimensions,
     ProducerQuotaPolicy? producerQuotaPolicy,
   }) {
-    final $result = create();
-    if (effectiveLimit != null) {
-      $result.effectiveLimit = effectiveLimit;
-    }
-    if (defaultLimit != null) {
-      $result.defaultLimit = defaultLimit;
-    }
-    if (producerOverride != null) {
-      $result.producerOverride = producerOverride;
-    }
-    if (consumerOverride != null) {
-      $result.consumerOverride = consumerOverride;
-    }
-    if (adminOverride != null) {
-      $result.adminOverride = adminOverride;
-    }
-    if (dimensions != null) {
-      $result.dimensions.addAll(dimensions);
-    }
-    if (producerQuotaPolicy != null) {
-      $result.producerQuotaPolicy = producerQuotaPolicy;
-    }
-    return $result;
+    final result = create();
+    if (effectiveLimit != null) result.effectiveLimit = effectiveLimit;
+    if (defaultLimit != null) result.defaultLimit = defaultLimit;
+    if (producerOverride != null) result.producerOverride = producerOverride;
+    if (consumerOverride != null) result.consumerOverride = consumerOverride;
+    if (adminOverride != null) result.adminOverride = adminOverride;
+    if (dimensions != null) result.dimensions.addEntries(dimensions);
+    if (producerQuotaPolicy != null)
+      result.producerQuotaPolicy = producerQuotaPolicy;
+    return result;
   }
-  QuotaBucket._() : super();
-  factory QuotaBucket.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory QuotaBucket.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  QuotaBucket._();
+
+  factory QuotaBucket.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QuotaBucket.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'QuotaBucket',
@@ -844,23 +708,20 @@ class QuotaBucket extends $pb.GeneratedMessage {
         subBuilder: ProducerQuotaPolicy.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  QuotaBucket clone() => QuotaBucket()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QuotaBucket clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   QuotaBucket copyWith(void Function(QuotaBucket) updates) =>
       super.copyWith((message) => updates(message as QuotaBucket))
           as QuotaBucket;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static QuotaBucket create() => QuotaBucket._();
+  @$core.override
   QuotaBucket createEmptyInstance() => create();
-  static $pb.PbList<QuotaBucket> createRepeated() => $pb.PbList<QuotaBucket>();
   @$core.pragma('dart2js:noInline')
   static QuotaBucket getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<QuotaBucket>(create);
@@ -871,41 +732,32 @@ class QuotaBucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $fixnum.Int64 get effectiveLimit => $_getI64(0);
   @$pb.TagNumber(1)
-  set effectiveLimit($fixnum.Int64 v) {
-    $_setInt64(0, v);
-  }
-
+  set effectiveLimit($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEffectiveLimit() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEffectiveLimit() => clearField(1);
+  void clearEffectiveLimit() => $_clearField(1);
 
   /// The default limit of this quota bucket, as specified by the service
   /// configuration.
   @$pb.TagNumber(2)
   $fixnum.Int64 get defaultLimit => $_getI64(1);
   @$pb.TagNumber(2)
-  set defaultLimit($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set defaultLimit($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasDefaultLimit() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDefaultLimit() => clearField(2);
+  void clearDefaultLimit() => $_clearField(2);
 
   /// Producer override on this quota bucket.
   @$pb.TagNumber(3)
   QuotaOverride get producerOverride => $_getN(2);
   @$pb.TagNumber(3)
-  set producerOverride(QuotaOverride v) {
-    setField(3, v);
-  }
-
+  set producerOverride(QuotaOverride value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasProducerOverride() => $_has(2);
   @$pb.TagNumber(3)
-  void clearProducerOverride() => clearField(3);
+  void clearProducerOverride() => $_clearField(3);
   @$pb.TagNumber(3)
   QuotaOverride ensureProducerOverride() => $_ensure(2);
 
@@ -913,14 +765,11 @@ class QuotaBucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   QuotaOverride get consumerOverride => $_getN(3);
   @$pb.TagNumber(4)
-  set consumerOverride(QuotaOverride v) {
-    setField(4, v);
-  }
-
+  set consumerOverride(QuotaOverride value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasConsumerOverride() => $_has(3);
   @$pb.TagNumber(4)
-  void clearConsumerOverride() => clearField(4);
+  void clearConsumerOverride() => $_clearField(4);
   @$pb.TagNumber(4)
   QuotaOverride ensureConsumerOverride() => $_ensure(3);
 
@@ -928,43 +777,37 @@ class QuotaBucket extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   QuotaOverride get adminOverride => $_getN(4);
   @$pb.TagNumber(5)
-  set adminOverride(QuotaOverride v) {
-    setField(5, v);
-  }
-
+  set adminOverride(QuotaOverride value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasAdminOverride() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAdminOverride() => clearField(5);
+  void clearAdminOverride() => $_clearField(5);
   @$pb.TagNumber(5)
   QuotaOverride ensureAdminOverride() => $_ensure(4);
 
-  ///  The dimensions of this quota bucket.
+  /// The dimensions of this quota bucket.
   ///
-  ///  If this map is empty, this is the global bucket, which is the default quota
-  ///  value applied to all requests that do not have a more specific override.
+  /// If this map is empty, this is the global bucket, which is the default quota
+  /// value applied to all requests that do not have a more specific override.
   ///
-  ///  If this map is nonempty, the default limit, effective limit, and quota
-  ///  overrides apply only to requests that have the dimensions given in the map.
+  /// If this map is nonempty, the default limit, effective limit, and quota
+  /// overrides apply only to requests that have the dimensions given in the map.
   ///
-  ///  For example, if the map has key `region` and value `us-east-1`, then the
-  ///  specified effective limit is only effective in that region, and the
-  ///  specified overrides apply only in that region.
+  /// For example, if the map has key `region` and value `us-east-1`, then the
+  /// specified effective limit is only effective in that region, and the
+  /// specified overrides apply only in that region.
   @$pb.TagNumber(6)
-  $core.Map<$core.String, $core.String> get dimensions => $_getMap(5);
+  $pb.PbMap<$core.String, $core.String> get dimensions => $_getMap(5);
 
   /// Producer policy inherited from the closet ancestor of the current consumer.
   @$pb.TagNumber(7)
   ProducerQuotaPolicy get producerQuotaPolicy => $_getN(6);
   @$pb.TagNumber(7)
-  set producerQuotaPolicy(ProducerQuotaPolicy v) {
-    setField(7, v);
-  }
-
+  set producerQuotaPolicy(ProducerQuotaPolicy value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasProducerQuotaPolicy() => $_has(6);
   @$pb.TagNumber(7)
-  void clearProducerQuotaPolicy() => clearField(7);
+  void clearProducerQuotaPolicy() => $_clearField(7);
   @$pb.TagNumber(7)
   ProducerQuotaPolicy ensureProducerQuotaPolicy() => $_ensure(6);
 }
@@ -974,39 +817,30 @@ class QuotaOverride extends $pb.GeneratedMessage {
   factory QuotaOverride({
     $core.String? name,
     $fixnum.Int64? overrideValue,
-    $core.Map<$core.String, $core.String>? dimensions,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? dimensions,
     $core.String? metric,
     $core.String? unit,
     $core.String? adminOverrideAncestor,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (overrideValue != null) {
-      $result.overrideValue = overrideValue;
-    }
-    if (dimensions != null) {
-      $result.dimensions.addAll(dimensions);
-    }
-    if (metric != null) {
-      $result.metric = metric;
-    }
-    if (unit != null) {
-      $result.unit = unit;
-    }
-    if (adminOverrideAncestor != null) {
-      $result.adminOverrideAncestor = adminOverrideAncestor;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (overrideValue != null) result.overrideValue = overrideValue;
+    if (dimensions != null) result.dimensions.addEntries(dimensions);
+    if (metric != null) result.metric = metric;
+    if (unit != null) result.unit = unit;
+    if (adminOverrideAncestor != null)
+      result.adminOverrideAncestor = adminOverrideAncestor;
+    return result;
   }
-  QuotaOverride._() : super();
-  factory QuotaOverride.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory QuotaOverride.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  QuotaOverride._();
+
+  factory QuotaOverride.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory QuotaOverride.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'QuotaOverride',
@@ -1025,122 +859,106 @@ class QuotaOverride extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'adminOverrideAncestor')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  QuotaOverride clone() => QuotaOverride()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  QuotaOverride clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   QuotaOverride copyWith(void Function(QuotaOverride) updates) =>
       super.copyWith((message) => updates(message as QuotaOverride))
           as QuotaOverride;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static QuotaOverride create() => QuotaOverride._();
+  @$core.override
   QuotaOverride createEmptyInstance() => create();
-  static $pb.PbList<QuotaOverride> createRepeated() =>
-      $pb.PbList<QuotaOverride>();
   @$core.pragma('dart2js:noInline')
   static QuotaOverride getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<QuotaOverride>(create);
   static QuotaOverride? _defaultInstance;
 
-  ///  The resource name of the override.
-  ///  This name is generated by the server when the override is created.
+  /// The resource name of the override.
+  /// This name is generated by the server when the override is created.
   ///
-  ///  Example names would be:
-  ///  `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2c1d`
-  ///  `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
+  /// Example names would be:
+  /// `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2c1d`
+  /// `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
   ///
-  ///  The resource name is intended to be opaque and should not be parsed for
-  ///  its component strings, since its representation could change in the future.
+  /// The resource name is intended to be opaque and should not be parsed for
+  /// its component strings, since its representation could change in the future.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The overriding quota limit value.
   /// Can be any nonnegative integer, or -1 (unlimited quota).
   @$pb.TagNumber(2)
   $fixnum.Int64 get overrideValue => $_getI64(1);
   @$pb.TagNumber(2)
-  set overrideValue($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set overrideValue($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasOverrideValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOverrideValue() => clearField(2);
+  void clearOverrideValue() => $_clearField(2);
 
-  ///  If this map is nonempty, then this override applies only to specific values
-  ///  for dimensions defined in the limit unit.
+  /// If this map is nonempty, then this override applies only to specific values
+  /// for dimensions defined in the limit unit.
   ///
-  ///  For example, an override on a limit with the unit `1/{project}/{region}`
-  ///  could contain an entry with the key `region` and the value `us-east-1`;
-  ///  the override is only applied to quota consumed in that region.
+  /// For example, an override on a limit with the unit `1/{project}/{region}`
+  /// could contain an entry with the key `region` and the value `us-east-1`;
+  /// the override is only applied to quota consumed in that region.
   ///
-  ///  This map has the following restrictions:
+  /// This map has the following restrictions:
   ///
-  ///  *   Keys that are not defined in the limit's unit are not valid keys.
-  ///      Any string appearing in `{brackets}` in the unit (besides `{project}`
-  ///      or
-  ///      `{user}`) is a defined key.
-  ///  *   `project` is not a valid key; the project is already specified in
-  ///      the parent resource name.
-  ///  *   `user` is not a valid key; the API does not support quota overrides
-  ///      that apply only to a specific user.
-  ///  *   If `region` appears as a key, its value must be a valid Cloud region.
-  ///  *   If `zone` appears as a key, its value must be a valid Cloud zone.
-  ///  *   If any valid key other than `region` or `zone` appears in the map, then
-  ///      all valid keys other than `region` or `zone` must also appear in the
-  ///      map.
+  /// *   Keys that are not defined in the limit's unit are not valid keys.
+  ///     Any string appearing in `{brackets}` in the unit (besides `{project}`
+  ///     or
+  ///     `{user}`) is a defined key.
+  /// *   `project` is not a valid key; the project is already specified in
+  ///     the parent resource name.
+  /// *   `user` is not a valid key; the API does not support quota overrides
+  ///     that apply only to a specific user.
+  /// *   If `region` appears as a key, its value must be a valid Cloud region.
+  /// *   If `zone` appears as a key, its value must be a valid Cloud zone.
+  /// *   If any valid key other than `region` or `zone` appears in the map, then
+  ///     all valid keys other than `region` or `zone` must also appear in the
+  ///     map.
   @$pb.TagNumber(3)
-  $core.Map<$core.String, $core.String> get dimensions => $_getMap(2);
+  $pb.PbMap<$core.String, $core.String> get dimensions => $_getMap(2);
 
-  ///  The name of the metric to which this override applies.
+  /// The name of the metric to which this override applies.
   ///
-  ///  An example name would be:
-  ///  `compute.googleapis.com/cpus`
+  /// An example name would be:
+  /// `compute.googleapis.com/cpus`
   @$pb.TagNumber(4)
   $core.String get metric => $_getSZ(3);
   @$pb.TagNumber(4)
-  set metric($core.String v) {
-    $_setString(3, v);
-  }
-
+  set metric($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasMetric() => $_has(3);
   @$pb.TagNumber(4)
-  void clearMetric() => clearField(4);
+  void clearMetric() => $_clearField(4);
 
-  ///  The limit unit of the limit to which this override applies.
+  /// The limit unit of the limit to which this override applies.
   ///
-  ///  An example unit would be:
-  ///  `1/{project}/{region}`
-  ///  Note that `{project}` and `{region}` are not placeholders in this example;
-  ///  the literal characters `{` and `}` occur in the string.
+  /// An example unit would be:
+  /// `1/{project}/{region}`
+  /// Note that `{project}` and `{region}` are not placeholders in this example;
+  /// the literal characters `{` and `}` occur in the string.
   @$pb.TagNumber(5)
   $core.String get unit => $_getSZ(4);
   @$pb.TagNumber(5)
-  set unit($core.String v) {
-    $_setString(4, v);
-  }
-
+  set unit($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasUnit() => $_has(4);
   @$pb.TagNumber(5)
-  void clearUnit() => clearField(5);
+  void clearUnit() => $_clearField(5);
 
   /// The resource name of the ancestor that requested the override. For example:
   /// `organizations/12345` or `folders/67890`.
@@ -1148,14 +966,11 @@ class QuotaOverride extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get adminOverrideAncestor => $_getSZ(5);
   @$pb.TagNumber(6)
-  set adminOverrideAncestor($core.String v) {
-    $_setString(5, v);
-  }
-
+  set adminOverrideAncestor($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasAdminOverrideAncestor() => $_has(5);
   @$pb.TagNumber(6)
-  void clearAdminOverrideAncestor() => clearField(6);
+  void clearAdminOverrideAncestor() => $_clearField(6);
 }
 
 /// Import data embedded in the request message
@@ -1163,49 +978,43 @@ class OverrideInlineSource extends $pb.GeneratedMessage {
   factory OverrideInlineSource({
     $core.Iterable<QuotaOverride>? overrides,
   }) {
-    final $result = create();
-    if (overrides != null) {
-      $result.overrides.addAll(overrides);
-    }
-    return $result;
+    final result = create();
+    if (overrides != null) result.overrides.addAll(overrides);
+    return result;
   }
-  OverrideInlineSource._() : super();
-  factory OverrideInlineSource.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory OverrideInlineSource.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  OverrideInlineSource._();
+
+  factory OverrideInlineSource.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory OverrideInlineSource.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'OverrideInlineSource',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'google.api.serviceusage.v1beta1'),
       createEmptyInstance: create)
-    ..pc<QuotaOverride>(
-        1, _omitFieldNames ? '' : 'overrides', $pb.PbFieldType.PM,
+    ..pPM<QuotaOverride>(1, _omitFieldNames ? '' : 'overrides',
         subBuilder: QuotaOverride.create)
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  OverrideInlineSource clone() =>
-      OverrideInlineSource()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OverrideInlineSource clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OverrideInlineSource copyWith(void Function(OverrideInlineSource) updates) =>
       super.copyWith((message) => updates(message as OverrideInlineSource))
           as OverrideInlineSource;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static OverrideInlineSource create() => OverrideInlineSource._();
+  @$core.override
   OverrideInlineSource createEmptyInstance() => create();
-  static $pb.PbList<OverrideInlineSource> createRepeated() =>
-      $pb.PbList<OverrideInlineSource>();
   @$core.pragma('dart2js:noInline')
   static OverrideInlineSource getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OverrideInlineSource>(create);
@@ -1216,7 +1025,7 @@ class OverrideInlineSource extends $pb.GeneratedMessage {
   /// which metric and which limit the override should be applied to.
   /// The 'name' field of the override does not need to be set; it is ignored.
   @$pb.TagNumber(1)
-  $core.List<QuotaOverride> get overrides => $_getList(0);
+  $pb.PbList<QuotaOverride> get overrides => $_getList(0);
 }
 
 /// Quota policy created by service producer.
@@ -1224,39 +1033,29 @@ class ProducerQuotaPolicy extends $pb.GeneratedMessage {
   factory ProducerQuotaPolicy({
     $core.String? name,
     $fixnum.Int64? policyValue,
-    $core.Map<$core.String, $core.String>? dimensions,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? dimensions,
     $core.String? metric,
     $core.String? unit,
     $core.String? container,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (policyValue != null) {
-      $result.policyValue = policyValue;
-    }
-    if (dimensions != null) {
-      $result.dimensions.addAll(dimensions);
-    }
-    if (metric != null) {
-      $result.metric = metric;
-    }
-    if (unit != null) {
-      $result.unit = unit;
-    }
-    if (container != null) {
-      $result.container = container;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (policyValue != null) result.policyValue = policyValue;
+    if (dimensions != null) result.dimensions.addEntries(dimensions);
+    if (metric != null) result.metric = metric;
+    if (unit != null) result.unit = unit;
+    if (container != null) result.container = container;
+    return result;
   }
-  ProducerQuotaPolicy._() : super();
-  factory ProducerQuotaPolicy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ProducerQuotaPolicy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ProducerQuotaPolicy._();
+
+  factory ProducerQuotaPolicy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ProducerQuotaPolicy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ProducerQuotaPolicy',
@@ -1275,59 +1074,49 @@ class ProducerQuotaPolicy extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'container')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ProducerQuotaPolicy clone() => ProducerQuotaPolicy()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ProducerQuotaPolicy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ProducerQuotaPolicy copyWith(void Function(ProducerQuotaPolicy) updates) =>
       super.copyWith((message) => updates(message as ProducerQuotaPolicy))
           as ProducerQuotaPolicy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ProducerQuotaPolicy create() => ProducerQuotaPolicy._();
+  @$core.override
   ProducerQuotaPolicy createEmptyInstance() => create();
-  static $pb.PbList<ProducerQuotaPolicy> createRepeated() =>
-      $pb.PbList<ProducerQuotaPolicy>();
   @$core.pragma('dart2js:noInline')
   static ProducerQuotaPolicy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ProducerQuotaPolicy>(create);
   static ProducerQuotaPolicy? _defaultInstance;
 
-  ///  The resource name of the policy.
-  ///  This name is generated by the server when the policy is created.
+  /// The resource name of the policy.
+  /// This name is generated by the server when the policy is created.
   ///
-  ///  Example names would be:
-  ///  `organizations/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/producerQuotaPolicies/4a3f2c1d`
+  /// Example names would be:
+  /// `organizations/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/producerQuotaPolicies/4a3f2c1d`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The quota policy value.
   /// Can be any nonnegative integer, or -1 (unlimited quota).
   @$pb.TagNumber(2)
   $fixnum.Int64 get policyValue => $_getI64(1);
   @$pb.TagNumber(2)
-  set policyValue($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set policyValue($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPolicyValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPolicyValue() => clearField(2);
+  void clearPolicyValue() => $_clearField(2);
 
   ///
   ///  If this map is nonempty, then this policy applies only to specific values
@@ -1352,55 +1141,46 @@ class ProducerQuotaPolicy extends $pb.GeneratedMessage {
   ///      all valid keys other than `region` or `zone` must also appear in the
   ///      map.
   @$pb.TagNumber(3)
-  $core.Map<$core.String, $core.String> get dimensions => $_getMap(2);
+  $pb.PbMap<$core.String, $core.String> get dimensions => $_getMap(2);
 
-  ///  The name of the metric to which this policy applies.
+  /// The name of the metric to which this policy applies.
   ///
-  ///  An example name would be:
-  ///  `compute.googleapis.com/cpus`
+  /// An example name would be:
+  /// `compute.googleapis.com/cpus`
   @$pb.TagNumber(4)
   $core.String get metric => $_getSZ(3);
   @$pb.TagNumber(4)
-  set metric($core.String v) {
-    $_setString(3, v);
-  }
-
+  set metric($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasMetric() => $_has(3);
   @$pb.TagNumber(4)
-  void clearMetric() => clearField(4);
+  void clearMetric() => $_clearField(4);
 
-  ///  The limit unit of the limit to which this policy applies.
+  /// The limit unit of the limit to which this policy applies.
   ///
-  ///  An example unit would be:
-  ///  `1/{project}/{region}`
-  ///  Note that `{project}` and `{region}` are not placeholders in this example;
-  ///  the literal characters `{` and `}` occur in the string.
+  /// An example unit would be:
+  /// `1/{project}/{region}`
+  /// Note that `{project}` and `{region}` are not placeholders in this example;
+  /// the literal characters `{` and `}` occur in the string.
   @$pb.TagNumber(5)
   $core.String get unit => $_getSZ(4);
   @$pb.TagNumber(5)
-  set unit($core.String v) {
-    $_setString(4, v);
-  }
-
+  set unit($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasUnit() => $_has(4);
   @$pb.TagNumber(5)
-  void clearUnit() => clearField(5);
+  void clearUnit() => $_clearField(5);
 
   /// The cloud resource container at which the quota policy is created. The
   /// format is `{container_type}/{container_number}`
   @$pb.TagNumber(6)
   $core.String get container => $_getSZ(5);
   @$pb.TagNumber(6)
-  set container($core.String v) {
-    $_setString(5, v);
-  }
-
+  set container($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasContainer() => $_has(5);
   @$pb.TagNumber(6)
-  void clearContainer() => clearField(6);
+  void clearContainer() => $_clearField(6);
 }
 
 /// Quota policy created by quota administrator.
@@ -1408,39 +1188,29 @@ class AdminQuotaPolicy extends $pb.GeneratedMessage {
   factory AdminQuotaPolicy({
     $core.String? name,
     $fixnum.Int64? policyValue,
-    $core.Map<$core.String, $core.String>? dimensions,
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? dimensions,
     $core.String? metric,
     $core.String? unit,
     $core.String? container,
   }) {
-    final $result = create();
-    if (name != null) {
-      $result.name = name;
-    }
-    if (policyValue != null) {
-      $result.policyValue = policyValue;
-    }
-    if (dimensions != null) {
-      $result.dimensions.addAll(dimensions);
-    }
-    if (metric != null) {
-      $result.metric = metric;
-    }
-    if (unit != null) {
-      $result.unit = unit;
-    }
-    if (container != null) {
-      $result.container = container;
-    }
-    return $result;
+    final result = create();
+    if (name != null) result.name = name;
+    if (policyValue != null) result.policyValue = policyValue;
+    if (dimensions != null) result.dimensions.addEntries(dimensions);
+    if (metric != null) result.metric = metric;
+    if (unit != null) result.unit = unit;
+    if (container != null) result.container = container;
+    return result;
   }
-  AdminQuotaPolicy._() : super();
-  factory AdminQuotaPolicy.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory AdminQuotaPolicy.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  AdminQuotaPolicy._();
+
+  factory AdminQuotaPolicy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AdminQuotaPolicy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'AdminQuotaPolicy',
@@ -1459,59 +1229,49 @@ class AdminQuotaPolicy extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'container')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  AdminQuotaPolicy clone() => AdminQuotaPolicy()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AdminQuotaPolicy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AdminQuotaPolicy copyWith(void Function(AdminQuotaPolicy) updates) =>
       super.copyWith((message) => updates(message as AdminQuotaPolicy))
           as AdminQuotaPolicy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AdminQuotaPolicy create() => AdminQuotaPolicy._();
+  @$core.override
   AdminQuotaPolicy createEmptyInstance() => create();
-  static $pb.PbList<AdminQuotaPolicy> createRepeated() =>
-      $pb.PbList<AdminQuotaPolicy>();
   @$core.pragma('dart2js:noInline')
   static AdminQuotaPolicy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AdminQuotaPolicy>(create);
   static AdminQuotaPolicy? _defaultInstance;
 
-  ///  The resource name of the policy.
-  ///  This name is generated by the server when the policy is created.
+  /// The resource name of the policy.
+  /// This name is generated by the server when the policy is created.
   ///
-  ///  Example names would be:
-  ///  `organizations/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminQuotaPolicies/4a3f2c1d`
+  /// Example names would be:
+  /// `organizations/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminQuotaPolicies/4a3f2c1d`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearName() => $_clearField(1);
 
   /// The quota policy value.
   /// Can be any nonnegative integer, or -1 (unlimited quota).
   @$pb.TagNumber(2)
   $fixnum.Int64 get policyValue => $_getI64(1);
   @$pb.TagNumber(2)
-  set policyValue($fixnum.Int64 v) {
-    $_setInt64(1, v);
-  }
-
+  set policyValue($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPolicyValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPolicyValue() => clearField(2);
+  void clearPolicyValue() => $_clearField(2);
 
   ///
   ///  If this map is nonempty, then this policy applies only to specific values
@@ -1527,55 +1287,46 @@ class AdminQuotaPolicy extends $pb.GeneratedMessage {
   ///  *   If `zone` appears as a key, its value must be a valid Cloud zone.
   ///  *   Keys other than `region` or `zone` are not valid.
   @$pb.TagNumber(3)
-  $core.Map<$core.String, $core.String> get dimensions => $_getMap(2);
+  $pb.PbMap<$core.String, $core.String> get dimensions => $_getMap(2);
 
-  ///  The name of the metric to which this policy applies.
+  /// The name of the metric to which this policy applies.
   ///
-  ///  An example name would be:
-  ///  `compute.googleapis.com/cpus`
+  /// An example name would be:
+  /// `compute.googleapis.com/cpus`
   @$pb.TagNumber(4)
   $core.String get metric => $_getSZ(3);
   @$pb.TagNumber(4)
-  set metric($core.String v) {
-    $_setString(3, v);
-  }
-
+  set metric($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasMetric() => $_has(3);
   @$pb.TagNumber(4)
-  void clearMetric() => clearField(4);
+  void clearMetric() => $_clearField(4);
 
-  ///  The limit unit of the limit to which this policy applies.
+  /// The limit unit of the limit to which this policy applies.
   ///
-  ///  An example unit would be:
-  ///  `1/{project}/{region}`
-  ///  Note that `{project}` and `{region}` are not placeholders in this example;
-  ///  the literal characters `{` and `}` occur in the string.
+  /// An example unit would be:
+  /// `1/{project}/{region}`
+  /// Note that `{project}` and `{region}` are not placeholders in this example;
+  /// the literal characters `{` and `}` occur in the string.
   @$pb.TagNumber(5)
   $core.String get unit => $_getSZ(4);
   @$pb.TagNumber(5)
-  set unit($core.String v) {
-    $_setString(4, v);
-  }
-
+  set unit($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
   $core.bool hasUnit() => $_has(4);
   @$pb.TagNumber(5)
-  void clearUnit() => clearField(5);
+  void clearUnit() => $_clearField(5);
 
   /// The cloud resource container at which the quota policy is created. The
   /// format is `{container_type}/{container_number}`
   @$pb.TagNumber(6)
   $core.String get container => $_getSZ(5);
   @$pb.TagNumber(6)
-  set container($core.String v) {
-    $_setString(5, v);
-  }
-
+  set container($core.String value) => $_setString(5, value);
   @$pb.TagNumber(6)
   $core.bool hasContainer() => $_has(5);
   @$pb.TagNumber(6)
-  void clearContainer() => clearField(6);
+  void clearContainer() => $_clearField(6);
 }
 
 /// Service identity for a service. This is the identity that service producer
@@ -1585,22 +1336,20 @@ class ServiceIdentity extends $pb.GeneratedMessage {
     $core.String? email,
     $core.String? uniqueId,
   }) {
-    final $result = create();
-    if (email != null) {
-      $result.email = email;
-    }
-    if (uniqueId != null) {
-      $result.uniqueId = uniqueId;
-    }
-    return $result;
+    final result = create();
+    if (email != null) result.email = email;
+    if (uniqueId != null) result.uniqueId = uniqueId;
+    return result;
   }
-  ServiceIdentity._() : super();
-  factory ServiceIdentity.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ServiceIdentity.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+
+  ServiceIdentity._();
+
+  factory ServiceIdentity.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ServiceIdentity.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ServiceIdentity',
@@ -1611,24 +1360,20 @@ class ServiceIdentity extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'uniqueId')
     ..hasRequiredFields = false;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ServiceIdentity clone() => ServiceIdentity()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ServiceIdentity clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ServiceIdentity copyWith(void Function(ServiceIdentity) updates) =>
       super.copyWith((message) => updates(message as ServiceIdentity))
           as ServiceIdentity;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ServiceIdentity create() => ServiceIdentity._();
+  @$core.override
   ServiceIdentity createEmptyInstance() => create();
-  static $pb.PbList<ServiceIdentity> createRepeated() =>
-      $pb.PbList<ServiceIdentity>();
   @$core.pragma('dart2js:noInline')
   static ServiceIdentity getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ServiceIdentity>(create);
@@ -1639,30 +1384,25 @@ class ServiceIdentity extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get email => $_getSZ(0);
   @$pb.TagNumber(1)
-  set email($core.String v) {
-    $_setString(0, v);
-  }
-
+  set email($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEmail() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEmail() => clearField(1);
+  void clearEmail() => $_clearField(1);
 
   /// The unique and stable id of the service account.
   /// https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts#ServiceAccount
   @$pb.TagNumber(2)
   $core.String get uniqueId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set uniqueId($core.String v) {
-    $_setString(1, v);
-  }
-
+  set uniqueId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasUniqueId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUniqueId() => clearField(2);
+  void clearUniqueId() => $_clearField(2);
 }
 
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');
