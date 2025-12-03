@@ -1,3 +1,6 @@
+# 4.0.45
+ * Auto Generated
+
 # 4.0.44
  * Auto Generated
 
