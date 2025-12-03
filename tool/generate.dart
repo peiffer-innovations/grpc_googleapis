@@ -9,6 +9,36 @@ Future<void> main(List<String> args) async {
     File('generated/pubspec.lock').deleteSync(recursive: true);
   }
 
+  final deps = Directory('deps');
+  if (!deps.existsSync()) {
+    deps.createSync(recursive: true);
+  }
+
+  _cloneDependency('https://github.com/protocolbuffers/protobuf');
+  _cloneDependency('https://github.com/googleapis/googleapis');
+  _cloneDependency('https://github.com/grafeas/grafeas');
+
+  _remove([
+    'deps/googleapis/google/ads',
+    'deps/googleapis/google/chromeos',
+    'deps/googleapis/google/cloud',
+    'deps/googleapis/google/devtools',
+    'deps/googleapis/google/example',
+    'deps/googleapis/google/shopping',
+    'deps/googleapis/grafeas/v1alpha1',
+    'deps/googleapis/grafeas/v1beta1',
+    'deps/grafeas/proto/v1alpha1',
+    'deps/grafeas/proto/v1beta1',
+    'deps/protobuf/src/google/protobuf/compiler',
+  ]);
+
+  Directory('deps')
+      .listSync(recursive: true)
+      .whereType<File>()
+      .where((f) => f.path.endsWith('.proto'))
+      .where((f) => f.path.contains('test') && !f.path.contains('attestation'))
+      .forEach((f) => f.deleteSync());
+
   var buildNumber = int.tryParse(args.isNotEmpty == true ? args[0] : '1') ?? 1;
   print('[BUILD_NUMBER]: $buildNumber');
 
@@ -33,52 +63,62 @@ Future<void> main(List<String> args) async {
   var percent = 0;
   var count = 0;
   var files = List<File>.from(
-      Directory('./deps/grafeas/proto').listSync(recursive: true).where(
-            (e) => e is File && e.path.endsWith('.proto'),
-          ))
-    ..sort((a, b) => a.path.compareTo(b.path));
+    Directory('./deps/grafeas/proto')
+        .listSync(recursive: true)
+        .where((e) => e is File && e.path.endsWith('.proto')),
+  )..sort((a, b) => a.path.compareTo(b.path));
 
   var protos = <File>[];
-  protos.addAll(_copy(Directory('./deps/grafeas/proto'),
-      Directory('${temp.path}/grafeas'), files, transformer: (file) {
-    var result = file.readAsStringSync();
-    result = result.replaceAll('import "proto/v', 'import "grafeas/v');
+  protos.addAll(
+    _copy(
+      Directory('./deps/grafeas/proto'),
+      Directory('${temp.path}/grafeas'),
+      files,
+      transformer: (file) {
+        var result = file.readAsStringSync();
+        result = result.replaceAll('import "proto/v', 'import "grafeas/v');
 
-    return result;
-  }));
+        return result;
+      },
+    ),
+  );
 
   print('');
   print('[PROTOBUF]');
   percent = 0;
   count = 0;
-  files = List<File>.from(Directory('./deps/protobuf/src/google/protobuf')
-      .listSync(recursive: true)
-      .where(
-        (e) => e is File && e.path.endsWith('.proto'),
-      ))
-    ..sort((a, b) => a.path.compareTo(b.path));
+  files = List<File>.from(
+    Directory('./deps/protobuf/src/google/protobuf')
+        .listSync(recursive: true)
+        .where((e) => e is File && e.path.endsWith('.proto')),
+  )..sort((a, b) => a.path.compareTo(b.path));
 
-  protos.addAll(_copy(
-    Directory('./deps/protobuf/src/google/protobuf'),
-    Directory('${temp.path}/google/protobuf'),
-    files,
-  ));
+  protos.addAll(
+    _copy(
+      Directory('./deps/protobuf/src/google/protobuf'),
+      Directory('${temp.path}/google/protobuf'),
+      files,
+    ),
+  );
 
   print('');
   print('[GOOGLE]');
   files = List<File>.from(
-      Directory('./deps/googleapis/google').listSync(recursive: true).where(
-            (e) => e is File && e.path.endsWith('.proto'),
-          ))
-    ..sort((a, b) => a.path.compareTo(b.path));
+    Directory('./deps/googleapis/google')
+        .listSync(recursive: true)
+        .where((e) => e is File && e.path.endsWith('.proto')),
+  )..sort((a, b) => a.path.compareTo(b.path));
 
-  protos.addAll(_copy(
-    Directory('./deps/googleapis/google'),
-    Directory('${temp.path}/google'),
-    files,
-  ));
+  protos.addAll(
+    _copy(
+      Directory('./deps/googleapis/google'),
+      Directory('${temp.path}/google'),
+      files,
+    ),
+  );
 
-  final maxThreads = Platform.isMacOS ? 8 : 4;
+  final maxThreads = Platform.numberOfProcessors * 2;
+  print('Using $maxThreads threads.');
   var futures = <Future>[];
   for (var file in protos) {
     count++;
@@ -100,12 +140,10 @@ Future<void> main(List<String> args) async {
   print('');
   print('[FIX IMPORTS]');
   files = List<File>.from(
-      Directory('./generated/lib/src/generated/google/protobuf')
-          .listSync(recursive: true)
-          .where(
-            (e) => e is File && e.path.endsWith('.dart'),
-          ))
-    ..sort((a, b) => a.path.compareTo(b.path));
+    Directory('./generated/lib/src/generated/')
+        .listSync(recursive: true)
+        .where((e) => e is File && e.path.endsWith('.dart')),
+  )..sort((a, b) => a.path.compareTo(b.path));
   for (var file in files) {
     _fixImports(file);
   }
@@ -120,10 +158,9 @@ Future<void> main(List<String> args) async {
     pubspec.createSync(recursive: true);
   }
   pubspec.writeAsStringSync(
-    File('assets/templates/pubspec.txt').readAsStringSync().replaceAll(
-          '{{BUILD_NUMBER}}',
-          '$buildNumber',
-        ),
+    File(
+      'assets/templates/pubspec.txt',
+    ).readAsStringSync().replaceAll('{{BUILD_NUMBER}}', '$buildNumber'),
   );
 
   var changelog = File('generated/CHANGELOG.md');
@@ -134,6 +171,16 @@ Future<void> main(List<String> args) async {
   changelog.writeAsStringSync(
     '# 4.0.$buildNumber\n * Auto Generated\n\n${changelog.readAsStringSync()}',
   );
+}
+
+void _cloneDependency(String repo) {
+  print('Cloning: $repo');
+  Process.runSync('git', [
+    'clone',
+    '--depth',
+    '1',
+    repo,
+  ], workingDirectory: './deps');
 }
 
 List<File> _copy(
@@ -174,6 +221,11 @@ void _fixImports(File file) {
     "import '../../google/protobuf/",
   );
 
+  newContents = newContents.replaceAll(
+    'protobuf/well_known_types/google/protobuf/',
+    'grpc_googleapis/src/generated/google/protobuf/',
+  );
+
   if (contents != newContents) {
     file.writeAsStringSync(newContents);
   }
@@ -204,10 +256,11 @@ void _generateLibraries(String folder) {
         name = paths[5];
       }
 
-      var dartFiles = List<File>.from(dir
-          .listSync(recursive: true)
-          .where((e) => e is File && e.path.endsWith('.dart')))
-        ..sort((a, b) => a.path.compareTo(b.path));
+      var dartFiles = List<File>.from(
+        dir
+            .listSync(recursive: true)
+            .where((e) => e is File && e.path.endsWith('.dart')),
+      )..sort((a, b) => a.path.compareTo(b.path));
 
       var outputs = <String, String>{};
 
@@ -251,14 +304,25 @@ Future<void> _generateProtos(File file) async {
   var index = path.indexOf('/protos/');
   path = path.substring(index + '/protos/'.length);
   print('[PROTO]: $path');
-  var result = await Process.run(
-    'protoc',
-    ['--dart_out=grpc:generated/lib/src/generated', '-I./output/protos', path],
-  );
+  var result = await Process.run('protoc', [
+    '--dart_out=grpc:generated/lib/src/generated',
+    '-I./output/protos',
+    path,
+  ]);
 
   if (result.exitCode != 0) {
     print('ERROR!!!');
     print(result.stdout);
     print(result.stderr);
+  }
+}
+
+void _remove(List<String> paths) {
+  for (final path in paths) {
+    print('Removing: $path');
+    final dir = Directory(path);
+    if (dir.existsSync()) {
+      dir.deleteSync(recursive: true);
+    }
   }
 }

@@ -4,7 +4,7 @@ version: 3.0.0
 homepage: https://github.com/peiffer-innovations/grpc_googleapis
 
 environment:
-  sdk: '>=3.0.0'
+  sdk: '^3.10.0'
 
 # dependencies:
 #   fixnum: ^1.0.0
